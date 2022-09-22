@@ -382,7 +382,16 @@ in_reply_to_user: cube_flipper
 answers: 23.5.7/7.6.11/1.1.1
 thread_root: 23.5.7/7.6.11/1.1.1
 
-[photo]id: 1568052325050359809
+[photo]id: 1572915432612560896
+created_at: 2022-09-22T11:47:17Z
+url: https://x.com/cube_flipper/status/1572915432612560896
+kind: reply
+likes: 1
+retweets: 0
+in_reply_to_id: 1572914806868570116
+in_reply_to_user: artilectium
+
+@artilectium it also upregulates 5-HT2A production in your olfactory cortexid: 1568052325050359809
 created_at: 2022-09-09T01:43:01Z
 url: https://x.com/cube_flipper/status/1568052325050359809
 kind: thread
