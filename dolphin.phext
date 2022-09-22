@@ -297,7 +297,19 @@ retweets: 0
 in_reply_to_id: 1572830684531822592
 in_reply_to_user: vgr
 
-@vgr it's not honeycomb geometry is it? https://en.wikipedia.org/wiki/Honeycombid: 1572761984730566656
+@vgr it's not honeycomb geometry is it? https://en.wikipedia.org/wiki/Honeycombid: 1572832703749427200
+created_at: 2022-09-22T06:18:33Z
+url: https://x.com/cube_flipper/status/1572832703749427200
+kind: thread
+likes: 0
+retweets: 0
+thread_id: 1572832659159785472
+in_reply_to_id: 1572832659159785472
+in_reply_to_user: cube_flipper
+answers: 23.4.7/5.4.7/1.1.1
+thread_root: 23.4.7/5.4.7/1.1.1
+
+@vgr [photo]id: 1572761984730566656
 created_at: 2022-09-22T01:37:32Z
 url: https://x.com/cube_flipper/status/1572761984730566656
 kind: thread
