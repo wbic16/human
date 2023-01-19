@@ -2464,7 +2464,19 @@ retweets: 0
 in_reply_to_id: 1601065390351978497
 in_reply_to_user: josikinz
 
-@Josikinz are you taking requests? :3id: 1615878693985091585
+@Josikinz are you taking requests? :3id: 1615880369173327872
+created_at: 2023-01-19T01:14:36Z
+url: https://x.com/cube_flipper/status/1615880369173327872
+kind: thread
+likes: 5
+retweets: 0
+thread_id: 1615874321947455490
+in_reply_to_id: 1615879276041220096
+in_reply_to_user: cube_flipper
+answers: 23.6.8/8.5.8/1.1.6
+thread_root: 23.6.8/6.6.9/1.1.2
+
+How does the brain generate a depth map from a pair of two-dimensional images? https://x.com/cube_flipper/status/1615423759669919745id: 1615878693985091585
 created_at: 2023-01-19T01:07:56Z
 url: https://x.com/cube_flipper/status/1615878693985091585
 kind: thread
