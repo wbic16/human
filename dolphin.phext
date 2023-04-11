@@ -6731,7 +6731,14 @@ in_reply_to_user: cube_flipper
 answers: 31.6.8/7.6.10/1.1.1
 thread_root: 31.6.8/7.6.10/1.1.1
 
-@lemonaut1 make of that what you will, geometric primitives are geometric primitives whatever your rendering environment isid: 1613810970106953728
+@lemonaut1 make of that what you will, geometric primitives are geometric primitives whatever your rendering environment isid: 1645708071925321729
+created_at: 2023-04-11T08:39:14Z
+url: https://x.com/cube_flipper/status/1645708071925321729
+kind: original
+likes: 3
+retweets: 0
+
+`shape.transform(.rotate4D(zw: time) <*> .rotate4D(xy: time))`id: 1613810970106953728
 created_at: 2023-01-13T08:11:33Z
 url: https://x.com/cube_flipper/status/1613810970106953728
 kind: original
