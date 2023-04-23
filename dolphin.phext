@@ -711,7 +711,19 @@ retweets: 0
 in_reply_to_id: 1640460949764317186
 in_reply_to_user: qualiacomputer
 
-@qualiacomputer brb changing the water in my tankid: 1619098797518495744
+@qualiacomputer brb changing the water in my tankid: 1650083044672548864
+created_at: 2023-04-23T10:23:49Z
+url: https://x.com/cube_flipper/status/1650083044672548864
+kind: thread
+likes: 1
+retweets: 0
+thread_id: 1650082906830942208
+in_reply_to_id: 1650082906830942208
+in_reply_to_user: cube_flipper
+answers: 16.7.8/7.7.9/1.1.2
+thread_root: 16.7.8/7.7.9/1.1.2
+
+@bayeslord @algekalipso i'd expect ephaptic coupling itself to be pretty difficult to quantify and measure in practice. though there's one paper that's been on my backlog for a while https://www.biorxiv.org/content/10.1101/2023.02.28.530474v1id: 1619098797518495744
 created_at: 2023-01-27T22:23:29Z
 url: https://x.com/cube_flipper/status/1619098797518495744
 kind: reply
