@@ -4865,7 +4865,19 @@ retweets: 0
 in_reply_to_id: 1636896895678418944
 in_reply_to_user: chercher_ai
 
-@chercher_ai @ErgoEcho I see what Scry sees. No green. https://x.com/Scrygl/status/1636857976387665920id: 1667214553019744256
+@chercher_ai @ErgoEcho I see what Scry sees. No green. https://x.com/Scrygl/status/1636857976387665920id: 1667214656031817728
+created_at: 2023-06-09T16:58:44Z
+url: https://x.com/cube_flipper/status/1667214656031817728
+kind: thread
+likes: 0
+retweets: 0
+thread_id: 1667214553019744256
+in_reply_to_id: 1667214553019744256
+in_reply_to_user: cube_flipper
+answers: 22.6.11/8.7.11/1.1.1
+thread_root: 22.6.11/8.7.11/1.1.1
+
+@paul__is__here i suppose i can figure out how to set up a redirectid: 1667214553019744256
 created_at: 2023-06-09T16:58:19Z
 url: https://x.com/cube_flipper/status/1667214553019744256
 kind: reply
