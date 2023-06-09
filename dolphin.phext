@@ -4865,7 +4865,16 @@ retweets: 0
 in_reply_to_id: 1636896895678418944
 in_reply_to_user: chercher_ai
 
-@chercher_ai @ErgoEcho I see what Scry sees. No green. https://x.com/Scrygl/status/1636857976387665920id: 1631037342000594946
+@chercher_ai @ErgoEcho I see what Scry sees. No green. https://x.com/Scrygl/status/1636857976387665920id: 1667214553019744256
+created_at: 2023-06-09T16:58:19Z
+url: https://x.com/cube_flipper/status/1667214553019744256
+kind: reply
+likes: 0
+retweets: 0
+in_reply_to_id: 1667214232495210497
+in_reply_to_user: paul__is__here
+
+@paul__is__here oh that's annoying, i won't be able to fix that without breaking links everywhereid: 1631037342000594946
 created_at: 2023-03-01T21:03:00Z
 url: https://x.com/cube_flipper/status/1631037342000594946
 kind: reply
