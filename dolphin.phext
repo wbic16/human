@@ -2266,7 +2266,16 @@ retweets: 0
 in_reply_to_id: 1612493693734293505
 in_reply_to_user: None
 
-@gnopercept i ran into this myself in something i'm writing [photo]id: 1645277195668193282
+@gnopercept i ran into this myself in something i'm writing [photo]id: 1673554581866029056
+created_at: 2023-06-27T04:51:20Z
+url: https://x.com/cube_flipper/status/1673554581866029056
+kind: reply
+likes: 6
+retweets: 0
+in_reply_to_id: 1673554491642204162
+in_reply_to_user: richdecibels
+
+@RichDecibels accurate, relatableid: 1645277195668193282
 created_at: 2023-04-10T04:07:05Z
 url: https://x.com/cube_flipper/status/1645277195668193282
 kind: reply
