@@ -16341,7 +16341,19 @@ retweets: 0
 in_reply_to_id: 1728898226500370907
 in_reply_to_user: deepfates
 
-@deepfates iA Writer with Working Copy on iOS, plaintext notes stored in a git repoid: 1726601181118742618
+@deepfates iA Writer with Working Copy on iOS, plaintext notes stored in a git repoid: 1728912049475121216
+created_at: 2023-11-26T23:02:08Z
+url: https://x.com/cube_flipper/status/1728912049475121216
+kind: thread
+likes: 1
+retweets: 0
+thread_id: 1728910630076420428
+in_reply_to_id: 1728910630076420428
+in_reply_to_user: cube_flipper
+answers: 32.4.7/5.5.11/1.1.1
+thread_root: 32.4.7/5.5.11/1.1.1
+
+@deepfates the git repo itself contains the source code for http://smoothbrains.net (built with Hakyll) and i can just directly edit the files from my phoneid: 1726601181118742618
 created_at: 2023-11-20T13:59:34Z
 url: https://x.com/cube_flipper/status/1726601181118742618
 kind: reply
