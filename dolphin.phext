@@ -10459,7 +10459,16 @@ in_reply_to_user: cube_flipper
 answers: 21.7.11/9.7.12/1.1.9
 thread_root: 21.7.11/9.7.12/1.1.9
 
-when I look at a Necker cube, I see a very light depth map form, and the way it does this is by the wave propagation rate harmonising across faces of equal depth [photo]id: 1650229361424105472
+when I look at a Necker cube, I see a very light depth map form, and the way it does this is by the wave propagation rate harmonising across faces of equal depth [photo]id: 1756050037069758852
+created_at: 2024-02-09T20:18:49Z
+url: https://x.com/cube_flipper/status/1756050037069758852
+kind: reply
+likes: 3
+retweets: 0
+in_reply_to_id: 1756048427182391544
+in_reply_to_user: mattx1b
+
+@mattx1b yeap, i can trace my attention with this path and the transition begins when it hits the fixation point; the new depth map propagates out from there, it's as if the vertice pokes through the formerly front face (also note that this trajectory has hysteresis) [photo]id: 1650229361424105472
 created_at: 2023-04-23T20:05:14Z
 url: https://x.com/cube_flipper/status/1650229361424105472
 kind: reply
