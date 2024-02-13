@@ -12079,7 +12079,16 @@ retweets: 0
 in_reply_to_id: 1609637157290786818
 in_reply_to_user: leahprime
 
-@leahprime sameid: 1670312723085684736
+@leahprime sameid: 1757490096713196001
+created_at: 2024-02-13T19:41:06Z
+url: https://x.com/cube_flipper/status/1757490096713196001
+kind: reply
+likes: 3
+retweets: 0
+in_reply_to_id: 1757489991502970917
+in_reply_to_user: itinerantfog
+
+@itinerantfog sameid: 1670312723085684736
 created_at: 2023-06-18T06:09:20Z
 url: https://x.com/cube_flipper/status/1670312723085684736
 kind: original
