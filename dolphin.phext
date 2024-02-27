@@ -16947,7 +16947,16 @@ in_reply_to_user: cube_flipper
 answers: 24.8.9/7.6.10/1.1.4
 thread_root: 24.8.9/7.8.14/1.1.1
 
-Curiously, it appears that featural binding was also affected: [photo]id: 1650745283977035776
+Curiously, it appears that featural binding was also affected: [photo]id: 1762270079184671213
+created_at: 2024-02-27T00:15:02Z
+url: https://x.com/cube_flipper/status/1762270079184671213
+kind: reply
+likes: 1
+retweets: 0
+in_reply_to_id: 1762269282010865778
+in_reply_to_user: elytramithra
+
+@ElytraMithra in brief i think it works like a massive constraint solver; the LFPs set the constraints/boundary conditions in specific locations and then the field in between those performs a kind of electromagnetic interpolation, this field state being one and the same as subjective experience. like the soap bubble on a bubble wand, or the nodes on a chladni plate with clamps on its edgeid: 1650745283977035776
 created_at: 2023-04-25T06:15:19Z
 url: https://x.com/cube_flipper/status/1650745283977035776
 kind: reply
