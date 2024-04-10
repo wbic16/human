@@ -24111,7 +24111,16 @@ retweets: 0
 in_reply_to_id: 1744100703474266581
 in_reply_to_user: 4confusedemoji
 
-@4confusedemoji i actually think i'm an EM field segment because that's how you get binding, but same diff~ https://x.com/cube_flipper/status/1664351324652154881id: 1739542654260785372
+@4confusedemoji i actually think i'm an EM field segment because that's how you get binding, but same diff~ https://x.com/cube_flipper/status/1664351324652154881id: 1778075547123540338
+created_at: 2024-04-10T15:00:20Z
+url: https://x.com/cube_flipper/status/1778075547123540338
+kind: reply
+likes: 1
+retweets: 0
+in_reply_to_id: 1778026392523006282
+in_reply_to_user: viemccoy
+
+@viemccoy static site generator (i use hakyll) + aws s3id: 1739542654260785372
 created_at: 2023-12-26T07:04:22Z
 url: https://x.com/cube_flipper/status/1739542654260785372
 kind: reply
