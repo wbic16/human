@@ -16043,7 +16043,16 @@ in_reply_to_user: cube_flipper
 answers: 23.5.7/7.6.11/1.1.1
 thread_root: 23.5.7/7.6.11/1.1.1
 
-[photo]id: 1744091493944692808
+[photo]id: 1796526934555529232
+created_at: 2024-05-31T12:59:33Z
+url: https://x.com/cube_flipper/status/1796526934555529232
+kind: reply
+likes: 1
+retweets: 0
+in_reply_to_id: 1796517001353179291
+in_reply_to_user: tetraspacewest
+
+@TetraspaceWest i use a hammock tent, it's a little expensive but packs down small and there is no need for a sleeping matid: 1744091493944692808
 created_at: 2024-01-07T20:19:50Z
 url: https://x.com/cube_flipper/status/1744091493944692808
 kind: original
