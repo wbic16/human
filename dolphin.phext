@@ -25180,7 +25180,19 @@ kind: original
 likes: 31
 retweets: 4
 
-thinking a fair bit about the deep future of BCIs and the kind of software stack we might wind up withid: 1631210458698117122
+thinking a fair bit about the deep future of BCIs and the kind of software stack we might wind up withid: 1799875166308016422
+created_at: 2024-06-09T18:44:14Z
+url: https://x.com/cube_flipper/status/1799875166308016422
+kind: thread
+likes: 13
+retweets: 0
+thread_id: 1799875076885459296
+in_reply_to_id: 1799875076885459296
+in_reply_to_user: cube_flipper
+answers: 28.6.12/8.7.10/1.1.2
+thread_root: 28.6.12/8.7.10/1.1.2
+
+most of the user interface elements you see throughout your operating system are ultimately built from a small set of graphical primitives (lines, ellipses, rectangles, bézier curves etc) which render down to pixelsid: 1631210458698117122
 created_at: 2023-03-02T08:30:54Z
 url: https://x.com/cube_flipper/status/1631210458698117122
 kind: reply
