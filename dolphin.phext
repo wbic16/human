@@ -106,7 +106,16 @@ retweets: 0
 in_reply_to_id: 1790577369331208311
 in_reply_to_user: owlthatissuperb
 
-@owlthatissuperb yoid: 1587897536895148032
+@owlthatissuperb yoid: 1806022104862908429
+created_at: 2024-06-26T17:49:58Z
+url: https://x.com/cube_flipper/status/1806022104862908429
+kind: reply
+likes: 1
+retweets: 0
+in_reply_to_id: 1806020498800947641
+in_reply_to_user: ergoecho
+
+@ErgoEcho nice!id: 1587897536895148032
 created_at: 2022-11-02T20:00:49Z
 url: https://x.com/cube_flipper/status/1587897536895148032
 kind: reply
