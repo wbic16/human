@@ -15007,7 +15007,16 @@ in_reply_to_user: cube_flipper
 answers: 22.5.7/7.10.19/1.1.2
 thread_root: 22.5.7/7.6.8/1.1.1
 
-[photo]id: 1807837008137687322
+[photo]id: 1815872109165650216
+created_at: 2024-07-23T22:10:22Z
+url: https://x.com/cube_flipper/status/1815872109165650216
+kind: reply
+likes: 2
+retweets: 0
+in_reply_to_id: 1815871746790056098
+in_reply_to_user: defenderofbasic
+
+@DefenderOfBasic @LouisVArge okay thought experiment what would a user-oriented rather than developer-oriented JS console look likeid: 1807837008137687322
 created_at: 2024-07-01T18:01:45Z
 url: https://x.com/cube_flipper/status/1807837008137687322
 kind: reply
