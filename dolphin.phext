@@ -1876,7 +1876,16 @@ retweets: 0
 in_reply_to_id: 1783034698714763743
 in_reply_to_user: amplifiedamp
 
-@amplifiedamp yesid: 1603936530867064832
+@amplifiedamp yesid: 1815967710750335063
+created_at: 2024-07-24T04:30:15Z
+url: https://x.com/cube_flipper/status/1815967710750335063
+kind: reply
+likes: 6
+retweets: 0
+in_reply_to_id: 1815967317613830483
+in_reply_to_user: coponder
+
+@coponder yesid: 1603936530867064832
 created_at: 2022-12-17T02:14:03Z
 url: https://x.com/cube_flipper/status/1603936530867064832
 kind: reply
