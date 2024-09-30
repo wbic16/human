@@ -1072,7 +1072,19 @@ retweets: 0
 in_reply_to_id: 1840647698380210585
 in_reply_to_user: 4confusedemoji
 
-@4confusedemoji @deepfates some impressions:id: 1840649029971333300
+@4confusedemoji @deepfates some impressions:id: 1840649239216754945
+created_at: 2024-09-30T07:05:50Z
+url: https://x.com/cube_flipper/status/1840649239216754945
+kind: thread
+likes: 2
+retweets: 0
+thread_id: 1840648795773976722
+in_reply_to_id: 1840649029971333300
+in_reply_to_user: cube_flipper
+answers: 10.4.4/8.6.10/1.1.2
+thread_root: 10.4.4/5.4.5/1.1.1
+
+@4confusedemoji @deepfates see here https://x.com/cube_flipper/status/1790352129770795135id: 1840649029971333300
 created_at: 2024-09-30T07:05:01Z
 url: https://x.com/cube_flipper/status/1840649029971333300
 kind: thread
