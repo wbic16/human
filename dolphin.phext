@@ -18697,7 +18697,19 @@ retweets: 0
 in_reply_to_id: 1843336490329485525
 in_reply_to_user: lumpenspace
 
-@lumpenspace you mean asking LLMs about these things? do you have examples of this?id: 1793387617741873428
+@lumpenspace you mean asking LLMs about these things? do you have examples of this?id: 1843341579660230724
+created_at: 2024-10-07T17:24:14Z
+url: https://x.com/cube_flipper/status/1843341579660230724
+kind: thread
+likes: 0
+retweets: 0
+thread_id: 1843341282992951586
+in_reply_to_id: 1843341282992951586
+in_reply_to_user: cube_flipper
+answers: 22.6.17/8.7.11/1.1.1
+thread_root: 22.6.17/8.7.11/1.1.1
+
+@lumpenspace (i will confess that it almost seems beside the point to spend time asking LLMs about, say, the contents of a simulated visual field, when studying their psychology seems more likely to reveal interesting aspects of their self-reflection capabilities)id: 1793387617741873428
 created_at: 2024-05-22T21:05:02Z
 url: https://x.com/cube_flipper/status/1793387617741873428
 kind: reply
