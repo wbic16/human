@@ -22641,7 +22641,20 @@ retweets: 0
 in_reply_to_id: 1710548373076623560
 in_reply_to_user: kanizsaboundary
 
-@KanizsaBoundary what is the most efficient means by which i might observe this?id: 1623398036251758597
+@KanizsaBoundary what is the most efficient means by which i might observe this?id: 1845524962465161699
+created_at: 2024-10-13T18:00:13Z
+url: https://x.com/cube_flipper/status/1845524962465161699
+kind: reply
+likes: 2
+retweets: 0
+in_reply_to_id: 1845521081404391831
+in_reply_to_user: jessi_cata
+
+@jessi_cata @meditationstuff something i do not quite grok about functionalism is how does it propose to map regions of spacetime onto conscious experiences (or if it even desires to do this at all). somewhere in your theoretical stack you need to formalise this.
+
+if you see frame invariance as a desirable property, then you need some rather complex function which can consume regions of spacetime and return the most parsimonious conscious experience – e.g. one that can consume a computer (or a human) containing a representation of the K3 graph and return a triangular experience or somesuch.
+
+alternatively we can drop the frame invariance requirement but then the theory loses all predictive power.id: 1623398036251758597
 created_at: 2023-02-08T19:07:07Z
 url: https://x.com/cube_flipper/status/1623398036251758597
 kind: reply
