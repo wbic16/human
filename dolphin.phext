@@ -8135,7 +8135,19 @@ retweets: 0
 in_reply_to_id: 1843215345873801384
 in_reply_to_user: lumpenspace
 
-@lumpenspace what would you have them do/pay attention to insteadid: 1821671475432378512
+@lumpenspace what would you have them do/pay attention to insteadid: 1846374836823904568
+created_at: 2024-10-16T02:17:19Z
+url: https://x.com/cube_flipper/status/1846374836823904568
+kind: thread
+likes: 4
+retweets: 0
+thread_id: 1846328790433304978
+in_reply_to_id: 1846328790433304978
+in_reply_to_user: cube_flipper
+answers: 18.6.9/8.7.10/1.1.18
+thread_root: 18.6.9/8.7.10/1.1.18
+
+[photo]id: 1821671475432378512
 created_at: 2024-08-08T22:14:59Z
 url: https://x.com/cube_flipper/status/1821671475432378512
 kind: reply
