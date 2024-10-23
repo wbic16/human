@@ -21081,7 +21081,19 @@ retweets: 0
 in_reply_to_id: 1731466673549684767
 in_reply_to_user: qiaochuyuan
 
-@QiaochuYuan @phantom_opus if you do feel inclined to check or explain what this means i would be curious to knowid: 1848978715390448018
+@QiaochuYuan @phantom_opus if you do feel inclined to check or explain what this means i would be curious to knowid: 1848981274314346920
+created_at: 2024-10-23T06:54:22Z
+url: https://x.com/cube_flipper/status/1848981274314346920
+kind: thread
+likes: 1
+retweets: 0
+thread_id: 1848978715390448018
+in_reply_to_id: 1848979436986896794
+in_reply_to_user: cube_flipper
+answers: 22.10.10/21.11.25/1.1.2
+thread_root: 22.10.10/13.7.14/1.1.1
+
+@SunlightFiora speaking of which, any 'pattern recognition software' would have to solve this problem, too, or at least make some accuracy/efficiency tradeoffs. i suspect it would then struggle to evaluate some more exotic states for which there may be no precedent.id: 1848978715390448018
 created_at: 2024-10-23T06:44:12Z
 url: https://x.com/cube_flipper/status/1848978715390448018
 kind: reply
