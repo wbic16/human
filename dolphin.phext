@@ -23619,7 +23619,19 @@ retweets: 0
 in_reply_to_id: 1702130117437206710
 in_reply_to_user: nervewing
 
-@nervewing just hitting the x button on those a bunch of times feels ineffective but i have found it to workid: 1849165838898937948
+@nervewing just hitting the x button on those a bunch of times feels ineffective but i have found it to workid: 1849167721797439959
+created_at: 2024-10-23T19:15:15Z
+url: https://x.com/cube_flipper/status/1849167721797439959
+kind: thread
+likes: 1
+retweets: 0
+thread_id: 1849165838898937948
+in_reply_to_id: 1849167234624884952
+in_reply_to_user: cube_flipper
+answers: 23.7.11/9.7.14/1.1.9
+thread_root: 23.7.11/8.7.12/1.1.8
+
+@SunlightFiora agree with you w/r/t there being a lot of free variables. difficult to build an NN which does this. it would be nice if this sort of process could be shown to fall out of physics, somehow. that's on us to demonstrate that, i guessid: 1849165838898937948
 created_at: 2024-10-23T19:07:46Z
 url: https://x.com/cube_flipper/status/1849165838898937948
 kind: reply
