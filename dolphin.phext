@@ -34652,7 +34652,19 @@ retweets: 0
 in_reply_to_id: 1573971733756973056
 in_reply_to_user: matthijscox
 
-@MatthijsCox thanks, i should say i am getting the term from david pearce https://www.hedweb.com/philsoph/quantum-computer.html [photo]id: 1849168374838055308
+@MatthijsCox thanks, i should say i am getting the term from david pearce https://www.hedweb.com/philsoph/quantum-computer.html [photo]id: 1849168937898107294
+created_at: 2024-10-23T19:20:05Z
+url: https://x.com/cube_flipper/status/1849168937898107294
+kind: thread
+likes: 1
+retweets: 0
+thread_id: 1849168374838055308
+in_reply_to_id: 1849168374838055308
+in_reply_to_user: cube_flipper
+answers: 29.9.8/12.7.14/1.1.1
+thread_root: 29.9.8/12.7.14/1.1.1
+
+@SunlightFiora in my model the field might also handle near term trajectory predictions. hard to say tho, the way sense of time is encoded is difficult to understand and it might be done in such a way as to utilise the field for predicting {motor, object} trajectories. highly speculative thoughid: 1849168374838055308
 created_at: 2024-10-23T19:17:51Z
 url: https://x.com/cube_flipper/status/1849168374838055308
 kind: reply
