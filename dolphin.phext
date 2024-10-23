@@ -21090,7 +21090,19 @@ retweets: 0
 in_reply_to_id: 1848935371121229861
 in_reply_to_user: fiorastarlight
 
-@SunlightFiora i'm not tied to symmetry as the valence metric – have spent some time considering other attributes, like shear stress, or Kullback-Leibler divergence. perhaps these simplified metrics miss part of the picture and/or could reduce to 'symmetry' anyway, given the right formulation.id: 1781736254721454453
+@SunlightFiora i'm not tied to symmetry as the valence metric – have spent some time considering other attributes, like shear stress, or Kullback-Leibler divergence. perhaps these simplified metrics miss part of the picture and/or could reduce to 'symmetry' anyway, given the right formulation.id: 1848979436986896794
+created_at: 2024-10-23T06:47:04Z
+url: https://x.com/cube_flipper/status/1848979436986896794
+kind: thread
+likes: 1
+retweets: 0
+thread_id: 1848978715390448018
+in_reply_to_id: 1848978715390448018
+in_reply_to_user: cube_flipper
+answers: 22.10.10/13.7.14/1.1.1
+thread_root: 22.10.10/13.7.14/1.1.1
+
+@SunlightFiora i guess my main issue with 'symmetry' is that it's computationally intractable, it's not easy to work with. given an arbitrary field state or even mathematical object – how do you evaluate how 'symmetrical' it is?id: 1781736254721454453
 created_at: 2024-04-20T17:26:40Z
 url: https://x.com/cube_flipper/status/1781736254721454453
 kind: reply
