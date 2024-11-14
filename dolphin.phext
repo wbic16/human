@@ -265,7 +265,16 @@ retweets: 0
 in_reply_to_id: 1848511588179055054
 in_reply_to_user: gptbrooke
 
-@gptbrooke lolid: 1806082010349437277
+@gptbrooke lolid: 1856865694522253741
+created_at: 2024-11-14T01:04:15Z
+url: https://x.com/cube_flipper/status/1856865694522253741
+kind: reply
+likes: 1
+retweets: 0
+in_reply_to_id: 1856865251620225251
+in_reply_to_user: lukechampine
+
+@lukechampine yay!!id: 1806082010349437277
 created_at: 2024-06-26T21:48:01Z
 url: https://x.com/cube_flipper/status/1806082010349437277
 kind: thread
