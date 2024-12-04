@@ -38357,7 +38357,16 @@ retweets: 0
 in_reply_to_id: 1825734963339342223
 in_reply_to_user: bayeslord
 
-@bayeslord https://x.com/flopopp/status/1825739873908642214id: 1709996932184285524
+@bayeslord https://x.com/flopopp/status/1825739873908642214id: 1864149627911720990
+created_at: 2024-12-04T03:28:00Z
+url: https://x.com/cube_flipper/status/1864149627911720990
+kind: reply
+likes: 2
+retweets: 0
+in_reply_to_id: 1864042453214298157
+in_reply_to_user: nosilverv
+
+@nosilverv https://x.com/romeostevens76/status/1679702605013061633 https://x.com/RomeoStevens76/status/1679702605013061633id: 1709996932184285524
 created_at: 2023-10-05T18:20:13Z
 url: https://x.com/cube_flipper/status/1709996932184285524
 kind: thread
