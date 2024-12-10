@@ -35908,7 +35908,18 @@ retweets: 0
 in_reply_to_id: 1814663479820746917
 in_reply_to_user: softyoda
 
-@softyoda i've seen a few VR demos like this over the years, this one is particularly nice!id: 1755789060822683706
+@softyoda i've seen a few VR demos like this over the years, this one is particularly nice!id: 1866531364704850002
+created_at: 2024-12-10T17:12:10Z
+url: https://x.com/cube_flipper/status/1866531364704850002
+kind: reply
+likes: 2
+retweets: 0
+in_reply_to_id: 1866495097468231878
+in_reply_to_user: guillefix
+
+@guillefix to make BCI software "safe" it's almost like you need some kind of "valence firewall" which can evaluate its risk before it's run
+
+maybe you can do this with pure theory, maybe you can do this with AI, we'll seeid: 1755789060822683706
 created_at: 2024-02-09T03:01:47Z
 url: https://x.com/cube_flipper/status/1755789060822683706
 kind: thread
