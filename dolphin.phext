@@ -22614,7 +22614,21 @@ in_reply_to_user: cube_flipper
 answers: 22.6.10/7.6.9/1.1.20
 thread_root: 22.6.10/7.6.10/1.1.19
 
-@webmasterdave @QualiaNerd @rgblong however, my own stance (and the stance of physicalism, put most bluntly) is that the shapes *matter*. and i'm willing to bet that the shapes inside an animal's head likely vary in a way that if we had perfect neuroimaging capabilities (which we don't) could be transparently correlated with inferred valence, whereas the shapes inside a GPU are likely quite similar regardless of what they are calculating (but i will stop short of claiming whether these feel good or bad; it's beyond us atm to claim whether or not the physical fields in and around most silicon hardware feel *amazing* or disgusting, yet)id: 1711153833605464556
+@webmasterdave @QualiaNerd @rgblong however, my own stance (and the stance of physicalism, put most bluntly) is that the shapes *matter*. and i'm willing to bet that the shapes inside an animal's head likely vary in a way that if we had perfect neuroimaging capabilities (which we don't) could be transparently correlated with inferred valence, whereas the shapes inside a GPU are likely quite similar regardless of what they are calculating (but i will stop short of claiming whether these feel good or bad; it's beyond us atm to claim whether or not the physical fields in and around most silicon hardware feel *amazing* or disgusting, yet)id: 1871994682378694729
+created_at: 2024-12-25T19:01:26Z
+url: https://x.com/cube_flipper/status/1871994682378694729
+kind: thread
+likes: 1
+retweets: 0
+thread_id: 1871990141251973218
+in_reply_to_id: 1871992234268328261
+in_reply_to_user: cube_flipper
+answers: 22.6.10/7.6.11/1.1.21
+thread_root: 22.6.10/7.6.10/1.1.19
+
+@webmasterdave @QualiaNerd @rgblong i will define "intuitive" valence as the valence a typical empathetic human observer would imagine a system possessing. so we'd evaluate a human and an LLM stating "i am happy and content" similarly.
+
+to define a function which can consume a clearly-bounded region of the physical fields and output something similar to intuitive valence – well, my expectation (which is far from being demonstrated) is that this would be simple (perhaps a handful of differential equations?) in the case of biological organisms, but in the case of the GPU hosting the LLM, this function would require a complete model of computation (including, for instance, the IEEE 754 floating point standard) in order to make this evaluationid: 1711153833605464556
 created_at: 2023-10-08T22:57:20Z
 url: https://x.com/cube_flipper/status/1711153833605464556
 kind: reply
