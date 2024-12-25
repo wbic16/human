@@ -30510,7 +30510,16 @@ retweets: 0
 in_reply_to_id: 1739016727390732384
 in_reply_to_user: elytramithra
 
-@ElytraMithra shit, how would i define stream entry. also known as the theravadan 'first path'. seems to be an abrupt phase transition people go through when they start meditating. might be quite dramatic. generally results in people getting much better at observing their own phenomenology. i think this is why people suffering from "dissociation" complain that they can now see all their retinal noiseid: 1683174027932868608
+@ElytraMithra shit, how would i define stream entry. also known as the theravadan 'first path'. seems to be an abrupt phase transition people go through when they start meditating. might be quite dramatic. generally results in people getting much better at observing their own phenomenology. i think this is why people suffering from "dissociation" complain that they can now see all their retinal noiseid: 1872022723905642532
+created_at: 2024-12-25T20:52:52Z
+url: https://x.com/cube_flipper/status/1872022723905642532
+kind: reply
+likes: 3
+retweets: 0
+in_reply_to_id: 1872021657814216947
+in_reply_to_user: davidad
+
+@davidad be nice to have it work step by step generating a sequence of smaller commits (then you could git bisect to see where it fucked up)id: 1683174027932868608
 created_at: 2023-07-23T17:55:34Z
 url: https://x.com/cube_flipper/status/1683174027932868608
 kind: reply
