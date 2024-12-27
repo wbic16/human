@@ -17803,7 +17803,19 @@ retweets: 0
 in_reply_to_id: 1821389113938853956
 in_reply_to_user: techno0ptimist
 
-@techno0ptimist check your DMsid: 1656788342212816903
+@techno0ptimist check your DMsid: 1872485505121796374
+created_at: 2024-12-27T03:31:48Z
+url: https://x.com/cube_flipper/status/1872485505121796374
+kind: reply
+likes: 20
+retweets: 0
+in_reply_to_id: 1872482551677194267
+in_reply_to_user: johnsonmxe
+
+@johnsonmxe > 100-400um
+> 21m to 1.3b 'vascular addressable units'
+
+nice to see some (somewhat) concrete estimates here. also consider what it might take to solve a PDE with 21 million clamps/constraints/boundary conditions/discretisation points (unsure how you'd formulate, this, actually)id: 1656788342212816903
 created_at: 2023-05-11T22:28:17Z
 url: https://x.com/cube_flipper/status/1656788342212816903
 kind: reply
