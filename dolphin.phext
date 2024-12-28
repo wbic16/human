@@ -43112,7 +43112,16 @@ retweets: 0
 in_reply_to_id: 1850929552794771854
 in_reply_to_user: louisvarge
 
-@louisvarge not necessarilyid: 1759413134572626421
+@louisvarge not necessarilyid: 1872955824769028276
+created_at: 2024-12-28T10:40:41Z
+url: https://x.com/cube_flipper/status/1872955824769028276
+kind: reply
+likes: 1
+retweets: 0
+in_reply_to_id: 1872954696257945684
+in_reply_to_user: qualiacomputer
+
+@qualiacomputer @algekalipso i use actually en dashes between clauses – em dashes without spaces for terminating sentences abruptly—id: 1759413134572626421
 created_at: 2024-02-19T03:02:34Z
 url: https://x.com/cube_flipper/status/1759413134572626421
 kind: thread
