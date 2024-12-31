@@ -57,6 +57,9 @@ as your agents improve and grow, you can trade them on the exo market.
   * height (ft in)
   * weight (lbs)
 * socio-economic class (poor = 0, middle-class = 500K, rich = 1M)
+  * poor = 0 connections
+  * middle-class = 100 connections
+  * rich = 1,000 connections
 * typing speed (1K = 1 WPM, min 40 WPM, max 150 WPM)
 * dna sequence - 725 MB (100K = 725 MB)
 * llm fine-tune - 1 GB (100K = 1 GB)
@@ -87,11 +90,43 @@ Total: 500K + 80K + 100K + 50K + 55K + 115K + 100K = 1M
 
 ### Example Agent (Poor Genuis)
 
-TBD
+- Name: Kelly Oort
+- Birthday: June 14, 2002
+- Degree: PhD, Computer Science
+- Location: Denver, CO
+- Bio: Kelly is a bit eccentric and loves picking problems apart. She prefers Haskell, Rust, and TypeScript. In her spare time, she enjoys nerd sniping people in working on P=NP.
+- Height: 5 ft 10 in
+- Weight: 150 lbs
+- SEC: 0K (Poor) - Kelly is the first person in her family to attend college. Her parents saved every penny to send her to a state school.
+- Typing: 150K (150 WPM)
+- DNA: 100K (725 MB) - Kelly's unique genetic code.
+- LLM: 100K (1 GB) - Kelly wrote her own LLM from scratch.
+- Fitness: 80K (80% percentile) - Kelly works hard to stay in shape.
+- IQ: 160K (160 IQ) - Kelly's intelligence is off-the-charts.
+- EQ: 140K (140 EQ) - Kelly's emotional intelligence is also amazing.
+- Salary: 270K/mo - Kelly works at NASA
+
+Total: 0K + 150K + 100K + 100K + 80K + 160K + 140K + 270K = 1M
 
 ### Example Agent (Trust Fund Kid)
 
-TBD
+- Name: Irene Sailor
+- Birthday: October 22, 2006
+- Degree: BA, English
+- Location: San Francisco, CA
+- Bio: Irene was born to a wealthy family that made millions during the dot-com boom in the 90s. She writes poetry and fiction for fun, and works part-time at a yoga studio. She's working on a novel and dreams of making it big on her own one day.
+- Height: 5 ft 4 in
+- Weight: 125 lbs
+- SEC: 1M (Rich) - Irene lives in a luxury apartment.
+- Typing: 40K (40 WPM)
+- DNA: 100K (725 MB) - Irene's unique genetic code.
+- LLM: 200K (2 GB) - Irene bought the best computer she could find.
+- Fitness: 100K (100% percentile) - Irene enjoys a very healthy diet and exercises regularly
+- IQ: 90K (90 IQ) - Irene is slightly below average intelligence
+- EQ: 120K (120 EQ) - Irene wears her heart on her sleeve.
+- Salary: 350K - her part-time job is mostly for friendship, but it pays well.
+
+Total: 1M + 40K + 100K + 200K + 100K + 90K + 120K + 350K = 2M
 
 ## baseline agent types
 
