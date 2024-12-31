@@ -3,6 +3,13 @@
 Exocortexia is the virtual world where digital humans live.
 The agents that run on your own hardware are subject to your rules.
 
+## files
+
+human.phext: The agent network configuration file
+* 2.1.1/1.1.1/1.1.1 Jane Harper
+* 3.1.1/1.1.1/1.1.1 Kelly Oort
+* 4.1.1/1.1.1/1.1.1 Irene Sailor
+
 # human
 
 a digital instance of a human, using phext and the exocortex as a substrate.

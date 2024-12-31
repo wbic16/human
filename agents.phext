@@ -1,0 +1,16 @@
+{
+  "name": "Jane Harper",
+  "birthday": "April 12, 1990",
+  "degree": "Bachelor of Science, Computer Science",
+  "location": "Seattle, WA",
+  "bio": "Jane Harper is a passionate and efficient software developer with over a decade of experience in creating scalable applications. She specializes in backend development, working with Rust and Python, and has a keen interest in distributed systems and artificial intelligence. Outside of work, Jane enjoys hiking in the Pacific Northwest and volunteering to teach coding to underrepresented youth.",
+  "height": "5 ft 7 in",
+  "weight": "135 lbs",
+  "sec": "0.5",
+  "typing": "80",
+  "dna": "jane-harper.dna",
+  "llm": "jane-harper.llm",
+  "iq": 115,
+  "eq": 100,
+  "salary": 0
+}
