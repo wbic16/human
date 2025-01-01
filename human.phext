@@ -1,7 +1,52 @@
 1.1.1/1.1.1/1.1.1 Index
 2.1.1/1.1.1/1.1.1 Jane Harper
 3.1.1/1.1.1/1.1.1 Kelly Oort
-4.1.1/1.1.1/1.1.1 Irene Sailor{
+4.1.1/1.1.1/1.1.1 Irene Sailor
+Timelog.json
+{
+  "2025-01-01": { "start": "10:30 AM", "end": "" }
+}LLMs
+----
+Quantized models
+
+## llmama2.c model conversion
+python export.py llama2_7b_q80.bin --version 2 --meta-llama path/to/llama/model/7B
+
+## GPU fork of llama2.c
+https://github.com/ankan-ban/llama_cu_awq => https://github.com/wbic16/exollama
+
+# Facts
+* i9-13900HX: 16 threads (P-cores)
+* R9 8945HS: 16 threads
+
+# Lessons
+
+* The larger the model, the slower the inference
+* stories15M -> 160 tokens/sec per core
+* stories110M -> 20 tokens/sec per core
+* DeepSeek is a mixture-of-expoerts model
+* This implies that designing AGI to realize *when* to specialize is a huge advantage
+* Model size versus tokens/sec log-scales (15M -> 160, 30M -> 80, 60M -> 40, 120M -> 20)
+* Humans have 2 brains
+* Dolphins have 3 brains
+* A team of humans has 12 brains
+* An exocortical has 16 brains
+* An exopod has 98 brains (2 human, 96 virtual)
+
+# Targets
+* We want 48 agents running at 36 KB/hour (42 tokens/sec).
+* Each agent will have 2 brains operating at 21 tokens/sec
+* We can run 16 brains per exocortical
+* We want to run 50% utilization for stability
+* We should target a 60M-parameter model for each brain (6B overall)
+* This allows each brain to generate information at 10 bytes/sec consistently
+
+
+Projects
+--------
+* rewrite Linux in Rust (https://x.com/wbic16/status/1874477287279866345)
+* rewrite LLVM in Rust (https://x.com/wbic16/status/1874477287279866345)
+{
   "name": "Jane Harper",
   "birthday": "April 12, 1990",
   "degree": "Bachelor of Science, Computer Science",
