@@ -41,6 +41,9 @@ https://github.com/ankan-ban/llama_cu_awq => https://github.com/wbic16/exollama
 * We should target a 60M-parameter model for each brain (6B overall)
 * This allows each brain to generate information at 10 bytes/sec consistently
 
+# GPU Nodes
+* An NVidia RTX 4080 nets 80 tokens/sec when hosting llama7b
+* See wbic16/exollama for a dirt-simple cli interface
 
 Projects
 --------
