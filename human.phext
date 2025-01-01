@@ -4,7 +4,7 @@
 4.1.1/1.1.1/1.1.1 Irene Sailor
 Timelog.json
 {
-  "2025-01-01": { "start": "10:30 AM", "end": "" }
+  "2025-01-01": { "index": 0, "start": "10:30", "end": "12:15" }
 }LLMs
 ----
 Quantized models
