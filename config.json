@@ -1,0 +1,21 @@
+{
+  "luma": {
+    "cpu": 16,
+    "gpu": 1
+  },
+  "logos-prime": {
+    "cpu": 16
+  },
+  "halcyon-vector": {
+    "cpu": 16
+  },
+  "aletheia-core": {
+    "cpu": 16
+  },
+  "chrysalis-hub": {
+    "cpu": 16
+  },
+  "aurora-continuum": {
+    "cpu": 16
+  }
+}
