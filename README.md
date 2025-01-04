@@ -184,3 +184,9 @@ the ratio of hours to scrolls for baseline agent types is listed below.
 * productivity: 100%
 * death chance: 0.03%
 
+### Hero
+
+* work: 60
+* sleep: 42
+* productivity: 150%
+* death chance: 0.01%
