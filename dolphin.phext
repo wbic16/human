@@ -8883,7 +8883,19 @@ if the QRI tracer tool (https://qualiacomputing.com/2020/10/09/modeling-psychede
 
 - 2C-B: 12 Hz
 - LSD: 15 Hz
-- psilocybin: 19 Hzid: 1641240572701859841
+- psilocybin: 19 Hzid: 1876413635104584050
+created_at: 2025-01-06T23:40:47Z
+url: https://x.com/cube_flipper/status/1876413635104584050
+kind: thread
+likes: 3
+retweets: 0
+thread_id: 1876393920986542108
+in_reply_to_id: 1876395676046860396
+in_reply_to_user: cube_flipper
+answers: 18.5.6/5.7.14/1.1.10
+thread_root: 18.5.6/6.6.8/1.1.7
+
+(self-crit, there are coloured edges here which are probably incorrect, if i was gonna do this *properly* i'd convert this to Lab colour space, then convert the lightness channel to the frequency domain, truncate some of the higher frequencies, and then convert everything back) [photo]id: 1641240572701859841
 created_at: 2023-03-30T00:46:59Z
 url: https://x.com/cube_flipper/status/1641240572701859841
 kind: original
