@@ -8828,7 +8828,25 @@ retweets: 0
 in_reply_to_id: 1697733455369716027
 in_reply_to_user: daniel_271828
 
-@daniel_271828 "i've read a few PDFs" *slaps wad of printouts on desk*id: 1587303297819770881
+@daniel_271828 "i've read a few PDFs" *slaps wad of printouts on desk*id: 1876393927022121337
+created_at: 2025-01-06T22:22:28Z
+url: https://x.com/cube_flipper/status/1876393927022121337
+kind: thread
+likes: 4
+retweets: 0
+thread_id: 1876393920986542108
+in_reply_to_id: 1876393923368935865
+in_reply_to_user: cube_flipper
+answers: 18.5.6/7.6.12/1.1.8
+thread_root: 18.5.6/6.6.8/1.1.7
+
+i'm interested in understanding why as strobe frequency increases, ringing artifact size decreases. is this always the case?
+
+- 2C-B: wide, bouba
+- LSD: smaller, crispier
+- psilocybin: extremely sharp
+
+i've attached some quick replications (maybe ruined by image compression): [photo]id: 1587303297819770881
 created_at: 2022-11-01T04:39:31Z
 url: https://x.com/cube_flipper/status/1587303297819770881
 kind: reply
