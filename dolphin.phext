@@ -15658,7 +15658,19 @@ retweets: 0
 in_reply_to_id: 1881112241539629073
 in_reply_to_user: jessi_cata
 
-@jessi_cata this seems straightforward? increasing visual prediction error would let me decrease somatic prediction error by not bumping into things?id: 1617721733636829184
+@jessi_cata this seems straightforward? increasing visual prediction error would let me decrease somatic prediction error by not bumping into things?id: 1881115404049010830
+created_at: 2025-01-19T23:03:56Z
+url: https://x.com/cube_flipper/status/1881115404049010830
+kind: thread
+likes: 0
+retweets: 0
+thread_id: 1881115027257937933
+in_reply_to_id: 1881115027257937933
+in_reply_to_user: cube_flipper
+answers: 20.5.11/7.6.9/1.1.2
+thread_root: 20.5.11/7.6.9/1.1.2
+
+@jessi_cata i do think friston's formulation is better though, it's just less quick to explain [photo]id: 1617721733636829184
 created_at: 2023-01-24T03:11:31Z
 url: https://x.com/cube_flipper/status/1617721733636829184
 kind: reply
