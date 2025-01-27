@@ -28868,7 +28868,16 @@ retweets: 0
 in_reply_to_id: 1876715771159511452
 in_reply_to_user: caldwbr
 
-@Caldwbr i've been wanting to use gaussian splats to illustrate this kind of thing for a long time, it would probably be quite effective because you could start with a large scene and only render what's in vision... still haven't gotten around to it https://x.com/cube_flipper/status/1680423499188563969id: 1709260421088375290
+@Caldwbr i've been wanting to use gaussian splats to illustrate this kind of thing for a long time, it would probably be quite effective because you could start with a large scene and only render what's in vision... still haven't gotten around to it https://x.com/cube_flipper/status/1680423499188563969id: 1883982028124873074
+created_at: 2025-01-27T20:54:52Z
+url: https://x.com/cube_flipper/status/1883982028124873074
+kind: reply
+likes: 0
+retweets: 0
+in_reply_to_id: 1883973881129755117
+in_reply_to_user: zinjanthopus
+
+@zinjanthopus it is within my expectation that with the right practice one could hallucinate a point light source, perhaps one that obeys object permanence (stays in the same spot even if you look away) and moves around in response to attentionid: 1709260421088375290
 created_at: 2023-10-03T17:33:35Z
 url: https://x.com/cube_flipper/status/1709260421088375290
 kind: reply
