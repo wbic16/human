@@ -30685,7 +30685,19 @@ retweets: 0
 in_reply_to_id: 1884188625606230413
 in_reply_to_user: repligate
 
-@repligate wow instant follow omgid: 1847561784812851683
+@repligate wow instant follow omgid: 1884214944318771648
+created_at: 2025-01-28T12:20:24Z
+url: https://x.com/cube_flipper/status/1884214944318771648
+kind: thread
+likes: 0
+retweets: 0
+thread_id: 1884214852304134369
+in_reply_to_id: 1884214852304134369
+in_reply_to_user: cube_flipper
+answers: 23.8.9/7.7.7/1.1.11
+thread_root: 23.8.9/7.7.7/1.1.11
+
+@repligate cc: @phasebornid: 1847561784812851683
 created_at: 2024-10-19T08:53:50Z
 url: https://x.com/cube_flipper/status/1847561784812851683
 kind: original
