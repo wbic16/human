@@ -47042,7 +47042,19 @@ kind: original
 likes: 17
 retweets: 0
 
-currently getting EEG'ed by @42irrationalist...id: 1888703465951842495
+currently getting EEG'ed by @42irrationalist...id: 1888704219286528061
+created_at: 2025-02-09T21:39:10Z
+url: https://x.com/cube_flipper/status/1888704219286528061
+kind: thread
+likes: 4
+retweets: 0
+thread_id: 1888703465951842495
+in_reply_to_id: 1888703465951842495
+in_reply_to_user: cube_flipper
+answers: 37.7.8/8.6.11/1.1.1
+thread_root: 37.7.8/8.6.11/1.1.1
+
+@eshear one of the advantages of this is that the interface you present to the user can be syntax agnostic. perhaps if the AST is presented in a way which superficially resembles haskell – in principle this could be changed so it resembles Swift, or JS, or a node-and-wire diagram, or folders with a Win95 aesthetic, in accordance with the user's preferencesid: 1888703465951842495
 created_at: 2025-02-09T21:36:11Z
 url: https://x.com/cube_flipper/status/1888703465951842495
 kind: reply
