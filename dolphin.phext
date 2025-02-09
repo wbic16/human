@@ -47087,7 +47087,19 @@ in_reply_to_user: cube_flipper
 answers: 37.7.8/8.6.10/1.1.2
 thread_root: 37.7.8/8.6.11/1.1.1
 
-@eshear this would also let you build a gestural interface better suited to editing function definitions on mobile than just typing text into a text field – imagine swiping to delete or dragging to reorder individual branches under an if statement, for example. this could also help prevent the user from inputting a non-well-formed program, but perhaps not a program which doesn't type check, depending on how you design itid: 1572773272168824833
+@eshear this would also let you build a gestural interface better suited to editing function definitions on mobile than just typing text into a text field – imagine swiping to delete or dragging to reorder individual branches under an if statement, for example. this could also help prevent the user from inputting a non-well-formed program, but perhaps not a program which doesn't type check, depending on how you design itid: 1888706896124957085
+created_at: 2025-02-09T21:49:49Z
+url: https://x.com/cube_flipper/status/1888706896124957085
+kind: thread
+likes: 2
+retweets: 0
+thread_id: 1888703465951842495
+in_reply_to_id: 1888706646110814483
+in_reply_to_user: cube_flipper
+answers: 37.7.8/6.5.9/1.1.4
+thread_root: 37.7.8/8.6.11/1.1.1
+
+@eshear "no parser required" is perhaps the tl;drid: 1572773272168824833
 created_at: 2022-09-22T02:22:23Z
 url: https://x.com/cube_flipper/status/1572773272168824833
 kind: reply
