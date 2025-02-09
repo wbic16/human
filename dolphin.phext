@@ -45994,7 +45994,19 @@ in_reply_to_user: eshear
 
 so spinning up a todo list is as simple as specifying 'data Todo = Boolean String' and then editing a list of those
 
-if you did this the right way you'd be able to specify the view hierarchy for how a given type gets rendered using a typeclass implementation on that type, at which point you'd effectively have a fully-bootstrapped user-editable operating system. no reason you couldn't do this on mobileid: 1888701486118604878
+if you did this the right way you'd be able to specify the view hierarchy for how a given type gets rendered using a typeclass implementation on that type, at which point you'd effectively have a fully-bootstrapped user-editable operating system. no reason you couldn't do this on mobileid: 1888702535017668916
+created_at: 2025-02-09T21:32:29Z
+url: https://x.com/cube_flipper/status/1888702535017668916
+kind: thread
+likes: 1
+retweets: 0
+thread_id: 1888699976257253619
+in_reply_to_id: 1888701486118604878
+in_reply_to_user: cube_flipper
+answers: 31.6.14/7.7.11/1.1.4
+thread_root: 31.6.14/7.6.11/1.1.1
+
+@eshear like i'd imagine most users would wanna spend 95% of their time editing (notes, todo lists, tables etc) and maybe only 5% of their time actually programming, and the system should reflect this. @disconcision think you might have opinions hereid: 1888701486118604878
 created_at: 2025-02-09T21:28:19Z
 url: https://x.com/cube_flipper/status/1888701486118604878
 kind: thread
