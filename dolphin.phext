@@ -47042,7 +47042,16 @@ kind: original
 likes: 17
 retweets: 0
 
-currently getting EEG'ed by @42irrationalist...id: 1572773272168824833
+currently getting EEG'ed by @42irrationalist...id: 1888703465951842495
+created_at: 2025-02-09T21:36:11Z
+url: https://x.com/cube_flipper/status/1888703465951842495
+kind: reply
+likes: 3
+retweets: 0
+in_reply_to_id: 1888701978760638972
+in_reply_to_user: eshear
+
+@eshear heh. well i guess they're both trees, just in the latter case instead of files/folders/data you have at the root a big list of declarations, be they type definitions, functions, values etc. this would include the primitives used for defining functions – lambdas, pattern matching, if statements and so onid: 1572773272168824833
 created_at: 2022-09-22T02:22:23Z
 url: https://x.com/cube_flipper/status/1572773272168824833
 kind: reply
