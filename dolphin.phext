@@ -20165,7 +20165,19 @@ in_reply_to_user: cube_flipper
 answers: 21.6.8/7.7.11/1.1.38
 thread_root: 21.6.8/7.7.11/1.1.38
 
-(as for specifics, will be writing PyTorch scripts for real time/interactive dataviz. last time around i was using VTK for this and it sucked ass)id: 1712587609363337669
+(as for specifics, will be writing PyTorch scripts for real time/interactive dataviz. last time around i was using VTK for this and it sucked ass)id: 1889057190977425450
+created_at: 2025-02-10T21:01:45Z
+url: https://x.com/cube_flipper/status/1889057190977425450
+kind: thread
+likes: 5
+retweets: 0
+thread_id: 1889054637917155340
+in_reply_to_id: 1889056473621356987
+in_reply_to_user: cube_flipper
+answers: 21.6.8/8.7.11/1.1.40
+thread_root: 21.6.8/7.7.11/1.1.38
+
+anyway, "hey kids, what are some good prompts for someone just getting in to prompting" 😅 currently i use Zed because i think Cursor is fugly and slow but tbh what i really should do just copy/internalise someone else's Cursor workflow...?id: 1712587609363337669
 created_at: 2023-10-12T21:54:39Z
 url: https://x.com/cube_flipper/status/1712587609363337669
 kind: reply
