@@ -20153,7 +20153,19 @@ retweets: 0
 in_reply_to_id: 1830532464500166995
 in_reply_to_user: qiaochuyuan
 
-@QiaochuYuan ya those old bayesian brain scottposts are great, i read all those right as covid hit and i got really into ketamine, was honestly a lot of fun to read about bayesian brain theory in the morning and then experiment with blocking my prediction streams in the eveningid: 1712587609363337669
+@QiaochuYuan ya those old bayesian brain scottposts are great, i read all those right as covid hit and i got really into ketamine, was honestly a lot of fun to read about bayesian brain theory in the morning and then experiment with blocking my prediction streams in the eveningid: 1889055441671553423
+created_at: 2025-02-10T20:54:48Z
+url: https://x.com/cube_flipper/status/1889055441671553423
+kind: thread
+likes: 6
+retweets: 0
+thread_id: 1889054637917155340
+in_reply_to_id: 1889054637917155340
+in_reply_to_user: cube_flipper
+answers: 21.6.8/7.7.11/1.1.38
+thread_root: 21.6.8/7.7.11/1.1.38
+
+(as for specifics, will be writing PyTorch scripts for real time/interactive dataviz. last time around i was using VTK for this and it sucked ass)id: 1712587609363337669
 created_at: 2023-10-12T21:54:39Z
 url: https://x.com/cube_flipper/status/1712587609363337669
 kind: reply
