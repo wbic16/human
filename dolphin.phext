@@ -20225,7 +20225,19 @@ retweets: 0
 in_reply_to_id: 1845144839819517991
 in_reply_to_user: medievalpard
 
-@springpard it is absolutely possible to instantiate a masculine, feminine, or neutral vibes-based sense of interiority in such a way that this has causal effect on motor output, vocal affect, and how one's environment/object of attention is interpreted.id: 1863460916299481570
+@springpard it is absolutely possible to instantiate a masculine, feminine, or neutral vibes-based sense of interiority in such a way that this has causal effect on motor output, vocal affect, and how one's environment/object of attention is interpreted.id: 1889056473621356987
+created_at: 2025-02-10T20:58:54Z
+url: https://x.com/cube_flipper/status/1889056473621356987
+kind: thread
+likes: 4
+retweets: 0
+thread_id: 1889054637917155340
+in_reply_to_id: 1889055441671553423
+in_reply_to_user: cube_flipper
+answers: 21.6.8/8.6.10/1.1.39
+thread_root: 21.6.8/7.7.11/1.1.38
+
+(am on a macbook pro, i hit a speed issue last time around where it wasn't PyTorch that was the bottleneck but how fast i could shuffle a large buffer between MPS-land and where VTK wanted it to be for rendering, in principle i shouldn't have to do this... 😪)id: 1863460916299481570
 created_at: 2024-12-02T05:51:18Z
 url: https://x.com/cube_flipper/status/1863460916299481570
 kind: reply
