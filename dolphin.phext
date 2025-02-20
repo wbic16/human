@@ -38696,7 +38696,19 @@ retweets: 0
 in_reply_to_id: 1856839357866332201
 in_reply_to_user: danielbrottman
 
-@danielbrottman i wrote about its abuse potential at the start here having encountered a fair amount of this in the wild https://smoothbrains.net/posts/2023-08-01-ketamine.html [photo]id: 1678998623370231808
+@danielbrottman i wrote about its abuse potential at the start here having encountered a fair amount of this in the wild https://smoothbrains.net/posts/2023-08-01-ketamine.html [photo]id: 1892648676969095523
+created_at: 2025-02-20T18:53:02Z
+url: https://x.com/cube_flipper/status/1892648676969095523
+kind: thread
+likes: 4
+retweets: 0
+thread_id: 1892647113445499294
+in_reply_to_id: 1892647113445499294
+in_reply_to_user: cube_flipper
+answers: 25.7.9/10.9.12/1.1.25
+thread_root: 25.7.9/10.9.12/1.1.25
+
+@migowski if it helps: starting with a dirac delta in the spatial domain, if you "rotate" it 90º through the time-frequency plane you wind up with a sine wave. this is a smooth transform, and along the way you get a series of gaussian chirps.id: 1678998623370231808
 created_at: 2023-07-12T05:24:00Z
 url: https://x.com/cube_flipper/status/1678998623370231808
 kind: original
