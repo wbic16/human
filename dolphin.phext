@@ -40615,7 +40615,16 @@ retweets: 0
 in_reply_to_id: 1880357534974021693
 in_reply_to_user: arithmoquine
 
-@arithmoquine https://x.com/cube_flipper/status/1651408819006877696 https://x.com/cube_flipper/status/1651408819006877696id: 1562658766234853376
+@arithmoquine https://x.com/cube_flipper/status/1651408819006877696 https://x.com/cube_flipper/status/1651408819006877696id: 1894169834222760335
+created_at: 2025-02-24T23:37:35Z
+url: https://x.com/cube_flipper/status/1894169834222760335
+kind: reply
+likes: 2
+retweets: 0
+in_reply_to_id: 1894169582287675576
+in_reply_to_user: sameqcu
+
+@sameQCU 100% https://x.com/cube_flipper/status/1882602198934389155id: 1562658766234853376
 created_at: 2022-08-25T04:30:57Z
 url: https://x.com/cube_flipper/status/1562658766234853376
 kind: original
