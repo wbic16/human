@@ -35976,7 +35976,22 @@ retweets: 0
 in_reply_to_id: 1650164777342193669
 in_reply_to_user: bayeslord
 
-@bayeslord @algekalipso there was some discussion of propofol and cessations a few days after this thread, did you catch it? i should have cc'd you in https://x.com/cube_flipper/status/1651117722540085248id: 1797297349691092999
+@bayeslord @algekalipso there was some discussion of propofol and cessations a few days after this thread, did you catch it? i should have cc'd you in https://x.com/cube_flipper/status/1651117722540085248id: 1894889893597413490
+created_at: 2025-02-26T23:18:50Z
+url: https://x.com/cube_flipper/status/1894889893597413490
+kind: reply
+likes: 0
+retweets: 0
+in_reply_to_id: 1894883220044554712
+in_reply_to_user: eshear
+
+@eshear @ArgonGruber @ESYudkowsky whether or not all cognition is "truth-seeking" or whether that which we experience as truth-seeking is reducible to simpler dynamics (and we see people using terms like 'free energy minimisation', or 'valence gradient descent' to describe this...) is an open question—
+
+i think another free variable here is one of attentional radius. you can zoom in on the thought experiment at hand, or you can expand into the wider context which generated the thought experiment in the first place.
+
+you can apply truth-seeking in either context, but i think people who do one or the other tend to be interested in different questions. "what is the optimal strategy" vs. "why do people choose particular strategies" (and if we expand further to envelop the even broader context of rationality and AI alignment, "how do we help people choose good strategies", and so on)
+
+for some people either the latter or the former can be quite antithetical to their way of being. ignoring the context is important if you want to avoid bias, but this can also get you eaten by a grue.id: 1797297349691092999
 created_at: 2024-06-02T16:00:54Z
 url: https://x.com/cube_flipper/status/1797297349691092999
 kind: reply
