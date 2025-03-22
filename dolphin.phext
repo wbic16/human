@@ -48750,7 +48750,16 @@ retweets: 0
 in_reply_to_id: 1710979298683679114
 in_reply_to_user: tetraspacewest
 
-@TetraspaceWest @AsherSoryl was this uid: 1562975967886204928
+@TetraspaceWest @AsherSoryl was this uid: 1903571212258673120
+created_at: 2025-03-22T22:15:18Z
+url: https://x.com/cube_flipper/status/1903571212258673120
+kind: reply
+likes: 2
+retweets: 0
+in_reply_to_id: 1903570778286919834
+in_reply_to_user: yitzilitt
+
+@YitziLitt yes, it is written in Swiftid: 1562975967886204928
 created_at: 2022-08-26T01:31:24Z
 url: https://x.com/cube_flipper/status/1562975967886204928
 kind: thread
