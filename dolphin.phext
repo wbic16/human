@@ -44385,7 +44385,23 @@ retweets: 0
 in_reply_to_id: 1805411717431935036
 in_reply_to_user: gptbrooke
 
-@gptbrooke i would probably burn out if i stayed an extra day but i'm also a bit of an outlier so far as social sensitivity goesid: 1904381712580452763
+@gptbrooke i would probably burn out if i stayed an extra day but i'm also a bit of an outlier so far as social sensitivity goesid: 1904383421096546444
+created_at: 2025-03-25T04:02:43Z
+url: https://x.com/cube_flipper/status/1904383421096546444
+kind: thread
+likes: 0
+retweets: 0
+thread_id: 1904381712580452763
+in_reply_to_id: 1904381712580452763
+in_reply_to_user: cube_flipper
+answers: 26.7.11/8.7.12/1.1.13
+thread_root: 26.7.11/8.7.12/1.1.13
+
+@yourthefool i think consciousness is particularly good at the kind of continuous-update gradient descent task of which driving is a perfect example. computers can do that fine too i guess but i think they will never be quite as good at calculus as consciousness is
+
+however, driving also requires broad-spectrum sensory integration of the kind which computers still basically suck at. how expensive would it be to perform a fat all-to-all convolution across your entire sensorium, all the while pattern matching it against your entire memory, extrapolating trajectories into the future, performing collision detection and applying higher-order reasoning?
+
+driving also gets to leverage/repurpose our (flexible and efficient) proprioceptive body map, tooid: 1904381712580452763
 created_at: 2025-03-25T03:55:56Z
 url: https://x.com/cube_flipper/status/1904381712580452763
 kind: reply
