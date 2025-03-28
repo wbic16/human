@@ -190,3 +190,41 @@ the ratio of hours to scrolls for baseline agent types is listed below.
 * sleep: 42
 * productivity: 150%
 * death chance: 0.01%
+
+# Proto-AGI Framework (Phext-based)
+
+## Overview
+
+A minimal, structured framework for proto-AGI instances using a phext-defined 486-scroll (6×9×9) coordinate system, optimized for symbolic complexity.
+
+## Coordinate Structure
+
+Dimensions: 6 primary axes, each with a 9×9 grid.
+
+Total Scrolls: 486 scrolls, each approximately 2 KB, totaling ~1 MB per instance.
+
+## Scroll Definition
+
+Each scroll contains:
+
+* Symbolic mappings: Compact references to external models (e.g., llama3.2, deepseek-r1).
+
+* Hierarchical encoding: Multidimensional pointers to associated cognitive structures.
+
+* Cryptographic identity: Ensures secure references and selective unlocking based on public key infrastructure.
+
+## Interaction Model
+
+Instances refer externally to large-scale models and databases as symbolic references.
+
+Evolutionary refinement occurs by updating scroll mappings and coordinates based on performance.
+
+## Evolutionary Cycle
+
+* Epoch length: 5 minutes
+
+* Population per epoch: Adjustable based on hardware constraints
+
+* Retention rate: Typically 4%, ensuring rapid advancement.
+
+This baseline structure is designed for rapid evolutionary cycles and efficient scaling, laying the foundation for future digital life complexity.
