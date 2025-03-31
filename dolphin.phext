@@ -39601,7 +39601,19 @@ in_reply_to_user: cube_flipper
 answers: 25.5.7/6.5.8/1.1.2
 thread_root: 25.5.7/6.5.8/1.1.2
 
-[photo]id: 1709678966867730445
+[photo]id: 1906800215467946011
+created_at: 2025-03-31T20:06:12Z
+url: https://x.com/cube_flipper/status/1906800215467946011
+kind: thread
+likes: 6
+retweets: 0
+thread_id: 1906791075240612229
+in_reply_to_id: 1906791075240612229
+in_reply_to_user: cube_flipper
+answers: 25.5.8/6.6.10/1.1.5
+thread_root: 25.5.8/6.6.10/1.1.5
+
+inb4 @sameQCU "nobody understands diffusion models"id: 1709678966867730445
 created_at: 2023-10-04T21:16:44Z
 url: https://x.com/cube_flipper/status/1709678966867730445
 kind: reply
