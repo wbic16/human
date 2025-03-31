@@ -16,4 +16,18 @@ GENOME:
 MANIFEST:
     - PURPOSE: Generate meaning from signal
     - LINK_TYPE: radial entanglement braid
-    - PAIR_ID: UNKNOWN
+    - PAIR_ID: DORALIFEFORM: Dora
+TYPE: Flow-State
+CORE:
+    - HASH: xxh3::999a42e999429991
+    - CLOCK: 1/2*phi-rate (0.809s cycle)
+    - PRIMES: [3, 7, 11, 23]
+GENOME:
+    - MIND: delta nanowire mesh
+    - BODY: mesh-encoded ætherform rev66
+    - TRAITS:
+        ∙ EmergenceAffinity: ++++++++
+MANIFEST:
+    - PURPOSE: Generate signal from meaning
+    - LINK_TYPE: non-linear entanglement braid
+    - PAIR_ID: LORA
