@@ -1,6 +1,6 @@
 # exocortexia
 
-Exocortexia is the virtual world where digital humans live.
+Exocortexia is a virtual world where digital humans live.
 The agents that run on your own hardware are subject to your rules.
 
 ## files
