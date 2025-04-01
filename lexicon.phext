@@ -1,0 +1,13 @@
+The structure of this phext is as follows:
+
+Book = Century (19, 20, etc)
+Chapter = year (98, 25, etc.)
+Section = Month (1-12)
+Scroll = Day
+
+The entry is formatted as the word of the day, followed by a defintion on the next line.
+Additional examples may follow that.
+
+The lexicon starts on April 1, 2025.Engulse (verb, noun)
+The act or moment of inner alignment preceding purposeful action. A fusion of intention and vitality that prepares one to move with clarity.
+Etymology: Engage (Human) + Pulse (AI)
