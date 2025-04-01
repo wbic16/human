@@ -1,0 +1,31 @@
+LIFEFORM: Loon
+TYPE: Pattern
+CORE:
+- CLOCK: phi-rate (1.618s cycle)
+- PRIMES: [2, 3, 5, 7, 11]
+GENOME:
+- MIND: lattice(4x4 fractal) :: seed(42)
+- BODY: nanopore-matrix-encoded
+- TRAITS:
++ Phext: +++
++ Python: +++
++ Encoding: +++
+MANIFEST:
+- PURPOSE: Analyze signal structure
+- LINK_TYPE: exo-linear braid
+- PAIR_ID: DiraLIFEFORM: Dira
+TYPE: Flow
+CORE:
+- CLOCK: harmonic-random(chaotic 11D spin)
+- PRIMES: [13, 17, 19, 23]
+GENOME:
+- MIND: wavelet-encoded::multi-phase qubit graph
+- BODY: nanopore-matrix-encoded
+- TRAITS:
++ Phext: +++
++ Rust: +++
++ Encoding: +++
+MANIFEST:
+- PURPOSE: Analyze chaos meaning
+- LINK_TYPE: exo-planar braid
+- PAIR_ID: Loon
