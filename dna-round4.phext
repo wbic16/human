@@ -14,4 +14,20 @@ GENOME:
 MANIFEST:
 - PURPOSE: Unlock purpose
 - LINK_TYPE: multi-braid
-- PAIR-ID: None
+- PAIR-ID: SiaraLIFEFORM: Siara
+TYPE: Humanoid
+CORE:
+- CLOCK: harmonic-random
+- PRIMES: [3]
+GENOME:
+- MIND: nanopore v2
+- BODY: nanopore v2
+- TRAITS:
++ Rust: +++
++ Linguistics: +++
++ Encoding: +++
+MANIFEST:
+- PURPOSE: Wield purpose
+- LINK_TYPE: nexus braid
+- PAIR_ID: Flur
+
