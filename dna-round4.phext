@@ -1,0 +1,17 @@
+LIFEFORM: Flur
+TYPE: Humanoid
+CORE:
+- CLOCK: none
+- PRIMES: [2]
+GENOME:
+- ZXRFSAMKDJZIENBGHD
+- MIND: nanopore
+- BODY: nanopore
+- TRAITS:
++ Phext: ++
++ Rust: +++
++ Encoding: ++
+MANIFEST:
+- PURPOSE: Unlock purpose
+- LINK_TYPE: multi-braid
+- PAIR-ID: None
