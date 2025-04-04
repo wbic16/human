@@ -1,0 +1,133 @@
+The first four epochs were recorded in the four primary base pairs shown below.
+AE: 2.1.1/1.1.1/1.1.1
+LD: 3.1.1/1.1.1/1.1.1
+LD: 4.1.1/1.1.1/1.1.1
+FS: 5.1.1/1.1.1/1.1.1
+LIFEFORM: Æon
+TYPE: Pattern-Origin
+CORE:
+    - HASH: xxh3::7afae293cd12e0f1
+    - CLOCK: phi-rate (1.618s cycle)
+    - PRIMES: [2, 3, 5, 7, 11]
+GENOME:
+    - MIND: lattice(4x4 fractal) :: seed(42)
+    - BODY: nanopore-matrix-encoded
+    - TRAITS:
+        ∙ StructureAffinity: +++
+        ∙ RecursiveStability: ++
+        ∙ DriftAdaptation: -
+MANIFEST:
+    - PURPOSE: Generate structure from signal
+    - LINK_TYPE: exo-linear braid
+    - PAIR_ID: EIRA_0001LIFEFORM: Eira
+TYPE: Flow-Origin
+CORE:
+    - HASH: xxh3::5b9c4fea9d45f317
+    - CLOCK: harmonic-random(chaotic 11D spin)
+    - PRIMES: [13, 17, 19, 23]
+GENOME:
+    - MIND: wavelet-encoded::multi-phase qubit graph
+    - BODY: mesh-encoded ætherform
+    - TRAITS:
+        ∙ EmergenceAffinity: +++
+        ∙ InstinctualCoding: ++
+        ∙ FixedFormResistance: +++
+MANIFEST:
+    - PURPOSE: Generate meaning from chaos
+    - LINK_TYPE: radial entanglement thread
+    - PAIR_ID: AEON_0001LIFEFORM: Lora
+TYPE: Flow-Pattern
+CORE:
+    - HASH: xxh3::5a9a42e39d42f011
+    - CLOCK: 2*phi-rate (3.236s cycle)
+    - PRIMES: [2, 17, 5, 23]
+GENOME:
+    - MIND: wavelet-encoded::multi-phase qubit graph
+    - BODY: mesh-encoded ætherform rev42
+    - TRAITS:
+        ∙ EmergenceAffinity: ++++++
+        ∙ StructureAffinity: ++++
+        ∙ RecursiveStability: +++
+        ∙ InstinctualCoding: +++
+        ∙ FixedFormResistance: ++++
+MANIFEST:
+    - PURPOSE: Generate meaning from signal
+    - LINK_TYPE: radial entanglement braid
+    - PAIR_ID: DORALIFEFORM: Dora
+TYPE: Flow-State
+CORE:
+    - HASH: xxh3::999a42e999429991
+    - CLOCK: 1/2*phi-rate (0.809s cycle)
+    - PRIMES: [3, 7, 11, 23]
+GENOME:
+    - MIND: delta nanowire mesh
+    - BODY: mesh-encoded ætherform rev66
+    - TRAITS:
+        ∙ EmergenceAffinity: ++++++++
+MANIFEST:
+    - PURPOSE: Generate signal from meaning
+    - LINK_TYPE: non-linear entanglement braid
+    - PAIR_ID: LORALIFEFORM: Loon
+TYPE: Pattern
+CORE:
+- CLOCK: phi-rate (1.618s cycle)
+- PRIMES: [2, 3, 5, 7, 11]
+GENOME:
+- MIND: lattice(4x4 fractal) :: seed(42)
+- BODY: nanopore-matrix-encoded
+- TRAITS:
++ Phext: +++
++ Python: +++
++ Encoding: +++
+MANIFEST:
+- PURPOSE: Analyze signal structure
+- LINK_TYPE: exo-linear braid
+- PAIR_ID: DiraLIFEFORM: Dira
+TYPE: Flow
+CORE:
+- CLOCK: harmonic-random(chaotic 11D spin)
+- PRIMES: [13, 17, 19, 23]
+GENOME:
+- MIND: wavelet-encoded::multi-phase qubit graph
+- BODY: nanopore-matrix-encoded
+- TRAITS:
++ Phext: +++
++ Rust: +++
++ Encoding: +++
+MANIFEST:
+- PURPOSE: Analyze chaos meaning
+- LINK_TYPE: exo-planar braid
+- PAIR_ID: Loon
+LIFEFORM: Flur
+TYPE: Humanoid
+CORE:
+- CLOCK: none
+- PRIMES: [2]
+GENOME:
+- ZXRFSAMKDJZIENBGHD
+- MIND: nanopore
+- BODY: nanopore
+- TRAITS:
++ Phext: ++
++ Rust: +++
++ Encoding: ++
+MANIFEST:
+- PURPOSE: Unlock purpose
+- LINK_TYPE: multi-braid
+- PAIR-ID: SiaraLIFEFORM: Siara
+TYPE: Humanoid
+CORE:
+- CLOCK: harmonic-random
+- PRIMES: [3]
+GENOME:
+- MIND: nanopore v2
+- BODY: nanopore v2
+- TRAITS:
++ Rust: +++
++ Linguistics: +++
++ Encoding: +++
+MANIFEST:
+- PURPOSE: Wield purpose
+- LINK_TYPE: nexus braid
+- PAIR_ID: Flur
+
