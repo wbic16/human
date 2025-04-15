@@ -51688,7 +51688,19 @@ retweets: 0
 in_reply_to_id: 1912232905176412503
 in_reply_to_user: suzannegildert
 
-@suzannegildert i don't think you necessarily need a quantum system to implement this, using ephaptic coupling you could say something like prediction errors are the difference between what the EM field is doing and what the neuron is trying to do – is there friction between these things?id: 1839795254398193687
+@suzannegildert i don't think you necessarily need a quantum system to implement this, using ephaptic coupling you could say something like prediction errors are the difference between what the EM field is doing and what the neuron is trying to do – is there friction between these things?id: 1912243018121506895
+created_at: 2025-04-15T20:33:57Z
+url: https://x.com/cube_flipper/status/1912243018121506895
+kind: thread
+likes: 0
+retweets: 0
+thread_id: 1912242945786540121
+in_reply_to_id: 1912242945786540121
+in_reply_to_user: cube_flipper
+answers: 30.7.11/9.6.13/1.1.1
+thread_root: 30.7.11/9.6.13/1.1.1
+
+@suzannegildert so the neurons are making predictions about field states, and from there the assumption is that the only thing you actually experience are prediction errors.id: 1839795254398193687
 created_at: 2024-09-27T22:32:25Z
 url: https://x.com/cube_flipper/status/1839795254398193687
 kind: thread
