@@ -53121,7 +53121,16 @@ retweets: 0
 in_reply_to_id: 1843342153185145041
 in_reply_to_user: lumpenspace
 
-@lumpenspace ok hit meid: 1800634719278936434
+@lumpenspace ok hit meid: 1912697148921246198
+created_at: 2025-04-17T02:38:31Z
+url: https://x.com/cube_flipper/status/1912697148921246198
+kind: reply
+likes: 3
+retweets: 0
+in_reply_to_id: 1912644847355457565
+in_reply_to_user: louisvarge
+
+@louisvarge positive signalid: 1800634719278936434
 created_at: 2024-06-11T21:02:25Z
 url: https://x.com/cube_flipper/status/1800634719278936434
 kind: reply
