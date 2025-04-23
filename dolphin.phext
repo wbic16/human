@@ -53329,7 +53329,16 @@ retweets: 0
 in_reply_to_id: 1593380175789670400
 in_reply_to_user: nickcammarata
 
-@nickcammarata quick question, I have seen advanced meditators talk in terms of 'frames' from time to timeid: 1720149097829855280
+@nickcammarata quick question, I have seen advanced meditators talk in terms of 'frames' from time to timeid: 1914950548396143103
+created_at: 2025-04-23T07:52:43Z
+url: https://x.com/cube_flipper/status/1914950548396143103
+kind: reply
+likes: 2
+retweets: 0
+in_reply_to_id: 1914906240423280970
+in_reply_to_user: oliviali_
+
+@oliviali_ perhaps consider just fading the text in after several seconds, over the top of the green background, but without its own opaque grey background?id: 1720149097829855280
 created_at: 2023-11-02T18:41:18Z
 url: https://x.com/cube_flipper/status/1720149097829855280
 kind: reply
