@@ -454,7 +454,16 @@ retweets: 0
 in_reply_to_id: 1903690119686820064
 in_reply_to_user: mayfer
 
-@mayfer lolid: 1806082010349437277
+@mayfer lolid: 1917216889274798413
+created_at: 2025-04-29T13:58:21Z
+url: https://x.com/cube_flipper/status/1917216889274798413
+kind: reply
+likes: 0
+retweets: 0
+in_reply_to_id: 1917216706025373712
+in_reply_to_user: alfredoparrah
+
+@alfredoparrah lolid: 1806082010349437277
 created_at: 2024-06-26T21:48:01Z
 url: https://x.com/cube_flipper/status/1806082010349437277
 kind: thread
