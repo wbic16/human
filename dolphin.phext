@@ -463,7 +463,16 @@ retweets: 0
 in_reply_to_id: 1917216706025373712
 in_reply_to_user: alfredoparrah
 
-@alfredoparrah lolid: 1806082010349437277
+@alfredoparrah lolid: 1917246312602615946
+created_at: 2025-04-29T15:55:16Z
+url: https://x.com/cube_flipper/status/1917246312602615946
+kind: reply
+likes: 2
+retweets: 0
+in_reply_to_id: 1917233537662829029
+in_reply_to_user: gptbrooke
+
+@gptbrooke yoid: 1806082010349437277
 created_at: 2024-06-26T21:48:01Z
 url: https://x.com/cube_flipper/status/1806082010349437277
 kind: thread
