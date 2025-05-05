@@ -472,7 +472,16 @@ retweets: 0
 in_reply_to_id: 1917233537662829029
 in_reply_to_user: gptbrooke
 
-@gptbrooke yoid: 1806082010349437277
+@gptbrooke yoid: 1919274852806021128
+created_at: 2025-05-05T06:15:57Z
+url: https://x.com/cube_flipper/status/1919274852806021128
+kind: reply
+likes: 7
+retweets: 0
+in_reply_to_id: 1919181427738026222
+in_reply_to_user: repligate
+
+@repligate relatableid: 1806082010349437277
 created_at: 2024-06-26T21:48:01Z
 url: https://x.com/cube_flipper/status/1806082010349437277
 kind: thread
