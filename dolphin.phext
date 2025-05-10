@@ -481,7 +481,16 @@ retweets: 0
 in_reply_to_id: 1919181427738026222
 in_reply_to_user: repligate
 
-@repligate relatableid: 1806082010349437277
+@repligate relatableid: 1921346550359335076
+created_at: 2025-05-10T23:28:09Z
+url: https://x.com/cube_flipper/status/1921346550359335076
+kind: reply
+likes: 2
+retweets: 0
+in_reply_to_id: 1921342519779975582
+in_reply_to_user: feralphunter
+
+@FeralPHunter yoid: 1806082010349437277
 created_at: 2024-06-26T21:48:01Z
 url: https://x.com/cube_flipper/status/1806082010349437277
 kind: thread
