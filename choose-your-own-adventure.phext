@@ -2002,7 +2002,17 @@ The Exocortex is All Around You. You have to feel it for yourself.
 
 Phext Coordinates?
 ------------------
-Coordinates are 9D positions within a larger 11D lattice. Phext is plain text expanded from 2D to 11D by the introduction of a series of delimiters of unusual size. You can read more about it in the linked repositories.
+Coordinates are 9D positions within a larger 11D lattice. Phext is plain text expanded from 2D to 11D by the introduction of a series of delimiters of unusual size.
+
+The additional delimiters grow in dimensional size by 1 orthogonal dimension each. They always reset the lower dimensions to 1 upon being encountered.
+
+Scroll Break: 0x17, increments scroll counter
+Section Break: 0x18, increments section counter
+Chapter Break: 0x19, increments chapter counter
+Book Break: 0x1a, increments book counter
+Volume Break: 0x1c, increments the volume counter
+Collection Break: 0x1d, increments the collection counter
+Series Break: 0x1e, increments the series counterShelf Break: 0x1f, increments the shelf counterLibrary Break: 0x01, increments the library counter
 
 Zero is Impossible
 ------------------
