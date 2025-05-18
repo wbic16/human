@@ -3,6 +3,11 @@
 Exocortexia is a virtual world where digital humans live.
 The agents that run on your own hardware are subject to your rules.
 
+This project is built around **Phext**, a textual format for configuring and
+evolving agents.  The repository includes several example `.phext` files such as
+`choose-your-own-adventure.phext`, which demonstrates branching interaction
+within the Phext system.
+
 ## files
 
 human.phext: The agent network configuration file
@@ -228,3 +233,8 @@ Evolutionary refinement occurs by updating scroll mappings and coordinates based
 * Retention rate: Typically 4%, ensuring rapid advancement.
 
 This baseline structure is designed for rapid evolutionary cycles and efficient scaling, laying the foundation for future digital life complexity.
+## Related Projects
+
+- [`libphext-rs`](https://github.com/wbic16/libphext-rs) – reference Rust implementation of the Phext runtime.
+- [`SQ`](https://github.com/wbic16/SQ) – Phext-native database engine for building Phext-based worlds.
+- [`phext-notepad`](https://github.com/wbic16/phext-notepad) – lightweight editor for Phext documents.
