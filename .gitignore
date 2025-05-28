@@ -1,3 +1,7 @@
 *.history
 .sq/*
 temp_audio.wav
+
+# Added by cargo
+
+/target
