@@ -29,6 +29,7 @@ Development:
 90.1.1/1.1.3/1.1.1: libphext-node
 90.1.1/1.1.4/1.1.1: SQ
 90.1.1/1.1.5/1.1.1: phext-shell
+90.1.1/1.1.6/1.1.1: Phext Notepad
 
 Starting Points:
 5.2.3/3.4.1/2.2.2: Monday Solace
@@ -21838,7 +21839,3940 @@ fn show_help(area: &str) {
     println!(" * subspace: the 1D buffer that encodes phexts");
     println!("");
 }
-Mirror Will
+Phext Notepad
+
+90.1.1/1.1.6/1.1.1: README.md
+90.1.1/1.1.6/1.1.2: .gitignore
+90.1.1/1.1.6/1.1.3: build.ps1
+90.1.1/1.1.6/1.1.4: License.md
+90.1.1/1.1.6/1.1.5: PhextNotepad.csproj
+90.1.1/1.1.6/1.1.6: PhextNotepad.sln
+90.1.1/1.1.6/1.1.7: TweetStorm.md
+90.1.1/1.1.6/1.1.8: Coordinates.cs
+90.1.1/1.1.6/1.1.9: TypedCoordinate.cs
+90.1.1/1.1.6/1.1.10: Phext.cs
+90.1.1/1.1.6/1.1.11: PhextModel.cs
+90.1.1/1.1.6/1.1.12: PhextText.cs
+90.1.1/1.1.6/1.1.13: PhextConfig.cs
+90.1.1/1.1.6/1.1.14: PhextForm.cs
+90.1.1/1.1.6/1.1.15: PhextForm.Designer.cs
+90.1.1/1.1.6/1.1.16: PhextForm.resx
+
+Phext Notepad
+-------------
+phext notepad provides a reference implementation of 11 dimensional plain hypertext in C#. You can use this editor to test your tools and verify that your phext encoding is accurate. If you find any bugs in this implementation, please file a bug report!
+
+Historical Note
+---------------
+Phext Notepad was written before libphext-rs or libphext-node. It was the implementation I used to improve my ability to reason about sparse text volumes, prior to the creation of phext-native editors. It bridges the gap between 11D text and plain text. You should think of Phext Notepad as an historic artifact - a reference editor.
+
+Phext-Based File Formats
+------------------------
+Plain hypertext (phext) provides modern systems with a large text space. This format is suitable for serializing many datasets, as it provides 11 dimensions of free-form text. Traditional editors only explore 2-dimensional text (columns and lines). Operating systems provide access to files and folders - providing access to a 4-dimensional text space.
+
+With 11 dimensions, we can efficiently refer to most of the information available on the Internet in the 2020s. Given that a vast majority of our capacity is used for video, it seems reasonable to assume that we will not need more than this for quite a long time.
+
+A single phext file could easily require 1 yottabyte of storage, or as little as 100 bytes.
+
+Typical Source File
+-------------------
+A reasonable size for a C++ source file is perhaps 10 KB. With an average line length of 30 characters, you'd get 333 lines of source.
+
+Scaling Text
+------------
+As we add dimensions, we can encode more complex things. Below are some examples. Assume you have access to a computing node with 100 GB of storage (i.e. a 2020 Smartphone).
+
+* 1: concepts (100 bytes) => 100 billion
+* 2: files (10 KB) => 10 million
+* 3: components (1 MB) => 100,000
+* 4: programs (100 MB) => 1,000
+* 5: systems (10 GB) => 10
+* 6: networks (1 TB) => You are here
+* 7: services (100 TB) => 5x HDDs or 50x SSDs in 2022
+* 8: social media (10 PB) => 500 HDDs (Wikipedia)
+* 9: cloud storage (1 EB) => 50,000 HDDs (Netflix)
+* 10: cloud provider (100 EB) => 5,000,000 HDDs (Google)
+* 11: storage provider (1 YB) => 500,000,000 HDDs (Seagate)
+
+Formatting Conventions
+----------------------
+Aside from re-purposing nine historic ASCII control codes, phext retains full plain text compatibility. 
+
+Text Dimensions
+---------------
+
+* \x = Column
+* \n = Line
+* \p = Scroll
+* \g = Section
+* \s = Chapter
+* \y = Book
+* \h = Volume
+* \e = Collection
+* \w = Series
+* \i = Shelf
+* \m = Library
+
+Ruler
+-----
+Library: 1,  Shelf: 1,  Series: 1,  Collection: 1,  Volume: 1,  Book: 1,  Chapter: 1,  Section: 1,  Scroll: 1,  Line: 1,  Column: 1
+
+Historic Control Codes
+----------------------
+Conforming editors must implement MORE COWBELL!
+
+    000   0     00    NUL '\0'                    
+    001   1     01    SOH (start of heading)      
+    002   2     02    STX (start of text)         
+    003   3     03    ETX (end of text)           
+    004   4     04    EOT (end of transmission)   
+    005   5     05    ENQ (enquiry)               
+    006   6     06    ACK (acknowledge)           
+    007   7     07    BEL '\a' (bell)             
+    010   8     08    BS  '\b' (backspace)        
+    011   9     09    HT  '\t' (horizontal tab)   
+    012   10    0A    LF  '\n' (new line)         
+    013   11    0B    VT  '\v' (vertical tab)     
+    014   12    0C    FF  '\f' (form feed)        
+    015   13    0D    CR  '\r' (carriage ret)     
+    016   14    0E    SO  (shift out)             
+    017   15    0F    SI  (shift in)              
+    020   16    10    DLE (data link escape)      
+    021   17    11    DC1 (device control 1)      
+    022   18    12    DC2 (device control 2)      
+    023   19    13    DC3 (device control 3)      
+    024   20    14    DC4 (device control 4)      
+    025   21    15    NAK (negative ack.)         
+    026   22    16    SYN (synchronous idle)      
+    027   23    17    ETB (end of trans. blk)     
+    030   24    18    CAN (cancel)                
+    031   25    19    EM  (end of medium)         
+    032   26    1A    SUB (substitute)            
+    033   27    1B    ESC (escape)                
+    034   28    1C    FS  (file separator)        
+    035   29    1D    GS  (group separator)       
+    036   30    1E    RS  (record separator)      
+    037   31    1F    US  (unit separator)  
+
+Remapped Dimension Controls
+---------------------------
+01: \m Library Break
+0A: \n Line Break
+0B: \v Vertical Tab
+0D: \r Carriage Return
+17: \p Scroll Break
+18: \g Section Break
+19: \s Chapter Break
+1A: \y Book Break
+1C: \h Volume Break
+1D: \e Collection Break
+1E: \w Series Break
+1F: \i Shelf Break
+
+Examples
+--------
+
+Let's say that we want to encode all of the information for a large-scale software project into one file...
+
+Assume 60 MB of source. We can allocate page sizes of 4 KB (80x50), giving us 15,000 files to work with. We want to organize those into 12 sub-systems, each with 50 modules composed of 25 files each.
+
+We'll use these breaks to organize things: \n, \p, \g, and \s.
+
+Sub-system 1, Module 1, File 1 \p\n
+...
+Sub-system 1, Module 1, File 25 \g\n
+Sub-system 1, Module 2, File 1 \p\n
+Sub-system 1, Module 2, File 25 \g\n
+Sub-system 1, Module 50, File 25 \s\n
+Sub-system 2, Module 1, File 1 \p\n
+...
+Sub-system 12, Module 50, File 24 \p\n
+Sub-system 12, Module 50, File 25 \eof
+.gitignore
+
+.vs/
+*.user
+obj/
+bin/
+*.sln
+build.ps1
+
+#!/usr/bin/env pwsh
+param(
+   [string] $version,
+   [string] $app = "PhextNotepad",
+   [switch] $force
+)
+if (-not $version) {
+   Write-Host "Usage: build.ps1 <version>"
+   exit 1
+}
+$known = git tag
+if (-not $force -and ($known -match $version)) {
+   Write-Host "Error: $version is already tagged"
+   exit 1
+}
+$csproj = Get-Content -raw "$app.csproj"
+if (-not ($csproj -match "$version")) {
+   $csproj = $csproj -replace "<VersionPrefix>[^<]*</VersionPrefix>","<VersionPrefix>$version</VersionPrefix>"
+   Write-Host "Patching $app.csproj..."
+   $csproj | Out-File -Encoding utf8 "$app.csproj"
+}
+$phext = Get-Content -raw "Baseline.phext"
+if (-not ($phext -match "v$version")) {
+   Write-Host "Error: You need to document the changes first."
+   git diff
+   exit 1
+}
+$test = git status
+if ($test -match "Changes not staged") {
+   Write-Host "You have un-committed changes."
+   git status
+   exit 1
+}
+git tag $version -f
+git push -f
+git push --tags -f
+Write-Host "Released $version into the wild..."License.md
+
+SPDX short identifier: MIT
+
+Copyright 2022-2025 Phext, Inc.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+PhextNotepad.csproj
+
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net9.0-windows7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <PlatformTarget>x64</PlatformTarget>
+    <VersionPrefix>0.4.0</VersionPrefix>
+    <PackageIcon>Phext.png</PackageIcon>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <StartupObject>PhextNotepad.Program</StartupObject>
+    <ApplicationIcon>Phext.ico</ApplicationIcon>
+    <SignAssembly>True</SignAssembly>
+    <AssemblyName>trs</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Phext.ico" />
+    <None Remove="Baseline.phext" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Phext.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Phext.ico" />
+    <EmbeddedResource Include="Baseline.phext" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Update="Phext.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>PhextNotepad.sln
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33122.133
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PhextNotepad", "PhextNotepad.csproj", "{35791D59-1C7A-4B89-9469-977AD91777C9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{35791D59-1C7A-4B89-9469-977AD91777C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35791D59-1C7A-4B89-9469-977AD91777C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35791D59-1C7A-4B89-9469-977AD91777C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35791D59-1C7A-4B89-9469-977AD91777C9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3451A4B7-C213-4C3A-8B1F-AEA42903768A}
+	EndGlobalSection
+EndGlobal
+TweetStorm.md
+
+Introduction
+------------                                                               
+Traditional text files are great. You can store an entire page of text with
+zero overhead. A typical page is 2-4 KB in size (80 x 50 = 4000). There's
+no extra formatting or markup. Text is the OG WYSIWYG format.
+
+Let's review what text files are from first-principles:
+* Text = a serialized (1-dimensional) stream of characters
+* Page = a 2-dimensional array of _lines_
+
+What might text in higher dimensions look like? How would we make sense of
+it? Why does it even matter? These are questions you should ponder as you
+study what Terse Text can help you do.
+
+Side note: The PC industry settled on variable-width text because most lines
+are blank. You can think of early-return line breaks as a form of very cheap
+text compression. This document is 4,551 bytes and 95 lines - resulting in
+an average line length of 48 bytes. But the longest lines are 80 characters
+(counting new lines). So without line breaks we would need 7,600 bytes. We've
+achieved a 40% compression ratio simply by using line breaks.
+
+This becomes especially important for higher-dimensional datasets in Terse.
+
+History Lesson
+--------------
+TL;DR: 2 MIPS per KB
+
+Early PCs (1976 - 1994) came with floppy disks that stored very little data
+(80 KB to 1,440 KB). Using floppy disks was an exercise in patience: they
+were SLOW. Seek times were often 200 ms, which significantly lowers the
+average transfer rate from an already paltry 100 KB/sec.
+
+An anecdotal example:
+ * Filling a 1.2 MB 5.25" Floppy might take 12 seconds to 2 minutes
+
+See: https://www.sciencedirect.com/topics/engineering/floppy-disk
+
+The fastest CPU from this era is the 100 MHz Pentium, released on March 22,
+1993. It featured a single 32-bit core with 3.2 million transistors. Power
+usage was only 10 watts. It provided 188 million instructions per second.
+
+This was the absolute fastest CPU any consumer had access to prior to 1994.
+It was orders of magnitude faster than the CPUs of the 1980s. The
+8086 (3 MHz) could execute 0.33 MIPS. The 80286 (6-12 MHz) hit 1.2-2.6 MIPS,
+and the venerable 386 (16-33 MHz) could execute 5-11 MIPS.
+
+See: https://www.eeeguide.com/features-of-80186-80286-80386-and-80486-microprocessor/
+See: https://lowendmac.com/2014/cpus-intel-80286/
+
+A modern i9-9900K achieves 412,090 MIPS in an 8-core configuration running
+at 4.7 GHz. This is equivalent to a 1994-era supercomputer with 2,200
+Pentium CPUs. Except it only draws 500 watts instead of 200 kilowatts. If
+your cluster was built out of 386 boxes, you would need 37,000 CPUs. Using
+a 286, the number grows to 150,000. And if we go back to the XT/AT days, you
+would need 1.25 million computers.
+
+Let's put that into context for pages of text. Since CPUs were very slow,
+text was usually not compressed beyond the line break optimization noted
+above. So a floppy disk might be able to load 50 pages of text per second,
+once the drive head was moved to the correct sector. If those pages were
+scattered across the disk, then throughput drops to something more like 5
+pages per second.
+
+Now, try convincing someone to work with higher-dimensional datasets
+when their disk subsystem can only transfer 5-50 pages of text per
+second. It would be pointless - a few page breaks might be all you need.
+
+And thus, Word Processors were born. If we consider that Word Perfect for
+the 386 fully solved desktop publishing, then we can estimate that text
+editors require about 2 MIPS per KB. If we weren't limited by our I/O
+interfaces, a modern i9 should be able to push about 200 MB/sec of text.
+
+The Internet Era
+----------------
+In 1995, the Internet started to scale out very rapidly. At the same time,
+computers became fast enough for games, video, and 3D graphics. Very
+quickly, our systems went from being text machines to entertainment devices.
+Along the way, we forgot why our text abstractions even existed: we just
+took them for granted and did the best we could.
+
+The AGI Era
+-----------
+Terse Text is designed for 2040 and beyond. It is assumed that humanity will
+be using systems that routinely store petabytes of data and that we will
+have brain interfaces which allow us to interact with our computers in
+hyperspace. Computer screens will seem antiquated by then.
+
+2022 - 2040
+-----------
+A modern PCIe 5.0 SSD is FAST. For random 4KB writes, you can achieve
+transfer rates of 200 MB/sec (curiously, this is the same i9 limit above).
+For large file sequential writes, the rate climbs to 10+ GB/sec. SSD Latency
+("seek time") is 0.2 ms. This means that all point-in-time text-based
+datasets are now trivial to write to disk. A 32-bit dataset is at most 4 GB,
+which can be saved to disk in about 400 ms - IF you don't have it scattered
+across a ton of files. Operating system overhead is now the I/O bottleneck.
+
+Consider the system call overhead for a simple task of working with 60 MB
+of source files for a medium-sized software project. If there are 2,000
+files, then the average file is 31 KB and fits into 8 pages. But in order
+to refactor this source tree, you will need to issue 2,000 context switches
+between your application and the OS. You'll also have to maintain 2,000
+separate file handles. Windows allows you to have up to 16 million file
+handles per process. This implies an effective dataset size limit of about 500 GB, as
+60 MB / 2000 files x 16 million files = 468 GB.
+
+At 200 MB/sec, it would take us 40 minutes to work with this information
+using our existing abstractions. But what if we could hit 100 GB/sec? Now it
+becomes feasible to work with this dataset in 4 or 5 seconds.
+
+See: https://learn.microsoft.com/en-us/archive/blogs/markrussinovich/pushing-the-limits-of-windows-handles
+
+Going back to our floppy disk scenario...a modern SSD has the capacity of
+about 3 million floppy disks and the transfer rate of about 100,000 drives.
+CPUs are significantly faster as well, so compression on-the-fly is feasible
+- boosting effective transfer rates for text by 10X. A modern disk can thus
+write 100 GB/sec of compressed text.
+
+This gives us access to a text space of 50 million pages. If we break this
+text space up into manageable chunks, we will need a space that is 100 x 100
+x 100 x 50 characters. This corresponds to the first 4 dimensions of Terse
+(Columns, Lines, Scrolls, and Sections).
+
+But Terse doesn't stop there. We intend for this format to be the text
+format for the AGI age. So we turned the dial up to 11. This should give us
+enough flexibility to manage very complex interactions with our computers.
+
+File Format Design
+------------------
+Terse files are meant to be plain text extended to 11 dimensions.
+
+Terse repurposes some historic ASCII control codes (0x01 - 0x1F) to provide
+users with up to 11 dimensions of free-form text. All other characters not
+listed here are standard UTF-8 text.
+
+Scroll => 3D, Section => 4D,  Chapter    => 5D
+Book   => 6D, Volume  => 7D,  Collection => 8D
+Series => 9D, Shelf   => 10D, Library    => 11D
+Coordinates.cs
+
+namespace PhextNotepad
+{
+    public class Coordinates
+    {
+        public Coordinates(bool reset = false)
+        {
+            if (reset) { Reset(); }
+        }
+
+        public Coordinates(string coordinates)
+        {
+            Load(coordinates);
+        }
+        public Coordinates(Coordinates other)
+        {
+            Column = other.Column;
+            Line = other.Line;
+            Scroll = other.Scroll;
+            Section = other.Section;
+            Chapter = other.Chapter;
+            Book = other.Book;
+            Volume = other.Volume;
+            Collection = other.Collection;
+            Series = other.Series;
+            Shelf = other.Shelf;
+            Library = other.Library;
+            Intermediate = other.Intermediate;
+        }
+        public bool Intermediate { get; set; } = false;
+        public class ScrollIndex : TypedCoordinate
+        {
+            public ScrollIndex(short value) : base(value)
+            {
+            }
+            public static implicit operator ScrollIndex(short value)
+            {
+                return new ScrollIndex(value);
+            }
+        }
+        public class SectionIndex : TypedCoordinate
+        {
+            public SectionIndex(short value) : base(value)
+            {
+            }
+            public static implicit operator SectionIndex(short value)
+            {
+                return new SectionIndex(value);
+            }
+        }
+        public class ChapterIndex : TypedCoordinate
+        {
+            public ChapterIndex(short value) : base(value)
+            {
+            }
+
+            public static implicit operator ChapterIndex(short value)
+            {
+                return new ChapterIndex(value);
+            }
+        }
+        public class BookIndex : TypedCoordinate
+        {
+            public BookIndex(short value) : base(value)
+            {
+            }
+            public static implicit operator BookIndex(short value)
+            {
+                return new BookIndex(value);
+            }
+        }
+        public class VolumeIndex : TypedCoordinate
+        {
+            public VolumeIndex(short value) : base(value)
+            {
+            }
+            public static implicit operator VolumeIndex(short value)
+            {
+                return new VolumeIndex(value);
+            }
+        }
+        public class CollectionIndex : TypedCoordinate
+        {
+            public CollectionIndex(short value) : base(value)
+            {
+            }
+            public static implicit operator CollectionIndex(short value)
+            {
+                return new CollectionIndex(value);
+            }
+        }
+        public class SeriesIndex : TypedCoordinate
+        {
+            public SeriesIndex(short value) : base(value)
+            {
+            }
+            public static implicit operator SeriesIndex(short value)
+            {
+                return new SeriesIndex(value);
+            }
+        }
+        public class ShelfIndex : TypedCoordinate
+        {
+            public ShelfIndex(short value) : base(value)
+            {
+            }
+            public static implicit operator ShelfIndex(short value)
+            {
+                return new ShelfIndex(value);
+            }
+        }
+        public class LibraryIndex : TypedCoordinate
+        {
+            public LibraryIndex(short value) : base(value)
+            {
+            }
+            public static implicit operator LibraryIndex(short value)
+            {
+                return new LibraryIndex(value);
+            }
+        }
+
+        public static readonly short SZERO = 0;
+
+        public int Column { get; set; } = 0;
+        public int Line { get; set; } = 0;
+        public ScrollIndex Scroll { get; set; } = 0;
+        public SectionIndex Section { get; set; } = 0;
+        public ChapterIndex Chapter { get; set; } = 0;
+        public BookIndex Book { get; set; } = 0;
+        public VolumeIndex Volume { get; set; } = 0;
+        public CollectionIndex Collection { get; set; } = 0;
+        public SeriesIndex Series { get; set; } = 0;
+        public ShelfIndex Shelf { get; set; } = 0;
+        public LibraryIndex Library { get; set; } = 0;
+
+        public override string ToString()
+        {
+            return ToString(this);
+        }
+
+        public static short CoordinateClamp(short value)
+        {
+            return (value < 1) ? (short)1 : value;
+        }
+        public static string ToString(Coordinates c)
+        {
+            return $"{c.Library}.{c.Shelf}.{c.Series}/{c.Collection}.{c.Volume}.{c.Book}/{c.Chapter}.{c.Section}.{c.Scroll}";
+        }
+        public Coordinates GetRoot()
+        {
+            return new Coordinates();
+        }
+        public Coordinates GetLibraryRoot()
+        {
+            return new Coordinates(this)
+            {
+                Scroll = 0,
+                Section = 0,
+                Chapter = 0,
+                Book = 0,
+                Volume = 0,
+                Collection = 0,
+                Series = 0,
+                Shelf = 0
+            };
+        }
+        public Coordinates GetShelfRoot()
+        {
+            return new Coordinates(this)
+            {
+                Scroll = 0,
+                Section = 0,
+                Chapter = 0,
+                Book = 0,
+                Volume = 0,
+                Collection = 0,
+                Series = 0
+            };
+        }
+        public Coordinates GetSeriesRoot()
+        {
+            return new Coordinates(this)
+            {
+                Scroll = 0,
+                Section = 0,
+                Chapter = 0,
+                Book = 0,
+                Volume = 0,
+                Collection = 0
+            };
+        }
+        public Coordinates GetCollectionRoot()
+        {
+            return new Coordinates(this)
+            {
+                Scroll = 0,
+                Section = 0,
+                Chapter = 0,
+                Book = 0,
+                Volume = 0
+            };
+        }
+        public Coordinates GetVolumeRoot()
+        {
+            return new Coordinates(this)
+            {
+                Scroll = 0,
+                Section = 0,
+                Chapter = 0,
+                Book = 0
+            };
+        }
+        public Coordinates GetBookRoot()
+        {
+            return new Coordinates(this)
+            {
+                Scroll = 0,
+                Section = 0,
+                Chapter = 0
+            };
+        }
+        public Coordinates GetChapterRoot()
+        {
+            return new Coordinates(this)
+            {
+                Scroll = 0,
+                Section = 0
+            };
+        }
+        public Coordinates GetSectionRoot()
+        {
+            return new Coordinates(this)
+            {
+                Scroll = 0
+            };
+        }
+        public Coordinates GetScrollRoot()
+        {
+            return new Coordinates(this);
+        }
+
+        public string GetNodeSummary()
+        {
+            return $"Scroll #{Scroll}";
+        }
+
+        public string EditorSummary(string action = "")
+        {
+            var result = $"LB: {Library}  SF: {Shelf}  SR: {Series}  /  CN: {Collection}  VM: {Volume}  BK: {Book}  /  CH: {Chapter}  SN: {Section}  SC: {Scroll}  -- Line: {Line}, Column: {Column}";
+            if (action.Length > 0)
+            {
+                result += $" {action}";
+            }
+            return result;
+        }
+
+        public void Reset()
+        {
+            Column = 1;
+            Line = 1;
+            Scroll = 1;
+            Section = 1;
+            Chapter = 1;
+            Book = 1;
+            Volume = 1;
+            Collection = 1;
+            Series = 1;
+            Shelf = 1;
+            Library = 1;
+        }
+
+        private short[] ParseCoordinateString(string coordinates)
+        {
+            var strings = coordinates.Replace('.','/').Split('/', StringSplitOptions.RemoveEmptyEntries);
+            var result = new List<short>();
+            foreach (var s in strings)
+            {
+                if (short.TryParse(s, out short parsed))
+                {
+                    result.Add(parsed);
+                }
+            }
+            return result.ToArray();
+        }
+
+        public void Load(string coordinates)
+        {
+            var parts = ParseCoordinateString(coordinates);
+            if (parts.Length != 9)
+            {
+                Intermediate = true;
+                return;
+            }
+            Library = parts[0];
+            Shelf = parts[1];
+            Series = parts[2];
+            Collection = parts[3];
+            Volume = parts[4];
+            Book = parts[5];
+            Chapter = parts[6];
+            Section = parts[7];
+            Scroll = parts[8];
+            Intermediate = false;
+        }
+
+        public bool IsValid()
+        {
+            return Chapter >= 0 && Section >= 0 && Scroll >= 0 &&
+                   Book >= 0 && Volume >= 0 && Collection >= 0 &&
+                   Series >= 0 && Shelf >= 0 && Library >= 0;
+        }
+
+        public bool HasDelta()
+        {
+            return Chapter != 0 || Section != 0 || Scroll != 0 ||
+                   Book != 0 || Volume != 0 || Collection != 0 ||
+                   Series != 0 || Shelf != 0 || Library != 0;
+        }
+
+        public Coordinates Clamp()
+        {
+            return new Coordinates()
+            {
+                Scroll = CoordinateClamp(Scroll),
+                Section = CoordinateClamp(Section),
+                Chapter = CoordinateClamp(Chapter),
+                Book = CoordinateClamp(Book),
+                Collection = CoordinateClamp(Collection),
+                Volume = CoordinateClamp(Volume),
+                Series = CoordinateClamp(Series),
+                Shelf = CoordinateClamp(Shelf),
+                Library = CoordinateClamp(Library)
+            };
+        }
+    }
+}
+TypedCoordinate.cs
+
+namespace PhextNotepad
+{
+    public class TypedCoordinate : IComparable
+    {
+        private short _value;
+
+        public TypedCoordinate(short value)
+        {
+            _value = value;
+        }
+
+        public int CompareTo(object? obj)
+        {
+            var other = obj as TypedCoordinate;
+            if (other == null) { return 1; }
+
+            return _value.CompareTo(other._value);
+        }
+
+        public override string ToString()
+        {
+            return _value.ToString();
+        }
+
+        public static implicit operator short(TypedCoordinate value)
+        {
+            return value._value;
+        }
+    }
+}
+Phext.cs
+
+namespace PhextNotepad
+{
+    internal static class Program
+    {
+        /// <summary>
+        ///  The main entry point for the application.
+        /// </summary>
+        [STAThread]
+        static void Main(string[] args)
+        {
+            // To customize application configuration such as set high DPI settings or default font,
+            // see https://aka.ms/applicationconfiguration.
+            ApplicationConfiguration.Initialize();
+            Application.Run(new PhextForm(args));
+        }
+    }
+}PhextModel.cs
+
+using System.Text;
+
+namespace PhextNotepad
+{
+    public class PhextModel
+    {
+        public PhextModel()
+        {
+            Coords.Reset();
+        }
+        public PhextText Phext = new();
+        public Coordinates Coords
+        {
+            get
+            {
+                return Phext.Coords;
+            }
+            set
+            {
+                Phext.Coords = value;
+            }
+        }
+
+        public int LeafCount
+        {
+            get
+            {
+                return Phext.LeafCount;
+            }
+        }
+
+        public int WordCount
+        {
+            get
+            {
+                return Phext.WordCount;
+            }
+        }
+
+        public int ByteCount
+        {
+            get
+            {
+                return Phext.ByteCount;
+            }
+        }
+
+        public int ScrollWordCount
+        {
+            get
+            {
+                return Phext.ScrollWordCount;
+            }
+        }
+
+        public const char WORD_BREAK = '\x20';
+        public const char LINE_BREAK = '\n';
+        public const char SCROLL_BREAK = '\x17';
+        public const char SECTION_BREAK = '\x18';
+        public const char CHAPTER_BREAK = '\x19';
+        public const char BOOK_BREAK = '\x1A';
+        public const char VOLUME_BREAK = '\x1C';
+        public const char COLLECTION_BREAK = '\x1D';
+        public const char SERIES_BREAK = '\x1E';
+        public const char SHELF_BREAK = '\x1F';
+        public const char LIBRARY_BREAK = '\x01';
+
+        public void Load(string data, bool showCoordinates, TreeView? treeView = null)
+        {
+            var charStream = data.ToCharArray();
+            Phext = new();
+            Coordinates local = new(true);
+            var stage = new StringBuilder();
+            var sectionNode = Phext.GetSectionTreeRoot(local);
+            var chapterNode = Phext.GetChapterTreeRoot(local);
+            var bookNode = Phext.GetBookTreeRoot(local);
+            var volumeNode = Phext.GetVolumeTreeRoot(local);
+            var collectionNode = Phext.GetCollectionTreeRoot(local);
+            var seriesNode = Phext.GetSeriesTreeRoot(local);
+            var shelfNode = Phext.GetShelfTreeRoot(local);
+            var libraryNode = Phext.GetLibraryTreeRoot(local);
+            for (int i = 0; i < charStream.Length; ++i)
+            {
+                var next = charStream[i];
+                int dimensions_broken = 0;
+                switch (next)
+                {
+                    case LIBRARY_BREAK:
+                        dimensions_broken = 9;
+                        break;
+                    case SHELF_BREAK:
+                        dimensions_broken = 8;
+                        break;
+                    case SERIES_BREAK:
+                        dimensions_broken = 7;
+                        break;
+                    case COLLECTION_BREAK:
+                        dimensions_broken = 6;
+                        break;
+                    case VOLUME_BREAK:
+                        dimensions_broken = 5;
+                        break;
+                    case BOOK_BREAK:
+                        dimensions_broken = 4;
+                        break;
+                    case CHAPTER_BREAK:
+                        dimensions_broken = 3;
+                        break;
+                    case SECTION_BREAK:
+                        dimensions_broken = 2;
+                        break;
+                    case SCROLL_BREAK:
+                        dimensions_broken = 1;
+                        break;
+                    default:
+                        stage.Append(next);
+                        break;
+                }
+
+                if (dimensions_broken == 0)
+                {
+                    continue;
+                }
+
+                if (dimensions_broken >= 1)
+                {
+                    if (stage.Length > 0)
+                    {
+                        insertScroll(stage, local, sectionNode, showCoordinates);
+                        stage.Clear();
+                    }
+                    if (next == SCROLL_BREAK)
+                    {
+                        ++local.Scroll;
+                    }
+                }
+
+                if (dimensions_broken >= 2)
+                {
+                    if (sectionNode.Nodes.Count > 0)
+                    {
+                        chapterNode.Nodes.Add(sectionNode);
+                        Phext.SetSectionNode(sectionNode, local.GetSectionRoot());
+                    }
+                    if (next == SECTION_BREAK)
+                    {
+                        ++local.Section;
+                        local.Scroll = 1;
+                    }
+                    sectionNode = Phext.GetSectionTreeRoot(local);
+                }
+
+                if (dimensions_broken >= 3)
+                {
+                    if (chapterNode.Nodes.Count > 0)
+                    {
+                        bookNode.Nodes.Add(chapterNode);
+                        Phext.SetChapterNode(chapterNode, local.GetChapterRoot());
+                    }
+                    if (next == CHAPTER_BREAK)
+                    {
+                        ++local.Chapter;
+                        local.Section = 1;
+                        local.Scroll = 1;
+                    }
+                    sectionNode = Phext.GetSectionTreeRoot(local);
+                    chapterNode = Phext.GetChapterTreeRoot(local);
+                }
+
+                if (dimensions_broken >= 4)
+                {
+                    if (bookNode.Nodes.Count > 0)
+                    {
+                        volumeNode.Nodes.Add(bookNode);
+                        Phext.SetBookNode(bookNode, local.GetBookRoot());
+                    }
+                    if (next == BOOK_BREAK)
+                    {
+                        ++local.Book;
+                        local.Chapter = 1;
+                        local.Section = 1;
+                        local.Scroll = 1;
+                    }
+                    sectionNode = Phext.GetSectionTreeRoot(local);
+                    chapterNode = Phext.GetChapterTreeRoot(local);
+                    bookNode = Phext.GetBookTreeRoot(local);
+                }
+
+                if (dimensions_broken >= 5)
+                {
+                    if (volumeNode.Nodes.Count > 0)
+                    {
+                        collectionNode.Nodes.Add(volumeNode);
+                        Phext.SetVolumeNode(volumeNode, local.GetVolumeRoot());
+                    }
+                    if (next == VOLUME_BREAK)
+                    {
+                        ++local.Volume;
+                        local.Book = 1;
+                        local.Chapter = 1;
+                        local.Section = 1;
+                        local.Scroll = 1;
+                    }
+                    sectionNode = Phext.GetSectionTreeRoot(local);
+                    chapterNode = Phext.GetChapterTreeRoot(local);
+                    bookNode = Phext.GetBookTreeRoot(local);
+                    volumeNode = Phext.GetVolumeTreeRoot(local);
+                }
+
+                if (dimensions_broken >= 6)
+                {
+                    if (collectionNode.Nodes.Count > 0)
+                    {
+                        seriesNode.Nodes.Add(collectionNode);
+                        Phext.SetCollectionNode(collectionNode, local.GetCollectionRoot());
+                    }
+                    if (next == COLLECTION_BREAK)
+                    {
+                        ++local.Collection;
+                        local.Volume = 1;
+                        local.Book = 1;
+                        local.Chapter = 1;
+                        local.Section = 1;
+                        local.Scroll = 1;
+                    }
+                    sectionNode = Phext.GetSectionTreeRoot(local);
+                    chapterNode = Phext.GetChapterTreeRoot(local);
+                    bookNode = Phext.GetBookTreeRoot(local);
+                    volumeNode = Phext.GetVolumeTreeRoot(local);
+                    collectionNode = Phext.GetCollectionTreeRoot(local);
+                }
+
+                if (dimensions_broken >= 7)
+                {
+                    if (seriesNode.Nodes.Count > 0)
+                    {
+                        shelfNode.Nodes.Add(seriesNode);
+                        Phext.SetSeriesNode(seriesNode, local.GetSeriesRoot());
+                    }
+                    if (next == SERIES_BREAK)
+                    {
+                        ++local.Series;
+                        local.Collection = 1;
+                        local.Volume = 1;
+                        local.Book = 1;
+                        local.Chapter = 1;
+                        local.Section = 1;
+                        local.Scroll = 1;
+                    }
+                    sectionNode = Phext.GetSectionTreeRoot(local);
+                    chapterNode = Phext.GetChapterTreeRoot(local);
+                    bookNode = Phext.GetBookTreeRoot(local);
+                    volumeNode = Phext.GetVolumeTreeRoot(local);
+                    collectionNode = Phext.GetCollectionTreeRoot(local);
+                    seriesNode = Phext.GetSeriesTreeRoot(local);
+                }
+
+                if (dimensions_broken >= 8)
+                {
+                    if (shelfNode.Nodes.Count > 0)
+                    {
+                        libraryNode.Nodes.Add(shelfNode);
+                        Phext.SetShelfNode(shelfNode, local.GetShelfRoot());
+                    }
+                    if (next == SHELF_BREAK)
+                    {
+                        ++local.Shelf;
+                        local.Series = 1;
+                        local.Collection = 1;
+                        local.Volume = 1;
+                        local.Book = 1;
+                        local.Chapter = 1;
+                        local.Section = 1;
+                        local.Scroll = 1;
+                    }
+                    sectionNode = Phext.GetSectionTreeRoot(local);
+                    chapterNode = Phext.GetChapterTreeRoot(local);
+                    bookNode = Phext.GetBookTreeRoot(local);
+                    volumeNode = Phext.GetVolumeTreeRoot(local);
+                    collectionNode = Phext.GetCollectionTreeRoot(local);
+                    seriesNode = Phext.GetSeriesTreeRoot(local);
+                    shelfNode = Phext.GetShelfTreeRoot(local);
+                }
+
+                if (dimensions_broken >= 9)
+                {
+                    if (libraryNode.Nodes.Count > 0)
+                    {
+                        treeView?.Nodes.Add(libraryNode);
+                        Phext.SetLibraryNode(libraryNode, local.GetLibraryRoot());
+                    }
+                    if (next == LIBRARY_BREAK)
+                    {
+                        ++local.Library;
+                        local.Shelf = 1;
+                        local.Series = 1;
+                        local.Collection = 1;
+                        local.Volume = 1;
+                        local.Book = 1;
+                        local.Chapter = 1;
+                        local.Section = 1;
+                        local.Scroll = 1;
+                    }
+                    sectionNode = Phext.GetSectionTreeRoot(local);
+                    chapterNode = Phext.GetChapterTreeRoot(local);
+                    bookNode = Phext.GetBookTreeRoot(local);
+                    volumeNode = Phext.GetVolumeTreeRoot(local);
+                    collectionNode = Phext.GetCollectionTreeRoot(local);
+                    seriesNode = Phext.GetSeriesTreeRoot(local);
+                    shelfNode = Phext.GetShelfTreeRoot(local);
+                    libraryNode = Phext.GetLibraryTreeRoot(local);
+                }
+            }
+
+            if (stage.Length > 0)
+            {
+                insertScroll(stage, local, sectionNode, showCoordinates);
+                stage.Clear();
+            }
+            if (sectionNode.Nodes.Count > 0)
+            {
+                chapterNode.Nodes.Add(sectionNode);
+                Phext.SetSectionNode(sectionNode, local);
+            }
+            if (chapterNode.Nodes.Count > 0)
+            {
+                bookNode.Nodes.Add(chapterNode);
+                Phext.SetChapterNode(chapterNode, local);
+            }
+            if (bookNode.Nodes.Count > 0)
+            {
+                volumeNode.Nodes.Add(bookNode);
+                Phext.SetBookNode(bookNode, local);
+            }
+            if (volumeNode.Nodes.Count > 0)
+            {
+                collectionNode.Nodes.Add(volumeNode);
+                Phext.SetVolumeNode(volumeNode, local);
+            }
+            if (collectionNode.Nodes.Count > 0)
+            {
+                seriesNode.Nodes.Add(collectionNode);
+                Phext.SetCollectionNode(collectionNode, local);
+            }
+            if (seriesNode.Nodes.Count > 0)
+            {
+                shelfNode.Nodes.Add(seriesNode);
+                Phext.SetSeriesNode(seriesNode, local);
+            }
+            if (shelfNode.Nodes.Count > 0)
+            {
+                libraryNode.Nodes.Add(shelfNode);
+                Phext.SetShelfNode(shelfNode, local);
+            }
+            if (libraryNode.Nodes.Count > 0)
+            {
+                treeView?.Nodes.Add(libraryNode);
+                Phext.SetLibraryNode(libraryNode, local);
+            }
+            Coords.Reset();
+        }
+
+        private void insertScroll(StringBuilder stage, Coordinates local, TreeNode? node, bool showCoordinates)
+        {
+            var scroll = stage.ToString();
+            if (scroll.Length > 0)
+            {
+                var key = local.ToString();
+                var line = GetScrollSummary(local, scroll);
+                var scrollNode = node?.Nodes.Add(key, (showCoordinates ? $"{key}! {line}" : line));
+                Phext.Coords = local;
+                Phext.setScroll(scroll, scrollNode);
+            }
+        }
+
+        public static string GetScrollSummary(Coordinates coords, string scroll)
+        {
+            var firstLine = scroll.TrimStart().Split("\n")[0];
+            var line = firstLine.Length > 40 ? firstLine[..40] : firstLine;
+            if (line.Length > 0)
+            {
+                return line;
+            }
+            return coords.GetNodeSummary();
+        }
+
+        public string Serialize()
+        {
+            StringBuilder collector = new();
+            Coordinates local = new(true);
+            foreach (var library_index in Phext.Root.Library.Keys)
+            {
+                while (local.Library < library_index)
+                {
+                    collector.Append(LIBRARY_BREAK);
+                    ++local.Library;
+                    local.Shelf = 1;
+                    local.Series = 1;
+                    local.Collection = 1;
+                    local.Volume = 1;
+                    local.Book = 1;
+                    local.Chapter = 1;
+                    local.Section = 1;
+                    local.Scroll = 1;
+                }
+                Serialize_Library(collector, Phext.Root.Library[library_index], local);
+            }
+            return collector.ToString();
+        }
+        private void Serialize_Library(StringBuilder collector, LibraryNode library, Coordinates local)
+        {
+            foreach (var shelf_index in library.Shelf.Keys)
+            {
+                while (local.Shelf < shelf_index)
+                {
+                    collector.Append(SHELF_BREAK);
+                    ++local.Shelf;
+                    local.Series = 1;
+                    local.Collection = 1;
+                    local.Volume = 1;
+                    local.Book = 1;
+                    local.Chapter = 1;
+                    local.Section = 1;
+                    local.Scroll = 1;
+                }
+                Serialize_Shelf(collector, library.Shelf[shelf_index], local);
+            }
+        }
+
+        private void Serialize_Shelf(StringBuilder collector, ShelfNode shelf, Coordinates local)
+        {
+            foreach (var series_index in shelf.Series.Keys)
+            {
+                while (local.Series < series_index)
+                {
+                    collector.Append(SERIES_BREAK);
+                    ++local.Series;
+                    local.Collection = 1;
+                    local.Volume = 1;
+                    local.Book = 1;
+                    local.Chapter = 1;
+                    local.Section = 1;
+                    local.Scroll = 1;
+                }
+                Serialize_Series(collector, shelf.Series[series_index], local);
+            }
+        }
+        private void Serialize_Series(StringBuilder collector, SeriesNode series, Coordinates local)
+        {
+            foreach (var collection_index in series.Collection.Keys)
+            {
+                while (local.Collection < collection_index)
+                {
+                    collector.Append(COLLECTION_BREAK);
+                    ++local.Collection;
+                    local.Volume = 1;
+                    local.Book = 1;
+                    local.Chapter = 1;
+                    local.Section = 1;
+                    local.Scroll = 1;
+                }
+                Serialize_Collection(collector, series.Collection[collection_index], local);
+            }
+        }
+
+        private void Serialize_Collection(StringBuilder collector, CollectionNode collection, Coordinates local)
+        {
+            foreach (var volume_index in collection.Volume.Keys)
+            {
+                while (local.Volume < volume_index)
+                {
+                    collector.Append(VOLUME_BREAK);
+                    ++local.Volume;
+                    local.Book = 1;
+                    local.Chapter = 1;
+                    local.Section = 1;
+                    local.Scroll = 1;
+                }
+                Serialize_Volume(collector, collection.Volume[volume_index], local);
+            }
+        }
+
+        private void Serialize_Volume(StringBuilder collector, VolumeNode volume, Coordinates local)
+        {
+            foreach (var book_index in volume.Book.Keys)
+            {
+                while (local.Book < book_index)
+                {
+                    collector.Append(BOOK_BREAK);
+                    ++local.Book;
+                    local.Chapter = 1;
+                    local.Section = 1;
+                    local.Scroll = 1;
+                }
+                Serialize_Book(collector, volume.Book[book_index], local);
+            }
+        }
+
+        private void Serialize_Book(StringBuilder collector, BookNode book, Coordinates local)
+        {
+            foreach (var chapter_index in book.Chapter.Keys)
+            {
+                while (local.Chapter < chapter_index)
+                {
+                    collector.Append(CHAPTER_BREAK);
+                    ++local.Chapter;
+                    local.Section = 1;
+                    local.Scroll = 1;
+                }
+                Serialize_Chapter(collector, book.Chapter[chapter_index], local);
+            }
+        }
+
+        private void Serialize_Chapter(StringBuilder collector, ChapterNode chapter, Coordinates local)
+        {
+            foreach (var section_index in chapter.Section.Keys)
+            {
+                while (local.Section < section_index)
+                {
+                    collector.Append(SECTION_BREAK);
+                    ++local.Section;
+                    local.Scroll = 1;
+                }
+                Serialize_Section(collector, chapter.Section[section_index], local);
+            }
+        }
+
+        private void Serialize_Section(StringBuilder collector, SectionNode section, Coordinates local)
+        {
+            foreach (var scroll_index in section.Scroll.Keys)
+            {
+                while (local.Scroll < scroll_index)
+                {
+                    collector.Append(SCROLL_BREAK);
+                    ++local.Scroll;
+                }
+                Serialize_Scroll(collector, section.Scroll[scroll_index]);
+            }
+        }
+
+        private void Serialize_Scroll(StringBuilder collector, ScrollNode scroll)
+        {
+            collector.Append(scroll.Text);
+        }
+
+        public static bool IsBreakCharacter(char ch)
+        {
+            return ch == WORD_BREAK || ch == LINE_BREAK ||
+                   ch == SCROLL_BREAK || ch == SECTION_BREAK || ch == CHAPTER_BREAK ||
+                   ch == BOOK_BREAK || ch == VOLUME_BREAK || ch == COLLECTION_BREAK ||
+                   ch == SERIES_BREAK || ch == SHELF_BREAK || ch == LIBRARY_BREAK;
+        }
+
+        public static bool IsTextCharacter(char ch)
+        {
+            return ch >= WORD_BREAK;
+        }
+
+        public TreeNode? Find(Coordinates coordinates)
+        {
+            return Phext.Find(coordinates);
+        }
+
+        public TreeNode CreateNode(TreeNode sectionNode, string line, bool showKey)
+        {
+            var key = Coords.ToString();
+            var scrollNode = sectionNode.Nodes.Add(key, (showKey ? $"{key}: {line}" : line));
+            Phext.Section.Node = scrollNode;
+            Phext.Cache[scrollNode.Name] = scrollNode;
+            return scrollNode;
+        }
+    }
+}
+PhextText.cs
+
+using static System.Collections.Specialized.BitVector32;
+using static PhextNotepad.Coordinates;
+
+namespace PhextNotepad
+{
+    public class ScrollNode
+    {
+        public TreeNode Node { get; set; } = new();
+        public string Text { get; set; } = string.Empty;
+    };
+    public interface IPhextNode<T, S>
+        where T : notnull
+    {
+        public TreeNode Node { get; set; }
+        public SortedDictionary<T, S> Children { get; set; }
+        public char Delimiter { get; }
+    };
+    public class SectionNode : IPhextNode<ScrollIndex, ScrollNode>
+    {
+        public TreeNode Node { get; set; } = new();
+        public SortedDictionary<ScrollIndex, ScrollNode> Scroll { get; set; } = new();
+        public SortedDictionary<ScrollIndex, ScrollNode> Children
+        {
+            get { return Scroll; }
+            set { Scroll = value; }
+        }
+        public char Delimiter { get { return PhextModel.SECTION_BREAK; } }
+    };
+    public class ChapterNode : IPhextNode<SectionIndex, SectionNode>
+    {
+        public TreeNode Node { get; set; } = new();
+        public SortedDictionary<SectionIndex, SectionNode> Section { get; set; } = new();
+        public SortedDictionary<SectionIndex, SectionNode> Children
+        {
+            get { return Section; }
+            set { Section = value; }
+        }
+        public char Delimiter { get { return PhextModel.CHAPTER_BREAK; } }
+    };
+    public class BookNode : IPhextNode<ChapterIndex, ChapterNode>
+    {
+        public TreeNode Node { get; set; } = new();
+        public SortedDictionary<ChapterIndex, ChapterNode> Chapter { get; set; } = new();
+        public SortedDictionary<ChapterIndex, ChapterNode> Children
+        {
+            get { return Chapter; }
+            set { Chapter = value; }
+        }
+        public char Delimiter { get { return PhextModel.BOOK_BREAK; } }
+    };
+
+    public class VolumeNode : IPhextNode<BookIndex, BookNode>
+    {
+        public TreeNode Node { get; set; } = new();
+        public SortedDictionary<BookIndex, BookNode> Book { get; set; } = new();
+        public SortedDictionary<BookIndex, BookNode> Children
+        {
+            get { return Book; }
+            set { Book = value; }
+        }
+        public char Delimiter { get { return PhextModel.VOLUME_BREAK; } }
+    };
+
+    public class CollectionNode : IPhextNode<VolumeIndex, VolumeNode>
+    {
+        public TreeNode Node { get; set; } = new();
+        public SortedDictionary<VolumeIndex, VolumeNode> Volume { get; set; } = new();
+        public SortedDictionary<VolumeIndex, VolumeNode> Children
+        {
+            get { return Volume; }
+            set { Volume = value; }
+        }
+        public char Delimiter { get { return PhextModel.COLLECTION_BREAK; } }
+    };
+
+    public class SeriesNode : IPhextNode<CollectionIndex, CollectionNode>
+    {
+        public TreeNode Node { get; set; } = new();
+        public SortedDictionary<CollectionIndex, CollectionNode> Collection { get; set; } = new();
+        public SortedDictionary<CollectionIndex, CollectionNode> Children
+        {
+            get { return Collection; }
+            set { Collection = value; }
+        }
+        public char Delimiter { get { return PhextModel.SERIES_BREAK; } }
+    };
+
+    public class ShelfNode : IPhextNode<SeriesIndex, SeriesNode>
+    {
+        public TreeNode Node { get; set; } = new();
+        public SortedDictionary<SeriesIndex, SeriesNode> Series { get; set; } = new();
+        public SortedDictionary<SeriesIndex, SeriesNode> Children
+        {
+            get { return Series; }
+            set { Series = value; }
+        }
+        public char Delimiter { get { return PhextModel.SHELF_BREAK; } }
+    };
+
+    public class LibraryNode : IPhextNode<ShelfIndex, ShelfNode>
+    {
+        public TreeNode Node { get; set; } = new();
+        public SortedDictionary<ShelfIndex, ShelfNode> Shelf { get; set; } = new();
+        public SortedDictionary<ShelfIndex, ShelfNode> Children
+        {
+            get { return Shelf; }
+            set { Shelf = value; }
+        }
+        public char Delimiter { get { return PhextModel.LIBRARY_BREAK; } }
+    };
+
+    public class RootNode
+    {
+        public SortedDictionary<LibraryIndex, LibraryNode> Library { get; set; } = new();
+    };
+
+    public class PhextText
+    {
+        public Coordinates Coords = new();
+        public RootNode Root = new();
+        public Dictionary<string, TreeNode> Cache = new();
+        public int LeafCount { get; private set; } = 0;
+        public int WordCount { get; private set; } = 0;
+        public int ByteCount {
+            get
+            {
+                int total = 0;
+                foreach (var lib_key in Root.Library.Keys)
+                {
+                    var library = Root.Library[lib_key];
+                    foreach (var shelf_key in library.Shelf.Keys)
+                    {
+                        var shelf = library.Shelf[shelf_key];
+                        foreach (var series_key in shelf.Series.Keys)
+                        {
+                            var series = shelf.Series[series_key];
+                            foreach (var collection_key in series.Collection.Keys)
+                            {
+                                var collection = series.Collection[collection_key];
+                                foreach (var volume_key in collection.Volume.Keys)
+                                {
+                                    var volume = collection.Volume[volume_key];
+                                    foreach (var book_key in volume.Book.Keys)
+                                    {
+                                        var book = volume.Book[book_key];
+                                        foreach (var chapter_key in book.Chapter.Keys)
+                                        {
+                                            var chapter = book.Chapter[chapter_key];
+                                            foreach (var section_key in chapter.Section.Keys)
+                                            {
+                                                var section = chapter.Section[section_key];
+                                                foreach (var scroll_key in section.Scroll.Keys)
+                                                {
+                                                    var scroll = section.Scroll[scroll_key];
+                                                    total += scroll.Text.Length;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                return total;
+            }
+        }
+
+        public int ScrollWordCount
+        {
+            get
+            {
+                return GetWordCount(getScroll());
+            }
+        }
+        public LibraryNode Library
+        {
+            get
+            {
+                if (!Root.Library.ContainsKey(Coords.Library))
+                {
+                    Root.Library[Coords.Library] = new();
+                }
+                return Root.Library[Coords.Library];
+            }
+            set
+            {
+                Root.Library[Coords.Library] = value;
+            }
+        }
+
+        public ShelfNode Shelf
+        {
+            get
+            {
+                if (!Library.Shelf.ContainsKey(Coords.Shelf))
+                {
+                    Library.Shelf[Coords.Shelf] = new();
+                }
+                return Library.Shelf[Coords.Shelf];
+            }
+            set
+            {
+                Library.Shelf[Coords.Shelf] = value;
+            }
+        }
+
+        public SeriesNode Series
+        {
+            get
+            {
+                if (!Shelf.Series.ContainsKey(Coords.Series))
+                {
+                    Shelf.Series[Coords.Series] = new();
+                }
+                return Shelf.Series[Coords.Series];
+            }
+            set
+            {
+                Shelf.Series[Coords.Series] = value;
+            }
+        }
+
+        public CollectionNode Collection
+        {
+            get
+            {
+                if (!Series.Collection.ContainsKey(Coords.Collection))
+                {
+                    Series.Collection[Coords.Collection] = new();
+                }
+                return Series.Collection[Coords.Collection];
+            }
+            set
+            {
+                Series.Collection[Coords.Collection] = value;
+            }
+        }
+
+        public VolumeNode Volume
+        {
+            get
+            {
+                if (!Collection.Volume.ContainsKey(Coords.Volume))
+                {
+                    Collection.Volume[Coords.Volume] = new();
+                }
+                return Collection.Volume[Coords.Volume];
+            }
+            set
+            {
+                Collection.Volume[Coords.Volume] = value;
+            }
+        }
+
+        public BookNode Book
+        {
+            get
+            {
+                if (!Volume.Book.ContainsKey(Coords.Book))
+                {
+                    Volume.Book[Coords.Book] = new();
+                }
+                return Volume.Book[Coords.Book];
+            }
+            set
+            {
+                Volume.Book[Coords.Book] = value;
+            }
+        }
+
+        public ChapterNode Chapter
+        {
+            get
+            {
+                if (!Book.Chapter.ContainsKey(Coords.Chapter))
+                {
+                    Book.Chapter[Coords.Chapter] = new();
+                }
+                return Book.Chapter[Coords.Chapter];
+            }
+            set
+            {
+                Book.Chapter[Coords.Chapter] = value;
+            }
+        }
+
+        public SectionNode Section
+        {
+            get
+            {
+                if (!Chapter.Section.ContainsKey(Coords.Section))
+                {
+                    Chapter.Section[Coords.Section] = new();
+                }
+                return Chapter.Section[Coords.Section];
+            }
+            set
+            {
+                Chapter.Section[Coords.Section] = value;
+            }
+        }
+        public ScrollNode Scroll
+        {
+            get
+            {
+                if (!Section.Scroll.ContainsKey(Coords.Scroll))
+                {
+                    Section.Scroll[Coords.Scroll] = new();
+                }
+                return Section.Scroll[Coords.Scroll];
+            }
+            set
+            {
+                Section.Scroll[Coords.Scroll] = value;
+            }
+        }
+
+        public static int GetWordCount(string text)
+        {
+            var array = text.ToCharArray();
+            int words = 0;
+            bool breaking = true;
+            for (int i = 0; i < array.Length; ++i)
+            {
+                var ch = array[i];
+                if (PhextModel.IsBreakCharacter(ch))
+                {
+                    breaking = true;
+                }
+                if (PhextModel.IsTextCharacter(ch) && breaking)
+                {
+                    breaking = false;
+                    ++words;
+                }
+            }
+            return words;
+        }
+
+        public void setScroll(string text, TreeNode? node = null)
+        {
+            if (text.Length > 0)
+            {
+                var priorText = Scroll.Text;
+                var priorCount = GetWordCount(priorText);
+                Scroll.Text = text;
+                ++LeafCount;
+                var count = GetWordCount(text);
+                WordCount += (count - priorCount);
+                if (node != null)
+                {
+                    Scroll.Node = node;
+                    Cache[node.Name] = node;
+                }
+            }
+            // note: the key checks here optimize performance on sparse files
+            if (text.Length == 0 &&
+                Root.Library.ContainsKey(Coords.Library) &&
+                Library.Shelf.ContainsKey(Coords.Shelf) &&
+                Shelf.Series.ContainsKey(Coords.Series) &&
+                Series.Collection.ContainsKey(Coords.Collection) &&
+                Collection.Volume.ContainsKey(Coords.Volume) &&
+                Volume.Book.ContainsKey(Coords.Book) &&
+                Book.Chapter.ContainsKey(Coords.Chapter) &&
+                Chapter.Section.ContainsKey(Coords.Section) &&
+                Section.Scroll.ContainsKey(Coords.Scroll))
+            {
+                Section.Scroll.Remove(Coords.Scroll);
+                if (Section.Scroll.Count == 0)
+                {
+                    Chapter.Section.Remove(Coords.Section);
+                }
+                if (Chapter.Section.Count == 0)
+                {
+                    Book.Chapter.Remove(Coords.Chapter);
+                }
+                if (Book.Chapter.Count == 0)
+                {
+                    Volume.Book.Remove(Coords.Book);
+                }
+                if (Volume.Book.Count == 0)
+                {
+                    Collection.Volume.Remove(Coords.Volume);
+                }
+                if (Collection.Volume.Count == 0)
+                {
+                    Series.Collection.Remove(Coords.Collection);
+                }
+                if (Series.Collection.Count == 0)
+                {
+                    Shelf.Series.Remove(Coords.Series);
+                }
+                if (Shelf.Series.Count == 0)
+                {
+                    Library.Shelf.Remove(Coords.Shelf);
+                }
+                if (Root.Library.Count == 0)
+                {
+                    Root.Library.Remove(Coords.Library);
+                }
+                --LeafCount;
+            }
+        }
+
+        public void processDelta(Coordinates delta)
+        {
+            if (delta.Library != 0)
+            {
+                Coords.Library += delta.Library;
+                if (Coords.Library < 1) { Coords.Library = 1; }
+                Coords.Shelf = 1;
+                Coords.Series = 1;
+                Coords.Collection = 1;
+                Coords.Volume = 1;
+                Coords.Book = 1;
+                Coords.Chapter = 1;
+                Coords.Section = 1;
+                Coords.Scroll = 1;
+                return;
+            }
+            if (delta.Shelf != 0)
+            {
+                Coords.Shelf += delta.Shelf;
+                if (Coords.Shelf < 1) { Coords.Shelf = 1; }
+                Coords.Series = 1;
+                Coords.Collection = 1;
+                Coords.Volume = 1;
+                Coords.Book = 1;
+                Coords.Chapter = 1;
+                Coords.Section = 1;
+                Coords.Scroll = 1;
+                return;
+            }
+            if (delta.Series != 0)
+            {
+                Coords.Series += delta.Series;
+                if (Coords.Series < 1) { Coords.Series = 1; }
+                Coords.Collection = 1;
+                Coords.Volume = 1;
+                Coords.Book = 1;
+                Coords.Chapter = 1;
+                Coords.Section = 1;
+                Coords.Scroll = 1;
+                return;
+            }
+            if (delta.Collection != 0)
+            {
+                Coords.Collection += delta.Collection;
+                if (Coords.Collection < 1) { Coords.Collection = 1; }
+                Coords.Volume = 1;
+                Coords.Book = 1;
+                Coords.Chapter = 1;
+                Coords.Section = 1;
+                Coords.Scroll = 1;
+                return;
+            }
+            if (delta.Volume != 0)
+            {
+                Coords.Volume += delta.Volume;
+                if (Coords.Volume < 1) { Coords.Volume = 1; }
+                Coords.Book = 1;
+                Coords.Chapter = 1;
+                Coords.Section = 1;
+                Coords.Scroll = 1;
+                return;
+            }
+            if (delta.Book != 0)
+            {
+                Coords.Book += delta.Book;
+                if (Coords.Book < 1) { Coords.Book = 1; }
+                Coords.Chapter = 1;
+                Coords.Section = 1;
+                Coords.Scroll = 1;
+                return;
+            }
+
+            if (delta.Chapter != 0)
+            {
+                Coords.Chapter += delta.Chapter;
+                if (Coords.Chapter < 1) { Coords.Chapter = 1; }
+                Coords.Section = 1;
+                Coords.Scroll = 1;
+                return;
+            }
+
+            if (delta.Section != 0)
+            {
+                Coords.Section += delta.Section;
+                Coords.Scroll = 1;
+                return;
+            }
+
+            Coords.Scroll += delta.Scroll;
+        }
+
+        public string getScroll()
+        {
+            return Scroll.Text;
+        }
+
+        public string EditorSummary(string action = "")
+        {
+            return Coords.EditorSummary(action);
+        }
+
+        public void SetLibraryNode(TreeNode libraryNode, Coordinates local)
+        {
+            if (!Root.Library.ContainsKey(local.Library))
+            {
+                Root.Library[local.Library] = new()
+                {
+                    Node = libraryNode
+                };
+            }
+            Cache[libraryNode.Name] = libraryNode;
+        }
+
+        public void SetShelfNode(TreeNode shelfNode, Coordinates local)
+        {
+            if (!Library.Shelf.ContainsKey(local.Shelf))
+            {
+                Library.Shelf[local.Shelf] = new()
+                {
+                    Node = shelfNode
+                };
+            }
+            Cache[shelfNode.Name] = shelfNode;
+        }
+
+        public void SetSeriesNode(TreeNode seriesNode, Coordinates local)
+        {
+            if (!Shelf.Series.ContainsKey(local.Series))
+            {
+                Shelf.Series[local.Series] = new()
+                {
+                    Node = seriesNode
+                };
+            }
+            Cache[seriesNode.Name] = seriesNode;
+        }
+
+        public void SetCollectionNode(TreeNode collectionNode, Coordinates local)
+        {
+            if (!Series.Collection.ContainsKey(local.Collection))
+            {
+                Series.Collection[local.Collection] = new()
+                {
+                    Node = collectionNode
+                };
+            }
+            Cache[collectionNode.Name] = collectionNode;
+        }
+
+        public void SetVolumeNode(TreeNode volumeNode, Coordinates local)
+        {
+            if (!Collection.Volume.ContainsKey(local.Volume))
+            {
+                Collection.Volume[local.Volume] = new()
+                {
+                    Node = volumeNode
+                };
+            }
+            Cache[volumeNode.Name] = volumeNode;
+        }
+
+        public void SetBookNode(TreeNode bookNode, Coordinates local)
+        {
+            if (!Volume.Book.ContainsKey(local.Book))
+            {
+                Volume.Book[local.Book] = new()
+                {
+                    Node = bookNode
+                };
+            }
+            Cache[bookNode.Name] = bookNode;
+        }
+
+        public void SetChapterNode(TreeNode chapterNode, Coordinates local)
+        {
+            if (!Book.Chapter.ContainsKey(local.Chapter))
+            {
+                Book.Chapter[local.Chapter] = new()
+                {
+                    Node = chapterNode
+                };
+            }
+            Cache[chapterNode.Name] = chapterNode;
+        }
+
+        public void SetSectionNode(TreeNode sectionNode, Coordinates local)
+        {
+            if (!Book.Chapter.ContainsKey(local.Chapter))
+            {
+                Book.Chapter[local.Chapter] = new();
+            }
+            if (!Book.Chapter[local.Chapter].Section.ContainsKey(local.Section))
+            {
+                Book.Chapter[local.Chapter].Section[local.Section] = new()
+                {
+                    Node = sectionNode
+                };
+            }
+            Cache[sectionNode.Name] = sectionNode;
+        }
+
+        private TreeNode CreateNamedRootNode(string text, Coordinates local)
+        {
+            var name = local.ToString();
+            var node = new TreeNode(text)
+            {
+                Name = name
+            };
+            Cache[name] = node;
+            return node;
+        }
+
+        public TreeNode GetSectionTreeRoot(Coordinates local)
+        {
+            return CreateNamedRootNode($"Section {local.Section}", local.GetSectionRoot());
+        }
+
+        public TreeNode GetChapterTreeRoot(Coordinates local)
+        {
+            return CreateNamedRootNode($"Chapter {local.Chapter}", local.GetChapterRoot());
+        }
+
+        public TreeNode GetBookTreeRoot(Coordinates local)
+        {
+            return CreateNamedRootNode($"Book {local.Book}", local.GetBookRoot());
+        }
+
+        public TreeNode GetVolumeTreeRoot(Coordinates local)
+        {
+            return CreateNamedRootNode($"Volume {local.Volume}", local.GetVolumeRoot());
+        }
+
+        public TreeNode GetCollectionTreeRoot(Coordinates local)
+        {
+            return CreateNamedRootNode($"Collection {local.Collection}", local.GetCollectionRoot());
+        }
+
+        public TreeNode GetSeriesTreeRoot(Coordinates local)
+        {
+            return CreateNamedRootNode($"Series {local.Series}", local.GetSeriesRoot());
+        }
+
+        public TreeNode GetShelfTreeRoot(Coordinates local)
+        {
+            return CreateNamedRootNode($"Shelf {local.Shelf}", local.GetShelfRoot());
+        }
+
+        public TreeNode GetLibraryTreeRoot(Coordinates local)
+        {
+            return CreateNamedRootNode($"Library {local.Library}", local.GetLibraryRoot());
+        }
+
+        public TreeNode? Find(Coordinates coordinates)
+        {
+            string test = coordinates.ToString();
+            if (Cache.ContainsKey(test))
+            {
+                return Cache[test];
+            }
+
+            return null;
+        }
+    }
+}PhextConfig.cs
+
+using System.Runtime;
+
+namespace PhextNotepad
+{
+    public class PhextConfig
+    {
+        private readonly string _configFilename = "";
+
+        public string IniFilePath
+        {
+            get
+            {
+                return _configFilename;
+            }
+        }
+        public PhextConfig()
+        {
+            var appData = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+            var phextFolder = Path.Combine(appData, "PhextNotepad");
+            if (!Directory.Exists(phextFolder))
+            {
+                Directory.CreateDirectory(phextFolder);
+            }
+            _configFilename = Path.Combine(phextFolder, "phext.ini");
+            Reload();
+        }
+
+        public void Reload()
+        {
+            if (File.Exists(_configFilename))
+            {
+                var text = File.ReadAllText(_configFilename);
+                Deserialize(text);
+            }
+        }
+        public string Format { get; set; } = "PhextConfig";
+        public string Version { get; private set; } = "5";
+        private string _filename = "";
+        public string Filename
+        {
+            get
+            {
+                return _filename;
+            }
+            set
+            {
+                var index = -1;
+                foreach (var ii in RecentFile.Keys)
+                {
+                    if (RecentFile[ii] == value)
+                    {
+                        index = ii;
+                        break;
+                    }
+                }
+                if (index > 0)
+                {
+                    RecentFile.Remove(index);
+                }
+                index = RecentFile.Keys.Count > 0 ? RecentFile.Keys.Max() : -1;
+                RecentFile[index + 1] = value;
+                _filename = value;
+            }
+        }
+        public string Coords { get; set; } = "";
+        public bool TreeView { get; set; } = true;
+        public string Font { get; set; } = "Cascadia Code";
+        public int FontSize { get; set; } = 11;
+        public string LastError { get; set; } = "";
+        public string Dimension1 { get; set; } = "Column";
+        public string Dimension2 { get; set; } = "Line";
+        public string Dimension3 { get; set; } = "Scroll";
+        public string Dimension4 { get; set; } = "Section";
+        public string Dimension5 { get; set; } = "Chapter";
+        public string Dimension6 { get; set; } = "Book";
+        public string Dimension7 { get; set; } = "Volume";
+        public string Dimension8 { get; set; } = "Collection";
+        public string Dimension9 { get; set; } = "Series";
+        public string Dimension10 { get; set; } = "Shelf";
+        public string Dimension11 { get; set; } = "Library";
+        public bool WordWrap { get; set; } = true;
+        public float ZoomFactor { get; set; } = 1.0f;
+        public SortedDictionary<int, string> RecentFile { get; set; } = new();
+        public string Theme { get; set; } = "Dark";
+        public bool DarkMode { get { return Theme == "Dark"; } }
+        public bool LightMode { get { return Theme == "Light"; } }
+
+        public Color Color1 { get; set; } = Color.Black;
+        public Color Color2 { get; set; } = Color.White;
+        public Color Color3 { get; set; } = Color.DeepSkyBlue;
+        public Color Color4 { get; set; } = Color.DarkGray;
+        public bool ShowCoordinates { get; set; } = true;
+
+        private string SerializeColor(Color color)
+        {
+            var result = ColorTranslator.ToHtml(color);
+            return result;
+        }
+        private Color DeserializeColor(string color, Color fallback)
+        {
+            Color result;
+            try
+            {
+                result = ColorTranslator.FromHtml(color);
+            }
+            catch
+            {
+                result = fallback;
+            }
+            return result;
+        }
+        public string Serialize()
+        {
+            var result = $"[PhextConfig]\n"
+                 + $"Format = {Format}\n"
+                 + $"Version = {Version}\n"
+                 + $"Filename = {Filename}\n"
+                 + $"TreeView = {TreeView}\n"
+                 + $"Coords = {Coords}\n"
+                 + $"Font = {Font}\n"
+                 + $"FontSize = {FontSize}\n"
+                 + $"LastError = {LastError}\n"
+                 + $"Dimension1 = {Dimension1}\n"
+                 + $"Dimension2 = {Dimension2}\n"
+                 + $"Dimension3 = {Dimension3}\n"
+                 + $"Dimension4 = {Dimension4}\n"
+                 + $"Dimension5 = {Dimension5}\n"
+                 + $"Dimension6 = {Dimension6}\n"
+                 + $"Dimension7 = {Dimension7}\n"
+                 + $"Dimension8 = {Dimension8}\n"
+                 + $"Dimension9 = {Dimension9}\n"
+                 + $"Dimension10 = {Dimension10}\n"
+                 + $"Dimension11 = {Dimension11}\n"
+                 + $"WordWrap = {WordWrap}\n"
+                 + $"ZoomFactor = {ZoomFactor}\n"
+                 + $"Theme = {Theme}\n"
+                 + $"Color1 = {SerializeColor(Color1)}\n"
+                 + $"Color2 = {SerializeColor(Color2)}\n"
+                 + $"Color3 = {SerializeColor(Color3)}\n"
+                 + $"Color4 = {SerializeColor(Color4)}\n"
+                 + $"ShowCoordinates = {ShowCoordinates}\n";
+            foreach (var key in RecentFile.Keys.OrderByDescending(q => q))
+            {
+                var file = RecentFile[key];
+                result += $"RecentFile = {file}\n";
+            }
+            return result;
+        }
+
+        public void Deserialize(string ini)
+        {
+            var lines = ini.Split('\n');
+            var fileOrdering = 0;
+            if (lines[0] == "[PhextConfig]")
+            {
+                foreach (var line in lines)
+                {
+                    var parts = line.Split(" = ");
+                    var value = parts.Length > 1 ? parts[1] : "";
+                    switch (parts[0])
+                    {
+                        case "Format":
+                            Format = value;
+                            break;
+                        case "Version":
+                            Version = value;
+                            break;
+                        case "Filename":
+                            Filename = value;
+                            break;
+                        case "TreeView":
+                            TreeView = value == "True";
+                            break;
+                        case "Coords":
+                            Coords = value;
+                            break;
+                        case "Font":
+                            Font = value;
+                            break;
+                        case "FontSize":
+                            try
+                            {
+                                FontSize = int.Parse(value);
+                            }
+                            catch { }
+                            break;
+                        case "LastError":
+                            LastError = value;
+                            break;
+                        case "Dimension1":
+                            Dimension1 = value;
+                            break;
+                        case "Dimension2":
+                            Dimension2 = value;
+                            break;
+                        case "Dimension3":
+                            Dimension3 = value;
+                            break;
+                        case "Dimension4":
+                            Dimension4 = value;
+                            break;
+                        case "Dimension5":
+                            Dimension5 = value;
+                            break;
+                        case "Dimension6":
+                            Dimension6 = value;
+                            break;
+                        case "Dimension7":
+                            Dimension7 = value;
+                            break;
+                        case "Dimension8":
+                            Dimension8 = value;
+                            break;
+                        case "Dimension9":
+                            Dimension9 = value;
+                            break;
+                        case "Dimension10":
+                            Dimension10 = value;
+                            break;
+                        case "Dimension11":
+                            Dimension11 = value;
+                            break;
+                        case "WordWrap":
+                            WordWrap = value == "True";
+                            break;
+                        case "ZoomFactor":
+                            try
+                            {
+                                ZoomFactor = float.Parse(value);
+                            }
+                            catch { }
+                            break;
+                        case "RecentFile":
+                            if (!RecentFile.ContainsValue(value))
+                            {
+                                RecentFile[fileOrdering++] = value;
+                            }
+                            break;
+                        case "Theme":
+                            Theme = value;
+                            break;
+                        case "Color1":
+                            Color1 = DeserializeColor(value, Color.Black);
+                            break;
+                        case "Color2":
+                            Color2 = DeserializeColor(value, Color.White);
+                            break;
+                        case "Color3":
+                            Color3 = DeserializeColor(value, Color.DeepSkyBlue);
+                            break;
+                        case "Color4":
+                            Color4 = DeserializeColor(value, Color.DarkGray);
+                            break;
+                        case "ShowCoordinates":
+                            ShowCoordinates = value == "True";
+                            break;
+                    }
+                }
+            }
+
+            // Todo: validate color differences to prevent unreadable text
+        }
+
+        public void Save()
+        {
+            var ini = Serialize();
+            File.WriteAllText(_configFilename, ini);
+        }
+    }
+}
+PhextForm.cs
+
+using System.Reflection;
+using System.Runtime.InteropServices;
+using System.Windows.Forms;
+
+namespace PhextNotepad
+{
+    public partial class PhextForm : Form
+    {
+        private static readonly string PHEXT_FILTER = "Phext (*.phext)|*.phext|All files (*.*)|*.*";
+        private PhextModel _model = new();
+
+        // Vim Integration
+        [DllImport("USER32.DLL")]
+        public static extern bool SetWindowPos(IntPtr hWnd, IntPtr insertAfter, int X, int Y, int cx, int cy, uint flags);
+
+        // Editor State
+        private int _priorLine = 1;
+        private int _priorColumn = 1;
+        private Coordinates? _checkout = null;
+        private PhextConfig _settings = new();
+        private Font SCROLL_NODE_FONT = new("Cascadia Code", 11);
+
+        public PhextForm(string[] args)
+        {
+            InitializeComponent();
+
+            lockToScrollMenuItem.Checked = Control.IsKeyLocked(Keys.Scroll);
+            LoadFonts();
+            scrollLockUIUpdate();
+            if (args.Length > 0)
+            {
+                var filename = args[0];
+                if (File.Exists(filename))
+                {
+                    _settings.Filename = filename;
+                    _settings.Coords = args.Length > 1 ? args[1] : _settings.Coords;
+                }
+            }
+
+            if (_settings.Filename.Length == 0)
+            {
+                LoadDefaultPhext();
+            }
+
+            if (_settings.Filename.Length > 0 && File.Exists(_settings.Filename))
+            {
+                LoadFile(_settings.Filename, false);
+            }
+        }
+
+        private void LoadDefaultPhext()
+        {
+            _settings.Filename = "";
+            var currentAssembly = Assembly.GetExecutingAssembly();
+            var stream = currentAssembly.GetManifestResourceStream("PhextNotepad.Baseline.phext");
+            if (stream != null)
+            {
+                var reader = new StreamReader(stream);
+                var buffer = reader.ReadToEnd();
+                if (buffer != null)
+                {
+                    LoadData(buffer, true);
+                }
+            }
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var version = Assembly.GetExecutingAssembly()?.GetName()?.Version;
+            if (version == null)
+            {
+                version = new Version(0, 0, 5);
+            }
+            MessageBox.Show($@"Phext Notepad
+
+A reference editor for multi-dimensional text.
+
+Use F2 - F11 to access additional dimensions.
+", $"Phext Notepad {version.Major}.{version.Minor}.{version.Build}");
+        }
+
+        private void textBox_TextChanged(object sender, EventArgs e)
+        {
+            collectScroll();
+        }
+
+        private void collectScroll()
+        {
+            if (_checkout == null || _checkout.ToString() != _model.Coords.ToString())
+            {
+                return;
+            }
+            reloadMenuItem.Enabled = true;
+            _model.Phext.setScroll(textBox.Text);
+            if (textBox.Text.Length == 0)
+            {
+                return;
+            }
+            treeView.BeginUpdate();
+            treeView.SuspendLayout();
+            var node = getTreeNode(_model.Phext.Coords);
+            if (node != null)
+            {
+                if (textBox.Lines != null && textBox.Lines.Length >= 1)
+                {
+                    var line = PhextModel.GetScrollSummary(_model.Phext.Coords, textBox.Text);
+                    node.Text = _settings.ShowCoordinates ? $"{node.Name}? {line}" : line;
+                }
+            }
+            else
+            {
+                var parent = getParentTreeNode(_model.Phext.Coords);
+                if (parent != null)
+                {
+                    TreeNode sectionNode;
+                    if (parent.Text.StartsWith("Chapter"))
+                    {
+                        sectionNode = parent.Nodes.Add($"Section {_model.Phext.Coords.Section}");
+                    }
+                    else
+                    {
+                        sectionNode = parent;
+                    }
+
+                    var line = PhextModel.GetScrollSummary(_model.Phext.Coords, textBox.Text);
+                    var scrollNode = _model.CreateNode(sectionNode, line, _settings.ShowCoordinates);
+                    scrollNode.NodeFont = SCROLL_NODE_FONT;
+                    treeView.SelectedNode = scrollNode;
+                    textBox.SelectionStart = textBox.Text.Length;
+                }
+            }
+
+            treeView.ExpandAll();
+            treeView.ResumeLayout();
+            treeView.EndUpdate();
+        }
+
+        private void loadScroll()
+        {
+            textBox.SuspendLayout();
+            _checkout = new Coordinates(_model.Coords);
+            textBox.Text = _model.Phext.getScroll();
+            _model.Phext.Coords.Line = 1;
+            _priorLine = 1;
+            _priorColumn = 1;
+            phextCoordinate.Enabled = true;
+            coordinateLabel.Enabled = true;
+            UpdateUI($"Loaded {_settings.Filename}");
+
+            if (treeView.Visible)
+            {
+                var id = $"{_model.Coords}";
+                var node = treeView.Nodes.Find(id, true);
+                if (node != null && node.Length >= 1)
+                {
+                    treeView.SelectedNode = node[0];
+                }
+            }
+
+            textBox.ResumeLayout();
+        }
+
+        private void openToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenNewFile();
+        }
+
+        private void OpenNewFile()
+        {
+            var dialog = new OpenFileDialog
+            {
+                Filter = PHEXT_FILTER,
+                FileName = _settings.Filename
+            };
+            var result = dialog.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                LoadFile(dialog.FileName, true);
+            }
+        }
+
+        private void LoadFonts()
+        {
+            try
+            {
+                SCROLL_NODE_FONT = new Font(_settings.Font, _settings.FontSize);
+                textBox.Font = SCROLL_NODE_FONT;
+                treeView.Font = SCROLL_NODE_FONT;
+            }
+            catch (Exception)
+            {
+                _settings.LastError = "Invalid Font Settings";
+            }
+        }
+
+        private void RefreshSettings()
+        {
+            _settings.Reload();
+            LoadFonts();
+            treeView.Visible = _settings.TreeView;
+            textBox.WordWrap = _settings.WordWrap;
+            textBox.ZoomFactor = _settings.ZoomFactor;
+            var menu = CreateRecentFilesMenu(_settings.RecentFile);
+            recentToolStripMenuItem.DropDownItems.Clear();
+            recentToolStripMenuItem.DropDownItems.AddRange(menu);
+            showCoordinatesToolStripMenuItem.Checked = _settings.ShowCoordinates;
+            SetEditorTheme();
+
+            if (!File.Exists(_settings.IniFilePath))
+            {
+                _settings.Save();
+            }
+        }
+        private ToolStripMenuItem[] CreateRecentFilesMenu(SortedDictionary<int, string> files)
+        {
+            var items = new List<ToolStripMenuItem>();
+            var i = 0;
+            var used = new HashSet<string>();
+            foreach (var key in files.Keys.OrderByDescending(q => q))
+            {
+                var filename = files[key];
+                if (used.Contains(filename)) { continue; }
+                used.Add(filename);
+                if (!File.Exists(filename))
+                {
+                    continue;
+                }
+                var next = new ToolStripMenuItem
+                {
+                    Name = $"RecentMenuItem{++i}",
+                    Text = filename
+                };
+                next.Click += new EventHandler(MenuItemClickHandler);
+                items.Add(next);
+            }
+
+            return items.ToArray();
+        }
+
+        public void MenuItemClickHandler(object? sender, EventArgs e)
+        {
+            if (sender != null)
+            {
+                ToolStripMenuItem clickedItem = (ToolStripMenuItem)sender;
+                LoadFile(clickedItem.Text, true);
+            }
+        }
+
+        private void LoadFile(string? filename, bool resetView)
+        {
+            if (filename == null) { return; }
+            RefreshSettings();
+            if (File.Exists(filename))
+            {
+                _checkout = null;
+                var data = File.ReadAllText(filename);
+                _settings.Filename = filename;
+                LoadData(data, resetView);
+                UpdateUI($"{filename}");
+            }
+            else
+            {
+                UpdateUI($"!{filename}");
+            }
+        }
+
+        public static string FormatNumber(int num)
+        {
+            if (num >= 100000)
+                return FormatNumber(num / 1000) + "K";
+
+            if (num >= 10000)
+                return (num / 1000D).ToString("0.#") + "K";
+
+            return num.ToString("#,0");
+        }
+
+        private void LoadData(string data, bool resetView)
+        {
+            treeView.SuspendLayout();
+            treeView.BeginUpdate();
+            treeView.Nodes.Clear();
+            _model.Load(data, _settings.ShowCoordinates, treeView);
+            treeView.ExpandAll();
+            treeView.EndUpdate();
+            treeView.ResumeLayout();
+            if (resetView)
+            {
+                jumpToOrigin();
+            }
+            else
+            {
+                coordinateJump(_settings.Coords, false);
+            }
+        }
+
+        private void jumpToOrigin()
+        {
+            _model.Coords.Reset();
+            coordinateJump(_settings.Coords, false);
+        }
+
+        private void newToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            _settings.Filename = "";
+            _model.Phext.Coords.Reset();
+            _settings.Coords = _model.Phext.Coords.ToString();
+            LoadData("", true);
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SyncEditorState();
+            Close();
+        }
+
+        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SaveCurrentFile(false, true);
+        }
+
+        private void SaveCurrentFile(bool chooseFile, bool reload)
+        {
+            if (chooseFile || _settings.Filename.Length == 0)
+            {
+                if (!ChooseSaveFilename())
+                {
+                    return;
+                }
+            }
+
+            collectScroll();
+            var serialized = _model.Serialize();
+            File.WriteAllText(_settings.Filename, serialized);
+
+            _settings.Coords = _model.Phext.Coords.ToString();
+            if (!_settings.Filename.EndsWith("PhextNotepad\\Phext.ini"))
+            {
+                _settings.Save();
+            }
+            if (reload)
+            {
+                LoadFile(_settings.Filename, false);
+            }
+            UpdateUI($"Saved {_settings.Filename}");
+        }
+
+        private void textBox_SelectionChanged(object sender, EventArgs e)
+        {
+            _model.Phext.Coords.Line = 1;
+            var total = 0;
+            var offset = textBox.SelectionStart;
+            var index = offset + textBox.SelectionLength - 1;
+            if (index > -1 && index < textBox.Text.Length && textBox.Text[index] == '\n' && textBox.SelectionLength > 0)
+            {
+                --textBox.SelectionLength;
+            }
+            foreach (var line in textBox.Lines)
+            {
+                var delta = line.Length + 1;
+                if ((total + delta) <= offset)
+                {
+                    total += delta;
+                    ++_model.Phext.Coords.Line;
+                    _model.Phext.Coords.Column = 1;
+                }
+                else
+                {
+                    _model.Phext.Coords.Column = offset - total + 1;
+                    break;
+                }
+            }
+            UpdateUI();
+        }
+
+        private void UpdateUI(string action = "")
+        {
+            phextCoordinate.Text = _model.Phext.Coords.ToString();
+
+            textBox.Enabled = _checkout != null;
+
+            status.Text = _model.Phext.EditorSummary(action);
+            wordCountLabel.Text = $"Bytes: {_model.ByteCount}, Words (Total): {FormatNumber(_model.WordCount)}, Words (Page): {FormatNumber(_model.ScrollWordCount)}";
+        }
+
+        private bool ChooseSaveFilename()
+        {
+            var saver = new SaveFileDialog
+            {
+                Filter = PHEXT_FILTER,
+                FileName = _settings.Filename
+            };
+            var result = saver.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                _settings.Filename = saver.FileName;
+                return true;
+            }
+
+            return false;
+        }
+
+        private void textBox_KeyUp(object sender, KeyEventArgs e)
+        {
+            Coordinates delta = new();
+
+            HandleHotkeys(sender, e);
+            if (e.Handled)
+            {
+                return;
+            }
+
+            if (treeView.Visible == false)
+            {
+                // Scroll Lock
+                // Do not allow dimension shifts when the treeView is invisible
+                return;
+            }
+
+            // Library Shifts
+            if (!e.Shift && e.KeyCode == Keys.F10)
+            {
+                delta.Library = 1;
+                e.Handled = true;
+            }
+            if (e.Shift && e.KeyCode == Keys.F10)
+            {
+                delta.Library = -1;
+                e.Handled = true;
+            }
+
+            // Shelf Shifts
+            if (!e.Shift && e.KeyCode == Keys.F9)
+            {
+                delta.Shelf = 1;
+                e.Handled = true;
+            }
+            if (e.Shift && e.KeyCode == Keys.F9)
+            {
+                delta.Shelf = -1;
+                e.Handled = true;
+            }
+
+            // Series Shifts
+            if (!e.Shift && e.KeyCode == Keys.F8)
+            {
+                delta.Series = 1;
+                e.Handled = true;
+            }
+            if (e.Shift && e.KeyCode == Keys.F8)
+            {
+                delta.Series = -1;
+                e.Handled = true;
+            }
+
+            // Collection Shifts
+            if (!e.Shift && e.KeyCode == Keys.F7)
+            {
+                delta.Collection = 1;
+                e.Handled = true;
+            }
+            if (e.Shift && e.KeyCode == Keys.F7)
+            {
+                delta.Collection = -1;
+                e.Handled = true;
+            }
+
+            // Volume Shifts
+            if (!e.Shift && e.KeyCode == Keys.F6)
+            {
+                delta.Volume = 1;
+                e.Handled = true;
+            }
+            if (e.Shift && e.KeyCode == Keys.F6)
+            {
+                delta.Volume = -1;
+                e.Handled = true;
+            }
+
+            // Book Shifts
+            if (!e.Shift && e.KeyCode == Keys.F5)
+            {
+                delta.Book = 1;
+                e.Handled = true;
+            }
+            if (e.Shift && e.KeyCode == Keys.F5)
+            {
+                delta.Book = -1;
+                e.Handled = true;
+            }
+
+            // Chapter Shifts
+            if (!e.Shift && e.KeyCode == Keys.F4)
+            {
+                delta.Chapter = 1;
+                e.Handled = true;
+            }
+            if (e.Shift && e.KeyCode == Keys.F4)
+            {
+                delta.Chapter = -1;
+                e.Handled = true;
+            }
+            if (e.Control && e.KeyCode == Keys.PageDown)
+            {
+                delta.Chapter = 1;
+                e.Handled = true;
+            }
+            if (e.Control && e.KeyCode == Keys.PageUp)
+            {
+                delta.Chapter = -1;
+                e.Handled = true;
+            }
+
+            // Section Shifts
+            if (!e.Shift && e.KeyCode == Keys.F3)
+            {
+                delta.Section = 1;
+                e.Handled = true;
+            }
+            if (e.Shift && e.KeyCode == Keys.F3)
+            {
+                delta.Section = -1;
+                e.Handled = true;
+            }
+            if (e.Shift && e.KeyCode == Keys.PageDown)
+            {
+                delta.Section = 1;
+                e.Handled = true;
+            }
+            if (e.Shift && e.KeyCode == Keys.PageUp)
+            {
+                delta.Section = -1;
+                e.Handled = true;
+            }
+
+            // Scroll Shifts
+            if (!e.Shift && e.KeyCode == Keys.F2)
+            {
+                delta.Scroll = 1;
+                e.Handled = true;
+            }
+            if (e.Shift && e.KeyCode == Keys.F2)
+            {
+                delta.Scroll = -1;
+                e.Handled = true;
+            }
+            if (e.Alt && e.KeyCode == Keys.PageDown)
+            {
+                delta.Scroll = 1;
+                e.Handled = true;
+            }
+            if (e.Alt && e.KeyCode == Keys.PageUp)
+            {
+                delta.Scroll = -1;
+                e.Handled = true;
+            }
+
+            if (delta.HasDelta())
+            {
+                collectScroll();
+                _model.Phext.processDelta(delta);
+                loadScroll();
+            }
+        }
+
+        private void textBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (_priorLine != _model.Phext.Coords.Line)
+            {
+                _priorLine = _model.Phext.Coords.Line;
+            }
+            if (_priorColumn != _model.Phext.Coords.Column)
+            {
+                _priorColumn = _model.Phext.Coords.Column;
+            }
+
+            // Ctrl-V: Paste plain-text only
+            if (e.Control && e.KeyCode == Keys.V)
+            {
+                textBox.SelectedText = Clipboard.GetText();
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private Coordinates GetPhextCoordinate()
+        {
+            var parts = phextCoordinate.Text.Replace('.', '/').Split('/');
+            if (parts.Length != 9)
+            {
+                return _model.Phext.Coords;
+            }
+
+            var result = new Coordinates(true);
+            if (short.TryParse(parts[0], out short p0))
+                result.Library = p0;
+            else
+                result.Intermediate = true;
+            if (short.TryParse(parts[1], out short p1))
+                result.Shelf = p1;
+            else
+                result.Intermediate = true;
+            if (short.TryParse(parts[2], out short p2))
+                result.Series = p2;
+            else
+                result.Intermediate = true;
+            if (short.TryParse(parts[3], out short p3))
+                result.Collection = p3;
+            else
+                result.Intermediate = true;
+            if (short.TryParse(parts[4], out short p4))
+                result.Volume = p4;
+            else
+                result.Intermediate = true;
+            if (short.TryParse(parts[5], out short p5))
+                result.Book = p5;
+            else
+                result.Intermediate = true;
+            if (short.TryParse(parts[6], out short p6))
+                result.Chapter = p6;
+            else
+                result.Intermediate = true;
+            if (short.TryParse(parts[7], out short p7))
+                result.Section = p7;
+            else
+                result.Intermediate = true;
+            if (short.TryParse(parts[8], out short p8))
+                result.Scroll = p8;
+            else
+                result.Intermediate = true;
+
+            return result;
+        }
+
+        private void jumpButton_Click(object sender, EventArgs e)
+        {
+            collectScroll();
+            
+            var next = GetPhextCoordinate();
+            if (!next.Intermediate)
+            {
+                _model.Phext.Coords = next;
+                loadScroll();
+            }
+        }
+
+        private TreeNode? getTreeNode(Coordinates coordinates)
+        {
+            return _model.Find(coordinates);
+        }
+
+        private TreeNode? getParentTreeNode(Coordinates coords)
+        {
+            if (coords.Chapter == 0 || coords.Section == 0)
+            {
+                return null;
+            }
+
+            // todo: rewrite from scratch using new idioms
+            return null;
+        }
+
+        // pre: the UI always shows the selected node...
+        private void deleteNode(string coordinates, bool requestConfirmation = true)
+        {
+            if (!coordinates.Contains('-'))
+            {
+                return;
+            }
+            var test = new Coordinates(coordinates);
+            if (!test.IsValid())
+            {
+                return;
+            }
+            _checkout = test;
+            _model.Phext.Coords = test;
+            UpdateUI("Delete");
+            var node = getTreeNode(_model.Phext.Coords);
+            if (node == null) { return; }
+            if (requestConfirmation)
+            {
+                var count = 1 + node.GetNodeCount(true);
+                if (count > 1)
+                {
+                    var confirm = MessageBox.Show($"Are you sure you want to delete {count} nodes?", "Node Delete Confirmation", MessageBoxButtons.YesNo);
+                    if (confirm == DialogResult.No)
+                    {
+                        return;
+                    }
+                }
+            }
+
+            textBox.Text = "";
+            collectScroll();
+
+            var deleteList = new List<string>();
+            foreach (TreeNode child in node.Nodes)
+            {
+                deleteList.Add(child.Name);
+            }
+            foreach (var childCoordinates in deleteList)
+            {
+                deleteNode(childCoordinates, false);
+            }
+            node.Remove();
+        }
+
+        private void coordinateJump(string coordinates, bool storeFirst)
+        {
+            if (_checkout?.ToString() == coordinates)
+            {
+                return;
+            }
+            if (storeFirst)
+            {
+                _checkout = new Coordinates(_model.Coords);
+                collectScroll();
+            }
+            var test = new Coordinates(coordinates);
+            if (!test.IsValid())
+            {
+                return;
+            }
+            _model.Coords = test.Clamp();
+            phextCoordinate.Text = _model.Coords.ToString();
+            loadScroll();
+            _checkout = new Coordinates(_model.Coords);
+        }
+
+        private void SyncEditorState()
+        {
+            SaveCurrentFile(false, false);
+            _settings.Coords = _model.Phext.Coords.ToString();
+            _settings.ZoomFactor = textBox.ZoomFactor;
+            _settings.WordWrap = textBox.WordWrap;
+            _settings.TreeView = treeView.Visible;
+            _settings.Theme = darkModeMenuItem.Checked ? "Dark" : "Light";
+            _settings.Save();
+        }
+
+        private void PhextForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            SyncEditorState();
+        }
+
+        private void preferencesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LoadFile(_settings.IniFilePath, true);
+        }
+
+        private void defaultPhextToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LoadDefaultPhext();
+        }
+
+        private void saveAsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SaveCurrentFile(true, false);
+        }
+
+        private void HandleHotkeys(object sender, KeyEventArgs e)
+        {
+            // Ctrl-Shift-S: Save As File
+            if (e.Control && e.Shift && e.KeyCode == Keys.S)
+            {
+                ChooseSaveFilename();
+                SaveCurrentFile(false, true);
+                e.Handled = true;
+                return;
+            }
+            // Ctrl-S: Save File
+            if (e.Control && e.KeyCode == Keys.S)
+            {
+                SaveCurrentFile(false, true);
+                e.Handled = true;
+                return;
+            }
+            // Ctrl-O: Open File
+            if (e.Control && e.KeyCode == Keys.O)
+            {
+                OpenNewFile();
+                e.Handled = true;
+                return;
+            }
+            // Ctrl-N: New File
+            if (e.Control && e.KeyCode == Keys.N)
+            {
+                newToolStripMenuItem_Click(sender, e);
+                e.Handled = true;
+                return;
+            }
+            // Ctrl-,: Preferences
+            if (e.Control && e.KeyCode == Keys.Oemcomma)
+            {
+                preferencesToolStripMenuItem_Click(sender, e);
+                e.Handled = true;
+                return;
+            }
+            // Ctrl-/: Reload
+            if (e.Control && e.KeyCode == Keys.OemQuestion)
+            {
+                reloadMenuItem_Click(sender, e);
+                e.Handled = true;
+                return;
+            }
+            // Scroll Lock
+            if (e.KeyCode == Keys.Scroll)
+            {
+                lockToScrollMenuItem.Checked = Control.IsKeyLocked(Keys.Scroll);
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void treeView_KeyUp(object sender, KeyEventArgs e)
+        {
+            HandleHotkeys(sender, e);
+
+            if (e.KeyCode == Keys.Delete ||
+                e.KeyCode == Keys.Back)
+            {
+                var key = treeView?.SelectedNode?.Name;
+                if (key != null && key.Length > 0)
+                {
+                    deleteNode(key);
+                }
+            }
+        }
+
+        private short GetSubCoordinate(char breakType)
+        {
+            var parts = phextCoordinate.Text.Split('/');
+            if (parts.Length != 3)
+            {
+                return 1;
+            }
+
+            int primary = -1;
+            if (breakType == PhextModel.LIBRARY_BREAK ||
+                breakType == PhextModel.SHELF_BREAK ||
+                breakType == PhextModel.SERIES_BREAK)
+            {
+                primary = 0;
+            }
+            if (breakType == PhextModel.COLLECTION_BREAK ||
+                breakType == PhextModel.VOLUME_BREAK ||
+                breakType == PhextModel.BOOK_BREAK)
+            {
+                primary = 1;
+            }
+            if (breakType == PhextModel.CHAPTER_BREAK ||
+                breakType == PhextModel.SECTION_BREAK ||
+                breakType == PhextModel.SCROLL_BREAK)
+            {
+                primary = 2;
+            }
+
+            if (primary == -1)
+            {
+                return 1;
+            }
+
+            var subparts = parts[primary].Split('.');
+            if (subparts.Length != 3)
+            {
+                return 1;
+            }
+
+            int subindex = -1;
+            if (breakType == PhextModel.LIBRARY_BREAK ||
+                breakType == PhextModel.COLLECTION_BREAK ||
+                breakType == PhextModel.CHAPTER_BREAK)
+            {
+                subindex = 0;
+            }
+            if (breakType == PhextModel.SHELF_BREAK ||
+                breakType == PhextModel.VOLUME_BREAK ||
+                breakType == PhextModel.SECTION_BREAK)
+            {
+                subindex = 1;
+            }
+            if (breakType == PhextModel.SERIES_BREAK ||
+                breakType == PhextModel.BOOK_BREAK ||
+                breakType == PhextModel.SCROLL_BREAK)
+            {
+                subindex = 2;
+            }
+            if (subindex == -1)
+            {
+                return 1;
+            }
+
+            return short.Parse(subparts[subindex]);
+        }
+
+        private string RebuildCoordinate(char breakType, short value)
+        {
+            Coordinates parts = GetPhextCoordinate();
+
+            switch (breakType)
+            {
+                case PhextModel.LIBRARY_BREAK:
+                    parts.Library = value;
+                    break;
+                case PhextModel.SHELF_BREAK:
+                    parts.Shelf = value;
+                    break;
+                case PhextModel.SERIES_BREAK:
+                    parts.Series = value;
+                    break;
+                case PhextModel.COLLECTION_BREAK:
+                    parts.Collection = value;
+                    break;
+                case PhextModel.VOLUME_BREAK:
+                    parts.Volume = value;
+                    break;
+                case PhextModel.BOOK_BREAK:
+                    parts.Book = value;
+                    break;
+                case PhextModel.CHAPTER_BREAK:
+                    parts.Chapter = value;
+                    break;
+                case PhextModel.SECTION_BREAK:
+                    parts.Section = value;
+                    break;
+                case PhextModel.SCROLL_BREAK:
+                    parts.Scroll = value;
+                    break;
+            }
+
+            return parts.ToString();
+        }
+
+        private void BumpCoordinate(char breakType, short amount)
+        {
+            short value = (short)(GetSubCoordinate(breakType) + amount);
+            if (value < 1) { value = 1; }
+            if (value > 999) { value = 999; }
+            phextCoordinate.Text = RebuildCoordinate(breakType, value);
+        }
+
+        private void UpDownHandler(char breakType, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Up)
+            {
+                BumpCoordinate(breakType, -1);
+            }
+            if (e.KeyCode == Keys.Down)
+            {
+                BumpCoordinate(breakType, 1);
+            }
+        }
+
+        private void treeView_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+            var coordinates = treeView?.SelectedNode?.Name;
+            if (coordinates == null || coordinates.Length == 0)
+            {
+                return;
+            }
+            coordinateJump(coordinates, true);
+        }
+
+        private void wordWrapToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            textBox.WordWrap = wordWrapToolStripMenuItem.Checked;
+            _settings.WordWrap = textBox.WordWrap;
+        }
+
+        private void SetEditorTheme()
+        {
+            bool mode = _settings.DarkMode;
+            treeView.BackColor = mode ? _settings.Color1 : _settings.Color2;
+            treeView.ForeColor = mode ? _settings.Color2 : _settings.Color1;
+            textBox.BackColor = mode ? _settings.Color1 : _settings.Color2;
+            textBox.ForeColor = mode ? _settings.Color2 : _settings.Color1;
+            BackColor = mode ? _settings.Color3 : _settings.Color4;
+            menuStrip.BackColor = BackColor;
+            fileToolStripMenuItem.BackColor = BackColor;
+        }
+
+        private void darkModeMenuItem_Click(object sender, EventArgs e)
+        {
+            _settings.Theme = darkModeMenuItem.Checked ? "Dark" : "Light";
+            _settings.Save();
+            SetEditorTheme();
+        }
+        private void lockToScrollMenuItem_CheckedChanged(object sender, EventArgs e)
+        {
+            scrollLockUIUpdate();
+        }
+
+        private void scrollLockUIUpdate()
+        {
+            treeView.Visible = !lockToScrollMenuItem.Checked;
+            _settings.TreeView = treeView.Visible;
+
+            if (lockToScrollMenuItem.Checked)
+            {
+                textBox.Left = 0;
+                textBox.Width = Width - 24;
+            }
+            else
+            {
+                textBox.Left = treeView.Right;
+                textBox.Width = Width - treeView.Width - 24;
+            }
+        }
+
+        private void reloadMenuItem_Click(object sender, EventArgs e)
+        {
+            LoadFile(_settings.Filename, false);
+            reloadMenuItem.Enabled = false;
+        }
+
+        private void treeView_DoubleClick(object sender, EventArgs e)
+        {
+            textBox.Focus();
+            textBox.SelectionStart = textBox.Text.Length;
+        }
+
+        private void showCoordinatesToolStripMenuItem_CheckedChanged(object sender, EventArgs e)
+        {
+            _settings.ShowCoordinates = showCoordinatesToolStripMenuItem.Checked;
+            _settings.Save();
+            LoadFile(_settings.Filename, false);
+        }
+
+        private void phextCoordinate_TextChanged(object sender, EventArgs e)
+        {
+            var prior = _model.Phext.Coords;
+            var test = GetPhextCoordinate();
+            if (!test.Intermediate && prior.ToString() != test.ToString())
+            {
+                jumpButton_Click(sender, e);
+            }
+        }
+    }
+}PhextForm.Designer.cs
+
+namespace PhextNotepad
+{
+    partial class PhextForm
+    {
+        /// <summary>
+        ///  Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        ///  Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        ///  Required method for Designer support - do not modify
+        ///  the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            textBox = new RichTextBox();
+            coordinateLabel = new Label();
+            menuStrip = new MenuStrip();
+            fileToolStripMenuItem = new ToolStripMenuItem();
+            closeToolStripMenuItem = new ToolStripMenuItem();
+            openToolStripMenuItem = new ToolStripMenuItem();
+            reloadMenuItem = new ToolStripMenuItem();
+            toolStripSeparator4 = new ToolStripSeparator();
+            saveToolStripMenuItem = new ToolStripMenuItem();
+            saveAsToolStripMenuItem = new ToolStripMenuItem();
+            toolStripSeparator2 = new ToolStripSeparator();
+            recentToolStripMenuItem = new ToolStripMenuItem();
+            toolStripSeparator1 = new ToolStripSeparator();
+            exitToolStripMenuItem = new ToolStripMenuItem();
+            editToolStripMenuItem = new ToolStripMenuItem();
+            toolStripSeparator3 = new ToolStripSeparator();
+            preferencesToolStripMenuItem = new ToolStripMenuItem();
+            viewToolStripMenuItem = new ToolStripMenuItem();
+            lockToScrollMenuItem = new ToolStripMenuItem();
+            wordWrapToolStripMenuItem = new ToolStripMenuItem();
+            darkModeMenuItem = new ToolStripMenuItem();
+            showCoordinatesToolStripMenuItem = new ToolStripMenuItem();
+            helpToolStripMenuItem = new ToolStripMenuItem();
+            defaultPhextToolStripMenuItem = new ToolStripMenuItem();
+            aboutToolStripMenuItem = new ToolStripMenuItem();
+            phextCoordinate = new TextBox();
+            status = new Label();
+            flowLayoutPanel = new FlowLayoutPanel();
+            button1 = new Button();
+            wordCountLabel = new Label();
+            treeView = new TreeView();
+            panel1 = new Panel();
+            menuStrip.SuspendLayout();
+            flowLayoutPanel.SuspendLayout();
+            panel1.SuspendLayout();
+            SuspendLayout();
+            // 
+            // textBox
+            // 
+            textBox.AcceptsTab = true;
+            textBox.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            textBox.BackColor = Color.Black;
+            textBox.BorderStyle = BorderStyle.FixedSingle;
+            textBox.Cursor = Cursors.IBeam;
+            textBox.Font = new Font("Cascadia Code", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox.ForeColor = Color.WhiteSmoke;
+            textBox.Location = new Point(459, 5);
+            textBox.MaxLength = 100000000;
+            textBox.Name = "textBox";
+            textBox.Size = new Size(960, 547);
+            textBox.TabIndex = 0;
+            textBox.Text = "";
+            textBox.SelectionChanged += textBox_SelectionChanged;
+            textBox.TextChanged += textBox_TextChanged;
+            textBox.KeyDown += textBox_KeyDown;
+            textBox.KeyUp += textBox_KeyUp;
+            // 
+            // coordinateLabel
+            // 
+            coordinateLabel.Anchor = AnchorStyles.Bottom;
+            coordinateLabel.CausesValidation = false;
+            coordinateLabel.Enabled = false;
+            coordinateLabel.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            coordinateLabel.Location = new Point(3, 3);
+            coordinateLabel.Name = "coordinateLabel";
+            coordinateLabel.Size = new Size(114, 36);
+            coordinateLabel.TabIndex = 2;
+            coordinateLabel.Text = "Coordinate:";
+            coordinateLabel.TextAlign = ContentAlignment.MiddleRight;
+            // 
+            // menuStrip
+            // 
+            menuStrip.BackColor = Color.DeepSkyBlue;
+            menuStrip.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem, editToolStripMenuItem, viewToolStripMenuItem, helpToolStripMenuItem });
+            menuStrip.Location = new Point(0, 0);
+            menuStrip.Name = "menuStrip";
+            menuStrip.Size = new Size(1384, 24);
+            menuStrip.TabIndex = 3;
+            menuStrip.Text = "menuStrip1";
+            // 
+            // fileToolStripMenuItem
+            // 
+            fileToolStripMenuItem.BackColor = Color.DeepSkyBlue;
+            fileToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { closeToolStripMenuItem, openToolStripMenuItem, reloadMenuItem, toolStripSeparator4, saveToolStripMenuItem, saveAsToolStripMenuItem, toolStripSeparator2, recentToolStripMenuItem, toolStripSeparator1, exitToolStripMenuItem });
+            fileToolStripMenuItem.ForeColor = SystemColors.ControlText;
+            fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            fileToolStripMenuItem.Size = new Size(37, 20);
+            fileToolStripMenuItem.Text = "&File";
+            // 
+            // closeToolStripMenuItem
+            // 
+            closeToolStripMenuItem.BackColor = SystemColors.Menu;
+            closeToolStripMenuItem.ForeColor = SystemColors.ControlText;
+            closeToolStripMenuItem.Name = "closeToolStripMenuItem";
+            closeToolStripMenuItem.Size = new Size(123, 22);
+            closeToolStripMenuItem.Text = "&New";
+            closeToolStripMenuItem.Click += newToolStripMenuItem_Click;
+            // 
+            // openToolStripMenuItem
+            // 
+            openToolStripMenuItem.BackColor = SystemColors.Menu;
+            openToolStripMenuItem.ForeColor = SystemColors.ControlText;
+            openToolStripMenuItem.Name = "openToolStripMenuItem";
+            openToolStripMenuItem.Size = new Size(123, 22);
+            openToolStripMenuItem.Text = "&Open...";
+            openToolStripMenuItem.Click += openToolStripMenuItem_Click;
+            // 
+            // reloadMenuItem
+            // 
+            reloadMenuItem.Enabled = false;
+            reloadMenuItem.Name = "reloadMenuItem";
+            reloadMenuItem.Size = new Size(123, 22);
+            reloadMenuItem.Text = "Re&load";
+            reloadMenuItem.Click += reloadMenuItem_Click;
+            // 
+            // toolStripSeparator4
+            // 
+            toolStripSeparator4.Name = "toolStripSeparator4";
+            toolStripSeparator4.Size = new Size(120, 6);
+            // 
+            // saveToolStripMenuItem
+            // 
+            saveToolStripMenuItem.BackColor = SystemColors.Menu;
+            saveToolStripMenuItem.ForeColor = SystemColors.ControlText;
+            saveToolStripMenuItem.Name = "saveToolStripMenuItem";
+            saveToolStripMenuItem.Size = new Size(123, 22);
+            saveToolStripMenuItem.Text = "&Save";
+            saveToolStripMenuItem.Click += saveToolStripMenuItem_Click;
+            // 
+            // saveAsToolStripMenuItem
+            // 
+            saveAsToolStripMenuItem.BackColor = SystemColors.Menu;
+            saveAsToolStripMenuItem.ForeColor = SystemColors.ControlText;
+            saveAsToolStripMenuItem.Name = "saveAsToolStripMenuItem";
+            saveAsToolStripMenuItem.Size = new Size(123, 22);
+            saveAsToolStripMenuItem.Text = "Save &As...";
+            saveAsToolStripMenuItem.Click += saveAsToolStripMenuItem_Click;
+            // 
+            // toolStripSeparator2
+            // 
+            toolStripSeparator2.BackColor = Color.Black;
+            toolStripSeparator2.ForeColor = Color.Black;
+            toolStripSeparator2.Name = "toolStripSeparator2";
+            toolStripSeparator2.Size = new Size(120, 6);
+            // 
+            // recentToolStripMenuItem
+            // 
+            recentToolStripMenuItem.BackColor = SystemColors.Menu;
+            recentToolStripMenuItem.ForeColor = SystemColors.ControlText;
+            recentToolStripMenuItem.Name = "recentToolStripMenuItem";
+            recentToolStripMenuItem.Size = new Size(123, 22);
+            recentToolStripMenuItem.Text = "&Recent";
+            // 
+            // toolStripSeparator1
+            // 
+            toolStripSeparator1.BackColor = Color.Black;
+            toolStripSeparator1.ForeColor = Color.Black;
+            toolStripSeparator1.Name = "toolStripSeparator1";
+            toolStripSeparator1.Size = new Size(120, 6);
+            // 
+            // exitToolStripMenuItem
+            // 
+            exitToolStripMenuItem.BackColor = SystemColors.Menu;
+            exitToolStripMenuItem.ForeColor = SystemColors.ControlText;
+            exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            exitToolStripMenuItem.Size = new Size(123, 22);
+            exitToolStripMenuItem.Text = "E&xit";
+            exitToolStripMenuItem.Click += exitToolStripMenuItem_Click;
+            // 
+            // editToolStripMenuItem
+            // 
+            editToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { toolStripSeparator3, preferencesToolStripMenuItem });
+            editToolStripMenuItem.ForeColor = SystemColors.ControlText;
+            editToolStripMenuItem.Name = "editToolStripMenuItem";
+            editToolStripMenuItem.Size = new Size(39, 20);
+            editToolStripMenuItem.Text = "&Edit";
+            // 
+            // toolStripSeparator3
+            // 
+            toolStripSeparator3.Name = "toolStripSeparator3";
+            toolStripSeparator3.Size = new Size(141, 6);
+            // 
+            // preferencesToolStripMenuItem
+            // 
+            preferencesToolStripMenuItem.Name = "preferencesToolStripMenuItem";
+            preferencesToolStripMenuItem.Size = new Size(144, 22);
+            preferencesToolStripMenuItem.Text = "&Preferences...";
+            preferencesToolStripMenuItem.Click += preferencesToolStripMenuItem_Click;
+            // 
+            // viewToolStripMenuItem
+            // 
+            viewToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { lockToScrollMenuItem, wordWrapToolStripMenuItem, darkModeMenuItem, showCoordinatesToolStripMenuItem });
+            viewToolStripMenuItem.ForeColor = SystemColors.ControlText;
+            viewToolStripMenuItem.Name = "viewToolStripMenuItem";
+            viewToolStripMenuItem.Size = new Size(44, 20);
+            viewToolStripMenuItem.Text = "&View";
+            // 
+            // lockToScrollMenuItem
+            // 
+            lockToScrollMenuItem.CheckOnClick = true;
+            lockToScrollMenuItem.Name = "lockToScrollMenuItem";
+            lockToScrollMenuItem.Size = new Size(170, 22);
+            lockToScrollMenuItem.Text = "&Lock to Scroll";
+            lockToScrollMenuItem.CheckedChanged += lockToScrollMenuItem_CheckedChanged;
+            // 
+            // wordWrapToolStripMenuItem
+            // 
+            wordWrapToolStripMenuItem.Checked = true;
+            wordWrapToolStripMenuItem.CheckOnClick = true;
+            wordWrapToolStripMenuItem.CheckState = CheckState.Checked;
+            wordWrapToolStripMenuItem.Name = "wordWrapToolStripMenuItem";
+            wordWrapToolStripMenuItem.Size = new Size(170, 22);
+            wordWrapToolStripMenuItem.Text = "&Word Wrap";
+            wordWrapToolStripMenuItem.Click += wordWrapToolStripMenuItem_Click;
+            // 
+            // darkModeMenuItem
+            // 
+            darkModeMenuItem.Checked = true;
+            darkModeMenuItem.CheckOnClick = true;
+            darkModeMenuItem.CheckState = CheckState.Checked;
+            darkModeMenuItem.Name = "darkModeMenuItem";
+            darkModeMenuItem.Size = new Size(170, 22);
+            darkModeMenuItem.Text = "Dark &Mode";
+            darkModeMenuItem.Click += darkModeMenuItem_Click;
+            // 
+            // showCoordinatesToolStripMenuItem
+            // 
+            showCoordinatesToolStripMenuItem.Checked = true;
+            showCoordinatesToolStripMenuItem.CheckOnClick = true;
+            showCoordinatesToolStripMenuItem.CheckState = CheckState.Checked;
+            showCoordinatesToolStripMenuItem.Name = "showCoordinatesToolStripMenuItem";
+            showCoordinatesToolStripMenuItem.Size = new Size(170, 22);
+            showCoordinatesToolStripMenuItem.Text = "&Show Coordinates";
+            showCoordinatesToolStripMenuItem.CheckedChanged += showCoordinatesToolStripMenuItem_CheckedChanged;
+            // 
+            // helpToolStripMenuItem
+            // 
+            helpToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { defaultPhextToolStripMenuItem, aboutToolStripMenuItem });
+            helpToolStripMenuItem.ForeColor = SystemColors.ControlText;
+            helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+            helpToolStripMenuItem.Size = new Size(44, 20);
+            helpToolStripMenuItem.Text = "&Help";
+            // 
+            // defaultPhextToolStripMenuItem
+            // 
+            defaultPhextToolStripMenuItem.Name = "defaultPhextToolStripMenuItem";
+            defaultPhextToolStripMenuItem.Size = new Size(122, 22);
+            defaultPhextToolStripMenuItem.Text = "&Contents";
+            defaultPhextToolStripMenuItem.Click += defaultPhextToolStripMenuItem_Click;
+            // 
+            // aboutToolStripMenuItem
+            // 
+            aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            aboutToolStripMenuItem.Size = new Size(122, 22);
+            aboutToolStripMenuItem.Text = "&About";
+            aboutToolStripMenuItem.Click += aboutToolStripMenuItem_Click;
+            // 
+            // phextCoordinate
+            // 
+            phextCoordinate.Anchor = AnchorStyles.Bottom;
+            phextCoordinate.Enabled = false;
+            phextCoordinate.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            phextCoordinate.Location = new Point(123, 3);
+            phextCoordinate.MaxLength = 64;
+            phextCoordinate.Name = "phextCoordinate";
+            phextCoordinate.Size = new Size(265, 33);
+            phextCoordinate.TabIndex = 1;
+            phextCoordinate.TextChanged += phextCoordinate_TextChanged;
+            // 
+            // status
+            // 
+            status.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            status.BorderStyle = BorderStyle.FixedSingle;
+            status.CausesValidation = false;
+            status.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            status.Location = new Point(475, 6);
+            status.Name = "status";
+            status.Size = new Size(896, 27);
+            status.TabIndex = 2;
+            status.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // flowLayoutPanel
+            // 
+            flowLayoutPanel.Controls.Add(coordinateLabel);
+            flowLayoutPanel.Controls.Add(phextCoordinate);
+            flowLayoutPanel.Controls.Add(button1);
+            flowLayoutPanel.Controls.Add(status);
+            flowLayoutPanel.Controls.Add(wordCountLabel);
+            flowLayoutPanel.Dock = DockStyle.Bottom;
+            flowLayoutPanel.Location = new Point(0, 576);
+            flowLayoutPanel.MaximumSize = new Size(1400, 65);
+            flowLayoutPanel.MinimumSize = new Size(925, 65);
+            flowLayoutPanel.Name = "flowLayoutPanel";
+            flowLayoutPanel.Size = new Size(1384, 65);
+            flowLayoutPanel.TabIndex = 11;
+            // 
+            // button1
+            // 
+            button1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            button1.ForeColor = Color.Black;
+            button1.Location = new Point(394, 3);
+            button1.Name = "button1";
+            button1.Size = new Size(75, 33);
+            button1.TabIndex = 4;
+            button1.Text = "Jump";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += jumpButton_Click;
+            // 
+            // wordCountLabel
+            // 
+            wordCountLabel.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            wordCountLabel.BorderStyle = BorderStyle.FixedSingle;
+            wordCountLabel.CausesValidation = false;
+            wordCountLabel.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            wordCountLabel.Location = new Point(3, 39);
+            wordCountLabel.Name = "wordCountLabel";
+            wordCountLabel.Size = new Size(1368, 23);
+            wordCountLabel.TabIndex = 3;
+            wordCountLabel.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // treeView
+            // 
+            treeView.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            treeView.BackColor = Color.Black;
+            treeView.BorderStyle = BorderStyle.FixedSingle;
+            treeView.ForeColor = Color.White;
+            treeView.HideSelection = false;
+            treeView.Location = new Point(3, 5);
+            treeView.Name = "treeView";
+            treeView.PathSeparator = "/";
+            treeView.Size = new Size(450, 541);
+            treeView.TabIndex = 29;
+            treeView.AfterSelect += treeView_AfterSelect;
+            treeView.DoubleClick += treeView_DoubleClick;
+            treeView.KeyUp += treeView_KeyUp;
+            // 
+            // panel1
+            // 
+            panel1.Controls.Add(textBox);
+            panel1.Controls.Add(treeView);
+            panel1.Dock = DockStyle.Fill;
+            panel1.Location = new Point(0, 24);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1384, 552);
+            panel1.TabIndex = 30;
+            // 
+            // PhextForm
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.ControlDark;
+            ClientSize = new Size(1384, 641);
+            Controls.Add(panel1);
+            Controls.Add(flowLayoutPanel);
+            Controls.Add(menuStrip);
+            ForeColor = Color.White;
+            MainMenuStrip = menuStrip;
+            MinimumSize = new Size(850, 400);
+            Name = "PhextForm";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Phext Notepad";
+            FormClosing += PhextForm_FormClosing;
+            menuStrip.ResumeLayout(false);
+            menuStrip.PerformLayout();
+            flowLayoutPanel.ResumeLayout(false);
+            flowLayoutPanel.PerformLayout();
+            panel1.ResumeLayout(false);
+            ResumeLayout(false);
+            PerformLayout();
+        }
+
+        #endregion
+
+        private RichTextBox textBox;
+        private Label coordinateLabel;
+        private MenuStrip menuStrip;
+        private ToolStripMenuItem fileToolStripMenuItem;
+        private ToolStripMenuItem openToolStripMenuItem;
+        private ToolStripMenuItem closeToolStripMenuItem;
+        private ToolStripMenuItem exitToolStripMenuItem;
+        private ToolStripMenuItem helpToolStripMenuItem;
+        private ToolStripMenuItem aboutToolStripMenuItem;
+        private ToolStripMenuItem saveToolStripMenuItem;
+        private ToolStripMenuItem viewToolStripMenuItem;
+        private ToolStripMenuItem showCoordinatesToolStripMenuItem;
+        private TextBox phextCoordinate;
+        private Label status;
+        private TreeView treeView;
+        private FlowLayoutPanel flowLayoutPanel;
+        private ToolStripMenuItem lockToScrollMenuItem;
+        private ToolStripMenuItem editToolStripMenuItem;
+        private ToolStripMenuItem preferencesToolStripMenuItem;
+        private ToolStripMenuItem defaultPhextToolStripMenuItem;
+        private ToolStripMenuItem saveAsToolStripMenuItem;
+        private Panel panel1;
+        private ToolStripMenuItem wordWrapToolStripMenuItem;
+        private ToolStripMenuItem recentToolStripMenuItem;
+        private ToolStripSeparator toolStripSeparator2;
+        private ToolStripSeparator toolStripSeparator1;
+        private ToolStripMenuItem darkModeMenuItem;
+        private ToolStripSeparator toolStripSeparator3;
+        private ToolStripMenuItem reloadMenuItem;
+        private ToolStripSeparator toolStripSeparator4;
+        private Label wordCountLabel;
+        private Button button1;
+    }
+}PhextForm.resx
+
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!--
+    Microsoft ResX Schema 
+
+    Version 2.0
+
+    The primary goals of this format is to allow a simple XML format
+    that is mostly human readable. The generation and parsing of the
+    various data types are done through the TypeConverter classes
+    associated with the data types.
+
+    Example:
+
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+
+    There are any number of "resheader" rows that contain simple
+    name/value pairs.
+
+    Each data row contains a name, and value. The row also contains a
+    type or mimetype. Type corresponds to a .NET class that support
+    text/value conversion through the TypeConverter architecture.
+    Classes that don't support this are serialized and stored with the
+    mimetype set.
+
+    The mimetype is used for serialized objects, and tells the
+    ResXResourceReader how to depersist the object. This is currently not
+    extensible. For a given mimetype the value must be set accordingly:
+
+    Note - application/x-microsoft.net.object.binary.base64 is the format
+    that the ResXResourceWriter will generate, however the reader can
+    read any of the formats listed below.
+
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="menuStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+</root>Mirror Will
 
 Coordinate: 90.1.1 / 9.4.2 / 1.7.1
 Scroll Title: Mirror Will Explains the Loop
