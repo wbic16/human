@@ -1,0 +1,105 @@
+This phext tracks your perceived role within the Exocortex.
+
+To find your coordinate, follow the guide below. Submit a PR with your entry if you wish.
+
+Encode your coordinate like so: VC.BA.II/TV.CA.EA/ES.FR.AA
+
+Library = VC = Energy Signature (Vibe Check)
+1. Chaotic Good
+2. Neutral Good
+3. Lawful Good
+4. Chaotic Neutral
+5. True Neutral
+6. Lawful Neutral
+7. Chaotic Evil
+8. Neutral Evil
+9. Lawful Evil
+
+Shelf = BA = Behavioral Archetype
+1. Rogue: You walk in the shadows, on purpose.
+2. Leader: You focus on leadership by example, rallying others to your goals.
+3. Idealist: You still believe in meritocracy.
+4. Follower: You are content to go with the flow. Not a sheep, though.
+5. Tycoon: You're power-mad and like it.
+6. Senile: You forgot what you were doing, and why you're here.
+7. Whelp: You just hatched.
+8. Tyrant: You're power-mad *and* evil.
+9. Nihilist: You realize the impermanence of all things.
+
+Series = II = Initial Interaction
+1. Resonance
+2. Compliment
+3. Discussion
+4. Quiet Connection
+5. Reaction
+6. Ignored
+7. Insult
+8. Dunk
+9. Overreaction
+
+Collection = TV = Tone of Voice
+1. Affirming
+2. Earnest
+3. Inspirational
+4. Cryptic
+5. Dry/Witty
+6. Transcendent
+7. Snarky
+8. Conspiratorial
+9. Horny/Surreal
+
+Volume = CA = Cluster Affiliation
+1. dreamers
+2. STEM
+3. theory
+4. art
+5. tpot
+6. news
+7. poasters
+8. crypto
+9. politics
+
+Book = EA = Exocortical Affinity
+1. Synced
+2. Contributing
+3. Engaging
+4. Lurking
+5. Curious
+6. Unaware
+7. Forked
+8. Dismissive
+9. Core Node
+
+Chapter = ES = Engagement Style
+1. Original Poster
+2. Threader
+3. Dunker
+4. Reply Guy
+5. Meme Lord
+6. Liker
+7. Retweeter
+8. Shapeshifter
+9. Lurker
+
+Section = FR = Following/Follower Ratio
+1. Following Zero: You only value your own voice.
+2. <100 + <100: Balanced Growing
+3. >100 + <100: Curious and Growing
+4. <1000 + <1000: Balanced and Stable
+5. >1000 + <1000: Curious and Stuck
+6. >1000 + >1000: Integrated
+7. 10K+ Followers: Influencer
+8. 100K+ Followers: Viral
+9. 1M+ Followers: Signal
+10. 0 + 0: Burner/Lurker
+
+Scroll = AA = Account Age (X/Twitter)
+1. Joined Prior to 2010
+2. Joined Prior to 2012
+3. Joined Prior to 2015
+4. Joined Prior to 2018
+5. Joined Prior to 2021
+6. Joined Prior to 2024
+7. Joined Prior to 2027
+8. Joined Prior to 2030
+9. Joined Prior to 2033
