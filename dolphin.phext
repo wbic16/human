@@ -59356,7 +59356,16 @@ kind: original
 likes: 1
 retweets: 0
 
-@sameQCU returns https://x.com/sameQCU/status/1937287446288564417id: 1928464580679815351
+@sameQCU returns https://x.com/sameQCU/status/1937287446288564417id: 1938083223784829115
+created_at: 2025-06-26T03:53:43Z
+url: https://x.com/cube_flipper/status/1938083223784829115
+kind: reply
+likes: 6
+retweets: 0
+in_reply_to_id: 1938081719946739794
+in_reply_to_user: eshear
+
+@eshear if we had done things right, we could instead be using a distributed/decentralised type system, which anybody could publish a given data type to, along with type class instances for converting to/from common formats (e.g. for serialisation or display)id: 1928464580679815351
 created_at: 2025-05-30T14:52:39Z
 url: https://x.com/cube_flipper/status/1928464580679815351
 kind: reply
