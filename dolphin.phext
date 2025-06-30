@@ -39706,7 +39706,20 @@ retweets: 0
 in_reply_to_id: 1919218869560115422
 in_reply_to_user: algekalipso
 
-@algekalipso what are these? chatgpt's telling me they're chunks of mandelbrot turned into a triangle mesh but that doesn't seem right.id: 1873158937933168855
+@algekalipso what are these? chatgpt's telling me they're chunks of mandelbrot turned into a triangle mesh but that doesn't seem right.id: 1939710239798100269
+created_at: 2025-06-30T15:38:53Z
+url: https://x.com/cube_flipper/status/1939710239798100269
+kind: reply
+likes: 2
+retweets: 0
+in_reply_to_id: 1939707350665072664
+in_reply_to_user: qualianerd
+
+@QualiaNerd @louisvarge @Krisaaaaeeeeee @algekalipso i want to revise this metaphor before we continue:
+
+rather than frames as basins within belief-space, perhaps a better metaphor would be the set of beliefs as a high-dimensional structure, and frames as lower-dimensional planes onto which the structure can be projected.
+
+but as the higher-dimensional belief structure is constructed by a process of projection in the first place, then if you're not frame dependent to begin with then you don't get to construct the higher dimensional structure.id: 1873158937933168855
 created_at: 2024-12-29T00:07:47Z
 url: https://x.com/cube_flipper/status/1873158937933168855
 kind: thread
