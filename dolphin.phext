@@ -41906,7 +41906,16 @@ retweets: 0
 in_reply_to_id: 1932698777917305032
 in_reply_to_user: arithmoquine
 
-@arithmoquine i need thisid: 1686954649038073856
+@arithmoquine i need thisid: 1942854380023091603
+created_at: 2025-07-09T07:52:35Z
+url: https://x.com/cube_flipper/status/1942854380023091603
+kind: reply
+likes: 4
+retweets: 0
+in_reply_to_id: 1942772474904711168
+in_reply_to_user: dschorno
+
+@dschorno i need thisid: 1686954649038073856
 created_at: 2023-08-03T04:18:25Z
 url: https://x.com/cube_flipper/status/1686954649038073856
 kind: reply
