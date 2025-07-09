@@ -52205,7 +52205,19 @@ in_reply_to_user: cube_flipper
 answers: 26.6.9/5.5.7/1.1.34
 thread_root: 26.6.9/8.6.10/1.1.33
 
-@algekalipso @eshear (it would be nice if that website was adapted to support the extended P3 colour gamut on modern phones)id: 1632846651596627970
+@algekalipso @eshear (it would be nice if that website was adapted to support the extended P3 colour gamut on modern phones)id: 1942976431736132025
+created_at: 2025-07-09T15:57:34Z
+url: https://x.com/cube_flipper/status/1942976431736132025
+kind: thread
+likes: 2
+retweets: 0
+thread_id: 1942971641308553557
+in_reply_to_id: 1942974440616145314
+in_reply_to_user: cube_flipper
+answers: 26.6.9/6.6.8/1.1.35
+thread_root: 26.6.9/8.6.10/1.1.33
+
+@algekalipso @eshear fwiw i think HSLuv allocates too much of the hue spectrum to greens, i have tried using it to generate equally-spaced discrete colour schemes automatically (i was actually trying to use it to generate the seven colours in the HEART logo) and gave up and did it by eyeid: 1632846651596627970
 created_at: 2023-03-06T20:52:33Z
 url: https://x.com/cube_flipper/status/1632846651596627970
 kind: reply
