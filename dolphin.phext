@@ -39994,7 +39994,23 @@ retweets: 0
 in_reply_to_id: 1863272201002340603
 in_reply_to_user: None
 
-@no_no_nothing0 aesthetically, does it feel like this at all? any sensations of "untangling" or "unwinding"? https://x.com/cube_flipper/status/1755036822873485681id: 1941492945099817071
+@no_no_nothing0 aesthetically, does it feel like this at all? any sensations of "untangling" or "unwinding"? https://x.com/cube_flipper/status/1755036822873485681id: 1943380060414640591
+created_at: 2025-07-10T18:41:27Z
+url: https://x.com/cube_flipper/status/1943380060414640591
+kind: thread
+likes: 7
+retweets: 0
+thread_id: 1943356900529090865
+in_reply_to_id: 1943356900529090865
+in_reply_to_user: cube_flipper
+answers: 23.7.9/8.8.14/1.1.34
+thread_root: 23.7.9/8.8.14/1.1.34
+
+@algekalipso @eshear as andres already knows i have been amenable to the idea of an objective colour space basis in the past, but i also think this idea warrants thorough interrogation...
+
+like i mentioned, i spent a fairly big chunk of my teenage years glued to Adobe Photoshop (i was fairly deeply into digital photography and design), so i was always working in either the RGB or Lab colour spaces. it has always felt fairly natural to flip the colour basis between the triaxial red-cyan/green-magenta/blue-yellow basis and the oppositional red-green/blue-yellow basis feeling the most "natural"
+
+(presumably much more challenging would be to then hue rotate the oppositional basis around the white-black axis...)id: 1941492945099817071
 created_at: 2025-07-05T13:42:43Z
 url: https://x.com/cube_flipper/status/1941492945099817071
 kind: reply
