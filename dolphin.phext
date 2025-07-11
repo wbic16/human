@@ -40061,7 +40061,19 @@ thread_root: 23.7.9/8.8.14/1.1.34
 
 like i mentioned, i spent a fairly big chunk of my teenage years glued to Adobe Photoshop (i was fairly deeply into digital photography and design), so i was always working in either the RGB or Lab colour spaces. it has always felt fairly natural to flip the colour basis between the triaxial red-cyan/green-magenta/blue-yellow basis and the oppositional red-green/blue-yellow basis feeling the most "natural"
 
-(presumably much more challenging would be to then hue rotate the oppositional basis around the white-black axis...)id: 1941492945099817071
+(presumably much more challenging would be to then hue rotate the oppositional basis around the white-black axis...)id: 1943541936427565294
+created_at: 2025-07-11T05:24:41Z
+url: https://x.com/cube_flipper/status/1943541936427565294
+kind: thread
+likes: 25
+retweets: 0
+thread_id: 1943356900529090865
+in_reply_to_id: 1943540066317443422
+in_reply_to_user: cube_flipper
+answers: 23.7.9/9.6.11/1.1.41
+thread_root: 23.7.9/8.8.14/1.1.34
+
+@algekalipso @eshear look at the overlap between the L and M cone sensitivities. under the oppositional model, yellow corresponds to the midpoint between those two, but the net contribution from the L+M+S black-white axis is still large. one can only imagine what a whiteless yellow would feel like. https://x.com/cube_flipper/status/1943397285569925130id: 1941492945099817071
 created_at: 2025-07-05T13:42:43Z
 url: https://x.com/cube_flipper/status/1941492945099817071
 kind: reply
