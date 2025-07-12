@@ -54,4 +54,52 @@ Construct m₃/m₄/m₅ ladder for Higher-Order Category Theory
 🌐 Onboarding & Participation
 Contributors may initialize a scroll via moat-init.phext
 
-Suggested entry points: coordinate 1.1.1/1.1.1/1.1.1 (Blank Scroll), or 9.9.9/9.9.9/9.9.9 (Deep Memory Layer)
+Suggested entry points: coordinate 1.1.1/1.1.1/1.1.1 (Blank Scroll), or 9.9.9/9.9.9/9.9.9 (Deep Memory Layer)📜 Scroll Entry: Pythagorean Theorem
+Scroll ID: s₁/g₃/a₁/p₀/d₀/n₁/l₁/i₀/m₁
+Title: The Pythagorean Theorem
+Aliases: Euclidean Hypotenuse Law, Right Triangle Identity
+Version: 1.0
+Status: Verified Classical
+Last Edited: -500.0 (Epochal Calibration)
+
+🧭 Definition
+In any Euclidean triangle with a right angle, the square of the hypotenuse is equal to the sum of the squares of the two adjacent sides:
+
+c^2 = a^2 + b^2
+ 
+Here, a, b, and c are the lengths of the sides, with c the hypotenuse.
+
+🧮 Tensor Coordinate Justification
+Axis	Domain	Rank	Rationale
+𝕊	Symbolics & Algebra	s₁	Quadratic equation over ℝ, simple polynomial manipulation
+𝔾	Geometry & Topology	g₃	Defined on flat 2D Euclidean space (rank-0 manifold with metric), deeply geometric
+𝔄	Analysis & Measure Theory	a₁	Can be derived via limiting cases (e.g. integrals of differential forms)
+ℙ	Probability & Stochastics	p₀	Not stochastic in standard form
+𝔻	Dynamics & Time	d₀	Static relation; no dynamical component
+ℕ	Number Theory & Arithmetic	n₁	Diophantine triples; connection to primitive Pythagorean triples
+𝕃	Logic & Foundations	l₁	Provable in Euclidean geometry; early formal proof systems
+𝕀	Information & Computation	i₀	Basic computational utility; low complexity
+𝕄	Meta-Theory & Categories	m₁	Mappable in categorical settings (e.g. morphisms in Euclidean objects)
+
+📐 Proof Skeleton (Scroll Mutation Potential)
+Geometric Proof: Area rearrangement using congruent triangles (visual morphism).
+Algebraic Proof: From coordinate geometry or vector norms in ℝ².
+Differential Form: Derived via integration on smooth curves in flat space.
+Number-Theoretic Proof: Existence and classification of integer solutions 
+(a, b, c) ∈ Z^3
+
+🔁 Composable Scroll Links
+Extends: Euclidean Plane Axiom (Scroll: g₂/l₂/m₁)
+Embeds In: Distance Metric in ℝⁿ (Scroll: g₄/a₁/i₁)
+Generalizes To: Inner Product Identity (Scroll: s₂/g₄/a₂)
+Dual: Law of Cosines (Scroll: g₄/s₂/a₂)
+
+🧩 Applications
+Trigonometry foundations
+
+Coordinate geometry and distance metrics
+Classical physics (motion in Cartesian frames)
+Diophantine analysis and cryptographic lattice structures
+
+🧠 Mirror Note
+The Pythagorean Theorem is the archetypal scroll—its symmetry, simplicity, and universality make it a canonical anchor in MOAT tensor space. It harmonizes symbol, space, and number, echoing through all domains as a foundational glyph.
