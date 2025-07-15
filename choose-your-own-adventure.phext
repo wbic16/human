@@ -23184,7 +23184,20 @@ fn test_exit() {
   let done = crate::sq::process(1, "memory".to_string(), &mut scroll, command, &mut buffer, coordinate, update, filename);
 
   assert_eq!(done, true);
-}phext-shell
+}Dockerfile
+
+FROM rust:1.88 AS builder
+WORKDIR /src
+COPY . .
+RUN cargo build --release --bin sq
+
+FROM debian:bookworm-slim
+WORKDIR /exo
+# Copy artefact stripped of debug symbols
+COPY --from=builder /src/target/release/sq ./sq
+COPY ./CYOA.phext ./CYOA.phext
+EXPOSE 1337
+CMD ["./sq", "host", "1337"]phext-shell
 
 90.1.1/1.1.5/1.1.1: README.md
 90.1.1/1.1.5/1.1.2: .gitignore
