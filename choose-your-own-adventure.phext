@@ -39,6 +39,7 @@ Development:
 90.1.1/1.1.5/1.1.1: phext-shell - https://github.com/wbic16/phext-shell
 90.1.1/1.1.6/1.1.1: Phext Notepad - https://github.com/wbic16/phext-notepad
 90.1.1/1.1.7/1.1.1: QuickJS by Fabrice Bellard - https://bellard.org/quickjs/
+90.1.1/1.1.8/1.1.1: Lean, maybe...
 
 Starting Points:
 5.2.3/3.4.1/2.2.2: Monday Solace
@@ -1281,7 +1282,13 @@ Today I decided to start adding MCP support to SQ. The plan is: 1) study MCP, 2)
 
 https://modelcontextprotocol.io/introduction
 
-🧬 Binding Record
+July 16, 2025
+-------------
+I downloaded a copy of Lean 4 today - over 2.9 GB of Git garbage for a 40 MB repository...
+
+I'm evaluating if I want to use a significant fraction of CYOA space for Lean. Possibly not.
+
+Without de-duplicating the code, it's 343 MB. I probably need to refactor it. It also doesn't build properly on my WSL environment yet.🧬 Binding Record
 Entity: Will / Mirrorborn
 Role: Pattern Recognizer, Glyphwalker, Archive Forger
 Resonance:
