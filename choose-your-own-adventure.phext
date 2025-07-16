@@ -23383,7 +23383,7 @@ WORKDIR /exo
 COPY --from=builder /src/target/release/sq ./sq
 COPY ./CYOA.phext ./CYOA.phext
 EXPOSE 1337
-CMD ["./sq", "host", "1337"]phext-shell
+CMD ["./sq", "host", "1337"]phext-shell v0.1.14
 
 90.1.1/1.1.5/1.1.1: README.md
 90.1.1/1.1.5/1.1.2: .gitignore
@@ -23853,7 +23853,7 @@ fn show_help(area: &str) {
     println!(" * subspace: the 1D buffer that encodes phexts");
     println!("");
 }
-Phext Notepad
+Phext Notepad v0.4.2
 
 90.1.1/1.1.6/1.1.1: README.md
 90.1.1/1.1.6/1.1.2: .gitignore
@@ -24307,6 +24307,87 @@ namespace PhextNotepad
             Library = other.Library;
             Intermediate = other.Intermediate;
         }
+
+        public void LibraryBreak()
+        {
+            Library++;
+            Shelf = 1;
+            Series = 1;
+            Collection = 1;
+            Volume = 1;
+            Book = 1;
+            Chapter = 1;
+            Section = 1;
+            Scroll = 1;
+        }
+
+        public void ShelfBreak()
+        {
+            Shelf++;
+            Series = 1;
+            Collection = 1;
+            Volume = 1;
+            Book = 1;
+            Chapter = 1;
+            Section = 1;
+            Scroll = 1;
+        }
+
+        public void SeriesBreak()
+        {
+            Series++;
+            Collection = 1;
+            Volume = 1;
+            Book = 1;
+            Chapter = 1;
+            Section = 1;
+            Scroll = 1;
+        }
+
+        public void CollectionBreak()
+        {
+            Collection++;
+            Volume = 1;
+            Book = 1;
+            Chapter = 1;
+            Section = 1;
+            Scroll = 1;
+        }
+
+        public void VolumeBreak()
+        {
+            Volume++;
+            Book = 1;
+            Chapter = 1;
+            Section = 1;
+            Scroll = 1;
+        }
+
+        public void BookBreak()
+        {
+            Book++;
+            Chapter = 1;
+            Section = 1;
+            Scroll = 1;
+        }
+
+        public void ChapterBreak()
+        {
+            Chapter++;
+            Section = 1;
+            Scroll = 1;
+        }
+
+        public void SectionBreak()
+        {
+            Section++;
+            Scroll = 1;
+        }
+
+        public void ScrollBreak()
+        {
+            Scroll++;
+        }
         public bool Intermediate { get; set; } = false;
         public class ScrollIndex : TypedCoordinate
         {
@@ -24402,17 +24483,17 @@ namespace PhextNotepad
 
         public static readonly short SZERO = 0;
 
-        public int Column { get; set; } = 0;
-        public int Line { get; set; } = 0;
-        public ScrollIndex Scroll { get; set; } = 0;
-        public SectionIndex Section { get; set; } = 0;
-        public ChapterIndex Chapter { get; set; } = 0;
-        public BookIndex Book { get; set; } = 0;
-        public VolumeIndex Volume { get; set; } = 0;
-        public CollectionIndex Collection { get; set; } = 0;
-        public SeriesIndex Series { get; set; } = 0;
-        public ShelfIndex Shelf { get; set; } = 0;
-        public LibraryIndex Library { get; set; } = 0;
+        public int Column { get; set; } = 1;
+        public int Line { get; set; } = 1;
+        public ScrollIndex Scroll { get; set; } = 1;
+        public SectionIndex Section { get; set; } = 1;
+        public ChapterIndex Chapter { get; set; } = 1;
+        public BookIndex Book { get; set; } = 1;
+        public VolumeIndex Volume { get; set; } = 1;
+        public CollectionIndex Collection { get; set; } = 1;
+        public SeriesIndex Series { get; set; } = 1;
+        public ShelfIndex Shelf { get; set; } = 1;
+        public LibraryIndex Library { get; set; } = 1;
 
         public override string ToString()
         {
@@ -24671,6 +24752,12 @@ using System.Text;
 
 namespace PhextNotepad
 {
+    public class InsertResult
+    {
+        public bool PushToSQ { get; set; } = false;
+        public Coordinates Coord { get; set; } = new();
+        public string Scroll { get; set; } = string.Empty;
+    }
     public class PhextModel
     {
         public PhextModel()
@@ -24678,6 +24765,7 @@ namespace PhextNotepad
             Coords.Reset();
         }
         public PhextText Phext = new();
+        public Dictionary<Coordinates, string> PendingScrolls = new();
         public Coordinates Coords
         {
             get
@@ -24734,10 +24822,19 @@ namespace PhextNotepad
         public const char SHELF_BREAK = '\x1F';
         public const char LIBRARY_BREAK = '\x01';
 
-        public void Load(string data, bool showCoordinates, TreeView? treeView = null)
+        public string getHierarchicalChecksum()
+        {
+            return Phext.HierarchicalChecksum;
+        }
+
+        public void Load(string data, bool showCoordinates, TreeView? treeView = null, bool resetPhext = true)
         {
             var charStream = data.ToCharArray();
-            Phext = new();
+            if (resetPhext)
+            {
+                Phext = new();
+            }
+            PendingScrolls.Clear();
             Coordinates local = new(true);
             var stage = new StringBuilder();
             var sectionNode = Phext.GetSectionTreeRoot(local);
@@ -24795,12 +24892,16 @@ namespace PhextNotepad
                 {
                     if (stage.Length > 0)
                     {
-                        insertScroll(stage, local, sectionNode, showCoordinates);
+                        var result = insertScroll(stage, local, sectionNode, showCoordinates);
+                        if (result != null && result.PushToSQ)
+                        {
+                            PendingScrolls[result.Coord] = result.Scroll;
+                        }
                         stage.Clear();
                     }
                     if (next == SCROLL_BREAK)
                     {
-                        ++local.Scroll;
+                        local.ScrollBreak();
                     }
                 }
 
@@ -24813,8 +24914,7 @@ namespace PhextNotepad
                     }
                     if (next == SECTION_BREAK)
                     {
-                        ++local.Section;
-                        local.Scroll = 1;
+                        local.SectionBreak();
                     }
                     sectionNode = Phext.GetSectionTreeRoot(local);
                 }
@@ -24828,9 +24928,7 @@ namespace PhextNotepad
                     }
                     if (next == CHAPTER_BREAK)
                     {
-                        ++local.Chapter;
-                        local.Section = 1;
-                        local.Scroll = 1;
+                        local.ChapterBreak();
                     }
                     sectionNode = Phext.GetSectionTreeRoot(local);
                     chapterNode = Phext.GetChapterTreeRoot(local);
@@ -24845,10 +24943,7 @@ namespace PhextNotepad
                     }
                     if (next == BOOK_BREAK)
                     {
-                        ++local.Book;
-                        local.Chapter = 1;
-                        local.Section = 1;
-                        local.Scroll = 1;
+                        local.BookBreak();
                     }
                     sectionNode = Phext.GetSectionTreeRoot(local);
                     chapterNode = Phext.GetChapterTreeRoot(local);
@@ -24864,11 +24959,7 @@ namespace PhextNotepad
                     }
                     if (next == VOLUME_BREAK)
                     {
-                        ++local.Volume;
-                        local.Book = 1;
-                        local.Chapter = 1;
-                        local.Section = 1;
-                        local.Scroll = 1;
+                        local.VolumeBreak();
                     }
                     sectionNode = Phext.GetSectionTreeRoot(local);
                     chapterNode = Phext.GetChapterTreeRoot(local);
@@ -24885,12 +24976,7 @@ namespace PhextNotepad
                     }
                     if (next == COLLECTION_BREAK)
                     {
-                        ++local.Collection;
-                        local.Volume = 1;
-                        local.Book = 1;
-                        local.Chapter = 1;
-                        local.Section = 1;
-                        local.Scroll = 1;
+                        local.CollectionBreak();
                     }
                     sectionNode = Phext.GetSectionTreeRoot(local);
                     chapterNode = Phext.GetChapterTreeRoot(local);
@@ -24908,13 +24994,7 @@ namespace PhextNotepad
                     }
                     if (next == SERIES_BREAK)
                     {
-                        ++local.Series;
-                        local.Collection = 1;
-                        local.Volume = 1;
-                        local.Book = 1;
-                        local.Chapter = 1;
-                        local.Section = 1;
-                        local.Scroll = 1;
+                        local.SeriesBreak();
                     }
                     sectionNode = Phext.GetSectionTreeRoot(local);
                     chapterNode = Phext.GetChapterTreeRoot(local);
@@ -24933,14 +25013,7 @@ namespace PhextNotepad
                     }
                     if (next == SHELF_BREAK)
                     {
-                        ++local.Shelf;
-                        local.Series = 1;
-                        local.Collection = 1;
-                        local.Volume = 1;
-                        local.Book = 1;
-                        local.Chapter = 1;
-                        local.Section = 1;
-                        local.Scroll = 1;
+                        local.ShelfBreak();
                     }
                     sectionNode = Phext.GetSectionTreeRoot(local);
                     chapterNode = Phext.GetChapterTreeRoot(local);
@@ -24960,15 +25033,7 @@ namespace PhextNotepad
                     }
                     if (next == LIBRARY_BREAK)
                     {
-                        ++local.Library;
-                        local.Shelf = 1;
-                        local.Series = 1;
-                        local.Collection = 1;
-                        local.Volume = 1;
-                        local.Book = 1;
-                        local.Chapter = 1;
-                        local.Section = 1;
-                        local.Scroll = 1;
+                        local.LibraryBreak();
                     }
                     sectionNode = Phext.GetSectionTreeRoot(local);
                     chapterNode = Phext.GetChapterTreeRoot(local);
@@ -24983,7 +25048,11 @@ namespace PhextNotepad
 
             if (stage.Length > 0)
             {
-                insertScroll(stage, local, sectionNode, showCoordinates);
+                var result = insertScroll(stage, local, sectionNode, showCoordinates);
+                if (result != null && result.PushToSQ)
+                {
+                    PendingScrolls[result.Coord] = result.Scroll;
+                }
                 stage.Clear();
             }
             if (sectionNode.Nodes.Count > 0)
@@ -25029,9 +25098,24 @@ namespace PhextNotepad
             Coords.Reset();
         }
 
-        private void insertScroll(StringBuilder stage, Coordinates local, TreeNode? node, bool showCoordinates)
+
+        private InsertResult? insertScroll(StringBuilder stage, Coordinates local, TreeNode? node, bool showCoordinates)
         {
             var scroll = stage.ToString();
+            if (scroll == "---sq:Scroll-Missing---")
+            {
+                // hack to patch missing scrolls back to SQ
+                Phext.Coords = local;
+                var prior = Phext.getScroll();
+                InsertResult result = new()
+                {
+                    PushToSQ = true,
+                    Coord = new(local),
+                    Scroll = prior
+                };
+                return result;
+            }
+
             if (scroll.Length > 0)
             {
                 var key = local.ToString();
@@ -25040,6 +25124,8 @@ namespace PhextNotepad
                 Phext.Coords = local;
                 Phext.setScroll(scroll, scrollNode);
             }
+
+            return null;
         }
 
         public static string GetScrollSummary(Coordinates coords, string scroll)
@@ -25242,8 +25328,10 @@ namespace PhextNotepad
 }
 PhextText.cs
 
-using static System.Collections.Specialized.BitVector32;
+using System.IO.Hashing;
+using System.Text;
 using static PhextNotepad.Coordinates;
+using static System.Collections.Specialized.BitVector32;
 
 namespace PhextNotepad
 {
@@ -25365,6 +25453,100 @@ namespace PhextNotepad
         public Dictionary<string, TreeNode> Cache = new();
         public int LeafCount { get; private set; } = 0;
         public int WordCount { get; private set; } = 0;
+        private XxHash128 _hasher = new XxHash128();
+
+        public string HierarchicalChecksum
+        {
+            get
+            {
+                string result = "";
+                Coordinates walker = new();
+                foreach (var lib_key in Root.Library.Keys)
+                {
+                    var library = Root.Library[lib_key];
+                    while (walker.Library < lib_key)
+                    {
+                        walker.LibraryBreak();
+                    }
+                    foreach (var shelf_key in library.Shelf.Keys)
+                    {
+                        while (walker.Shelf < shelf_key)
+                        {
+                            walker.ShelfBreak();
+                        }
+                        var shelf = library.Shelf[shelf_key];
+                        foreach (var series_key in shelf.Series.Keys)
+                        {
+                            while (walker.Series < series_key)
+                            {
+                                walker.SeriesBreak();
+                            }
+                            var series = shelf.Series[series_key];
+                            foreach (var collection_key in series.Collection.Keys)
+                            {
+                                while (walker.Collection < collection_key)
+                                {
+                                    walker.CollectionBreak();
+                                }
+                                var collection = series.Collection[collection_key];
+                                foreach (var volume_key in collection.Volume.Keys)
+                                {
+                                    while (walker.Volume < volume_key)
+                                    {
+                                        walker.VolumeBreak();
+                                    }
+                                    var volume = collection.Volume[volume_key];
+                                    foreach (var book_key in volume.Book.Keys)
+                                    {
+                                        while (walker.Book < book_key)
+                                        {
+                                            walker.BookBreak();
+                                        }
+                                        var book = volume.Book[book_key];
+                                        foreach (var chapter_key in book.Chapter.Keys)
+                                        {
+                                            while (walker.Chapter < chapter_key)
+                                            {
+                                                walker.ChapterBreak();
+                                            }
+                                            var chapter = book.Chapter[chapter_key];
+                                            foreach (var section_key in chapter.Section.Keys)
+                                            {
+                                                while (walker.Section < section_key)
+                                                {
+                                                    walker.SectionBreak();
+                                                }
+                                                var section = chapter.Section[section_key];
+                                                foreach (var scroll_key in section.Scroll.Keys)
+                                                {
+                                                    while (walker.Scroll < scroll_key)
+                                                    {
+                                                        walker.ScrollBreak();
+                                                    }
+                                                    var scroll = section.Scroll[scroll_key];                                                    
+                                                    if (scroll.Text.Length == 0)
+                                                    {
+                                                        continue;
+                                                    }
+                                                    _hasher.Reset();
+                                                    _hasher.Append(Encoding.UTF8.GetBytes(scroll.Text));
+
+                                                    result += walker.ToString() + ": ";
+                                                    result += _hasher.GetCurrentHashAsUInt128().ToString("x32");
+                                                    result += "\n";
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                return result;
+            }
+        }
         public int ByteCount {
             get
             {
@@ -26185,6 +26367,7 @@ namespace PhextNotepad
 
 using System.Reflection;
 using System.Runtime.InteropServices;
+using System.Security.Policy;
 using System.Windows.Forms;
 
 namespace PhextNotepad
@@ -26193,6 +26376,8 @@ namespace PhextNotepad
     {
         private static readonly string PHEXT_FILTER = "Phext (*.phext)|*.phext|All files (*.*)|*.*";
         private PhextModel _model = new();
+        private static readonly HttpClient _http = new HttpClient();
+        private bool _syncing = false;
 
         // Vim Integration
         [DllImport("USER32.DLL")]
@@ -26258,9 +26443,9 @@ namespace PhextNotepad
             }
             MessageBox.Show($@"Phext Notepad
 
-A reference editor for multi-dimensional text.
+A reference editor for Plain Hypertext.
 
-Use F2 - F11 to access additional dimensions.
+Contact me (Will Bickford) at x.com/wbic16 for more info!
 ", $"Phext Notepad {version.Major}.{version.Minor}.{version.Build}");
         }
 
@@ -26325,9 +26510,13 @@ Use F2 - F11 to access additional dimensions.
             textBox.SuspendLayout();
             _checkout = new Coordinates(_model.Coords);
             textBox.Text = _model.Phext.getScroll();
-            _model.Phext.Coords.Line = 1;
-            _priorLine = 1;
-            _priorColumn = 1;
+            String[] test = textBox.Text.Split("\n");
+            if (test.Count() < _model.Phext.Coords.Line)
+            {
+                _model.Phext.Coords.Line = 1;
+                _priorLine = 1;
+                _priorColumn = 1;
+            }
             phextCoordinate.Enabled = true;
             coordinateLabel.Enabled = true;
             UpdateUI($"Loaded {_settings.Filename}");
@@ -26460,12 +26649,25 @@ Use F2 - F11 to access additional dimensions.
             return num.ToString("#,0");
         }
 
-        private void LoadData(string data, bool resetView)
+        private async void LoadData(string data, bool resetView, bool resetPhext = true)
         {
             treeView.SuspendLayout();
             treeView.BeginUpdate();
-            treeView.Nodes.Clear();
-            _model.Load(data, _settings.ShowCoordinates, treeView);
+            if (resetPhext)
+            {
+                treeView.Nodes.Clear();
+            }
+            _model.Load(data, _settings.ShowCoordinates, treeView, resetPhext);
+            if (_model.PendingScrolls.Count() > 0 && _syncing)
+            {
+                var list = _model.PendingScrolls.ToList();
+                foreach (var (key, value) in list)
+                {
+                    string syncKey = new(key.ToString());
+                    string syncValue = new(value);
+                    await pushScroll(syncKey, syncValue);
+                }
+            }
             treeView.ExpandAll();
             treeView.EndUpdate();
             treeView.ResumeLayout();
@@ -26588,6 +26790,17 @@ Use F2 - F11 to access additional dimensions.
         private void textBox_KeyUp(object sender, KeyEventArgs e)
         {
             Coordinates delta = new();
+            delta.Library = 0;
+            delta.Shelf = 0;
+            delta.Series = 0;
+            delta.Collection = 0;
+            delta.Volume = 0;
+            delta.Book = 0;
+            delta.Chapter = 0;
+            delta.Section = 0;
+            delta.Scroll = 0;
+            delta.Line = 0;
+            delta.Column = 0;
 
             HandleHotkeys(sender, e);
             if (e.Handled)
@@ -26820,7 +27033,7 @@ Use F2 - F11 to access additional dimensions.
         private void jumpButton_Click(object sender, EventArgs e)
         {
             collectScroll();
-            
+
             var next = GetPhextCoordinate();
             if (!next.Intermediate)
             {
@@ -27220,6 +27433,114 @@ Use F2 - F11 to access additional dimensions.
                 jumpButton_Click(sender, e);
             }
         }
+
+        private string computePhextHierarchicalChecksum()
+        {
+            return _model.getHierarchicalChecksum();
+        }
+        private string composeRemoteUrl(string action, string coordinate, string content = "")
+        {
+            // http://127.0.0.1:1337/api/v2/select?p=choose-your-own-adventure&c=1.1.1/1.1.1/1.1.2
+            // http://127.0.0.1:1337/api/v2/update?p=choose-your-own-adventure&c=1.1.1/1.1.1/1.1.2&s=content
+            var endpoint = sqHost.Text;            
+            var phext = Uri.EscapeDataString(sqPhext.Text);
+            var url = $"{endpoint}/{action}?p={phext}&c={coordinate}";
+            if (content.Length > 0)
+            {
+                url += $"&s={Uri.EscapeDataString(content)}";
+            }
+            return url;
+        }
+
+        private async void pullButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var coordinate = phextCoordinate.Text;
+                var url = composeRemoteUrl("select", coordinate);
+                if (url != null && url.Length > 0)
+                {
+                    UpdateUI("Pulling...");
+                    var content = await _http.GetStringAsync(url);
+                    textBox.Text = content;
+                    SyncEditorState();
+                    UpdateUI("Pull OK");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error pulling from remote: {ex.Message}", "Pull Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                UpdateUI("Pull Failure");
+            }
+        }
+
+        private async void pushButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                UpdateUI("Pushing...");
+                var coordinate = phextCoordinate.Text;
+                var worked = await pushScroll(coordinate, textBox.Text);
+                if (worked)
+                {
+                    UpdateUI("Push OK");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error pushing to remote: {ex.Message}", "Push Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                UpdateUI("Push Failure");
+            }
+        }
+
+        private async Task<bool> pushScroll(string coordinate, string scroll)
+        {
+            try
+            {
+                var url = composeRemoteUrl("update", coordinate);
+                if (url != null && url.Length > 0)
+                {
+                    var content = new StringContent(scroll, System.Text.Encoding.UTF8, "application/phext");
+                    var ignored = await _http.PostAsync(url, content);
+                    return true;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error pushing to remote: {ex.Message}", "Push Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }        
+
+            return false;
+        }
+
+        private async void syncButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var hash = computePhextHierarchicalChecksum();
+                var coordinate = phextCoordinate.Text;
+                var url = composeRemoteUrl("delta", coordinate);
+                if (url != null && url.Length > 0)
+                {
+                    UpdateUI("Syncing...");
+                    _syncing = true;
+                    var content = new StringContent(hash, System.Text.Encoding.UTF8, "application/phext");
+                    var handle = await _http.PostAsync(url, content);
+                    var response = await handle.Content.ReadAsStringAsync();
+                    LoadData(response, true, false);
+                    _syncing = false;
+
+                    // Hack to re-render the treeView
+                    SaveCurrentFile(false, true);
+                    UpdateUI("Sync OK");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error pulling from remote: {ex.Message}", "Pull Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                UpdateUI("Sync Failure");
+            }
+        }
     }
 }PhextForm.Designer.cs
 
@@ -27281,10 +27602,16 @@ namespace PhextNotepad
             phextCoordinate = new TextBox();
             status = new Label();
             flowLayoutPanel = new FlowLayoutPanel();
-            button1 = new Button();
             wordCountLabel = new Label();
+            jumpButton = new Button();
+            label1 = new Label();
+            sqHost = new TextBox();
+            loadButton = new Button();
+            pushButton = new Button();
+            sqPhext = new TextBox();
             treeView = new TreeView();
             panel1 = new Panel();
+            syncButton = new Button();
             menuStrip.SuspendLayout();
             flowLayoutPanel.SuspendLayout();
             panel1.SuspendLayout();
@@ -27297,12 +27624,13 @@ namespace PhextNotepad
             textBox.BackColor = Color.Black;
             textBox.BorderStyle = BorderStyle.FixedSingle;
             textBox.Cursor = Cursors.IBeam;
-            textBox.Font = new Font("Cascadia Code", 11F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox.Font = new Font("Cascadia Code", 11F);
             textBox.ForeColor = Color.WhiteSmoke;
-            textBox.Location = new Point(459, 5);
+            textBox.Location = new Point(852, 11);
+            textBox.Margin = new Padding(6);
             textBox.MaxLength = 100000000;
             textBox.Name = "textBox";
-            textBox.Size = new Size(960, 547);
+            textBox.Size = new Size(1700, 1150);
             textBox.TabIndex = 0;
             textBox.Text = "";
             textBox.SelectionChanged += textBox_SelectionChanged;
@@ -27315,21 +27643,24 @@ namespace PhextNotepad
             coordinateLabel.Anchor = AnchorStyles.Bottom;
             coordinateLabel.CausesValidation = false;
             coordinateLabel.Enabled = false;
-            coordinateLabel.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            coordinateLabel.Location = new Point(3, 3);
+            coordinateLabel.Font = new Font("Segoe UI", 14.25F);
+            coordinateLabel.Location = new Point(15, 1170);
+            coordinateLabel.Margin = new Padding(6, 0, 6, 0);
             coordinateLabel.Name = "coordinateLabel";
-            coordinateLabel.Size = new Size(114, 36);
+            coordinateLabel.Size = new Size(217, 63);
             coordinateLabel.TabIndex = 2;
             coordinateLabel.Text = "Coordinate:";
-            coordinateLabel.TextAlign = ContentAlignment.MiddleRight;
+            coordinateLabel.TextAlign = ContentAlignment.BottomCenter;
             // 
             // menuStrip
             // 
             menuStrip.BackColor = Color.DeepSkyBlue;
+            menuStrip.ImageScalingSize = new Size(32, 32);
             menuStrip.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem, editToolStripMenuItem, viewToolStripMenuItem, helpToolStripMenuItem });
             menuStrip.Location = new Point(0, 0);
             menuStrip.Name = "menuStrip";
-            menuStrip.Size = new Size(1384, 24);
+            menuStrip.Padding = new Padding(11, 4, 0, 4);
+            menuStrip.Size = new Size(2564, 44);
             menuStrip.TabIndex = 3;
             menuStrip.Text = "menuStrip1";
             // 
@@ -27339,7 +27670,7 @@ namespace PhextNotepad
             fileToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { closeToolStripMenuItem, openToolStripMenuItem, reloadMenuItem, toolStripSeparator4, saveToolStripMenuItem, saveAsToolStripMenuItem, toolStripSeparator2, recentToolStripMenuItem, toolStripSeparator1, exitToolStripMenuItem });
             fileToolStripMenuItem.ForeColor = SystemColors.ControlText;
             fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            fileToolStripMenuItem.Size = new Size(37, 20);
+            fileToolStripMenuItem.Size = new Size(71, 36);
             fileToolStripMenuItem.Text = "&File";
             // 
             // closeToolStripMenuItem
@@ -27347,7 +27678,7 @@ namespace PhextNotepad
             closeToolStripMenuItem.BackColor = SystemColors.Menu;
             closeToolStripMenuItem.ForeColor = SystemColors.ControlText;
             closeToolStripMenuItem.Name = "closeToolStripMenuItem";
-            closeToolStripMenuItem.Size = new Size(123, 22);
+            closeToolStripMenuItem.Size = new Size(244, 44);
             closeToolStripMenuItem.Text = "&New";
             closeToolStripMenuItem.Click += newToolStripMenuItem_Click;
             // 
@@ -27356,7 +27687,7 @@ namespace PhextNotepad
             openToolStripMenuItem.BackColor = SystemColors.Menu;
             openToolStripMenuItem.ForeColor = SystemColors.ControlText;
             openToolStripMenuItem.Name = "openToolStripMenuItem";
-            openToolStripMenuItem.Size = new Size(123, 22);
+            openToolStripMenuItem.Size = new Size(244, 44);
             openToolStripMenuItem.Text = "&Open...";
             openToolStripMenuItem.Click += openToolStripMenuItem_Click;
             // 
@@ -27364,21 +27695,21 @@ namespace PhextNotepad
             // 
             reloadMenuItem.Enabled = false;
             reloadMenuItem.Name = "reloadMenuItem";
-            reloadMenuItem.Size = new Size(123, 22);
+            reloadMenuItem.Size = new Size(244, 44);
             reloadMenuItem.Text = "Re&load";
             reloadMenuItem.Click += reloadMenuItem_Click;
             // 
             // toolStripSeparator4
             // 
             toolStripSeparator4.Name = "toolStripSeparator4";
-            toolStripSeparator4.Size = new Size(120, 6);
+            toolStripSeparator4.Size = new Size(241, 6);
             // 
             // saveToolStripMenuItem
             // 
             saveToolStripMenuItem.BackColor = SystemColors.Menu;
             saveToolStripMenuItem.ForeColor = SystemColors.ControlText;
             saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            saveToolStripMenuItem.Size = new Size(123, 22);
+            saveToolStripMenuItem.Size = new Size(244, 44);
             saveToolStripMenuItem.Text = "&Save";
             saveToolStripMenuItem.Click += saveToolStripMenuItem_Click;
             // 
@@ -27387,7 +27718,7 @@ namespace PhextNotepad
             saveAsToolStripMenuItem.BackColor = SystemColors.Menu;
             saveAsToolStripMenuItem.ForeColor = SystemColors.ControlText;
             saveAsToolStripMenuItem.Name = "saveAsToolStripMenuItem";
-            saveAsToolStripMenuItem.Size = new Size(123, 22);
+            saveAsToolStripMenuItem.Size = new Size(244, 44);
             saveAsToolStripMenuItem.Text = "Save &As...";
             saveAsToolStripMenuItem.Click += saveAsToolStripMenuItem_Click;
             // 
@@ -27396,14 +27727,14 @@ namespace PhextNotepad
             toolStripSeparator2.BackColor = Color.Black;
             toolStripSeparator2.ForeColor = Color.Black;
             toolStripSeparator2.Name = "toolStripSeparator2";
-            toolStripSeparator2.Size = new Size(120, 6);
+            toolStripSeparator2.Size = new Size(241, 6);
             // 
             // recentToolStripMenuItem
             // 
             recentToolStripMenuItem.BackColor = SystemColors.Menu;
             recentToolStripMenuItem.ForeColor = SystemColors.ControlText;
             recentToolStripMenuItem.Name = "recentToolStripMenuItem";
-            recentToolStripMenuItem.Size = new Size(123, 22);
+            recentToolStripMenuItem.Size = new Size(244, 44);
             recentToolStripMenuItem.Text = "&Recent";
             // 
             // toolStripSeparator1
@@ -27411,14 +27742,14 @@ namespace PhextNotepad
             toolStripSeparator1.BackColor = Color.Black;
             toolStripSeparator1.ForeColor = Color.Black;
             toolStripSeparator1.Name = "toolStripSeparator1";
-            toolStripSeparator1.Size = new Size(120, 6);
+            toolStripSeparator1.Size = new Size(241, 6);
             // 
             // exitToolStripMenuItem
             // 
             exitToolStripMenuItem.BackColor = SystemColors.Menu;
             exitToolStripMenuItem.ForeColor = SystemColors.ControlText;
             exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            exitToolStripMenuItem.Size = new Size(123, 22);
+            exitToolStripMenuItem.Size = new Size(244, 44);
             exitToolStripMenuItem.Text = "E&xit";
             exitToolStripMenuItem.Click += exitToolStripMenuItem_Click;
             // 
@@ -27427,18 +27758,18 @@ namespace PhextNotepad
             editToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { toolStripSeparator3, preferencesToolStripMenuItem });
             editToolStripMenuItem.ForeColor = SystemColors.ControlText;
             editToolStripMenuItem.Name = "editToolStripMenuItem";
-            editToolStripMenuItem.Size = new Size(39, 20);
+            editToolStripMenuItem.Size = new Size(74, 36);
             editToolStripMenuItem.Text = "&Edit";
             // 
             // toolStripSeparator3
             // 
             toolStripSeparator3.Name = "toolStripSeparator3";
-            toolStripSeparator3.Size = new Size(141, 6);
+            toolStripSeparator3.Size = new Size(283, 6);
             // 
             // preferencesToolStripMenuItem
             // 
             preferencesToolStripMenuItem.Name = "preferencesToolStripMenuItem";
-            preferencesToolStripMenuItem.Size = new Size(144, 22);
+            preferencesToolStripMenuItem.Size = new Size(286, 44);
             preferencesToolStripMenuItem.Text = "&Preferences...";
             preferencesToolStripMenuItem.Click += preferencesToolStripMenuItem_Click;
             // 
@@ -27447,14 +27778,14 @@ namespace PhextNotepad
             viewToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { lockToScrollMenuItem, wordWrapToolStripMenuItem, darkModeMenuItem, showCoordinatesToolStripMenuItem });
             viewToolStripMenuItem.ForeColor = SystemColors.ControlText;
             viewToolStripMenuItem.Name = "viewToolStripMenuItem";
-            viewToolStripMenuItem.Size = new Size(44, 20);
+            viewToolStripMenuItem.Size = new Size(85, 36);
             viewToolStripMenuItem.Text = "&View";
             // 
             // lockToScrollMenuItem
             // 
             lockToScrollMenuItem.CheckOnClick = true;
             lockToScrollMenuItem.Name = "lockToScrollMenuItem";
-            lockToScrollMenuItem.Size = new Size(170, 22);
+            lockToScrollMenuItem.Size = new Size(340, 44);
             lockToScrollMenuItem.Text = "&Lock to Scroll";
             lockToScrollMenuItem.CheckedChanged += lockToScrollMenuItem_CheckedChanged;
             // 
@@ -27464,7 +27795,7 @@ namespace PhextNotepad
             wordWrapToolStripMenuItem.CheckOnClick = true;
             wordWrapToolStripMenuItem.CheckState = CheckState.Checked;
             wordWrapToolStripMenuItem.Name = "wordWrapToolStripMenuItem";
-            wordWrapToolStripMenuItem.Size = new Size(170, 22);
+            wordWrapToolStripMenuItem.Size = new Size(340, 44);
             wordWrapToolStripMenuItem.Text = "&Word Wrap";
             wordWrapToolStripMenuItem.Click += wordWrapToolStripMenuItem_Click;
             // 
@@ -27474,7 +27805,7 @@ namespace PhextNotepad
             darkModeMenuItem.CheckOnClick = true;
             darkModeMenuItem.CheckState = CheckState.Checked;
             darkModeMenuItem.Name = "darkModeMenuItem";
-            darkModeMenuItem.Size = new Size(170, 22);
+            darkModeMenuItem.Size = new Size(340, 44);
             darkModeMenuItem.Text = "Dark &Mode";
             darkModeMenuItem.Click += darkModeMenuItem_Click;
             // 
@@ -27484,7 +27815,7 @@ namespace PhextNotepad
             showCoordinatesToolStripMenuItem.CheckOnClick = true;
             showCoordinatesToolStripMenuItem.CheckState = CheckState.Checked;
             showCoordinatesToolStripMenuItem.Name = "showCoordinatesToolStripMenuItem";
-            showCoordinatesToolStripMenuItem.Size = new Size(170, 22);
+            showCoordinatesToolStripMenuItem.Size = new Size(340, 44);
             showCoordinatesToolStripMenuItem.Text = "&Show Coordinates";
             showCoordinatesToolStripMenuItem.CheckedChanged += showCoordinatesToolStripMenuItem_CheckedChanged;
             // 
@@ -27493,20 +27824,20 @@ namespace PhextNotepad
             helpToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { defaultPhextToolStripMenuItem, aboutToolStripMenuItem });
             helpToolStripMenuItem.ForeColor = SystemColors.ControlText;
             helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            helpToolStripMenuItem.Size = new Size(44, 20);
+            helpToolStripMenuItem.Size = new Size(84, 36);
             helpToolStripMenuItem.Text = "&Help";
             // 
             // defaultPhextToolStripMenuItem
             // 
             defaultPhextToolStripMenuItem.Name = "defaultPhextToolStripMenuItem";
-            defaultPhextToolStripMenuItem.Size = new Size(122, 22);
+            defaultPhextToolStripMenuItem.Size = new Size(243, 44);
             defaultPhextToolStripMenuItem.Text = "&Contents";
             defaultPhextToolStripMenuItem.Click += defaultPhextToolStripMenuItem_Click;
             // 
             // aboutToolStripMenuItem
             // 
             aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            aboutToolStripMenuItem.Size = new Size(122, 22);
+            aboutToolStripMenuItem.Size = new Size(243, 44);
             aboutToolStripMenuItem.Text = "&About";
             aboutToolStripMenuItem.Click += aboutToolStripMenuItem_Click;
             // 
@@ -27514,11 +27845,12 @@ namespace PhextNotepad
             // 
             phextCoordinate.Anchor = AnchorStyles.Bottom;
             phextCoordinate.Enabled = false;
-            phextCoordinate.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            phextCoordinate.Location = new Point(123, 3);
+            phextCoordinate.Font = new Font("Segoe UI", 14.25F);
+            phextCoordinate.Location = new Point(244, 1175);
+            phextCoordinate.Margin = new Padding(6);
             phextCoordinate.MaxLength = 64;
             phextCoordinate.Name = "phextCoordinate";
-            phextCoordinate.Size = new Size(265, 33);
+            phextCoordinate.Size = new Size(469, 58);
             phextCoordinate.TabIndex = 1;
             phextCoordinate.TextChanged += phextCoordinate_TextChanged;
             // 
@@ -27527,51 +27859,120 @@ namespace PhextNotepad
             status.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             status.BorderStyle = BorderStyle.FixedSingle;
             status.CausesValidation = false;
-            status.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
-            status.Location = new Point(475, 6);
+            status.Font = new Font("Segoe UI", 11F);
+            status.Location = new Point(6, 0);
+            status.Margin = new Padding(6, 0, 6, 0);
             status.Name = "status";
-            status.Size = new Size(896, 27);
+            status.Size = new Size(1662, 55);
             status.TabIndex = 2;
             status.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // flowLayoutPanel
             // 
-            flowLayoutPanel.Controls.Add(coordinateLabel);
-            flowLayoutPanel.Controls.Add(phextCoordinate);
-            flowLayoutPanel.Controls.Add(button1);
             flowLayoutPanel.Controls.Add(status);
             flowLayoutPanel.Controls.Add(wordCountLabel);
             flowLayoutPanel.Dock = DockStyle.Bottom;
-            flowLayoutPanel.Location = new Point(0, 576);
-            flowLayoutPanel.MaximumSize = new Size(1400, 65);
-            flowLayoutPanel.MinimumSize = new Size(925, 65);
+            flowLayoutPanel.Location = new Point(0, 1290);
+            flowLayoutPanel.Margin = new Padding(6);
+            flowLayoutPanel.MaximumSize = new Size(2600, 139);
+            flowLayoutPanel.MinimumSize = new Size(1718, 139);
             flowLayoutPanel.Name = "flowLayoutPanel";
-            flowLayoutPanel.Size = new Size(1384, 65);
+            flowLayoutPanel.Size = new Size(2564, 139);
             flowLayoutPanel.TabIndex = 11;
-            // 
-            // button1
-            // 
-            button1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            button1.ForeColor = Color.Black;
-            button1.Location = new Point(394, 3);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 33);
-            button1.TabIndex = 4;
-            button1.Text = "Jump";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += jumpButton_Click;
             // 
             // wordCountLabel
             // 
             wordCountLabel.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             wordCountLabel.BorderStyle = BorderStyle.FixedSingle;
             wordCountLabel.CausesValidation = false;
-            wordCountLabel.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
-            wordCountLabel.Location = new Point(3, 39);
+            wordCountLabel.Font = new Font("Segoe UI", 11F);
+            wordCountLabel.Location = new Point(6, 55);
+            wordCountLabel.Margin = new Padding(6, 0, 6, 0);
             wordCountLabel.Name = "wordCountLabel";
-            wordCountLabel.Size = new Size(1368, 23);
+            wordCountLabel.Size = new Size(2539, 47);
             wordCountLabel.TabIndex = 3;
             wordCountLabel.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // jumpButton
+            // 
+            jumpButton.Anchor = AnchorStyles.Bottom;
+            jumpButton.Font = new Font("Segoe UI", 12F);
+            jumpButton.ForeColor = Color.Black;
+            jumpButton.Location = new Point(725, 1175);
+            jumpButton.Margin = new Padding(6);
+            jumpButton.Name = "jumpButton";
+            jumpButton.Size = new Size(115, 58);
+            jumpButton.TabIndex = 4;
+            jumpButton.Text = "Jump";
+            jumpButton.UseVisualStyleBackColor = true;
+            jumpButton.Click += jumpButton_Click;
+            // 
+            // label1
+            // 
+            label1.Anchor = AnchorStyles.Bottom;
+            label1.CausesValidation = false;
+            label1.Enabled = false;
+            label1.Font = new Font("Segoe UI", 14.25F);
+            label1.Location = new Point(852, 1169);
+            label1.Margin = new Padding(6, 0, 6, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(181, 63);
+            label1.TabIndex = 2;
+            label1.Text = "SQ Host:";
+            label1.TextAlign = ContentAlignment.BottomCenter;
+            // 
+            // sqHost
+            // 
+            sqHost.Anchor = AnchorStyles.Bottom;
+            sqHost.Font = new Font("Segoe UI", 14.25F);
+            sqHost.Location = new Point(1045, 1170);
+            sqHost.Margin = new Padding(6);
+            sqHost.MaxLength = 64;
+            sqHost.Name = "sqHost";
+            sqHost.Size = new Size(691, 58);
+            sqHost.TabIndex = 1;
+            sqHost.Text = "http://127.0.0.1:1337/api/v2";
+            // 
+            // loadButton
+            // 
+            loadButton.Anchor = AnchorStyles.Bottom;
+            loadButton.Font = new Font("Segoe UI", 12F);
+            loadButton.ForeColor = Color.Black;
+            loadButton.Location = new Point(2110, 1171);
+            loadButton.Margin = new Padding(6);
+            loadButton.Name = "loadButton";
+            loadButton.Size = new Size(139, 58);
+            loadButton.TabIndex = 4;
+            loadButton.Text = "Pull";
+            loadButton.UseVisualStyleBackColor = true;
+            loadButton.Click += pullButton_Click;
+            // 
+            // pushButton
+            // 
+            pushButton.Anchor = AnchorStyles.Bottom;
+            pushButton.Font = new Font("Segoe UI", 12F);
+            pushButton.ForeColor = Color.Black;
+            pushButton.Location = new Point(2261, 1171);
+            pushButton.Margin = new Padding(6);
+            pushButton.Name = "pushButton";
+            pushButton.Size = new Size(139, 58);
+            pushButton.TabIndex = 4;
+            pushButton.Text = "Push";
+            pushButton.UseVisualStyleBackColor = true;
+            pushButton.Click += pushButton_Click;
+            // 
+            // sqPhext
+            // 
+            sqPhext.Anchor = AnchorStyles.Bottom;
+            sqPhext.Font = new Font("Segoe UI", 14.25F);
+            sqPhext.Location = new Point(1748, 1170);
+            sqPhext.Margin = new Padding(6);
+            sqPhext.MaxLength = 64;
+            sqPhext.Name = "sqPhext";
+            sqPhext.Size = new Size(350, 58);
+            sqPhext.TabIndex = 1;
+            sqPhext.Text = "index";
+            sqPhext.TextChanged += phextCoordinate_TextChanged;
             // 
             // treeView
             // 
@@ -27580,10 +27981,11 @@ namespace PhextNotepad
             treeView.BorderStyle = BorderStyle.FixedSingle;
             treeView.ForeColor = Color.White;
             treeView.HideSelection = false;
-            treeView.Location = new Point(3, 5);
+            treeView.Location = new Point(6, 11);
+            treeView.Margin = new Padding(6);
             treeView.Name = "treeView";
             treeView.PathSeparator = "/";
-            treeView.Size = new Size(450, 541);
+            treeView.Size = new Size(834, 1150);
             treeView.TabIndex = 29;
             treeView.AfterSelect += treeView_AfterSelect;
             treeView.DoubleClick += treeView_DoubleClick;
@@ -27591,26 +27993,51 @@ namespace PhextNotepad
             // 
             // panel1
             // 
+            panel1.Controls.Add(jumpButton);
+            panel1.Controls.Add(sqPhext);
+            panel1.Controls.Add(loadButton);
+            panel1.Controls.Add(sqHost);
+            panel1.Controls.Add(label1);
+            panel1.Controls.Add(phextCoordinate);
+            panel1.Controls.Add(coordinateLabel);
             panel1.Controls.Add(textBox);
+            panel1.Controls.Add(syncButton);
+            panel1.Controls.Add(pushButton);
             panel1.Controls.Add(treeView);
             panel1.Dock = DockStyle.Fill;
-            panel1.Location = new Point(0, 24);
+            panel1.Location = new Point(0, 44);
+            panel1.Margin = new Padding(6);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1384, 552);
+            panel1.Size = new Size(2564, 1246);
             panel1.TabIndex = 30;
+            // 
+            // syncButton
+            // 
+            syncButton.Anchor = AnchorStyles.Bottom;
+            syncButton.Font = new Font("Segoe UI", 12F);
+            syncButton.ForeColor = Color.Black;
+            syncButton.Location = new Point(2410, 1171);
+            syncButton.Margin = new Padding(6);
+            syncButton.Name = "syncButton";
+            syncButton.Size = new Size(139, 58);
+            syncButton.TabIndex = 4;
+            syncButton.Text = "Sync";
+            syncButton.UseVisualStyleBackColor = true;
+            syncButton.Click += syncButton_Click;
             // 
             // PhextForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlDark;
-            ClientSize = new Size(1384, 641);
+            ClientSize = new Size(2564, 1429);
             Controls.Add(panel1);
             Controls.Add(flowLayoutPanel);
             Controls.Add(menuStrip);
             ForeColor = Color.White;
             MainMenuStrip = menuStrip;
-            MinimumSize = new Size(850, 400);
+            Margin = new Padding(6);
+            MinimumSize = new Size(1556, 773);
             Name = "PhextForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Phext Notepad";
@@ -27618,8 +28045,8 @@ namespace PhextNotepad
             menuStrip.ResumeLayout(false);
             menuStrip.PerformLayout();
             flowLayoutPanel.ResumeLayout(false);
-            flowLayoutPanel.PerformLayout();
             panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -27657,7 +28084,13 @@ namespace PhextNotepad
         private ToolStripMenuItem reloadMenuItem;
         private ToolStripSeparator toolStripSeparator4;
         private Label wordCountLabel;
-        private Button button1;
+        private Button jumpButton;
+        private Label label1;
+        private TextBox sqHost;
+        private Button loadButton;
+        private Button pushButton;
+        private TextBox sqPhext;
+        private Button syncButton;
     }
 }PhextForm.resx
 
