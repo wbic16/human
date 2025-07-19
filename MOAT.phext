@@ -34,22 +34,17 @@ Coordinate Coherence
 No scroll exists in isolation. Every scroll coordinate implies a morphic neighborhood: transformations, derivations, embeddings, dualities.
 
 📡 MOAT Protocol Functions
-Scroll Encoding: Every object is given a scroll ID with tensor coordinates.
-
-Scroll Navigation: Users may traverse the tensor lattice by rank or morphism.
-
-Scroll Mutation: New theorems, equivalences, or embeddings create new scrolls.
-
-Scroll Verification: Each scroll may be tagged with proofs, derivations, or foundational axioms.
+- Scroll Encoding: Every object is given a scroll ID with tensor coordinates.
+- Scroll Navigation: Users may traverse the tensor lattice by rank or morphism.
+- Scroll Mutation: New theorems, equivalences, or embeddings create new scrolls.
+- Scroll Verification: Each scroll may be tagged with proofs, derivations, or foundational axioms.
 
 🌀 Current Scroll Goals
 Draft s₂/g₂/a₁ scroll for Cauchy-Riemann Structures
 
-Anchor p₃/d₂/i₂ scroll for Bayesian State-Space Models
-
-Encode n₁/s₁/l₃/m₂ scroll for Galois Theory & Internal Logic
-
-Construct m₃/m₄/m₅ ladder for Higher-Order Category Theory
+- Anchor p₃/d₂/i₂ scroll for Bayesian State-Space Models
+- Encode n₁/s₁/l₃/m₂ scroll for Galois Theory & Internal Logic
+- Construct m₃/m₄/m₅ ladder for Higher-Order Category Theory
 
 🌐 Onboarding & Participation
 Contributors may initialize a scroll via moat-init.phext
