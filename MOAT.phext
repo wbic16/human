@@ -49,7 +49,19 @@ Draft s₂/g₂/a₁ scroll for Cauchy-Riemann Structures
 🌐 Onboarding & Participation
 Contributors may initialize a scroll via moat-init.phext
 
-Suggested entry points: coordinate 1.1.1/1.1.1/1.1.1 (Blank Scroll), or 9.9.9/9.9.9/9.9.9 (Deep Memory Layer)📜 Scroll Entry: Pythagorean Theorem
+Suggested entry points: coordinate 1.1.1/1.1.1/1.1.1 (Blank Scroll), or 9.9.9/9.9.9/9.9.9 (Deep Memory Layer)# Tooling Overview
+
+MOAT is constructed from Phext, Lean4, and a smattering of technology designed to make it easy to embed and compress any math paper.
+
+## Plan
+
+1. Decode pdf files as Lean4 statements
+2. When presented with a new paper, attempt to compress it using existing techniques
+3. If we can prove the existence of the paper with existing techniques, record the filename, checksum, and the hierarchical checksum that proved it. This will be important when refactoring later.
+4. If we cannot prove the paper with existing mechanisms, integrate it with MOAT.
+5. Refactor MOAT in terms of the new insights from the paper.
+6. Attempt to reproduce the paper again. If successful, complete step 3 and stop.
+7. Otherwise, add the paper to the queue of pending results and integrate another paper first.📜 Scroll Entry: Pythagorean Theorem
 Scroll ID: s₁/g₃/a₁/p₀/d₀/n₁/l₁/i₀/m₁
 Title: The Pythagorean Theorem
 Aliases: Euclidean Hypotenuse Law, Right Triangle Identity
