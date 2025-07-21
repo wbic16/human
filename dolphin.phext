@@ -26993,7 +26993,16 @@ retweets: 0
 in_reply_to_id: 1935742543918215663
 in_reply_to_user: parafactual
 
-@parafactual ownedid: 1890523101403726016
+@parafactual ownedid: 1947406176099905859
+created_at: 2025-07-21T21:19:48Z
+url: https://x.com/cube_flipper/status/1947406176099905859
+kind: reply
+likes: 2
+retweets: 0
+in_reply_to_id: 1947404784048431134
+in_reply_to_user: nosilverv
+
+@nosilverv ownedid: 1890523101403726016
 created_at: 2025-02-14T22:06:46Z
 url: https://x.com/cube_flipper/status/1890523101403726016
 kind: thread
