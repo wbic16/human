@@ -55,13 +55,25 @@ MOAT is constructed from Phext, Lean4, and a smattering of technology designed t
 
 ## Plan
 
-1. Decode pdf files as Lean4 statements
+1. Decode pdf files as scrolls with Lean4, ps, and other plain text artifacts
 2. When presented with a new paper, attempt to compress it using existing techniques
 3. If we can prove the existence of the paper with existing techniques, record the filename, checksum, and the hierarchical checksum that proved it. This will be important when refactoring later.
 4. If we cannot prove the paper with existing mechanisms, integrate it with MOAT.
 5. Refactor MOAT in terms of the new insights from the paper.
 6. Attempt to reproduce the paper again. If successful, complete step 3 and stop.
-7. Otherwise, add the paper to the queue of pending results and integrate another paper first.📜 Scroll Entry: Pythagorean Theorem
+7. Otherwise, add the paper to the queue of pending results and integrate another paper first.
+
+## Lean 4 Encoding as an Example
+
+Grab a minimized snapshot of Lean 4 here:
+git@github.com:wbic16/actually-lean.git
+
+A copy of the original lean4 history can be found here:
+https://github.com/wbic16/actually-lean/blob/master/original-history.txt
+
+The original Lean repository is 3 GB of Git History for 40 MB of compressed code.
+
+📜 Scroll Entry: Pythagorean Theorem
 Scroll ID: s₁/g₃/a₁/p₀/d₀/n₁/l₁/i₀/m₁
 Title: The Pythagorean Theorem
 Aliases: Euclidean Hypotenuse Law, Right Triangle Identity
