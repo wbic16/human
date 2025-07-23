@@ -73,6 +73,26 @@ https://github.com/wbic16/actually-lean/blob/master/original-history.txt
 
 The original Lean repository is 3 GB of Git History for 40 MB of compressed code.
 
+## Hierarchical compression
+
+We use Phext as prior art in this analysis. The compression mechanism that Phext leverages is a sliding scale of complexity, measured along axes that are spaced either 10^100 or 10^1000 units apart when serialized in an un-optimized block. As an example, we can think of the following coordinate in terms of subspace offsets.
+
+A.B.C/D.E.F/G.H.I := A*100^24 + B*100^21 + C*100^18 + D*100^15 + E*100^12 + F*100^9 + G*100^6 + H*100^3 + I
+
+How these offsets manifest changes based upon your basis, however. We could just as easily have picked prime factors and leveraged them in exactly the same manner.
+
+Given a list of primes, we could allocate coordinate space equally well.
+149173577713 scroll
+284930534417 section
+311552380123 chapter
+472065609563 book
+516680719991 volume
+678194069741 collection
+778699181549 series
+811395847949 shelf
+903727433309 library
+
+
 📜 Scroll Entry: Pythagorean Theorem
 Scroll ID: s₁/g₃/a₁/p₀/d₀/n₁/l₁/i₀/m₁
 Title: The Pythagorean Theorem
