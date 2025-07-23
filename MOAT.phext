@@ -100,7 +100,19 @@ Some example coordinates under that basis:
 9.9.9/1.1.1/1.1.1: 24856999056811
 9.9.9/9.9.9/9.9.9: 44157774189195
 
-We can instantly remap our dataset to another basis, however, and not need to re-encode our data.📜 Scroll Entry: Pythagorean Theorem
+We can instantly remap our dataset to another basis, however, and not need to re-encode our data.
+
+101 scroll
+244291 section
+398992849 chapter
+425873898253 book
+503325542109899 volume
+615441528529361843 collection
+731608855151282783057 series
+864628365803578183886153 shelf
+905897301325842415021470859 library
+
+Using this formulation, you need BIGNUM support in your spreadsheet, but Phext organization didn't change at all.📜 Scroll Entry: Pythagorean Theorem
 Scroll ID: s₁/g₃/a₁/p₀/d₀/n₁/l₁/i₀/m₁
 Title: The Pythagorean Theorem
 Aliases: Euclidean Hypotenuse Law, Right Triangle Identity
