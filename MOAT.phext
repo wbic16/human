@@ -92,8 +92,15 @@ Given a list of primes, we could allocate coordinate space equally well.
 811395847949 shelf
 903727433309 library
 
+Some example coordinates under that basis:
+1.1.1/1.1.1/1.1.1:  4906419354355
+1.2.3/4.5.6/7.8.9: 18794063345765
+2.2.2/2.2.2/2.2.2:  9812838708710
+4.4.4/4.4.4/4.4.4: 19625677417420
+9.9.9/1.1.1/1.1.1: 24856999056811
+9.9.9/9.9.9/9.9.9: 44157774189195
 
-📜 Scroll Entry: Pythagorean Theorem
+We can instantly remap our dataset to another basis, however, and not need to re-encode our data.📜 Scroll Entry: Pythagorean Theorem
 Scroll ID: s₁/g₃/a₁/p₀/d₀/n₁/l₁/i₀/m₁
 Title: The Pythagorean Theorem
 Aliases: Euclidean Hypotenuse Law, Right Triangle Identity
