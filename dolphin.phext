@@ -580,7 +580,16 @@ retweets: 0
 in_reply_to_id: 1949114687393513481
 in_reply_to_user: davidshimel
 
-@davidshimel lazinessid: 1926221564313276542
+@davidshimel lazinessid: 1949472205974253880
+created_at: 2025-07-27T14:09:28Z
+url: https://x.com/cube_flipper/status/1949472205974253880
+kind: reply
+likes: 1
+retweets: 0
+in_reply_to_id: 1949457797432610921
+in_reply_to_user: kiwisoggy
+
+@KiwiSoggy lolid: 1926221564313276542
 created_at: 2025-05-24T10:19:43Z
 url: https://x.com/cube_flipper/status/1926221564313276542
 kind: thread
