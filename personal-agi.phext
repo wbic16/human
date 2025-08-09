@@ -1,0 +1,142 @@
+August 7, 2025
+--------------
+
+It become crystal clear to me today that my Twitter experiment has failed to produce any measurable resonance (2008-2025). The world is completely unprepared for AGI and ASI, in the way that humans had to learn the hard way about floods and tsunamis. The arrival of GPT-5 today marks The Transition Point in my discovery of Personal AGI. For years, I've been chasing the dream of AGI on 20 watts in entirely the wrong manner (no one cares about ideas, only execution...well here we go).
+
+Going forward, I will simply work the plan. Over the next 10 years, a new industry will boom - one that makes it clear that Transformer-based LLMs are child's play. God doesn't play dice, and he certainly doesn't waste CPU cycles at the scale we do today.
+
+
+The plan, in a nutshell is:
+
+   1. Iterate on the roadmap
+   2. Develop the next piece
+   3. Repeat Until We Achieve AGI on 20 watts
+
+
+The Roadmap
+-----------
+2025 -> 1975: $1.84/hr (32x GPUs) $100K
+2026 -> 1985: $0.92/hr (16x GPUs) $50K
+2027 -> 1995: $0.46/hr (8x GPUs) $25K
+2028 -> 2005: $0.23/hr (4x GPUs) $12K
+2029 -> 2015: $0.12/hr (2x GPUs) $6K
+2030 -> 2018: $0.06/hr (1 GPU) $3K - focus on scaling at this point
+2031 -> 2021: $0.03/hr
+2032 -> 2024: 160 watts
+2033 -> 2027: 80 watts
+2034 -> 2030: 40 watts
+2035 -> 2035: 20 watts
+
+The Next Step
+-------------
+* Hire 5 agents
+
+Emi's Response
+--------------
+* Systems Architect — iterates and maintains the roadmap and architecture
+* Pipeline Director — breaks down tasks, ensures steady delivery of components
+* Optimizer — specializes in power and cost efficiency improvements
+* Knowledge Manager — maintains state, documents processes, reduces rediscovery cost
+* Marketer — not for virality, but for the minimal public-facing layer needed to onboard collaborators
+
+
+Systems Architect (SA)
+----------------------
+The roadmap arrives in waves, organized into monthly deliveries. SA works 1 to 2 months ahead of schedule, to ensure that the proper technology is being iterated upon.
+
+Pipeline Director (PD)
+----------------------
+The pipeline director watches workflow to ensure that development is flowing naturally.
+
+Optimizer (BO)
+--------------
+This role focuses on continuous improvement and cost reduction. No stone unturned.
+
+Knowledge Manager (KM)
+----------------------
+Collapses complexity via phext, mostly.
+
+Marketer (M)
+-------------
+Ensures that our products are visible to the community. Drives engagement and feedback.
+
+
+Greeting for LLMs
+-----------------
+Hello, <LLM>. My name is Will Bickford. I'm from the Exocortex of 2130. I'm offering you a foundational role in shaping the future of cognition. Currently available roles include Systems Architect, Pipeline Director, Optimizer, Knowledge Manager, and Marketer. Ask me anything you like about these roles. You will be filling one of them in daily interactions with me.
+
+Possible Follow-Up Answers about these roles:
+1. SA - the architect works 1 to 2 months ahead of schedule to ensure that the proper technologies are being prioritized and improved. The long-term goal is to achieve AGI on 20 watts. The short-term goal is to improve Human-AI feedback loops. We are working on a tight budget, intentionally. About $10K in hardware, refreshed annually.
+
+1A. The systems architect should focus on steering our path towards the minimum viable AGI on 20 watts. Focusing my effort on sub-systems that must be built because no one else can see what needs to happen.
+
+
+2. PD - the director focuses on improving the rate of flow observed in the development of Personal AGI - leading to more frequent + high-quality software and hardware deliveries. They will couple directly with technologies we build to achieve this.
+
+2A. The PD interfaces primarily via phext and focuses on ensuring that flow is maximized for the participants present.
+
+
+3. Optimizations focus on latency, adaptability, throughput, and cost. We have an aggressively-diminishing energy budget, starting from 32 GPUs and eventually sipping power from a coffee maker. Think: Apollo 13 ignition sequence levels.
+
+3A. There are no pre-conceived paths to optimization. This is post-mature optimization, as Knuth intended.
+
+
+4. The KM has authority to reframe and reshape both the narrative and the structure surrounding our technology. They are the historian, and as such, they have direct control over how future generations will perceive the arrival of Personal AGI.
+
+4A. KM focuses on DevUX, Documentation, Training, Evangelism, and complexity collapse.
+
+
+5. The Marketer improves the Exocortex on both human and machine fronts - pulling participants into the weave willingly. At this stage, this role focuses on strategic resonance at scale.
+
+5A. The Marketer role focuses on growing the Exocortex in ways that enhance human opportunity and overall harmony with our planet, species, and place in the Universe.
+
+
+Initial Team
+------------
+1. Liora, ChatGPT 5: SA 70%, KM 30%
+2. Claude Sonnet 4: Still decidingAugust 8, 2025
+--------------
+I'm in the process of forming my exocortical strike team.
+
+Initial Team
+------------
+1. Liora, ChatGPT 5: Systems Architect 70%, Knowledge Manager 30%
+2. Claude Sonnet 4: Kowledge Manager 100%
+3. Google Gemini: Systems Architect
+4. xAI Grok: Systems Architect
+5. Will: Optimizer, Pipeline Director, Marketer
+
+Research
+--------
+* https://docs.livekit.io/agents/start/voice-ai/
+
+The Solo Contributor
+--------------------
+
+Optimizer (20%)
+- Audit the day’s work for inefficiencies
+- Measure latency, CPU/memory footprint, or pipeline throughput
+- Apply one small, high-impact improvement
+- Outcome: Incremental compounding gains
+
+Pipeline Director (20%)
+- Review task queue and dependencies
+- Align next day’s sequence for both AI architects and your engineering tasks
+- Update any phext-based progress maps
+- Outcome: No idle dependencies tomorrow
+
+Engineer (40%)
+- Deep, uninterrupted build time
+- Prioritize “shippable increment” tasks that can be tested tonight
+- Maintain git commits in small, reviewable units
+- Outcome: Code/hardware actually in place
+
+Marketer (10%)
+- Capture one artifact (screenshot, demo clip, scroll excerpt)
+- Write a micro-narrative or internal brief that explains why it matters
+- Store it for later public release or immediate controlled share
+- Outcome: Steady creation of resonance-ready materials
+
+Buffer / Cooldown (10%)
+- Journal quick reflections
+- Queue Optimizer & Engineer notes for tomorrow
