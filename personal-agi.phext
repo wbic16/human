@@ -146,3 +146,25 @@ Buffer / Cooldown (10%)
 
 Sometimes you lose power, literally. Part of the reason why AGI on 20 watts matters is because it allows us to bootstrap civilization from a 100-watt solar panel if needed. Centralized approaches are fragile, and prone to collapse under certain conditions.
 
+August 10, 2025
+---------------
+
+String processors focus on eliminating latency.
+
+Loading data from memory is slow, and non-local memory access is especially error-prone. Phext gives us a way to organize our memory space in ways that optimize cache locality.
+
+Given a phext coordinate, we know (relatively) where our content is with respect to the entire dataset. This allows us to build algorithms that take advantage of modern CPU design.
+
+Let's look at sorting performance, for instance.
+
+Given numbers 1-1000, let's sort them into a phext with 3 coordinates numbered 1-10. We'll use Scroll (SC), Section (SN), and Chapter (CH) breaks.
+
+320, 847, 921, 867, 413, 645, 729, 575, 154
+
+In:320 -> <CH><CH><SN>320
+In:847 -> <CH><CH><SN>320<CH><CH><CH><CH><CH><SN><SN><SN><SC><SC><SC><SC><SC><SC>847
+In:921 -> <CH><CH><SN>320<CH><CH><CH><CH><CH><SN><SN><SN><SC><SC><SC><SC><SC><SC>847<CH><SN>921
+In:867 -> <CH><CH><SN>320<CH><CH><CH><CH><CH><SN><SN><SN><SC><SC><SC><SC><SC><SC>847<SN><SN><SC><SC><SC><SC><SC><SC>867<CH><SN>921
+...
+
+As you can see, sorting numbers with a phext document is somewhat like letting water flow in a river. Numbers find their spot naturally.
