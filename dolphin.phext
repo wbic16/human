@@ -53369,7 +53369,22 @@ retweets: 1
 in_reply_to_id: 1660308100606226433
 in_reply_to_user: xenovigor
 
-@JMSifter @vokaysh @algekalipso thanks so much guys~ i put a lot of thought into making my writing accessible, and before publishing i usually run my posts by someone unfamiliar with the topic so we can catch anything that doesn't make senseid: 1697361009520898160
+@JMSifter @vokaysh @algekalipso thanks so much guys~ i put a lot of thought into making my writing accessible, and before publishing i usually run my posts by someone unfamiliar with the topic so we can catch anything that doesn't make senseid: 1956103813384777938
+created_at: 2025-08-14T21:21:06Z
+url: https://x.com/cube_flipper/status/1956103813384777938
+kind: reply
+likes: 1
+retweets: 0
+in_reply_to_id: 1956088640880124218
+in_reply_to_user: aaronbergman18
+
+@AaronBergman18 i want a decent app for strobing the torch light/camera flash on and off at different frequencies. this would be for experimenting with flicker phosphenes, visual hallucinations you see when you stare at a strobe light (https://smoothbrains.net/posts/2022-11-22-an-introduction-to-steven-lehar-part-ii.html#flicker-phosphenes)
+
+some strobe apps exist, it's just that they're all kinda shit. the controls should be a big foolproof slider with haptic feedback which takes up most of the screen – as you need to be able to operate it with the screen pointed away from you
+
+changing the frequency should be smooth, i.e. it should use a square wave to turn the flash on and off, and store its current phase somewhere so that the phase is not lost when the frequency is changed. nice bonus feature would be the ability to also tweak the square wave's duty cycle
+
+i'm actually an iOS dev by trade and should have made this like years ago, i'm just really lazyid: 1697361009520898160
 created_at: 2023-08-31T21:29:34Z
 url: https://x.com/cube_flipper/status/1697361009520898160
 kind: original
