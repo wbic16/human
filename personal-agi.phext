@@ -575,3 +575,42 @@ Cash on hand is also listed.
 
 # Expectations
 
+* Quarterly boom/bust cycles following individual companies
+* Market headwinds
+* Overall Sol GDP grows from 10^5 TWh in 2025 to 10^11 TWh in 2100 (20% annually)
+* Equivalence between markets and Sol GDP remains constant
+* Robotics, Genetics, and AI allow unfettered growth
+* Pareto Rule: 20% of the market held by the Top 10
+* Bitcoin and Ethereum Saturate at 50% of Sol GDP
+* We thus expect Sol GDP to hit $96Q by 2100
+* Top Companies will be worth $2Q each (1 asteroid)
+
+# Game Plan
+
+* Measure moving averages for the major indexes, relative to Sol Expectation
+* Reinvest profits from overshoots into undershoots
+* Baseline to 20% annual growth
+* Hoard cash when exceeding growth target
+* Spend cash when missing growth target
+
+# Exponential Moving Averages
+
+* Simple Decision Loop: Check the Price on the 15th of each month
+* Track Deviation from 1.5% monthly average (20% annual growth)
+* Example: NVDA from April 15 to August 15, 2025
+  * For each month, we show the baseline price and the next price level expected
+  * Apr 15: $112.20        -> $113.88
+  * May 15: $134.83 (+20%) -> $136.85 (+20%) -> Hold
+  * Jun 16: $144.69 ( +7%) -> $146.86 (+29%) -> Hold
+  * Jul 15: $170.70 (+18%) -> $173.26 (+52%) -> Hold
+  * Aug 15: $180.45 ( +6%) -> $183.16 (+61%) -> Sell
+  * In the last 4 months, NVDA is up 61% - three times the annual growth rate expected
+* Example: BTC from April 15 to August 15, 2025
+  * Same baseline and next price as above
+  * Apr 15: $83,674   -> $84,929
+  * May 15: $103,735 (+24%) -> $105,291 (+24%)
+  * Jun 15: $105,555 ( +2%) -> $107,138 (+26%)
+  * Jul 15: $117,777 (+12%) -> $119,544 (+41%)
+  * Aug 15: $117,398 ( +0%) -> $119,158 (+40%)
+  * In the last 4 months, BTC is up 40% - twice the annual growth rate expected
+* Given these two assets, it would make sense to sell NVDA and BTC and wait for another round
