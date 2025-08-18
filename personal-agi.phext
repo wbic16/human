@@ -614,3 +614,19 @@ Cash on hand is also listed.
   * Aug 15: $117,398 ( +0%) -> $119,158 (+40%)
   * In the last 4 months, BTC is up 40% - twice the annual growth rate expected
 * Given these two assets, it would make sense to sell NVDA and BTC and wait for another round
+August 17, 2025
+---------------
+
+The Human Exocortex is driven by a simple principle: latency-driven computing.
+Note: Human vision is capable of detecting single photons. We *notice* small things.
+
+* Personal AGI Baseline (2025) - $1K
+  * CPU: 4 GHz x 8C/16T -- AMD Ryzen 9 8945HS (100 billion operations/sec)
+  * GPU: Radeon 780M Graphics
+  * RAM: 96 GB DDR5 (40 GB/sec)
+  * SSD: 4 TB NVMe (4 GB/sec)
+* Latency Frames
+  * 1 sec = 100B ops, 40 GB RAM, 4 GB disk (1 Hz)
+  * 1 ms = 100M ops, 40 MB RAM, 4 MB disk (1 KHz)
+  * 1 us = 100K ops, 40 KB RAM, 4 KB disk (1 MHz)
+  * 0.5 us = 50K ops, 20 KB RAM, 2 KB disk (2 MHz)
