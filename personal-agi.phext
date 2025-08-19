@@ -630,3 +630,16 @@ Note: Human vision is capable of detecting single photons. We *notice* small thi
   * 1 ms = 100M ops, 40 MB RAM, 4 MB disk (1 KHz)
   * 1 us = 100K ops, 40 KB RAM, 4 KB disk (1 MHz)
   * 0.5 us = 50K ops, 20 KB RAM, 2 KB disk (2 MHz)
+August 18, 2025
+---------------
+
+I want to focus on 1 ms time slots for a bit.
+At 50% utilization on an 8-core 4 GHz CPU, we can plan for 50K ops.
+
+https://community.cadence.com/cadence_blogs_8/b/breakfast-bytes/posts/timsrt
+
+Goal: We should be able to consistently sort about 10,000 numbers in 1 ms on a modern CPU.
+
+Thus, for modern systems, we want to target buffer sizes of about 80 KB (10,000 numbers x 64-bit integers). In a given region of subspace, we might want to map about 1.2 million blocks (80 KB x 1.2e6 = 96 GB). So we need a 3-dimensional phext space to orient ourselves within.
+
+For fast response times, we'll focus on packing the contents of a single Apple-II class machine (40 KB) every millisecond. Let the games ... begin!
