@@ -642,4 +642,27 @@ Goal: We should be able to consistently sort about 10,000 numbers in 1 ms on a m
 
 Thus, for modern systems, we want to target buffer sizes of about 80 KB (10,000 numbers x 64-bit integers). In a given region of subspace, we might want to map about 1.2 million blocks (80 KB x 1.2e6 = 96 GB). So we need a 3-dimensional phext space to orient ourselves within.
 
-For fast response times, we'll focus on packing the contents of a single Apple-II class machine (40 KB) every millisecond. Let the games ... begin!
+For fast response times, we'll focus on packing the contents of a single Apple-II class machine (40 KB) every millisecond. Let the games ... begin!August 19, 2025
+---------------
+https://www.techpowerup.com/cpu-specs/ryzen-9-8945hs.c3399
+https://en.wikipedia.org/wiki/Zen_4
+https://www.numberworld.org/blogs/2024_8_7_zen5_avx512_teardown/57647_zen4_sog.pdf
+
+Zen 4 Cache Structure
+- L1: 32 KB (instruction) + 32 (data) KB per core
+- L2: 1 MB per core
+- L3: 16 MB shared
+
+>> 6.75K op cache <<
+
+L1 data can service a maximum of 3 memory ops per cycle (3 read, 2 write).
+Natural byte boundary is 64 bytes (512 bits).
+L2 is 14+ cycles and has a 256-bit path to L1
+L3 is 50 cycles on average
+
+Instruction L1: 64 entries, 4K, 2M, 1G page sizes
+Data L1: 72 entries, 4K, 16K, 2M, 1G page sizes
+Instruction L2: 512 entries, 4K, 2M page sizes
+Data L2: 3072 entries, 4K, 16K, 2M page sizes
+
+
