@@ -647,6 +647,7 @@ For fast response times, we'll focus on packing the contents of a single Apple-I
 https://www.techpowerup.com/cpu-specs/ryzen-9-8945hs.c3399
 https://en.wikipedia.org/wiki/Zen_4
 https://www.numberworld.org/blogs/2024_8_7_zen5_avx512_teardown/57647_zen4_sog.pdf
+https://chipsandcheese.com/p/pushing-amds-infinity-fabric-to-its
 
 Zen 4 Cache Structure
 - L1: 32 KB (instruction) + 32 (data) KB per core
@@ -659,10 +660,66 @@ L1 data can service a maximum of 3 memory ops per cycle (3 read, 2 write).
 Natural byte boundary is 64 bytes (512 bits).
 L2 is 14+ cycles and has a 256-bit path to L1
 L3 is 50 cycles on average
+RAM is 300+ cycles
 
 Instruction L1: 64 entries, 4K, 2M, 1G page sizes
 Data L1: 72 entries, 4K, 16K, 2M, 1G page sizes
 Instruction L2: 512 entries, 4K, 2M page sizes
 Data L2: 3072 entries, 4K, 16K, 2M page sizes
 
+August 20, 2025
+---------------
+64 KB cache lines
 
+4 KB page sizes
+2 MB page sizes
+https://courses.grainger.illinois.edu/cs240/sp2021/notes/paging/pageTable.html
+
+For a phext-oriented processor, our memory space is very different from what you may be used to.
+
+In a traditional computer program, we've got access to two types of memory:
+1. stack - fast allocations by advancing a stack pointer
+2. heap - slow allocations by tracking regions, typically near the end of virtual memory space
+
+In a phext-driven program, we've got access to a 9D hierarchy of memory blobs.
+
+Consider a very simplified version of memory, where '.' means unallocated, 'S' means Stack, and 'H' means Heap. Here's a view of subspace that our program might find itself in after a while.
+
+SSSS.........HHH.H..H...H
+
+As we can see, there are four stack frames and six heap allocations.
+S1 = 0
+S2 = 1
+S3 = 2
+S4 = 3
+H1 = 13
+H2 = 14
+H3 = 15
+H4 = 17
+H5 = 20
+H6 = 24
+
+Traditionally, this would have required 10 page allocations. We couldn't make use of variable-length page sizes, because we only had access to a 1D array for addressing.
+
+We can partition our address space using phext delimiters, enabling fine-grained access to a 9D virtual address space.
+
+Here's an example series of memory requests that are mapped into a sequential subspace region.
+
+1. Store S1 @ 1.1.1/1.1.1/1.1.1 -> S
+2. Store H1 @ 5.1.1/1.1.1/1.1.1 -> S<LB><LB><LB><LB>H1
+3. Store H2 @ 6.1.1/1.1.1/1.1.1 -> S<LB><LB><LB><LB>H1<LB>H2
+4. Store H3 @ 7.1.1/1.1.1/1.1.1 -> S<LB><LB><LB><LB>H1<LB>H2<LB>H3
+5. Store S2 @ 1.1.1/1.1.1/1.1.2 -> S<SB>S<LB><LB><LB><LB>H1<LB>H2<LB>H3
+6. Store S3 @ 1.1.1/1.1.1/1.1.3 -> S<SB>S<SB>S<LB><LB><LB><LB>H1<LB>H2<LB>H3
+7. Store H4 @ 9.1.1/1.1.1/1.1.1 -> S<SB>S<SB>S<LB><LB><LB><LB>H1<LB>H2<LB>H3<LB>H4
+8. Store H5 @ 12.1.1/1.1.1/1.1.1 -> S<SB>S<SB>S<LB><LB><LB><LB>H1<LB>H2<LB>H3<LB>H4<LB>H5
+9. Store H6 @ 16.1.1/1.1.1/1.1.1 -> S<SB>S<SB>S<LB><LB><LB><LB>H1<LB>H2<LB>H3<LB>H4<LB>H5<LB>H6
+10. Store S4 @ 1.1.1/1.1.1/1.1.4 -> S<SB>S<SB>S<SB>S<LB><LB><LB><LB>H1<LB>H2<LB>H3<LB>H4<LB>H5<LB>H6
+
+At the end of this series of operations, we've constructed a hierarchical map of memory that has well-defined semantics for how it expands as additional entries are added.
+
+Phext allows us to reason about packing information topologically.
+
+If your workload can't be cached, at least make sure it can be prefetched. On a DDR5 system, we can feed data to the CPU at 40 GB/sec (10 bytes per cycle). But there's a 300+ cycle penalty for requesting data. Caches generally prevent us from noticing that delay, but it creeps in.
+
+TL;DR: If your workload is hard to cache, a 4 GHz CPU becomes a 10 MHz CPU. Phext helps ensure that every workload can be easily cached - because we have precise control over where information resides, relatively speaking.
