@@ -731,11 +731,35 @@ For an OS that is actively managing memory, we can afford to utilize 1 GHz of am
 If we consume 30% of the typical cache miss budget, we will regain 2.2 GHz and boost performance by about 7.5%. This is a modest gain, but a free one! The more important gain, however, is not absolute performance but the elimination of lag.
 
 Whenever we need to fetch data from RAM, access time skyrockets...
-* L1: 0.3 cycles @ 95%
-* L2: 14 cycles @ 4.5%
-* L3: 50 cycles @ 0.3%
-* RAM: 300+ cycles @ 10% = 30 cycles
+* L1: 0.3 cycles @ 95%: 0.285 cycles
+* L2: 14 cycles @ 4.5%: 0.63 cycles
+* L3: 50 cycles @ 0.3%: 0.15 cycles
+* RAM: 300+ cycles @ 0.2% = 0.6 cycles
 * SSD: 100,000 cycles
 
 Average latency: 1.6 cycles
-Maximum latency: 360 cycles
+Maximum latency: 360 cyclesAugust 21, 2025
+---------------
+My war on latency starts with the cache hierarchy. For workloads that can't be cached, our hybrid system drops from 4000 MHz to 10 MHz. This is rare, but happens about 3 minutes every day.
+
+When working on a latency-driven system, we don't measure absolute performance. Instead, we measure average and maximum response times.
+
+On a modern system, we can vastly improve performance if we simply keep all data on the CPU at all times. Instead of reading from RAM, we'll just hallucinate the data we need by always storing data in compressed form in RAM.
+
+Take a set of small integers (1-1000) as an example. We only need 10 bits to store each value. Typical values need to be 64-bit aligned. So an array of 1,000 integers consumes 64,000 bits (8 KB). Compressed, however, we only need 1.25 KB - giving us a compression ratio of 6:1.
+
+Suddenly the 300 cycle delay for round-trips to RAM only costs 50 cycles - the same as L3...
+
+Text compression can achieve 10:1 compression ratios, which means RAM should be faster than L3 (30 cycles instead of 50). So going forward, we'll disable L3 caching when we can and ensure that all memory access is heavily compressed.
+
+L1: 0.3 cycles @ 95% = 0.285 cycles
+L2: 14 cycles @ 4.5% = 0.63 cyclesCompressed RAM: 30 cycles @ 0.5% = 0.15 cycles
+
+Average Latency: 1.06 cycles
+Maximum Latency: 44.3 cycles
+
+Our L3 cache just expanded from megabytes to gigabytes - simply by leveraging compression via execution resources sitting dormant most of the time anyway...
+
+(It can't really be _that_ easy, right? Right!?)
+
+Note that maximum latency above is a bit of an apples to oranges comparison, as we will have to pay a compression penalty...but note that L1 can service 2 operations per cycle, so we can get a lot of extra work done while waiting for data from RAM.
