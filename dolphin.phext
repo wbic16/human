@@ -57189,7 +57189,20 @@ retweets: 0
 in_reply_to_id: 1717458994254782907
 in_reply_to_user: qualiacomputer
 
-@qualiacomputer i have some tables of eigenfunctions i'd like to show youid: 1875994768024711474
+@qualiacomputer i have some tables of eigenfunctions i'd like to show youid: 1958442653739069792
+created_at: 2025-08-21T08:14:49Z
+url: https://x.com/cube_flipper/status/1958442653739069792
+kind: reply
+likes: 4
+retweets: 0
+in_reply_to_id: 1958441449260744994
+in_reply_to_user: aron_adler
+
+@Aron_Adler @psychiel it's a pretty useful to combine all of this into a world simulation in the same way that autoencoders provide a useful causal bottleneck
+
+the computational benefit of this is that if every part is mutually aware of/influences every other part (think like how every point on a soap bubble's surface influences every other part) you also get to perform a massive autocorrelation across the entire world simulation, very rapidly, for cheap, using the field dynamics themselves
+
+if this thing is structured such that it has geometric/structural similarities with the actual physical system it is simulating, you can let it run in such a way that it makes predictions about the trajectories of components within that system, also for cheapid: 1875994768024711474
 created_at: 2025-01-05T19:56:21Z
 url: https://x.com/cube_flipper/status/1875994768024711474
 kind: reply
