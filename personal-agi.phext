@@ -723,3 +723,19 @@ Phext allows us to reason about packing information topologically.
 If your workload can't be cached, at least make sure it can be prefetched. On a DDR5 system, we can feed data to the CPU at 40 GB/sec (10 bytes per cycle). But there's a 300+ cycle penalty for requesting data. Caches generally prevent us from noticing that delay, but it creeps in.
 
 TL;DR: If your workload is hard to cache, a 4 GHz CPU becomes a 10 MHz CPU. Phext helps ensure that every workload can be easily cached - because we have precise control over where information resides, relatively speaking.
+
+The next step: eliminating the 10% cache miss rate on modern CPUs.
+
+For an OS that is actively managing memory, we can afford to utilize 1 GHz of amortized compute in order to completely eliminate the remaining 10% miss rate. For a 4 GHz CPU with 8 cores, we're only able to feed the CPU at 28.8 GHz - leaving 3.2 GHz lost to poor system architecture decisions made over the last 50 years.
+
+If we consume 30% of the typical cache miss budget, we will regain 2.2 GHz and boost performance by about 7.5%. This is a modest gain, but a free one! The more important gain, however, is not absolute performance but the elimination of lag.
+
+Whenever we need to fetch data from RAM, access time skyrockets...
+* L1: 0.3 cycles @ 95%
+* L2: 14 cycles @ 4.5%
+* L3: 50 cycles @ 0.3%
+* RAM: 300+ cycles @ 10% = 30 cycles
+* SSD: 100,000 cycles
+
+Average latency: 1.6 cycles
+Maximum latency: 360 cycles
