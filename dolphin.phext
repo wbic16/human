@@ -15120,7 +15120,27 @@ retweets: 0
 in_reply_to_id: 1776513296373289087
 in_reply_to_user: mastertimblais
 
-@MasterTimBlais i've basically always had itid: 1686945902882410496
+@MasterTimBlais i've basically always had itid: 1958705311487074393
+created_at: 2025-08-22T01:38:31Z
+url: https://x.com/cube_flipper/status/1958705311487074393
+kind: thread
+likes: 1
+retweets: 0
+thread_id: 1958702762390335636
+in_reply_to_id: 1958702762390335636
+in_reply_to_user: cube_flipper
+answers: 18.6.9/8.7.11/1.1.23
+thread_root: 18.6.9/8.7.11/1.1.23
+
+@psychiel @QualiaNerd @Caldwbr @Tapeda_ @Aron_Adler > All the data doesn't necessarily cohere into a worldsim state
+
+also not sure i follow here, is the following a reasonable example?
+
+so i can cross my eyes at this image (so that the crosses are superimposed) such that my left and right eyes see something different, this is incoherence, no?
+
+but some subset of that data still gets injected into one canvas, the same worldsim, what i actually wind up seeing is a single square with fluctuating regions of blue and yellow, it does inhabit the same coherent visual field, even though there's a conflict it gets resolved (albeit haphazardly)
+
+like maybe somewhere independent of that there exist mutually incompatible instances of the data from the left and right eyes but that's not what's being experiencedid: 1686945902882410496
 created_at: 2023-08-03T03:43:39Z
 url: https://x.com/cube_flipper/status/1686945902882410496
 kind: reply
