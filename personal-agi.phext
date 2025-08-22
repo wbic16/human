@@ -753,7 +753,8 @@ Suddenly the 300 cycle delay for round-trips to RAM only costs 50 cycles - the s
 Text compression can achieve 10:1 compression ratios, which means RAM should be faster than L3 (30 cycles instead of 50). So going forward, we'll disable L3 caching when we can and ensure that all memory access is heavily compressed.
 
 L1: 0.3 cycles @ 95% = 0.285 cycles
-L2: 14 cycles @ 4.5% = 0.63 cyclesCompressed RAM: 30 cycles @ 0.5% = 0.15 cycles
+L2: 14 cycles @ 4.5% = 0.63 cycles
+Raw RAM: 300 cycles @ 0.5% = 1.5 cyclesCompressed RAM: 30 cycles @ 0.5% = 0.15 cycles
 
 Average Latency: 1.06 cycles
 Maximum Latency: 44.3 cycles
@@ -763,3 +764,32 @@ Our L3 cache just expanded from megabytes to gigabytes - simply by leveraging co
 (It can't really be _that_ easy, right? Right!?)
 
 Note that maximum latency above is a bit of an apples to oranges comparison, as we will have to pay a compression penalty...but note that L1 can service 2 operations per cycle, so we can get a lot of extra work done while waiting for data from RAM.
+
+On a modern CPU, we can afford 3 reads from cache - jumping the effective clock rate to 12 GHz if our workload fits into L1 cache somehow. Let's evaluate what sort of operations are available to us with 920 cycles per compressed cache line (3 cached ops per clock x 307 cycles - see below).
+
+Each cache line is 64 bytes. At 40 GB/sec from RAM, we're reading an average of 10 bytes per clock cycle (just 25% more than a 64-bit integer). So the transfer takes 7 clock cycles in addition to the 300 cycle penalty.
+
+Let's make some tweaks to our logic that allow us to make assumptions about incoming data.
+Registers: rax, rcx, rdx, rbx, rsp, rbp, rsi, rdi, r8, r9, r10, r11, r12, r13, r14, r15
+
+On 64-bit x86 code, we have 16 registers available to us. This allows us to compress 4 bits out of every 64 bits, for free. All we have to do is control which registers we load values into.
+
+0000: rax
+0001: rcx
+0010: rdx
+0011: rbx
+0100: rsp
+0101: rbp
+0110: rsi
+0111: rdi
+1000: r8
+1001: r9
+1010: r10
+1011: r11
+1100: r12
+1101: r13
+1110: r14
+1111: r15
+
+This loading trick nets us our first compression win: 6.25%. We can now store eight 64-bit integers using only 480 bits, leaving us with 32 bits free for other purposes, like compression.
+
