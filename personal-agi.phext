@@ -791,5 +791,60 @@ On 64-bit x86 code, we have 16 registers available to us. This allows us to comp
 1110: r14
 1111: r15
 
-This loading trick nets us our first compression win: 6.25%. We can now store eight 64-bit integers using only 480 bits, leaving us with 32 bits free for other purposes, like compression.
+This loading trick nets us our first compression win: 6.25%. We can now store eight 64-bit integers using only 480 bits, leaving us with 32 bits free for other purposes, like compression.August 22, 2025
+---------------
+Yesterday we identified that we can save 4 bits per 64-bit integer load by controlling which x86-64 register we load values into (since there are 16 registers to choose from).
 
+In our compression budget, we have 920 cycles available, and 32-bits of freedom (so far).
+
+Each cache line is 512 bits (64 bytes).
+Compressed cache lines, version 1, are 480 bits of data with 32-bits of metadata.
+
+bbbb|bbb|bbbbbbbbbbbbbbbbbbbbbbbbb
+0123|456|.........................
+
+1. We'll use four bits to recover which register we're loading values into. This will be consistent for all of the integers found in a cache line. This means that we'll sort values into hash tables keyed from the first four bits of the value being stored.
+
+2. The next three bits determine what sort of numbers we're dealing with. Based upon a range check, we set some flags to indicate how many integers were stored. Bits 4-6 encode the container size (8-bit, 16-bit, 24-bit, 32-bit, 40-bit, 48-bit, 56-bit, or 64-bit).
+
+111 56-bit numbers:  8 integers [72,057,594,037,927,935]
+110 48-bit numbers: 10 integers [281,474,976,710,655]
+101 40-bit numbers: 12 integers [1,099,511,627,775]
+100 32-bit numbers: 15 integers [4,294,967,295]
+011 24-bit numbers: 20 integers [16,777,215]
+010 16-bit numbers: 30 integers [65,535]
+001  8-bit numbers: 60 integers [255]
+000 64-bit numbers:  8 integers
+
+We've used 7 of our 32 compression bits. Let's evaluate some tricks we can play on the data next.
+
+For b456 = 0:
+We'll make use of 8 groups of 3 bits to further describe the low-level bit string. Split our 480 bits into eight groups of 60 bits each. We'll XOR test patterns into these regions to determine if we can salvage some extra bits along the way.
+
+For each 60-bit region, we'll check for numbers that are smaller than our max. The number of additional bytes generated depends upon the input, ranging from 0 to 52 extra bytes per 64 bytes of input.
+
+111: 4 bits unused (56-bit) -> 32 additional bits -> 60+4 bytes
+110: 12 bits unused (48-bit) -> 96 additional bits -> 52+12 bytes
+101: 20 bits unused (40-bit) -> 160 additional bits -> 44+20 bytes
+100: 28 bits unused (32-bit) -> 224 additional bits -> 36+28 bytes
+011: 36 bits unused (24-bit) -> 288 additional bits -> 28+36 bytes
+010: 44 bits unused (16-bit) -> 352 additional bits -> 20+44 bytes
+001: 52 bits unused (8-bit) -> 416 additional bits -> 12+52 bytes
+000: 0 bits unused (64-bit) -> no additional packing
+
+We can now reclaim a variable number of bits, based upon how many zeros we find at the beginning of the value stored. If we're storing 8-bit integers in a 64-bit container, we can reclaim 416 bits - using just (32+64 = 96) bits for data and 416 bits for compression.
+
+Each block can produce a variable number of additional bytes, which are written into the empty bits of the prior block.
+
+We can read the effective length of our cache line by unpacking these 24 bits. Here are several examples.
+
+000'000'000'000'000'000'000'000 -> 64 bytes
+010'100'110'111'011'010'001'011 -> 96 bytes
+001'001'001'001'001'001'001'001 -> 116 bytes
+
+Without any compression overhead, we could store eight 8-bit integers in 8 bytes. Our compression overhead is only 4 bytes (12 bytes total).
+
+For b456 = 1:
+We will be packing 60 integers into our 480 bit container in this case. We have 25 bits available for characterizing this input. We will chunk groups of three integers together, resulting in 20 groups. For each group, we'll track if we need 4 bits or 8 bits to represent the values. This gives us a mask that could result in 0 or 12 bits per group saved. The maximum savings for this case is thus 240 bits (30 bytes).
+
+TODO: Finish writing up the rest of the cases, and write an implementation to test performance and throughput against randomized data.
