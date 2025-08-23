@@ -844,7 +844,23 @@ We can read the effective length of our cache line by unpacking these 24 bits. H
 
 Without any compression overhead, we could store eight 8-bit integers in 8 bytes. Our compression overhead is only 4 bytes (12 bytes total).
 
-For b456 = 1:
-We will be packing 60 integers into our 480 bit container in this case. We have 25 bits available for characterizing this input. We will chunk groups of three integers together, resulting in 20 groups. For each group, we'll track if we need 4 bits or 8 bits to represent the values. This gives us a mask that could result in 0 or 12 bits per group saved. The maximum savings for this case is thus 240 bits (30 bytes).
+For b456 = 001:
+We will be packing 60 x 8-bit integers into our 480-bit container in this case. We will pack ten integers per group, resulting in 6 groups. We can use 4 bits to characterize each group, enabling us to save anywhere from 0 to 8 bits per group, for a maximum savings of 60 bytes.
 
-TODO: Finish writing up the rest of the cases, and write an implementation to test performance and throughput against randomized data.
+For b456 = 010: 30
+We will be packing 30 x 16-bit integers into our 480-bit container in this case. We will chunk groups of five integers at a time, resulting in 6 groups. Again, we'll characterize each group using a 4-bit indicator, allowing us to save at most 56 bytes. The 4-bit indicator in this case is just a count of the number of leading zeros we can remove from all entries in the group.
+
+For b456 = 011: 20 24-bit
+We will be packing 20 x 24-bit integers into our 480-bit container in this case. We'll chunk four integers at a time, resulting in 5 groups. We'll have 5 bits to characterize each group with, allowing us to save up to 60 bytes.
+
+For b456 = 100: 15 32-bit
+We will be packing 15 x 32-bit integers into our 480-bit container in this case. We will chunk 3 entries at a time, giving us 5 groups. We can use 5 bits per group, allowing us a maximum savings of 58 bytes (15x3.875).
+
+For b456 = 101: 12 40-bit
+We will be packing 12 x 40-bit integers into our 480-bit container in this case. We will chunk 2 entries at a time, giving us 6 groups. We can use 4 bits per group, allowing us to save up to 60 bytes. We'll count how many groups of three zeros we can omit.
+
+For b456 = 110: 10 48-bit
+We will be packing 10 x 48-bit integers into our 480-bit container in this case. We will chunk 2 entries at a time, giving us 5 groups. We can use 5 bits per group, allowing us to save up to 60 byets. We'll count how many groups of two zeros we can omit.
+
+For b456 = 111: 8  56-bit
+We will be packing 8 x 56-bit integers into our 480-bit container in this case. We will have three bits per entry to characterize input. We'll count how many groups of seven zeros we can omit.
