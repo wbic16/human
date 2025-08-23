@@ -66685,7 +66685,16 @@ kind: original
 likes: 1
 retweets: 0
 
-@sameQCU returns https://x.com/sameQCU/status/1937287446288564417id: 1938083223784829115
+@sameQCU returns https://x.com/sameQCU/status/1937287446288564417id: 1959271412981453292
+created_at: 2025-08-23T15:08:01Z
+url: https://x.com/cube_flipper/status/1959271412981453292
+kind: reply
+likes: 10
+retweets: 0
+in_reply_to_id: 1959253482910646610
+in_reply_to_user: andymasley
+
+@AndyMasley instead of the atoms themselves try considering the EM fields around the atomsid: 1938083223784829115
 created_at: 2025-06-26T03:53:43Z
 url: https://x.com/cube_flipper/status/1938083223784829115
 kind: reply
