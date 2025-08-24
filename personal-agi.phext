@@ -863,4 +863,6 @@ For b456 = 110: 10 48-bit
 We will be packing 10 x 48-bit integers into our 480-bit container in this case. We will chunk 2 entries at a time, giving us 5 groups. We can use 5 bits per group, allowing us to save up to 60 byets. We'll count how many groups of two zeros we can omit.
 
 For b456 = 111: 8  56-bit
-We will be packing 8 x 56-bit integers into our 480-bit container in this case. We will have three bits per entry to characterize input. We'll count how many groups of seven zeros we can omit.
+We will be packing 8 x 56-bit integers into our 480-bit container in this case. We will have three bits per entry to characterize input. We'll count how many groups of seven zeros we can omit.August 23, 2025
+---------------
+I'm working on a C implementation of cache line compression.

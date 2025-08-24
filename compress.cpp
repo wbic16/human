@@ -92,24 +92,151 @@ std::string test_rd() { return tester(0xd123456789345678, Register::rd); }
 std::string test_re() { return tester(0xe123456789345678, Register::re); }
 std::string test_rf() { return tester(0xf123456789345678, Register::rf); }
 
+// Cache Control Ranges
+// 000: 64-bit
+// 001: 8-bit
+// 010: 16-bit
+// 011: 24-bit
+// 100: 32-bit
+// 101: 40-bit
+// 110: 48-bit
+// 111: 56-bit
+
+struct CacheControl
+{
+   uint8_t rtype   : 4{}; // determines which register we can load into
+   uint8_t range   : 3{}; // size masks - see above
+   uint8_t unused1 : 1{};
+   uint8_t unused2{};
+   uint8_t unused3{};
+   uint8_t unused4{};
+};
+static_assert(sizeof(CacheControl) == 4, "Cache Control must be 32-bit on x86-64.");
+
+uint64_t countLeadingZeros(const uint64_t value)
+{
+  uint64_t mask = 0x8000000000000000;
+  uint64_t leading = 0;
+  while (((mask & value) == 0) && mask != 0)
+  {
+    mask = mask >> 1;
+    ++leading;
+  }
+
+  return leading;
+}
+
+CacheControl extractCacheControl(const CacheLine& c)
+{
+  CacheControl result;
+  result.rtype = (c.b0 & 0xF) >> 60;
+  uint64_t leading = countLeadingZeros(c.b0);
+  uint64_t next = countLeadingZeros(c.b1);
+  if (next < leading) { leading = next; }
+  next = countLeadingZeros(c.b2);
+  if (next < leading) { leading = next; }
+  next = countLeadingZeros(c.b3);
+  if (next < leading) { leading = next; }
+  next = countLeadingZeros(c.b4);
+  if (next < leading) { leading = next; }
+  next = countLeadingZeros(c.b5);
+  if (next < leading) { leading = next; }
+  next = countLeadingZeros(c.b6);
+  if (next < leading) { leading = next; }
+  next = countLeadingZeros(c.b7);
+  if (next < leading) { leading = next; }
+  result.range = leading;
+  
+  return result;
+}
+
+uint64_t extractBitLength(const CacheLine& c)
+{
+  CacheControl control = extractCacheControl(c);
+  switch (control.range)
+  {
+    case 0b111:
+      return 56;
+    case 0b110:
+      return 48;
+    case 0b101:
+      return 40;
+    case 0b100:
+      return 32;
+    case 0b011:
+      return 24;
+    case 0b010:
+      return 16;
+    case 0b001:
+      return 8;
+    case 0:
+    default:
+      return 64;
+  }
+}
+
+uint64_t extraBytesAvailable(const CacheLine& c)
+{
+  // Our extra 28 bits are pulled 4 bits at a time from each 64-bit value
+  CacheControl control = extractCacheControl(c);
+  uint64_t containerSize = extractBitLength(c);
+
+  switch (containerSize)
+  {
+    case 64:
+    default:
+      return 3;
+      break;
+  }
+
+  return 0;
+}
+
+std::string testLeadingZeros(const uint64_t value, const uint64_t expected)
+{
+  uint64_t test = countLeadingZeros(value);
+  return (test == expected) ? "OK\n" : "Failed\n";
+}
+
 using namespace std;
 int main()
 {
-	CacheLine test;
-	cout << "r0: " << test_r0() << endl;
-	cout << "r1: " << test_r1() << endl;
-	cout << "r2: " << test_r2() << endl;
-	cout << "r3: " << test_r3() << endl;
-	cout << "r4: " << test_r4() << endl;
-	cout << "r5: " << test_r5() << endl;
-	cout << "r6: " << test_r6() << endl;
-	cout << "r7: " << test_r7() << endl;
-	cout << "r8: " << test_r8() << endl;
-	cout << "r9: " << test_r9() << endl;
-	cout << "ra: " << test_ra() << endl;
-	cout << "rb: " << test_rb() << endl;
-	cout << "rc: " << test_rc() << endl;
-	cout << "rd: " << test_rd() << endl;
-	cout << "re: " << test_re() << endl;
-	cout << "rf: " << test_rf() << endl;
+  CacheLine test;
+
+  bool verifyLeadingZeros = false;
+  if (verifyLeadingZeros) {
+  cout <<  "test0: " << testLeadingZeros(0xffffffffffffffff, 0);
+  cout <<  "test4: " << testLeadingZeros(0x0fffffffffffffff, 4);
+  cout <<  "test5: " << testLeadingZeros(0x07ffffffffffffff, 5);
+  cout <<  "test6: " << testLeadingZeros(0x03ffffffffffffff, 6);
+  cout <<  "test7: " << testLeadingZeros(0x01ffffffffffffff, 7);
+  cout <<  "test8: " << testLeadingZeros(0x00ffffffffffffff, 8);
+  cout << "test25: " << testLeadingZeros(0x0000007fffffffff, 25);
+  cout << "test63: " << testLeadingZeros(0x0000000000000001, 63);
+  cout << "test64: " << testLeadingZeros(0x0000000000000000, 64);
+  }
+
+  bool verifyRegisters = false;
+  if (verifyRegisters)
+  {
+  cout << "r0: " << test_r0() << endl;
+  cout << "r1: " << test_r1() << endl;
+  cout << "r2: " << test_r2() << endl;
+  cout << "r3: " << test_r3() << endl;
+  cout << "r4: " << test_r4() << endl;
+  cout << "r5: " << test_r5() << endl;
+  cout << "r6: " << test_r6() << endl;
+  cout << "r7: " << test_r7() << endl;
+  cout << "r8: " << test_r8() << endl;
+  cout << "r9: " << test_r9() << endl;
+  cout << "ra: " << test_ra() << endl;
+  cout << "rb: " << test_rb() << endl;
+  cout << "rc: " << test_rc() << endl;
+  cout << "rd: " << test_rd() << endl;
+  cout << "re: " << test_re() << endl;
+  cout << "rf: " << test_rf() << endl;
+  }
+
+  uint64_t expansion = extraBytesAvailable(test);
+  cout << "Expanded test by " << expansion << " bytes.\n";
 }
