@@ -866,3 +866,6 @@ For b456 = 111: 8  56-bit
 We will be packing 8 x 56-bit integers into our 480-bit container in this case. We will have three bits per entry to characterize input. We'll count how many groups of seven zeros we can omit.August 23, 2025
 ---------------
 I'm working on a C implementation of cache line compression.
+August 24, 2025
+---------------
+We went to the NE State Fair this weekend. Still iterating on cache line compression.

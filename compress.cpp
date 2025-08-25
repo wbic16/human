@@ -1,6 +1,7 @@
 #include <iosfwd>
 #include <iostream>
 #include <string>
+#include <vector>
 
 // Experiments in compression
 
@@ -104,12 +105,12 @@ std::string test_rf() { return tester(0xf123456789345678, Register::rf); }
 
 struct CacheControl
 {
-   uint8_t rtype   : 4{}; // determines which register we can load into
-   uint8_t range   : 3{}; // size masks - see above
-   uint8_t unused1 : 1{};
+   uint8_t rtype  : 4{}; // determines which register we can load into
+   uint8_t range  : 3{}; // size masks - see above
+   uint8_t packed : 1{}; // indicates if we've packed yet
+   uint8_t unused1{};
    uint8_t unused2{};
    uint8_t unused3{};
-   uint8_t unused4{};
 };
 static_assert(sizeof(CacheControl) == 4, "Cache Control must be 32-bit on x86-64.");
 
@@ -145,7 +146,15 @@ CacheControl extractCacheControl(const CacheLine& c)
   if (next < leading) { leading = next; }
   next = countLeadingZeros(c.b7);
   if (next < leading) { leading = next; }
-  result.range = leading;
+
+  if (leading >=  8) { result.range = 0b111; }
+  if (leading >= 16) { result.range = 0b110; }
+  if (leading >= 24) { result.range = 0b101; }
+  if (leading >= 32) { result.range = 0b100; }
+  if (leading >= 40) { result.range = 0b011; }
+  if (leading >= 48) { result.range = 0b010; }
+  if (leading >= 56) { result.range = 0b001; }
+  result.packed = 1;
   
   return result;
 }
@@ -175,11 +184,57 @@ uint64_t extractBitLength(const CacheLine& c)
   }
 }
 
+// Encode + Decode
+// 1. Given a vector, we will re-encode it to optimize for 64K loads
+// 2. The resulting multi-vector will be 16 parallel vectors, smaller in size
+// 3. the first four bits of each parallel vector encode the lowest 4 bits of
+//    each value - to help ensure that we actually balance the arrays.
+// 4. Those bits are used to determine which register to load to - this is not
+//    yet consistent with the code in this file (8/24/2025).
+// 5. FastVector is normalized to store integers with as few bits as possible
+
+template <typename T>
+struct FastVector
+{
+  std::vector<T> r0;
+  std::vector<T> r1;
+  std::vector<T> r2;
+  std::vector<T> r3;
+  std::vector<T> r4;
+  std::vector<T> r5;
+  std::vector<T> r6;
+  std::vector<T> r7;
+  std::vector<T> r8;
+  std::vector<T> r9;
+  std::vector<T> ra;
+  std::vector<T> rb;
+  std::vector<T> rc;
+  std::vector<T> rd;
+  std::vector<T> re;
+  std::vector<T> rf;
+};
+
+template <typename T>
+FastVector<T> encode(const std::vector<T>& input)
+{
+  // stub
+  return {};
+}
+
+template <typename T>
+std::vector<T> decode(const FastVector<T>& input)
+{
+  // stub
+  return {};
+}
+
 uint64_t extraBytesAvailable(const CacheLine& c)
 {
   // Our extra 28 bits are pulled 4 bits at a time from each 64-bit value
   CacheControl control = extractCacheControl(c);
+  std::cout << "CC.rtype=" << (int)control.rtype << ", CC.range=" << (int)control.range << std::endl;
   uint64_t containerSize = extractBitLength(c);
+  std::cout << "Container Size = " << containerSize << std::endl;
 
   switch (containerSize)
   {
