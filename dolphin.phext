@@ -37473,7 +37473,16 @@ retweets: 0
 in_reply_to_id: 1763675170303365480
 in_reply_to_user: dr_cuspy
 
-@Dr_Cuspy dr hales are you coming to the science of consciousness conference this year?id: 1631232724009639936
+@Dr_Cuspy dr hales are you coming to the science of consciousness conference this year?id: 1959788432231920104
+created_at: 2025-08-25T01:22:28Z
+url: https://x.com/cube_flipper/status/1959788432231920104
+kind: reply
+likes: 2
+retweets: 0
+in_reply_to_id: 1959781873905004600
+in_reply_to_user: nickcammarata
+
+@nickcammarata yo nick what's state of the art for interactive interfaces in python (say even if I just wanna dump a colour mapped PyTorch tensor on screen and watch it change in real time)? (here i am ranting to @sameQCU about this) [photo]id: 1631232724009639936
 created_at: 2023-03-02T09:59:22Z
 url: https://x.com/cube_flipper/status/1631232724009639936
 kind: thread
