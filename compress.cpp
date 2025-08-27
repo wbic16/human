@@ -1,3 +1,4 @@
+#include <exception>
 #include <iosfwd>
 #include <iostream>
 #include <string>
@@ -213,19 +214,79 @@ struct FastVector
   std::vector<T> re;
   std::vector<T> rf;
 };
+std::ostream& operator<<(std::ostream& o, const FastVector& fv)
+{
+  std::cout << static_cast<int>(fv.r0) << ", "
+            << static_cast<int>(fv.r1) << ", "
+            << static_cast<int>(fv.r2) << ", "
+            << static_cast<int>(fv.r3) << ", "
+            << static_cast<int>(fv.r4) << ", "
+            << static_cast<int>(fv.r5) << ", "
+            << static_cast<int>(fv.r6) << ", "
+            << static_cast<int>(fv.r7) << ", "
+            << static_cast<int>(fv.r8) << ", "
+            << static_cast<int>(fv.r9) << ", "
+            << static_cast<int>(fv.ra) << ", "
+            << static_cast<int>(fv.rb) << ", "
+            << static_cast<int>(fv.rc) << ", "
+            << static_cast<int>(fv.rd) << ", "
+            << static_cast<int>(fv.re) << ", "
+            << static_cast<int>(fv.rf);
+}
 
 template <typename T>
 FastVector<T> encode(const std::vector<T>& input)
 {
   // stub
-  return {};
+  FastVector<T> result;
+  for (const T& ith: input)
+  {
+    switch (ith & 0xF)
+    {
+      case 15: result.rf.push_back(ith); break;
+      case 14: result.re.push_back(ith); break;
+      case 13: result.rd.push_back(ith); break;
+      case 12: result.rc.push_back(ith); break;
+      case 11: result.rb.push_back(ith); break;
+      case 10: result.ra.push_back(ith); break;
+      case 9: result.r9.push_back(ith); break;
+      case 8: result.r8.push_back(ith); break;
+      case 7: result.r7.push_back(ith); break;
+      case 6: result.r6.push_back(ith); break;
+      case 5: result.r5.push_back(ith); break;
+      case 4: result.r4.push_back(ith); break;
+      case 3: result.r3.push_back(ith); break;
+      case 2: result.r2.push_back(ith); break;
+      case 1: result.r1.push_back(ith); break;
+      case 0: result.r0.push_back(ith); break;
+      default: throw std::runtime_error("impossible error"); break;
+    }
+  }
+
+  return result;
 }
 
 template <typename T>
 std::vector<T> decode(const FastVector<T>& input)
 {
-  // stub
-  return {};
+  std::vector<T> result;
+  for (const T& ith : input.r0) { result.push_back(ith); }
+  for (const T& ith : input.r1) { result.push_back(ith); }
+  for (const T& ith : input.r2) { result.push_back(ith); }
+  for (const T& ith : input.r3) { result.push_back(ith); }
+  for (const T& ith : input.r4) { result.push_back(ith); }
+  for (const T& ith : input.r5) { result.push_back(ith); }
+  for (const T& ith : input.r6) { result.push_back(ith); }
+  for (const T& ith : input.r7) { result.push_back(ith); }
+  for (const T& ith : input.r8) { result.push_back(ith); }
+  for (const T& ith : input.r9) { result.push_back(ith); }
+  for (const T& ith : input.ra) { result.push_back(ith); }
+  for (const T& ith : input.rb) { result.push_back(ith); }
+  for (const T& ith : input.rc) { result.push_back(ith); }
+  for (const T& ith : input.rd) { result.push_back(ith); }
+  for (const T& ith : input.re) { result.push_back(ith); }
+  for (const T& ith : input.rf) { result.push_back(ith); }
+  return result;
 }
 
 uint64_t extraBytesAvailable(const CacheLine& c)
@@ -292,6 +353,28 @@ int main()
   cout << "rf: " << test_rf() << endl;
   }
 
+  bool testExtraBytes = false;
+  if (testExtraBytes) {
   uint64_t expansion = extraBytesAvailable(test);
   cout << "Expanded test by " << expansion << " bytes.\n";
+  }
+
+  std::vector<uint64_t> stuff { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16 };
+  FastVector<uint64_t> split = encode(stuff);
+  cout << "FV.r0 = " << split.r0 << endl;
+  cout << "FV.r1 = " << split.r1 << endl;
+  cout << "FV.r2 = " << split.r2 << endl;
+  cout << "FV.r3 = " << split.r3 << endl;
+  cout << "FV.r4 = " << split.r4 << endl;
+  cout << "FV.r5 = " << split.r5 << endl;
+  cout << "FV.r6 = " << split.r6 << endl;
+  cout << "FV.r7 = " << split.r7 << endl;
+  cout << "FV.r8 = " << split.r8 << endl;
+  cout << "FV.r9 = " << split.r9 << endl;
+  cout << "FV.ra = " << split.ra << endl;
+  cout << "FV.rb = " << split.rb << endl;
+  cout << "FV.rc = " << split.rc << endl;
+  cout << "FV.rd = " << split.rd << endl;
+  cout << "FV.re = " << split.re << endl;
+  cout << "FV.rf = " << split.rf << endl;
 }
