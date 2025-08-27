@@ -48,31 +48,6 @@ Register cacheLineToRegister(const CacheLine& c)
   return valueToRegister(c.b0);
 }
 
-std::ostream& operator<<(std::ostream& o, const Register& r)
-{
-  switch (r)
-  {
-    case r0: o << "r0"; break;
-    case r1: o << "r1"; break;
-    case r2: o << "r2"; break;
-    case r3: o << "r3"; break;
-    case r4: o << "r4"; break;
-    case r5: o << "r5"; break;
-    case r6: o << "r6"; break;
-    case r7: o << "r7"; break;
-    case r8: o << "r8"; break;
-    case r9: o << "r9"; break;
-    case ra: o << "ra"; break;
-    case rb: o << "rb"; break;
-    case rc: o << "rc"; break;
-    case rd: o << "rd"; break;
-    case re: o << "re"; break;
-    case rf: o << "rf"; break;
-    default: break;
-  }
-  return o;
-}
-
 std::string tester(uint64_t value, Register expected)
 {
   return valueToRegister(value) == expected ? "OK" : "Failed";
@@ -214,24 +189,28 @@ struct FastVector
   std::vector<T> re;
   std::vector<T> rf;
 };
-std::ostream& operator<<(std::ostream& o, const FastVector& fv)
+
+template <typename T>
+std::ostream& operator<<(std::ostream& o, const FastVector<T>& fv)
 {
-  std::cout << static_cast<int>(fv.r0) << ", "
-            << static_cast<int>(fv.r1) << ", "
-            << static_cast<int>(fv.r2) << ", "
-            << static_cast<int>(fv.r3) << ", "
-            << static_cast<int>(fv.r4) << ", "
-            << static_cast<int>(fv.r5) << ", "
-            << static_cast<int>(fv.r6) << ", "
-            << static_cast<int>(fv.r7) << ", "
-            << static_cast<int>(fv.r8) << ", "
-            << static_cast<int>(fv.r9) << ", "
-            << static_cast<int>(fv.ra) << ", "
-            << static_cast<int>(fv.rb) << ", "
-            << static_cast<int>(fv.rc) << ", "
-            << static_cast<int>(fv.rd) << ", "
-            << static_cast<int>(fv.re) << ", "
-            << static_cast<int>(fv.rf);
+  using namespace std;
+  o<<"r0: ";for(const T& ith : fv.r0){o<< static_cast<int>(ith) << " "; }; o << endl;
+  o<<"r1: ";for(const T& jth : fv.r1){o<< static_cast<int>(jth) << " "; }; o << endl;
+  o<<"r2: ";for(const T& kth : fv.r2){o<< static_cast<int>(kth) << " "; }; o << endl;
+  o<<"r3: ";for(const T& lth : fv.r3){o<< static_cast<int>(lth) << " "; }; o << endl;
+  o<<"r4: ";for(const T& mth : fv.r4){o<< static_cast<int>(mth) << " "; }; o << endl;
+  o<<"r5: ";for(const T& nth : fv.r5){o<< static_cast<int>(nth) << " "; }; o << endl;
+  o<<"r6: ";for(const T& oth : fv.r6){o<< static_cast<int>(oth) << " "; }; o << endl;
+  o<<"r7: ";for(const T& pth : fv.r7){o<< static_cast<int>(pth) << " "; }; o << endl;
+  o<<"r8: ";for(const T& qth : fv.r8){o<< static_cast<int>(qth) << " "; }; o << endl;
+  o<<"r9: ";for(const T& rth : fv.r9){o<< static_cast<int>(rth) << " "; }; o << endl;
+  o<<"ra: ";for(const T& sth : fv.ra){o<< static_cast<int>(sth) << " "; }; o << endl;
+  o<<"rb: ";for(const T& tth : fv.rb){o<< static_cast<int>(tth) << " "; }; o << endl;
+  o<<"rc: ";for(const T& uth : fv.rc){o<< static_cast<int>(uth) << " "; }; o << endl;
+  o<<"rd: ";for(const T& vth : fv.rd){o<< static_cast<int>(vth) << " "; }; o << endl;
+  o<<"re: ";for(const T& wth : fv.re){o<< static_cast<int>(wth) << " "; }; o << endl;
+  o<<"rf: ";for(const T& xth : fv.rf){o<< static_cast<int>(xth) << " "; }; o << endl;
+  return o;
 }
 
 template <typename T>
@@ -359,22 +338,7 @@ int main()
   cout << "Expanded test by " << expansion << " bytes.\n";
   }
 
-  std::vector<uint64_t> stuff { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16 };
+  std::vector<uint64_t> stuff { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40 };
   FastVector<uint64_t> split = encode(stuff);
-  cout << "FV.r0 = " << split.r0 << endl;
-  cout << "FV.r1 = " << split.r1 << endl;
-  cout << "FV.r2 = " << split.r2 << endl;
-  cout << "FV.r3 = " << split.r3 << endl;
-  cout << "FV.r4 = " << split.r4 << endl;
-  cout << "FV.r5 = " << split.r5 << endl;
-  cout << "FV.r6 = " << split.r6 << endl;
-  cout << "FV.r7 = " << split.r7 << endl;
-  cout << "FV.r8 = " << split.r8 << endl;
-  cout << "FV.r9 = " << split.r9 << endl;
-  cout << "FV.ra = " << split.ra << endl;
-  cout << "FV.rb = " << split.rb << endl;
-  cout << "FV.rc = " << split.rc << endl;
-  cout << "FV.rd = " << split.rd << endl;
-  cout << "FV.re = " << split.re << endl;
-  cout << "FV.rf = " << split.rf << endl;
+  cout << "Fast Vector Test (uint64_t): " << split << endl;
 }
