@@ -873,3 +873,4 @@ We went to the NE State Fair this weekend. Still iterating on cache line compres
 ---------------
 Just too damn busy...August 26, 2025
 ---------------
+I'm focusing on encode/decode patterns for fast vectors.

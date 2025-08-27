@@ -249,6 +249,15 @@ template <typename T>
 std::vector<T> decode(const FastVector<T>& input)
 {
   std::vector<T> result;
+  size_t ith{}; size_t jth{}; size_t kth{}; size_t lth{};
+  size_t mth{}; size_t nth{}; size_t oth{}; size_t pth{};
+  size_t qth{}; size_t rth{}; size_t sth{}; size_t tth{};
+  size_t uth{}; size_t vth{}; size_t wth{}; size_t xth{};
+  bool done = false;
+  //while (!done)
+  {
+    // TODO: iterate in natural order so we can decode properly
+  }
   for (const T& ith : input.r0) { result.push_back(ith); }
   for (const T& ith : input.r1) { result.push_back(ith); }
   for (const T& ith : input.r2) { result.push_back(ith); }
@@ -338,7 +347,17 @@ int main()
   cout << "Expanded test by " << expansion << " bytes.\n";
   }
 
-  std::vector<uint64_t> stuff { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40 };
+  vector<uint64_t> stuff { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40 };
   FastVector<uint64_t> split = encode(stuff);
-  cout << "Fast Vector Test (uint64_t): " << split << endl;
+  vector<uint64_t> r1 = decode(split);
+  cout << "Fast Vector Test 1: " << split << endl;
+  cout << "Test 1: " << ((stuff == r1) ? "OK" : "Failed") << endl;
+
+  using fvi = FastVector<int>;
+  using vi = vector<int>;
+  vi test2data { 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21 };
+  fvi test2 = encode(test2data);
+  vi r2 = decode(test2);
+  cout << "Fast Vector Test 2: " << test2 << endl;
+  cout << "Test 2: " << ((test2data == r2) ? "OK" : "Failed") << endl;
 }
