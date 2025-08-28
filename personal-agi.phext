@@ -874,3 +874,28 @@ We went to the NE State Fair this weekend. Still iterating on cache line compres
 Just too damn busy...August 26, 2025
 ---------------
 I'm focusing on encode/decode patterns for fast vectors.
+August 27, 2025
+---------------
+I'll probably do another session on the Crazy Wisdom show soon.
+Before then, I need to work out the details of proving L3 cache is ineffective at best.
+
+I want to return to hallucinated data for a bit.
+Given a hierarchical content hash, we can constrain how data is inflated.
+
+Take this sequence, for example:
+
+1.1.1/1.1.1/1.1.1: Hello World
+1.1.1/1.1.1/1.1.2: This is a test of the emergency broadcast system.
+1.4.5/8.3.2/4.4.7: Dust is the enemy of heat dissipation.
+
+We can constraint this dataset by encoding a few facts, also hierarchically (the checksum is just the first four bytes of a sha1sum):
+
+1.1.1/1.1.1/1.1.1: 11 bytes + 0a4d
+1.1.1/1.1.1/1.1.2: 49 bytes + b061
+1.4.5/8.3.2/4.4.7: 38 bytes + e40c
+
+For large buffers, inflating from checksums and buffer lengths feels intractable...
+But let's work with small buffers for a moment.
+
+Given a 512-byte array, we'll chunk it into 32x16 bytes. For each 32-byte chunk, we'll place it within a phext address in subspace. This allows us to precisely locate a text expansion routine from a much larger set of known texts.
+
