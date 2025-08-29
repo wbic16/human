@@ -944,3 +944,31 @@ Queue 10: 1 s: 4B clock cycles [User] -- 2 TB
 Generally-speaking, you'll need to queue items by both size and count.
 We're essentially forcing the system to utilize QoS across all parts of the software stack.
 Developers are forced to internalize the caching hierarchy instead of ignoring it.
+
+Entry Size
+----------
+Queue 1: 8-32 bytes (4 cycles x 3 ops/cycle x 50% x 8 bytes = 48 bytes)
+Queue 2: 32-256 bytes (40 cycles x 3 ops/cycle x 50% x 8 bytes = 480 bytes)
+Queue 3: 256 bytes to 4 KB (400 cycles x 3 ops/cycle x 50% x 8 bytes = 4,800 bytes)
+Queue 4: 4 KB to 16 KB (40 GB/sec x 1 us x 50% = 20 KB)
+Queue 5: 16 KB to 128 KB (40 GB/sec x 10 us x 50% = 200 KB)
+Queue 6: 128 KB to 256 KB (5 GB/sec x 0.1 ms x 50% = 256 KB)
+Queue 7: 1 MB to 2 MB (5 GB/sec x 1 ms x 50% = 2.5 MB) - low latency
+Queue 8: 2 MB 16 MB (5 GB/sec x 10 ms x 50% = 25 MB) - high latency
+Queue 9: 16 MB to 256 MB (5 GB/sec x 100 ms x 50% = 256 MB) - high latency
+Queue 10: 256 MB to 2 GB (5 GB/sec x 1 s x 50% = 2 GB) - high latency
+
+Transfers larger than 2 GB will not be queued by the kernel until we have systems with more RAM.
+
+Entry Count
+-----------
+Queue 1: 1K to 4K items (128 KB = 4x L1)
+Queue 2: 4K to 16K items (4 MB = 4x L2)
+Queue 3: 16K to 32K items (128 MB = 4x L3)
+Queue 4: 32K to 64K items (1 GB = 1.5% RAM)
+Queue 5: 64K to 128K items (16 GB = 25% RAM)
+Queue 6: 128K to 256K items (64 GB = 1x RAM)
+Queue 7: 256K to 512K items (1 TB = 50% Disk)
+Queue 8: 512K to 1M items (16 TB = 8x Disk)
+Queue 9: 1M to 2M items (512 TB = 256x Disk)
+Queue 10: 2M to 4M items (8 PB = 4096x Disk)
