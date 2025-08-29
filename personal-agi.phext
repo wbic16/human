@@ -899,3 +899,48 @@ But let's work with small buffers for a moment.
 
 Given a 512-byte array, we'll chunk it into 32x16 bytes. For each 32-byte chunk, we'll place it within a phext address in subspace. This allows us to precisely locate a text expansion routine from a much larger set of known texts.
 
+August 28, 2025
+---------------
+Low latency computing.
+Minimum target: 1000 fps
+On modern processors, we can plan for 16 threads easily (8C/16T on $1K boxes).
+For each user-level thread, we'll have a hierarchy of worker threads.
+These sub-threads coordinate different domains of application performance.
+We keep work in separate queues to ensure we're avoiding blocking code paths.
+These sub-threads are called Strands.
+
+Strand 1: Mouse: Handles GUI interactions - mouse pointer tracking and events
+Strand 2: Keyboard: Handles text input events
+Strand 3: Display: Handles screen rendering and compositing
+Strand 4: System: Handles inter-process communication
+Strand 5: Disk Reader: Handles requests to read from disk(s)
+Strand 6: Disk Writer: Handles requests to write to disk(s)
+Strand 7: Hunter: Performs primary units of computation / application tasks
+Strand 8: Gatherer: Collects results from other strands
+Strand 9: Network Reader: Handles requests to read from network(s)
+Strand 10: Network Writer: Handles requests to write to network(s)
+Strand 11: Application-Specific strand #1
+Strand 12: Application-Specific strand #2
+Strand 13: Application-Specific strand #3
+Strand 14: Application-Specific strand #4
+Strand 15: Application-Specific strand #5
+Strand 16: Application-Specific strand #6
+
+Communication between programs happens along strand boundaries.
+We'll prioritize extremely fast message passing and non-blocking I/O.
+Messaging will be broken out into a series of latency-oriented queues.
+
+Queue 1: 1 ns: 4 clock cycles [L1] -- 32 KB
+Queue 2: 10 ns: 40 clock cycles [L2] -- 1 MB
+Queue 3: 100 ns: 400 clock cycles [L3] -- 10 MB
+Queue 4: 1 us: 4,000 clock cycles [RAM] -- 64 GB
+Queue 5: 10 us: 40,000 clock cycles [RAM] -- 64 GB
+Queue 6: 100 us: 400,000 clock cycles [Disk] -- 2 TB
+Queue 7: 1 ms: 4M clock cycles [Disk] -- 2 TB
+Queue 8: 10 ms: 40M clock cycles [Network] -- Unbounded
+Queue 9: 100 ms: 400M clock cycles [Network] -- Unbounded
+Queue 10: 1 s: 4B clock cycles [User] -- 2 TB
+
+Generally-speaking, you'll need to queue items by both size and count.
+We're essentially forcing the system to utilize QoS across all parts of the software stack.
+Developers are forced to internalize the caching hierarchy instead of ignoring it.
