@@ -971,4 +971,7 @@ Queue 6: 128K to 256K items (64 GB = 1x RAM)
 Queue 7: 256K to 512K items (1 TB = 50% Disk)
 Queue 8: 512K to 1M items (16 TB = 8x Disk)
 Queue 9: 1M to 2M items (512 TB = 256x Disk)
-Queue 10: 2M to 4M items (8 PB = 4096x Disk)
+Queue 10: 2M to 4M items (8 PB = 4096x Disk)August 29, 2025
+---------------
+I'll name the process developed yesterday "Hierarchical Queueing".
+The key insight is that arrays offer an implicit address.
