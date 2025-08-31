@@ -975,3 +975,89 @@ Queue 10: 2M to 4M items (8 PB = 4096x Disk)August 29, 2025
 ---------------
 I'll name the process developed yesterday "Hierarchical Queueing".
 The key insight is that arrays offer an implicit address.
+August 30, 2025
+---------------
+Dean Memorial Commemorative Edition
+
+Some tasks require decades of preparation.
+Despite planning, the future never unfolds exactly the way you intended.
+
+Hierarchical Queueing
+---------------------
+Arrays are great because we implicitly encode the offset index.
+Whenever we read a byte from an array, we only need to maintain our 64-bit pointer.
+Most systems today are limited to addressing 48-bits of memory on 64-bit architectures.
+2^48 = 256 TB of RAM, but most systems peak at 256 GB of RAM (38-bit).
+This leaves us with quite a bit of room for shenanigans in memory addresses.
+We'll arbitrarily limit ourselves to fewer than 36 bits of RAM (64 GB) per process.
+This gives us at least 12-28 bits to encode a position in our memory layout.
+
+Optimizations
+-------------
+1. Processes that run in each queue size are limited in the amount of memory they can address.
+2. This means we can arbitrarily limit our memory space for each type of process.
+3. Q1 processes only need 16 bits (64 KB)
+4. Q2 processes only need 20 bits ( 1 MB)
+5. Q3 processes only need 24 bits (16 MB)
+6. Q4 processes only need 28 bits (256 MB)
+7. Q5 processes only need 32 bits ( 4 GB)
+8. Q6 processes only need 36 bits (64 GB)
+9. Q7 processes only need 40 bits ( 1 TB)
+A. Q8 processes only need 44 bits (16 TB)
+B. Q9 processes only need 46 bits (64 TB)
+C. QA processes only need 48 bits (256 TB)
+
+Operating systems tend to use impossible bits, so we'll have access to traversal patterns...
+
+* Q1 = 32 bits - 4 billion TPs (16^8)
+* Q2 = 28 bits - 256 million TPs (16^7)
+* Q3 = 24 bits - 16 million TPs (16^6)
+* Q4 = 20 bits - 1 million TPs (16^5)
+* Q5 = 16 bits - 64K TPs (16^4)
+* Q6 = 12 bits - 4K TPs (16^3)
+* Q7 = 8 bits - 256 TPs (16^2)
+* Q8 = 4 bits - 16 TPs (16^1)
+* Q9 = 2 bits - 4 TPs (16^0.5)
+* QA = 0 bits - just an array
+
+Given a 64-bit memory address pointer, our custom allocator looks like this:
+
+* Q1 = |RRRRRRRRRRRRRRRR|EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE|DDDDDDDDDDDDDDDD|
+* Q2 = |RRRRRRRRRRRRRRRR|EEEEEEEEEEEEEEEEEEEEEEEEEEEE|DDDDDDDDDDDDDDDDDDDD|
+* Q3 = |RRRRRRRRRRRRRRRR|EEEEEEEEEEEEEEEEEEEEEEEE|DDDDDDDDDDDDDDDDDDDDDDDD|
+* Q4 = |RRRRRRRRRRRRRRRR|EEEEEEEEEEEEEEEEEE|DDDDDDDDDDDDDDDDDDDDDDDDDDDDDD|
+* Q5 = |RRRRRRRRRRRRRRRR|EEEEEEEEEEEEEE|DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD|
+* Q6 = |RRRRRRRRRRRRRRRR|EEEEEEEEEEEE|DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD|
+* Q7 = |RRRRRRRRRRRRRRRR|EEEEEEEE|DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD|
+* Q8 = |RRRRRRRRRRRRRRRR|EEEE|DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD|
+* Q9 = |RRRRRRRRRRRRRRRR|EE|DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD|
+* QA = |RRRRRRRRRRRRRRRR|DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD|
+
+Degrees of freedom while encoding 4-bit coordinate values by process type.
+The extra degree of freedom is the orthogonal dimension we count via array semantics.* Q1: 9D
+* Q2: 8D
+* Q3: 7D
+* Q4: 6D
+* Q5: 5D
+* Q6: 4D
+* Q7: 3D
+* Q8: 2D
+* Q9: 1.5D
+* QA: 1D
+
+Let's work an example for a Q1 process. We're going to orient data at the location below.
+
+Location = 8.7.3/4.4.9/6.4.1
+Address = |RRRRRRRRRRRRRRRR|10000111001101000100100101100100|DDDDDDDDDDDDDDDD|
+
+Blocks of memory in this allocation scheme are placed within a phext document.
+From a memory address, it is feasible for us to compute a physical location.
+The application programmer can then think about accessing data at a particular location in subspace.
+
+Our programming language thus requires phext semantics for reserving blocks of memory.
+
+Instead of C's new/delete, which make no demands upon the memory allocator...
+
+W requires you to declare your intent. If you want to work with 9D memory addresses, you have to reduce your memory usage to at most 64 KB. The system is self-reinforcing in terms of efficiency. If you want to be lazy and use 48-bits of RAM, you'll just get normal arrays.
+
+But if you want to be fast+nimble, you can work in 9D. :)
