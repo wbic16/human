@@ -1060,4 +1060,19 @@ Instead of C's new/delete, which make no demands upon the memory allocator...
 
 W requires you to declare your intent. If you want to work with 9D memory addresses, you have to reduce your memory usage to at most 64 KB. The system is self-reinforcing in terms of efficiency. If you want to be lazy and use 48-bits of RAM, you'll just get normal arrays.
 
-But if you want to be fast+nimble, you can work in 9D. :)
+But if you want to be fast+nimble, you can work in 9D. :)August 31, 2025
+---------------
+In a sense, HQ is a reflection of both reality and history.
+
+Since on-die memory has not scaled at the same rate as DRAM, we really have 10 shells of computing that we can take advantage of.
+
+S1: 10 GHz and 64 KB RAM
+S2: 1 GHz and 1 MB RAM
+S3: 100 MHz and 16 MB RAM
+S4: 10 MHz and 256 MB RAM
+S5: 1 MHz and 4 GB RAM
+S6: 100 KHz and 64 GB RAM
+S7: 10 KHz and 1 TB RAM
+S8: 1 KHz and 16 TB RAM
+S9: 100 Hz and 64 TB RAM
+SA: 10 Hz and 256 TB RAM
