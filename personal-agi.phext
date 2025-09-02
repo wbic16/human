@@ -1075,4 +1075,9 @@ S6: 100 KHz and 64 GB RAM
 S7: 10 KHz and 1 TB RAM
 S8: 1 KHz and 16 TB RAM
 S9: 100 Hz and 64 TB RAM
-SA: 10 Hz and 256 TB RAM
+SA: 10 Hz and 256 TB RAMSeptember 1, 2025
+-----------------
+PhextOS: Latency-Driven Development
+
+Each shell of POS consumes more resources than the last.
+Gen 1: 64 KB + 4 GHz + 1 ms response time
