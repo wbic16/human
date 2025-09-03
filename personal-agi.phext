@@ -1081,3 +1081,20 @@ PhextOS: Latency-Driven Development
 
 Each shell of POS consumes more resources than the last.
 Gen 1: 64 KB + 4 GHz + 1 ms response time
+September 2, 2025
+-----------------
+Working on confirming that I want to base PhextOS upon Alpine.
+
+https://wiki.alpinelinux.org/wiki/Custom_Kernel
+https://lxqt-project.org/downloads/
+https://distrowatch.com/
+https://distrowatch.com/table.php?distribution=wattos
+https://www.planetwatt.com/
+https://distrowatch.com/table.php?distribution=debian
+https://www.debian.org/
+https://buildroot.org/
+
+Alpine: Phase 1
+Buildroot: Phase 2
+Debian: Phase 3
+
