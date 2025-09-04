@@ -1098,3 +1098,23 @@ Alpine: Phase 1
 Buildroot: Phase 2
 Debian: Phase 3
 
+September 3, 2025
+-----------------
+Alpine Linux 3.22.1
+
+Good sign: Alpine boots into Linux extremely quickly.
+
+https://documentation.ubuntu.com/real-time/latest/explanation/schedulers/
+https://docs.kernel.org/scheduler/sched-design-CFS.html
+https://docs.kernel.org/scheduler/sched-eevdf.html
+https://lwn.net/Articles/969062/
+
+Operating system overhead on modern systems seems a bit silly.
+We have 8 cores, and the ability to schedule 16 threads.
+
+https://eli.thegreenplace.net/2018/measuring-context-switching-and-memory-overheads-for-linux-threads/
+
+https://www.youtube.com/watch?v=KXuZi9aeGTw
+https://linux-kernel-labs.github.io/refs/heads/master/so2/lec3-processes.html
+
+TL;DR: I need to spend some time digging through kernel source.
