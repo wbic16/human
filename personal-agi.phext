@@ -1124,3 +1124,34 @@ I worked on phextos today.
 https://github.com/wbic16/phextosSeptember 5, 2025
 -----------------
 Compound exponential growth is the most powerful force in the known universe...
+
+$917 PC: $115/node (12 GB RAM + 500 GB disk + 2 TOPS per node)
+ - $479 AMD R9 8945HS
+ - $230 96 GB DDR5 RAM
+ - $213 4 TB NVMe SSD
+ - 16 TOPS
+
+$800 PC: $100/node (12 GB RAM + 250 GB disk + 2 TOPS per node)
+ - $479 AMD R9 8945HS
+ - $230 96 GB DDR5 RAM
+ - $91 2 TB NVMe SSD
+ - 16 TOPS
+
+$2.2K PC: Framework Desktop: $138/node (8 GB RAM + 250 GB disk + 3 TOPS per node)
+ - $1699 16 cores Ryzen R9 AI Max+ 395
+ - $300 128 GB DDR5
+ - $213 4 TB NVMe SSD
+ - 50 TOPS
+
+TL;DR, if we want to scale horizontally...we should stick with the current platform.
+https://www.cpu-monkey.com/en/compare_cpu-amd_ryzen_ai_max_plus_395-vs-amd_ryzen_9_8945hs
+
+For $10K invested:
+12x AMD R9 8945HS -> 1152 GB RAM, 24 TB storage, 96 cores, 192 TOPS
+5x Framework -> 640 GB RAM, 0 TB storage, 80 cores, 250 TOPS (30% faster)
+
+My current cluster supports 80 TOPS, 480 GB RAM, and 20 TB storage.
+The marginal value of adding more machines:
+
+R9 8945HS: 2x performance for $4K (+80 TOPS, +480 GB RAM, +10 TB)
+Framework: 2.25x performance for $4K (+100 TOPS, +256 GB RAM, +0 TB)
