@@ -589,7 +589,16 @@ retweets: 0
 in_reply_to_id: 1949457797432610921
 in_reply_to_user: kiwisoggy
 
-@KiwiSoggy lolid: 1926221564313276542
+@KiwiSoggy lolid: 1964431229937405952
+created_at: 2025-09-06T20:51:17Z
+url: https://x.com/cube_flipper/status/1964431229937405952
+kind: reply
+likes: 0
+retweets: 0
+in_reply_to_id: 1964425455563657528
+in_reply_to_user: cerberus_man
+
+@CERBERUS_MAN lolid: 1926221564313276542
 created_at: 2025-05-24T10:19:43Z
 url: https://x.com/cube_flipper/status/1926221564313276542
 kind: thread
