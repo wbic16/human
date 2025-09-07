@@ -1155,3 +1155,26 @@ The marginal value of adding more machines:
 
 R9 8945HS: 2x performance for $4K (+80 TOPS, +480 GB RAM, +10 TB)
 Framework: 2.25x performance for $4K (+100 TOPS, +256 GB RAM, +0 TB)
+September 6, 2025
+-----------------
+Minisforum will be offering a Strix Halo product soon: MS-S1 Max AI.
+https://videocardz.com/newz/minisforum-ms-s1-max-to-feature-ryzen-ai-max-395-up-to-160w-and-usb4-v2
+
+USB4 v2 support - 80 Gbps connectivity!
+
+Let's assume they use something roughly equivalent to this mainboard:
+https://frame.work/products/framework-desktop-mainboard-amd-ryzen-ai-max-300-series?v=FRAFMK0004
+
+$1300 retail = $925 cost ($785 motherboard/CPU + $140 RAM)
+If Minisforum operates at razor-thin margins (25% instead of 40%)...
+
+$1,000 cost -> $1,250 retail
+
+TL;DR: I expect to be able to purchase 200 TOPS for $5K within 6 months.
+Framework would be $4K for +100 TOPS.
+My existing UM890 Pro platform is $5K for +100 TOPS.
+
+6x UM890: $4800, +96 TOPS, +576 GB RAM, +6 TB storage
+4x MS-S1 Max: $5000, +200 TOPS, +512 GB RAM, +4 TB storage
+2x Framework: $4000, +100 TOPS, +256 GB RAM, +0 TB storage
+
