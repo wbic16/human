@@ -64713,7 +64713,16 @@ retweets: 0
 in_reply_to_id: 1832521207566233677
 in_reply_to_user: azlenelza
 
-@azlenelza oh this is awesome, though the circular arrangement is so much harder to scan than it would be if it was a vertical listid: 1832456421360988509
+@azlenelza oh this is awesome, though the circular arrangement is so much harder to scan than it would be if it was a vertical listid: 1965459469888094498
+created_at: 2025-09-09T16:57:08Z
+url: https://x.com/cube_flipper/status/1965459469888094498
+kind: reply
+likes: 3
+retweets: 0
+in_reply_to_id: 1965454025702465810
+in_reply_to_user: nervewing
+
+@nervewing it's a pretty simple app, too. like if it's feature-stable and you're not actively working on it the primary maintenance costs for looking after an iOS app generally come once a year when Apple brings out a new SDK, which may break a few thingsid: 1832456421360988509
 created_at: 2024-09-07T16:30:30Z
 url: https://x.com/cube_flipper/status/1832456421360988509
 kind: reply
