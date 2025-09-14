@@ -37067,7 +37067,19 @@ thread_root: 22.6.10/7.6.10/1.1.19
 
 @webmasterdave @QualiaNerd @rgblong i will define "intuitive" valence as the valence a typical empathetic human observer would imagine a system possessing. so we'd evaluate a human and an LLM stating "i am happy and content" similarly.
 
-to define a function which can consume a clearly-bounded region of the physical fields and output something similar to intuitive valence – well, my expectation (which is far from being demonstrated) is that this would be simple (perhaps a handful of differential equations?) in the case of biological organisms, but in the case of the GPU hosting the LLM, this function would require a complete model of computation (including, for instance, the IEEE 754 floating point standard) in order to make this evaluationid: 1711153833605464556
+to define a function which can consume a clearly-bounded region of the physical fields and output something similar to intuitive valence – well, my expectation (which is far from being demonstrated) is that this would be simple (perhaps a handful of differential equations?) in the case of biological organisms, but in the case of the GPU hosting the LLM, this function would require a complete model of computation (including, for instance, the IEEE 754 floating point standard) in order to make this evaluationid: 1967197135751008614
+created_at: 2025-09-14T12:02:00Z
+url: https://x.com/cube_flipper/status/1967197135751008614
+kind: thread
+likes: 1
+retweets: 0
+thread_id: 1967196838400061504
+in_reply_to_id: 1967196838400061504
+in_reply_to_user: cube_flipper
+answers: 22.6.10/8.7.11/1.1.36
+thread_root: 22.6.10/8.7.11/1.1.36
+
+@RogerThisdell works the same as odansetron https://x.com/cube_flipper/status/1704687709875286362id: 1711153833605464556
 created_at: 2023-10-08T22:57:20Z
 url: https://x.com/cube_flipper/status/1711153833605464556
 kind: reply
