@@ -14340,7 +14340,16 @@ in_reply_to_user: cube_flipper
 answers: 18.5.6/5.7.14/1.1.10
 thread_root: 18.5.6/6.6.8/1.1.7
 
-(self-crit, there are coloured edges here which are probably incorrect, if i was gonna do this *properly* i'd convert this to Lab colour space, then convert the lightness channel to the frequency domain, truncate some of the higher frequencies, and then convert everything back) [photo]id: 1641240572701859841
+(self-crit, there are coloured edges here which are probably incorrect, if i was gonna do this *properly* i'd convert this to Lab colour space, then convert the lightness channel to the frequency domain, truncate some of the higher frequencies, and then convert everything back) [photo]id: 1974481886438207656
+created_at: 2025-10-04T14:29:00Z
+url: https://x.com/cube_flipper/status/1974481886438207656
+kind: reply
+likes: 0
+retweets: 0
+in_reply_to_id: 1974470148691267859
+in_reply_to_user: normal_brandon1
+
+@normal_brandon1 @robinhanson some journalists are stinkier than others dudeid: 1641240572701859841
 created_at: 2023-03-30T00:46:59Z
 url: https://x.com/cube_flipper/status/1641240572701859841
 kind: original
