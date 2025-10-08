@@ -3627,7 +3627,16 @@ retweets: 0
 in_reply_to_id: 1929729024819159264
 in_reply_to_user: delatonero
 
-@DeLatonero [photo]id: 1921208431513379035
+@DeLatonero [photo]id: 1976025062051545114
+created_at: 2025-10-08T20:41:02Z
+url: https://x.com/cube_flipper/status/1976025062051545114
+kind: reply
+likes: 5
+retweets: 0
+in_reply_to_id: 1976022357656711666
+in_reply_to_user: arithmoquine
+
+@arithmoquine 👀 [photo]id: 1921208431513379035
 created_at: 2025-05-10T14:19:19Z
 url: https://x.com/cube_flipper/status/1921208431513379035
 kind: reply
