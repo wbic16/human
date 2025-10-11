@@ -607,7 +607,16 @@ retweets: 0
 in_reply_to_id: 1901811138742096029
 in_reply_to_user: voooooogel
 
-@voooooogel outrageousid: 1926221564313276542
+@voooooogel outrageousid: 1977149855211700624
+created_at: 2025-10-11T23:10:33Z
+url: https://x.com/cube_flipper/status/1977149855211700624
+kind: reply
+likes: 8
+retweets: 0
+in_reply_to_id: 1977125932906561856
+in_reply_to_user: rogerthisdell
+
+@RogerThisdell omfgid: 1926221564313276542
 created_at: 2025-05-24T10:19:43Z
 url: https://x.com/cube_flipper/status/1926221564313276542
 kind: thread
