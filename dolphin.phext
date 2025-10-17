@@ -60371,7 +60371,19 @@ retweets: 0
 in_reply_to_id: 1947487468770426944
 in_reply_to_user: liron
 
-@liron can you expand on where that 'neuron energy per bit' figure comes from?id: 1649891972293988354
+@liron can you expand on where that 'neuron energy per bit' figure comes from?id: 1979169265417638244
+created_at: 2025-10-17T12:54:58Z
+url: https://x.com/cube_flipper/status/1979169265417638244
+kind: thread
+likes: 1
+retweets: 0
+thread_id: 1979167891401437288
+in_reply_to_id: 1979167891401437288
+in_reply_to_user: cube_flipper
+answers: 26.6.8/7.7.12/1.1.46
+thread_root: 26.6.8/7.7.12/1.1.46
+
+@eshear @Malcolm_Ocean @softmaxresearch (so far as "free energy" goes, i mostly think of it in terms of a spatial or spatiotemporal deformation penalty, think the Frank free energy from nematics, exchange energy in magnetism, or elastic energy in solid mechanics, only applied to the phenomenal fields)id: 1649891972293988354
 created_at: 2023-04-22T21:44:34Z
 url: https://x.com/cube_flipper/status/1649891972293988354
 kind: reply
