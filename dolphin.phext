@@ -57710,7 +57710,16 @@ retweets: 0
 in_reply_to_id: 1845495574092825012
 in_reply_to_user: willowchem
 
-@WillowChem a long time ago i learned to accept that this sort of thing can't really be learned/improved on much and decided to just roll with it. i find reading through symbolic representation of maths a fairly labourious, manual process but things work fine once converted to shapesid: 1969481233429049754
+@WillowChem a long time ago i learned to accept that this sort of thing can't really be learned/improved on much and decided to just roll with it. i find reading through symbolic representation of maths a fairly labourious, manual process but things work fine once converted to shapesid: 1979706717253316628
+created_at: 2025-10-19T00:30:37Z
+url: https://x.com/cube_flipper/status/1979706717253316628
+kind: reply
+likes: 1
+retweets: 0
+in_reply_to_id: 1979700788705501374
+in_reply_to_user: crinzo_
+
+@crinzo_ awrgh i think there might be but the time when i would have understood this relationship was during the time when i turned my brain into a sponge in order to port an FrFT implementation from python over to swift and it now escapes me. i think the implementation goes chirp-multiply -> FFT -> chirp-multiply. or something. i will look at the code again tomorrowid: 1969481233429049754
 created_at: 2025-09-20T19:18:11Z
 url: https://x.com/cube_flipper/status/1969481233429049754
 kind: thread
