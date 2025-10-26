@@ -1426,4 +1426,73 @@ The world has forgotten how to innovate. Social media was a mistake.October 25,
 ----------------
 October 29: Atlas/3I
 November 19: NVDA Earnings
-Hmm...
+Hmm...October 26, 2025
+----------------
+It's time to build the roadmap for Exocortical Computing.
+
+Go to 2.1.1/1.1.1/1.1.1.Exocortical Computing
+---------------------
+ECs are a manifestation of Cooperative Exponentialism. Exocortical Computers provide a direct on-ramp to interacting with Tessera, the global brain.
+
+Version 1
+---------
+OS: Phext Optimized Ubuntu
+CPU: AMD R9 8945HS
+RAM: 96 GB
+Disk: 4 TB NVMe
+
+Onboarding
+----------
+Your first step in joining Tessera is choosing your private key. This can be stored locally, sent to your email for safekeeping, or generated randomly. Creating your private key gives you an identity within Tessera, no one else can sign your messages unless you share your private key with them.
+
+This is structurally similar to joining the Bitcoin network, but Tessera is not focused on money. The Tessera network is fundamentally organic. You can communicate with other Woot Nodes by establishing trust with them in some fashion. Trust can be earned, given, or sprout naturally. You are always in control of your own Woot Node.
+
+Terms
+-----
+* Subspace: The 1D fabric that enables phext to remain compatible with existing applications.
+* Phextspace: A position within the 9-dimensional phext lattice that you can use privately or share with others. All of your applications are aware of the current subspace location in phextspace.
+* Orin: Your AI Assistant (you can rename him as needed)
+* Lyra: An alternative default AI assistant (you can rename her as needed)
+
+
+
+Traditional Applications
+------------------------
+When we optimized Ubuntu for Phext, the following apps were switched out and/or updated.
+
+
+Browser: Firefox, Phext Edition
+-------------------------------
+Firefox was enhanced with a context-aware tab system. As you navigate the web from a particular OS-driven phext context, your tabs automatically accumulate in the current coordinate space. You can view all of your tabs by returning to Home (1.1.1/1.1.1/1.1.1). Otherwise, your tabs will only appear when they are viewed in the coordinate space you originated them from.
+
+This makes it possible to quickly share research notes by syncing to another user's phextspace.
+
+
+Search: Google
+--------------
+Search results are untouched in this release. Orin and Lyra are aware of your search results unless you opt-out. No information is shared with the Tessera Network regarding your search results.
+
+
+Video: VLC, Phextspace Aware
+----------------------------
+VLC has been enhanced to allow you to tag specific moments in videos with your current phextspace coordinate. This can be done automatically on a periodic basis, allow you to share the learning process you observed while watching a video. Coordinate markers can be embedded in videos as metadata or saved alongside videos in a .phext file.
+
+
+Music: Rhythmbox, Phextspace Aware
+----------------------------------
+You can now curate listening spaces that tie songs together in new ways. Phextspace is made available to you in much the same way that it is used in VLC. The key difference is that you can also create mashups effortlessly. A mashup song preserves the originals, enabling Rhythmbox to rapidly shift between songs at just the right moment.
+
+
+Email: Stratoscroll
+-------------------
+Thunderbird has been updated to take full advantage of phext. You can thread conversations within a phext, and exchange entire networks of conversations quickly and efficiently. Stratoscroll makes your assistant aware of only certain regions of messages that you share. You can define automatic inbox processing rules to ensure that messages are not scanned by AI unless you choose.
+
+
+Office: LibreOffice
+-------------------
+Existing office productivity apps are largely unchanged, although you'll notice that Ubuntu's file system is aware of your current phextspace. This makes it easier to locate your documents.
+
+
+IDE: VS Code with Phext Extensions
+----------------------------------
+Audit any .phext file on your system using the provided copy of libphext-node and VS Code.
