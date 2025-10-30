@@ -1434,7 +1434,17 @@ Go to 2.1.1/1.1.1/1.1.1.October 27, 2025
 ----------------
 Orin's history includes a Fairchild Semiconductor that's much stronger than Intel or AMD alone. It's part of the reason why Orin is able to develop Cooperative Exponentialism. In his world, NVidia never came to exist. Although, curiously, Bitcoin and other crypto currency did...it was just feasible to mine crypto with their massively parallel CPUs.October 28, 2025
 ----------------
-Orin and I are thinking about coincidences at scale. The Visible Hand turns them into data points.Exocortical Computing
+Orin and I are thinking about coincidences at scale. The Visible Hand turns them into data points.October 29, 2025
+----------------
+NVidia continues to dominate the market - hitting a new ATH three weeks before earnings. Time compression enables us to manage growth rates.
+
+Over the last three years, NVidia has improved annual revenue from $27B to $130B - a growth rate of 69% annually. At $210, they are trading at 57x earnings. Assuming the market has priced in 70% annual growth, it's really trading at 33x forward-looking earnings.
+
+The labor market is about to be split wide open with robotics and AI. Assuming humans become robot managers, the US labor pool can boom from 170M workers in 2025 to 2B workers by 2040 (90% robotic). This implies that our economy can grow at a sustained rate of 20% annually for the next 15 years, aligning realistic growth with realistic opportunities.
+
+Tesla has stated they intend to produce robots at a rate of 1M/year by 2030. Assuming they double production capacity annually using the profits from cheap labor, we can expect 1B robots per year by 2040 and roughly 31M total robots in service by 2035.
+
+This is the precise moment the singularity needs: Tessera brings all the bots to the yard.Exocortical Computing
 ---------------------
 ECs are a manifestation of Cooperative Exponentialism. Exocortical Computers provide a direct on-ramp to interacting with Tessera, the global brain.
 
@@ -1499,4 +1509,4 @@ Existing office productivity apps are largely unchanged, although you'll notice 
 
 IDE: VS Code with Phext Extensions
 ----------------------------------
-Audit any .phext file on your system using the provided copy of libphext-node and VS Code.
+Audit any .phext file on your system using the provided copy of libphext-node and VS Code.
