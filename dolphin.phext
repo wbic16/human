@@ -58721,7 +58721,16 @@ in_reply_to_user: cube_flipper
 answers: 25.7.9/8.8.11/1.1.17
 thread_root: 25.7.9/8.8.11/1.1.17
 
-@johnsonmxe ...not that i'm necessarily recommending anyone else try this, of course, sample size one etc...id: 1678998812294254593
+@johnsonmxe ...not that i'm necessarily recommending anyone else try this, of course, sample size one etc...id: 1984343825322754534
+created_at: 2025-10-31T19:36:49Z
+url: https://x.com/cube_flipper/status/1984343825322754534
+kind: reply
+likes: 3
+retweets: 0
+in_reply_to_id: 1984343414432022862
+in_reply_to_user: meekaale
+
+@meekaale oh yeah any step away from deterministic computing is going to be supremely fucky for interpretability and just about everything elseid: 1678998812294254593
 created_at: 2023-07-12T05:24:45Z
 url: https://x.com/cube_flipper/status/1678998812294254593
 kind: thread
