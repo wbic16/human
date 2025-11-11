@@ -41059,7 +41059,19 @@ kind: original
 likes: 6
 retweets: 0
 
-might be looking for a place to stay or couchsurf in London next week, if anybody knows somewhere... likely from tuesday the 30th for one weekid: 1848531420530233417
+might be looking for a place to stay or couchsurf in London next week, if anybody knows somewhere... likely from tuesday the 30th for one weekid: 1988283996405723429
+created_at: 2025-11-11T16:33:39Z
+url: https://x.com/cube_flipper/status/1988283996405723429
+kind: thread
+likes: 0
+retweets: 0
+thread_id: 1988283376235934205
+in_reply_to_id: 1988283376235934205
+in_reply_to_user: cube_flipper
+answers: 22.7.8/8.8.14/1.1.25
+thread_root: 22.7.8/8.8.14/1.1.25
+
+@sidgreddy i was experimenting with dennis klatt's 1978 cascade/parallel bandpass filter design but ultimately i switched to just morphing together fourier transforms of samples of my own voice, that sorta worked https://www.fon.hum.uva.nl/david/ma_ssp/doc/Klatt-1980-JAS000971.pdfid: 1848531420530233417
 created_at: 2024-10-22T01:06:49Z
 url: https://x.com/cube_flipper/status/1848531420530233417
 kind: reply
