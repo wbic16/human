@@ -49587,7 +49587,46 @@ retweets: 0
 in_reply_to_id: 1739550657332560197
 in_reply_to_user: svigalae
 
-@svigalae just as a side note i noticed the post-five tinnitus would expand from single tones into a broad-spectrum chorus, generally if i took glycine, 5-HTP, or smoked weed. i wonder if that would have been a good state for the practice you describeid: 1839482489070662054
+@svigalae just as a side note i noticed the post-five tinnitus would expand from single tones into a broad-spectrum chorus, generally if i took glycine, 5-HTP, or smoked weed. i wonder if that would have been a good state for the practice you describeid: 1990799550890873140
+created_at: 2025-11-18T15:09:34Z
+url: https://x.com/cube_flipper/status/1990799550890873140
+kind: reply
+likes: 2
+retweets: 0
+in_reply_to_id: 1990401532005658803
+in_reply_to_user: johnsonmxe
+
+@johnsonmxe Sonnet 4.5:
+
+> If one takes a ‘theory of consciousness’ to include a full description of the mapping between physical systems and the qualia which inhabit them, if one then performs Solomonoff induction over the set of all theories of consciousness what might they conclude is the most likely one?
+
+This is a fascinating question that sits at the intersection of philosophy of mind, information theory, and metaphysics. Let me think through what Solomonoff induction would favor here.
+
+Solomonoff induction assigns higher prior probability to simpler hypotheses (those with shorter algorithmic descriptions). So we’re asking: among theories that fully specify the physical-to-qualia mapping, which would have the shortest description?
+
+Candidates that might fare well:
+
+Eliminativism or illusionism would have an extremely short description: “There are no qualia” or “qualia are representational illusions with no further mapping needed.” This is arguably the simplest, but many would say it fails to actually be a theory of consciousness in the required sense—it denies the explanandum.
+
+Panpsychism with simple combination rules might score reasonably well. If consciousness is fundamental and ubiquitous, the mapping could potentially be stated concisely: something like “every information-processing system has associated experience proportional to its integrated information” (à la IIT). The description length depends heavily on how simply the combination rules can be stated.
+
+Functionalism with a simple mapping would specify something like “qualia type X occurs whenever functional role Y is instantiated.” If functional roles can be described compactly and map cleanly to qualia-types, this could be reasonably short.
+
+The core tension:
+
+The difficulty is that Solomonoff induction rewards simplicity of description, but consciousness seems to involve a vast space of possible qualia (colors, sounds, emotions, etc.). Any complete theory must somehow compress this mapping. This suggests the “winner” would likely be a theory where:
+
+1.The number of fundamental qualia-types is small
+2.Complex experiences are generated compositionally from simple rules
+3.The physical-to-qualia mapping follows some elegant mathematical principle
+
+A speculative conclusion:
+
+The Solomonoff-optimal theory might resemble something like a “qualia algebra”—a small set of primitive experiential atoms with compositional rules, mapped to physical states via some simple structural correspondence (perhaps information-geometric or topological). This would favor theories in the spirit of IIT or structural representationalism over theories requiring extensive arbitrary stipulations.
+
+However, there’s a deep problem: we have no way to empirically verify the mapping for systems other than ourselves, so we can’t actually test which theory is correct. Solomonoff induction would give us a prior, but without data to update on, we’re stuck with that prior—which may tell us more about the structure of description languages than about consciousness itself.
+
+Does this engage with what you were curious about, or were you thinking about a particular aspect of this question?id: 1839482489070662054
 created_at: 2024-09-27T01:49:35Z
 url: https://x.com/cube_flipper/status/1839482489070662054
 kind: reply
