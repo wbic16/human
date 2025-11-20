@@ -74734,7 +74734,16 @@ in_reply_to_user: cube_flipper
 answers: 31.6.14/7.6.11/1.1.1
 thread_root: 31.6.14/7.6.11/1.1.1
 
-@eshear anyway instead of a filesystem you just have this big AST, that's itid: 1831387194457780486
+@eshear anyway instead of a filesystem you just have this big AST, that's itid: 1991558390452220060
+created_at: 2025-11-20T17:24:56Z
+url: https://x.com/cube_flipper/status/1991558390452220060
+kind: reply
+likes: 1
+retweets: 0
+in_reply_to_id: 1991533848577077532
+in_reply_to_user: x_snowfield
+
+@x_snowfield @CEOLandshark you are maybe missing @Deepneuronid: 1831387194457780486
 created_at: 2024-09-04T17:41:47Z
 url: https://x.com/cube_flipper/status/1831387194457780486
 kind: original
