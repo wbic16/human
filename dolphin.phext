@@ -77003,7 +77003,14 @@ retweets: 0
 in_reply_to_id: 1959253482910646610
 in_reply_to_user: andymasley
 
-@AndyMasley instead of the atoms themselves try considering the EM fields around the atomsid: 1938083223784829115
+@AndyMasley instead of the atoms themselves try considering the EM fields around the atomsid: 1994228748946678044
+created_at: 2025-11-28T02:15:59Z
+url: https://x.com/cube_flipper/status/1994228748946678044
+kind: original
+likes: 38
+retweets: 0
+
+okay all rendered *.html pages on my blog should also now have a raw *.md available too – should save tokens if getting an LLM to read thingsid: 1938083223784829115
 created_at: 2025-06-26T03:53:43Z
 url: https://x.com/cube_flipper/status/1938083223784829115
 kind: reply
