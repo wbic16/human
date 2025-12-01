@@ -4074,7 +4074,16 @@ retweets: 0
 in_reply_to_id: 1992029390474199415
 in_reply_to_user: 1thousandfaces_
 
-@1thousandfaces_ [photo]id: 1921208431513379035
+@1thousandfaces_ [photo]id: 1995345508030964067
+created_at: 2025-12-01T04:13:35Z
+url: https://x.com/cube_flipper/status/1995345508030964067
+kind: reply
+likes: 1
+retweets: 0
+in_reply_to_id: 1995246859892490750
+in_reply_to_user: commercial_page
+
+@ProjectionArte [photo]id: 1921208431513379035
 created_at: 2025-05-10T14:19:19Z
 url: https://x.com/cube_flipper/status/1921208431513379035
 kind: reply
