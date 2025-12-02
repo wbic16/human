@@ -74148,7 +74148,16 @@ retweets: 0
 in_reply_to_id: 1796568702768550297
 in_reply_to_user: nickcammarata
 
-@nickcammarata (from steven lehar's book http://slehar.com/wwwRel/GrandIllusion.pdf) [photo]id: 1756048977404035214
+@nickcammarata (from steven lehar's book http://slehar.com/wwwRel/GrandIllusion.pdf) [photo]id: 1995656612170903606
+created_at: 2025-12-02T00:49:48Z
+url: https://x.com/cube_flipper/status/1995656612170903606
+kind: reply
+likes: 2
+retweets: 0
+in_reply_to_id: 1995654109819797553
+in_reply_to_user: tr_babb
+
+@tr_babb @bryan_johnson i think it should be pretty challenging for the brain to implement a fourier transform for auditory frequency ranges when they surpass neural firing frequencies by multiple orders of magnitude. but what do you think your brain is doing in order to dial into the different components of this image?id: 1756048977404035214
 created_at: 2024-02-09T20:14:36Z
 url: https://x.com/cube_flipper/status/1756048977404035214
 kind: thread
