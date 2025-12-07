@@ -2767,7 +2767,16 @@ retweets: 0
 in_reply_to_id: 1997771299796701310
 in_reply_to_user: theawakecoach
 
-@theawakecoach tyty~id: 1800984500131766361
+@theawakecoach tyty~id: 1997777431764377793
+created_at: 2025-12-07T21:17:11Z
+url: https://x.com/cube_flipper/status/1997777431764377793
+kind: reply
+likes: 1
+retweets: 0
+in_reply_to_id: 1997776487533949369
+in_reply_to_user: celestepoasts
+
+@celestepoasts tyty~id: 1800984500131766361
 created_at: 2024-06-12T20:12:20Z
 url: https://x.com/cube_flipper/status/1800984500131766361
 kind: reply
