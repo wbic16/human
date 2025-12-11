@@ -49164,7 +49164,30 @@ retweets: 0
 in_reply_to_id: 1900390133402087704
 in_reply_to_user: whiskeytuesday
 
-@WhiskeyTuesday (i think you're good, this assumes that colour spaces support multiplicative operations, and it's not clear that they do)id: 1814044031741214934
+@WhiskeyTuesday (i think you're good, this assumes that colour spaces support multiplicative operations, and it's not clear that they do)id: 1998973658459681093
+created_at: 2025-12-11T04:30:33Z
+url: https://x.com/cube_flipper/status/1998973658459681093
+kind: reply
+likes: 5
+retweets: 0
+in_reply_to_id: 1998962646696272280
+in_reply_to_user: apriisr
+
+@ApriiSR @abramdemski i should try to explain our worldview, stop me where this stops making sense i guess lol
+
+1. i believe that subjective experience/phenomenal consciousness corresponds to the phenomenal "fields", visual field, somatic field etc; a volumetric representation of external reality. there exist illustrations of this which i relate to, such as Steven Lehar's "bubble world" ones (see first illustration).
+
+2. one candidate theory of consciousness i am sympathetic to is the EM field theory of consciousness; the idea that there may be patterns of the EM field within the brain which correspond to subjective experience (i wrote a summary doc for one EM field theory here https://smoothbrains.net/posts/2023-06-01-an-introduction-to-susan-pockett.html). i guess this is a form of panpsychism; i assume that all the physical fields are conscious, but it just so happens that the EM field is the one which actually has interesting things going on within it.
+
+3. it seems implausible that there might be fields or even neural representations that are shaped exactly like the volumetric representation in the first illustration; but there may well be fields that resemble a warped or distorted version, perhaps warped across the neocortex (see second illustration).
+
+4. if these fields had natural internal boundaries – perhaps regions of total or near-total internal reflection – these could be said to have separate subjective experience from their neighbours. then, if the permittivity within these fields was modulated, then they could be set up such a way that the light/radiation inside them bends/reflects within them in a way that creates the illusion of a one-to-one volumetric representation from the inside (as per the "path integrals" post). this is andrés' addition. in this sense you *are* the "light", or EM radiation within these bounded regions of spacetime.
+
+it makes sense to me that evolution might converge upon something like this; i think there are computational benefits to such representations that i could elaborate on further.
+
+when i spoke to joscha bach a while ago he was confused by this stance in a way that suggested to me that he understood everything up to point 4. unfortunately i didn't get the chance to get into it.
+
+in this sense, physicalism still has to elaborate (as per @thoth_iv's comment https://x.com/thoth_iv/status/1998963240873742579), but point 4. still strikes me as simpler and less arbitrary than any computationalist bridge one might propose.id: 1814044031741214934
 created_at: 2024-07-18T21:06:15Z
 url: https://x.com/cube_flipper/status/1814044031741214934
 kind: reply
