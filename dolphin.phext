@@ -41130,7 +41130,19 @@ retweets: 0
 in_reply_to_id: 1840777654212976930
 in_reply_to_user: None
 
-@vortuosity @Waymo aha, i just sorta made a subtle/sudden course change such that we would have collided in a few seconds and it just stopped, in like ~200 ms. no other traffic around.id: 1686769373019848704
+@vortuosity @Waymo aha, i just sorta made a subtle/sudden course change such that we would have collided in a few seconds and it just stopped, in like ~200 ms. no other traffic around.id: 2000657028470255841
+created_at: 2025-12-15T19:59:40Z
+url: https://x.com/cube_flipper/status/2000657028470255841
+kind: thread
+likes: 5
+retweets: 0
+thread_id: 2000653278334652586
+in_reply_to_id: 2000656259520029067
+in_reply_to_user: cube_flipper
+answers: 22.6.8/8.8.18/1.2.9
+thread_root: 22.6.8/8.6.10/1.1.99
+
+(i believe the above formula has a typo, 'twist' should be (𝐧⋅curl 𝐧)²)id: 1686769373019848704
 created_at: 2023-08-02T16:02:11Z
 url: https://x.com/cube_flipper/status/1686769373019848704
 kind: reply
