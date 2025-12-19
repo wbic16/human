@@ -43601,7 +43601,19 @@ retweets: 0
 in_reply_to_id: 1687615156937994241
 in_reply_to_user: hormeze
 
-@hormeze go on...id: 1692033129496858863
+@hormeze go on...id: 2001847679119425860
+created_at: 2025-12-19T02:50:53Z
+url: https://x.com/cube_flipper/status/2001847679119425860
+kind: thread
+likes: 1
+retweets: 0
+thread_id: 2001776808283508968
+in_reply_to_id: 2001776852382421104
+in_reply_to_user: cube_flipper
+answers: 22.7.9/8.6.10/1.1.62
+thread_root: 22.7.9/8.7.11/1.1.61
+
+@qualiacomputer found the relevant project it is https://ego-exo4d-data.orgid: 1692033129496858863
 created_at: 2023-08-17T04:38:29Z
 url: https://x.com/cube_flipper/status/1692033129496858863
 kind: reply
