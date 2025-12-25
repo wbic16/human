@@ -29962,7 +29962,19 @@ retweets: 0
 in_reply_to_id: 1991719735344677183
 in_reply_to_user: viemccoy
 
-@viemccoy [animated_gif]id: 2004316531044634713
+@viemccoy [animated_gif]id: 2004317062894952591
+created_at: 2025-12-25T22:23:20Z
+url: https://x.com/cube_flipper/status/2004317062894952591
+kind: thread
+likes: 2
+retweets: 0
+thread_id: 2004316531044634713
+in_reply_to_id: 2004316813937815700
+in_reply_to_user: cube_flipper
+answers: 20.7.7/9.7.11/1.1.4
+thread_root: 20.7.7/7.7.10/1.1.3
+
+@allTheYud @webmasterdave @Williamjoyful @XFreeze i'd say that trying to relate it to more high level computational tasks like chess may be doable but likely obscures the low level dynamics (cc: @webmasterdave)id: 2004316531044634713
 created_at: 2025-12-25T22:21:14Z
 url: https://x.com/cube_flipper/status/2004316531044634713
 kind: reply
