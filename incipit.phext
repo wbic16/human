@@ -44,7 +44,11 @@ echo "For more information, study the text that appears at 1.1.1/1.1.1/1.1.7."
 exit
 TTSM: Time Travel State Machine
 
-Systems prior to the Singularity were hard to troubleshoot because they lacked visibility. TTSM offers visibility across all state transitions.TAOP: The Art of Phext
+Systems prior to the Singularity were hard to troubleshoot because they lacked visibility. TTSM offers visibility across all state transitions.
+
+We start by organizing memory in terms of temporal blocks. Whenever we write to memory, we target a particular logical time block. This is an important distinction, because it allows us to offer precise semantics for mutating state. Most modern languages lean into const objects, because it makes systems easier to reason about.
+
+TTSM flips mutability around entirely. Essentially, everything is always mutable, but history is always constant. You can only ever apply changes to future states.TAOP: The Art of Phext
 
 Phext moves us across the uncanny valley, turning plain text into an ASI-compatible artifact.MOAT: Mathematics of All Theory
 
