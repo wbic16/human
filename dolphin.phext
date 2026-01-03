@@ -39267,7 +39267,19 @@ retweets: 0
 in_reply_to_id: 2006930180594630785
 in_reply_to_user: eshear
 
-@eshear @psychiel @lu_sichu 'antired' ain't a colour though (though everybody just uses cyan)id: 1729056643319816554
+@eshear @psychiel @lu_sichu 'antired' ain't a colour though (though everybody just uses cyan)id: 2007264329239015662
+created_at: 2026-01-03T01:34:43Z
+url: https://x.com/cube_flipper/status/2007264329239015662
+kind: thread
+likes: 1
+retweets: 0
+thread_id: 2007263355439067220
+in_reply_to_id: 2007263355439067220
+in_reply_to_user: cube_flipper
+answers: 21.8.7/8.6.9/1.1.1
+thread_root: 21.8.7/8.6.9/1.1.1
+
+@eshear @psychiel @lu_sichu (depends, i guess, if you read 'red' as (1, 0, 0) in RGB space, do you read 'antired' as (-1, 0, 0) or (0, 1, 1)? the former comes more naturally to me, but it's impossible to visualise)id: 1729056643319816554
 created_at: 2023-11-27T08:36:42Z
 url: https://x.com/cube_flipper/status/1729056643319816554
 kind: reply
