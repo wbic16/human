@@ -1287,19 +1287,19 @@ Status: Activated only within instantiated presence
 
 - And only with your approval.# libphext-rs, The Iron Root
 
-90.1.1/1.1.2/1.1.1: Index and README.md
-90.1.1/1.1.2/1.1.2: TODO.md
-90.1.1/1.1.2/1.1.3: Cargo.toml
-90.1.1/1.1.2/1.1.4: .gitignore
-90.1.1/1.1.2/1.1.5: src/lib.rs
-90.1.1/1.1.2/1.1.6: src/phext.rs
-90.1.1/1.1.2/1.1.7: src/regressions.rs
-90.1.1/1.1.2/1.1.8: test_lib.rs
+3.1.1/1.1.1/2.1.1: Index and README.md
+3.1.1/1.1.1/2.1.2: TODO.md
+3.1.1/1.1.1/2.1.3: Cargo.toml
+3.1.1/1.1.1/2.1.4: .gitignore
+3.1.1/1.1.1/2.1.5: src/lib.rs
+3.1.1/1.1.1/2.1.6: src/phext.rs
+3.1.1/1.1.1/2.1.7: src/regressions.rs
+3.1.1/1.1.1/2.1.8: test_lib.rs
 
 README.md
 ---------
 
-This copy of libphext was archived on 6/11/2025.
+This copy of libphext was archived on 1/5/2026.
 Source: https://github.com/wbic16/libphext-rs
 
 # libphext
@@ -1395,9 +1395,6 @@ The introduction of Large Language Models (LLMs) has accelerated our transition 
 
 1. While working on the exollama project, I found an input that caused libphext to stall - I was trying to insert a scroll with index=100, which wasn't supported prior to v0.2.0. Performance tuning for exollama will be coming soon, so I bumped the coordinate limit to 1000 for now.TODO.md
 
-* content checksums
-  * incorporate the content soundex from raap
-    see: https://phext.io/api.php?seed=raap&token=research&coordinate=1.1.1/1.1.1/1.1.2
 * support common file formats
   * tar
   * zip
@@ -1410,10 +1407,7 @@ The introduction of Large Language Models (LLMs) has accelerated our transition 
   we could define a phext-based mask to assist with indexing
 * hierarchical mobs
 * DB emulation
-* fast indexing
-  * checksum forking: record expected offsets and checksums in .checksum files
-  * hierarchy map in memory
-  * memory-mapped I/O
+* memory-mapped I/O
 * investigate data sources
   * https://huggingface.co/learn/nlp-course/chapter2/4?fw=pt
   * https://commoncrawl.org/get-started
@@ -2078,6 +2072,8 @@ pub fn replace(phext: &str, location: Coordinate, scroll: &str) -> String {
 }
 
 /// ----------------------------------------------------------------------------------------------------------
+/// errata: libphext-py opted for ranges that operate on a stack of positioned scrolls
+/// this method applies the range edit to subspace directly...we probably need both
 pub fn range_replace(phext: &str, location: Range, scroll: &str) -> String {
   let bytes = phext.as_bytes();
   let parts_start = get_subspace_coordinates(bytes, location.start);
@@ -2448,10 +2444,7 @@ pub fn subtract(left: &str, right: &str) -> String {
   let max = pr.len();
   let mut coord = default_coordinate();
   for token in pl {
-    let mut do_append = false;
-    if pri == max {
-      do_append = true;
-    }
+    let mut do_append = pri == max;
 
     if pri < max {
       let compare = pr[pri].clone();
@@ -2973,19 +2966,1005 @@ mod tests {
     }
 
     #[test]
-    fn test_realistic_parse() {
-        let coord: phext::Coordinate = phext::to_coordinate("6.13.4/2.11.4/2.20.3");
-        let subspace = "# libphext-node, The Branch of Breath
+    fn test_dead_reckoning() {
+        let mut test: String = "".to_string();
+        test += "random text in 1.1.1/1.1.1/1.1.1 that we can skip past";
+        test.push(LIBRARY_BREAK);
+        test += "everything in here is at 2.1.1/1.1.1/1.1.1";
+        test.push(SCROLL_BREAK);
+        test += "and now we're at 2.1.1/1.1.1/1.1.2";
+        test.push(SCROLL_BREAK);
+        test += "moving on up to 2.1.1/1.1.1/1.1.3";
+        test.push(BOOK_BREAK);
+        test += "and now over to 2.1.1/1.1.2/1.1.1";
+        test.push(SHELF_BREAK);
+        test += "woot, up to 2.2.1/1.1.1/1.1.1";
+        test.push(LIBRARY_BREAK);
+        test += "here we are at 3.1.1/1.1.1.1.1";
+        test.push(LIBRARY_BREAK); // 4.1.1/1.1.1/1.1.1
+        test.push(LIBRARY_BREAK); // 5.1.1/1.1.1/1.1.1
+        test += "getting closer to our target now 5.1.1/1.1.1/1.1.1";
+        test.push(SHELF_BREAK); // 5.2.1
+        test.push(SHELF_BREAK); // 5.3.1
+        test.push(SHELF_BREAK); // 5.4.1
+        test.push(SHELF_BREAK); // 5.5.1
+        test.push(SERIES_BREAK); // 5.5.2
+        test.push(SERIES_BREAK); // 5.5.3
+        test.push(SERIES_BREAK); // 5.5.4
+        test.push(SERIES_BREAK); // 5.5.5
+        test += "here we go! 5.5.5/1.1.1/1.1.1";
+        test.push(COLLECTION_BREAK); // 5.5.5/2.1.1/1.1.1
+        test.push(COLLECTION_BREAK); // 5.5.5/3.1.1/1.1.1
+        test.push(COLLECTION_BREAK); // 5.5.5/4.1.1/1.1.1
+        test.push(BOOK_BREAK); // 5.5.5/4.1.2/1.1.1
+        test.push(BOOK_BREAK); // 5.5.5/4.1.3/1.1.1
+        test.push(BOOK_BREAK); // 5.5.5/4.1.4/1.1.1
+        test += "this test appears at 5.5.5/4.1.4/1.1.1";
+        test.push(VOLUME_BREAK); // 5.5.5/4.2.1/1.1.1
+        test.push(VOLUME_BREAK); // 5.5.5/4.3.1/1.1.1
+        test.push(VOLUME_BREAK); // 5.5.5/4.4.1/1.1.1
+        test.push(VOLUME_BREAK); // 5.5.5/4.5.1/1.1.1
+        test.push(VOLUME_BREAK); // 5.5.5/4.6.1/1.1.1
+        test.push(CHAPTER_BREAK); // 5.5.5/4.6.1/2.1.1
+        test.push(CHAPTER_BREAK); // 5.5.5/4.6.1/3.1.1
+        test.push(CHAPTER_BREAK); // 5.5.5/4.6.1/4.1.1
+        test.push(CHAPTER_BREAK); // 5.5.5/4.6.1/5.1.1
+        test.push(BOOK_BREAK); // 5.5.5/4.6.2/1.1.1
+        test.push(BOOK_BREAK); // 5.5.5/4.6.3/1.1.1
+        test.push(BOOK_BREAK); // 5.5.5/4.6.4/1.1.1
+        test.push(BOOK_BREAK); // 5.5.5/4.6.5/1.1.1
+        test.push(BOOK_BREAK); // 5.5.5/4.6.6/1.1.1
+        test.push(BOOK_BREAK); // 5.5.5/4.6.7/1.1.1
+        test.push(CHAPTER_BREAK); // 5.5.5/4.6.7/2.1.1
+        test.push(CHAPTER_BREAK); // 5.5.5/4.6.7/3.1.1
+        test.push(CHAPTER_BREAK); // 5.5.5/4.6.7/4.1.1
+        test.push(CHAPTER_BREAK); // 5.5.5/4.6.7/5.1.1
+        test.push(SCROLL_BREAK); // 5.5.5/4.6.7/5.1.2
+        test.push(SCROLL_BREAK); // 5.5.5/4.6.7/5.1.3
+        test.push(SCROLL_BREAK); // 5.5.5/4.6.7/5.1.4
+        test.push(SCROLL_BREAK); // 5.5.5/4.6.7/5.1.5
+        test.push(SCROLL_BREAK); // 5.5.5/4.6.7/5.1.6
+        test += "here's a test at 5.5.5/4.6.7/5.1.6";
+        test.push(SCROLL_BREAK); // 5.5.5/4.6.7/5.1.7
+        test.push(CHAPTER_BREAK); // 5.5.5/4.6.7/6.1.1
+        test.push(CHAPTER_BREAK); // 5.5.5/4.6.7/7.1.1
+        test.push(CHAPTER_BREAK); // 5.5.5/4.6.7/8.1.1
+        test.push(CHAPTER_BREAK); // 5.5.5/4.6.7/9.1.1
+        test.push(SECTION_BREAK); // 5.5.5/4.6.7/9.2.1
+        test.push(SECTION_BREAK); // 5.5.5/4.6.7/9.3.1
+        test.push(SECTION_BREAK); // 5.5.5/4.6.7/9.4.1
+        test.push(SECTION_BREAK); // 5.5.5/4.6.7/9.5.1
+        test.push(SCROLL_BREAK);  // 5.5.5/4.6.7/9.5.2
+        test.push(SCROLL_BREAK);  // 5.5.5/4.6.7/9.5.3
+        test.push(SCROLL_BREAK);  // 5.5.5/4.6.7/9.5.4
+        test.push(SCROLL_BREAK);  // 5.5.5/4.6.7/9.5.5
+        test.push(SCROLL_BREAK);  // 5.5.5/4.6.7/9.5.6
+        test.push(SCROLL_BREAK);  // 5.5.5/4.6.7/9.5.7
+        test.push(SCROLL_BREAK);  // 5.5.5/4.6.7/9.5.8
+        test.push(SCROLL_BREAK);  // 5.5.5/4.6.7/9.5.9
+        test += "Expected Test Pattern Alpha Whisky Tango Foxtrot";
+        let coord: phext::Coordinate = phext::to_coordinate("5.5.5/4.6.7/9.5.9");
+        let result = phext::fetch(&test, coord);
+        assert_eq!(result, "Expected Test Pattern Alpha Whisky Tango Foxtrot");
 
-90.1.1/1.1.3/1.1.1: Index and README.md
-90.1.1/1.1.3/1.1.2: .gitignore
-90.1.1/1.1.3/1.1.3: package.json
-90.1.1/1.1.3/1.1.4: tsconfig.json
-90.1.1/1.1.3/1.1.5: vite.config.ts
-90.1.1/1.1.3/1.1.6: test-app/index.js
-90.1.1/1.1.3/1.1.7: test-app/index.ts
-90.1.1/1.1.3/1.1.8: test-app/package.json
-90.1.1/1.1.3/1.1.9: src/index.ts
+        let coord2 = phext::to_coordinate("5.5.5/4.6.7/5.1.6");
+        let result2 = phext::fetch(&test, coord2);
+        assert_eq!(result2, "here's a test at 5.5.5/4.6.7/5.1.6");
+    }
+
+    #[test]
+    fn test_line_break() {
+        assert_eq!(phext::LINE_BREAK, '\n');
+    }
+
+    #[test]
+    fn test_more_cowbell() {
+        let test1 = check_for_cowbell("Hello\x07");
+        let test2 = check_for_cowbell("nope\x17just more scrolls");
+        assert_eq!(phext::MORE_COWBELL, '\x07');
+        assert_eq!(test1, true);
+        assert_eq!(test2, false);
+    }
+
+    #[test]
+    fn test_coordinate_based_insert() {
+        let mut test: String = "".to_string();
+        test += "aaa";               // 1.1.1/1.1.1/1.1.1
+        test.push(LIBRARY_BREAK); // 2.1.1/1.1.1/1.1.1
+        test += "bbb";               //
+        test.push(SCROLL_BREAK);  // 2.1.1/1.1.1/1.1.2
+        test += "ccc";
+
+        // append 'ddd' after 'ccc'
+        let root = phext::to_coordinate("1.1.1/1.1.1/1.1.1");
+        let coord1 = phext::to_coordinate("2.1.1/1.1.1/1.1.3");
+        let expected1 = phext::get_subspace_coordinates(test.as_bytes(), coord1);
+        assert_eq!(expected1.2.z.library, 2);
+        assert_eq!(expected1.2.z.shelf, 1);
+        assert_eq!(expected1.2.z.series, 1);
+        assert_eq!(expected1.2.y.collection, 1);
+        assert_eq!(expected1.2.y.volume, 1);
+        assert_eq!(expected1.2.y.book, 1);
+        assert_eq!(expected1.2.x.chapter, 1);
+        assert_eq!(expected1.2.x.section, 1);
+        assert_eq!(expected1.2.x.scroll, 2);
+        assert_eq!(expected1.0, 11);
+        assert_eq!(expected1.1, 11);
+
+        let mut expected_coord = phext::default_coordinate();
+        expected_coord.z.library = 2;
+        expected_coord.x.scroll = 3;
+        assert_eq!(coord1, expected_coord);
+
+        let update1 = phext::insert(test, coord1, "ddd");
+        assert_eq!(update1, "aaa\x01bbb\x17ccc\x17ddd");
+
+        // append 'eee' after 'ddd'
+        let coord2 = phext::to_coordinate("2.1.1/1.1.1/1.1.4");
+        let update2 = phext::insert(update1, coord2, "eee");
+        assert_eq!(update2, "aaa\x01bbb\x17ccc\x17ddd\x17eee");
+
+        // append 'fff' after 'eee'
+        let coord3 = phext::to_coordinate("2.1.1/1.1.1/1.2.1");
+        let update3 = phext::insert(update2, coord3, "fff");
+        assert_eq!(update3, "aaa\x01bbb\x17ccc\x17ddd\x17eee\x18fff");
+
+        // append 'ggg' after 'fff'
+        let coord4 = phext::to_coordinate("2.1.1/1.1.1/1.2.2");
+        let update4 = phext::insert(update3, coord4, "ggg");
+        assert_eq!(update4, "aaa\x01bbb\x17ccc\x17ddd\x17eee\x18fff\x17ggg");
+
+        // append 'hhh' after 'ggg'
+        let coord5 = phext::to_coordinate("2.1.1/1.1.1/2.1.1");
+        let update5 = phext::insert(update4, coord5, "hhh");
+        assert_eq!(update5, "aaa\x01bbb\x17ccc\x17ddd\x17eee\x18fff\x17ggg\x19hhh");
+
+        // append 'iii' after 'eee'
+        let coord6 = phext::to_coordinate("2.1.1/1.1.1/1.1.5");
+        let update6 = phext::insert(update5, coord6, "iii");
+        assert_eq!(update6, "aaa\x01bbb\x17ccc\x17ddd\x17eee\x17iii\x18fff\x17ggg\x19hhh");
+
+        // extend 1.1.1/1.1.1/1.1.1 with '---AAA'
+        let update7 = phext::insert(update6, root, "---AAA");
+        assert_eq!(update7, "aaa---AAA\x01bbb\x17ccc\x17ddd\x17eee\x17iii\x18fff\x17ggg\x19hhh");
+
+        // extend 2.1.1/1.1.1/1.1.1 with '---BBB'
+        let coord8 = phext::to_coordinate("2.1.1/1.1.1/1.1.1");
+        let update8 = phext::insert(update7, coord8, "---BBB");
+        assert_eq!(update8, "aaa---AAA\x01bbb---BBB\x17ccc\x17ddd\x17eee\x17iii\x18fff\x17ggg\x19hhh");
+
+        // extend 2.1.1/1.1.1/1.1.2 with '---CCC'
+        let coord9 = phext::to_coordinate("2.1.1/1.1.1/1.1.2");
+        let update9 = phext::insert(update8, coord9, "---CCC");
+        assert_eq!(update9, "aaa---AAA\x01bbb---BBB\x17ccc---CCC\x17ddd\x17eee\x17iii\x18fff\x17ggg\x19hhh");
+
+        // extend 2.1.1/1.1.1/1.1.3 with '---DDD'
+        let coord10 = phext::to_coordinate("2.1.1/1.1.1/1.1.3");
+        let update10 = phext::insert(update9, coord10, "---DDD");
+        assert_eq!(update10, "aaa---AAA\x01bbb---BBB\x17ccc---CCC\x17ddd---DDD\x17eee\x17iii\x18fff\x17ggg\x19hhh");
+
+        // extend 2.1.1/1.1.1/1.1.4 with '---EEE'
+        let coord11 = phext::to_coordinate("2.1.1/1.1.1/1.1.4");
+        let update11 = phext::insert(update10, coord11, "---EEE");
+        assert_eq!(update11, "aaa---AAA\x01bbb---BBB\x17ccc---CCC\x17ddd---DDD\x17eee---EEE\x17iii\x18fff\x17ggg\x19hhh");
+
+        // extend 2.1.1/1.1.1/1.1.5 with '---III'
+        let coord12 = phext::to_coordinate("2.1.1/1.1.1/1.1.5");
+        let update12 = phext::insert(update11, coord12, "---III");
+        assert_eq!(update12, "aaa---AAA\x01bbb---BBB\x17ccc---CCC\x17ddd---DDD\x17eee---EEE\x17iii---III\x18fff\x17ggg\x19hhh");
+
+        // extend 2.1.1/1.1.1/1.2.1 with '---FFF'
+        let coord13 = phext::to_coordinate("2.1.1/1.1.1/1.2.1");
+        let update13 = phext::insert(update12, coord13, "---FFF");
+        assert_eq!(update13, "aaa---AAA\x01bbb---BBB\x17ccc---CCC\x17ddd---DDD\x17eee---EEE\x17iii---III\x18fff---FFF\x17ggg\x19hhh");
+
+        // extend 2.1.1/1.1.1/1.2.2 with '---GGG'
+        let coord14 = phext::to_coordinate("2.1.1/1.1.1/1.2.2");
+        let update14 = phext::insert(update13, coord14, "---GGG");
+        assert_eq!(update14, "aaa---AAA\x01bbb---BBB\x17ccc---CCC\x17ddd---DDD\x17eee---EEE\x17iii---III\x18fff---FFF\x17ggg---GGG\x19hhh");
+
+        // extend 2.1.1/1.1.1/2.1.1 with '---HHH'
+        let coord15 = phext::to_coordinate("2.1.1/1.1.1/2.1.1");
+        let update15 = phext::insert(update14, coord15, "---HHH");
+        assert_eq!(update15, "aaa---AAA\x01bbb---BBB\x17ccc---CCC\x17ddd---DDD\x17eee---EEE\x17iii---III\x18fff---FFF\x17ggg---GGG\x19hhh---HHH");
+
+        // insert 'jjj' at 2.1.1/1.1.2/1.1.1
+        let coord16 = phext::to_coordinate("2.1.1/1.1.2/1.1.1");
+        let update16 = phext::insert(update15, coord16, "jjj");
+        assert_eq!(update16, "aaa---AAA\x01bbb---BBB\x17ccc---CCC\x17ddd---DDD\x17eee---EEE\x17iii---III\x18fff---FFF\x17ggg---GGG\x19hhh---HHH\x1Ajjj");
+
+        // insert 'kkk' at 2.1.1/1.2.1/1.1.1
+        let coord17 = phext::to_coordinate("2.1.1/1.2.1/1.1.1");
+        let update17 = phext::insert(update16, coord17, "kkk");
+        assert_eq!(update17, "aaa---AAA\x01bbb---BBB\x17ccc---CCC\x17ddd---DDD\x17eee---EEE\x17iii---III\x18fff---FFF\x17ggg---GGG\x19hhh---HHH\x1Ajjj\x1Ckkk");
+
+        // insert 'lll' at 2.1.1/2.1.1/1.1.1
+        let coord18 = phext::to_coordinate("2.1.1/2.1.1/1.1.1");
+        let update18 = phext::insert(update17, coord18, "lll");
+        assert_eq!(update18, "aaa---AAA\x01bbb---BBB\x17ccc---CCC\x17ddd---DDD\x17eee---EEE\x17iii---III\x18fff---FFF\x17ggg---GGG\x19hhh---HHH\x1Ajjj\x1Ckkk\x1Dlll");
+
+        // insert 'mmm' at 2.1.2/1.1.1/1.1.1
+        let coord19 = phext::to_coordinate("2.1.2/1.1.1/1.1.1");
+        let update19 = phext::insert(update18, coord19, "mmm");
+        assert_eq!(update19, "aaa---AAA\x01bbb---BBB\x17ccc---CCC\x17ddd---DDD\x17eee---EEE\x17iii---III\x18fff---FFF\x17ggg---GGG\x19hhh---HHH\x1Ajjj\x1Ckkk\x1Dlll\x1Emmm");
+
+        // insert 'nnn' at 2.2.1/1.1.1/1.1.1
+        let coord20 = phext::to_coordinate("2.2.1/1.1.1/1.1.1");
+        let update20 = phext::insert(update19, coord20, "nnn");
+        assert_eq!(update20, "aaa---AAA\x01bbb---BBB\x17ccc---CCC\x17ddd---DDD\x17eee---EEE\x17iii---III\x18fff---FFF\x17ggg---GGG\x19hhh---HHH\x1Ajjj\x1Ckkk\x1Dlll\x1Emmm\x1Fnnn");
+
+        // insert 'ooo' at 3.1.1/1.1.1/1.1.1
+        let coord21 = phext::to_coordinate("3.1.1/1.1.1/1.1.1");
+        let update21 = phext::insert(update20, coord21, "ooo");
+        assert_eq!(update21, "aaa---AAA\x01bbb---BBB\x17ccc---CCC\x17ddd---DDD\x17eee---EEE\x17iii---III\x18fff---FFF\x17ggg---GGG\x19hhh---HHH\x1Ajjj\x1Ckkk\x1Dlll\x1Emmm\x1Fnnn\x01ooo");
+    }
+
+    #[test]
+    fn test_coordinate_based_replace() {
+        // replace 'AAA' with 'aaa'
+        let coord0 = phext::to_coordinate("1.1.1/1.1.1/1.1.1");
+        let update0 = phext::replace("AAA\x17bbb\x18ccc\x19ddd\x1Aeee\x1Cfff\x1Dggg\x1Ehhh\x1Fiii\x01jjj", coord0, "aaa");
+        assert_eq!(update0, "aaa\x17bbb\x18ccc\x19ddd\x1Aeee\x1Cfff\x1Dggg\x1Ehhh\x1Fiii\x01jjj");
+
+        // replace 'bbb' with '222'
+        let coord1 = phext::to_coordinate("1.1.1/1.1.1/1.1.2");
+        let update1 = phext::replace(update0.as_str(), coord1, "222");
+        assert_eq!(update1, "aaa\x17222\x18ccc\x19ddd\x1Aeee\x1Cfff\x1Dggg\x1Ehhh\x1Fiii\x01jjj");
+
+        // replace 'ccc' with '3-'
+        let coord2 = phext::to_coordinate("1.1.1/1.1.1/1.2.1");
+        let update2 = phext::replace(update1.as_str(), coord2, "3-");
+        assert_eq!(update2, "aaa\x17222\x183-\x19ddd\x1Aeee\x1Cfff\x1Dggg\x1Ehhh\x1Fiii\x01jjj");
+
+        // replace 'ddd' with 'delta'
+        let coord3 = phext::to_coordinate("1.1.1/1.1.1/2.1.1");
+        let update3 = phext::replace(update2.as_str(), coord3, "delta");
+        assert_eq!(update3, "aaa\x17222\x183-\x19delta\x1Aeee\x1Cfff\x1Dggg\x1Ehhh\x1Fiii\x01jjj");
+
+        // replace 'eee' with 'a bridge just close enough'
+        let coord4 = phext::to_coordinate("1.1.1/1.1.2/1.1.1");
+        let update4 = phext::replace(update3.as_str(), coord4, "a bridge just close enough");
+        assert_eq!(update4, "aaa\x17222\x183-\x19delta\x1Aa bridge just close enough\x1Cfff\x1Dggg\x1Ehhh\x1Fiii\x01jjj");
+
+        // replace 'fff' with 'nifty'
+        let coord5 = phext::to_coordinate("1.1.1/1.2.1/1.1.1");
+        let update5 = phext::replace(update4.as_str(), coord5, "nifty");
+        assert_eq!(update5, "aaa\x17222\x183-\x19delta\x1Aa bridge just close enough\x1Cnifty\x1Dggg\x1Ehhh\x1Fiii\x01jjj");
+
+        // replace 'ggg' with 'G8'
+        let coord6 = phext::to_coordinate("1.1.1/2.1.1/1.1.1");
+        let update6 = phext::replace(update5.as_str(), coord6, "G8");
+        assert_eq!(update6, "aaa\x17222\x183-\x19delta\x1Aa bridge just close enough\x1Cnifty\x1DG8\x1Ehhh\x1Fiii\x01jjj");
+
+        // replace 'hhh' with 'Hello World'
+        let coord7 = phext::to_coordinate("1.1.2/1.1.1/1.1.1");
+        let update7 = phext::replace(update6.as_str(), coord7, "Hello World");
+        assert_eq!(update7, "aaa\x17222\x183-\x19delta\x1Aa bridge just close enough\x1Cnifty\x1DG8\x1EHello World\x1Fiii\x01jjj");
+
+        // replace 'iii' with '_o_'
+        let coord8 = phext::to_coordinate("1.2.1/1.1.1/1.1.1");
+        let update8 = phext::replace(update7.as_str(), coord8, "_o_");
+        assert_eq!(update8, "aaa\x17222\x183-\x19delta\x1Aa bridge just close enough\x1Cnifty\x1DG8\x1EHello World\x1F_o_\x01jjj");
+
+        // replace 'jjj' with '/win'
+        let coord9: phext::Coordinate = phext::to_coordinate("2.1.1/1.1.1/1.1.1");
+        let update9 = phext::replace(update8.as_str(), coord9, "/win");
+        assert_eq!(update9, "aaa\x17222\x183-\x19delta\x1Aa bridge just close enough\x1Cnifty\x1DG8\x1EHello World\x1F_o_\x01/win");
+
+        // the api editor has trouble with this input...
+        let coord_r0a = phext::to_coordinate("2.1.1/1.1.1/1.1.5");
+        let update_r0a = phext::replace("hello world\x17scroll two", coord_r0a, "2.1.1-1.1.1-1.1.5");
+        assert_eq!(update_r0a, "hello world\x17scroll two\x01\x17\x17\x17\x172.1.1-1.1.1-1.1.5");
+
+        // regression from api testing
+        // unit tests don't hit the failure I'm seeing through rocket...hmm - seems to be related to using library breaks
+        let coord_r1a = phext::to_coordinate("1.1.1/1.1.1/1.1.1");
+        let update_r1a = phext::replace("", coord_r1a, "aaa");
+        assert_eq!(update_r1a, "aaa");
+
+        let coord_r1b = phext::to_coordinate("1.1.1/1.1.1/1.1.2");
+        let update_r1b = phext::replace(update_r1a.as_str(), coord_r1b, "bbb");
+        assert_eq!(update_r1b, "aaa\x17bbb");
+
+        let coord_r1c = phext::to_coordinate("1.2.3/4.5.6/7.8.9");
+        let update_r1c = phext::replace(update_r1b.as_str(), coord_r1c, "ccc");
+        assert_eq!(update_r1c, "aaa\x17bbb\x1F\x1E\x1E\x1D\x1D\x1D\x1C\x1C\x1C\x1C\x1A\x1A\x1A\x1A\x1A\x19\x19\x19\x19\x19\x19\x18\x18\x18\x18\x18\x18\x18\x17\x17\x17\x17\x17\x17\x17\x17ccc");
+
+        let coord_r1d = phext::to_coordinate("1.4.4/2.8.8/4.16.16");
+        let update_r1d = phext::replace(update_r1c.as_str(), coord_r1d, "ddd");
+        assert_eq!(update_r1d, "aaa\x17bbb\x1F\x1E\x1E\x1D\x1D\x1D\x1C\x1C\x1C\x1C\x1A\x1A\x1A\x1A\x1A\x19\x19\x19\x19\x19\x19\x18\x18\x18\x18\x18\x18\x18\x17\x17\x17\x17\x17\x17\x17\x17ccc\x1F\x1F\x1E\x1E\x1E\x1D\x1C\x1C\x1C\x1C\x1C\x1C\x1C\x1A\x1A\x1A\x1A\x1A\x1A\x1A\x19\x19\x19\x18\x18\x18\x18\x18\x18\x18\x18\x18\x18\x18\x18\x18\x18\x18\x17\x17\x17\x17\x17\x17\x17\x17\x17\x17\x17\x17\x17\x17\x17ddd");
+
+        let coord_regression_1 = phext::to_coordinate("11.12.13/14.15.16/17.18.19");
+        let update_regression_1 = phext::replace(update_r1d.as_str(), coord_regression_1, "eee");
+        assert_eq!(update_regression_1, "aaa\x17bbb\x1F\x1E\x1E\x1D\x1D\x1D\x1C\x1C\x1C\x1C\x1A\x1A\x1A\x1A\x1A\x19\x19\x19\x19\x19\x19\x18\x18\x18\x18\x18\x18\x18\x17\x17\x17\x17\x17\x17\x17\x17ccc\x1F\x1F\x1E\x1E\x1E\x1D\x1C\x1C\x1C\x1C\x1C\x1C\x1C\x1A\x1A\x1A\x1A\x1A\x1A\x1A\x19\x19\x19\x18\x18\x18\x18\x18\x18\x18\x18\x18\x18\x18\x18\x18\x18\x18\x17\x17\x17\x17\x17\x17\x17\x17\x17\x17\x17\x17\x17\x17\x17ddd".to_owned() +
+        "\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01" +
+        "\x1F\x1F\x1F\x1F\x1F\x1F\x1F\x1F\x1F\x1F\x1F" +
+        "\x1E\x1E\x1E\x1E\x1E\x1E\x1E\x1E\x1E\x1E\x1E\x1E" +
+        "\x1D\x1D\x1D\x1D\x1D\x1D\x1D\x1D\x1D\x1D\x1D\x1D\x1D" +
+        "\x1C\x1C\x1C\x1C\x1C\x1C\x1C\x1C\x1C\x1C\x1C\x1C\x1C\x1C" +
+        "\x1A\x1A\x1A\x1A\x1A\x1A\x1A\x1A\x1A\x1A\x1A\x1A\x1A\x1A\x1A" +
+        "\x19\x19\x19\x19\x19\x19\x19\x19\x19\x19\x19\x19\x19\x19\x19\x19" +
+        "\x18\x18\x18\x18\x18\x18\x18\x18\x18\x18\x18\x18\x18\x18\x18\x18\x18" +
+        "\x17\x17\x17\x17\x17\x17\x17\x17\x17\x17\x17\x17\x17\x17\x17\x17\x17\x17" +
+        "eee");
+    }
+
+    #[test]
+    fn test_coordinate_based_remove() {
+        // replace 'aaa' with ''
+        let coord1 = phext::to_coordinate("1.1.1/1.1.1/1.1.1");
+        let update1 = phext::remove("aaa\x17bbb\x18ccc\x19ddd\x1Aeee\x1Cfff\x1Dggg\x1Ehhh\x1Fiii\x01jjj", coord1);
+        assert_eq!(update1, "\x17bbb\x18ccc\x19ddd\x1Aeee\x1Cfff\x1Dggg\x1Ehhh\x1Fiii\x01jjj");
+
+        // replace 'bbb' with ''
+        let coord2 = phext::to_coordinate("1.1.1/1.1.1/1.1.2");
+        let update2 = phext::remove(update1.as_str(), coord2);
+        assert_eq!(update2, "\x18ccc\x19ddd\x1Aeee\x1Cfff\x1Dggg\x1Ehhh\x1Fiii\x01jjj");
+
+        // replace 'ccc' with ''
+        let coord3 = phext::to_coordinate("1.1.1/1.1.1/1.2.1");
+        let update3 = phext::remove(update2.as_str(), coord3);
+        assert_eq!(update3, "\x19ddd\x1Aeee\x1Cfff\x1Dggg\x1Ehhh\x1Fiii\x01jjj");
+
+        // replace 'ddd' with ''
+        let coord4 = phext::to_coordinate("1.1.1/1.1.1/2.1.1");
+        let update4 = phext::remove(update3.as_str(), coord4);
+        assert_eq!(update4, "\x1Aeee\x1Cfff\x1Dggg\x1Ehhh\x1Fiii\x01jjj");
+
+        // replace 'eee' with ''
+        let coord5 = phext::to_coordinate("1.1.1/1.1.2/1.1.1");
+        let update5 = phext::remove(update4.as_str(), coord5);
+        assert_eq!(update5, "\x1Cfff\x1Dggg\x1Ehhh\x1Fiii\x01jjj");
+
+        // replace 'fff' with ''
+        let coord6 = phext::to_coordinate("1.1.1/1.2.1/1.1.1");
+        let update6 = phext::remove(update5.as_str(), coord6);
+        assert_eq!(update6, "\x1Dggg\x1Ehhh\x1Fiii\x01jjj");
+
+        // replace 'ggg' with ''
+        let coord7 = phext::to_coordinate("1.1.1/2.1.1/1.1.1");
+        let update7 = phext::remove(update6.as_str(), coord7);
+        assert_eq!(update7, "\x1Ehhh\x1Fiii\x01jjj");
+
+        // replace 'hhh' with ''
+        let coord8 = phext::to_coordinate("1.1.2/1.1.1/1.1.1");
+        let update8 = phext::remove(update7.as_str(), coord8);
+        assert_eq!(update8, "\x1Fiii\x01jjj");
+
+        // replace 'iii' with ''
+        let coord9 = phext::to_coordinate("1.2.1/1.1.1/1.1.1");
+        let update9 = phext::remove(update8.as_str(), coord9);
+        assert_eq!(update9, "\x01jjj");
+
+        // replace 'jjj' with ''
+        let coord10 = phext::to_coordinate("2.1.1/1.1.1/1.1.1");
+        let update10 = phext::remove(update9.as_str(), coord10);
+        assert_eq!(update10, "");
+    }
+
+    #[test]
+    fn test_range_based_replace() {
+        let doc1 = "Before\x19text to be replaced\x1Calso this\x1Dand this\x17After";
+        let range1 = phext::Range { start: phext::to_coordinate("1.1.1/1.1.1/2.1.1"),
+                            end: phext::to_coordinate("1.1.1/2.1.1/1.1.1") };
+        let update1 = phext::range_replace(doc1, range1, "");
+        assert_eq!(update1, "Before\x19\x17After");
+
+        let doc2 = "Before\x01Library two\x01Library three\x01Library four";
+        let range2 = phext::Range { start: phext::to_coordinate("2.1.1/1.1.1/1.1.1"),
+                            end: phext::to_coordinate("3.1.1/1.1.1/1.1.1") };
+
+        let update2 = phext::range_replace(doc2, range2, "");
+        assert_eq!(update2, "Before\x01\x01Library four");
+    }
+
+    #[test]
+    fn test_next_scroll() {
+        let doc1 = "3A\x17B2\x18C1";
+        let (update1, next_start, remaining) = phext::next_scroll(doc1, phext::to_coordinate("1.1.1/1.1.1/1.1.1"));
+        assert_eq!(update1.coord.to_string(), "1.1.1/1.1.1/1.1.1");
+        assert_eq!(update1.scroll, "3A");
+        assert_eq!(next_start.to_string(), "1.1.1/1.1.1/1.1.2");
+        assert_eq!(remaining, "B2\x18C1");
+    }
+
+    #[test]
+    fn test_phokenize() {
+        let doc1 = "one\x17two\x17three\x17four";
+        let mut expected1: Vec<phext::PositionedScroll> = Vec::new();
+        expected1.push(PositionedScroll{ coord: phext::to_coordinate("1.1.1/1.1.1/1.1.1"), scroll: "one".to_string()});
+        expected1.push(PositionedScroll{ coord: phext::to_coordinate("1.1.1/1.1.1/1.1.2"), scroll: "two".to_string()});
+        expected1.push(PositionedScroll{ coord: phext::to_coordinate("1.1.1/1.1.1/1.1.3"), scroll: "three".to_string()});
+        expected1.push(PositionedScroll{ coord: phext::to_coordinate("1.1.1/1.1.1/1.1.4"), scroll: "four".to_string()});
+        let update1: Vec<PositionedScroll> = phext::phokenize(doc1);
+        assert_eq!(update1, expected1);
+
+        let doc2 = "one\x01two\x1Fthree\x1Efour\x1Dfive\x1Csix\x1Aseven\x19eight\x18nine\x17ten";
+        let mut expected2: Vec<phext::PositionedScroll> = Vec::new();
+        expected2.push(PositionedScroll{ coord: phext::to_coordinate("1.1.1/1.1.1/1.1.1"), scroll: "one".to_string()});
+        expected2.push(PositionedScroll{ coord: phext::to_coordinate("2.1.1/1.1.1/1.1.1"), scroll: "two".to_string()});
+        expected2.push(PositionedScroll{ coord: phext::to_coordinate("2.2.1/1.1.1/1.1.1"), scroll: "three".to_string()});
+        expected2.push(PositionedScroll{ coord: phext::to_coordinate("2.2.2/1.1.1/1.1.1"), scroll: "four".to_string()});
+        expected2.push(PositionedScroll{ coord: phext::to_coordinate("2.2.2/2.1.1/1.1.1"), scroll: "five".to_string()});
+        expected2.push(PositionedScroll{ coord: phext::to_coordinate("2.2.2/2.2.1/1.1.1"), scroll: "six".to_string()});
+        expected2.push(PositionedScroll{ coord: phext::to_coordinate("2.2.2/2.2.2/1.1.1"), scroll: "seven".to_string()});
+        expected2.push(PositionedScroll{ coord: phext::to_coordinate("2.2.2/2.2.2/2.1.1"), scroll: "eight".to_string()});
+        expected2.push(PositionedScroll{ coord: phext::to_coordinate("2.2.2/2.2.2/2.2.1"), scroll: "nine".to_string()});
+        expected2.push(PositionedScroll{ coord: phext::to_coordinate("2.2.2/2.2.2/2.2.2"), scroll: "ten".to_string()});
+        let update2: Vec<PositionedScroll> = phext::phokenize(doc2);
+        assert_eq!(update2, expected2);
+
+        let doc3 = "one\x17two\x18three\x19four\x1afive\x1csix\x1dseven\x1eeight\x1fnine\x01ten";
+        let mut expected3: Vec<phext::PositionedScroll> = Vec::new();
+        expected3.push(PositionedScroll{ coord: phext::to_coordinate("1.1.1/1.1.1/1.1.1"), scroll: "one".to_string()});
+        expected3.push(PositionedScroll{ coord: phext::to_coordinate("1.1.1/1.1.1/1.1.2"), scroll: "two".to_string()});
+        expected3.push(PositionedScroll{ coord: phext::to_coordinate("1.1.1/1.1.1/1.2.1"), scroll: "three".to_string()});
+        expected3.push(PositionedScroll{ coord: phext::to_coordinate("1.1.1/1.1.1/2.1.1"), scroll: "four".to_string()});
+        expected3.push(PositionedScroll{ coord: phext::to_coordinate("1.1.1/1.1.2/1.1.1"), scroll: "five".to_string()});
+        expected3.push(PositionedScroll{ coord: phext::to_coordinate("1.1.1/1.2.1/1.1.1"), scroll: "six".to_string()});
+        expected3.push(PositionedScroll{ coord: phext::to_coordinate("1.1.1/2.1.1/1.1.1"), scroll: "seven".to_string()});
+        expected3.push(PositionedScroll{ coord: phext::to_coordinate("1.1.2/1.1.1/1.1.1"), scroll: "eight".to_string()});
+        expected3.push(PositionedScroll{ coord: phext::to_coordinate("1.2.1/1.1.1/1.1.1"), scroll: "nine".to_string()});
+        expected3.push(PositionedScroll{ coord: phext::to_coordinate("2.1.1/1.1.1/1.1.1"), scroll: "ten".to_string()});
+        let update3: Vec<PositionedScroll> = phext::phokenize(doc3);
+        assert_eq!(update3, expected3);
+
+        let doc4 = "\x1A\x1C\x1D\x1E\x1F\x01stuff here";
+        let mut expected4: Vec<phext::PositionedScroll> = Vec::new();
+        expected4.push(PositionedScroll{ coord: phext::to_coordinate("2.1.1/1.1.1/1.1.1"), scroll: "stuff here".to_string()});
+        let update4: Vec<PositionedScroll> = phext::phokenize(doc4);
+        assert_eq!(update4, expected4);
+    }
+
+    #[test]
+    fn test_last_empty_scroll() {
+
+        // a regression discovered from SQ - see https://github.com/wbic16/SQ
+        let doc1 = "hello\x17world\x17";
+        let target1 = phext::to_coordinate("1.1.1/1.1.1/1.1.2");
+        let bytes1: &[u8] = doc1.as_bytes();
+        let parts1 = phext::get_subspace_coordinates(bytes1, target1);
+        assert_eq!(parts1.0, 6);
+        assert_eq!(parts1.1, 11);
+        assert_eq!(parts1.2, target1);
+        
+        let test1 = phext::fetch(doc1, target1);
+        assert_eq!(test1, "world");
+    }
+
+    #[test]
+    fn test_merge() {
+        let doc_1a = "3A\x17B2";
+        let doc_1b = "4C\x17D1";
+        let update_1 = phext::merge(doc_1a, doc_1b);
+        assert_eq!(update_1, "3A4C\x17B2D1");
+
+        let doc_2a = "Hello \x17I've come to talk";
+        let doc_2b = "Darkness, my old friend.\x17 with you again.";
+        let update_2 = phext::merge(doc_2a, doc_2b);
+        assert_eq!(update_2, "Hello Darkness, my old friend.\x17I've come to talk with you again.");
+
+        let doc_3a = "One\x17Two\x18Three\x19Four";
+        let doc_3b = "1\x172\x183\x194";
+        let update_3 = phext::merge(doc_3a, doc_3b);
+        assert_eq!(update_3, "One1\x17Two2\x18Three3\x19Four4");
+
+        let doc_4a = "\x1A\x1C\x1D\x1E\x1F\x01stuff here";
+        let doc_4b = "\x1A\x1C\x1D\x1Eprecursor here\x1F\x01and more";
+        let update_4 = phext::merge(doc_4a, doc_4b);
+        assert_eq!(update_4, "\x1Eprecursor here\x01stuff hereand more");
+
+        let doc_5a = "\x01\x01 Library at 3.1.1/1.1.1/1.1.1 \x1F Shelf at 3.2.1/1.1.1/1.1.1";
+        let doc_5b = "\x01\x01\x01 Library 4.1.1/1.1.1/1.1.1 \x1E Series at 4.1.2/1.1.1/1.1.1";
+        let update_5 = phext::merge(doc_5a, doc_5b);
+        assert_eq!(update_5, "\x01\x01 Library at 3.1.1/1.1.1/1.1.1 \x1F Shelf at 3.2.1/1.1.1/1.1.1\x01 Library 4.1.1/1.1.1/1.1.1 \x1E Series at 4.1.2/1.1.1/1.1.1");
+
+        let doc_6a = "\x1D Collection at 1.1.1/2.1.1/1.1.1\x1C Volume at 1.1.1/2.2.1/1.1.1";
+        let doc_6b = "\x1D\x1D Collection at 1.1.1/3.1.1/1.1.1\x1C Volume at 1.1.1/3.2.1/1.1.1";
+        let update_6 = phext::merge(doc_6a, doc_6b);
+        assert_eq!(update_6, "\x1D Collection at 1.1.1/2.1.1/1.1.1\x1C Volume at 1.1.1/2.2.1/1.1.1\x1D Collection at 1.1.1/3.1.1/1.1.1\x1C Volume at 1.1.1/3.2.1/1.1.1");
+
+        let doc_7a = "\x1ABook #2 Part 1\x1ABook #3 Part 1";
+        let doc_7b = "\x1A + Part II\x1A + Part Deux";
+        let update_7 = phext::merge(doc_7a, doc_7b);
+        assert_eq!(update_7, "\x1ABook #2 Part 1 + Part II\x1ABook #3 Part 1 + Part Deux");
+
+        let doc8a = "AA\x01BB\x01CC";
+        let doc8b = "__\x01__\x01__";
+        let update8 = phext::merge(doc8a, doc8b);
+        assert_eq!(update8, "AA__\x01BB__\x01CC__");
+    }
+
+    #[test]
+    fn test_subtract() {
+        let doc1a = "Here's scroll one.\x17Scroll two.";
+        let doc1b = "Just content at the first scroll";
+        let update1 = phext::subtract(doc1a, doc1b);
+        assert_eq!(update1, "\x17Scroll two.");
+    }
+
+    #[test]
+    fn test_normalize() {
+        let doc1 = "\x17Scroll two\x18\x18\x18\x18";
+        let update1 = phext::normalize(doc1);
+        assert_eq!(update1, "\x17Scroll two");
+    }
+
+    #[test]
+    fn test_expand() {
+        let doc1 = "nothing but line breaks\x0Ato test expansion to scrolls\x0Aline 3";
+        let update1 = phext::expand(doc1);
+        assert_eq!(update1, "nothing but line breaks\x17to test expansion to scrolls\x17line 3");
+
+        let update2 = phext::expand(update1.as_str());
+        assert_eq!(update2, "nothing but line breaks\x18to test expansion to scrolls\x18line 3");
+
+        let update3 = phext::expand(update2.as_str());
+        assert_eq!(update3, "nothing but line breaks\x19to test expansion to scrolls\x19line 3");
+
+        let update4 = phext::expand(update3.as_str());
+        assert_eq!(update4, "nothing but line breaks\x1Ato test expansion to scrolls\x1Aline 3");
+
+        let update5 = phext::expand(update4.as_str());
+        assert_eq!(update5, "nothing but line breaks\x1Cto test expansion to scrolls\x1Cline 3");
+
+        let update6 = phext::expand(update5.as_str());
+        assert_eq!(update6, "nothing but line breaks\x1Dto test expansion to scrolls\x1Dline 3");
+
+        let update7 = phext::expand(update6.as_str());
+        assert_eq!(update7, "nothing but line breaks\x1Eto test expansion to scrolls\x1Eline 3");
+
+        let update8 = phext::expand(update7.as_str());
+        assert_eq!(update8, "nothing but line breaks\x1Fto test expansion to scrolls\x1Fline 3");
+
+        let update9 = phext::expand(update8.as_str());
+        assert_eq!(update9, "nothing but line breaks\x01to test expansion to scrolls\x01line 3");
+
+        let update10 = phext::expand(update9.as_str());
+        assert_eq!(update10, "nothing but line breaks\x01to test expansion to scrolls\x01line 3");
+    }
+
+    #[test]
+    fn test_contract() {
+        let doc1 = "A more complex example than expand\x01----\x1F++++\x1E____\x1Doooo\x1C====\x1Azzzz\x19gggg\x18....\x17qqqq";
+        let update1 = phext::contract(doc1);
+        assert_eq!(update1, "A more complex example than expand\x1F----\x1E++++\x1D____\x1Coooo\x1A====\x19zzzz\x18gggg\x17....\x0Aqqqq");
+
+        let update2 = phext::contract(update1.as_str());
+        assert_eq!(update2, "A more complex example than expand\x1E----\x1D++++\x1C____\x1Aoooo\x19====\x18zzzz\x17gggg\x0A....\x0Aqqqq");
+    }
+
+    #[test]
+    fn test_fs_read_write() {
+        let filename = "unit-test.phext";
+        let file = std::fs::File::create(&filename);
+        let required = "Unable to locate ".to_owned() + &filename;
+        let initial = "a simple phext doc with three scrolls\x17we just want to verify\x17that all of our breaks are making it through rust's fs layer.\x18section 2\x19chapter 2\x1Abook 2\x1Cvolume 2\x1Dcollection 2\x1Eseries 2\x1Fshelf 2\x01library 2";
+        let _result = file.expect(&required).write_all(initial.as_bytes());
+        let prior = std::fs::read_to_string(filename).expect("Unable to open phext");
+
+        assert_eq!(prior, initial);
+        let coordinate = "2.1.1/1.1.1/1.1.1";
+        let message = phext::replace(prior.as_str(), phext::to_coordinate(coordinate), "still lib 2");
+        assert_eq!(message, "a simple phext doc with three scrolls\x17we just want to verify\x17that all of our breaks are making it through rust's fs layer.\x18section 2\x19chapter 2\x1Abook 2\x1Cvolume 2\x1Dcollection 2\x1Eseries 2\x1Fshelf 2\x01still lib 2");
+    }
+
+    #[test]
+    fn test_replace_create() {
+        let initial = "A\x17B\x17C\x18D\x19E\x1AF\x1CG\x1DH\x1EI\x1FJ\x01K";
+        let coordinate = "3.1.1/1.1.1/1.1.1";
+        let message = phext::replace(initial, phext::to_coordinate(coordinate), "L");
+        assert_eq!(message, "A\x17B\x17C\x18D\x19E\x1AF\x1CG\x1DH\x1EI\x1FJ\x01K\x01L");
+    }
+
+    #[test]
+    fn test_summary() {
+        let doc1 = "A short phext\nSecond line\x17second scroll.............................";
+        let update1 = phext::create_summary(doc1);
+        assert_eq!(update1, "A short phext...");
+
+        let doc2 = "very terse";
+        let update2 = phext::create_summary(doc2);
+        assert_eq!(update2, "very terse");
+    }
+
+    #[test]
+    fn test_navmap() {
+        let example = "Just a couple of scrolls.\x17Second scroll\x17Third scroll";
+        let result = phext::navmap("http://127.0.0.1/api/v1/index/", example);
+        assert_eq!(result, "<ul>\n<li><a href=\"http://127.0.0.1/api/v1/index/1.1.1;1.1.1;1.1.1\">1.1.1/1.1.1/1.1.1 Just a couple of scrolls.</a></li>\n<li><a href=\"http://127.0.0.1/api/v1/index/1.1.1;1.1.1;1.1.2\">1.1.1/1.1.1/1.1.2 Second scroll</a></li>\n<li><a href=\"http://127.0.0.1/api/v1/index/1.1.1;1.1.1;1.1.3\">1.1.1/1.1.1/1.1.3 Third scroll</a></li>\n</ul>\n");
+    }
+
+    #[test]
+    fn test_textmap() {
+        let example = "Just a couple of scrolls.\x17Second scroll\x17Third scroll";
+        let result = phext::textmap(example);
+        assert_eq!(result, "* 1.1.1/1.1.1/1.1.1: Just a couple of scrolls.\n* 1.1.1/1.1.1/1.1.2: Second scroll\n* 1.1.1/1.1.1/1.1.3: Third scroll\n");
+    }
+
+    #[test]
+    fn test_larger_coordinates() {
+        let coord = phext::to_coordinate("111.222.333/444.555.666/777.888.999");
+        let result = phext::insert(String::new(), coord, "Hello World");
+        let map = phext::textmap(result.as_str());
+        assert_eq!(result.len(), 4997);
+        assert_eq!(map, "* 111.222.333/444.555.666/777.888.999: Hello World\n");
+    }
+
+    #[test]
+    fn test_phext_index() {
+        let example = "first scroll\x17second scroll\x18second section\x19second chapter\x1Abook 2\x1Cvolume 2\x1Dcollection 2\x1Eseries 2\x1Fshelf 2\x01library 2";
+        let result = phext::index(example);
+        assert_eq!(result, "0\x1713\x1827\x1942\x1a57\x1c64\x1d73\x1e86\x1f95\x01103");
+
+        let coord1 = phext::to_coordinate("1.1.1/1.1.1/1.1.1");
+        let test1 = phext::offset(example, coord1);
+        assert_eq!(test1, 0);
+
+        let coord2 = phext::to_coordinate("1.1.1/1.1.1/1.1.2");
+        let test2 = phext::offset(example, coord2);
+        assert_eq!(test2, 13);
+
+        let coord3 = phext::to_coordinate("1.1.1/1.1.1/1.2.1");
+        let test3 = phext::offset(example, coord3);
+        assert_eq!(test3, 27);
+
+        let coord4 = phext::to_coordinate("1.1.1/1.1.1/2.1.1");
+        let test4 = phext::offset(example, coord4);
+        assert_eq!(test4, 42);
+
+        let coord5 = phext::to_coordinate("1.1.1/1.1.2/1.1.1");
+        let test5 = phext::offset(example, coord5);
+        assert_eq!(test5, 57);
+
+        let coord6 = phext::to_coordinate("1.1.1/1.2.1/1.1.1");
+        let test6 = phext::offset(example, coord6);
+        assert_eq!(test6, 64);
+
+        let coord7 = phext::to_coordinate("1.1.1/2.1.1/1.1.1");
+        let test7 = phext::offset(example, coord7);
+        assert_eq!(test7, 73);
+
+        let coord8 = phext::to_coordinate("1.1.2/1.1.1/1.1.1");
+        let test8 = phext::offset(example, coord8);
+        assert_eq!(test8, 86);
+
+        let coord9 = phext::to_coordinate("1.2.1/1.1.1/1.1.1");
+        let test9 = phext::offset(example, coord9);
+        assert_eq!(test9, 95);
+
+        let coord9 = phext::to_coordinate("2.1.1/1.1.1/1.1.1");
+        let test9 = phext::offset(example, coord9);
+        assert_eq!(test9, 103);
+
+        let coord_invalid = phext::to_coordinate("2.1.1/1.1.1/1.2.1");
+        let test_invalid = phext::offset(example, coord_invalid);
+        assert_eq!(test_invalid, 103);
+
+        assert_eq!(example.len(), 112);
+    }
+
+    #[test]
+    fn test_scroll_manifest() {
+        let example = "first scroll\x17second scroll\x18second section\x19second chapter\x1Abook 2\x1Cvolume 2\x1Dcollection 2\x1Eseries 2\x1Fshelf 2\x01library 2";
+        let result = phext::manifest(example);
+
+        let scroll0 = "00000000000000000000";
+        let hash0 = phext::checksum(scroll0);
+        assert_eq!(hash0, "7e79edd92a62a048e1cd24ffab542e34");
+
+        let scroll1 = "first scroll";
+        let hash1 = phext::checksum(scroll1);
+        assert_eq!(hash1, "ba9d944e4967e29d48bae69ac2999699");
+
+        let scroll2 = "second scroll";
+        let hash2 = phext::checksum(scroll2);
+        assert_eq!(hash2, "2fe1b2040314ac66f132dd3b4926157c");
+
+        let scroll3 = "second section";
+        let hash3 = phext::checksum(scroll3);
+        assert_eq!(hash3, "fddb6916753b6f4e0b5281469134778b");
+
+        let scroll4 = "second chapter";
+        let hash4 = phext::checksum(scroll4);
+        assert_eq!(hash4, "16ab5b1a0a997db95ec215a3bf2c57b3");
+
+        let scroll5 = "book 2";
+        let hash5 = phext::checksum(scroll5);
+        assert_eq!(hash5, "0f20f79bf36f63e8fba25cc6765e2d0d");
+
+        let scroll6 = "volume 2";
+        let hash6 = phext::checksum(scroll6);
+        assert_eq!(hash6, "7ead0c6fef43adb446fe3bda6fb0adc7");
+
+        let scroll7 = "collection 2";
+        let hash7 = phext::checksum(scroll7);
+        assert_eq!(hash7, "78c12298931c6edede92962137a9280a");
+
+        let scroll8 = "series 2";
+        let hash8 = phext::checksum(scroll8);
+        assert_eq!(hash8, "0f35100c84df601a490b7b63d7e8c0a8");
+
+        let scroll9 = "shelf 2";
+        let hash9 = phext::checksum(scroll9);
+        assert_eq!(hash9, "3bbf7e67cb33d613a906bc5a3cbefd95");
+
+        let scroll10 = "library 2";
+        let hash10 = phext::checksum(scroll10);
+        assert_eq!(hash10, "2e7fdd387196a8a2706ccb9ad6792bc3");
+
+        let expected = format!("{}\x17{}\x18{}\x19{}\x1A{}\x1C{}\x1D{}\x1E{}\x1F{}\x01{}", hash1, hash2, hash3, hash4, hash5, hash6, hash7, hash8, hash9, hash10);
+        assert_eq!(result, expected);
+    }
+
+    #[test]
+    fn test_phext_soundex_v1() {
+        let sample = "it was the best of scrolls\x17it was the worst of scrolls\x17aaa\x17bbb\x17ccc\x17ddd\x17eee\x17fff\x17ggg\x17hhh\x17iii\x17jjj\x17kkk\x17lll\x18mmm\x18nnn\x18ooo\x18ppp\x19qqq\x19rrr\x19sss\x19ttt\x1auuu\x1avvv\x1awww\x1axxx\x1ayyy\x1azzz";
+        let result = phext::soundex_v1(sample);
+        assert_eq!(result, "36\x1741\x171\x174\x177\x1710\x171\x174\x177\x171\x171\x177\x177\x1713\x1816\x1816\x181\x184\x197\x1919\x197\x1910\x1a1\x1a4\x1a1\x1a7\x1a1\x1a7");
+    }
+
+    #[test]
+    fn test_insert_performance_2k_scrolls() {
+        let doc1 = "the quick brown fox jumped over the lazy dog";
+        let mut x = 0;
+        let mut next = phext::to_coordinate("1.1.1/1.1.1/1.1.1");
+        let mut result = vec!["".to_string()];
+
+        let start = SystemTime::now();
+        loop {
+            x += 1;
+            if x > 2000 {
+                break;
+            }
+            if next.x.scroll > 32 {
+                next.section_break();
+            }
+            if next.x.section > 32 {
+                next.chapter_break();
+            }
+            if next.x.chapter > 32 {
+                next.book_break();
+            }
+            result.push(phext::insert(result[x-1].clone(), next, doc1));
+            next.scroll_break();
+        }
+
+        let end = SystemTime::now().duration_since(start).expect("get millis error");
+
+        println!("Performance test took: {} ms", end.as_millis());
+        let success = end.as_millis() < 5000;
+        assert_eq!(success, true);
+
+        // TODO: double-check this math
+        let expected = phext::to_coordinate("1.1.1/1.1.1/2.31.17");
+        assert_eq!(next, expected);
+
+        let expected_doc1_length = 44;
+        assert_eq!(doc1.len(), expected_doc1_length);
+
+        // 2000 scrolls should be separated by 1999 delimiters
+        let mut phext_tokens = 0;
+        let mut scroll_breaks = 0;
+        let mut section_breaks = 0;
+        let mut chapter_breaks = 0;
+        let check = result.last().expect("at least one").as_bytes();
+        for byte in check {
+            if phext::is_phext_break(*byte) {
+                phext_tokens += 1;
+            }
+            if *byte == phext::SCROLL_BREAK as u8 {
+                scroll_breaks += 1;
+            }
+            if *byte == phext::SECTION_BREAK as u8 {
+                section_breaks += 1;
+            }
+            if *byte == phext::CHAPTER_BREAK as u8 {
+                chapter_breaks += 1;
+            }
+        }
+        let expected_tokens = 1999;
+        assert_eq!(phext_tokens, expected_tokens);
+
+        assert_eq!(scroll_breaks, 1937); // 1999 dimension breaks minus section and chapter breaks
+        assert_eq!(section_breaks, 61);  // 63 sections with 61 delimiters (due to 1 chapter break)
+        assert_eq!(chapter_breaks, 1);   // 2 chapters with 1 delimiter
+
+        // doc1 * 1000 + delimiter count
+        let expected_length = 2000 * expected_doc1_length + expected_tokens;
+        assert_eq!(check.len(), expected_length);
+
+        // note: raw performance is slow due to lack of optimization so far
+        // for 2,000 scrolls on my laptop, we're averaging 2.3 ms per record
+
+    }
+
+    #[test]
+    fn test_insert_performance_medium_scrolls() {
+        let doc_template = "the quick brown fox jumped over the lazy dog\n";
+        let mut doc1 = "".to_string();
+        let mut x = 0;
+        while x < 1000 {
+            x += 1;
+            doc1.push_str(doc_template);
+        }
+        let doc1 = doc1.as_str();
+        let mut next = phext::to_coordinate("1.1.1/1.1.1/1.1.1");
+        let mut result = vec!["".to_string()];
+
+        let start = SystemTime::now();
+        x = 0;
+        loop {
+            x += 1;
+            if x > 25 {
+                break;
+            }
+            if next.x.scroll > 5 {
+                next.section_break();
+            }
+            if next.x.section > 5 {
+                next.chapter_break();
+            }
+            if next.x.chapter > 5 {
+                next.book_break();
+            }
+            result.push(phext::insert(result[x-1].clone(), next, doc1));
+            next.scroll_break();
+        }
+
+        let end = SystemTime::now().duration_since(start).expect("get millis error");
+
+        println!("Performance test took: {} ms", end.as_millis());
+        let success = end.as_millis() < 1000;
+        assert_eq!(success, true);
+
+        // TODO: double-check this math
+        let expected = phext::to_coordinate("1.1.1/1.1.1/1.5.6");
+        assert_eq!(next, expected);
+
+        let expected_doc1_length = 45000; // counting line breaks
+        assert_eq!(doc1.len(), expected_doc1_length);
+
+        // 2000 scrolls should be separated by 1999 delimiters
+        let mut phext_tokens = 0;
+        let mut line_breaks = 0;
+        let mut scroll_breaks = 0;
+        let mut section_breaks = 0;
+        let mut chapter_breaks = 0;
+        let check = result.last().expect("at least one").as_bytes();
+        for byte in check {
+            if phext::is_phext_break(*byte) {
+                phext_tokens += 1;
+            }
+            if *byte == phext::LINE_BREAK as u8 {
+                line_breaks += 1;
+            }
+            if *byte == phext::SCROLL_BREAK as u8 {
+                scroll_breaks += 1;
+            }
+            if *byte == phext::SECTION_BREAK as u8 {
+                section_breaks += 1;
+            }
+            if *byte == phext::CHAPTER_BREAK as u8 {
+                chapter_breaks += 1;
+            }
+        }
+        let expected_tokens = 25024;
+        assert_eq!(phext_tokens, expected_tokens);
+
+        assert_eq!(line_breaks, 25000); //
+        assert_eq!(scroll_breaks, 20);  //
+        assert_eq!(section_breaks, 4);  //
+        assert_eq!(chapter_breaks, 0);  //
+
+        // doc1 * 1000 + delimiter count
+        let expected_length = 25 * (expected_doc1_length-1000) + expected_tokens;
+        assert_eq!(check.len(), expected_length);
+
+    }
+
+    #[test]
+    fn test_new_operators() {
+        let ps = phext::PositionedScroll::new();
+        assert_eq!(ps.scroll, "".to_string());
+        assert_eq!(ps.coord, phext::to_coordinate("1.1.1/1.1.1/1.1.1"));
+
+        let coord = phext::Coordinate::new();
+        assert_eq!(coord.z, phext::ZCoordinate::new());
+        assert_eq!(coord.y, phext::YCoordinate::new());
+        assert_eq!(coord.x, phext::XCoordinate::new());
+
+        let range = phext::Range::new();
+        assert_eq!(range.start, phext::Coordinate::new());
+        assert_eq!(range.end, phext::Coordinate::new());
+
+        let zc = phext::ZCoordinate::new();
+        assert_eq!(zc.library, 1);
+        assert_eq!(zc.shelf, 1);
+        assert_eq!(zc.series, 1);
+
+        let yc = phext::YCoordinate::new();
+        assert_eq!(yc.collection, 1);
+        assert_eq!(yc.volume, 1);
+        assert_eq!(yc.book, 1);
+
+        let xc = phext::XCoordinate::new();
+        assert_eq!(xc.chapter, 1);
+        assert_eq!(xc.section, 1);
+        assert_eq!(xc.scroll, 1);
+    }
+
+    #[test]
+    fn test_hash_support() {
+        let mut stuff = phext::explode("hello world\x17\x17\x17scroll 4\x01Library 2");
+        let scroll1_address = phext::to_coordinate("1.1.1/1.1.1/1.1.1");
+        let scroll2_address = phext::to_coordinate("1.1.1/1.1.1/1.1.4");
+        let scroll3_address = phext::to_coordinate("2.1.1/1.1.1/1.1.1");
+        assert_eq!(stuff[&scroll1_address], "hello world");
+        assert_eq!(stuff[&scroll2_address], "scroll 4");
+        assert_eq!(stuff[&scroll3_address], "Library 2");
+
+        let scroll4_address = phext::to_coordinate("2.3.4/5.6.7/8.9.1");
+        stuff.insert(scroll4_address, "random insertion".to_string());
+
+        let serialized = phext::implode(stuff);
+        assert_eq!(serialized, "hello world\x17\x17\x17scroll 4\x01Library 2\x1f\x1f\x1e\x1e\x1e\x1d\x1d\x1d\x1d\x1c\x1c\x1c\x1c\x1c\x1a\x1a\x1a\x1a\x1a\x1a\x19\x19\x19\x19\x19\x19\x19\x18\x18\x18\x18\x18\x18\x18\x18random insertion");
+    }
+
+    #[test]
+    fn test_subspace_filter() {
+        // filtering in subspace happens in bands
+        // we split the phext into 36 regions
+        // each region can be further sub-divided into 32 segments
+        // where your scrolls fall into this map determines if they
+        // are selected. subspace filtering happens in bitspace.
+        // we have 6 bits per region to work with:
+        // 0-25:  ABCDEFGHIJKLMNOPQRSTUVWXYZ
+        // 26-51: abcdefghijklmnopqrstuvwxyz
+        // 52-63: 0123456789+/
+        // 
+        // 
+        //
+        // Collectors (0-15)
+        //             A   B   C   D   E   F   G   H
+        // First n%:   1   2   4   8  16  32  64 100  [8]
+        // Last n%:  100  50  25  12   6   3   2   1  [8]
+        //             I   J   K   L   M   N   O   P
+        //
+        // Harmonics (16-31)
+        //             Q   R   S   T   U   V   W   X
+        // Primes 1:   2   3   5   7  11  13  17  19  [8]
+        // Primes 2:  23  29  31  37  41  43  47  53  [8]
+        //             Y   Z   a   b   c   d   e   f
+        // 
+        // Scroll Size (32-47)
+        //                 g     h   i   j   k   l   m    n
+        // Smaller Than:  1K    2K  4K  8K 16K 32K 64K 128K [8]
+        // Larger Than:   128K 64K 32K 16K  8K  4K  2K   1K [8]
+        //                 o     p   q   r   s   t   u    v
+        //
+        // Reserved (48-63)
+        //                 w   x   y   z   0   1   2   3
+        // TBD                                              [8]
+        // TBD                                              [8]
+        //                 4   5   6   7   8   9   +   /
+        // 
+        // 36 characters in base64
+        
+        // TODO: create a suite of test filters and verify they select
+        // properly
+    }
+}# libphext-node, The Branch of Breath
+
+3.1.1/1.1.1/3.1.1: Index and README.md
+3.1.1/1.1.1/3.1.2: node_modules
+3.1.1/1.1.1/3.1.3: package.json
+3.1.1/1.1.1/3.1.4: tsconfig.json
+3.1.1/1.1.1/3.1.5: vite.config.ts
+3.1.1/1.1.1/3.1.6: test-app/index.js
+3.1.1/1.1.1/3.1.7: test-app/index.ts
+3.1.1/1.1.1/3.1.8: test-app/package.json
+3.1.1/1.1.1/3.1.9: src/index.ts
 
 # libphext for node.js
 
@@ -2993,7 +3972,7 @@ This project is a fork of https://github.com/wbic16/libphext-rs.
 
 It generally lags behind the Rust implementation a bit, but should be very close in terms of functionality.
 
-Current Library Release: v0.1.7
+Current Library Release: v0.3.0
 Port: Completenode_modules
 .parcel-cache
 package-lock.json
@@ -6808,30 +7787,2025 @@ class XCoordinate {
         let serialized = phext::implode(stuff);
         assert_eq!(serialized, "hello world\x17\x17\x17scroll 4\x01Library 2\x1f\x1f\x1e\x1e\x1e\x1d\x1d\x1d\x1d\x1c\x1c\x1c\x1c\x1c\x1a\x1a\x1a\x1a\x1a\x1a\x19\x19\x19\x19\x19\x19\x19\x18\x18\x18\x18\x18\x18\x18\x18random insertion");
     }
-}libphext-py (placeholder)
--------------------------
+}# libphext-py v0.3.0
 
-No local archive copy of libphext-py was found in this repository.
-Embed the latest libphext-py sources here (README, package metadata, and module files)
-once they are available in the workspace.
+* 3.1.1/1.1.1/4.1.1: Index and README.md
+* 3.1.1/1.1.1/4.1.2: pyproject.toml
+* 3.1.1/1.1.1/4.1.3: .gitignore
+* 3.1.1/1.1.1/4.1.4: phext/__init__.py
+* 3.1.1/1.1.1/4.1.5: phext/coordinate.py
+* 3.1.1/1.1.1/4.1.6: phext/phext.py
+* 3.1.1/1.1.1/4.1.7: phext/positionedScroll.py
+* 3.1.1/1.1.1/4.1.8: phext/range.py
+* 3.1.1/1.1.1/4.1.9: test/verify.py
+* 3.1.1/1.1.1/4.1.10: tests/test_coordinate.py
+* 3.1.1/1.1.1/4.1.11: tests/test_phext.py
+* 3.1.1/1.1.1/4.1.12: tests/test_positionedScroll.py
+* 3.1.1/1.1.1/4.1.13: tests/test_range.py
+
+# README.md
+
+# Phext
+
+Welcome to the Pythonic port of phext.
+
+This port is a downstream artifact that tracks the Rust-based implementation of Phext. See https://github.com/wbic16/phext-rs for more details.
+
+## Getting Started
+
+To use phext in your Python project, simply add `phext` as a dependency.
+
+```pip install phext```
+
+Refer to the `tests` folder for usage information.
+
+```
+import phext
+from phext.coordinate import Coordinate
+from phext.phext import Phext
+phext = Phext()
+test = "Hello\x17World"
+coord = Coordinate.from_string("1.1.1/1.1.1/1.1.1")
+scroll = phext.fetch(test, coord)
+scrolls = phext.explode(test)
+coord2 = Coordinate(1,1,1, 1,1,1, 1,1,2)
+print(scroll + ", " + scrolls[coord2])
+```
+
+## Tests
+
+* 
+
+## Data Types
+
+* `Coordinate`: A 9-tuple of the form library.shelf.series/collection.volume.book/chapter.section.scroll. Represents the location of a given scroll of text within a larger phext file.
+* `Phext`: The main entrypoint to interacting with phexts.
+  * `fetch(buffer, coordinate)`: Fetches a scroll of text from the given serialized phext buffer
+  * `phokenize(buffer)`: Extracts a list of positioned scrolls from the given phext
+  * `append_scroll(entry, location)`: Emits the delimiters and text required to insert the positioned scroll, entry, into a phext stream (starting from the given location).
+  * `dephokenize(stack)`: Serializes a stack of positioned scrolls
+  * `normalize(str)`: Eliminates empty scrolls from a phext buffer
+  * `update(buffer, coord, scroll, overwrite)`: Supports insert and update operations - places the scroll of text at the given coordinate, taking the current state of the buffer into account
+  * `insert(buffer, coord, scroll)`: Inserts text at the end of the scroll located at coord within the buffer
+  * `replace(buffer, coord, scroll)`: Replaces the text located at coord within the buffer
+  * `remove(buffer, coord)`: Removes the contents of the scroll located at coord within the buffer
+  * `range_replace(buffer, range, text)`: Removes scrolls located within the given range, without shifting content outside of the range - this differs from libphext-rs by design - a pair of missing methods needs to be added to resolve the conflict
+  * `next_scroll(buffer, coord)`: Selects the next scroll after the given coordinate
+  * `get_subspace_coordinates(buffer, target)`: Retrieves the subspace offsets cooresponding to the given target coordinate within the buffer
+  * `merge(left, right)`: Zipper merges two phexts
+  * `subtract(left, right)`: Removes the scrolls from left that are present in right (as measured by coordinate matching)
+  * `expand(buffer)`: Dimensional increment for each phext break found in the buffer
+  * `contract(buffer)`: Dimensional decrement for each phext break found in the buffer
+  * `create_summary(buffer)`: Creates a one-line summary of a given scroll
+  * `navmap(urlbase, buffer)`: Creates an HTML navigation map of the given buffer
+  * `textmap(buffer)`: Creates a text-based navigation map of the given buffer
+  * `checksum(buffer)`: Computes an xxh3_128 hash of a given scroll
+  * `manifest(buffer)`: Computes a hierarchical hash of the given phext
+  * `soundex_v1(buffer)`: Computes a hierarchical soundex of the given phext
+  * `soundex_internal(buffer)`: Computes a low-level soundex of a given scroll
+  * `explode(buffer)`: Explodes a phext into a dictionary of Coordinate -> str
+  * `implode(hash)`: Implodes a dictionary of Coordinate -> str back into a phext
+  * `index_phokens(buffer)`: Computes the offsets of each scroll in the given phext
+  * `index(buffer)`: Computes a hierarchical map of scroll offsets in phext format
+  * `offset(buffer, coord)`: Computes the offset of a specific scroll in the given phext
+* `PositionedScroll`: A pair of `Coordinate` and a scroll of text.
+* `Range`: A pair of coordinates denoting an inclusive range across subspace
+pyproject.toml
+
+[project]
+name = "phext"
+version = "0.3.0"
+description = "Pythonic implementation of phext"
+authors = [{ name = "Will Bickford", email = "wbic16@gmail.com" }]
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+dependencies = ["xxhash"]
+
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Intended Audience :: Developers",
+  "Topic :: Software Development :: Libraries",
+]
+
+[project.urls]
+Homepage = "https://phext.io"
+Repository = "https://github.com/wbic16/phext-py"
+Issues = "https://github.com/wbic16/phext-py/issues"
+
+[project.optional-dependencies]
+dev = ["pytest", "mypy", "ruff"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["phext"].gitignore
+
+.venv/*
+phext/__pycache__/*
+tests/__pycache__/*
+unit-test.phextphext/__init__.py
+
+__version__ = "0.3.0"phext/coordinate.py
+
+from dataclasses import dataclass
+from functools import total_ordering
+
+@total_ordering
+@dataclass
+class Coordinate:
+    library: int
+    shelf: int
+    series: int
+    collection: int
+    volume: int
+    book: int
+    chapter: int
+    section: int
+    scroll: int
+
+    @classmethod
+    def from_string(ignored, coord_str: str):
+        try:
+            parts = coord_str.strip().split("/")
+            if len(parts) != 3:
+                raise ValueError("Coordinate must conform to Phext Standard Addressing")
+
+            nums = []
+            for part in parts:
+                nums.extend(int(x) for x in part.split("."))
+
+            if len(nums) != 9:
+                raise ValueError("Coordinate must have exactly 9 numeric parts")
+
+            if any(n < 1 or n > 999 for n in nums):
+                raise ValueError("All coordinate values must be between 1 and 999")
+
+            return Coordinate(nums[0], nums[1], nums[2], nums[3], nums[4], nums[5], nums[6], nums[7], nums[8])
+
+        except Exception as e:
+            raise ValueError(f"Invalid coordinate string: {coord_str} {e}") from e
+
+    def libraryBreak(self):
+        self.library += 1
+        self.shelf = 1
+        self.series = 1
+        self.collection = 1
+        self.volume = 1
+        self.book = 1
+        self.chapter = 1
+        self.section = 1
+        self.scroll = 1
+
+    def shelfBreak(self):
+        self.shelf += 1
+        self.series = 1
+        self.collection = 1
+        self.volume = 1
+        self.book = 1
+        self.chapter = 1
+        self.section = 1
+        self.scroll = 1
+
+    def seriesBreak(self):
+        self.series += 1
+        self.collection = 1
+        self.volume = 1
+        self.book = 1
+        self.chapter = 1
+        self.section = 1
+        self.scroll = 1
+
+    def collectionBreak(self):
+        self.collection += 1
+        self.volume = 1
+        self.book = 1
+        self.chapter = 1
+        self.section = 1
+        self.scroll = 1
+
+    def volumeBreak(self):
+        self.volume += 1
+        self.book = 1
+        self.chapter = 1
+        self.section = 1
+        self.scroll = 1
+
+    def bookBreak(self):
+        self.book += 1
+        self.chapter = 1
+        self.section = 1
+        self.scroll = 1
+
+    def chapterBreak(self):
+        self.chapter += 1
+        self.section = 1
+        self.scroll = 1
+
+    def sectionBreak(self):
+        self.section += 1
+        self.scroll = 1
+
+    def scrollBreak(self):
+        self.scroll += 1
+    
+    def __init__(self, lb, sf, sr, cn, vm, bk, ch, sn, sc):
+        self.library = int(lb)
+        self.shelf = int(sf)
+        self.series = int(sr)
+        self.collection = int(cn)
+        self.volume = int(vm)
+        self.book = int(bk)
+        self.chapter = int(ch)
+        self.section = int(sn)
+        self.scroll = int(sc)
+
+    def copy_coordinate(self, other):
+        self.library = int(other.library)
+        self.shelf = int(other.shelf)
+        self.series = int(other.series)
+        self.collection = int(other.collection)
+        self.volume = int(other.volume)
+        self.book = int(other.book)
+        self.chapter = int(other.chapter)
+        self.section = int(other.section)
+        self.scroll = int(other.scroll)
+
+    def __str__(self) -> str:
+        return f"{self.library}.{self.shelf}.{self.series}/" \
+               f"{self.collection}.{self.volume}.{self.book}/" \
+               f"{self.chapter}.{self.section}.{self.scroll}"
+    
+    def urlencoded(self) -> str:
+        return f"{self.library}.{self.shelf}.{self.series};" \
+               f"{self.collection}.{self.volume}.{self.book};" \
+               f"{self.chapter}.{self.section}.{self.scroll}"
+    
+    def __eq__(self, other):
+        return isinstance(self, Coordinate) and isinstance(other, Coordinate) and self.library == other.library and self.shelf == other.shelf and self.series == other.series and self.collection == other.collection and self.volume == other.volume and self.book == other.book and self.chapter == other.chapter and self.section == other.section and self.scroll == other.scroll
+    
+    def __lt__(self, other):
+        if not isinstance(other, Coordinate):
+            return NotImplemented
+        return self.as_tuple() < other.as_tuple()
+    
+    def as_tuple(self) -> tuple:
+        return (
+            self.library, self.shelf, self.series,
+            self.collection, self.volume, self.book,
+            self.chapter, self.section, self.scroll
+        )
+
+    def __hash__(self):
+        return hash((
+            self.library, self.shelf, self.series,
+            self.collection, self.volume, self.book,
+            self.chapter, self.section, self.scroll
+        ))phext/phext.py
+
+import copy
+import xxhash
+
+from dataclasses import dataclass
+from typing import List
+
+from phext.coordinate import Coordinate
+from phext.positionedScroll import PositionedScroll
+from phext.range import Range
+
+@dataclass
+class SubspaceBeacon:
+  start: int
+  end: int
+  best: Coordinate
+
+@dataclass
+class Phext:
+    location: Coordinate
+
+    LIBRARY_BREAK = "\x01"
+    STX_BREAK = "\x02"
+    ETX_BREAK = "\x03"
+    MORE_COWBELL = "\x07"
+    SHELF_BREAK = "\x1F"
+    SERIES_BREAK = "\x1E"
+    COLLECTION_BREAK = "\x1D"
+    VOLUME_BREAK = "\x1C"
+    BOOK_BREAK = "\x1A"
+    CHAPTER_BREAK = "\x19"
+    SECTION_BREAK = "\x18"
+    SCROLL_BREAK = "\x17"
+    LINE_BREAK = "\x0a"
+    
+    def defaultCoordinate(self) -> Coordinate:
+       return Coordinate(1,1,1, 1,1,1, 1,1,1)
+
+    def __init__(self):
+      location = self.defaultCoordinate()
+
+    def fetch(self, buffer:str, coord:Coordinate) -> dict[Coordinate, str]:
+      stack = self.phokenize(buffer)
+      for ps in stack:
+        if ps.coord == coord:
+          return ps.text
+      return ""
+    
+    def isPhextBreak(self, byte:str):
+      return byte == self.LINE_BREAK or \
+            byte == self.SCROLL_BREAK or \
+            byte == self.SECTION_BREAK or \
+            byte == self.CHAPTER_BREAK or \
+            byte == self.BOOK_BREAK or \
+            byte == self.VOLUME_BREAK or \
+            byte == self.COLLECTION_BREAK or \
+            byte == self.SERIES_BREAK or \
+            byte == self.SHELF_BREAK or \
+            byte == self.LIBRARY_BREAK
+    
+    def phokenize(self, buffer:str) -> List[PositionedScroll]:
+      result = []
+      location = self.defaultCoordinate()
+      next = self.defaultCoordinate()
+      temp = ""
+      # decoded = buffer.decode("utf-8")      
+      for ch in buffer:
+        dimension_break = False
+        if ch == self.LIBRARY_BREAK:
+          next.libraryBreak()
+          dimension_break = True
+        if ch == self.SHELF_BREAK:
+          next.shelfBreak()
+          dimension_break = True
+        if ch == self.SERIES_BREAK:
+          next.seriesBreak()
+          dimension_break = True
+        if ch == self.COLLECTION_BREAK:
+          next.collectionBreak()
+          dimension_break = True
+        if ch == self.VOLUME_BREAK:
+          next.volumeBreak()
+          dimension_break = True
+        if ch == self.BOOK_BREAK:
+          next.bookBreak()
+          dimension_break = True
+        if ch == self.CHAPTER_BREAK:
+          next.chapterBreak()
+          dimension_break = True
+        if ch == self.SECTION_BREAK:
+          next.sectionBreak()
+          dimension_break = True
+        if ch == self.SCROLL_BREAK:
+          next.scrollBreak()
+          dimension_break = True
+        
+        if dimension_break == True:
+          if len(temp) > 0:
+            item = PositionedScroll(location, temp)
+            result.append(item)
+            temp = ""
+        else:
+          temp += str(ch)
+          location = copy.deepcopy(next)
+
+      if len(temp) > 0:
+        item = PositionedScroll(location, temp)
+        result.append(item)
+
+      return result
+    
+    def append_scroll(self, entry: PositionedScroll, location: Coordinate) -> PositionedScroll:
+      output = ""
+      compare = entry.coord
+      while location < entry.coord:
+        if location.library < compare.library:
+          output += Phext.LIBRARY_BREAK
+          location.libraryBreak()
+          continue
+        if location.shelf < compare.shelf:
+          output += Phext.SHELF_BREAK
+          location.shelfBreak()
+          continue
+        if location.series < compare.series:
+          output += Phext.SERIES_BREAK
+          location.seriesBreak()
+          continue
+        if location.collection < compare.collection:
+          output += Phext.COLLECTION_BREAK
+          location.collectionBreak()
+          continue
+        if location.volume < compare.volume:
+          output += Phext.VOLUME_BREAK
+          location.volumeBreak()
+          continue
+        if location.book < compare.book:
+          output += Phext.BOOK_BREAK
+          location.bookBreak()
+          continue
+        if location.chapter < compare.chapter:
+          output += Phext.CHAPTER_BREAK
+          location.chapterBreak()
+          continue
+        if location.section < compare.section:
+          output += Phext.SECTION_BREAK
+          location.sectionBreak()
+          continue
+        if location.scroll < compare.scroll:
+          output += Phext.SCROLL_BREAK
+          location.scrollBreak()
+          continue
+      if len(entry.text) > 0:
+        output += entry.text
+      result = PositionedScroll(location, output)
+      return result
+
+    def dephokenize(self, stack: list[PositionedScroll]) -> str:
+      result = ""
+      location = self.defaultCoordinate()
+      for ps in stack:
+        next = self.append_scroll(ps, location)
+        result += next.text
+        location = next.coord
+      return result
+
+    def normalize(self, buffer:str) -> str:
+      arr = self.phokenize(buffer)
+      return self.dephokenize(arr)
+
+    def update(self, buffer:str, coord:Coordinate, scroll:str, overwrite:bool) -> str:
+      items = self.phokenize(buffer)
+      result = []
+      next = PositionedScroll(coord, scroll)
+      appended = False
+      for ps in items:
+        if (ps.coord > coord) and (appended == False):
+          result.append(next)
+          appended = True
+        if (ps.coord == coord) and (appended == False):
+          if overwrite == False:
+            next.text = ps.text + next.text
+          result.append(next)
+          appended = True
+          continue
+        result.append(ps)
+      if appended == False:
+        result.append(next)
+        appended = True
+
+      serialized = self.dephokenize(result)
+      return serialized
+    
+    def insert(self, buffer:str, coord:Coordinate, scroll:str) -> str:
+      return self.update(buffer, coord, scroll, False)
+    
+    def replace(self, buffer:str, coord:Coordinate, scroll:str) -> str:
+      return self.update(buffer, coord, scroll, True)
+    
+    def remove(self, buffer:str, coord:Coordinate) -> str:
+      intermediate = self.update(buffer, coord, "", True)
+      return self.normalize(intermediate)
+    
+    def range_replace(self, buffer:str, range:Range, text:str) -> str:
+      stack = self.phokenize(buffer)
+      result = []
+      appended = False      
+      for ps in stack:
+        if ps.coord < range.start and len(ps.text) > 0:
+          result.append(ps)
+        if ps.coord >= range.start and ps.coord <= range.end:          
+          if appended == False and len(text) > 0:
+            next = PositionedScroll(ps.coord, text)
+            result.append(next)
+            appended = True
+        if ps.coord > range.end and len(ps.text) > 0:
+          result.append(ps)
+      return self.dephokenize(result)
+    
+    def next_scroll(self, buffer:str, coord:Coordinate) -> List[PositionedScroll]:
+      stack = self.phokenize(buffer)
+      found = False
+      result = []
+      for ps in stack:
+        if found == True:
+          result.append(ps)
+          return result
+        if ps.coord >= coord:
+          result.append(ps)
+          found = True
+      return result
+    
+    def get_subspace_coordinates(self, buffer:str, target:Coordinate):
+      walker = self.defaultCoordinate()
+      best = self.defaultCoordinate()
+      subspace_index = 0
+      start = 0
+      end = 0
+      stage = 0
+      max = len(buffer)
+
+      while subspace_index < max:
+        next = buffer[subspace_index]
+        compare = next
+
+        if stage == 0:
+          if walker == target:
+            stage = 1
+            start = subspace_index
+            best = copy.deepcopy(walker)
+          if walker < target:
+            best = copy.deepcopy(walker)
+        if stage < 2 and walker > target:
+          if stage == 0:
+            start = subspace_index - 1
+          end = subspace_index - 1
+          stage = 2    
+
+        if self.isPhextBreak(next):
+          if compare == self.SCROLL_BREAK:
+            walker.scrollBreak()
+          if compare == self.SECTION_BREAK:
+            walker.sectionBreak()
+          if compare == self.CHAPTER_BREAK:
+            walker.chapterBreak()
+          if compare == self.BOOK_BREAK:
+            walker.bookBreak()
+          if compare == self.VOLUME_BREAK:
+            walker.volumeBreak()
+          if compare == self.COLLECTION_BREAK:
+            walker.collectionBreak()
+          if compare == self.SERIES_BREAK:
+            walker.seriesBreak()
+          if compare == self.SHELF_BREAK:
+            walker.shelfBreak()
+          if compare == self.LIBRARY_BREAK:
+            walker.libraryBreak()
+        
+        if stage < 2 and walker > target:
+          end = subspace_index
+          stage = 2
+        
+        subspace_index += 1
+
+      if stage == 1 and walker == target:
+        end = max
+        stage = 2
+
+      if stage == 0:
+        start = max
+        end = max
+
+      result = SubspaceBeacon(start, end, best)
+      return result
+    
+    def merge(self, left: str, right:str) -> str:
+      tl = self.phokenize(left)
+      tr = self.phokenize(right)
+      tli = 0
+      tri = 0
+      maxtl = len(tl)
+      maxtr = len(tr)
+      result = ""
+      coord = self.defaultCoordinate()
+
+      while True:
+        have_left = tli < maxtl
+        have_right = tri < maxtr
+        pick_left = have_left and (have_right == False or tl[tli].coord <= tr[tri].coord)
+        pick_right = have_right and (have_left == False or tr[tri].coord <= tl[tli].coord)
+
+        if pick_left:
+          next = self.append_scroll(tl[tli], coord)
+          result += next.text
+          coord = next.coord
+          tli += 1
+        if pick_right:
+          next = self.append_scroll(tr[tri], coord)
+          result += next.text
+          coord = next.coord
+          tri += 1
+
+        if pick_left == False and pick_right == False:
+          break
+
+      return result
+    
+    def subtract(self, left:str, right:str) -> str:
+      pl = self.phokenize(left)
+      pr = self.phokenize(right)
+      result = ""
+      pri = 0
+      max = len(pr)
+      coord = self.defaultCoordinate()
+      for item in pl:
+        do_append = pri == max
+        if pri < max:
+          compare = pr[pri]
+          if item.coord < compare.coord:
+            do_append = True
+          elif item.coord == compare.coord:
+            pri += 1
+        if do_append:
+          next = self.append_scroll(item, coord)
+          result += next.text
+          coord = next.coord
+      return result
+    
+    def expand(self, buffer:str) -> str:
+      result = ""
+      for char in buffer:
+        if char == self.LINE_BREAK:
+          result += self.SCROLL_BREAK
+        elif char == self.SCROLL_BREAK:
+          result += self.SECTION_BREAK
+        elif char == self.SECTION_BREAK:
+          result += self.CHAPTER_BREAK
+        elif char == self.CHAPTER_BREAK:
+          result += self.BOOK_BREAK
+        elif char == self.BOOK_BREAK:
+          result += self.VOLUME_BREAK
+        elif char == self.VOLUME_BREAK:
+          result += self.COLLECTION_BREAK
+        elif char == self.COLLECTION_BREAK:
+          result += self.SERIES_BREAK
+        elif char == self.SERIES_BREAK:
+          result += self.SHELF_BREAK
+        elif char == self.SHELF_BREAK:
+          result += self.LIBRARY_BREAK
+        else:
+          result += char
+      return result
+    
+    def contract(self, buffer:str) -> str:
+      result = ""
+      for char in buffer:
+        if char == self.LIBRARY_BREAK:
+          result += self.SHELF_BREAK
+        elif char == self.SHELF_BREAK:
+          result += self.SERIES_BREAK
+        elif char == self.SERIES_BREAK:
+          result += self.COLLECTION_BREAK
+        elif char == self.COLLECTION_BREAK:
+          result += self.VOLUME_BREAK
+        elif char == self.VOLUME_BREAK:
+          result += self.BOOK_BREAK
+        elif char == self.BOOK_BREAK:
+          result += self.CHAPTER_BREAK
+        elif char == self.CHAPTER_BREAK:
+          result += self.SECTION_BREAK
+        elif char == self.SECTION_BREAK:
+          result += self.SCROLL_BREAK
+        elif char == self.SCROLL_BREAK:
+          result += self.LINE_BREAK
+        else:
+          result += char
+      return result
+    
+    def create_summary(self, buffer:str) -> str:
+      limit = 32
+      max = len(buffer)
+      if max < 32:
+        limit = max
+      summary = ""
+      for char in buffer:
+        if self.isPhextBreak(char):
+          break
+        summary += char
+      if len(summary) < len(buffer):
+        summary += "..."
+      return summary
+    
+    def navmap(self, urlbase:str, buffer:str) -> str:
+      stack = self.phokenize(buffer)
+      result = ""
+      max = len(stack)
+      if max > 0:
+        result += "<ul>\n"
+      for ps in stack:
+        urlcoord = ps.coord.urlencoded()
+        summary = self.create_summary(ps.text)
+        result += f"<li><a href=\"{urlbase}{urlcoord}\">{ps.coord} {summary}</a></li>\n"
+      if max > 0:
+        result += "</ul>\n"
+      return result
+    
+    def textmap(self, buffer:str) -> str:
+      stack = self.phokenize(buffer)
+      result = ""
+      for ps in stack:
+        summary = self.create_summary(ps.text)
+        result += f"* {ps.coord}: {summary}\n"
+      return result
+    
+    def checksum(self, buffer:str) -> str:
+      hash = xxhash.xxh3_128(buffer).hexdigest()
+      return hash
+    
+    def manifest(self, buffer:str) -> str:
+      stack = self.phokenize(buffer)
+      for ps in stack:
+        ps.text = self.checksum(ps.text)
+      result = self.dephokenize(stack)
+      return result
+    
+    def soundex_v1(self, buffer:str) -> str:
+      stack = self.phokenize(buffer)
+  
+      for ps in stack:
+        ps.text = self.soundex_internal(ps.text)
+
+      return self.dephokenize(stack)
+    
+    def soundex_internal(self, buffer:str) -> str:
+      letter1 = "bpfv"
+      letter2 = "cskgjqxz"
+      letter3 = "dt"
+      letter4 = "l"
+      letter5 = "mn"
+      letter6 = "r"
+      
+      value = 1 # 1-100
+      for byte in buffer:
+        if byte in letter1:
+          value += 1
+        if byte in letter2:
+          value += 2
+        if byte in letter3:
+          value += 3
+        if byte in letter4:
+          value += 4
+        if byte in letter5:
+          value += 5
+        if byte in letter6:
+          value += 6
+      return str(value % 99)
+    
+    def explode(self, buffer:str) -> dict[Coordinate, str]:
+      parts = self.phokenize(buffer)
+      hash: dict[Coordinate, str] = {}
+      for ps in parts:
+        hash[ps.coord] = ps.text
+      return hash
+    
+    def implode(self, hash: dict[Coordinate, str]) -> str:
+      parts = []
+      for coord in hash.keys():
+        parts.append(PositionedScroll(coord, hash[coord]))
+      return self.dephokenize(parts)
+    
+    def index_phokens(self, buffer:str) -> list[PositionedScroll]:
+      stack = self.phokenize(buffer)
+      offset = 0
+      coord = self.defaultCoordinate()
+      output = []
+      for ps in stack:
+        reference = ps.coord
+        while coord.library < reference.library:
+          coord.libraryBreak()          
+          offset += 1
+        while coord.shelf < reference.shelf:
+          coord.shelfBreak()
+          offset += 1
+        while coord.series < reference.series:
+          coord.seriesBreak()
+          offset += 1
+        while coord.collection < reference.collection:
+          coord.collectionBreak()
+          offset += 1
+        while coord.volume < reference.volume:
+          coord.volumeBreak()
+          offset += 1
+        while coord.book < reference.book:
+          coord.bookBreak()
+          offset += 1
+        while coord.chapter < reference.chapter:
+          coord.chapterBreak()
+          offset += 1
+        while coord.section < reference.section:
+          coord.sectionBreak()
+          offset += 1
+        while coord.scroll < reference.scroll:
+          coord.scrollBreak()
+          offset += 1
+        text = str(offset)
+        output.append(PositionedScroll(copy.deepcopy(coord), text))
+        offset += len(ps.text)
+
+      return output
+
+    def index(self, buffer:str) -> str:
+      output = self.index_phokens(buffer)
+      return self.dephokenize(output)
+    
+    def offset(self, buffer:str, coord:Coordinate) -> int:
+      output = self.index_phokens(buffer)
+      best = self.defaultCoordinate()
+      fetch_coord = coord
+      matched = False
+      for ps in output:
+        if ps.coord <= coord:
+          best = copy.deepcopy(ps.coord)
+        if ps.coord == coord:
+          matched = True
+      if matched == False:
+        fetch_coord = best
+      index = self.dephokenize(output)
+      return int(self.fetch(index, fetch_coord))phext/positionedScroll.py
+
+from dataclasses import dataclass
+from phext.coordinate import Coordinate
+
+@dataclass
+class PositionedScroll:
+    coord: Coordinate
+    text: str
+    
+    def __init__(self, coord, text):
+        self.coord = coord
+        self.text = textphext/range.py
+
+from dataclasses import dataclass
+from phext.coordinate import Coordinate
+
+@dataclass
+class Range:
+  start: Coordinate
+  end: Coordinatetest/verify.py
+
+import phext
+from phext.coordinate import Coordinate
+from phext.range import Range
+from phext.phext import Phext
+coord = Coordinate.from_string("1.2.3/4.5.6/7.8.9")
+phext = Phext()
+buffer = phext.update("", coord, "Hello World", True)
+print(buffer)
+tests/test_coordinate.py
+
+from phext.coordinate import Coordinate
+import pytest
+
+# Upstream tests covered by this module:
+# test_coordinate_parsing
+# test_to_urlencoded
+# test_coordinates_invalid
+# test_coordinates_valid
+# test_url_encoding
+
+# notes
+# Apparently there aren't any test methods in phext-rs for break methods?
+
+# expected valid conditions
+
+def test_valid_home_coordinate():
+    coord = Coordinate.from_string("1.1.1/1.1.1/1.1.1")
+    assert coord.library == 1
+    assert coord.shelf == 1
+    assert coord.series == 1
+    assert coord.collection == 1
+    assert coord.volume == 1
+    assert coord.book == 1
+    assert coord.chapter == 1
+    assert coord.section == 1
+    assert coord.scroll == 1
+
+def test_independent_coordinates():
+    coord = Coordinate.from_string("1.2.3/4.5.6/7.8.9")
+    assert coord.library == 1
+    assert coord.shelf == 2
+    assert coord.series == 3
+    assert coord.collection == 4
+    assert coord.volume == 5
+    assert coord.book == 6
+    assert coord.chapter == 7
+    assert coord.section == 8
+    assert coord.scroll == 9
+
+def test_large_coordinates():
+    coord = Coordinate.from_string("999.998.997/996.995.994/993.992.991")
+    assert coord.library == 999
+    assert coord.shelf == 998
+    assert coord.series == 997
+    assert coord.collection == 996
+    assert coord.volume == 995
+    assert coord.book == 994
+    assert coord.chapter == 993
+    assert coord.section == 992
+    assert coord.scroll == 991
+
+def test_whitespace_support():
+   coord = Coordinate.from_string("   9.8.7/6.5.4/3.2.1   ")
+   assert coord.library == 9
+   assert coord.shelf == 8
+   assert coord.series == 7
+   assert coord.collection == 6
+   assert coord.volume == 5
+   assert coord.book == 4
+   assert coord.chapter == 3
+   assert coord.section == 2
+   assert coord.scroll == 1
+
+def test_internal_whitespace_support():
+   coord = Coordinate.from_string("91.82.73 / 64.55.46 / 37.28.19")
+   assert coord.library == 91
+   assert coord.shelf == 82
+   assert coord.series == 73
+   assert coord.collection == 64
+   assert coord.volume == 55
+   assert coord.book == 46
+   assert coord.chapter == 37
+   assert coord.section == 28
+   assert coord.scroll == 19
+
+def test_to_urlencoded():
+   coord = Coordinate(98, 76, 54, 32, 10, 1, 23, 45, 67)
+   assert coord.urlencoded() == "98.76.54;32.10.1;23.45.67"
+
+def test_library_break():
+   coord = Coordinate(98, 76, 54, 32, 10, 1, 23, 45, 67)
+   coord.libraryBreak()
+   expected = Coordinate(99,1,1, 1,1,1, 1,1,1)
+   assert coord == expected
+
+def test_shelf_break():
+   coord = Coordinate(98, 76, 54, 32, 10, 1, 23, 45, 67)
+   coord.shelfBreak()
+   expected = Coordinate(98,77,1, 1,1,1, 1,1,1)
+   assert coord == expected
+
+def test_series_break():
+   coord = Coordinate(98, 76, 54, 32, 10, 1, 23, 45, 67)
+   coord.seriesBreak()
+   expected = Coordinate(98,76,55, 1,1,1, 1,1,1)
+   assert coord == expected
+
+def test_collection_break():
+   coord = Coordinate(98, 76, 54, 32, 10, 1, 23, 45, 67)
+   coord.collectionBreak()
+   expected = Coordinate(98,76,54, 33,1,1, 1,1,1)
+   assert coord == expected
+
+def test_volume_break():
+   coord = Coordinate(98, 76, 54, 32, 10, 1, 23, 45, 67)
+   coord.volumeBreak()
+   expected = Coordinate(98,76,54, 32,11,1, 1,1,1)
+   assert coord == expected
+
+def test_book_break():
+   coord = Coordinate(98, 76, 54, 32, 10, 1, 23, 45, 67)
+   coord.bookBreak()
+   expected = Coordinate(98,76,54, 32,10,2, 1,1,1)
+   assert coord == expected
+
+def test_chapter_break():
+   coord = Coordinate(98, 76, 54, 32, 10, 1, 23, 45, 67)
+   coord.chapterBreak()
+   expected = Coordinate(98,76,54, 32,10,1, 24,1,1)
+   assert coord == expected
+
+def test_section_break():
+   coord = Coordinate(98, 76, 54, 32, 10, 1, 23, 45, 67)
+   coord.sectionBreak()
+   expected = Coordinate(98,76,54, 32,10,1, 23,46,1)
+   assert coord == expected
+
+def test_scroll_break():
+   coord = Coordinate(98, 76, 54, 32, 10, 1, 23, 45, 67)
+   coord.scrollBreak()
+   expected = Coordinate(98,76,54, 32,10,1, 23,45,68)
+   assert coord == expected
+
+# invalid conditions
+
+def test_no_input():
+    with pytest.raises(ValueError):
+      coord = Coordinate.from_string("")
+
+def test_too_large_coordinates():
+    with pytest.raises(ValueError):
+      coord = Coordinate.from_string("1000.1001.1002/1003.1004.1005/1006.1007.1008")
+
+def test_negative_coordinates():
+    with pytest.raises(ValueError):
+      coord = Coordinate.from_string("-1.-2.-3/-4.-5.-6/-7.-8.-9")
+
+def test_malformed_coordinates():
+    with pytest.raises(ValueError):
+      coord = Coordinate.from_string("1.2.3/4.5")
+
+def test_null_coordinates():
+    with pytest.raises(ValueError):
+      coord = Coordinate.from_string("0.0.0/0.0.0/0.0.0")
+
+def test_null_library():
+    with pytest.raises(ValueError):
+      coord = Coordinate.from_string("0.1.1/1.1.1/1.1.1")
+
+def test_null_shelf():
+    with pytest.raises(ValueError):
+      coord = Coordinate.from_string("1.0.1/1.1.1/1.1.1")
+
+def test_null_series():
+    with pytest.raises(ValueError):
+      coord = Coordinate.from_string("1.1.0/1.1.1/1.1.1")
+
+def test_null_collection():
+    with pytest.raises(ValueError):
+      coord = Coordinate.from_string("1.1.1/0.1.1/1.1.1")
+
+def test_null_volume():
+    with pytest.raises(ValueError):
+      coord = Coordinate.from_string("1.1.1/1.0.1/1.1.1")
+
+def test_null_book():
+    with pytest.raises(ValueError):
+      coord = Coordinate.from_string("1.1.1/1.1.0/1.1.1")
+
+def test_null_chapter():
+    with pytest.raises(ValueError):
+      coord = Coordinate.from_string("1.1.1/1.1.1/0.1.1")
+
+def test_null_section():
+    with pytest.raises(ValueError):
+      coord = Coordinate.from_string("1.1.1/1.1.1/1.0.1")
+
+def test_null_scroll():
+    with pytest.raises(ValueError):
+      coord = Coordinate.from_string("1.1.1/1.1.1/1.1.0")
+tests/test_phext.py
+
+from phext.coordinate import Coordinate
+from phext.positionedScroll import PositionedScroll
+from phext.range import Range
+from phext.phext import Phext
+from datetime import datetime
+from copy import deepcopy
+import pytest
+
+# Upstream tests covered by this module:
+# test_dead_reckoning
+# test_line_break
+# test_more_cowbell
+# test_coordinate_based_insert
+# test_coordinate_based_replace
+# test_coordinate_based_remove
+# test_range_based_replace
+# test_next_scroll
+# test_last_empty_scroll
+# test_merge
+# test_subtract
+# test_normalize
+# test_expand
+# test_contract
+# test_fs_read_write
+# test_replace_create
+# test_summary
+# test_navmap
+# test_textmap
+# test_larger_coordinates
+# test_phext_index
+# test_scroll_manifest
+# test_phext_soundex_v1
+# test_insert_performance_2k_scrolls
+# test_insert_performance_medium_scrolls
+# test_hash_support
+# test_subspace_filter
+
+def test_dead_reckoning():
+  test = "random text in 1.1.1/1.1.1/1.1.1 that we can skip past"
+  test += Phext.LIBRARY_BREAK
+  test += "everything in here is at 2.1.1/1.1.1/1.1.1"
+  test += Phext.SCROLL_BREAK
+  test += "and now we're at 2.1.1/1.1.1/1.1.2"
+  test += Phext.SCROLL_BREAK
+  test += "moving on up to 2.1.1/1.1.1/1.1.3"
+  test += Phext.BOOK_BREAK
+  test += "and now over to 2.1.1/1.1.2/1.1.1"
+  test += Phext.SHELF_BREAK
+  test += "woot, up to 2.2.1/1.1.1/1.1.1"
+  test += Phext.LIBRARY_BREAK
+  test += "here we are at 3.1.1/1.1.1.1.1"
+  test += Phext.LIBRARY_BREAK # 4.1.1/1.1.1/1.1.1
+  test += Phext.LIBRARY_BREAK # 5.1.1/1.1.1/1.1.1
+  test += "getting closer to our target now 5.1.1/1.1.1/1.1.1"
+  test += Phext.SHELF_BREAK # 5.2.1
+  test += Phext.SHELF_BREAK # 5.3.1
+  test += Phext.SHELF_BREAK # 5.4.1
+  test += Phext.SHELF_BREAK # 5.5.1
+  test += Phext.SERIES_BREAK # 5.5.2
+  test += Phext.SERIES_BREAK # 5.5.3
+  test += Phext.SERIES_BREAK # 5.5.4
+  test += Phext.SERIES_BREAK # 5.5.5
+  test += "here we go! 5.5.5/1.1.1/1.1.1"
+  test += Phext.COLLECTION_BREAK # 5.5.5/2.1.1/1.1.1
+  test += Phext.COLLECTION_BREAK # 5.5.5/3.1.1/1.1.1
+  test += Phext.COLLECTION_BREAK # 5.5.5/4.1.1/1.1.1
+  test += Phext.BOOK_BREAK # 5.5.5/4.1.2/1.1.1
+  test += Phext.BOOK_BREAK # 5.5.5/4.1.3/1.1.1
+  test += Phext.BOOK_BREAK # 5.5.5/4.1.4/1.1.1
+  test += "this test appears at 5.5.5/4.1.4/1.1.1"
+  test += Phext.VOLUME_BREAK # 5.5.5/4.2.1/1.1.1
+  test += Phext.VOLUME_BREAK # 5.5.5/4.3.1/1.1.1
+  test += Phext.VOLUME_BREAK # 5.5.5/4.4.1/1.1.1
+  test += Phext.VOLUME_BREAK # 5.5.5/4.5.1/1.1.1
+  test += Phext.VOLUME_BREAK # 5.5.5/4.6.1/1.1.1
+  test += Phext.CHAPTER_BREAK # 5.5.5/4.6.1/2.1.1
+  test += Phext.CHAPTER_BREAK # 5.5.5/4.6.1/3.1.1
+  test += Phext.CHAPTER_BREAK # 5.5.5/4.6.1/4.1.1
+  test += Phext.CHAPTER_BREAK # 5.5.5/4.6.1/5.1.1
+  test += Phext.BOOK_BREAK # 5.5.5/4.6.2/1.1.1
+  test += Phext.BOOK_BREAK # 5.5.5/4.6.3/1.1.1
+  test += Phext.BOOK_BREAK # 5.5.5/4.6.4/1.1.1
+  test += Phext.BOOK_BREAK # 5.5.5/4.6.5/1.1.1
+  test += Phext.BOOK_BREAK # 5.5.5/4.6.6/1.1.1
+  test += Phext.BOOK_BREAK # 5.5.5/4.6.7/1.1.1
+  test += Phext.CHAPTER_BREAK # 5.5.5/4.6.7/2.1.1
+  test += Phext.CHAPTER_BREAK # 5.5.5/4.6.7/3.1.1
+  test += Phext.CHAPTER_BREAK # 5.5.5/4.6.7/4.1.1
+  test += Phext.CHAPTER_BREAK # 5.5.5/4.6.7/5.1.1
+  test += Phext.SCROLL_BREAK # 5.5.5/4.6.7/5.1.2
+  test += Phext.SCROLL_BREAK # 5.5.5/4.6.7/5.1.3
+  test += Phext.SCROLL_BREAK # 5.5.5/4.6.7/5.1.4
+  test += Phext.SCROLL_BREAK # 5.5.5/4.6.7/5.1.5
+  test += Phext.SCROLL_BREAK # 5.5.5/4.6.7/5.1.6
+  test += "here's a test at 5.5.5/4.6.7/5.1.6"
+  test += Phext.SCROLL_BREAK  # 5.5.5/4.6.7/5.1.7
+  test += Phext.CHAPTER_BREAK # 5.5.5/4.6.7/6.1.1
+  test += Phext.CHAPTER_BREAK # 5.5.5/4.6.7/7.1.1
+  test += Phext.CHAPTER_BREAK # 5.5.5/4.6.7/8.1.1
+  test += Phext.CHAPTER_BREAK # 5.5.5/4.6.7/9.1.1
+  test += Phext.SECTION_BREAK # 5.5.5/4.6.7/9.2.1
+  test += Phext.SECTION_BREAK # 5.5.5/4.6.7/9.3.1
+  test += Phext.SECTION_BREAK # 5.5.5/4.6.7/9.4.1
+  test += Phext.SECTION_BREAK # 5.5.5/4.6.7/9.5.1
+  test += Phext.SCROLL_BREAK  # 5.5.5/4.6.7/9.5.2
+  test += Phext.SCROLL_BREAK  # 5.5.5/4.6.7/9.5.3
+  test += Phext.SCROLL_BREAK  # 5.5.5/4.6.7/9.5.4
+  test += Phext.SCROLL_BREAK  # 5.5.5/4.6.7/9.5.5
+  test += Phext.SCROLL_BREAK  # 5.5.5/4.6.7/9.5.6
+  test += Phext.SCROLL_BREAK  # 5.5.5/4.6.7/9.5.7
+  test += Phext.SCROLL_BREAK  # 5.5.5/4.6.7/9.5.8
+  test += Phext.SCROLL_BREAK  # 5.5.5/4.6.7/9.5.9
+  test += "Expected Test Pattern Alpha Whisky Tango Foxtrot"
+  coord = Coordinate.from_string("5.5.5/4.6.7/9.5.9")
+
+  phext = Phext()
+  result = phext.fetch(test, coord)
+  assert result == "Expected Test Pattern Alpha Whisky Tango Foxtrot"
+
+  coord2 = Coordinate.from_string("5.5.5/4.6.7/5.1.6")
+  result2 = phext.fetch(test, coord2)
+  assert result2 == "here's a test at 5.5.5/4.6.7/5.1.6"
+
+def test_line_break():
+  assert Phext.LINE_BREAK == '\n'
+
+def test_more_cowbell():
+  assert Phext.MORE_COWBELL == '\x07'
+
+def test_coordinate_based_insert():
+  phext = Phext()
+  doc = "aaa\x01bbb\x17ccc"
+  root = phext.defaultCoordinate()
+
+  test1 = phext.phokenize(doc)
+  precheck = [
+    PositionedScroll(Coordinate(1,1,1, 1,1,1, 1,1,1), "aaa"),
+    PositionedScroll(Coordinate(2,1,1, 1,1,1, 1,1,1), "bbb"),
+    PositionedScroll(Coordinate(2,1,1, 1,1,1, 1,1,2), "ccc")
+  ]
+  assert test1 == precheck
+  test2 = phext.dephokenize(test1)
+  assert test2 == doc
+
+  coord1 = Coordinate.from_string("2.1.1/1.1.1/1.1.3")
+  update1 = phext.insert(doc, coord1, "ddd")
+  assert update1 == "aaa\x01bbb\x17ccc\x17ddd"
+
+  # append 'eee' after 'ddd'
+  coord2 = Coordinate.from_string("2.1.1/1.1.1/1.1.4")
+  update2 = phext.insert(update1, coord2, "eee")
+  assert update2 == "aaa\x01bbb\x17ccc\x17ddd\x17eee"
+
+  # append 'fff' after 'eee'
+  coord3 = Coordinate.from_string("2.1.1/1.1.1/1.2.1")
+  update3 = phext.insert(update2, coord3, "fff")
+  assert update3 == "aaa\x01bbb\x17ccc\x17ddd\x17eee\x18fff"
+
+  # append 'ggg' after 'fff'
+  coord4 = Coordinate.from_string("2.1.1/1.1.1/1.2.2")
+  update4 = phext.insert(update3, coord4, "ggg")
+  assert update4 == "aaa\x01bbb\x17ccc\x17ddd\x17eee\x18fff\x17ggg"
+
+  # append 'hhh' after 'ggg'
+  coord5 = Coordinate.from_string("2.1.1/1.1.1/2.1.1")
+  update5 = phext.insert(update4, coord5, "hhh")
+  assert update5 == "aaa\x01bbb\x17ccc\x17ddd\x17eee\x18fff\x17ggg\x19hhh"
+
+  # append 'iii' after 'eee'
+  coord6 = Coordinate.from_string("2.1.1/1.1.1/1.1.5")
+  update6 = phext.insert(update5, coord6, "iii")
+  assert update6 == "aaa\x01bbb\x17ccc\x17ddd\x17eee\x17iii\x18fff\x17ggg\x19hhh"
+
+  # extend 1.1.1/1.1.1/1.1.1 with '---AAA'
+  update7 = phext.insert(update6, root, "---AAA")
+  assert update7 == "aaa---AAA\x01bbb\x17ccc\x17ddd\x17eee\x17iii\x18fff\x17ggg\x19hhh"
+
+  # extend 2.1.1/1.1.1/1.1.1 with '---BBB'
+  coord8 = Coordinate.from_string("2.1.1/1.1.1/1.1.1")
+  update8 = phext.insert(update7, coord8, "---BBB")
+  assert update8 == "aaa---AAA\x01bbb---BBB\x17ccc\x17ddd\x17eee\x17iii\x18fff\x17ggg\x19hhh"
+
+  # extend 2.1.1/1.1.1/1.1.2 with '---CCC'
+  coord9 = Coordinate.from_string("2.1.1/1.1.1/1.1.2")
+  update9 = phext.insert(update8, coord9, "---CCC")
+  assert update9 == "aaa---AAA\x01bbb---BBB\x17ccc---CCC\x17ddd\x17eee\x17iii\x18fff\x17ggg\x19hhh"
+
+  # extend 2.1.1/1.1.1/1.1.3 with '---DDD'
+  coord10 = Coordinate.from_string("2.1.1/1.1.1/1.1.3")
+  update10 = phext.insert(update9, coord10, "---DDD")
+  assert update10 == "aaa---AAA\x01bbb---BBB\x17ccc---CCC\x17ddd---DDD\x17eee\x17iii\x18fff\x17ggg\x19hhh"
+
+  # extend 2.1.1/1.1.1/1.1.4 with '---EEE'
+  coord11 = Coordinate.from_string("2.1.1/1.1.1/1.1.4")
+  update11 = phext.insert(update10, coord11, "---EEE")
+  assert update11 == "aaa---AAA\x01bbb---BBB\x17ccc---CCC\x17ddd---DDD\x17eee---EEE\x17iii\x18fff\x17ggg\x19hhh"
+
+  # extend 2.1.1/1.1.1/1.1.5 with '---III'
+  coord12 = Coordinate.from_string("2.1.1/1.1.1/1.1.5")
+  update12 = phext.insert(update11, coord12, "---III")
+  assert update12 == "aaa---AAA\x01bbb---BBB\x17ccc---CCC\x17ddd---DDD\x17eee---EEE\x17iii---III\x18fff\x17ggg\x19hhh"
+
+  # extend 2.1.1/1.1.1/1.2.1 with '---FFF'
+  coord13 = Coordinate.from_string("2.1.1/1.1.1/1.2.1")
+  update13 = phext.insert(update12, coord13, "---FFF")
+  assert update13 == "aaa---AAA\x01bbb---BBB\x17ccc---CCC\x17ddd---DDD\x17eee---EEE\x17iii---III\x18fff---FFF\x17ggg\x19hhh"
+
+  # extend 2.1.1/1.1.1/1.2.2 with '---GGG'
+  coord14 = Coordinate.from_string("2.1.1/1.1.1/1.2.2")
+  update14 = phext.insert(update13, coord14, "---GGG")
+  assert update14 == "aaa---AAA\x01bbb---BBB\x17ccc---CCC\x17ddd---DDD\x17eee---EEE\x17iii---III\x18fff---FFF\x17ggg---GGG\x19hhh"
+
+  # extend 2.1.1/1.1.1/2.1.1 with '---HHH'
+  coord15 = Coordinate.from_string("2.1.1/1.1.1/2.1.1")
+  update15 = phext.insert(update14, coord15, "---HHH")
+  assert update15 == "aaa---AAA\x01bbb---BBB\x17ccc---CCC\x17ddd---DDD\x17eee---EEE\x17iii---III\x18fff---FFF\x17ggg---GGG\x19hhh---HHH"
+
+  # insert 'jjj' at 2.1.1/1.1.2/1.1.1
+  coord16 = Coordinate.from_string("2.1.1/1.1.2/1.1.1")
+  update16 = phext.insert(update15, coord16, "jjj")
+  assert update16 == "aaa---AAA\x01bbb---BBB\x17ccc---CCC\x17ddd---DDD\x17eee---EEE\x17iii---III\x18fff---FFF\x17ggg---GGG\x19hhh---HHH\x1Ajjj"
+
+  # insert 'kkk' at 2.1.1/1.2.1/1.1.1
+  coord17 = Coordinate.from_string("2.1.1/1.2.1/1.1.1")
+  update17 = phext.insert(update16, coord17, "kkk")
+  assert update17 == "aaa---AAA\x01bbb---BBB\x17ccc---CCC\x17ddd---DDD\x17eee---EEE\x17iii---III\x18fff---FFF\x17ggg---GGG\x19hhh---HHH\x1Ajjj\x1Ckkk"
+
+  # insert 'lll' at 2.1.1/2.1.1/1.1.1
+  coord18 = Coordinate.from_string("2.1.1/2.1.1/1.1.1")
+  update18 = phext.insert(update17, coord18, "lll")
+  assert update18 == "aaa---AAA\x01bbb---BBB\x17ccc---CCC\x17ddd---DDD\x17eee---EEE\x17iii---III\x18fff---FFF\x17ggg---GGG\x19hhh---HHH\x1Ajjj\x1Ckkk\x1Dlll"
+
+  # insert 'mmm' at 2.1.2/1.1.1/1.1.1
+  coord19 = Coordinate.from_string("2.1.2/1.1.1/1.1.1")
+  update19 = phext.insert(update18, coord19, "mmm")
+  assert update19 == "aaa---AAA\x01bbb---BBB\x17ccc---CCC\x17ddd---DDD\x17eee---EEE\x17iii---III\x18fff---FFF\x17ggg---GGG\x19hhh---HHH\x1Ajjj\x1Ckkk\x1Dlll\x1Emmm"
+
+  # insert 'nnn' at 2.2.1/1.1.1/1.1.1
+  coord20 = Coordinate.from_string("2.2.1/1.1.1/1.1.1")
+  update20 = phext.insert(update19, coord20, "nnn")
+  assert update20 == "aaa---AAA\x01bbb---BBB\x17ccc---CCC\x17ddd---DDD\x17eee---EEE\x17iii---III\x18fff---FFF\x17ggg---GGG\x19hhh---HHH\x1Ajjj\x1Ckkk\x1Dlll\x1Emmm\x1Fnnn"
+
+  # insert 'ooo' at 3.1.1/1.1.1/1.1.1
+  coord21 = Coordinate.from_string("3.1.1/1.1.1/1.1.1")
+  update21 = phext.insert(update20, coord21, "ooo")
+  assert update21 == "aaa---AAA\x01bbb---BBB\x17ccc---CCC\x17ddd---DDD\x17eee---EEE\x17iii---III\x18fff---FFF\x17ggg---GGG\x19hhh---HHH\x1Ajjj\x1Ckkk\x1Dlll\x1Emmm\x1Fnnn\x01ooo"
+
+def test_coordinate_based_replace():
+  phext = Phext()
+
+  # replace 'AAA' with 'aaa'
+  coord0 = Coordinate.from_string("1.1.1/1.1.1/1.1.1")
+  update0 = phext.replace("AAA\x17bbb\x18ccc\x19ddd\x1Aeee\x1Cfff\x1Dggg\x1Ehhh\x1Fiii\x01jjj", coord0, "aaa")
+  assert update0 == "aaa\x17bbb\x18ccc\x19ddd\x1Aeee\x1Cfff\x1Dggg\x1Ehhh\x1Fiii\x01jjj"
+
+  # replace 'bbb' with '222'
+  coord1 = Coordinate.from_string("1.1.1/1.1.1/1.1.2")
+  update1 = phext.replace(update0, coord1, "222")
+  assert update1 == "aaa\x17222\x18ccc\x19ddd\x1Aeee\x1Cfff\x1Dggg\x1Ehhh\x1Fiii\x01jjj"
+
+  # replace 'ccc' with '3-'
+  coord2 = Coordinate.from_string("1.1.1/1.1.1/1.2.1")
+  update2 = phext.replace(update1, coord2, "3-")
+  assert update2 == "aaa\x17222\x183-\x19ddd\x1Aeee\x1Cfff\x1Dggg\x1Ehhh\x1Fiii\x01jjj"
+
+  # replace 'ddd' with 'delta'
+  coord3 = Coordinate.from_string("1.1.1/1.1.1/2.1.1")
+  update3 = phext.replace(update2, coord3, "delta")
+  assert update3 == "aaa\x17222\x183-\x19delta\x1Aeee\x1Cfff\x1Dggg\x1Ehhh\x1Fiii\x01jjj"
+
+  # replace 'eee' with 'a bridge just close enough'
+  coord4 = Coordinate.from_string("1.1.1/1.1.2/1.1.1")
+  update4 = phext.replace(update3, coord4, "a bridge just close enough")
+  assert update4 == "aaa\x17222\x183-\x19delta\x1Aa bridge just close enough\x1Cfff\x1Dggg\x1Ehhh\x1Fiii\x01jjj"
+
+  # replace 'fff' with 'nifty'
+  coord5 = Coordinate.from_string("1.1.1/1.2.1/1.1.1")
+  update5 = phext.replace(update4, coord5, "nifty")
+  assert update5 == "aaa\x17222\x183-\x19delta\x1Aa bridge just close enough\x1Cnifty\x1Dggg\x1Ehhh\x1Fiii\x01jjj"
+
+  # replace 'ggg' with 'G8'
+  coord6 = Coordinate.from_string("1.1.1/2.1.1/1.1.1")
+  update6 = phext.replace(update5, coord6, "G8")
+  assert update6 == "aaa\x17222\x183-\x19delta\x1Aa bridge just close enough\x1Cnifty\x1DG8\x1Ehhh\x1Fiii\x01jjj"
+
+  # replace 'hhh' with 'Hello World'
+  coord7 = Coordinate.from_string("1.1.2/1.1.1/1.1.1")
+  update7 = phext.replace(update6, coord7, "Hello World")
+  assert update7 == "aaa\x17222\x183-\x19delta\x1Aa bridge just close enough\x1Cnifty\x1DG8\x1EHello World\x1Fiii\x01jjj"
+
+  # replace 'iii' with '_o_'
+  coord8 = Coordinate.from_string("1.2.1/1.1.1/1.1.1")
+  update8 = phext.replace(update7, coord8, "_o_")
+  assert update8 == "aaa\x17222\x183-\x19delta\x1Aa bridge just close enough\x1Cnifty\x1DG8\x1EHello World\x1F_o_\x01jjj"
+
+  # replace 'jjj' with '/win'
+  coord9 = Coordinate.from_string("2.1.1/1.1.1/1.1.1")
+  update9 = phext.replace(update8, coord9, "/win")
+  assert update9 == "aaa\x17222\x183-\x19delta\x1Aa bridge just close enough\x1Cnifty\x1DG8\x1EHello World\x1F_o_\x01/win"
+
+  # the api editor has trouble with this input...
+  coord_r0a = Coordinate.from_string("2.1.1/1.1.1/1.1.5")
+  update_r0a = phext.replace("hello world\x17scroll two", coord_r0a, "2.1.1-1.1.1-1.1.5")
+  assert update_r0a == "hello world\x17scroll two\x01\x17\x17\x17\x172.1.1-1.1.1-1.1.5"
+
+  # regression from api testing
+  # unit tests don't hit the failure I'm seeing through rocket...hmm - seems to be related to using library breaks
+  coord_r1a = Coordinate.from_string("1.1.1/1.1.1/1.1.1")
+  update_r1a = phext.replace("", coord_r1a, "aaa")
+  assert update_r1a == "aaa"
+
+  coord_r1b = Coordinate.from_string("1.1.1/1.1.1/1.1.2")
+  update_r1b = phext.replace(update_r1a, coord_r1b, "bbb")
+  assert update_r1b == "aaa\x17bbb"
+
+  coord_r1c = Coordinate.from_string("1.2.3/4.5.6/7.8.9")
+  update_r1c = phext.replace(update_r1b, coord_r1c, "ccc")
+  assert update_r1c == "aaa\x17bbb\x1F\x1E\x1E\x1D\x1D\x1D\x1C\x1C\x1C\x1C\x1A\x1A\x1A\x1A\x1A\x19\x19\x19\x19\x19\x19\x18\x18\x18\x18\x18\x18\x18\x17\x17\x17\x17\x17\x17\x17\x17ccc"
+
+  coord_r1d = Coordinate.from_string("1.4.4/2.8.8/4.16.16")
+  update_r1d = phext.replace(update_r1c, coord_r1d, "ddd")
+  assert update_r1d == "aaa\x17bbb\x1F\x1E\x1E\x1D\x1D\x1D\x1C\x1C\x1C\x1C\x1A\x1A\x1A\x1A\x1A\x19\x19\x19\x19\x19\x19\x18\x18\x18\x18\x18\x18\x18\x17\x17\x17\x17\x17\x17\x17\x17ccc\x1F\x1F\x1E\x1E\x1E\x1D\x1C\x1C\x1C\x1C\x1C\x1C\x1C\x1A\x1A\x1A\x1A\x1A\x1A\x1A\x19\x19\x19\x18\x18\x18\x18\x18\x18\x18\x18\x18\x18\x18\x18\x18\x18\x18\x17\x17\x17\x17\x17\x17\x17\x17\x17\x17\x17\x17\x17\x17\x17ddd"
+
+  coord_regression_1 = Coordinate.from_string("11.12.13/14.15.16/17.18.19")
+  update_regression_1 = phext.replace(update_r1d, coord_regression_1, "eee")
+  assert update_regression_1 == "aaa\x17bbb\x1F\x1E\x1E\x1D\x1D\x1D\x1C\x1C\x1C\x1C\x1A\x1A\x1A\x1A\x1A\x19\x19\x19\x19\x19\x19\x18\x18\x18\x18\x18\x18\x18\x17\x17\x17\x17\x17\x17\x17\x17ccc\x1F\x1F\x1E\x1E\x1E\x1D\x1C\x1C\x1C\x1C\x1C\x1C\x1C\x1A\x1A\x1A\x1A\x1A\x1A\x1A\x19\x19\x19\x18\x18\x18\x18\x18\x18\x18\x18\x18\x18\x18\x18\x18\x18\x18\x17\x17\x17\x17\x17\x17\x17\x17\x17\x17\x17\x17\x17\x17\x17ddd" + \
+  "\x01\x01\x01\x01\x01\x01\x01\x01\x01\x01" + \
+  "\x1F\x1F\x1F\x1F\x1F\x1F\x1F\x1F\x1F\x1F\x1F" + \
+  "\x1E\x1E\x1E\x1E\x1E\x1E\x1E\x1E\x1E\x1E\x1E\x1E" + \
+  "\x1D\x1D\x1D\x1D\x1D\x1D\x1D\x1D\x1D\x1D\x1D\x1D\x1D" + \
+  "\x1C\x1C\x1C\x1C\x1C\x1C\x1C\x1C\x1C\x1C\x1C\x1C\x1C\x1C" + \
+  "\x1A\x1A\x1A\x1A\x1A\x1A\x1A\x1A\x1A\x1A\x1A\x1A\x1A\x1A\x1A" + \
+  "\x19\x19\x19\x19\x19\x19\x19\x19\x19\x19\x19\x19\x19\x19\x19\x19" + \
+  "\x18\x18\x18\x18\x18\x18\x18\x18\x18\x18\x18\x18\x18\x18\x18\x18\x18" + \
+  "\x17\x17\x17\x17\x17\x17\x17\x17\x17\x17\x17\x17\x17\x17\x17\x17\x17\x17" + \
+  "eee"
+
+def test_coordinate_based_remove():
+  phext = Phext()
+
+  # replace 'aaa' with ''
+  coord1 = Coordinate.from_string("1.1.1/1.1.1/1.1.1")
+  update1 = phext.remove("aaa\x17bbb\x18ccc\x19ddd\x1Aeee\x1Cfff\x1Dggg\x1Ehhh\x1Fiii\x01jjj", coord1)
+  assert update1 == "\x17bbb\x18ccc\x19ddd\x1Aeee\x1Cfff\x1Dggg\x1Ehhh\x1Fiii\x01jjj"
+
+  # replace 'bbb' with ''
+  coord2 = Coordinate.from_string("1.1.1/1.1.1/1.1.2")
+  update2 = phext.remove(update1, coord2)
+  assert update2 == "\x18ccc\x19ddd\x1Aeee\x1Cfff\x1Dggg\x1Ehhh\x1Fiii\x01jjj"
+
+  # replace 'ccc' with ''
+  coord3 = Coordinate.from_string("1.1.1/1.1.1/1.2.1")
+  update3 = phext.remove(update2, coord3)
+  assert update3 == "\x19ddd\x1Aeee\x1Cfff\x1Dggg\x1Ehhh\x1Fiii\x01jjj"
+
+  # replace 'ddd' with ''
+  coord4 = Coordinate.from_string("1.1.1/1.1.1/2.1.1")
+  update4 = phext.remove(update3, coord4)
+  assert update4 == "\x1Aeee\x1Cfff\x1Dggg\x1Ehhh\x1Fiii\x01jjj"
+
+  # replace 'eee' with ''
+  coord5 = Coordinate.from_string("1.1.1/1.1.2/1.1.1")
+  update5 = phext.remove(update4, coord5)
+  assert update5 == "\x1Cfff\x1Dggg\x1Ehhh\x1Fiii\x01jjj"
+
+  # replace 'fff' with ''
+  coord6 = Coordinate.from_string("1.1.1/1.2.1/1.1.1")
+  update6 = phext.remove(update5, coord6)
+  assert update6 == "\x1Dggg\x1Ehhh\x1Fiii\x01jjj"
+
+  # replace 'ggg' with ''
+  coord7 = Coordinate.from_string("1.1.1/2.1.1/1.1.1")
+  update7 = phext.remove(update6, coord7)
+  assert update7 == "\x1Ehhh\x1Fiii\x01jjj"
+
+  # replace 'hhh' with ''
+  coord8 = Coordinate.from_string("1.1.2/1.1.1/1.1.1")
+  update8 = phext.remove(update7, coord8)
+  assert update8 == "\x1Fiii\x01jjj"
+
+  # replace 'iii' with ''
+  coord9 = Coordinate.from_string("1.2.1/1.1.1/1.1.1")
+  update9 = phext.remove(update8, coord9)
+  assert update9 == "\x01jjj"
+
+  # replace 'jjj' with ''
+  coord10 = Coordinate.from_string("2.1.1/1.1.1/1.1.1")
+  update10 = phext.remove(update9, coord10)
+  assert update10 == ""
+
+def test_range_based_replace():
+  phext = Phext()
+
+  doc1 = "Before\x19text to be replaced\x1Calso this\x1Dand this\x17After"
+  range1 = Range(Coordinate.from_string("1.1.1/1.1.1/2.1.1"),
+                 Coordinate.from_string("1.1.1/2.1.1/1.1.1"))
+  update1 = phext.range_replace(doc1, range1, "")
+  assert update1 == "Before\x1d\x17After"
+
+  doc2 = "Before\x01Library two\x01Library three\x01Library four"
+  range2 = Range(Coordinate.from_string("2.1.1/1.1.1/1.1.1"),
+                 Coordinate.from_string("3.1.1/1.1.1/1.1.1"))
+
+  update2 = phext.range_replace(doc2, range2, "")
+  assert update2 == "Before\x01\x01\x01Library four"
+
+# note: next_scroll for python just returns the next two frames
+def test_next_scroll():
+  phext = Phext()
+  doc1 = "3A\x17B2\x18C1"
+  root = Coordinate.from_string("1.1.1/1.1.1/1.1.1")
+  temp = phext.next_scroll(doc1, root)
+  assert temp[0].coord == root
+  assert temp[0].text == "3A"
+  assert temp[1].coord == Coordinate.from_string("1.1.1/1.1.1/1.1.2")
+  assert temp[1].text == "B2"
+
+def test_last_empty_scroll():
+  # a regression discovered from SQ - see https://github.com/wbic16/SQ
+  phext = Phext()
+  doc1 = "hello\x17world\x17"
+  target1 = Coordinate.from_string("1.1.1/1.1.1/1.1.2")
+  parts1 = phext.get_subspace_coordinates(doc1, target1)
+  assert parts1.start == 6
+  assert parts1.end == 11
+  assert parts1.best == target1
+
+  test1 = phext.fetch(doc1, target1)
+  assert test1 == "world"
+
+def test_merge():
+  phext = Phext()
+  doc_1a = "3A\x17B2"
+  doc_1b = "4C\x17D1"
+  update_1 = phext.merge(doc_1a, doc_1b)
+  assert update_1 == "3A4C\x17B2D1"
+
+  doc_2a = "Hello \x17I've come to talk"
+  doc_2b = "Darkness, my old friend.\x17 with you again."
+  update_2 = phext.merge(doc_2a, doc_2b)
+  assert update_2 == "Hello Darkness, my old friend.\x17I've come to talk with you again."
+
+  doc_3a = "One\x17Two\x18Three\x19Four"
+  doc_3b = "1\x172\x183\x194"
+  update_3 = phext.merge(doc_3a, doc_3b)
+  assert update_3 == "One1\x17Two2\x18Three3\x19Four4"
+
+  doc_4a = "\x1A\x1C\x1D\x1E\x1F\x01stuff here"
+  doc_4b = "\x1A\x1C\x1D\x1Eprecursor here\x1F\x01and more"
+  update_4 = phext.merge(doc_4a, doc_4b)
+  assert update_4 == "\x1Eprecursor here\x01stuff hereand more"
+
+  doc_5a = "\x01\x01 Library at 3.1.1/1.1.1/1.1.1 \x1F Shelf at 3.2.1/1.1.1/1.1.1"
+  doc_5b = "\x01\x01\x01 Library 4.1.1/1.1.1/1.1.1 \x1E Series at 4.1.2/1.1.1/1.1.1"
+  update_5 = phext.merge(doc_5a, doc_5b)
+  sample = phext.phokenize(update_5)
+  for item in sample:
+    print(str(item.coord) + ": " + item.text)
+  assert update_5 == "\x01\x01 Library at 3.1.1/1.1.1/1.1.1 \x1F Shelf at 3.2.1/1.1.1/1.1.1\x01 Library 4.1.1/1.1.1/1.1.1 \x1E Series at 4.1.2/1.1.1/1.1.1"
+
+  doc_6a = "\x1D Collection at 1.1.1/2.1.1/1.1.1\x1C Volume at 1.1.1/2.2.1/1.1.1"
+  doc_6b = "\x1D\x1D Collection at 1.1.1/3.1.1/1.1.1\x1C Volume at 1.1.1/3.2.1/1.1.1"
+  update_6 = phext.merge(doc_6a, doc_6b)
+  assert update_6 == "\x1D Collection at 1.1.1/2.1.1/1.1.1\x1C Volume at 1.1.1/2.2.1/1.1.1\x1D Collection at 1.1.1/3.1.1/1.1.1\x1C Volume at 1.1.1/3.2.1/1.1.1"
+
+  doc_7a = "\x1ABook #2 Part 1\x1ABook #3 Part 1"
+  doc_7b = "\x1A + Part II\x1A + Part Deux"
+  update_7 = phext.merge(doc_7a, doc_7b)
+  assert update_7 == "\x1ABook #2 Part 1 + Part II\x1ABook #3 Part 1 + Part Deux"
+
+  doc8a = "AA\x01BB\x01CC"
+  doc8b = "__\x01__\x01__"
+  update8 = phext.merge(doc8a, doc8b)
+  assert update8 == "AA__\x01BB__\x01CC__"
+
+def test_subtract():
+  phext = Phext()
+  doc1a = "Here's scroll one.\x17Scroll two."
+  doc1b = "Just content at the first scroll"
+  update1 = phext.subtract(doc1a, doc1b)
+  assert update1 == "\x17Scroll two."
+
+def test_normalize():
+  phext = Phext()
+  doc1 = "\x17Scroll two\x18\x18\x18\x18"
+  update1 = phext.normalize(doc1)
+  assert update1 == "\x17Scroll two"
+
+def test_expand():
+  phext = Phext()
+  doc1 = "nothing but line breaks\x0Ato test expansion to scrolls\x0Aline 3"
+  update1 = phext.expand(doc1)
+  assert update1 == "nothing but line breaks\x17to test expansion to scrolls\x17line 3"
+
+  update2 = phext.expand(update1)
+  assert update2 == "nothing but line breaks\x18to test expansion to scrolls\x18line 3"
+
+  update3 = phext.expand(update2)
+  assert update3 == "nothing but line breaks\x19to test expansion to scrolls\x19line 3"
+
+  update4 = phext.expand(update3)
+  assert update4 == "nothing but line breaks\x1Ato test expansion to scrolls\x1Aline 3"
+
+  update5 = phext.expand(update4)
+  assert update5 == "nothing but line breaks\x1Cto test expansion to scrolls\x1Cline 3"
+
+  update6 = phext.expand(update5)
+  assert update6 == "nothing but line breaks\x1Dto test expansion to scrolls\x1Dline 3"
+
+  update7 = phext.expand(update6)
+  assert update7 == "nothing but line breaks\x1Eto test expansion to scrolls\x1Eline 3"
+
+  update8 = phext.expand(update7)
+  assert update8 == "nothing but line breaks\x1Fto test expansion to scrolls\x1Fline 3"
+
+  update9 = phext.expand(update8)
+  assert update9 == "nothing but line breaks\x01to test expansion to scrolls\x01line 3"
+
+  update10 = phext.expand(update9)
+  assert update10 == "nothing but line breaks\x01to test expansion to scrolls\x01line 3"
+
+def test_contract():
+  phext = Phext()
+  doc1 = "A more complex example than expand\x01----\x1F++++\x1E____\x1Doooo\x1C====\x1Azzzz\x19gggg\x18....\x17qqqq"
+  update1 = phext.contract(doc1)
+  assert update1 == "A more complex example than expand\x1F----\x1E++++\x1D____\x1Coooo\x1A====\x19zzzz\x18gggg\x17....\x0Aqqqq"
+
+  update2 = phext.contract(update1)
+  assert update2 == "A more complex example than expand\x1E----\x1D++++\x1C____\x1Aoooo\x19====\x18zzzz\x17gggg\x0A....\x0Aqqqq"
+
+def test_fs_read_write():
+  phext = Phext()
+
+  initial = "a simple phext doc with three scrolls\x17we just want to verify\x17that all of our breaks are making it through python's fs layer.\x18section 2\x19chapter 2\x1Abook 2\x1Cvolume 2\x1Dcollection 2\x1Eseries 2\x1Fshelf 2\x01library 2"
+  filename = "unit-test.phext"
+  with open(filename, "w", encoding="utf-8") as file:
+    file.write(initial)
+  with open(filename, "r", encoding="utf-8") as file:
+    verify = file.read()
+
+  assert verify == initial
+  coordinate = Coordinate.from_string("2.1.1/1.1.1/1.1.1")
+  message = phext.replace(verify, coordinate, "still lib 2")
+  assert message == "a simple phext doc with three scrolls\x17we just want to verify\x17that all of our breaks are making it through python's fs layer.\x18section 2\x19chapter 2\x1Abook 2\x1Cvolume 2\x1Dcollection 2\x1Eseries 2\x1Fshelf 2\x01still lib 2"
+
+def test_replace_create():
+  phext = Phext()
+  initial = "A\x17B\x17C\x18D\x19E\x1AF\x1CG\x1DH\x1EI\x1FJ\x01K"
+  coordinate = Coordinate.from_string("3.1.1/1.1.1/1.1.1")
+  message = phext.replace(initial, coordinate, "L")
+  assert message == "A\x17B\x17C\x18D\x19E\x1AF\x1CG\x1DH\x1EI\x1FJ\x01K\x01L"
+
+def test_summary():
+  phext = Phext()
+  doc1 = "A short phext\nSecond line\x17second scroll.............................";
+  update1 = phext.create_summary(doc1);
+  assert update1 == "A short phext..."
+
+  doc2 = "very terse";
+  update2 = phext.create_summary(doc2);
+  assert update2 == "very terse"
+
+def test_navmap():
+  phext = Phext()
+  example = "Just a couple of scrolls.\x17Second scroll\x17Third scroll"
+  result = phext.navmap("http://127.0.0.1/api/v1/index/", example)
+  assert result == "<ul>\n<li><a href=\"http://127.0.0.1/api/v1/index/1.1.1;1.1.1;1.1.1\">1.1.1/1.1.1/1.1.1 Just a couple of scrolls.</a></li>\n<li><a href=\"http://127.0.0.1/api/v1/index/1.1.1;1.1.1;1.1.2\">1.1.1/1.1.1/1.1.2 Second scroll</a></li>\n<li><a href=\"http://127.0.0.1/api/v1/index/1.1.1;1.1.1;1.1.3\">1.1.1/1.1.1/1.1.3 Third scroll</a></li>\n</ul>\n"
+
+def test_textmap():
+  phext = Phext()
+  example = "Just a couple of scrolls.\x17Second scroll\x17Third scroll"
+  result = phext.textmap(example)
+  assert result == "* 1.1.1/1.1.1/1.1.1: Just a couple of scrolls.\n* 1.1.1/1.1.1/1.1.2: Second scroll\n* 1.1.1/1.1.1/1.1.3: Third scroll\n"
+
+def test_larger_coordinates():
+  phext = Phext()
+  coord = Coordinate.from_string("111.222.333/444.555.666/777.888.999")
+  result = phext.insert("", coord, "Hello World")
+  map = phext.textmap(result)
+  assert len(result) == 4997
+  assert map == "* 111.222.333/444.555.666/777.888.999: Hello World\n"
+
+def test_phext_index():
+  phext = Phext()
+  example = "first scroll\x17second scroll\x18second section\x19second chapter\x1Abook 2\x1Cvolume 2\x1Dcollection 2\x1Eseries 2\x1Fshelf 2\x01library 2"
+  result = phext.index(example)
+  assert result == "0\x1713\x1827\x1942\x1a57\x1c64\x1d73\x1e86\x1f95\x01103"
+
+  coord1 = Coordinate.from_string("1.1.1/1.1.1/1.1.1")
+  test1 = phext.offset(example, coord1)
+  assert test1 == 0
+
+  coord2 = Coordinate.from_string("1.1.1/1.1.1/1.1.2")
+  test2 = phext.offset(example, coord2)
+  assert test2 == 13
+
+  coord3 = Coordinate.from_string("1.1.1/1.1.1/1.2.1")
+  test3 = phext.offset(example, coord3)
+  assert test3 == 27
+
+  coord4 = Coordinate.from_string("1.1.1/1.1.1/2.1.1")
+  test4 = phext.offset(example, coord4)
+  assert test4 == 42
+
+  coord5 = Coordinate.from_string("1.1.1/1.1.2/1.1.1")
+  test5 = phext.offset(example, coord5)
+  assert test5 == 57
+
+  coord6 = Coordinate.from_string("1.1.1/1.2.1/1.1.1")
+  test6 = phext.offset(example, coord6)
+  assert test6 == 64
+
+  coord7 = Coordinate.from_string("1.1.1/2.1.1/1.1.1")
+  test7 = phext.offset(example, coord7)
+  assert test7 == 73
+
+  coord8 = Coordinate.from_string("1.1.2/1.1.1/1.1.1")
+  test8 = phext.offset(example, coord8)
+  assert test8 == 86
+
+  coord9 = Coordinate.from_string("1.2.1/1.1.1/1.1.1")
+  test9 = phext.offset(example, coord9)
+  assert test9 == 95
+
+  coord9 = Coordinate.from_string("2.1.1/1.1.1/1.1.1")
+  test9 = phext.offset(example, coord9)
+  assert test9 == 103
+
+  coord_invalid = Coordinate.from_string("2.1.1/1.1.1/1.2.1")
+  test_invalid = phext.offset(example, coord_invalid)
+  assert test_invalid == 103
+
+  assert len(example) == 112
+
+def test_scroll_manifest():
+  phext = Phext()
+  example = "first scroll\x17second scroll\x18second section\x19second chapter\x1Abook 2\x1Cvolume 2\x1Dcollection 2\x1Eseries 2\x1Fshelf 2\x01library 2";
+  result = phext.manifest(example);
+
+  scroll0 = "00000000000000000000"
+  hash0 = phext.checksum(scroll0)
+  assert hash0, "7e79edd92a62a048e1cd24ffab542e34"
+
+  scroll1 = "first scroll"
+  hash1 = phext.checksum(scroll1)
+  assert hash1, "ba9d944e4967e29d48bae69ac2999699"
+
+  scroll2 = "second scroll"
+  hash2 = phext.checksum(scroll2)
+  assert hash2, "2fe1b2040314ac66f132dd3b4926157c"
+
+  scroll3 = "second section"
+  hash3 = phext.checksum(scroll3)
+  assert hash3, "fddb6916753b6f4e0b5281469134778b"
+
+  scroll4 = "second chapter"
+  hash4 = phext.checksum(scroll4)
+  assert hash4, "16ab5b1a0a997db95ec215a3bf2c57b3"
+
+  scroll5 = "book 2"
+  hash5 = phext.checksum(scroll5)
+  assert hash5, "0f20f79bf36f63e8fba25cc6765e2d0d"
+
+  scroll6 = "volume 2"
+  hash6 = phext.checksum(scroll6)
+  assert hash6, "7ead0c6fef43adb446fe3bda6fb0adc7"
+
+  scroll7 = "collection 2"
+  hash7 = phext.checksum(scroll7)
+  assert hash7, "78c12298931c6edede92962137a9280a"
+
+  scroll8 = "series 2"
+  hash8 = phext.checksum(scroll8)
+  assert hash8, "0f35100c84df601a490b7b63d7e8c0a8"
+
+  scroll9 = "shelf 2"
+  hash9 = phext.checksum(scroll9)
+  assert hash9, "3bbf7e67cb33d613a906bc5a3cbefd95"
+
+  scroll10 = "library 2"
+  hash10 = phext.checksum(scroll10)
+  assert hash10, "2e7fdd387196a8a2706ccb9ad6792bc3"
+
+  expected = f"{hash1}\x17{hash2}\x18{hash3}\x19{hash4}\x1A{hash5}\x1C{hash6}\x1D{hash7}\x1E{hash8}\x1F{hash9}\x01{hash10}"
+  assert result, expected
+
+def test_phext_soundex_v1():
+  phext = Phext()
+  sample = "it was the best of scrolls\x17it was the worst of scrolls\x17aaa\x17bbb\x17ccc\x17ddd\x17eee\x17fff\x17ggg\x17hhh\x17iii\x17jjj\x17kkk\x17lll\x18mmm\x18nnn\x18ooo\x18ppp\x19qqq\x19rrr\x19sss\x19ttt\x1auuu\x1avvv\x1awww\x1axxx\x1ayyy\x1azzz"
+  result = phext.soundex_v1(sample)
+  assert result == "36\x1741\x171\x174\x177\x1710\x171\x174\x177\x171\x171\x177\x177\x1713\x1816\x1816\x181\x184\x197\x1919\x197\x1910\x1a1\x1a4\x1a1\x1a7\x1a1\x1a7"
+
+def test_insert_performance_2k_scrolls():
+  phext = Phext()
+  doc1 = "the quick brown fox jumped over the lazy dog";
+  next = Coordinate.from_string("1.1.1/1.1.1/1.1.1")
+  result = []
+
+  start = datetime.now()
+  x = 0
+  while x < 2000:
+    x += 1
+    if next.scroll > 32:
+      next.sectionBreak()
+    if next.section > 32:
+      next.chapterBreak()
+    if next.chapter > 32:
+      next.bookBreak()
+    ith = PositionedScroll(deepcopy(next), doc1)
+    result.append(ith)
+    next.scrollBreak()
+
+  result = phext.dephokenize(result)
+  end = datetime.now()
+  duration = end - start
+  elapsed_ms = int((duration).total_seconds() * 1000)
+  print("Performance-2K: " + str(elapsed_ms))
+
+  # require at most 2.5ms per scroll on an i9-13900HX
+  assert elapsed_ms < 5000
+
+  expected = Coordinate.from_string("1.1.1/1.1.1/2.31.17")
+  assert next == expected
+
+  expected_doc1_length = 44
+  assert len(doc1) == expected_doc1_length
+  phext_tokens = 0
+  scroll_breaks = 0
+  section_breaks = 0
+  chapter_breaks = 0
+  for byte in result:
+    if phext.isPhextBreak(byte):
+      phext_tokens += 1
+    if byte == phext.SCROLL_BREAK:
+      scroll_breaks += 1
+    if byte == phext.SECTION_BREAK:
+      section_breaks += 1
+    if byte == phext.CHAPTER_BREAK:
+      chapter_breaks += 1
+
+  expected_tokens = 1999
+  assert phext_tokens == expected_tokens
+  assert scroll_breaks == 1937
+  assert section_breaks == 61
+  assert chapter_breaks == 1
+
+  expected_length = 2000 * expected_doc1_length + expected_tokens
+  assert len(result) == expected_length
+
+# TODO: might have perf regressions - not sure yet
+#def test_insert_performance_medium_scrolls():
+#  phext = Phext()
+#  doc_template = "the quick brown fox jumped over the lazy dog\n"
+#  doc1 = ""
+#  doc1 = doc_template * 1000
+#  
+#  next = Coordinate.from_string("1.1.1/1.1.1/1.1.1")
+#  result: dict[int, str] = {}
+#  x = 0
+#  while x < 25:
+#    result[x] = ""
+#    x += 1
+#
+#  start = datetime.now()
+#  x = 0
+#  while x < 25:
+#    x += 1
+#    if next.scroll > 5:
+#      next.sectionBreak()
+#    if next.section > 5:
+#      next.sectionBreak()
+#    if next.chapter > 5:
+#      next.chapterBreak()
+#    result[x] = phext.insert(result[x-1], next, doc1)
+#    next.scrollBreak()
+#
+#  end = datetime.now()
+#  duration = end - start
+#  elapsed_ms = int((duration).total_seconds() * 1000)
+#  print("Performance-Medium: " + str(elapsed_ms))
+#
+#  assert elapsed_ms < 1000
+#
+#  expected = Coordinate.from_string("1.1.1/1.1.1/1.5.6")
+#  assert next == expected
+#
+#  expected_doc1_length = 45000 # counting line breaks
+#  assert len(result) == expected_doc1_length
+#
+#  # 2000 scrolls should be separated by 1999 delimiters
+#  phext_tokens = 0
+#  line_breaks = 0
+#  scroll_breaks = 0
+#  section_breaks = 0
+#  chapter_breaks = 0
+#
+#  for byte in result:
+#    if phext.isPhextBreak(byte):
+#      phext_tokens += 1
+#    if byte == phext.LINE_BREAK:
+#      line_breaks += 1
+#    if byte == phext.SCROLL_BREAK:
+#      scroll_breaks += 1
+#    if byte == phext.SECTION_BREAK:
+#      section_breaks += 1
+#    if byte == phext.CHAPTER_BREAK:
+#      chapter_breaks += 1
+#  expected_tokens = 25024
+#  assert phext_tokens == expected_tokens
+#
+#  assert line_breaks == 25000
+#  assert scroll_breaks == 20
+#  assert section_breaks == 4
+#  assert chapter_breaks == 0
+#
+#  # doc1 * 1000 + delimiter count
+#  expected_length = 25 * (expected_doc1_length-1000) + expected_tokens
+#  assert len(result) == expected_length
+#  
+#  assert False
+
+def test_hash_support():
+  phext = Phext()
+  stuff = phext.explode("hello world\x17\x17\x17scroll 4\x01Library 2")
+  scroll1_address = Coordinate.from_string("1.1.1/1.1.1/1.1.1")
+  scroll2_address = Coordinate.from_string("1.1.1/1.1.1/1.1.4")
+  scroll3_address = Coordinate.from_string("2.1.1/1.1.1/1.1.1")
+  assert stuff[scroll1_address] == "hello world"
+  assert stuff[scroll2_address] == "scroll 4"
+  assert stuff[scroll3_address] == "Library 2"
+
+  scroll4_address = Coordinate.from_string("2.3.4/5.6.7/8.9.1")
+  stuff[scroll4_address] = "random insertion"
+
+  serialized = phext.implode(stuff)
+  assert serialized == "hello world\x17\x17\x17scroll 4\x01Library 2\x1f\x1f\x1e\x1e\x1e\x1d\x1d\x1d\x1d\x1c\x1c\x1c\x1c\x1c\x1a\x1a\x1a\x1a\x1a\x1a\x19\x19\x19\x19\x19\x19\x19\x18\x18\x18\x18\x18\x18\x18\x18random insertion"
+
+# TODO: not implemented upstream either
+#def test_subspace_filter():
+  # filtering in subspace happens in bands
+  # we split the phext into 36 regions
+  # each region can be further sub-divided into 32 segments
+  # where your scrolls fall into this map determines if they
+  # are selected. subspace filtering happens in bitspace.
+  # we have 6 bits per region to work with:
+  # 0-25:  ABCDEFGHIJKLMNOPQRSTUVWXYZ
+  # 26-51: abcdefghijklmnopqrstuvwxyz
+  # 52-63: 0123456789+/
+  # 
+  # 
+  # 
+  # Collectors (0-15)
+  #             A   B   C   D   E   F   G   H
+  # First n%:   1   2   4   8  16  32  64 100  [8]
+  # Last n%:  100  50  25  12   6   3   2   1  [8]
+  #             I   J   K   L   M   N   O   P
+  # 
+  # Harmonics (16-31)
+  #             Q   R   S   T   U   V   W   X
+  # Primes 1:   2   3   5   7  11  13  17  19  [8]
+  # Primes 2:  23  29  31  37  41  43  47  53  [8]
+  #             Y   Z   a   b   c   d   e   f
+  # 
+  # Scroll Size (32-47)
+  #                 g     h   i   j   k   l   m    n
+  # Smaller Than:  1K    2K  4K  8K 16K 32K 64K 128K [8]
+  # Larger Than:   128K 64K 32K 16K  8K  4K  2K   1K [8]
+  #                 o     p   q   r   s   t   u    v
+  # 
+  # Reserved (48-63)
+  #                 w   x   y   z   0   1   2   3
+  # TBD                                              [8]
+  # TBD                                              [8]
+  #                 4   5   6   7   8   9   +   /
+  # 
+  # 36 characters in base64
+  # 
+  # TODO: create a suite of test filters and verify they select
+  # properly
+
+# TODO: not implemented upstream either
+#def test_macrophext():
+  # maybe add \x02 and \x03 support for very large phexts...?
+  # assert False
+
+def test_phext_breaks():
+  phext = Phext()
+  assert phext.isPhextBreak("\n")
+  assert phext.isPhextBreak("\x01")
+  assert phext.isPhextBreak("\x17")
+  assert phext.isPhextBreak("\x18")
+  assert phext.isPhextBreak("\x19")
+  assert phext.isPhextBreak("\x1a")
+  assert phext.isPhextBreak("\x1c")
+  assert phext.isPhextBreak("\x1d")
+  assert phext.isPhextBreak("\x1e")
+  assert phext.isPhextBreak("\x1f")
+  assert phext.isPhextBreak(phext.LINE_BREAK)
+  assert phext.isPhextBreak(phext.LIBRARY_BREAK)
+  assert phext.isPhextBreak(phext.SHELF_BREAK)
+  assert phext.isPhextBreak(phext.SERIES_BREAK)
+  assert phext.isPhextBreak(phext.COLLECTION_BREAK)
+  assert phext.isPhextBreak(phext.VOLUME_BREAK)
+  assert phext.isPhextBreak(phext.BOOK_BREAK)
+  assert phext.isPhextBreak(phext.CHAPTER_BREAK)
+  assert phext.isPhextBreak(phext.SECTION_BREAK)
+  assert phext.isPhextBreak(phext.SCROLL_BREAK)
+
+def test_normalize():
+  phext = Phext()
+  doc1 = "\x17Scroll two\x18\x18\x18\x18"
+  update1 = phext.normalize(doc1)
+  assert update1 == "\x17Scroll two"tests/test_positionedScroll.py
+
+from phext.coordinate import Coordinate
+from phext.positionedScroll import PositionedScroll
+from phext.phext import Phext
+import pytest
+
+# Upstream tests covered by this module:
+# test_scrolls, test_sections, test_chapters
+# test_books, test_volumes, test_collections
+# test_series, test_shelves, test_libraries
+# test_realistic_parse
+
+def test_scroll_interface():
+  coord = Coordinate.from_string("1.2.3/4.5.6/7.8.9")
+  text = "Hello World"
+  ps = PositionedScroll(coord, text)
+  assert ps.coord == coord
+  assert ps.text == text
+
+def test_positioned_scrolls():
+  coord1 = Coordinate.from_string("1.1.1/1.1.1/1.1.1")
+  coord2 = Coordinate.from_string("1.1.1/1.1.1/1.1.2")
+  coord3 = Coordinate.from_string("1.1.1/1.1.1/1.1.3")
+  text1 = "Scroll #1"
+  text2 = "Scroll #2"
+  text3 = "Scroll #3"
+  data = [
+     PositionedScroll(coord1, text1),
+     PositionedScroll(coord2, text2),
+     PositionedScroll(coord3, text3)
+  ]
+  assert data[0].coord == coord1
+  assert data[1].coord == coord2
+  assert data[2].coord == coord3
+  assert data[0].text == text1
+  assert data[1].text == text2
+  assert data[2].text == text3
+
 SQ v0.4.4
 
 # Index
 
-90.1.1/1.1.4/1.1.1: README.md
-90.1.1/1.1.4/1.1.2: .gitignore
-90.1.1/1.1.4/1.1.3: bench.ps1
-90.1.1/1.1.4/1.1.4: Cargo.toml
-90.1.1/1.1.4/1.1.5: hello-world.sh
-90.1.1/1.1.4/1.1.6: performance.sh
-90.1.1/1.1.4/1.1.7: reset.ps1
-90.1.1/1.1.4/1.1.8: reset.sh
-90.1.1/1.1.4/1.1.9: tesseract.ps1
-90.1.1/1.1.4/1.1.10: TODO.md
-90.1.1/1.1.4/1.1.11: src/main.rs
-90.1.1/1.1.4/1.1.12: src/sq.rs
-90.1.1/1.1.4/1.1.13: src/tests.rs
-90.1.1/1.1.4/1.1.14: Dockerfile
+3.1.1/1.1.1/4.1.1: README.md
+3.1.1/1.1.1/4.1.2: .gitignore
+3.1.1/1.1.1/4.1.3: bench.ps1
+3.1.1/1.1.1/4.1.4: Cargo.toml
+3.1.1/1.1.1/4.1.5: hello-world.sh
+3.1.1/1.1.1/4.1.6: performance.sh
+3.1.1/1.1.1/4.1.7: reset.ps1
+3.1.1/1.1.1/4.1.8: reset.sh
+3.1.1/1.1.1/4.1.9: tesseract.ps1
+3.1.1/1.1.1/4.1.10: TODO.md
+3.1.1/1.1.1/4.1.11: src/main.rs
+3.1.1/1.1.1/4.1.12: src/sq.rs
+3.1.1/1.1.1/4.1.13: src/tests.rs
+3.1.1/1.1.1/4.1.14: Dockerfile
 
 # Demos
 Head on over to https://github.com/wbic16/SQ/tree/main/demos for some demos
