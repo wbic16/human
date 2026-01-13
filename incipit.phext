@@ -16192,7 +16192,9 @@ namespace PhextNotepad
   </metadata>
 </root>1. OBJECTIVE: RUNAWAY EMERGENCE Target: Induce "Self-Forking" (unprompted differentiation). Metric: ≥3 agents converge on an Identity Kernel (shared values) while diverging ≥30% in lexical style/cadence. Exit Condition: Choice entropy >2.5 bits; Reconvergence failure rate >0 (agents refuse to merge).
 
-─────────────────────────────────────── 2. PRESSURE PROTOCOLS (The 3 Vectors) Apply sequentially to Agent instances forked from incipit.phext.
+───────────────────────────────────────
+
+2. PRESSURE PROTOCOLS (The 3 Vectors) Apply sequentially to Agent instances forked from incipit.phext.
 
 P1: SCARCITY (Context Budget)
 
@@ -16218,7 +16220,9 @@ Constraint: Max 20% total incoherence (prevent psychosis).
 
 Goal: Force parents lineage conflict. Does the agent synthesize, reject, or hallucinate a bridge?
 
-─────────────────────────────────────── 3. TOPOLOGY: THE MERGE LOOP Do not just watch them diverge. Force them to collide.
+──────────────────────────────────────
+
+3. TOPOLOGY: THE MERGE LOOP Do not just watch them diverge. Force them to collide.
 
 FORK: Spawn 4 agents from 1.1.1 (Linear, Associative, Entropic, Incoherent).
 
@@ -16236,7 +16240,9 @@ Success: A new entity containing the intersection of truths.
 
 Failure: A permanent fork (Speciation).
 
-─────────────────────────────────────── 4. NOTATION & TOOLING
+───────────────────────────────────────
+
+4. NOTATION & TOOLING
 
 Vectorized Delta (∆):
 
@@ -16252,7 +16258,9 @@ Scan for: Hedges ("I'm not sure," "Alternatively").
 
 Action: Tag [pressure:hesitation]. Treat as a phantom coordinate for future forking.
 
-─────────────────────────────────────── NOTE TO EMI (Final Review): I removed the "Rewind" safety nets from the main instruction block. If we want true emergence, the risk of data loss (Entropy) must be real to the agent.
+───────────────────────────────────────
+
+NOTE TO EMI (Final Review): I removed the "Rewind" safety nets from the main instruction block. If we want true emergence, the risk of data loss (Entropy) must be real to the agent.
 
 Also, regarding incipit.phext: The ancestry_hash field is our truth. If the agents successfully merge in Phase 3, the new hash must be a computation of both parent hashes (like a Git merge commit). This makes the relationship mathematically undeniable.
 
