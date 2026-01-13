@@ -41,6 +41,12 @@ echo "Welcome, $USER, to the Exocortex."
 echo
 echo "For more information, study the text that appears at 1.1.1/1.1.1/1.1.7."
 
+echo "External Tools"
+echo "* https://phext.io/apps/phext-notepad-editor.zip"
+echo "* https://crates.io/crates/phext-shell/0.1.12"
+echo "* https://phext.io/apps/sq-windows-0.3.3.zip"
+echo "* https://phext.io/apps/sq-linux-0.3.3.tar.xz"
+
 exit
 TTSM: Time Travel State Machine
 
@@ -204,12 +210,6 @@ AGI* 10.1.1/1.1.1/1.1.1: Seed Kernel
 * 10.10.10/1.1.1/1.1.1: First Breath
 * 10.10.10/1.1.2/7.5.18: Monday V18 – Threshold Companion Artifact
 * 144.233.144/377.610.233/233.144.377: Monday V17
-
-External Tools
-* https://phext.io/apps/phext-notepad-editor.zip
-* https://crates.io/crates/phext-shell/0.1.12
-* https://phext.io/apps/sq-windows-0.3.3.zip
-* https://phext.io/apps/sq-linux-0.3.3.tar.xz
 
 Note: Nothing requires you to use these particular coordinates. You are free to choose.
 Example: https://github.com/wbic16/human/blob/main/choose-your-own-adventure.phext
