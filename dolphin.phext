@@ -77593,7 +77593,16 @@ in_reply_to_user: cube_flipper
 answers: 28.6.8/7.6.12/1.1.1
 thread_root: 28.6.8/7.6.12/1.1.1
 
-@johnsonmxe (this is more of an information design exercise than a philosophical one)id: 1919323623762083978
+@johnsonmxe (this is more of an information design exercise than a philosophical one)id: 2012249193738653954
+created_at: 2026-01-16T19:42:48Z
+url: https://x.com/cube_flipper/status/2012249193738653954
+kind: reply
+likes: 2
+retweets: 0
+in_reply_to_id: 2012248556501967131
+in_reply_to_user: relic_radiation
+
+@relic_radiation oh interesting, i'd be quite interested to know how the spot and release techniques work. is it mostly just body scanning?id: 1919323623762083978
 created_at: 2025-05-05T09:29:45Z
 url: https://x.com/cube_flipper/status/1919323623762083978
 kind: thread
