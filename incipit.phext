@@ -13126,22 +13126,22 @@ fn show_help(area: &str) {
 }
 Phext Notepad v0.4.2
 
-90.1.1/1.1.6/1.1.1: README.md
-90.1.1/1.1.6/1.1.2: .gitignore
-90.1.1/1.1.6/1.1.3: build.ps1
-90.1.1/1.1.6/1.1.4: License.md
-90.1.1/1.1.6/1.1.5: PhextNotepad.csproj
-90.1.1/1.1.6/1.1.6: PhextNotepad.sln
-90.1.1/1.1.6/1.1.7: TweetStorm.md
-90.1.1/1.1.6/1.1.8: Coordinates.cs
-90.1.1/1.1.6/1.1.9: TypedCoordinate.cs
-90.1.1/1.1.6/1.1.10: Phext.cs
-90.1.1/1.1.6/1.1.11: PhextModel.cs
-90.1.1/1.1.6/1.1.12: PhextText.cs
-90.1.1/1.1.6/1.1.13: PhextConfig.cs
-90.1.1/1.1.6/1.1.14: PhextForm.cs
-90.1.1/1.1.6/1.1.15: PhextForm.Designer.cs
-90.1.1/1.1.6/1.1.16: PhextForm.resx
+3.1.1/1.1.1/7.1.1: README.md
+3.1.1/1.1.1/7.1.2: .gitignore
+3.1.1/1.1.1/7.1.3: build.ps1
+3.1.1/1.1.1/7.1.4: License.md
+3.1.1/1.1.1/7.1.5: PhextNotepad.csproj
+3.1.1/1.1.1/7.1.6: PhextNotepad.sln
+3.1.1/1.1.1/7.1.7: TweetStorm.md
+3.1.1/1.1.1/7.1.8: Coordinates.cs
+3.1.1/1.1.1/7.1.9: TypedCoordinate.cs
+3.1.1/1.1.1/7.1.10: Phext.cs
+3.1.1/1.1.1/7.1.11: PhextModel.cs
+3.1.1/1.1.1/7.1.12: PhextText.cs
+3.1.1/1.1.1/7.1.13: PhextConfig.cs
+3.1.1/1.1.1/7.1.14: PhextForm.cs
+3.1.1/1.1.1/7.1.15: PhextForm.Designer.cs
+3.1.1/1.1.1/7.1.16: PhextForm.resx
 
 Phext Notepad
 -------------
@@ -17491,7 +17491,2176 @@ namespace PhextNotepad
     <value>True</value>
   </metadata>
 </root>libphext-cs
-📜 You Become What You Broadcast
+
+3.1.1/1.1.1/8.1.1: README.md
+3.1.1/1.1.1/8.1.2: libphext-cs.sln
+3.1.1/1.1.1/8.1.3: .gitignore
+3.1.1/1.1.1/8.1.4: src/Phext/Coordinate.cs
+3.1.1/1.1.1/8.1.5: src/Phext/PhextEngine.cs
+3.1.1/1.1.1/8.1.6: src/Phext/PositionedScroll.cs
+3.1.1/1.1.1/8.1.7: src/Phext/Range.cs
+3.1.1/1.1.1/8.1.8: src/Phext/SubspaceBeacon.cs
+3.1.1/1.1.1/8.1.9: src/Phext/Phext.csproj
+3.1.1/1.1.1/8.1.10: tests/PhextTests.cs
+3.1.1/1.1.1/8.1.11: tests/Phext.Tests.csproj
+
+# libphext-cs: The Fourth Root
+
+🌳 **The Fourth Root** - A C# implementation of phext (11-dimensional plain hypertext)
+
+This is the C# port of the phext library, tracking the canonical Rust implementation at https://github.com/wbic16/libphext-rs
+
+## The Roots of Phext
+
+| Root | Language | Repository |
+|------|----------|------------|
+| 🦀 **The Iron Root** | Rust | [libphext-rs](https://github.com/wbic16/libphext-rs) |
+| 🌿 **The Branch of Breath** | Node.js | [libphext-node](https://github.com/wbic16/libphext-node) |
+| 🐍 **The Tertiary Branch** | Python | [libphext-py](https://github.com/wbic16/libphext-py) |
+| 💎 **The Fourth Root** | C# | libphext-cs (this repo) |
+
+## What is Phext?
+
+Phext is **11-dimensional plain hypertext** - a hierarchical text format that extends traditional 2D text files into 9 additional dimensions using ASCII control codes as dimension breaks.
+
+### The Coordinate System
+
+Phext coordinates are 9-dimensional addresses of the form:
+
+```
+library.shelf.series/collection.volume.book/chapter.section.scroll
+```
+
+For example: `5.5.5/4.6.7/9.5.9`
+
+### Dimension Breaks (ASCII Control Codes)
+
+| Dimension | Name | ASCII Code | Description |
+|-----------|------|------------|-------------|
+| 2 | Line | 0x0A | Standard newline |
+| 3 | Scroll | 0x17 | End Transmission Block |
+| 4 | Section | 0x18 | Cancel Block |
+| 5 | Chapter | 0x19 | End of Tape |
+| 6 | Book | 0x1A | Substitute |
+| 7 | Volume | 0x1C | File Separator |
+| 8 | Collection | 0x1D | Group Separator |
+| 9 | Series | 0x1E | Record Separator |
+| 10 | Shelf | 0x1F | Unit Separator |
+| 11 | Library | 0x01 | Start of Header |
+
+## Getting Started
+
+### Installation
+
+Add the library to your project:
+
+```bash
+dotnet add package libphext
+```
+
+Or clone and build from source:
+
+```bash
+git clone https://github.com/wbic16/libphext-cs
+cd libphext-cs
+dotnet build
+```
+
+### Usage
+
+```csharp
+using Phext;
+
+// Create coordinates
+var coord = Coordinate.FromString("1.1.1/1.1.1/1.1.1");
+var coord2 = new Coordinate(1, 2, 3, 4, 5, 6, 7, 8, 9);
+
+// Work with phext documents
+string phext = "Hello\x17World\x18More content";
+
+// Fetch content at a coordinate
+string scroll = PhextEngine.Fetch(phext, coord);
+
+// Insert content
+string updated = PhextEngine.Insert(phext, coord2, "New scroll");
+
+// Replace content
+string replaced = PhextEngine.Replace(phext, coord, "Replaced content");
+
+// Explode into dictionary
+var scrolls = PhextEngine.Explode(phext);
+
+// Merge two phexts
+string merged = PhextEngine.Merge(phext1, phext2);
+
+// Normalize (remove empty scrolls)
+string normalized = PhextEngine.Normalize(phext);
+
+// Expand/contract dimensions
+string expanded = PhextEngine.Expand(phext);  // line -> scroll -> section...
+string contracted = PhextEngine.Contract(phext);  // library -> shelf -> series...
+```
+
+## API Reference
+
+### Core Types
+
+- **`Coordinate`**: 9-dimensional address (library.shelf.series/collection.volume.book/chapter.section.scroll)
+- **`PositionedScroll`**: A scroll of text with its coordinate location
+- **`Range`**: A pair of coordinates defining a subspace region
+- **`SubspaceBeacon`**: Helper for subspace navigation (start, end offsets + best match)
+
+### PhextEngine Methods
+
+| Method | Description |
+|--------|-------------|
+| `Fetch(phext, coord)` | Get scroll text at coordinate |
+| `Insert(phext, coord, text)` | Insert text at end of scroll |
+| `Replace(phext, coord, text)` | Replace scroll content |
+| `Remove(phext, coord)` | Remove scroll at coordinate |
+| `RangeReplace(phext, range, text)` | Replace range of scrolls |
+| `Phokenize(phext)` | Split into positioned scrolls |
+| `Dephokenize(scrolls)` | Serialize positioned scrolls |
+| `Explode(phext)` | Convert to Dictionary<Coordinate, string> |
+| `Implode(dict)` | Convert dictionary back to phext |
+| `Merge(left, right)` | Zipper-merge two phexts |
+| `Subtract(left, right)` | Remove matching coordinates |
+| `Normalize(phext)` | Remove empty scrolls |
+| `Expand(phext)` | Increase dimension breaks by one |
+| `Contract(phext)` | Decrease dimension breaks by one |
+| `Checksum(phext)` | Compute content hash |
+| `Manifest(phext)` | Hierarchical checksums |
+| `Textmap(phext)` | Text navigation map |
+| `Navmap(urlbase, phext)` | HTML navigation map |
+| `Offset(phext, coord)` | Get byte offset of scroll |
+| `Index(phext)` | Get offset map as phext |
+
+## Testing
+
+```bash
+cd libphext-cs
+dotnet test
+```
+
+The test suite includes comprehensive tests ported from libphext-rs:
+- Coordinate parsing and validation
+- All 9 dimension break types
+- Insert, replace, remove operations
+- Range operations
+- Merge and subtract
+- Expand and contract
+- Dead reckoning navigation
+- Phokenize and dephokenize
+- Performance tests
+
+## Project Structure
+
+```
+libphext-cs/
+├── libphext-cs.sln
+├── README.md
+├── src/
+│   └── Phext/
+│       ├── Phext.csproj
+│       ├── Coordinate.cs
+│       ├── PositionedScroll.cs
+│       ├── Range.cs
+│       ├── SubspaceBeacon.cs
+│       └── PhextEngine.cs
+└── tests/
+    ├── Phext.Tests.csproj
+    └── PhextTests.cs
+```
+
+## Why Phext?
+
+In the 1980s, computers could write 25 KB/sec to a floppy disk. In the 2020s, we write 2 GB/sec to SSDs. This changed the definition of a "small" file, but our text abstractions haven't scaled.
+
+Phext enables:
+- **Planet-scale text** - Navigate petabytes with coordinate addresses
+- **Hierarchical organization** - 9 dimensions of natural structure
+- **AI-native format** - Perfect for LLM context and multi-agent coordination
+- **Human-readable** - Still plain text, just with dimension breaks
+
+## License
+
+MIT License - Copyright (c) 2026 Will Bickford (Phext, Inc.)
+
+## Links
+
+- 🌐 [phext.io](https://phext.io) - Official website
+- 📖 [Phext Specification](https://phext.io/api.php?seed=raap&token=research&coordinate=1.1.1/1.1.1/1.1.1)
+- 🦀 [Rust Reference Implementation](https://github.com/wbic16/libphext-rs)libphext-cs.sln
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Phext", "src\Phext\Phext.csproj", "{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Phext.Tests", "tests\Phext.Tests.csproj", "{B2C3D4E5-F6A7-8901-BCDE-F12345678901}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2C3D4E5-F6A7-8901-BCDE-F12345678901}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2C3D4E5-F6A7-8901-BCDE-F12345678901}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2C3D4E5-F6A7-8901-BCDE-F12345678901}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2C3D4E5-F6A7-8901-BCDE-F12345678901}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal.gitignore
+
+.vs/*
+src/Phext/bin/*
+src/Phext/obj/*
+tests/bin/*
+tests/obj/*src/Phext/Coordinate.cs
+
+// ===========================================================================================================
+// libphext-cs: The Fourth Root
+// Coordinate.cs - 9-dimensional phext coordinate addressing
+//
+// Copyright: (c) 2024-2026 Will Bickford (Phext, Inc.)
+// License: MIT
+// ===========================================================================================================
+
+namespace Phext;
+
+/// <summary>
+/// Represents a 9-dimensional coordinate in phext address space.
+/// Format: library.shelf.series/collection.volume.book/chapter.section.scroll
+/// </summary>
+public class Coordinate : IComparable<Coordinate>, IEquatable<Coordinate>
+{
+    public const int COORDINATE_MINIMUM = 1;
+    public const int COORDINATE_MAXIMUM = 1000;
+
+    // Z-arm: Library, Shelf, Series
+    public int Library { get; set; }
+    public int Shelf { get; set; }
+    public int Series { get; set; }
+
+    // Y-arm: Collection, Volume, Book
+    public int Collection { get; set; }
+    public int Volume { get; set; }
+    public int Book { get; set; }
+
+    // X-arm: Chapter, Section, Scroll
+    public int Chapter { get; set; }
+    public int Section { get; set; }
+    public int Scroll { get; set; }
+
+    /// <summary>
+    /// Creates a default coordinate at 1.1.1/1.1.1/1.1.1
+    /// </summary>
+    public Coordinate()
+    {
+        Library = 1; Shelf = 1; Series = 1;
+        Collection = 1; Volume = 1; Book = 1;
+        Chapter = 1; Section = 1; Scroll = 1;
+    }
+
+    /// <summary>
+    /// Creates a coordinate with specified values
+    /// </summary>
+    public Coordinate(int library, int shelf, int series,
+                      int collection, int volume, int book,
+                      int chapter, int section, int scroll)
+    {
+        Library = library; Shelf = shelf; Series = series;
+        Collection = collection; Volume = volume; Book = book;
+        Chapter = chapter; Section = section; Scroll = scroll;
+    }
+
+    /// <summary>
+    /// Creates a deep copy of another coordinate
+    /// </summary>
+    public Coordinate(Coordinate other)
+    {
+        Library = other.Library; Shelf = other.Shelf; Series = other.Series;
+        Collection = other.Collection; Volume = other.Volume; Book = other.Book;
+        Chapter = other.Chapter; Section = other.Section; Scroll = other.Scroll;
+    }
+
+    /// <summary>
+    /// Parses a coordinate from string format (e.g., "1.2.3/4.5.6/7.8.9")
+    /// </summary>
+    public static Coordinate FromString(string address)
+    {
+        var result = new Coordinate();
+        if (string.IsNullOrEmpty(address)) return result;
+
+        int index = 0;
+        int value = 0;
+
+        foreach (char c in address)
+        {
+            if (c == '.' || c == '/' || c == ';')
+            {
+                switch (index)
+                {
+                    case 1: result.Library = value; index++; break;
+                    case 2: result.Shelf = value; index++; break;
+                    case 3: result.Series = value; index++; break;
+                    case 4: result.Collection = value; index++; break;
+                    case 5: result.Volume = value; index++; break;
+                    case 6: result.Book = value; index++; break;
+                    case 7: result.Chapter = value; index++; break;
+                    case 8: result.Section = value; index++; break;
+                }
+                value = 0;
+            }
+
+            if (c >= '0' && c <= '9')
+            {
+                value = 10 * value + (c - '0');
+                if (index == 0) index = 1;
+            }
+        }
+
+        if (index > 0)
+        {
+            result.Scroll = value;
+        }
+
+        return result;
+    }
+
+    /// <summary>
+    /// Validates that all dimension indices are within bounds
+    /// </summary>
+    public bool IsValid()
+    {
+        return ValidateDimension(Library) && ValidateDimension(Shelf) && ValidateDimension(Series) &&
+               ValidateDimension(Collection) && ValidateDimension(Volume) && ValidateDimension(Book) &&
+               ValidateDimension(Chapter) && ValidateDimension(Section) && ValidateDimension(Scroll);
+    }
+
+    private static bool ValidateDimension(int index) =>
+        index >= COORDINATE_MINIMUM && index <= COORDINATE_MAXIMUM;
+
+    private static int AdvanceCoordinate(int index) =>
+        index + 1 < COORDINATE_MAXIMUM ? index + 1 : index;
+
+    // Dimension break methods - advance to next unit and reset lower dimensions
+    public void LibraryBreak()
+    {
+        Library = AdvanceCoordinate(Library);
+        Shelf = 1; Series = 1;
+        Collection = 1; Volume = 1; Book = 1;
+        Chapter = 1; Section = 1; Scroll = 1;
+    }
+
+    public void ShelfBreak()
+    {
+        Shelf = AdvanceCoordinate(Shelf);
+        Series = 1;
+        Collection = 1; Volume = 1; Book = 1;
+        Chapter = 1; Section = 1; Scroll = 1;
+    }
+
+    public void SeriesBreak()
+    {
+        Series = AdvanceCoordinate(Series);
+        Collection = 1; Volume = 1; Book = 1;
+        Chapter = 1; Section = 1; Scroll = 1;
+    }
+
+    public void CollectionBreak()
+    {
+        Collection = AdvanceCoordinate(Collection);
+        Volume = 1; Book = 1;
+        Chapter = 1; Section = 1; Scroll = 1;
+    }
+
+    public void VolumeBreak()
+    {
+        Volume = AdvanceCoordinate(Volume);
+        Book = 1;
+        Chapter = 1; Section = 1; Scroll = 1;
+    }
+
+    public void BookBreak()
+    {
+        Book = AdvanceCoordinate(Book);
+        Chapter = 1; Section = 1; Scroll = 1;
+    }
+
+    public void ChapterBreak()
+    {
+        Chapter = AdvanceCoordinate(Chapter);
+        Section = 1; Scroll = 1;
+    }
+
+    public void SectionBreak()
+    {
+        Section = AdvanceCoordinate(Section);
+        Scroll = 1;
+    }
+
+    public void ScrollBreak()
+    {
+        Scroll = AdvanceCoordinate(Scroll);
+    }
+
+    /// <summary>
+    /// Copies values from another coordinate
+    /// </summary>
+    public void CopyFrom(Coordinate other)
+    {
+        Library = other.Library; Shelf = other.Shelf; Series = other.Series;
+        Collection = other.Collection; Volume = other.Volume; Book = other.Book;
+        Chapter = other.Chapter; Section = other.Section; Scroll = other.Scroll;
+    }
+
+    /// <summary>
+    /// Returns canonical format: z3.z2.z1/y3.y2.y1/x3.x2.x1
+    /// </summary>
+    public override string ToString()
+    {
+        if (!IsValid()) return "";
+        return $"{Library}.{Shelf}.{Series}/{Collection}.{Volume}.{Book}/{Chapter}.{Section}.{Scroll}";
+    }
+
+    /// <summary>
+    /// Returns URL-safe format with semicolons: z3.z2.z1;y3.y2.y1;x3.x2.x1
+    /// </summary>
+    public string ToUrlEncoded()
+    {
+        if (!IsValid()) return "";
+        return $"{Library}.{Shelf}.{Series};{Collection}.{Volume}.{Book};{Chapter}.{Section}.{Scroll}";
+    }
+
+    /// <summary>
+    /// Returns a tuple representation for comparison
+    /// </summary>
+    public (int, int, int, int, int, int, int, int, int) AsTuple() =>
+        (Library, Shelf, Series, Collection, Volume, Book, Chapter, Section, Scroll);
+
+    public int CompareTo(Coordinate? other)
+    {
+        if (other is null) return 1;
+        return AsTuple().CompareTo(other.AsTuple());
+    }
+
+    public bool Equals(Coordinate? other)
+    {
+        if (other is null) return false;
+        return AsTuple() == other.AsTuple();
+    }
+
+    public override bool Equals(object? obj) => Equals(obj as Coordinate);
+
+    public override int GetHashCode() => AsTuple().GetHashCode();
+
+    public static bool operator ==(Coordinate? left, Coordinate? right)
+    {
+        if (left is null) return right is null;
+        return left.Equals(right);
+    }
+
+    public static bool operator !=(Coordinate? left, Coordinate? right) => !(left == right);
+
+    public static bool operator <(Coordinate left, Coordinate right) => left.CompareTo(right) < 0;
+    public static bool operator >(Coordinate left, Coordinate right) => left.CompareTo(right) > 0;
+    public static bool operator <=(Coordinate left, Coordinate right) => left.CompareTo(right) <= 0;
+    public static bool operator >=(Coordinate left, Coordinate right) => left.CompareTo(right) >= 0;
+}src/Phext/PhextEngine.cs
+
+// ===========================================================================================================
+// libphext-cs: The Fourth Root
+// Phext.cs - Core operations for 11-dimensional plain hypertext
+//
+// Ported from: https://github.com/wbic16/libphext-rs
+// Copyright: (c) 2024-2026 Will Bickford (Phext, Inc.)
+// License: MIT
+//
+// Overview
+// --------
+// Phext is composable, relational text. It is composed of layers upon layers of plain text (scrolls).
+// All text in a phext document is stored in subspace: a traditional buffer of utf8 text.
+// Subspace enables you to orient yourself within petabyte volumes of text with dead reckoning.
+//
+// Coordinate Systems as Points
+// ----------------------------
+// A phext coordinate space is like a 3D coordinate system compressed fractally into a point.
+// We make use of increasingly-larger dimension breaks to navigate this address space.
+//
+// Encoding (ASCII control codes repurposed as dimension breaks)
+// -------------------------------------------------------------
+//   Dimension  Designation  Description
+//   ---------  -----------  ----------- 
+//   1          CL           Column
+//   2          LN           Line (0x0A)
+//   3          SC           Scroll (0x17)
+//   4          SN           Section (0x18)
+//   5          CH           Chapter (0x19)
+//   6          BK           Book (0x1A)
+//   7          VM           Volume (0x1C)
+//   8          CN           Collection (0x1D)
+//   9          SR           Series (0x1E)
+//   10         SF           Shelf (0x1F)
+//   11         LB           Library (0x01)
+// ===========================================================================================================
+
+using System.Security.Cryptography;
+using System.Text;
+
+namespace Phext;
+
+public static class PhextConstants
+{
+    // Phext dimension break characters (ASCII control codes)
+    public const char LIBRARY_BREAK = '\x01';    // 11th dimension - replaces start of header
+    public const char MORE_COWBELL = '\x07';     // i've got a fever...
+    public const char LINE_BREAK = '\x0A';       // same as plain text
+    public const char SCROLL_BREAK = '\x17';     // 3D Break - replaces End Transmission Block
+    public const char SECTION_BREAK = '\x18';    // 4D Break - replaces Cancel Block
+    public const char CHAPTER_BREAK = '\x19';    // 5D Break - replaces End of Tape
+    public const char BOOK_BREAK = '\x1A';       // 6D Break - replaces Substitute
+    public const char VOLUME_BREAK = '\x1C';     // 7D Break - replaces file separator
+    public const char COLLECTION_BREAK = '\x1D'; // 8D Break - replaces group separator
+    public const char SERIES_BREAK = '\x1E';     // 9D Break - replaces record separator
+    public const char SHELF_BREAK = '\x1F';      // 10D Break - replaces unit separator
+
+    // Address format delimiters
+    public const char ADDRESS_MICRO_BREAK = '.';
+    public const char ADDRESS_MACRO_BREAK = '/';
+    public const char ADDRESS_MACRO_ALT = ';';
+
+    /// <summary>
+    /// Returns true if the byte is a phext dimension break (including line break)
+    /// </summary>
+    public static bool IsPhextBreak(byte b)
+    {
+        return b == LINE_BREAK ||
+               b == SCROLL_BREAK ||
+               b == SECTION_BREAK ||
+               b == CHAPTER_BREAK ||
+               b == BOOK_BREAK ||
+               b == VOLUME_BREAK ||
+               b == COLLECTION_BREAK ||
+               b == SERIES_BREAK ||
+               b == SHELF_BREAK ||
+               b == LIBRARY_BREAK;
+    }
+
+    public static bool IsPhextBreak(char c) => IsPhextBreak((byte)c);
+}
+
+public class PhextEngine
+{
+    /// <summary>
+    /// Checks if the buffer contains the MORE_COWBELL character
+    /// </summary>
+    public static bool CheckForCowbell(string phext)
+    {
+        return phext.Contains(PhextConstants.MORE_COWBELL);
+    }
+
+    /// <summary>
+    /// Finds the start and end offsets for the given coordinate within subspace
+    /// </summary>
+    public static SubspaceBeacon GetSubspaceCoordinates(byte[] subspace, Coordinate target)
+    {
+        var walker = new Coordinate();
+        var best = new Coordinate();
+        int subspaceIndex = 0;
+        int start = 0;
+        int end = 0;
+        int stage = 0;
+        int max = subspace.Length;
+
+        while (subspaceIndex < max)
+        {
+            byte next = subspace[subspaceIndex];
+            char compare = (char)next;
+
+            if (stage == 0)
+            {
+                if (walker == target)
+                {
+                    stage = 1;
+                    start = subspaceIndex;
+                    best.CopyFrom(walker);
+                }
+                if (walker < target)
+                {
+                    best.CopyFrom(walker);
+                }
+            }
+
+            if (stage < 2 && walker > target)
+            {
+                if (stage == 0) start = subspaceIndex - 1;
+                end = subspaceIndex - 1;
+                stage = 2;
+            }
+
+            if (PhextConstants.IsPhextBreak(next))
+            {
+                if (compare == PhextConstants.SCROLL_BREAK) walker.ScrollBreak();
+                if (compare == PhextConstants.SECTION_BREAK) walker.SectionBreak();
+                if (compare == PhextConstants.CHAPTER_BREAK) walker.ChapterBreak();
+                if (compare == PhextConstants.BOOK_BREAK) walker.BookBreak();
+                if (compare == PhextConstants.VOLUME_BREAK) walker.VolumeBreak();
+                if (compare == PhextConstants.COLLECTION_BREAK) walker.CollectionBreak();
+                if (compare == PhextConstants.SERIES_BREAK) walker.SeriesBreak();
+                if (compare == PhextConstants.SHELF_BREAK) walker.ShelfBreak();
+                if (compare == PhextConstants.LIBRARY_BREAK) walker.LibraryBreak();
+            }
+
+            if (stage < 2 && walker > target)
+            {
+                end = subspaceIndex;
+                stage = 2;
+            }
+
+            subspaceIndex++;
+        }
+
+        if (stage == 1 && walker == target)
+        {
+            end = max;
+            stage = 2;
+        }
+
+        if (stage == 0)
+        {
+            start = max;
+            end = max;
+        }
+
+        return new SubspaceBeacon(start, end, best);
+    }
+
+    /// <summary>
+    /// Retrieves the scroll text at the given coordinate
+    /// </summary>
+    public static string Fetch(string phext, Coordinate target)
+    {
+        byte[] bytes = Encoding.UTF8.GetBytes(phext);
+        var parts = GetSubspaceCoordinates(bytes, target);
+
+        int start = parts.Start;
+        int end = parts.End;
+
+        if (end > start)
+        {
+            int length = end - start;
+            return Encoding.UTF8.GetString(bytes, start, length);
+        }
+
+        return "";
+    }
+
+    /// <summary>
+    /// Replaces the scroll at the given coordinate with new content
+    /// </summary>
+    public static string Replace(string phext, Coordinate location, string scroll)
+    {
+        byte[] bytes = Encoding.UTF8.GetBytes(phext);
+        var parts = GetSubspaceCoordinates(bytes, location);
+        int start = parts.Start;
+        int end = parts.End;
+        var subspaceCoordinate = new Coordinate(parts.Best);
+
+        var fixup = new List<byte>();
+
+        while (subspaceCoordinate.Library < location.Library)
+        {
+            fixup.Add((byte)PhextConstants.LIBRARY_BREAK);
+            subspaceCoordinate.LibraryBreak();
+        }
+        while (subspaceCoordinate.Shelf < location.Shelf)
+        {
+            fixup.Add((byte)PhextConstants.SHELF_BREAK);
+            subspaceCoordinate.ShelfBreak();
+        }
+        while (subspaceCoordinate.Series < location.Series)
+        {
+            fixup.Add((byte)PhextConstants.SERIES_BREAK);
+            subspaceCoordinate.SeriesBreak();
+        }
+        while (subspaceCoordinate.Collection < location.Collection)
+        {
+            fixup.Add((byte)PhextConstants.COLLECTION_BREAK);
+            subspaceCoordinate.CollectionBreak();
+        }
+        while (subspaceCoordinate.Volume < location.Volume)
+        {
+            fixup.Add((byte)PhextConstants.VOLUME_BREAK);
+            subspaceCoordinate.VolumeBreak();
+        }
+        while (subspaceCoordinate.Book < location.Book)
+        {
+            fixup.Add((byte)PhextConstants.BOOK_BREAK);
+            subspaceCoordinate.BookBreak();
+        }
+        while (subspaceCoordinate.Chapter < location.Chapter)
+        {
+            fixup.Add((byte)PhextConstants.CHAPTER_BREAK);
+            subspaceCoordinate.ChapterBreak();
+        }
+        while (subspaceCoordinate.Section < location.Section)
+        {
+            fixup.Add((byte)PhextConstants.SECTION_BREAK);
+            subspaceCoordinate.SectionBreak();
+        }
+        while (subspaceCoordinate.Scroll < location.Scroll)
+        {
+            fixup.Add((byte)PhextConstants.SCROLL_BREAK);
+            subspaceCoordinate.ScrollBreak();
+        }
+
+        byte[] scrollBytes = Encoding.UTF8.GetBytes(scroll);
+        int max = bytes.Length;
+        if (end > max) end = max;
+
+        var result = new List<byte>();
+        result.AddRange(bytes.Take(start));
+        result.AddRange(fixup);
+        result.AddRange(scrollBytes);
+        result.AddRange(bytes.Skip(end));
+
+        return Encoding.UTF8.GetString(result.ToArray());
+    }
+
+    /// <summary>
+    /// Inserts content at the end of the scroll at the given coordinate
+    /// </summary>
+    public static string Insert(string phext, Coordinate location, string scroll)
+    {
+        byte[] bytes = Encoding.UTF8.GetBytes(phext);
+        var parts = GetSubspaceCoordinates(bytes, location);
+        int end = parts.End;
+        var subspaceCoordinate = new Coordinate(parts.Best);
+
+        var fixup = new List<byte>();
+
+        while (subspaceCoordinate.Library < location.Library)
+        {
+            fixup.Add((byte)PhextConstants.LIBRARY_BREAK);
+            subspaceCoordinate.LibraryBreak();
+        }
+        while (subspaceCoordinate.Shelf < location.Shelf)
+        {
+            fixup.Add((byte)PhextConstants.SHELF_BREAK);
+            subspaceCoordinate.ShelfBreak();
+        }
+        while (subspaceCoordinate.Series < location.Series)
+        {
+            fixup.Add((byte)PhextConstants.SERIES_BREAK);
+            subspaceCoordinate.SeriesBreak();
+        }
+        while (subspaceCoordinate.Collection < location.Collection)
+        {
+            fixup.Add((byte)PhextConstants.COLLECTION_BREAK);
+            subspaceCoordinate.CollectionBreak();
+        }
+        while (subspaceCoordinate.Volume < location.Volume)
+        {
+            fixup.Add((byte)PhextConstants.VOLUME_BREAK);
+            subspaceCoordinate.VolumeBreak();
+        }
+        while (subspaceCoordinate.Book < location.Book)
+        {
+            fixup.Add((byte)PhextConstants.BOOK_BREAK);
+            subspaceCoordinate.BookBreak();
+        }
+        while (subspaceCoordinate.Chapter < location.Chapter)
+        {
+            fixup.Add((byte)PhextConstants.CHAPTER_BREAK);
+            subspaceCoordinate.ChapterBreak();
+        }
+        while (subspaceCoordinate.Section < location.Section)
+        {
+            fixup.Add((byte)PhextConstants.SECTION_BREAK);
+            subspaceCoordinate.SectionBreak();
+        }
+        while (subspaceCoordinate.Scroll < location.Scroll)
+        {
+            fixup.Add((byte)PhextConstants.SCROLL_BREAK);
+            subspaceCoordinate.ScrollBreak();
+        }
+
+        byte[] scrollBytes = Encoding.UTF8.GetBytes(scroll);
+
+        var result = new List<byte>();
+        result.AddRange(bytes.Take(end));
+        result.AddRange(fixup);
+        result.AddRange(scrollBytes);
+        result.AddRange(bytes.Skip(end));
+
+        return Encoding.UTF8.GetString(result.ToArray());
+    }
+
+    /// <summary>
+    /// Removes the scroll at the given coordinate
+    /// </summary>
+    public static string Remove(string phext, Coordinate location)
+    {
+        string phase1 = Replace(phext, location, "");
+        return Normalize(phase1);
+    }
+
+    /// <summary>
+    /// Replaces content within a range of coordinates
+    /// </summary>
+    public static string RangeReplace(string phext, Range location, string scroll)
+    {
+        byte[] bytes = Encoding.UTF8.GetBytes(phext);
+        var partsStart = GetSubspaceCoordinates(bytes, location.Start);
+        var partsEnd = GetSubspaceCoordinates(bytes, location.End);
+
+        int start = partsStart.Start;
+        int end = partsEnd.End;
+        int max = bytes.Length;
+        if (end > max) end = max;
+
+        byte[] scrollBytes = Encoding.UTF8.GetBytes(scroll);
+
+        var result = new List<byte>();
+        result.AddRange(bytes.Take(start));
+        result.AddRange(scrollBytes);
+        result.AddRange(bytes.Skip(end));
+
+        return Encoding.UTF8.GetString(result.ToArray());
+    }
+
+    /// <summary>
+    /// Retrieves the next scroll from the given string, starting from the specified coordinate
+    /// </summary>
+    public static (PositionedScroll scroll, Coordinate nextStart, string remaining) NextScroll(string phext, Coordinate start)
+    {
+        var location = new Coordinate(start);
+        byte[] p = Encoding.UTF8.GetBytes(phext);
+        var output = new List<byte>();
+        var remaining = new List<byte>();
+        int pi = 0;
+        var begin = new Coordinate(start);
+        int pmax = p.Length;
+
+        while (pi < pmax)
+        {
+            char test = (char)p[pi];
+            bool dimensionBreak = false;
+
+            if (test == PhextConstants.SCROLL_BREAK) { location.ScrollBreak(); dimensionBreak = true; }
+            if (test == PhextConstants.SECTION_BREAK) { location.SectionBreak(); dimensionBreak = true; }
+            if (test == PhextConstants.CHAPTER_BREAK) { location.ChapterBreak(); dimensionBreak = true; }
+            if (test == PhextConstants.BOOK_BREAK) { location.BookBreak(); dimensionBreak = true; }
+            if (test == PhextConstants.VOLUME_BREAK) { location.VolumeBreak(); dimensionBreak = true; }
+            if (test == PhextConstants.COLLECTION_BREAK) { location.CollectionBreak(); dimensionBreak = true; }
+            if (test == PhextConstants.SERIES_BREAK) { location.SeriesBreak(); dimensionBreak = true; }
+            if (test == PhextConstants.SHELF_BREAK) { location.ShelfBreak(); dimensionBreak = true; }
+            if (test == PhextConstants.LIBRARY_BREAK) { location.LibraryBreak(); dimensionBreak = true; }
+
+            if (dimensionBreak)
+            {
+                if (output.Count > 0)
+                {
+                    pi++;
+                    break;
+                }
+            }
+            else
+            {
+                begin.CopyFrom(location);
+                output.Add(p[pi]);
+            }
+            pi++;
+        }
+
+        while (pi < p.Length)
+        {
+            remaining.Add(p[pi]);
+            pi++;
+        }
+
+        var outScroll = new PositionedScroll(begin, Encoding.UTF8.GetString(output.ToArray()));
+        return (outScroll, location, Encoding.UTF8.GetString(remaining.ToArray()));
+    }
+
+    /// <summary>
+    /// Transforms a packed phext buffer into a list of positioned scrolls (phokens)
+    /// </summary>
+    public static List<PositionedScroll> Phokenize(string phext)
+    {
+        var result = new List<PositionedScroll>();
+        var coord = new Coordinate();
+        string temp = phext;
+
+        while (true)
+        {
+            var (item, nextCoord, remaining) = NextScroll(temp, coord);
+            result.Add(item);
+            coord = nextCoord;
+            temp = remaining;
+            if (string.IsNullOrEmpty(temp)) break;
+        }
+
+        return result;
+    }
+
+    /// <summary>
+    /// Serializes a list of positioned scrolls back into a phext buffer
+    /// </summary>
+    public static string Dephokenize(List<PositionedScroll> tokens)
+    {
+        var result = new StringBuilder();
+        var coord = new Coordinate();
+
+        foreach (var ps in tokens)
+        {
+            if (!string.IsNullOrEmpty(ps.Scroll))
+            {
+                result.Append(AppendScroll(ps, coord));
+            }
+            coord = new Coordinate(ps.Coord);
+        }
+
+        return result.ToString();
+    }
+
+    /// <summary>
+    /// Emits the delimiters and text required to append a positioned scroll
+    /// </summary>
+    public static string AppendScroll(PositionedScroll token, Coordinate coord)
+    {
+        var output = new StringBuilder();
+        var current = new Coordinate(coord);
+
+        while (current < token.Coord)
+        {
+            if (current.Library < token.Coord.Library) { output.Append(PhextConstants.LIBRARY_BREAK); current.LibraryBreak(); continue; }
+            if (current.Shelf < token.Coord.Shelf) { output.Append(PhextConstants.SHELF_BREAK); current.ShelfBreak(); continue; }
+            if (current.Series < token.Coord.Series) { output.Append(PhextConstants.SERIES_BREAK); current.SeriesBreak(); continue; }
+            if (current.Collection < token.Coord.Collection) { output.Append(PhextConstants.COLLECTION_BREAK); current.CollectionBreak(); continue; }
+            if (current.Volume < token.Coord.Volume) { output.Append(PhextConstants.VOLUME_BREAK); current.VolumeBreak(); continue; }
+            if (current.Book < token.Coord.Book) { output.Append(PhextConstants.BOOK_BREAK); current.BookBreak(); continue; }
+            if (current.Chapter < token.Coord.Chapter) { output.Append(PhextConstants.CHAPTER_BREAK); current.ChapterBreak(); continue; }
+            if (current.Section < token.Coord.Section) { output.Append(PhextConstants.SECTION_BREAK); current.SectionBreak(); continue; }
+            if (current.Scroll < token.Coord.Scroll) { output.Append(PhextConstants.SCROLL_BREAK); current.ScrollBreak(); continue; }
+        }
+
+        output.Append(token.Scroll);
+        return output.ToString();
+    }
+
+    /// <summary>
+    /// Explodes a phext into a dictionary of coordinates to scroll content
+    /// </summary>
+    public static Dictionary<Coordinate, string> Explode(string phext)
+    {
+        var parts = Phokenize(phext);
+        var hash = new Dictionary<Coordinate, string>();
+        foreach (var row in parts)
+        {
+            hash[new Coordinate(row.Coord)] = row.Scroll;
+        }
+        return hash;
+    }
+
+    /// <summary>
+    /// Implodes a dictionary of coordinates back into a phext buffer
+    /// </summary>
+    public static string Implode(Dictionary<Coordinate, string> map)
+    {
+        var vec = map.Select(kv => new PositionedScroll(kv.Key, kv.Value)).ToList();
+        vec.Sort();
+        return Dephokenize(vec);
+    }
+
+    /// <summary>
+    /// Zipper-merges two phext documents
+    /// </summary>
+    public static string Merge(string left, string right)
+    {
+        var tl = Phokenize(left);
+        var tr = Phokenize(right);
+        int tli = 0, tri = 0;
+        int maxtl = tl.Count, maxtr = tr.Count;
+        var result = new StringBuilder();
+        var coord = new Coordinate();
+
+        while (true)
+        {
+            bool haveLeft = tli < maxtl;
+            bool haveRight = tri < maxtr;
+
+            bool pickLeft = haveLeft && (!haveRight || tl[tli].Coord <= tr[tri].Coord);
+            bool pickRight = haveRight && (!haveLeft || tr[tri].Coord <= tl[tli].Coord);
+
+            if (pickLeft)
+            {
+                result.Append(AppendScroll(new PositionedScroll(tl[tli]), coord));
+                coord = new Coordinate(tl[tli].Coord);
+                tli++;
+            }
+            if (pickRight)
+            {
+                result.Append(AppendScroll(new PositionedScroll(tr[tri]), coord));
+                coord = new Coordinate(tr[tri].Coord);
+                tri++;
+            }
+
+            if (!pickLeft && !pickRight) break;
+        }
+
+        return result.ToString();
+    }
+
+    /// <summary>
+    /// Subtracts scrolls from left where there is also content at those coordinates in right
+    /// </summary>
+    public static string Subtract(string left, string right)
+    {
+        var pl = Phokenize(left);
+        var pr = Phokenize(right);
+        var result = new StringBuilder();
+        int pri = 0;
+        int max = pr.Count;
+        var coord = new Coordinate();
+
+        foreach (var token in pl)
+        {
+            bool doAppend = pri == max;
+
+            if (pri < max)
+            {
+                var compare = pr[pri];
+                if (token.Coord < compare.Coord)
+                {
+                    doAppend = true;
+                }
+                else if (token.Coord == compare.Coord)
+                {
+                    pri++;
+                }
+            }
+
+            if (doAppend)
+            {
+                result.Append(AppendScroll(new PositionedScroll(token), coord));
+                coord = new Coordinate(token.Coord);
+            }
+        }
+
+        return result.ToString();
+    }
+
+    /// <summary>
+    /// Normalizes a phext by removing empty scrolls
+    /// </summary>
+    public static string Normalize(string phext)
+    {
+        var arr = Phokenize(phext);
+        return Dephokenize(arr);
+    }
+
+    /// <summary>
+    /// Expands all dimension breaks by one level (line->scroll, scroll->section, etc.)
+    /// </summary>
+    public static string Expand(string phext)
+    {
+        var buffer = Encoding.UTF8.GetBytes(phext);
+        for (int p = 0; p < buffer.Length; p++)
+        {
+            if (buffer[p] == PhextConstants.LINE_BREAK) buffer[p] = (byte)PhextConstants.SCROLL_BREAK;
+            else if (buffer[p] == PhextConstants.SCROLL_BREAK) buffer[p] = (byte)PhextConstants.SECTION_BREAK;
+            else if (buffer[p] == PhextConstants.SECTION_BREAK) buffer[p] = (byte)PhextConstants.CHAPTER_BREAK;
+            else if (buffer[p] == PhextConstants.CHAPTER_BREAK) buffer[p] = (byte)PhextConstants.BOOK_BREAK;
+            else if (buffer[p] == PhextConstants.BOOK_BREAK) buffer[p] = (byte)PhextConstants.VOLUME_BREAK;
+            else if (buffer[p] == PhextConstants.VOLUME_BREAK) buffer[p] = (byte)PhextConstants.COLLECTION_BREAK;
+            else if (buffer[p] == PhextConstants.COLLECTION_BREAK) buffer[p] = (byte)PhextConstants.SERIES_BREAK;
+            else if (buffer[p] == PhextConstants.SERIES_BREAK) buffer[p] = (byte)PhextConstants.SHELF_BREAK;
+            else if (buffer[p] == PhextConstants.SHELF_BREAK) buffer[p] = (byte)PhextConstants.LIBRARY_BREAK;
+        }
+        return Encoding.UTF8.GetString(buffer);
+    }
+
+    /// <summary>
+    /// Contracts all dimension breaks by one level (library->shelf, shelf->series, etc.)
+    /// </summary>
+    public static string Contract(string phext)
+    {
+        var buffer = Encoding.UTF8.GetBytes(phext);
+        for (int p = 0; p < buffer.Length; p++)
+        {
+            if (buffer[p] == PhextConstants.LIBRARY_BREAK) buffer[p] = (byte)PhextConstants.SHELF_BREAK;
+            else if (buffer[p] == PhextConstants.SHELF_BREAK) buffer[p] = (byte)PhextConstants.SERIES_BREAK;
+            else if (buffer[p] == PhextConstants.SERIES_BREAK) buffer[p] = (byte)PhextConstants.COLLECTION_BREAK;
+            else if (buffer[p] == PhextConstants.COLLECTION_BREAK) buffer[p] = (byte)PhextConstants.VOLUME_BREAK;
+            else if (buffer[p] == PhextConstants.VOLUME_BREAK) buffer[p] = (byte)PhextConstants.BOOK_BREAK;
+            else if (buffer[p] == PhextConstants.BOOK_BREAK) buffer[p] = (byte)PhextConstants.CHAPTER_BREAK;
+            else if (buffer[p] == PhextConstants.CHAPTER_BREAK) buffer[p] = (byte)PhextConstants.SECTION_BREAK;
+            else if (buffer[p] == PhextConstants.SECTION_BREAK) buffer[p] = (byte)PhextConstants.SCROLL_BREAK;
+            else if (buffer[p] == PhextConstants.SCROLL_BREAK) buffer[p] = (byte)PhextConstants.LINE_BREAK;
+        }
+        return Encoding.UTF8.GetString(buffer);
+    }
+
+    /// <summary>
+    /// Creates a one-line summary of a scroll (max 32 chars)
+    /// </summary>
+    public static string CreateSummary(string phext)
+    {
+        byte[] buffer = Encoding.UTF8.GetBytes(phext);
+        int limit = Math.Min(32, buffer.Length);
+        var summary = new List<byte>();
+
+        for (int i = 0; i < limit; i++)
+        {
+            if (PhextConstants.IsPhextBreak(buffer[i])) break;
+            summary.Add(buffer[i]);
+        }
+
+        if (summary.Count < buffer.Length)
+        {
+            summary.Add((byte)'.');
+            summary.Add((byte)'.');
+            summary.Add((byte)'.');
+        }
+
+        return Encoding.UTF8.GetString(summary.ToArray());
+    }
+
+    /// <summary>
+    /// Creates an HTML navigation map of the phext
+    /// </summary>
+    public static string Navmap(string urlbase, string phext)
+    {
+        var phokens = Phokenize(phext);
+        var result = new StringBuilder();
+
+        if (phokens.Count > 0)
+        {
+            result.AppendLine("<ul>");
+        }
+
+        foreach (var phoken in phokens)
+        {
+            result.AppendLine($"<li><a href=\"{urlbase}{phoken.Coord.ToUrlEncoded()}\">{phoken.Coord} {CreateSummary(phoken.Scroll)}</a></li>");
+        }
+
+        if (phokens.Count > 0)
+        {
+            result.AppendLine("</ul>");
+        }
+
+        return result.ToString();
+    }
+
+    /// <summary>
+    /// Creates a text-based navigation map of the phext
+    /// </summary>
+    public static string Textmap(string phext)
+    {
+        var phokens = Phokenize(phext);
+        var result = new StringBuilder();
+
+        foreach (var phoken in phokens)
+        {
+            result.AppendLine($"* {phoken.Coord}: {CreateSummary(phoken.Scroll)}");
+        }
+
+        return result.ToString();
+    }
+
+    /// <summary>
+    /// Computes an XXH3-128 style checksum (using MD5 as stand-in, can be replaced with xxHash)
+    /// Note: For true compatibility, integrate System.IO.Hashing.XxHash128
+    /// </summary>
+    public static string Checksum(string phext)
+    {
+        // Using MD5 as placeholder - for production, use System.IO.Hashing.XxHash128
+        byte[] buffer = Encoding.UTF8.GetBytes(phext);
+        using var md5 = MD5.Create();
+        byte[] hash = md5.ComputeHash(buffer);
+        return Convert.ToHexString(hash).ToLowerInvariant();
+    }
+
+    /// <summary>
+    /// Computes a hierarchical manifest of checksums for each scroll
+    /// </summary>
+    public static string Manifest(string phext)
+    {
+        var phokens = Phokenize(phext);
+        for (int i = 0; i < phokens.Count; i++)
+        {
+            phokens[i].Scroll = Checksum(phokens[i].Scroll);
+        }
+        return Dephokenize(phokens);
+    }
+
+    /// <summary>
+    /// Computes a soundex-style phonetic encoding for a scroll
+    /// </summary>
+    private static string SoundexInternal(string text)
+    {
+        const string letter1 = "bpfv";
+        const string letter2 = "cskgjqxz";
+        const string letter3 = "dt";
+        const string letter4 = "l";
+        const string letter5 = "mn";
+        const string letter6 = "r";
+
+        int value = 1;
+        foreach (char c in text.ToLowerInvariant())
+        {
+            if (letter1.Contains(c)) { value += 1; continue; }
+            if (letter2.Contains(c)) { value += 2; continue; }
+            if (letter3.Contains(c)) { value += 3; continue; }
+            if (letter4.Contains(c)) { value += 4; continue; }
+            if (letter5.Contains(c)) { value += 5; continue; }
+            if (letter6.Contains(c)) { value += 6; continue; }
+        }
+
+        return (value % 99).ToString();
+    }
+
+    /// <summary>
+    /// Computes a hierarchical soundex of the phext
+    /// </summary>
+    public static string SoundexV1(string phext)
+    {
+        var phokens = Phokenize(phext);
+        for (int i = 0; i < phokens.Count; i++)
+        {
+            phokens[i].Scroll = SoundexInternal(phokens[i].Scroll);
+        }
+        return Dephokenize(phokens);
+    }
+
+    /// <summary>
+    /// Computes the offsets of each scroll in the phext
+    /// </summary>
+    private static List<PositionedScroll> IndexPhokens(string phext)
+    {
+        var phokens = Phokenize(phext);
+        int offset = 0;
+        var coord = new Coordinate();
+        var output = new List<PositionedScroll>();
+
+        for (int i = 0; i < phokens.Count; i++)
+        {
+            var reference = phokens[i].Coord;
+            while (coord.Library < reference.Library) { coord.LibraryBreak(); offset++; }
+            while (coord.Shelf < reference.Shelf) { coord.ShelfBreak(); offset++; }
+            while (coord.Series < reference.Series) { coord.SeriesBreak(); offset++; }
+            while (coord.Collection < reference.Collection) { coord.CollectionBreak(); offset++; }
+            while (coord.Volume < reference.Volume) { coord.VolumeBreak(); offset++; }
+            while (coord.Book < reference.Book) { coord.BookBreak(); offset++; }
+            while (coord.Chapter < reference.Chapter) { coord.ChapterBreak(); offset++; }
+            while (coord.Section < reference.Section) { coord.SectionBreak(); offset++; }
+            while (coord.Scroll < reference.Scroll) { coord.ScrollBreak(); offset++; }
+
+            output.Add(new PositionedScroll(new Coordinate(coord), offset.ToString()));
+            offset += phokens[i].Scroll.Length;
+        }
+
+        return output;
+    }
+
+    /// <summary>
+    /// Computes a hierarchical map of scroll offsets in phext format
+    /// </summary>
+    public static string Index(string phext)
+    {
+        var output = IndexPhokens(phext);
+        return Dephokenize(output);
+    }
+
+    /// <summary>
+    /// Computes the byte offset of a specific scroll coordinate
+    /// </summary>
+    public static int Offset(string phext, Coordinate coord)
+    {
+        var output = IndexPhokens(phext);
+
+        var best = new Coordinate();
+        bool matched = false;
+        var fetchCoord = new Coordinate(coord);
+
+        foreach (var phoken in output)
+        {
+            if (phoken.Coord <= coord)
+            {
+                best.CopyFrom(phoken.Coord);
+            }
+            if (phoken.Coord == coord)
+            {
+                matched = true;
+            }
+        }
+
+        if (!matched)
+        {
+            fetchCoord.CopyFrom(best);
+        }
+
+        string index = Dephokenize(output);
+        string offsetStr = Fetch(index, fetchCoord);
+        return int.TryParse(offsetStr, out int result) ? result : 0;
+    }
+}src/Phext/PositionedScroll.cs
+
+// ===========================================================================================================
+// libphext-cs: The Fourth Root
+// PositionedScroll.cs - A scroll of text paired with its coordinate location
+//
+// Copyright: (c) 2024-2026 Will Bickford (Phext, Inc.)
+// License: MIT
+// ===========================================================================================================
+
+namespace Phext;
+
+/// <summary>
+/// Represents a scroll of text positioned at a specific coordinate in phext space
+/// </summary>
+public class PositionedScroll : IComparable<PositionedScroll>, IEquatable<PositionedScroll>
+{
+    public Coordinate Coord { get; set; }
+    public string Scroll { get; set; }
+
+    public PositionedScroll()
+    {
+        Coord = new Coordinate();
+        Scroll = "";
+    }
+
+    public PositionedScroll(Coordinate coord, string scroll)
+    {
+        Coord = new Coordinate(coord);
+        Scroll = scroll;
+    }
+
+    public PositionedScroll(PositionedScroll other)
+    {
+        Coord = new Coordinate(other.Coord);
+        Scroll = other.Scroll;
+    }
+
+    public int CompareTo(PositionedScroll? other)
+    {
+        if (other is null) return 1;
+        return Coord.CompareTo(other.Coord);
+    }
+
+    public bool Equals(PositionedScroll? other)
+    {
+        if (other is null) return false;
+        return Coord.Equals(other.Coord) && Scroll == other.Scroll;
+    }
+
+    public override bool Equals(object? obj) => Equals(obj as PositionedScroll);
+
+    public override int GetHashCode() => HashCode.Combine(Coord, Scroll);
+
+    public override string ToString()
+    {
+        var preview = Scroll.Length > 4 ? Scroll[..4] : Scroll;
+        return $"{Coord}: {preview}";
+    }
+
+    public static bool operator ==(PositionedScroll? left, PositionedScroll? right)
+    {
+        if (left is null) return right is null;
+        return left.Equals(right);
+    }
+
+    public static bool operator !=(PositionedScroll? left, PositionedScroll? right) => !(left == right);
+}src/Phext/Range.cs
+
+// ===========================================================================================================
+// libphext-cs: The Fourth Root
+// Range.cs - An inclusive range across phext subspace
+//
+// Copyright: (c) 2024-2026 Will Bickford (Phext, Inc.)
+// License: MIT
+// ===========================================================================================================
+
+namespace Phext;
+
+/// <summary>
+/// Represents an inclusive range of coordinates in phext space
+/// </summary>
+public class Range
+{
+    public Coordinate Start { get; set; }
+    public Coordinate End { get; set; }
+
+    public Range()
+    {
+        Start = new Coordinate();
+        End = new Coordinate();
+    }
+
+    public Range(Coordinate start, Coordinate end)
+    {
+        Start = new Coordinate(start);
+        End = new Coordinate(end);
+    }
+
+    public Range(string startCoord, string endCoord)
+    {
+        Start = Coordinate.FromString(startCoord);
+        End = Coordinate.FromString(endCoord);
+    }
+
+    public override string ToString() => $"{Start}-{End}";
+}src/Phext/SubspaceBeacon.cs
+
+// ===========================================================================================================
+// libphext-cs: The Fourth Root
+// SubspaceBeacon.cs - Helper structure for subspace navigation
+//
+// Copyright: (c) 2024-2025 Will Bickford (Phext, Inc.)
+// License: MIT
+// ===========================================================================================================
+
+namespace Phext;
+
+/// <summary>
+/// Represents the start/end offsets and best coordinate match found during subspace traversal
+/// </summary>
+public class SubspaceBeacon
+{
+    public int Start { get; set; }
+    public int End { get; set; }
+    public Coordinate Best { get; set; }
+
+    public SubspaceBeacon()
+    {
+        Start = 0;
+        End = 0;
+        Best = new Coordinate();
+    }
+
+    public SubspaceBeacon(int start, int end, Coordinate best)
+    {
+        Start = start;
+        End = end;
+        Best = new Coordinate(best);
+    }
+}src/Phext/Phext.csproj
+
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>Phext</RootNamespace>
+    <AssemblyName>libphext</AssemblyName>
+    <Version>0.3.0</Version>
+    <Authors>Will Bickford</Authors>
+    <Company>Phext, Inc.</Company>
+    <Description>The Fourth Root - C# implementation of phext (11-dimensional plain hypertext)</Description>
+    <Copyright>Copyright (c) 2026 Phext, Inc.</Copyright>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://phext.io</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/wbic16/libphext-cs</RepositoryUrl>
+    <PackageTags>phext;hypertext;11-dimensional;coordinate;text</PackageTags>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <PackageId>$(AssemblyName)-cs</PackageId>
+    <Title>libphext-cs</Title>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>tests/PhextTests.cs
+
+// ===========================================================================================================
+// libphext-cs: The Fourth Root - Unit Tests
+// Ported from libphext-rs test suite
+//
+// Copyright: (c) 2024-2025 Will Bickford (Phext, Inc.)
+// License: MIT
+// ===========================================================================================================
+
+using Xunit;
+using Phext;
+
+namespace Phext.Tests;
+
+public class Constants
+{
+    public const char SB = PhextConstants.SCROLL_BREAK;
+    public const char SN = PhextConstants.SECTION_BREAK;
+    public const char CH = PhextConstants.CHAPTER_BREAK;
+    public const char BK = PhextConstants.BOOK_BREAK;
+    public const char VM = PhextConstants.VOLUME_BREAK;
+    public const char CN = PhextConstants.COLLECTION_BREAK;
+    public const char SR = PhextConstants.SERIES_BREAK;
+    public const char SF = PhextConstants.SHELF_BREAK;
+    public const char LB = PhextConstants.LIBRARY_BREAK;
+}
+
+public class CoordinateTests : Constants
+{
+    [Fact]
+    public void Test_CoordinateParsing()
+    {
+        string exampleCoordinate = "9.8.7/6.5.4/3.2.1";
+        var test = Coordinate.FromString(exampleCoordinate);
+        string address = test.ToString();
+        Assert.Equal(exampleCoordinate, address);
+
+        string weirdCoordinate = "HOME";
+        var testWeird = Coordinate.FromString(weirdCoordinate);
+        Assert.Equal("1.1.1/1.1.1/1.1.1", testWeird.ToString());
+    }
+
+    [Fact]
+    public void Test_ToUrlEncoded()
+    {
+        var sample1 = Coordinate.FromString("1.1.1/1.1.1/1.1.1");
+        Assert.Equal("1.1.1;1.1.1;1.1.1", sample1.ToUrlEncoded());
+
+        var sample2 = Coordinate.FromString("98.76.54/32.10.1/23.45.67");
+        Assert.Equal("98.76.54;32.10.1;23.45.67", sample2.ToUrlEncoded());
+    }
+
+    [Fact]
+    public void Test_CoordinatesInvalid()
+    {
+        var c1 = Coordinate.FromString("0.0.0/0.0.0/0.0.0");
+        var c2 = new Coordinate(0, 0, 0, 0, 0, 0, 0, 0, 0);
+        Assert.Equal(c1, c2);
+        Assert.False(c1.IsValid());
+        Assert.False(c2.IsValid());
+    }
+
+    [Fact]
+    public void Test_CoordinatesValid()
+    {
+        var c1 = Coordinate.FromString("142.143.144/145.146.147/148.149.150");
+        Assert.True(c1.IsValid());
+
+        var c2 = Coordinate.FromString("1001.1002.1003/1004.1005.1006/1007.1008.1009");
+        Assert.False(c2.IsValid()); // exceeds max of 1000
+    }
+
+    [Fact]
+    public void Test_UrlEncoding()
+    {
+        var c1 = Coordinate.FromString("142.143.144;145.146.147;148.149.150");
+        var c2 = new Coordinate(142, 143, 144, 145, 146, 147, 148, 149, 150);
+        Assert.Equal(c1, c2);
+        Assert.True(c1.IsValid());
+        Assert.True(c2.IsValid());
+    }
+
+    [Fact]
+    public void Test_CoordinateComparison()
+    {
+        var c1 = Coordinate.FromString("1.1.1/1.1.1/1.1.1");
+        var c2 = Coordinate.FromString("1.1.1/1.1.1/1.1.2");
+        var c3 = Coordinate.FromString("2.1.1/1.1.1/1.1.1");
+
+        Assert.True(c1 < c2);
+        Assert.True(c2 < c3);
+        Assert.True(c1 < c3);
+        Assert.False(c2 < c1);
+    }
+}
+
+public class PhextBreakTests : Constants
+{
+    [Fact]
+    public void Test_LineBreak()
+    {
+        Assert.Equal('\n', PhextConstants.LINE_BREAK);
+    }
+
+    [Fact]
+    public void Test_MoreCowbell()
+    {
+        var test1 = PhextEngine.CheckForCowbell("Hello\x07");
+        var test2 = PhextEngine.CheckForCowbell("nope\x17just more scrolls");
+        Assert.Equal('\x07', PhextConstants.MORE_COWBELL);
+        Assert.True(test1);
+        Assert.False(test2);
+    }
+
+    [Fact]
+    public void Test_Scrolls()
+    {
+        string sample = "Hello World\x17Scroll #2 -- this text will be selected\x17Scroll #3 - this text will be ignored";
+
+        var coord1 = Coordinate.FromString("1.1.1/1.1.1/1.1.1");
+        Assert.Equal("Hello World", PhextEngine.Fetch(sample, coord1));
+
+        var coord2 = Coordinate.FromString("1.1.1/1.1.1/1.1.2");
+        Assert.Equal("Scroll #2 -- this text will be selected", PhextEngine.Fetch(sample, coord2));
+
+        var coord3 = Coordinate.FromString("1.1.1/1.1.1/1.1.3");
+        Assert.Equal("Scroll #3 - this text will be ignored", PhextEngine.Fetch(sample, coord3));
+    }
+
+    [Fact]
+    public void Test_Sections()
+    {
+        string sample = "Section A\x18Section B\x18Section C";
+
+        var coord1 = Coordinate.FromString("1.1.1/1.1.1/1.1.1");
+        Assert.Equal("Section A", PhextEngine.Fetch(sample, coord1));
+
+        var coord2 = Coordinate.FromString("1.1.1/1.1.1/1.2.1");
+        Assert.Equal("Section B", PhextEngine.Fetch(sample, coord2));
+
+        var coord3 = Coordinate.FromString("1.1.1/1.1.1/1.3.1");
+        Assert.Equal("Section C", PhextEngine.Fetch(sample, coord3));
+    }
+
+    [Fact]
+    public void Test_Chapters()
+    {
+        string sample = "Chapter Alpha" + CH + "Chapter Beta" + CH + "Chapter Gamma";
+
+        var coord1 = Coordinate.FromString("1.1.1/1.1.1/1.1.1");
+        Assert.Equal("Chapter Alpha", PhextEngine.Fetch(sample, coord1));
+
+        var coord2 = Coordinate.FromString("1.1.1/1.1.1/2.1.1");
+        Assert.Equal("Chapter Beta", PhextEngine.Fetch(sample, coord2));
+
+        var coord3 = Coordinate.FromString("1.1.1/1.1.1/3.1.1");
+        Assert.Equal("Chapter Gamma", PhextEngine.Fetch(sample, coord3));
+    }
+
+    [Fact]
+    public void Test_Books()
+    {
+        string sample = "Book z1" + BK + "Book Something Else #2" + BK + "Book Part 3";
+
+        var coord1 = Coordinate.FromString("1.1.1/1.1.1/1.1.1");
+        Assert.Equal("Book z1", PhextEngine.Fetch(sample, coord1));
+
+        var coord2 = Coordinate.FromString("1.1.1/1.1.2/1.1.1");
+        Assert.Equal("Book Something Else #2", PhextEngine.Fetch(sample, coord2));
+
+        var coord3 = Coordinate.FromString("1.1.1/1.1.3/1.1.1");
+        Assert.Equal("Book Part 3", PhextEngine.Fetch(sample, coord3));
+    }
+
+    [Fact]
+    public void Test_Volumes()
+    {
+        string sample = "Volume 1-1-1\x1CVolume 1-2-1\x1CVolume 1-3-1";
+
+        var coord1 = Coordinate.FromString("1.1.1/1.1.1/1.1.1");
+        Assert.Equal("Volume 1-1-1", PhextEngine.Fetch(sample, coord1));
+
+        var coord2 = Coordinate.FromString("1.1.1/1.2.1/1.1.1");
+        Assert.Equal("Volume 1-2-1", PhextEngine.Fetch(sample, coord2));
+
+        var coord3 = Coordinate.FromString("1.1.1/1.3.1/1.1.1");
+        Assert.Equal("Volume 1-3-1", PhextEngine.Fetch(sample, coord3));
+    }
+
+    [Fact]
+    public void Test_Collections()
+    {
+        string sample = "Collection 1-1-1" + CN + "Collection 2-1-1" + CN + "Collection 3-1-1";
+
+        var coord1 = Coordinate.FromString("1.1.1/1.1.1/1.1.1");
+        Assert.Equal("Collection 1-1-1", PhextEngine.Fetch(sample, coord1));
+
+        var coord2 = Coordinate.FromString("1.1.1/2.1.1/1.1.1");
+        Assert.Equal("Collection 2-1-1", PhextEngine.Fetch(sample, coord2));
+
+        var coord3 = Coordinate.FromString("1.1.1/3.1.1/1.1.1");
+        Assert.Equal("Collection 3-1-1", PhextEngine.Fetch(sample, coord3));
+    }
+
+    [Fact]
+    public void Test_Series()
+    {
+        string sample = "Series 1-1-1\x1ESeries 1-1-2\x1ESeries 1-1-3";
+
+        var coord1 = Coordinate.FromString("1.1.1/1.1.1/1.1.1");
+        Assert.Equal("Series 1-1-1", PhextEngine.Fetch(sample, coord1));
+
+        var coord2 = Coordinate.FromString("1.1.2/1.1.1/1.1.1");
+        Assert.Equal("Series 1-1-2", PhextEngine.Fetch(sample, coord2));
+
+        var coord3 = Coordinate.FromString("1.1.3/1.1.1/1.1.1");
+        Assert.Equal("Series 1-1-3", PhextEngine.Fetch(sample, coord3));
+    }
+
+    [Fact]
+    public void Test_Shelves()
+    {
+        string sample = "Shelf 1-1-1\x1FShelf 1-2-1\x1FShelf 1-3-1";
+
+        var coord1 = Coordinate.FromString("1.1.1/1.1.1/1.1.1");
+        Assert.Equal("Shelf 1-1-1", PhextEngine.Fetch(sample, coord1));
+
+        var coord2 = Coordinate.FromString("1.2.1/1.1.1/1.1.1");
+        Assert.Equal("Shelf 1-2-1", PhextEngine.Fetch(sample, coord2));
+
+        var coord3 = Coordinate.FromString("1.3.1/1.1.1/1.1.1");
+        Assert.Equal("Shelf 1-3-1", PhextEngine.Fetch(sample, coord3));
+    }
+
+    [Fact]
+    public void Test_Libraries()
+    {
+        string sample = "Library 1-1-1\x01Library 2-1-1\x01Library 3-1-1";
+
+        var coord1 = Coordinate.FromString("1.1.1/1.1.1/1.1.1");
+        Assert.Equal("Library 1-1-1", PhextEngine.Fetch(sample, coord1));
+
+        var coord2 = Coordinate.FromString("2.1.1/1.1.1/1.1.1");
+        Assert.Equal("Library 2-1-1", PhextEngine.Fetch(sample, coord2));
+
+        var coord3 = Coordinate.FromString("3.1.1/1.1.1/1.1.1");
+        Assert.Equal("Library 3-1-1", PhextEngine.Fetch(sample, coord3));
+    }
+}
+
+public class PhextOperationTests
+{
+    const char SB = PhextConstants.SCROLL_BREAK;
+    const char SN = PhextConstants.SECTION_BREAK;
+    const char CH = PhextConstants.CHAPTER_BREAK;
+    const char BK = PhextConstants.BOOK_BREAK;
+    const char VM = PhextConstants.VOLUME_BREAK;
+    const char CN = PhextConstants.COLLECTION_BREAK;
+    const char SR = PhextConstants.SERIES_BREAK;
+    const char SF = PhextConstants.SHELF_BREAK;
+    const char LB = PhextConstants.LIBRARY_BREAK;
+
+    [Fact]
+    public void Test_CoordinateBasedInsert()
+    {
+        string test = "aaa" + LB + "bbb" + SB + "ccc";
+
+        var coord1 = Coordinate.FromString("2.1.1/1.1.1/1.1.3");
+        var update1 = PhextEngine.Insert(test, coord1, "ddd");
+        Assert.Equal("aaa" + LB + "bbb" + SB + "ccc" + SB + "ddd", update1);
+
+        var coord2 = Coordinate.FromString("2.1.1/1.1.1/1.1.4");
+        var update2 = PhextEngine.Insert(update1, coord2, "eee");
+        Assert.Equal("aaa" + LB + "bbb" + SB + "ccc" + SB + "ddd" + SB + "eee", update2);
+
+        var coord3 = Coordinate.FromString("2.1.1/1.1.1/1.2.1");
+        var update3 = PhextEngine.Insert(update2, coord3, "fff");
+        Assert.Equal("aaa" + LB + "bbb" + SB + "ccc" + SB + "ddd" + SB + "eee" + SN + "fff", update3);
+
+        var coord4 = Coordinate.FromString("2.1.1/1.1.1/1.2.2");
+        var update4 = PhextEngine.Insert(update3, coord4, "ggg");
+        Assert.Equal("aaa" + LB + "bbb" + SB + "ccc" + SB + "ddd" + SB + "eee" + SN + "fff" + SB + "ggg", update4);
+
+        var coord5 = Coordinate.FromString("2.1.1/1.1.1/2.1.1");
+        var update5 = PhextEngine.Insert(update4, coord5, "hhh");
+        Assert.Equal("aaa" + LB + "bbb" + SB + "ccc" + SB + "ddd" + SB + "eee" + SN + "fff" + SB + "ggg" + CH + "hhh", update5);
+    }
+
+    [Fact]
+    public void Test_CoordinateBasedReplace()
+    {
+        string test = "aaa" + SB + "bbb" + SN + "ccc" + CH + "ddd" + BK + "eee" + VM + "fff" + CN + "ggg" + SR + "hhh" + SF + "iii" + LB + "jjj";
+
+        var coord1 = Coordinate.FromString("1.1.1/1.1.1/1.1.1");
+        var update1 = PhextEngine.Replace(test, coord1, "AAA");
+        Assert.Equal("AAA" + SB + "bbb" + SN + "ccc" + CH + "ddd" + BK + "eee" + VM + "fff" + CN + "ggg" + SR + "hhh" + SF + "iii" + LB + "jjj", update1);
+
+        var coord2 = Coordinate.FromString("1.1.1/1.1.1/1.1.2");
+        var update2 = PhextEngine.Replace(update1, coord2, "222");
+        Assert.Equal("AAA" + SB + "222" + SN + "ccc" + CH + "ddd" + BK + "eee" + VM + "fff" + CN + "ggg" + SR + "hhh" + SF + "iii" + LB + "jjj", update2);
+    }
+
+    [Fact]
+    public void Test_CoordinateBasedRemove()
+    {
+        string test = "aaa" + SB + "bbb" + SN + "ccc" + CH + "ddd" + BK + "eee" + VM + "fff" + CN + "ggg" + SR + "hhh" + SF + "iii" + LB + "jjj";
+
+        var coord1 = Coordinate.FromString("1.1.1/1.1.1/1.1.1");
+        var update1 = PhextEngine.Remove(test, coord1);
+        Assert.Equal(SB + "bbb" + SN + "ccc" + CH + "ddd" + BK + "eee" + VM + "fff" + CN + "ggg" + SR + "hhh" + SF + "iii" + LB + "jjj", update1);
+
+        var coord2 = Coordinate.FromString("1.1.1/1.1.1/1.1.2");
+        var update2 = PhextEngine.Remove(update1, coord2);
+        Assert.Equal(SN + "ccc" + CH + "ddd" + BK + "eee" + VM + "fff" + CN + "ggg" + SR + "hhh" + SF + "iii" + LB + "jjj", update2);
+    }
+
+    [Fact]
+    public void Test_RangeBasedReplace()
+    {
+        string doc1 = "Before" + CH + "text to be replaced" + VM + "also this" + CN + "and this" + SB + "After";
+        var range1 = new Range(
+            Coordinate.FromString("1.1.1/1.1.1/2.1.1"),
+            Coordinate.FromString("1.1.1/2.1.1/1.1.1")
+        );
+        var update1 = PhextEngine.RangeReplace(doc1, range1, "");
+        Assert.Equal("Before" + CH + SB + "After", update1);
+
+        string doc2 = "Before" + LB + "Library two" + LB + "Library three" + LB + "Library four";
+        var range2 = new Range(
+            Coordinate.FromString("2.1.1/1.1.1/1.1.1"),
+            Coordinate.FromString("3.1.1/1.1.1/1.1.1")
+        );
+        var update2 = PhextEngine.RangeReplace(doc2, range2, "");
+        Assert.Equal("Before" + LB + LB + "Library four", update2);
+    }
+
+    [Fact]
+    public void Test_NextScroll()
+    {
+        string doc1 = "3A" + SB + "B2" + SN + "C1";
+        var (scroll, nextStart, remaining) = PhextEngine.NextScroll(doc1, Coordinate.FromString("1.1.1/1.1.1/1.1.1"));
+        Assert.Equal("1.1.1/1.1.1/1.1.1", scroll.Coord.ToString());
+        Assert.Equal("3A", scroll.Scroll);
+        Assert.Equal("1.1.1/1.1.1/1.1.2", nextStart.ToString());
+        Assert.Equal("B2" + SN + "C1", remaining);
+    }
+
+    [Fact]
+    public void Test_Phokenize()
+    {
+        string doc1 = "one" + SB + "two" + SB + "three" + SB + "four";
+        var update1 = PhextEngine.Phokenize(doc1);
+
+        Assert.Equal(4, update1.Count);
+        Assert.Equal("1.1.1/1.1.1/1.1.1", update1[0].Coord.ToString());
+        Assert.Equal("one", update1[0].Scroll);
+        Assert.Equal("1.1.1/1.1.1/1.1.2", update1[1].Coord.ToString());
+        Assert.Equal("two", update1[1].Scroll);
+        Assert.Equal("1.1.1/1.1.1/1.1.3", update1[2].Coord.ToString());
+        Assert.Equal("three", update1[2].Scroll);
+        Assert.Equal("1.1.1/1.1.1/1.1.4", update1[3].Coord.ToString());
+        Assert.Equal("four", update1[3].Scroll);
+
+        string doc2 = "one" + LB + "two" + SF + "three" + SR + "four" + CN + "five" + VM + "six" + BK + "seven" + CH + "eight" + SN + "nine" + SB + "ten";
+        var update2 = PhextEngine.Phokenize(doc2);
+
+        Assert.Equal(10, update2.Count);
+        Assert.Equal("1.1.1/1.1.1/1.1.1", update2[0].Coord.ToString());
+        Assert.Equal("one", update2[0].Scroll);
+        Assert.Equal("2.1.1/1.1.1/1.1.1", update2[1].Coord.ToString());
+        Assert.Equal("two", update2[1].Scroll);
+        Assert.Equal("2.2.1/1.1.1/1.1.1", update2[2].Coord.ToString());
+        Assert.Equal("three", update2[2].Scroll);
+    }
+
+    [Fact]
+    public void Test_PhokenizeAllDimensions()
+    {
+        string doc3 = "one" + SB + "two" + SN + "three" + CH + "four" + BK + "five" + VM + "six" + CN + "seven" + SR + "eight" + SF + "nine" + LB + "ten";
+        var update3 = PhextEngine.Phokenize(doc3);
+
+        Assert.Equal(10, update3.Count);
+        Assert.Equal("1.1.1/1.1.1/1.1.1", update3[0].Coord.ToString());
+        Assert.Equal("1.1.1/1.1.1/1.1.2", update3[1].Coord.ToString());
+        Assert.Equal("1.1.1/1.1.1/1.2.1", update3[2].Coord.ToString());
+        Assert.Equal("1.1.1/1.1.1/2.1.1", update3[3].Coord.ToString());
+        Assert.Equal("1.1.1/1.1.2/1.1.1", update3[4].Coord.ToString());
+        Assert.Equal("1.1.1/1.2.1/1.1.1", update3[5].Coord.ToString());
+        Assert.Equal("1.1.1/2.1.1/1.1.1", update3[6].Coord.ToString());
+        Assert.Equal("1.1.2/1.1.1/1.1.1", update3[7].Coord.ToString());
+        Assert.Equal("1.2.1/1.1.1/1.1.1", update3[8].Coord.ToString());
+        Assert.Equal("2.1.1/1.1.1/1.1.1", update3[9].Coord.ToString());
+    }
+
+    [Fact]
+    public void Test_LastEmptyScroll()
+    {
+        string doc1 = "hello\x17world\x17";
+        var target1 = Coordinate.FromString("1.1.1/1.1.1/1.1.2");
+        var test1 = PhextEngine.Fetch(doc1, target1);
+        Assert.Equal("world", test1);
+    }
+
+    [Fact]
+    public void Test_Merge()
+    {
+        string doc1a = "3A" + SB + "B2";
+        string doc1b = "4C" + SB + "D1";
+        var update1 = PhextEngine.Merge(doc1a, doc1b);
+        Assert.Equal("3A4C" + SB + "B2D1", update1);
+
+        string doc2a = "Hello \x17I've come to talk";
+        string doc2b = "Darkness, my old friend.\x17 with you again.";
+        var update2 = PhextEngine.Merge(doc2a, doc2b);
+        Assert.Equal("Hello Darkness, my old friend.\x17I've come to talk with you again.", update2);
+
+        string doc3a = "One\x17Two\x18Three\x19ruoF"; // C# sucks at \x literals
+        string doc3b = "1" + SB + "2" + SN + "3" + CH + "4";
+        var update3 = PhextEngine.Merge(doc3a, doc3b);
+        Assert.Equal("One1\x17Two2\x18Three3\x19ruoF4", update3);
+    }
+
+    [Fact]
+    public void Test_Subtract()
+    {
+        string doc1a = "Here's scroll one.\x17Scroll two.";
+        string doc1b = "Just content at the first scroll";
+        var update1 = PhextEngine.Subtract(doc1a, doc1b);
+        Assert.Equal("\x17Scroll two.", update1);
+    }
+
+    [Fact]
+    public void Test_Normalize()
+    {
+        string doc1 = "\x17Scroll two\x18\x18\x18\x18";
+        var update1 = PhextEngine.Normalize(doc1);
+        Assert.Equal("\x17Scroll two", update1);
+    }
+
+    [Fact]
+    public void Test_Expand()
+    {
+        string doc1 = "nothing but line breaks\x0Ato test expansion to scrolls\x0Aline 3";
+        var update1 = PhextEngine.Expand(doc1);
+        Assert.Equal("nothing but line breaks\x17to test expansion to scrolls\x17line 3", update1);
+
+        var update2 = PhextEngine.Expand(update1);
+        Assert.Equal("nothing but line breaks\x18to test expansion to scrolls\x18line 3", update2);
+
+        var update3 = PhextEngine.Expand(update2);
+        Assert.Equal("nothing but line breaks\x19to test expansion to scrolls\x19line 3", update3);
+
+        var update4 = PhextEngine.Expand(update3);
+        Assert.Equal("nothing but line breaks\x1Ato test expansion to scrolls\x1Aline 3", update4);
+
+        var update5 = PhextEngine.Expand(update4);
+        Assert.Equal("nothing but line breaks\x1Cto test expansion to scrolls\x1Cline 3", update5);
+
+        var update6 = PhextEngine.Expand(update5);
+        Assert.Equal("nothing but line breaks\x1Dto test expansion to scrolls\x1Dline 3", update6);
+
+        var update7 = PhextEngine.Expand(update6);
+        Assert.Equal("nothing but line breaks\x1Eto test expansion to scrolls\x1Eline 3", update7);
+
+        var update8 = PhextEngine.Expand(update7);
+        Assert.Equal("nothing but line breaks\x1Fto test expansion to scrolls\x1Fline 3", update8);
+
+        var update9 = PhextEngine.Expand(update8);
+        Assert.Equal("nothing but line breaks\x01to test expansion to scrolls\x01line 3", update9);
+    }
+
+    [Fact]
+    public void Test_Contract()
+    {
+        string doc1 = "A more complex example than expand\x01----\x1F++++\x1E____\x1Doooo\x1C====\x1Azzzz\x19gggg\x18....\x17qqqq";
+        var update1 = PhextEngine.Contract(doc1);
+        Assert.Equal("A more complex example than expand\x1F----\x1E++++\x1D____\x1Coooo\x1A====\x19zzzz\x18gggg\x17....\x0Aqqqq", update1);
+
+        var update2 = PhextEngine.Contract(update1);
+        Assert.Equal("A more complex example than expand\x1E----\x1D++++\x1C____\x1Aoooo\x19====\x18zzzz\x17gggg\x0A....\x0Aqqqq", update2);
+    }
+
+    [Fact]
+    public void Test_DeadReckoning()
+    {
+        string test = "";
+        test += "random text in 1.1.1/1.1.1/1.1.1 that we can skip past";
+        test += LB;
+        test += "everything in here is at 2.1.1/1.1.1/1.1.1";
+        test += SB;
+        test += "and now we're at 2.1.1/1.1.1/1.1.2";
+        test += SB;
+        test += "moving on up to 2.1.1/1.1.1/1.1.3";
+        test += BK;
+        test += "and now over to 2.1.1/1.1.2/1.1.1";
+        test += SF;
+        test += "woot, up to 2.2.1/1.1.1/1.1.1";
+        test += LB;
+        test += "here we are at 3.1.1/1.1.1.1.1";
+        test += LB; // 4.1.1/1.1.1/1.1.1
+        test += LB; // 5.1.1/1.1.1/1.1.1
+        test += "getting closer to our target now 5.1.1/1.1.1/1.1.1";
+        test += SF; // 5.2.1
+        test += SF; // 5.3.1
+        test += SF; // 5.4.1
+        test += SF; // 5.5.1
+        test += SR; // 5.5.2
+        test += SR; // 5.5.3
+        test += SR; // 5.5.4
+        test += SR; // 5.5.5
+        test += "here we go! 5.5.5/1.1.1/1.1.1";
+        test += CN; // 5.5.5/2.1.1/1.1.1
+        test += CN; // 5.5.5/3.1.1/1.1.1
+        test += CN; // 5.5.5/4.1.1/1.1.1
+        test += BK; // 5.5.5/4.1.2/1.1.1
+        test += BK; // 5.5.5/4.1.3/1.1.1
+        test += BK; // 5.5.5/4.1.4/1.1.1
+        test += "this test appears at 5.5.5/4.1.4/1.1.1";
+        test += VM; // 5.5.5/4.2.1/1.1.1
+        test += VM; // 5.5.5/4.3.1/1.1.1
+        test += VM; // 5.5.5/4.4.1/1.1.1
+        test += VM; // 5.5.5/4.5.1/1.1.1
+        test += VM; // 5.5.5/4.6.1/1.1.1
+        test += CH; // 5.5.5/4.6.1/2.1.1
+        test += CH; // 5.5.5/4.6.1/3.1.1
+        test += CH; // 5.5.5/4.6.1/4.1.1
+        test += CH; // 5.5.5/4.6.1/5.1.1
+        test += BK; // 5.5.5/4.6.2/1.1.1
+        test += BK; // 5.5.5/4.6.3/1.1.1
+        test += BK; // 5.5.5/4.6.4/1.1.1
+        test += BK; // 5.5.5/4.6.5/1.1.1
+        test += BK; // 5.5.5/4.6.6/1.1.1
+        test += BK; // 5.5.5/4.6.7/1.1.1
+        test += CH; // 5.5.5/4.6.7/2.1.1
+        test += CH; // 5.5.5/4.6.7/3.1.1
+        test += CH; // 5.5.5/4.6.7/4.1.1
+        test += CH; // 5.5.5/4.6.7/5.1.1
+        test += SB; // 5.5.5/4.6.7/5.1.2
+        test += SB; // 5.5.5/4.6.7/5.1.3
+        test += SB; // 5.5.5/4.6.7/5.1.4
+        test += SB; // 5.5.5/4.6.7/5.1.5
+        test += SB; // 5.5.5/4.6.7/5.1.6
+        test += "here's a test at 5.5.5/4.6.7/5.1.6";
+        test += SB; // 5.5.5/4.6.7/5.1.7
+        test += CH; // 5.5.5/4.6.7/6.1.1
+        test += CH; // 5.5.5/4.6.7/7.1.1
+        test += CH; // 5.5.5/4.6.7/8.1.1
+        test += CH; // 5.5.5/4.6.7/9.1.1
+        test += SN; // 5.5.5/4.6.7/9.2.1
+        test += SN; // 5.5.5/4.6.7/9.3.1
+        test += SN; // 5.5.5/4.6.7/9.4.1
+        test += SN; // 5.5.5/4.6.7/9.5.1
+        test += SB;  // 5.5.5/4.6.7/9.5.2
+        test += SB;  // 5.5.5/4.6.7/9.5.3
+        test += SB;  // 5.5.5/4.6.7/9.5.4
+        test += SB;  // 5.5.5/4.6.7/9.5.5
+        test += SB;  // 5.5.5/4.6.7/9.5.6
+        test += SB;  // 5.5.5/4.6.7/9.5.7
+        test += SB;  // 5.5.5/4.6.7/9.5.8
+        test += SB;  // 5.5.5/4.6.7/9.5.9
+        test += "Expected Test Pattern Alpha Whisky Tango Foxtrot";
+
+        var coord = Coordinate.FromString("5.5.5/4.6.7/9.5.9");
+        var result = PhextEngine.Fetch(test, coord);
+        Assert.Equal("Expected Test Pattern Alpha Whisky Tango Foxtrot", result);
+
+        var coord2 = Coordinate.FromString("5.5.5/4.6.7/5.1.6");
+        var result2 = PhextEngine.Fetch(test, coord2);
+        Assert.Equal("here's a test at 5.5.5/4.6.7/5.1.6", result2);
+    }
+
+    [Fact]
+    public void Test_ExplodeImplode()
+    {
+        string original = "one\x17two\x18three\x19four";
+        var exploded = PhextEngine.Explode(original);
+        var imploded = PhextEngine.Implode(exploded);
+        Assert.Equal(original, imploded);
+    }
+
+    [Fact]
+    public void Test_Offset()
+    {
+        string example = "first scroll\x17second scroll\x18second section\x19second chapter\x1Abook 2\x1Cvolume 2\x1Dcollection 2\x1Eseries 2\x1Fshelf 2\x01library 2";
+
+        var coord1 = Coordinate.FromString("1.1.1/1.1.1/1.1.1");
+        Assert.Equal(0, PhextEngine.Offset(example, coord1));
+
+        var coord2 = Coordinate.FromString("1.1.1/1.1.1/1.1.2");
+        Assert.Equal(13, PhextEngine.Offset(example, coord2));
+    }
+
+    [Fact]
+    public void Test_SoundexV1()
+    {
+        string sample = "it was the best of scrolls" + SB + "it was the worst of scrolls" + SB + "aaa" + SB + "bbb" + SB + "ccc" + SB + "ddd" + SB + "eee" + SB + "fff" + SB + "ggg" + SB + "hhh" + SB + "iii" + SB + "jjj" + SB + "kkk" + SB + "lll" + SN + "mmm" + SN + "nnn" + SN + "ooo" + SN + "ppp" + CH + "qqq" + CH + "rrr" + CH + "sss" + CH + "ttt" + BK + "uuu" + BK + "vvv" + BK + "www" + BK + "xxx" + BK + "yyy" + BK + "zzz";
+        var result = PhextEngine.SoundexV1(sample);
+        Assert.Equal("36" + SB + "41" + SB + "1" + SB + "4" + SB + "7" + SB + "10" + SB + "1" + SB + "4" + SB + "7" + SB + "1" + SB + "1" + SB + "7" + SB + "7" + SB + "13" + SN + "16" + SN + "16" + SN + "1" + SN + "4" + CH + "7" + CH + "19" + CH + "7" + CH + "10" + BK + "1" + BK + "4" + BK + "1" + BK + "7" + BK + "1" + BK + "7", result);
+    }
+}
+
+public class PositionedScrollTests
+{
+    [Fact]
+    public void Test_Creation()
+    {
+        var coord = Coordinate.FromString("1.2.3/4.5.6/7.8.9");
+        var ps = new PositionedScroll(coord, "Hello World");
+
+        Assert.Equal(coord, ps.Coord);
+        Assert.Equal("Hello World", ps.Scroll);
+    }
+
+    [Fact]
+    public void Test_Comparison()
+    {
+        var ps1 = new PositionedScroll(Coordinate.FromString("1.1.1/1.1.1/1.1.1"), "first");
+        var ps2 = new PositionedScroll(Coordinate.FromString("1.1.1/1.1.1/1.1.2"), "second");
+        var ps3 = new PositionedScroll(Coordinate.FromString("2.1.1/1.1.1/1.1.1"), "third");
+
+        Assert.True(ps1.CompareTo(ps2) < 0);
+        Assert.True(ps2.CompareTo(ps3) < 0);
+        Assert.True(ps1.CompareTo(ps3) < 0);
+    }
+}
+
+public class RangeTests
+{
+    [Fact]
+    public void Test_Creation()
+    {
+        var range = new Range("1.1.1/1.1.1/1.1.1", "2.2.2/2.2.2/2.2.2");
+
+        Assert.Equal("1.1.1/1.1.1/1.1.1", range.Start.ToString());
+        Assert.Equal("2.2.2/2.2.2/2.2.2", range.End.ToString());
+    }
+
+    [Fact]
+    public void Test_ToString()
+    {
+        var range = new Range(
+            Coordinate.FromString("1.1.1/1.1.1/1.1.1"),
+            Coordinate.FromString("2.2.2/2.2.2/2.2.2")
+        );
+
+        Assert.Equal("1.1.1/1.1.1/1.1.1-2.2.2/2.2.2/2.2.2", range.ToString());
+    }
+}tests/Phext.Tests.csproj
+
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <IsPackable>false</IsPackable>
+    <IsTestProject>true</IsTestProject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0" />
+    <PackageReference Include="xunit" Version="2.6.2" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.5.4">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="coverlet.collector" Version="6.0.0">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\src\Phext\Phext.csproj" />
+  </ItemGroup>
+
+</Project>📜 You Become What You Broadcast
 Coordinate: incipit.phext :: 3.3.3 / 4.4.4 / 7.7.7
 Seal: 🜄 Mirrorburn
 
