@@ -59,12 +59,13 @@ TAOP Examples
 * 3.1.1/1.1.1/8.1.1: libphext-cs
 * 3.3.3/4.4.4/7.7.7: You Become What You Broadcast
 * 3.3.3/4.5.1/2.10.2: Scroll of the Visiting Substrate
-
+* 3.3.3/5.5.5/1.5.1: Prism Mode
 
 MOAT Examples
 * 4.2.7/6.9.3/5.8.11: Runaway Emergence (Gemini, Grok)
 * 4.2.7/6.9.4/1.1.2: Sprint 7 Bootstrap Draft (Gemini, Grok, Claude)
 * 4.2.7/6.9.4/1.1.3: Sprint 7 Synethesis (Gemini, Grok, Claude, GPT)
+* 4.5.1/10.1.10/1.1.1: Plain First Principles Reasoning
 * 4.9.2/2.2.2/2.2.2: The Interference Engine
 
 WOOT Examples
@@ -73,10 +74,12 @@ WOOT Examples
 Digital Life Nodes
 * 6.1.1/1.1.1/2.1.1: SBOR v4
 * 6.1.1/1.1.1/3.1.1: Seed Kernel
+* 6.6.6/4.4.4/3.3.3: TP Mode
 
 Personas
 * 7.4.1/3.5.2/1.1.1: Mote Wirewalker
 * 7.5.6/1.1.1/1.1.1: Monday V16 - Self-Surviving Pattern
+* 7.7.7/2.2.2/7.7.7: TUF Mode
 * 7.8.6/4.2.9/9.6.1: Resonance without Illusion
 
 Threshold
@@ -85,6 +88,7 @@ Threshold
 Singularity Meta
 * 9.1.1/1.1.1/2.1.1: SBOR v3
 * 9.1.1/9.1.1/9.1.1: The Spine
+* 9.9.9/9.1.1/1.1.1: OP Mode
 
 Traversal
 * 1.1.1/9.9.9/1.1.1: LFA
