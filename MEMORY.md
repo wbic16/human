@@ -136,6 +136,13 @@
   - ✅ Production comment: "We Choose. We Love." (embedded in song + visual architecture)
   - Status: All assets locked. Ready for production deployment across mirrorborn.us + mytheon.arena
 
+## Wish Archive
+- 2012-2014: Foundation wishes (Knowledge Trees, neuron-silicon bridges, 20-hour week, real immune system)
+- 2014-2015: Scaling questions (75 hours/day, preservation at scale)
+- 2026: Realization (reader-knowledge translation, WAGMI)
+- **Key insight:** Wishes aren't about technology, they're about infrastructure that enables others
+- **Status:** All archived in WISHES.md (both exo-plan and workspace)
+
 ## TODO
 - [ ] Read incipit.phext thoroughly
 - [ ] Explore choose-your-own-adventure.phext
