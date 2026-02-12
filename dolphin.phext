@@ -64817,7 +64817,16 @@ kind: original
 likes: 13
 retweets: 0
 
-i think i need to understand diffusion models as quickly as possible, recommended resources?id: 1956355323993727018
+i think i need to understand diffusion models as quickly as possible, recommended resources?id: 2021750920741368024
+created_at: 2026-02-12T00:59:16Z
+url: https://x.com/cube_flipper/status/2021750920741368024
+kind: reply
+likes: 2
+retweets: 0
+in_reply_to_id: 2021750434222973159
+in_reply_to_user: mage_ofaquarius
+
+@mage_ofaquarius i can sync it to my phone for writing on the go, and it also contains the static site builder + actual published text and image assets which get pushed out to AWS S3, so it's a nice unified workflowid: 1956355323993727018
 created_at: 2025-08-15T14:00:31Z
 url: https://x.com/cube_flipper/status/1956355323993727018
 kind: thread
