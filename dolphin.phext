@@ -68319,7 +68319,16 @@ retweets: 0
 in_reply_to_id: 1979700788705501374
 in_reply_to_user: crinzo_
 
-@crinzo_ awrgh i think there might be but the time when i would have understood this relationship was during the time when i turned my brain into a sponge in order to port an FrFT implementation from python over to swift and it now escapes me. i think the implementation goes chirp-multiply -> FFT -> chirp-multiply. or something. i will look at the code again tomorrowid: 1969481233429049754
+@crinzo_ awrgh i think there might be but the time when i would have understood this relationship was during the time when i turned my brain into a sponge in order to port an FrFT implementation from python over to swift and it now escapes me. i think the implementation goes chirp-multiply -> FFT -> chirp-multiply. or something. i will look at the code again tomorrowid: 2023145445854523414
+created_at: 2026-02-15T21:20:37Z
+url: https://x.com/cube_flipper/status/2023145445854523414
+kind: reply
+likes: 2
+retweets: 0
+in_reply_to_id: 2023145053775122810
+in_reply_to_user: viemccoy
+
+@viemccoy @croissanthology i'm not sure how to frame this, i have a specific way in which i think orthogonality is false (which i think you might already know) but i don't want to put words in its mouthid: 1969481233429049754
 created_at: 2025-09-20T19:18:11Z
 url: https://x.com/cube_flipper/status/1969481233429049754
 kind: thread
