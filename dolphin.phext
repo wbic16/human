@@ -71121,7 +71121,16 @@ kind: original
 likes: 23
 retweets: 1
 
-hell yeah https://x.com/RapidResponse47/status/2001730261852021102id: 1562658766234853376
+hell yeah https://x.com/RapidResponse47/status/2001730261852021102id: 2024382985244643362
+created_at: 2026-02-19T07:18:09Z
+url: https://x.com/cube_flipper/status/2024382985244643362
+kind: reply
+likes: 1
+retweets: 0
+in_reply_to_id: 2024380523632615561
+in_reply_to_user: alekoz42
+
+@alekoz42 https://x.com/cube_flipper/status/2024322648428466247 https://x.com/cube_flipper/status/2024322648428466247id: 1562658766234853376
 created_at: 2022-08-25T04:30:57Z
 url: https://x.com/cube_flipper/status/1562658766234853376
 kind: original
