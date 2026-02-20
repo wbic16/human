@@ -65087,7 +65087,19 @@ retweets: 0
 in_reply_to_id: 1871408205609505035
 in_reply_to_user: sauers_
 
-@Sauers_ @algekalipso hmm this looks familiar [photo]id: 2024923086462877797
+@Sauers_ @algekalipso hmm this looks familiar [photo]id: 2024923341308788990
+created_at: 2026-02-20T19:05:20Z
+url: https://x.com/cube_flipper/status/2024923341308788990
+kind: thread
+likes: 3
+retweets: 0
+thread_id: 2024923086462877797
+in_reply_to_id: 2024923086462877797
+in_reply_to_user: cube_flipper
+answers: 24.13.9/17.10.21/1.1.1
+thread_root: 24.13.9/17.10.21/1.1.1
+
+@johnsonmxe @louisvarge is there a "symmetry transform" intermediary step, similar to taking something like the laplace transform? (does this already exist somewhere?)id: 2024923086462877797
 created_at: 2026-02-20T19:04:19Z
 url: https://x.com/cube_flipper/status/2024923086462877797
 kind: reply
