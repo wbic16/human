@@ -6352,7 +6352,16 @@ retweets: 0
 in_reply_to_id: 1937001757537898869
 in_reply_to_user: kanizsaboundary
 
-@KanizsaBoundary yesid: 1953863913029722174
+@KanizsaBoundary yesid: 2024982133266416002
+created_at: 2026-02-20T22:58:57Z
+url: https://x.com/cube_flipper/status/2024982133266416002
+kind: reply
+likes: 0
+retweets: 0
+in_reply_to_id: 2024976412701266238
+in_reply_to_user: loserrigel
+
+@LoserRigel yesid: 1953863913029722174
 created_at: 2025-08-08T17:00:32Z
 url: https://x.com/cube_flipper/status/1953863913029722174
 kind: thread
