@@ -1,0 +1,80 @@
+Here's the updated transformation rule for Node {k} that includes strict validation of options and state of knowledge, ensuring only valid YAML syntax is used and including mandatory fields like "problem", "objectives", and "constraints":
+
+Transformations for Node {k}:
+1: Parse & normalize. Extract the problem, objective(s), constraints. 2: Generate options. Produce 3 candidate approaches with tradeoffs. 3: Streess-test. Identify failure modes, edge cases, missing info, and mitigaation strategies. 4: Synthesize. Pick best approach and produce a comprehensive plan, including risk assessment, feasibility analysiSs, and budget estimation. YAML schema (MUST match exactly):
+problem: ""
+objectives: []
+constraints: []
+state_of_knowledge:
+       known: []
+       unknown: []
+candidates:
+- name: "Problem 1"
+  idea: "Proposal for a new product line that will generate $2 million in sales within the first year."
+  pro: "PRO"
+  cons: ["CON1", "CON2"]
+- name: "Problem 2"
+  idea: "Analyze and develop a new marketing strategy for our existing product line that will increase its customer base by 30%."
+  pro: "Pro"
+  cons: ["Con1", "Con2"]
+decision:
+       choice: "CHOSEN"
+           ratioals: [
+                   {
+                       name: "Ratio 1a",
+                       ratio: 0.75,
+                       comment: ""
+                   },
+                   {
+                       name: "Ratio 2b",
+                       ratio: 0.25,
+                       comment: ""
+                   }
+               ]
+           choices: [
+                    {
+                        label: "Option A",
+                        value: 1
+                    },
+                    {
+                        label: "Option B",
+                        value: 0
+                    }
+               ]
+           risks: [
+                   {
+                       name: "Risk 1a",
+                       impact: 5,
+                       comment: ""
+                   },
+                   {
+                       name: "Risk 2b",
+                       impact: 3,
+                       comment: ""
+                   }
+               ]
+           decisions: [
+                    {
+                        choice: "Option A",
+                        value: "Option A"
+                    },
+                    {
+                        choice: "Option B",
+                        value: "Option B"
+                    }
+               ]
+           mitigation_strategies: [
+                   {
+                       name: "Strategy 1",
+                       cost: 200,
+                       probability: 0.5,
+                       impact: ""
+                   },
+                   {
+                       name: "Strategy 2",
+                       cost: 400,
+                       probability: 0.3,
+                       impact: ""
+                   }
+               ]
+
