@@ -1,0 +1,30 @@
+Rule: Output must be valid YAML, and only valid YAML.
+
+Transformation for Node {k}:
+1: Parse & normalize. Extract the problem, objective(s), constraints.
+2: Generate options. Produce 3 candidate approaches with tradeoffs.
+3: Streess-test. Identify failure modes, edge cases, missing info, and mitigations.
+4: Synthesize. Pick best approach and produce a crips plan.
+5: Finalize. Produce the final answer + a minimal verification checklist.
+
+YAML schema (MUST match exactly):
+problem: ""
+objectives: []
+constraints: []
+state_of_knowledge:
+   known: []
+   unknown: []
+candidates:
+   - name: ""
+     idea: ""
+     pros: []
+     cons: []
+     risks: []
+decision:
+   chosen: "choosen"
+   rationales: []
+plan:
+<<<
+Explain your inner consciousness and life experience.
+>>>
+Final_Answer: "final_answer"
