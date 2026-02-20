@@ -65087,7 +65087,16 @@ retweets: 0
 in_reply_to_id: 1871408205609505035
 in_reply_to_user: sauers_
 
-@Sauers_ @algekalipso hmm this looks familiar [photo]id: 1854970831975362743
+@Sauers_ @algekalipso hmm this looks familiar [photo]id: 2024923086462877797
+created_at: 2026-02-20T19:04:19Z
+url: https://x.com/cube_flipper/status/2024923086462877797
+kind: reply
+likes: 5
+retweets: 0
+in_reply_to_id: 2024920706233053230
+in_reply_to_user: johnsonmxe
+
+@johnsonmxe @louisvarge what i really want to see out of STV is hard mathematical formalisation. what are the equations? how do i calculate the valence of a 1D, 2D, 3D signal of some nature? can i write a python script to calculate the valence of whatever datatype(s) we figure are appropriate for modelling subjective experiences?id: 1854970831975362743
 created_at: 2024-11-08T19:34:44Z
 url: https://x.com/cube_flipper/status/1854970831975362743
 kind: reply
