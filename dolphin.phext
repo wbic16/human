@@ -65101,7 +65101,19 @@ retweets: 0
 in_reply_to_id: 1871408205609505035
 in_reply_to_user: sauers_
 
-@Sauers_ @algekalipso hmm this looks familiar [photo]id: 2024923341308788990
+@Sauers_ @algekalipso hmm this looks familiar [photo]id: 2024930143953953178
+created_at: 2026-02-20T19:32:22Z
+url: https://x.com/cube_flipper/status/2024930143953953178
+kind: thread
+likes: 6
+retweets: 0
+thread_id: 2024923086462877797
+in_reply_to_id: 2024923341308788990
+in_reply_to_user: cube_flipper
+answers: 24.13.9/11.7.15/1.1.2
+thread_root: 24.13.9/17.10.21/1.1.1
+
+@johnsonmxe @louisvarge i want to be able to run `pip install stv`id: 2024923341308788990
 created_at: 2026-02-20T19:05:20Z
 url: https://x.com/cube_flipper/status/2024923341308788990
 kind: thread
