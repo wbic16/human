@@ -4329,7 +4329,19 @@ in_reply_to_user: cube_flipper
 answers: 11.23.20/12.35.76/1.1.12
 thread_root: 11.23.20/12.35.76/1.1.12
 
-@sameQCU another instance [photo]id: 1573886789127122944
+@sameQCU another instance [photo]id: 2025439536122396950
+created_at: 2026-02-22T05:16:30Z
+url: https://x.com/cube_flipper/status/2025439536122396950
+kind: thread
+likes: 3
+retweets: 0
+thread_id: 2025435392431063546
+in_reply_to_id: 2025439428710375777
+in_reply_to_user: cube_flipper
+answers: 11.23.20/9.21.45/1.1.13
+thread_root: 11.23.20/12.35.76/1.1.12
+
+@sameQCU "Is this work likely to be an improvement on the state of the art in image similarity metrics?" [photo]id: 1573886789127122944
 created_at: 2022-09-25T04:07:06Z
 url: https://x.com/cube_flipper/status/1573886789127122944
 kind: reply
