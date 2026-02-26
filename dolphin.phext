@@ -74656,7 +74656,16 @@ in_reply_to_user: mayfer
 - add 1px high pass filter
 - set the layer transparency to something like 25% and the blend mode to Hard Light (i think)
 
-i'll do a replication when i'm on my computerid: 1671536694481551360
+i'll do a replication when i'm on my computerid: 2026827276458119490
+created_at: 2026-02-26T01:10:53Z
+url: https://x.com/cube_flipper/status/2026827276458119490
+kind: reply
+likes: 1
+retweets: 0
+in_reply_to_id: 2026826971301425443
+in_reply_to_user: _space_punk_
+
+@spacepunk @algekalipso it's all structure to me, some of it is more mutable and some of it is less mutable (across many orders of magnitude) and it's often impossible to tell in advance just how mutable something isid: 1671536694481551360
 created_at: 2023-06-21T15:12:58Z
 url: https://x.com/cube_flipper/status/1671536694481551360
 kind: thread
