@@ -70592,7 +70592,22 @@ retweets: 0
 in_reply_to_id: 2023145053775122810
 in_reply_to_user: viemccoy
 
-@viemccoy @croissanthology i'm not sure how to frame this, i have a specific way in which i think orthogonality is false (which i think you might already know) but i don't want to put words in its mouthid: 1969481233429049754
+@viemccoy @croissanthology i'm not sure how to frame this, i have a specific way in which i think orthogonality is false (which i think you might already know) but i don't want to put words in its mouthid: 2028059998195228759
+created_at: 2026-03-01T10:49:17Z
+url: https://x.com/cube_flipper/status/2028059998195228759
+kind: reply
+likes: 0
+retweets: 0
+in_reply_to_id: 2027945720096190939
+in_reply_to_user: maxhodak_
+
+@maxhodak_ @joshu how does your knowledge vault work?
+
+i was thinking of building a single agent system around my own notes/transcripts with three tiers:
+
+- known knowns: high level situational awareness which always goes in the context window
+- known unknowns: indexes and short summaries of each file, compact enough to fit in the context if required
+- unknown unknowns: actual files/notes/transcriptsid: 1969481233429049754
 created_at: 2025-09-20T19:18:11Z
 url: https://x.com/cube_flipper/status/1969481233429049754
 kind: thread
