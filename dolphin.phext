@@ -87742,7 +87742,19 @@ retweets: 0
 in_reply_to_id: 2028962832390181321
 in_reply_to_user: _brentbaum
 
-@_brentbaum the actual scans i have are higher quality than that random iphone photograph too. there's some transcription errors but it's not so wobbly that a language model shouldn't be able to get the gist of it and write a short summary.id: 1979984080205660174
+@_brentbaum the actual scans i have are higher quality than that random iphone photograph too. there's some transcription errors but it's not so wobbly that a language model shouldn't be able to get the gist of it and write a short summary.id: 2028982517106393363
+created_at: 2026-03-03T23:55:03Z
+url: https://x.com/cube_flipper/status/2028982517106393363
+kind: thread
+likes: 1
+retweets: 0
+thread_id: 2028982184523264245
+in_reply_to_id: 2028982184523264245
+in_reply_to_user: cube_flipper
+answers: 31.6.11/8.6.10/1.1.5
+thread_root: 31.6.11/8.6.10/1.1.5
+
+@_brentbaum the fiddly part would be ensuring everything is separated by entry, titled and dated correctly, and links are found (links are in red pen in the format '→ pg. 104' or '→ book 7 pg. 104')id: 1979984080205660174
 created_at: 2025-10-19T18:52:45Z
 url: https://x.com/cube_flipper/status/1979984080205660174
 kind: reply
