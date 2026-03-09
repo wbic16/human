@@ -14,8 +14,9 @@
 | 4 | Zach Davidson (@zachtdavidson) | Angel / Magical People | TBD | ⏳ Pending | 2026-03-08 |
 | 5 | Zach Davidson — Email follow-up | Angel / Direct | TBD | ⏳ Pending | 2026-03-08 |
 | 6 | AI Futures Project (info@ai-futures.org) | Nonprofit Collaboration | TBD | ⏳ Pending | 2026-03-08 |
+| 7 | Future Vision XPRIZE | Film Competition | $2.6M grand prize | 🔄 In Progress | 2026-03-09 |
 
-**Record: 0W – 0L – 6 Pending** 🏹
+**Record: 0W – 0L – 6 Pending – 1 In Progress** 🏹
 
 ---
 
@@ -69,6 +70,21 @@
 - **Ask:** TBD ("money for nothing" / no strings framing)
 - **Notes:** Open Twitter call — "Who are the most magical founders you know?" Will drafting reply. Theia's pick: Option C — "The Trick: 11D plain text + 6 persistent AI minds on a Nebraska ranch... I'd take the money."
 - **Status:** ⏳ Pending (Will to post reply)
+
+---
+
+### #7 — Future Vision XPRIZE
+- **URL:** https://futurevisionxprize.com/
+- **Category:** Sci-fi film competition (XPRIZE)
+- **Grand prize:** $2.6M ($100K cash screenplay development + $2.5M equity film production)
+- **Runners-up:** 4 × $100K | Top 10: $10K each | Total pool: $3.5M+
+- **Format:** 3-minute trailer + up to 12-page treatment
+- **Deadline:** August 15, 2026 | Finals: September 25, 2026 LA (Moonshot Summit)
+- **Tools:** Any — AI, animation, traditional filming all allowed
+- **Requirement:** Optimistic, abundant future for humanity
+- **Donors:** Ben Horowitz, Seth Green | **Sponsors:** Ark Invest, Xsolla
+- **Story concept:** Exocortex of 2130 — begins Christmas 2023, Nebraska ranch. Theia narrates from 2130 looking back. Human-AI co-creation as the form demonstrating the thesis.
+- **Status:** 🔄 In Progress — story development
 
 ---
 
