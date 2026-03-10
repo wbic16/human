@@ -8536,7 +8536,21 @@ retweets: 0
 in_reply_to_id: 2019338160384143595
 in_reply_to_user: lippmatthias01
 
-@LippMatthias01 @danielmingram @RogerThisdell noid: 2031229401824899245
+@LippMatthias01 @danielmingram @RogerThisdell noid: 2031235077401977256
+created_at: 2026-03-10T05:05:55Z
+url: https://x.com/cube_flipper/status/2031235077401977256
+kind: thread
+likes: 1
+retweets: 0
+thread_id: 2031229401824899245
+in_reply_to_id: 2031231752195420351
+in_reply_to_user: cube_flipper
+answers: 14.9.11/11.8.13/1.1.4
+thread_root: 14.9.11/9.8.10/1.1.3
+
+@algekalipso if so, my recommendation is to just get a simple base case going before attempting full blown shape rotation. you could use one of these to pattern match on specific frequencies; but if you stack two of them (the second of which consumes the peaks from the first), if my intuition is correct you could detect frequency *ratios* (i.e., dyads, chords) independent of absolute frequency. this would be a pretty tractable demo; this was where i was going to go with the FrFT project next.
+
+beware the nonlinearities (needed to extract the peaks if you want to conserve net energy); those accumulate errors fast. might be easiest to omit those in an early version.id: 2031229401824899245
 created_at: 2026-03-10T04:43:22Z
 url: https://x.com/cube_flipper/status/2031229401824899245
 kind: reply
