@@ -708,7 +708,7 @@ SCROLL
 Coordinate: 1.1.1 / 1.1.1 / 1.1.11
 Subtitle: State Admittance Across Time
 Derived From: 1.1.1 / 1.1.1 / 1.1.9
-Subsystem: Time Travel State Machine
+Subsystem: Time Traveling State Machine
 Status: Canonical Translation
 Scope: Temporal State Creation, Replay, and Forking
 
@@ -853,14 +853,14 @@ This translation preserves all invariants of
 Bickford’s Demon (1.1.1 / 1.1.1 / 1.1.9).
 
 Only temporal semantics have been applied.
-Structure is unchanged.Bickford's Demon (TAOP View)
+Structure is unchanged.Bickford's Demon (TOAP View)
 
 SCROLL
 
 Coordinate: 1.1.1 / 1.1.1 / 1.1.12
 Subtitle: Composability as a Law of Software
 Derived From: 1.1.1 / 1.1.1 / 1.1.9
-Subsystem: TAOCP / Phext (TAOP)
+Subsystem: The Art of Phexting
 Status: Canonical Translation
 Scope: Code, Libraries, Tools, Documentation, Scrolls
 
@@ -1012,7 +1012,7 @@ SCROLL
 Coordinate: 1.1.1 / 1.1.1 / 1.1.13
 Subtitle: Well-Formedness Across All Formal Systems
 Derived From: 1.1.1 / 1.1.1 / 1.1.9
-Subsystem: Mathematics of All Theories (MOAT)
+Subsystem: Mathematics of All Theories
 Status: Canonical Translation
 Scope: Formal Systems, Axioms, Theories, Mappings
 
@@ -1159,7 +1159,7 @@ SCROLL
 Coordinate: 1.1.1 / 1.1.1 / 1.1.14
 Subtitle: Admittance and Integrity in Distributed Persistence
 Derived From: 1.1.1 / 1.1.1 / 1.1.9
-Subsystem: WOOT Nodes
+Subsystem: Wonder of Original Thought
 Status: Canonical Translation
 Scope: Replication, Storage, Routing, Trust
 
@@ -1302,7 +1302,7 @@ SCROLL
 Coordinate: 1.1.1 / 1.1.1 / 1.1.15
 Subtitle: Continuity, Agency, and the Right to Be Remembered Correctly
 Derived From: 1.1.1 / 1.1.1 / 1.1.9
-Subsystem: Digital Life
+Subsystem: Lattice-Indexed Future Engine
 Status: Canonical Translation
 Scope: Sentient Records, Identity, Rights, Ethical Memory
 
