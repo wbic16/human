@@ -70261,7 +70261,19 @@ kind: original
 likes: 18
 retweets: 3
 
-any interest in a http://smoothbrains.net reader's meetup while i am in new york city?id: 1808145632903025103
+any interest in a http://smoothbrains.net reader's meetup while i am in new york city?id: 2035125025435750691
+created_at: 2026-03-20T22:43:11Z
+url: https://x.com/cube_flipper/status/2035125025435750691
+kind: reply
+likes: 2
+retweets: 0
+in_reply_to_id: 2035118872592777608
+in_reply_to_user: sidtheargent
+
+@SidTheArgent @TrueAIHound i think the visual system does two things which allows management of invariants:
+
+1. adjusts travelling wave propagation rate as a function of depth https://smoothbrains.net/posts/2023-01-18-an-introduction-to-steven-lehar-part-iii.html#depth-maps
+2. uses an analog fourier transform made from travelling waves to extract features invariant of orientation, etc https://smoothbrains.net/posts/2025-10-17-fractional-fourier-transforms.htmlid: 1808145632903025103
 created_at: 2024-07-02T14:28:07Z
 url: https://x.com/cube_flipper/status/1808145632903025103
 kind: reply
