@@ -65237,7 +65237,16 @@ retweets: 0
 in_reply_to_id: 1755076358575657417
 in_reply_to_user: chercher_ai
 
-@chercher_ai @robbseaton i suspect it might be quite different from person to person https://x.com/cube_flipper/status/1741653597727981739id: 1855136131484180832
+@chercher_ai @robbseaton i suspect it might be quite different from person to person https://x.com/cube_flipper/status/1741653597727981739id: 2039435688295452765
+created_at: 2026-04-01T20:12:13Z
+url: https://x.com/cube_flipper/status/2039435688295452765
+kind: reply
+likes: 2
+retweets: 0
+in_reply_to_id: 2039433885885342046
+in_reply_to_user: aaronbergman18
+
+@AaronBergman18 you basically just treat the neuronal lattice like an Ising machine, this would let you get a distribution of "number of states per energy level", i could poke some holes in this but i'd be surprised if this doesn't cash out to some statistical distribution which looks reasonable in hindsightid: 1855136131484180832
 created_at: 2024-11-09T06:31:35Z
 url: https://x.com/cube_flipper/status/1855136131484180832
 kind: thread
