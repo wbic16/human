@@ -35693,7 +35693,16 @@ in_reply_to_user: cube_flipper
 answers: 20.7.10/8.7.10/1.1.41
 thread_root: 20.7.10/9.7.11/1.1.39
 
-i just think it's hotid: 1939699457861337192
+i just think it's hotid: 2042080468217294973
+created_at: 2026-04-09T03:21:38Z
+url: https://x.com/cube_flipper/status/2042080468217294973
+kind: reply
+likes: 1
+retweets: 0
+in_reply_to_id: 2042079670343233713
+in_reply_to_user: jessi_cata
+
+@jessi_cata @architectonyx when you say "functional", do you not tend to be talking about low-level/fine-grained behaviour (such as that described by physics) as opposed to more high-level/coarse-grained dynamics?id: 1939699457861337192
 created_at: 2025-06-30T14:56:03Z
 url: https://x.com/cube_flipper/status/1939699457861337192
 kind: thread
