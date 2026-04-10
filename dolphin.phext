@@ -5044,7 +5044,19 @@ retweets: 0
 in_reply_to_id: 2042496305948463513
 in_reply_to_user: anthrupad
 
-@anthrupad hells yesid: 1857545905156796646
+@anthrupad hells yesid: 2042500229434601909
+created_at: 2026-04-10T07:09:37Z
+url: https://x.com/cube_flipper/status/2042500229434601909
+kind: thread
+likes: 1
+retweets: 0
+thread_id: 2042500089147769178
+in_reply_to_id: 2042500089147769178
+in_reply_to_user: cube_flipper
+answers: 12.5.7/8.8.9/1.1.6
+thread_root: 12.5.7/8.8.9/1.1.6
+
+@anthrupad venkat's the greatestid: 1857545905156796646
 created_at: 2024-11-15T22:07:09Z
 url: https://x.com/cube_flipper/status/1857545905156796646
 kind: reply
