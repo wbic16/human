@@ -75697,7 +75697,16 @@ retweets: 0
 in_reply_to_id: 2028256931572592658
 in_reply_to_user: dr1337
 
-@dr1337 @CorticalLabs agree with you on not being able to prove a particular theory of consciousness, but i do also believe that there are empirical studies we could perform which could asymptotically increase our confidence in a specific theory (but there's no getting from 99% to 100%)id: 2028258244544848029
+@dr1337 @CorticalLabs agree with you on not being able to prove a particular theory of consciousness, but i do also believe that there are empirical studies we could perform which could asymptotically increase our confidence in a specific theory (but there's no getting from 99% to 100%)id: 2044524651951558871
+created_at: 2026-04-15T21:13:57Z
+url: https://x.com/cube_flipper/status/2044524651951558871
+kind: reply
+likes: 1
+retweets: 0
+in_reply_to_id: 2044524177198354771
+in_reply_to_user: gnawbone_
+
+@gnawbone_ @wolframs91 i recognise this, i am not anthropic and i am not defending any specific side, but this is the tradeoff they are forced to consider right now, and there's a big free variable here which needs to be estimated in order to emulate how they might be weighting this tradeoffid: 2028258244544848029
 created_at: 2026-03-01T23:57:03Z
 url: https://x.com/cube_flipper/status/2028258244544848029
 kind: thread
