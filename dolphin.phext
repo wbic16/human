@@ -83452,7 +83452,26 @@ retweets: 0
 in_reply_to_id: 1814738115661345173
 in_reply_to_user: softyoda
 
-@softyoda same. in my ideal world this was how urbit would have turned out but the impression i got is that yarvin is not a ui designer and urbit was never designed to be tightly coupled to a user interface. instead they just serve websites with it.id: 1717460783196700838
+@softyoda same. in my ideal world this was how urbit would have turned out but the impression i got is that yarvin is not a ui designer and urbit was never designed to be tightly coupled to a user interface. instead they just serve websites with it.id: 2045309102386225559
+created_at: 2026-04-18T01:11:04Z
+url: https://x.com/cube_flipper/status/2045309102386225559
+kind: reply
+likes: 3
+retweets: 0
+in_reply_to_id: 2045298489136189449
+in_reply_to_user: qiaochuyuan
+
+@QiaochuYuan the difference between plain functionalism and computational functionalism is that functionalism only cares about input/output whereas computational functionalism claims the intermediary computational states are important and tries to map those onto experience. the stuff in that screenshot might seem like irrelevant garbage because you have an implicit functionalist position. however, other people are very interested in figuring out how subjective experience works, because we believe that there are important moral quandaries which hinge upon this.
+
+(for further reading, functionalism/computationalism/physicalism correspond nicely to something called "marr's three levels of analysis")
+
+let's say i'm going for a walk or something, in my mind there's a pattern of activations in my somatosensory cortex corresponding to my body map. at the same time, i'm actually experiencing this – like there's a 3D model of my body that i'm feeling. if the shapes in subjective experience share the same structure as the shapes in the somatosensory cortex, then there's no need for an opinionated interpreter of some kind – the shapes can just experience themselves. map = territory.
+
+maybe a robot comes along with me on the walk. perhaps it has something like an internal representation of a body map also, but if we look at the way this is implemented, there might be transistors in RAM storing floating point numbers, which store the body map...  
+
+your stereotypical (maybe someone will try to tell me this is a strawman, but this is what i how i see people talking) computational functionalist would like to be able to point at a pile of transistors or floating point numbers and declare 'body map' or 'claude' or suchlike. however, getting from these states to a subjective experience like my 3D body map (maybe very different, but with a similar amount of structural cohesion) in a principled manner requires importing a lot of opinionated information (including things like floating point number standards!) about how to implement that mapping.
+
+where does this mapping live? outside of physical reality somewhere? or solely in the eye of some external opinionated observer? this is the 'mapmaking'/'alphabetisation' step which the authors are railing against.id: 1717460783196700838
 created_at: 2023-10-26T08:38:54Z
 url: https://x.com/cube_flipper/status/1717460783196700838
 kind: reply
