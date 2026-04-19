@@ -52215,7 +52215,25 @@ thread_root: 22.6.10/7.6.10/1.1.19
 
 @webmasterdave @QualiaNerd @rgblong i will define "intuitive" valence as the valence a typical empathetic human observer would imagine a system possessing. so we'd evaluate a human and an LLM stating "i am happy and content" similarly.
 
-to define a function which can consume a clearly-bounded region of the physical fields and output something similar to intuitive valence – well, my expectation (which is far from being demonstrated) is that this would be simple (perhaps a handful of differential equations?) in the case of biological organisms, but in the case of the GPU hosting the LLM, this function would require a complete model of computation (including, for instance, the IEEE 754 floating point standard) in order to make this evaluationid: 1967197135751008614
+to define a function which can consume a clearly-bounded region of the physical fields and output something similar to intuitive valence – well, my expectation (which is far from being demonstrated) is that this would be simple (perhaps a handful of differential equations?) in the case of biological organisms, but in the case of the GPU hosting the LLM, this function would require a complete model of computation (including, for instance, the IEEE 754 floating point standard) in order to make this evaluationid: 2046003369224044560
+created_at: 2026-04-19T23:09:50Z
+url: https://x.com/cube_flipper/status/2046003369224044560
+kind: thread
+likes: 4
+retweets: 0
+thread_id: 2045998715673203003
+in_reply_to_id: 2046001352992772308
+in_reply_to_user: cube_flipper
+answers: 22.6.10/7.6.10/1.1.63
+thread_root: 22.6.10/7.6.10/1.1.61
+
+@QiaochuYuan a functionalist would say it doesn't matter how the intermediary representations are implemented, only inputs and outputs can be used to distinguish one experience from another
+
+at my end i'm a physicalist, i would say the substrate matters, and personally i think you need actual spatial structures (on the somatosensory cortex or somewhere) to implement a phenomenal body map (see quote tweet)
+
+i believe that a computationalist would generally claim that the intermediary representations matter and this is what corresponds to subjective experience. i am not sure how much they would say the representation matters, because i have never seen this come up in discussion before, but you might perhaps claim that for instance the body map would feel different depending on what data structure is used to implement it? hmm. (i am trying to figure out if a computationalist might think it's possible to implement emotions purely functionally)
+
+a *pancomputationalist* on the other hand would bite the bullet and say that there's something that it's like to be for every possible computation. no p-zombiesid: 1967197135751008614
 created_at: 2025-09-14T12:02:00Z
 url: https://x.com/cube_flipper/status/1967197135751008614
 kind: thread
