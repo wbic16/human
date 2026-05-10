@@ -80286,7 +80286,21 @@ retweets: 0
 in_reply_to_id: 1866196796612968639
 in_reply_to_user: arithmoquine
 
-@arithmoquine does it continue to happen if you look at the same image againid: 1892647113445499294
+@arithmoquine does it continue to happen if you look at the same image againid: 2053478278191563162
+created_at: 2026-05-10T14:12:27Z
+url: https://x.com/cube_flipper/status/2053478278191563162
+kind: thread
+likes: 0
+retweets: 0
+thread_id: 2053473536115659032
+in_reply_to_id: 2053473536115659032
+in_reply_to_user: cube_flipper
+answers: 25.7.9/8.7.11/1.1.56
+thread_root: 25.7.9/8.7.11/1.1.56
+
+@ArthurB @parafactual that when you consider what it's like to be something the only principled way to do that is at the hardware level. digital software is ultimately instantiated physically, and the shape of the physical structure for the language model's software is going to be very different from what we might fancifully imagine the language model to be experiencing
+
+but we *could* build hardware which doesn't have this problemid: 1892647113445499294
 created_at: 2025-02-20T18:46:50Z
 url: https://x.com/cube_flipper/status/1892647113445499294
 kind: reply
