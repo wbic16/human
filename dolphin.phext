@@ -7555,7 +7555,16 @@ retweets: 0
 in_reply_to_id: 2053282735620288894
 in_reply_to_user: tautologer
 
-@tautologer yesid: 1953863913029722174
+@tautologer yesid: 2053508100729032838
+created_at: 2026-05-10T16:10:58Z
+url: https://x.com/cube_flipper/status/2053508100729032838
+kind: reply
+likes: 8
+retweets: 0
+in_reply_to_id: 2053504498404897074
+in_reply_to_user: seventhmeal
+
+@seventhmeal yes.id: 1953863913029722174
 created_at: 2025-08-08T17:00:32Z
 url: https://x.com/cube_flipper/status/1953863913029722174
 kind: thread
