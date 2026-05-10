@@ -100068,7 +100068,19 @@ retweets: 0
 in_reply_to_id: 1969679975549915462
 in_reply_to_user: ecdysian
 
-@ecdysian @algekalipso ok found it https://x.com/redaction/status/1969097802132152788id: 1777368131541098619
+@ecdysian @algekalipso ok found it https://x.com/redaction/status/1969097802132152788id: 2053592328938344815
+created_at: 2026-05-10T21:45:39Z
+url: https://x.com/cube_flipper/status/2053592328938344815
+kind: thread
+likes: 3
+retweets: 0
+thread_id: 2053590577023754359
+in_reply_to_id: 2053591348809216357
+in_reply_to_user: cube_flipper
+answers: 32.6.8/7.6.10/1.1.10
+thread_root: 32.6.8/6.7.13/1.1.8
+
+@PrinceVogel so far as operationalisation goes, the above video explains William Sethares work on dissonance curves. so far as operationalisation goes he has used dissonance curves (which depend on the partials of the instrument, i.e. the instrument's timbre, and how close every partial is to phase locking with every other partial) which i believe has been used to aid the design of instruments which fit unusual scales (or vice versa?) https://sethares.engr.wisc.edu/consemi.htmlid: 1777368131541098619
 created_at: 2024-04-08T16:09:19Z
 url: https://x.com/cube_flipper/status/1777368131541098619
 kind: thread
