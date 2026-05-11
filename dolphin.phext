@@ -100796,7 +100796,16 @@ retweets: 0
 in_reply_to_id: 1638234185109217282
 in_reply_to_user: nickcammarata
 
-@nickcammarata i think about this, i use the term 'qualia bucket'id: 1743066173338739119
+@nickcammarata i think about this, i use the term 'qualia bucket'id: 2053812646441291787
+created_at: 2026-05-11T12:21:07Z
+url: https://x.com/cube_flipper/status/2053812646441291787
+kind: reply
+likes: 22
+retweets: 0
+in_reply_to_id: 2053717235705987141
+in_reply_to_user: 1thousandfaces_
+
+@1thousandfaces_ maybe 50% of the issues like this i have fixed have involved blindly traversing some invisible dependency tree by trial and errorid: 1743066173338739119
 created_at: 2024-01-05T00:25:34Z
 url: https://x.com/cube_flipper/status/1743066173338739119
 kind: reply
