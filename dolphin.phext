@@ -81905,7 +81905,16 @@ retweets: 0
 in_reply_to_id: 2038544344366698891
 in_reply_to_user: anthrupad
 
-@anthrupad this has been load-bearing for us for a long time this is the math by which the boundary problem might get solved https://pubmed.ncbi.nlm.nih.gov/37600559/id: 2031415003665019178
+@anthrupad this has been load-bearing for us for a long time this is the math by which the boundary problem might get solved https://pubmed.ncbi.nlm.nih.gov/37600559/id: 2054312456701317351
+created_at: 2026-05-12T21:27:11Z
+url: https://x.com/cube_flipper/status/2054312456701317351
+kind: reply
+likes: 1
+retweets: 0
+in_reply_to_id: 2054311719087100013
+in_reply_to_user: tr_babb
+
+@tr_babb @Lasermazer okay so; back to this. if we accept all possible coarse-grainings in parallel... picking a threshold is just the simplest algorithm i could think of by which a system could be coarse-grained. if we are being principled, there are many other algorithms we should also consider, do we consider them all in parallel too?id: 2031415003665019178
 created_at: 2026-03-10T17:00:53Z
 url: https://x.com/cube_flipper/status/2031415003665019178
 kind: reply
