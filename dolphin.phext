@@ -59062,7 +59062,16 @@ retweets: 0
 in_reply_to_id: 1926826894663573886
 in_reply_to_user: eneaszwrites
 
-@EneaszWrites well if the magic is physical then it's not "magic", right?id: 1638672512291840002
+@EneaszWrites well if the magic is physical then it's not "magic", right?id: 2054295990832664703
+created_at: 2026-05-12T20:21:45Z
+url: https://x.com/cube_flipper/status/2054295990832664703
+kind: reply
+likes: 1
+retweets: 0
+in_reply_to_id: 2054295665073631710
+in_reply_to_user: lasermazer
+
+@Lasermazer @algekalipso yes, but if you start with this you still have something which behaves exactly like our current physics, and that's what you have to abstract overid: 1638672512291840002
 created_at: 2023-03-22T22:42:26Z
 url: https://x.com/cube_flipper/status/1638672512291840002
 kind: reply
