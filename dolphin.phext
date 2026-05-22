@@ -67165,7 +67165,25 @@ retweets: 0
 in_reply_to_id: 1832847239280218565
 in_reply_to_user: None
 
-@yourthefool this is not a bad idea!!id: 1919352419076461054
+@yourthefool this is not a bad idea!!id: 2057845553292259374
+created_at: 2026-05-22T15:26:27Z
+url: https://x.com/cube_flipper/status/2057845553292259374
+kind: thread
+likes: 19
+retweets: 0
+thread_id: 2057845551014850632
+in_reply_to_id: 2057845551014850632
+in_reply_to_user: cube_flipper
+answers: 23.7.11/9.6.11/1.1.28
+thread_root: 23.7.11/9.6.11/1.1.28
+
+this project was very much inspired by his "Quantum computing: the first 540 million years" piece:
+
+> Unitary world-simulation enables organic robots effortlessly to solve the computational challenges of navigating a hostile environment that would leave the fastest classical supercomputer grinding away until Doomsday. By contrast, the capacity for serial linguistic thought and formal logico-mathematical reasoning is a late evolutionary novelty executed by a slow, brittle virtual machine running on top of its quantum parent.
+
+(i wanted to build such a virtual machine)
+
+https://www.hedweb.com/philsoph/quantum-computer.htmlid: 1919352419076461054
 created_at: 2025-05-05T11:24:11Z
 url: https://x.com/cube_flipper/status/1919352419076461054
 kind: thread
