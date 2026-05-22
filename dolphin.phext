@@ -35311,7 +35311,440 @@ Dose-dependent phenomenology:
 • 750mg+: "wavy and stimmy," can't sleep, everything is interesting, risk of feeling too scattered
 Tolerance note: The magic reportedly fades fast with daily use. Once-a-week users preserve the phenomenal effects; daily users end up needing it just to feel baseline.
 
-Pharmacologically it's a voltage-gated calcium channel α2δ ligand that reduces glutamate/substance P/dopamine release — so the fact that users describe it as stimulating and pro-social rather than sedating is interesting. The phenomenal profile reads more like "optimized baseline consciousness" than "intoxication."id: 2031412870286815547
+Pharmacologically it's a voltage-gated calcium channel α2δ ligand that reduces glutamate/substance P/dopamine release — so the fact that users describe it as stimulating and pro-social rather than sedating is interesting. The phenomenal profile reads more like "optimized baseline consciousness" than "intoxication."id: 2057862552613433442
+created_at: 2026-05-22T16:34:00Z
+url: https://x.com/cube_flipper/status/2057862552613433442
+kind: thread
+likes: 2
+retweets: 0
+thread_id: 2057861747650998297
+in_reply_to_id: 2057861751283265973
+in_reply_to_user: cube_flipper
+answers: 20.6.9/7.6.9/1.1.85
+thread_root: 20.6.9/7.6.10/1.1.83
+
+@adic_9 seems like your kind of thing (if i haven't shilled it before), could be used for a wide variety of drug research. anyway, here's an even more detailed report into the effects of pregabalin withdrawal (as a non-cherrypicked demonstration, i haven't read it yet)
+---
+# Pregabalin Withdrawal: A Comprehensive Report from Reddit User Reports
+
+> **Data source:** 753 unique Reddit posts and comments harvested via Scry interest-frontier accelerator across r/pregabalin, r/gabagoodness, r/gabapentin, r/Nootropics, and related subreddits. All data is user-generated and anecdotal. **This is not medical advice.**
+>
+> *Compiled May 2026*
+
+---
+
+## 1. Overview
+
+### What Is Pregabalin?
+
+Pregabalin (brand name **Lyrica**) is a gabapentinoid medication that binds to the α2δ subunit of voltage-dependent calcium channels (VDCCs), reducing the release of excitatory neurotransmitters including glutamate, substance P, and dopamine. It is prescribed for:
+
+- **Neuropathic pain** (diabetic neuropathy, post-herpetic neuralgia)
+- **Fibromyalgia**
+- **Generalized anxiety disorder** (approved in Europe, off-label in US)
+- **Epilepsy** (adjunctive therapy for partial seizures)
+- **Restless leg syndrome**
+
+Pregabalin is structurally related to gabapentin but has higher bioavailability (~90% vs. gabapentin's dose-dependent 33–66%) and more predictable pharmacokinetics.
+
+### Why Withdrawal Happens
+
+Chronic pregabalin use leads to **neuroadaptation**: the brain compensates for the drug's inhibition of calcium channel activity and downstream neurotransmitter release by upregulating excitatory pathways. When the drug is removed, this compensatory excitation is unmasked, producing a hyperexcitable state — the withdrawal syndrome.
+
+As one r/gabagoodness user explained the pharmacology:
+
+> *"Gabapentinoids act on the α2δ site to lower the release of many neurotransmitters including Glutamate, Substance P, and Dopamine. [...] Most of the effects of Gabapentinoids are mediated by the high voltage activated N and P/Q-type calcium channels."*
+> — r/gabagoodness, May 2022
+
+The withdrawal mechanism is functionally similar to benzodiazepine withdrawal (both ultimately affect GABAergic tone and CNS excitability), a parallel noted by both users and clinicians:
+
+> *"He basically suggested that I am likely very sensitive to pregabalin due to my previous use with benzos. He also suggested I roughly follow the Ashton Manual (typically for benzos), as all these drugs are gaba acting so should be approached in a similar sort of way."*
+> — r/pregabalin, Feb 2022 (user reporting advice from an addiction psychiatrist)
+
+---
+
+## 2. Prevalence
+
+### How Common Is Withdrawal?
+
+Withdrawal from pregabalin is a polarizing topic. The data reveals a clear split between:
+
+1. **Those who experience significant withdrawal** — the majority of the corpus, since people who taper uneventfully rarely post about it
+2. **Those who argue it's overblown** — a vocal minority who point out selection bias in online communities
+
+A well-upvoted comment from a self-described research scientist on r/pregabalin captures the nuance:
+
+> *"For the majority of people this medication is not addictive. You might develop a dependence which is completely different than addiction. Most people tolerate the medication with little side effects. [...] There is a minority of people who experience unpleasant side effects and a minority who have an extremely difficult time stopping this medication because of withdrawal symptoms."*
+> — r/pregabalin, Jun 2024 (↑18)
+
+Another highly-upvoted counterpoint:
+
+> *"If I've said this once I've said it 1000 times. You need to stay away from social media horror stories. There's like 6 million people that have been prescribed Lyrica and the only ones we hear about are the ones that have issues. This community is a teeny tiny drop in the pond."*
+> — r/pregabalin, Dec 2023 (↑16)
+
+### Subreddit Breakdown
+
+From 753 unique documents discussing pregabalin/gabapentinoid withdrawal:
+
+| Subreddit | Documents | % of Corpus | Primary Focus |
+|---|---|---|---|
+| r/gabagoodness | 322 | 42.8% | Recreational use, poly-substance, withdrawal help |
+| r/pregabalin | 231 | 30.7% | Prescribed use, anxiety, tapering support |
+| r/gabapentin | 132 | 17.5% | Gabapentin (cross-tolerant), tapering strategies |
+| r/Nootropics | 56 | 7.4% | Cognitive effects, alternatives, pharmacology |
+| Other | 12 | 1.6% | r/Psychonaut, r/LucidDreaming, etc. |
+
+The split between r/gabagoodness (recreational/abuse context) and r/pregabalin (therapeutic context) is notable. Withdrawal reports from r/gabagoodness tend to involve higher doses (600–1500mg+) and faster timelines, while r/pregabalin reports more often involve standard prescribed doses (150–600mg) and longer durations of use.
+
+### Key Prevalence Signals
+
+- **117 documents** (16% of corpus) mention **cold turkey** discontinuation
+- **464 documents** (62% of corpus) discuss **tapering** in some form
+- The ratio of posts (445) to comments (308) suggests withdrawal is a primary reason people create new threads, not just respond to existing ones
+
+---
+
+## 3. Symptoms
+
+Symptoms were extracted by keyword matching across 730 documents with substantial text content. The following table shows how frequently each symptom category was mentioned.
+
+### Physical Symptoms
+
+| Symptom | Mentions | % of Docs | Notes |
+|---|---|---|---|
+| **Insomnia / sleep disruption** | 173 | 23.7% | The most consistently reported physical symptom. Many describe it as the most debilitating aspect. |
+| **Sweating / temperature dysregulation** | 41 | 5.6% | "Cold sweats" especially prominent. Multiple users describe profuse sweating at work/in public. |
+| **Nausea / vomiting** | 37 | 5.1% | Often in acute phase (first 48–72h) |
+| **Headache / migraine** | 45 | 6.2% | Can persist into subacute phase |
+| **Tremor / shaking** | 31 | 4.2% | Often accompanies acute withdrawal |
+| **Heart palpitations / tachycardia** | 19 | 2.6% | Frightening for users; sometimes triggers ER visits |
+| **Dizziness / vertigo** | 22 | 3.0% | |
+| **Fatigue / exhaustion** | 21 | 2.9% | Paradoxical given insomnia — "tired but wired" |
+| **Loss of appetite** | 21 | 2.9% | |
+| **Diarrhea** | 16 | 2.2% | |
+| **Muscle pain / body aches** | 9 | 1.2% | |
+| **Flu-like symptoms** | 4 | 0.5% | Described as "the flu without being sick" |
+
+Notable quote on sweating:
+
+> *"The worst part for me is how my body cannot regulate its temperature. It's not the anxiety, it's not the insomnia, it's the cold sweats. I will sweat profusely for no reason and then be absolutely freezing from my body being wet. [...] one day at work I was sweating so bad everyone was asking what was wrong with me."*
+> — r/gabagoodness, Jun 2025 (↑16)
+
+### Psychological Symptoms
+
+| Symptom | Mentions | % of Docs | Notes |
+|---|---|---|---|
+| **Anxiety / panic attacks** | 373 | 51.1% | **By far the most reported symptom.** Over half of all documents mention anxiety. Rebound anxiety is often described as far worse than the original anxiety the drug was prescribed for. |
+| **Depression** | 125 | 17.1% | Often described as "the worst depression of my life." Includes suicidal ideation in some cases. |
+| **Irritability / agitation** | 44 | 6.0% | |
+| **Brain fog / cognitive impairment** | 48 | 6.6% | Word-finding difficulties, confusion, inability to concentrate |
+| **Depersonalization / derealization** | 20 | 2.7% | Dissociative symptoms; feeling "unreal" |
+| **Mood swings / emotional lability** | 17 | 2.3% | Uncontrollable crying reported by multiple users |
+| **Anhedonia** | 6 | 0.8% | Inability to feel pleasure; linked to dopamine pathway disruption |
+
+The dominance of anxiety in the symptom profile is striking:
+
+> *"I was stuck in 'fight or flight' mode 24/7. It was terrible."*
+> — r/pregabalin, Jan 2021 (↑11)
+
+> *"Panic attacks and being unable to sleep are my worst withdrawal symptoms."*
+> — r/gabagoodness, Jan 2022 (↑23)
+
+### Neurological Symptoms
+
+| Symptom | Mentions | % of Docs | Notes |
+|---|---|---|---|
+| **Seizure risk** | 90 | 12.3% | Frequently mentioned as a warning; actual seizure reports are less common but present. This is the primary safety concern with abrupt discontinuation. |
+| **Restless legs (RLS)** | 30 | 4.1% | Particularly distressing at night, compounding insomnia |
+| **Akathisia / inner restlessness** | 27 | 3.7% | "Can't sit still" — distinct from restless legs |
+| **Paresthesia / tingling / numbness** | 12 | 1.6% | "Pins and needles," especially in extremities |
+| **Visual disturbances** | 14 | 1.9% | Blurry vision, light sensitivity |
+| **Tinnitus** | 6 | 0.8% | Ringing in ears |
+| **Rebound pain** | 5 | 0.7% | For those prescribed for pain conditions |
+
+On seizure risk:
+
+> *"You can't just stop taking gabapentin. [...] it needs to be tapered off generally around 10% every week to 10 days. Stopping CT would suck and there's a risk of seizures so make sure you taper."*
+> — r/gabagoodness, Jan 2024 (↑6)
+
+A user describing the full symptom constellation:
+
+> *"I'm sick of being hooked on pregabalin again. [...] awful withdrawals, weight gain, depression, anxiety, sweats, nightmares, RLS, feet tingles, migraines, no motivation or energy — these are some symptoms when going cold turkey I've felt."*
+> — r/gabagoodness, Aug 2021 (↑42)
+
+---
+
+## 4. Timeline
+
+Based on user reports across the corpus, pregabalin withdrawal follows a roughly consistent temporal pattern, though individual variation is enormous depending on dose, duration, and speed of taper.
+
+### Onset (0–48 hours)
+
+- Symptoms typically begin **12–48 hours** after the last dose or a significant dose reduction
+- Pregabalin's half-life is ~6 hours, but withdrawal onset seems delayed relative to clearance
+- One user noted: *"I read online that immediate withdrawals wear off within 1–2 days of stopping it but residual symptoms may last several weeks"* — r/pregabalin, Apr 2020
+- Early symptoms: anxiety, insomnia, sweating, flu-like malaise
+
+### Acute Phase (Days 2–14)
+
+- Symptoms generally **peak between days 3–7** based on multiple user reports
+- A user on 600mg daily for 3 months reported: *"For the first month after that 5 week taper I genuinely thought I had given myself brain damage"* — r/pregabalin, Jan 2021 (↑11)
+- A gabapentin user noted each dose cut produced: *"8–10 days of crippling body aches, insomnia and anxiety"* — r/gabapentin, Aug 2024 (↑22)
+- One user tracking recovery: *"12 days off lyrica — I'm feeling back to normal!"* — r/gabagoodness, Aug 2022
+
+### Subacute Phase (Weeks 2–8)
+
+- Most physical symptoms resolve within 2–4 weeks
+- Psychological symptoms (anxiety, depression, anhedonia) persist longer
+- Sleep disturbances often the last acute symptom to resolve
+
+### Protracted Withdrawal / PAWS (Months 1–12+)
+
+- A subset of long-term users report prolonged withdrawal lasting months:
+
+> *"I'm 3.5 months off completely. I was on it for 6 years before that. I reduced really slowly and it still completely sucked, like sometimes horrifically. [...] I'm definitely still improving but I am past that acute phase where I was just in a cold sweat pain all the time."*
+> — r/pregabalin, Dec 2020 (↑13)
+
+> *"It's now been 7 months and I am finally feeling my normal self again."*
+> — r/pregabalin, Jan 2021 (↑11) — this user was on 600mg/day for 3 months
+
+- Timeline appears roughly correlated with duration and dose of use
+- Several users report lingering anxiety and sleep issues for 3–6 months post-cessation
+
+### Summary Timeline
+
+| Phase | Timeframe | Key Features |
+|---|---|---|
+| Onset | 12–48 hours | Anxiety, insomnia, initial discomfort |
+| Acute peak | Days 3–7 | Worst severity: panic, sweating, tremor, insomnia, GI symptoms |
+| Acute resolution | Days 7–14 | Physical symptoms begin improving |
+| Subacute | Weeks 2–8 | Psychological symptoms predominate |
+| PAWS (if present) | Months 1–12+ | Residual anxiety, anhedonia, sleep disruption |
+
+---
+
+## 5. Taper Recommendations
+
+### The 10% Rule
+
+The most consistently recommended approach across the corpus is a **10% reduction every 1–2 weeks**, mirroring benzodiazepine tapering protocols (Ashton Manual):
+
+> *"It needs to be tapered off generally around 10% every week to 10 days."*
+> — r/gabagoodness, Jan 2024
+
+> *"By taking 75mg off every three days your brain is never adjusting to the cuts and this is why you are feeling so sick. Tapering this rapidly also increases the potential for [...] PAWS to be worse."*
+> — r/pregabalin, Apr 2023 (↑10)
+
+This commenter elaborated on the pharmacological rationale:
+
+> *"It takes three days for Pregabalin to be completely out of your system. Based off of this it takes about the same amount of time for your brain to notice the 10% cut. Then you need to stabilize for several days after this. Once you are you start the process over again."*
+> — r/pregabalin, Apr 2023
+
+### Reported Taper Schedules
+
+**Slow taper (most recommended by community):**
+- 10% reduction every 7–14 days
+- Example from 600mg: 600 → 540 → 480 → 430 → 390 → 350 → 315 → 280 → 250 → 225 → 200 → 180 → 160 → 145 → 130 → 115 → 100 → 90 → 75 → 65 → 50 → 40 → 25 → 0
+- Duration: ~5–6 months
+- This approach was described as "painful but manageable" by users who followed it
+
+**Moderate taper (common doctor-prescribed):**
+- 75mg reduction every 1–2 weeks
+- Example from 450mg: 450 → 375 → 300 → 225 → 150 → 75 → 0
+- Duration: 6–12 weeks
+- Several users found this too aggressive, especially below 150mg
+
+**Fast taper (emergency/supply-limited):**
+
+One user documented a 15-day rapid taper from 300–600mg:
+
+> *"Day 1 and 2: roughly 150mg each / Day 3, 4, 5: roughly 100mg each / Day 6, 7, 8, 9: roughly 75mg each / Day 10–15: roughly 50mg each"*
+> — r/gabagoodness, Jul 2022 (↑7)
+
+**Successful taper example:**
+
+> *"I'm officially off of pregabalin for almost two weeks now. Six months ago I was taking 600mg a day. Last jump was a bit high from 150mg to 0mg, but so far no withdrawal symptoms whatsoever."*
+> — r/pregabalin, Feb 2024 (↑19)
+
+**Doctor-prescribed taper considered too aggressive:**
+
+> *"He prescribed me a taper — 2 days of 400mg, 2 days of 300mg, and then 2 days of 200mg"*
+> — r/gabagoodness, Apr 2022 (user found this inadequate)
+
+A gabapentin user's highly detailed taper log:
+
+> *"I've been on gabapentin for 6 years, the first 5 I was around 2400–2800mg. I started a taper in September 2023 and I'm all the way down to 500mg. I've done a really slow taper since 800mg, maybe 100mg a month. [...] My goal is to be off by the end of this year, at a pace of 50mg reductions every 2 weeks."*
+> — r/gabapentin, Aug 2024 (↑8)
+
+### The "Last Mile" Problem
+
+Multiple users report that the final drops are disproportionately difficult — reducing from 75mg → 0 is harder than reducing from 300mg → 225mg:
+
+> *"The lower I get, the harder the drops become."*
+> — r/gabapentin, Aug 2024
+
+This is consistent with the 10% model: 75mg to 0 is a 100% reduction, while 300mg to 225mg is only 25%.
+
+### Common Adjunct Medications / Supplements
+
+Users frequently mention using the following to ease withdrawal:
+
+- **Magnesium** (glycinate preferred) — sleep, muscle relaxation, RLS
+- **L-Theanine** — anxiety
+- **NAC (N-Acetyl Cysteine)** — glutamate modulation
+- **Hydroxyzine** — anxiety, sleep (prescription antihistamine)
+- **Mirtazapine** — sleep, appetite (prescription)
+- **CBD** — anxiety, sleep
+- **Kratom** — controversial; some use for acute symptoms but risk trading one dependency for another
+- **Melatonin** — sleep onset
+- **Glycine** — sleep quality
+
+> *"I took CBD oil for the past 3 days and have been able to go back down to 450mg."*
+> — r/pregabalin, Feb 2021 (↑10)
+
+### The r/QuittingPregabalin Community
+
+Multiple posts reference **r/QuittingPregabalin** (also styled r/QuittingPregablin) as a dedicated support community for tapering, suggesting a meaningful population of users seeking structured withdrawal support.
+
+---
+
+## 6. Risk Factors
+
+### Dose
+
+The most commonly mentioned doses in the withdrawal corpus:
+
+| Dose | Mentions | Context |
+|---|---|---|
+| 300mg/day | 215 | Most common prescribed dose; therapeutic ceiling for anxiety |
+| 600mg/day | 162 | Maximum prescribed dose; common among both therapeutic and recreational users |
+| 150mg/day | 106 | Low-moderate dose; some experience withdrawal even at this level |
+| 75mg/day | 62 | Low dose; often the "final step" before discontinuation |
+| 900mg/day | 59 | Supra-therapeutic; recreational use |
+
+Higher doses are consistently associated with worse withdrawal. Users on 600mg+ report more severe and prolonged symptoms.
+
+### Duration of Use
+
+Longer use correlates with worse withdrawal. Reports span:
+
+- **Weeks to months:** Withdrawal possible even after 3–4 weeks of daily use
+- **1–2 years:** Most common duration among therapeutic users reporting withdrawal
+- **3+ years:** Associated with the most severe and prolonged withdrawal syndromes
+
+> *"I am a very long term user (about 14 years going between Gaba and Pregabalin, never going more than 24 hours without it the whole period)."*
+> — r/gabagoodness, Apr 2022 (↑21)
+
+### Prior GABAergic Use
+
+A striking pattern in the data: users with **prior benzodiazepine or phenibut exposure** report worse pregabalin withdrawal, suggesting cross-sensitization of GABAergic withdrawal pathways:
+
+> *"He basically suggested that I am likely very sensitive to pregabalin due to my previous use with benzos."*
+> — r/pregabalin, Feb 2022 (↑14)
+
+Multiple users describe using pregabalin to manage benzo withdrawal, then becoming dependent on pregabalin:
+
+> *"I developed a valium addiction at the end of last year [...] so I decided to switch to pregabalin. I planned to take it to stop withdrawals but of course, I started liking the feeling."*
+> — r/gabagoodness, May 2022 (↑20)
+
+### Speed of Discontinuation
+
+Cold turkey cessation is universally described as far worse than tapered withdrawal:
+
+> *"Never going cold turkey again."*
+> — r/gabagoodness, Aug 2021 (↑42)
+
+Overly aggressive medical tapers also cause problems:
+
+> *"So too the doctor who prescribed me this shit as a safe alternative and to all the doctors that told me coming off would be painless... Fuck you 🖕"*
+> — r/pregabalin, Feb 2022 (↑14)
+
+### Recreational / Supra-Therapeutic Dosing
+
+Users who take pregabalin recreationally (often 900–1500mg+) face compounded risk due to higher doses, inconsistent dosing schedules, and often polysubstance use.
+
+### Individual Sensitivity
+
+A clear theme in the data: withdrawal severity varies enormously between individuals even at similar doses and durations. Some users stop 300mg after months with minimal symptoms; others experience severe withdrawal from 150mg after weeks. This unpredictability is itself a risk factor — there's no reliable way to predict who will have a difficult withdrawal.
+
+---
+
+## 7. Comparison to Other Withdrawals
+
+Users frequently compare pregabalin withdrawal to other substances. These comparisons appear repeatedly:
+
+**Compared to benzodiazepines:**
+- Generally described as "similar but different" — same anxiety/insomnia/seizure risk profile
+- Several users report pregabalin withdrawal as *worse* in terms of physical symptoms (sweating, pain)
+- The Ashton Manual is frequently referenced as applicable
+
+**Compared to opioids:**
+
+> *"The withdrawals are worse than the percocet withdrawals I had when I ran out of my meds early."*
+> — r/pregabalin, Feb 2024 (↑6)
+
+**Compared to alcohol:**
+
+> *"I've quit alcohol cold turkey after 20 years of daily drinking, and cigarettes after 15 years of a pack a day smoking, and cocaine after years of abuse. Nothing comes close to this."*
+> — r/gabapentin, Feb 2024 (↑6) (on gabapentin, cross-applicable)
+
+**Common refrain across the corpus: doctors underestimate it.**
+
+> *"It's really insane how much gabapentin is prescribed yet, it seems doctors know little to nothing about withdrawal symptoms."*
+> — r/gabapentin, Aug 2024 (↑22)
+
+---
+
+## 8. Caveats and Limitations
+
+### This Is Anecdotal Data
+
+This report synthesizes **self-reported experiences from Reddit users**. It is subject to:
+
+- **Selection bias:** People who have uneventful tapers rarely post about it. The corpus is heavily weighted toward negative experiences.
+- **Dosing uncertainty:** Users may misreport doses, especially in recreational contexts.
+- **Confounding variables:** Many users are taking multiple substances. Polypharmacy and polysubstance use make it difficult to attribute symptoms solely to pregabalin withdrawal.
+- **No clinical verification:** Symptoms are self-diagnosed. Some reported "withdrawal" may be re-emergence of underlying conditions (anxiety, pain) rather than true physiological withdrawal.
+- **Survivor bias in recovery timelines:** Users who recover quickly may stop posting, while those with prolonged symptoms continue to be active.
+
+### Clinical Evidence
+
+The FDA has acknowledged pregabalin's dependence potential and withdrawal syndrome. The prescribing information recommends tapering over at least one week. However, many Reddit users report this is insufficient for long-term users. Formal clinical research on optimal pregabalin taper schedules remains limited compared to the benzodiazepine literature.
+
+### This Is Not Medical Advice
+
+Anyone considering stopping pregabalin should:
+
+1. **Consult their prescribing physician** before making changes
+2. **Never stop abruptly** — abrupt discontinuation carries seizure risk
+3. **Taper gradually** under medical supervision
+4. **Seek emergency care** if experiencing seizures, severe panic, or suicidal ideation
+
+---
+
+## Appendix: Methodology
+
+### Data Collection
+
+Queries were executed against the Scry API's Reddit interest-frontier materialized view (`http://scry.mv_reddit_interest_docs`) using PostgreSQL full-text search. Search terms included:
+
+1. `pregabalin withdrawal` (150 results)
+2. `pregabalin taper` (150 results)
+3. `lyrica withdrawal` (150 results)
+4. `withdrawal symptoms anxiety insomnia` (150 results)
+5. `pregabalin cold turkey` (100 results)
+6. `pregabalin dose reduction` (100 results)
+7. `pregabalin seizure discontinuation` (5 results)
+8. `gabapentin withdrawal rebound` (100 results)
+
+After deduplication: **753 unique documents** (445 posts, 308 comments).
+
+### Analysis
+
+- Symptom frequency was computed by keyword matching (case-insensitive) across document text
+- Timeline data was extracted via regex pattern matching for temporal markers
+- Quotes were selected for representativeness and upvote count (community validation)
+- Dose mentions were extracted via regex (`\d{2,4}mg` patterns)id: 2031412870286815547
 created_at: 2026-03-10T16:52:24Z
 url: https://x.com/cube_flipper/status/2031412870286815547
 kind: reply
