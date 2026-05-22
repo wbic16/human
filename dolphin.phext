@@ -76934,7 +76934,19 @@ retweets: 0
 in_reply_to_id: 2057898494464274705
 in_reply_to_user: jessi_cata
 
-@jessi_cata @webmasterdave i didn't think there was any assumption all the data was there all the time, what's wrong with a wavelet encoding which is then used to instantiate a field (consider the phrase, "electromagnetic interpolation")?id: 1612601651256528897
+@jessi_cata @webmasterdave i didn't think there was any assumption all the data was there all the time, what's wrong with a wavelet encoding which is then used to instantiate a field (consider the phrase, "electromagnetic interpolation")?id: 2057923443257958820
+created_at: 2026-05-22T20:35:57Z
+url: https://x.com/cube_flipper/status/2057923443257958820
+kind: thread
+likes: 0
+retweets: 0
+thread_id: 2057923278908342614
+in_reply_to_id: 2057923278908342614
+in_reply_to_user: cube_flipper
+answers: 24.8.10/11.7.13/1.1.19
+thread_root: 24.8.10/11.7.13/1.1.19
+
+@jessi_cata @webmasterdave (my current mental model is that a Gabor wavelet encoding in V1 is used to constrain whatever fields are happening in the LGN)id: 1612601651256528897
 created_at: 2023-01-10T00:06:09Z
 url: https://x.com/cube_flipper/status/1612601651256528897
 kind: reply
