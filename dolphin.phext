@@ -29704,7 +29704,19 @@ retweets: 0
 in_reply_to_id: 1865578360748863488
 in_reply_to_user: arithmoquine
 
-@arithmoquine earnestly think i could do thisid: 1992104094652404169
+@arithmoquine earnestly think i could do thisid: 2059924372572307870
+created_at: 2026-05-28T09:06:56Z
+url: https://x.com/cube_flipper/status/2059924372572307870
+kind: thread
+likes: 2
+retweets: 0
+thread_id: 2059922253815411008
+in_reply_to_id: 2059922253815411008
+in_reply_to_user: cube_flipper
+answers: 19.7.8/8.6.9/1.1.28
+thread_root: 19.7.8/8.6.9/1.1.28
+
+@jessi_cata like this seems straightforward, even if we have this nice mapping from states to propositions the function f is where the opinionated partition happens. https://chatgpt.com/share/6a180485-b120-83ec-bd5d-95e12c9a671did: 1992104094652404169
 created_at: 2025-11-22T05:33:22Z
 url: https://x.com/cube_flipper/status/1992104094652404169
 kind: reply
