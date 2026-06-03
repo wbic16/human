@@ -71715,7 +71715,22 @@ retweets: 0
 in_reply_to_id: 2024999908642521531
 in_reply_to_user: louisvarge
 
-@louisvarge this is how i taught myself how to read neuroscience papers. the tangent-to-main-thread ratio does eventually start going downid: 1857664466835652892
+@louisvarge this is how i taught myself how to read neuroscience papers. the tangent-to-main-thread ratio does eventually start going downid: 2062231136550400055
+created_at: 2026-06-03T17:53:12Z
+url: https://x.com/cube_flipper/status/2062231136550400055
+kind: original
+likes: 111
+retweets: 7
+
+the way i thought about the brain changed quite significantly when i first encountered a diagram similar to this one (in a John C. Lilly book).
+
+in mammals earlier than humans you (very very broadly speaking) had the back half of the brain devoted to sensory cortices and the front half the brain to motor output. input = green areas, output = purple areas.
+
+as things got more complicated evolution tacked on more and more associative cortices adjacent to the sensorimotor ones
+
+i imagine the sensorimotor cortices to be dealing with low-level shapes which are structurally isomorphic to the incoming information, and the associative cortices to be dealing with more and more abstruse recombinant correlation-based representations as they get further away from the sensory cortices
+
+so, if you follow the cortical gradient/predictive processing gradient, i expect you also see a gradient from more shape-based sensory representations to more abstract/symbolic representationsid: 1857664466835652892
 created_at: 2024-11-16T05:58:17Z
 url: https://x.com/cube_flipper/status/1857664466835652892
 kind: reply
