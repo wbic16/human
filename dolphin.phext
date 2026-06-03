@@ -82655,7 +82655,27 @@ in_reply_to_user: cube_flipper
 answers: 25.7.9/8.7.12/1.1.58
 thread_root: 25.7.9/8.7.12/1.1.58
 
-@tr_babb @Lasermazer i'm willing to accept that there may be high-level "islands of stability" within the set of all mappings which take us to the nice stable computational structures but it's really hard to say what their net weight might be relative to the low-level bulkid: 1867342782429638997
+@tr_babb @Lasermazer i'm willing to accept that there may be high-level "islands of stability" within the set of all mappings which take us to the nice stable computational structures but it's really hard to say what their net weight might be relative to the low-level bulkid: 2062237075651358976
+created_at: 2026-06-03T18:16:48Z
+url: https://x.com/cube_flipper/status/2062237075651358976
+kind: thread
+likes: 2
+retweets: 0
+thread_id: 2062232015152243095
+in_reply_to_id: 2062232472004243910
+in_reply_to_user: cube_flipper
+answers: 25.7.9/8.7.11/1.1.63
+thread_root: 25.7.9/8.7.10/1.1.62
+
+@deepfates @1a3orn i should expand on how i think about this model a bit, like the gist of it is that the field serves as a holistic guiding force for large scale synchronisation of neural oscillations
+
+but broadcasting LFPs is expensive, ideally the neurons should learn how the global field behaves and mostly oscillate in sync with that. minimal friction flow state, minimal "consciousness" perhaps
+
+if a prediction error comes in, that should create a sizeable disturbance in the force, neurons will notice, neurons will need to update their models somehow. more intense "consciousness"
+
+(susan pockett also noticed that feed-back activity produces relatively large LFPs, whereas feed-forward activity does not)
+
+i would also expect holistic field effects to dominate in younger organisms before their neurons have figured out how to predict an extremely wide amount of sensory input. drugs also mess with this, pushing dynamics out of homeostasis and causing field effects to dominateid: 1867342782429638997
 created_at: 2024-12-12T22:56:27Z
 url: https://x.com/cube_flipper/status/1867342782429638997
 kind: thread
