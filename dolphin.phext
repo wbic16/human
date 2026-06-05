@@ -73407,7 +73407,18 @@ retweets: 0
 in_reply_to_id: 2053157217449189883
 in_reply_to_user: _everythingism
 
-@_everythingism @AlexLerchner maximally briefly, it's ontologically simpler than the alternative. but i should find something better for youid: 1890521838880424231
+@_everythingism @AlexLerchner maximally briefly, it's ontologically simpler than the alternative. but i should find something better for youid: 2062792370702164296
+created_at: 2026-06-05T07:03:20Z
+url: https://x.com/cube_flipper/status/2062792370702164296
+kind: reply
+likes: 0
+retweets: 0
+in_reply_to_id: 2062790468317163975
+in_reply_to_user: jessi_cata
+
+@jessi_cata i think we have both experimented with proposing type signatures for qualia before 
+https://www.lesswrong.com/posts/ey5wwu8QmuCAYbHm3/inverting-qualia-with-group-theory
+in your case the generic qualia type is like a tuple of a group and a category or something right?id: 1890521838880424231
 created_at: 2025-02-14T22:01:45Z
 url: https://x.com/cube_flipper/status/1890521838880424231
 kind: reply
