@@ -72545,7 +72545,19 @@ retweets: 0
 in_reply_to_id: 2064798287753077237
 in_reply_to_user: josikinz
 
-@Josikinz curious if you're familiar with @XyraSinclair's https://scry.io? large corpus of scraped websites made accessible through an agent-friendly SQL APIid: 1787261143582654483
+@Josikinz curious if you're familiar with @XyraSinclair's https://scry.io? large corpus of scraped websites made accessible through an agent-friendly SQL APIid: 2064913629254705228
+created_at: 2026-06-11T03:32:28Z
+url: https://x.com/cube_flipper/status/2064913629254705228
+kind: thread
+likes: 3
+retweets: 0
+thread_id: 2064913336160969056
+in_reply_to_id: 2064913336160969056
+in_reply_to_user: cube_flipper
+answers: 24.5.10/6.6.10/1.1.9
+thread_root: 24.5.10/6.6.10/1.1.9
+
+@Josikinz @XyraSinclair i am mainly interested in the reddit archive, i have been using it for creating quick and dirty reports into the subjective effects of various thingsid: 1787261143582654483
 created_at: 2024-05-05T23:20:36Z
 url: https://x.com/cube_flipper/status/1787261143582654483
 kind: original
