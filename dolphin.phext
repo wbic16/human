@@ -72536,7 +72536,16 @@ retweets: 0
 in_reply_to_id: 2054315614802714820
 in_reply_to_user: tr_babb
 
-@tr_babb @Lasermazer that's roughly what i'm saying here https://x.com/cube_flipper/status/2054315265781854252id: 1787261143582654483
+@tr_babb @Lasermazer that's roughly what i'm saying here https://x.com/cube_flipper/status/2054315265781854252id: 2064913336160969056
+created_at: 2026-06-11T03:31:18Z
+url: https://x.com/cube_flipper/status/2064913336160969056
+kind: reply
+likes: 7
+retweets: 0
+in_reply_to_id: 2064798287753077237
+in_reply_to_user: josikinz
+
+@Josikinz curious if you're familiar with @XyraSinclair's https://scry.io? large corpus of scraped websites made accessible through an agent-friendly SQL APIid: 1787261143582654483
 created_at: 2024-05-05T23:20:36Z
 url: https://x.com/cube_flipper/status/1787261143582654483
 kind: original
