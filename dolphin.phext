@@ -44911,7 +44911,16 @@ in_reply_to_user: cube_flipper
 answers: 21.6.9/7.6.10/1.2.1
 thread_root: 21.6.9/7.6.10/1.2.1
 
-@RomeoStevens76 @PrinceVogel probably good if you don't want to connect every random thing with every other random thingid: 1645716342409166853
+@RomeoStevens76 @PrinceVogel probably good if you don't want to connect every random thing with every other random thingid: 2069858345226313963
+created_at: 2026-06-24T19:01:00Z
+url: https://x.com/cube_flipper/status/2069858345226313963
+kind: reply
+likes: 1
+retweets: 0
+in_reply_to_id: 2069855881303634291
+in_reply_to_user: mkultra_gf
+
+@mkultra_gf agree that the state space is too large to explore feasibly, but i think the input string/adversarial input/computer metaphor is not quite right, it's more in the vein of 'does the visual cortex saturate/freak out when someone sees a strobe of a particular colour and frequency'id: 1645716342409166853
 created_at: 2023-04-11T09:12:06Z
 url: https://x.com/cube_flipper/status/1645716342409166853
 kind: reply
