@@ -101194,7 +101194,14 @@ in_reply_to_user: cube_flipper
 answers: 29.5.6/6.5.8/1.1.1
 thread_root: 29.5.6/6.5.8/1.1.1
 
-who knew there might be a 'fattiness' taste receptor? https://en.wikipedia.org/wiki/Taste_receptor#Fatid: 1797300134650290398
+who knew there might be a 'fattiness' taste receptor? https://en.wikipedia.org/wiki/Taste_receptor#Fatid: 2073272841391186074
+created_at: 2026-07-04T05:08:59Z
+url: https://x.com/cube_flipper/status/2073272841391186074
+kind: original
+likes: 76
+retweets: 9
+
+experimenting with a fractional Fourier transform audio visualiser (ty Fable). we start with a 512 sample window on the left and for every column apply the fractional Fourier transform with order proportional to x, from range 0 to 2. audio is Eyeliner – Bose Lifestyle [video]id: 1797300134650290398
 created_at: 2024-06-02T16:11:58Z
 url: https://x.com/cube_flipper/status/1797300134650290398
 kind: reply
