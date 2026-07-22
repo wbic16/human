@@ -247,7 +247,16 @@ retweets: 0
 in_reply_to_id: 2030466847485940115
 in_reply_to_user: parmita
 
-@parmita ty parmita, endorsedid: 1888867818021789876
+@parmita ty parmita, endorsedid: 2079979253714583739
+created_at: 2026-07-22T17:17:52Z
+url: https://x.com/cube_flipper/status/2079979253714583739
+kind: reply
+likes: 3
+retweets: 0
+in_reply_to_id: 2079978203708547478
+in_reply_to_user: maxhodak_
+
+@maxhodak_ yoo congratsid: 1888867818021789876
 created_at: 2025-02-10T08:29:15Z
 url: https://x.com/cube_flipper/status/1888867818021789876
 kind: thread
