@@ -7923,7 +7923,16 @@ retweets: 0
 in_reply_to_id: 2053504498404897074
 in_reply_to_user: seventhmeal
 
-@seventhmeal yes.id: 1953863913029722174
+@seventhmeal yes.id: 2079780069388542448
+created_at: 2026-07-22T04:06:23Z
+url: https://x.com/cube_flipper/status/2079780069388542448
+kind: reply
+likes: 2
+retweets: 0
+in_reply_to_id: 2079759072883073524
+in_reply_to_user: owlthatissuperb
+
+@owlthatissuperb yesid: 1953863913029722174
 created_at: 2025-08-08T17:00:32Z
 url: https://x.com/cube_flipper/status/1953863913029722174
 kind: thread
