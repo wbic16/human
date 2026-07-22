@@ -101916,7 +101916,16 @@ retweets: 0
 in_reply_to_id: 1870627572276736183
 in_reply_to_user: george3d6
 
-@George_3d6 @adic_9 o1 does not yet have a license to write prescriptionsid: 2037286261174743439
+@George_3d6 @adic_9 o1 does not yet have a license to write prescriptionsid: 2079777422749094015
+created_at: 2026-07-22T03:55:52Z
+url: https://x.com/cube_flipper/status/2079777422749094015
+kind: reply
+likes: 1
+retweets: 0
+in_reply_to_id: 2079775447794040839
+in_reply_to_user: davidsartor0
+
+@DavidSartor0 @MillerLabMIT if on macos, the macos speech to text is controllable via the terminal, i think there are special codes that can be used for fine grained control over things like pitch and speed (i have seen people abuse this at noise gigs before), then ask your favourite language model to write software controlling itid: 2037286261174743439
 created_at: 2026-03-26T21:51:10Z
 url: https://x.com/cube_flipper/status/2037286261174743439
 kind: thread
