@@ -104670,7 +104670,16 @@ in_reply_to_user: cube_flipper
 answers: 29.7.9/8.7.11/1.1.3
 thread_root: 29.7.9/8.7.11/1.1.3
 
-[photo]id: 1844399849149804759
+[photo]id: 2082178778231419340
+created_at: 2026-07-28T18:58:00Z
+url: https://x.com/cube_flipper/status/2082178778231419340
+kind: reply
+likes: 2
+retweets: 0
+in_reply_to_id: 2082177478227820704
+in_reply_to_user: puheenix
+
+@puheenix @cammakingminds fwiw, i generally throw my full emotional engine/vibe emulation/GPU at language model interactions (and part of this might involve using specific pronouns, but this is not load-bearing). but i also don't have any problems *sandboxing* this, relative to previously expressed opinions on language model consciousness.id: 1844399849149804759
 created_at: 2024-10-10T15:29:25Z
 url: https://x.com/cube_flipper/status/1844399849149804759
 kind: reply
