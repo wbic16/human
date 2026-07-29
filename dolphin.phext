@@ -54418,7 +54418,16 @@ kind: original
 likes: 85
 retweets: 2
 
-it is time [photo]id: 1784100634851238264
+it is time [photo]id: 2082534211043336437
+created_at: 2026-07-29T18:30:22Z
+url: https://x.com/cube_flipper/status/2082534211043336437
+kind: reply
+likes: 2
+retweets: 0
+in_reply_to_id: 2082283482370527424
+in_reply_to_user: adic_9
+
+@adic_9 basedid: 1784100634851238264
 created_at: 2024-04-27T06:01:52Z
 url: https://x.com/cube_flipper/status/1784100634851238264
 kind: reply
