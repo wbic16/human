@@ -98757,7 +98757,18 @@ kind: original
 likes: 2
 retweets: 0
 
-i am on bluesky for the record, https://bsky.app/profile/smoothbrains.netid: 1778872891473592706
+i am on bluesky for the record, https://bsky.app/profile/smoothbrains.netid: 2082506806228574561
+created_at: 2026-07-29T16:41:28Z
+url: https://x.com/cube_flipper/status/2082506806228574561
+kind: reply
+likes: 3
+retweets: 0
+in_reply_to_id: 2082431399332626810
+in_reply_to_user: richdecibels
+
+@RichDecibels > relationship database that has a small amount of context on everyone I interact with
+
+this is invaluable. just a basic example, but i can say something like "hey i've got some new recordings from @WystanTBS in folder blah to transcribe and diarise" and because it knows who wystan is and that he is into meditation, then when whisper spits out "nimmiter" it can be corrected to "nimitta" etcid: 1778872891473592706
 created_at: 2024-04-12T19:48:41Z
 url: https://x.com/cube_flipper/status/1778872891473592706
 kind: thread
