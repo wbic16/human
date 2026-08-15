@@ -82370,7 +82370,38 @@ retweets: 0
 in_reply_to_id: 2044220289215803625
 in_reply_to_user: slimepriestess
 
-@slimepriestess @_space_punk_ hmm, i am not sure this makes sense to me, i think there is a misunderstanding except i am 90% sure we have discussed this before? this is more a statement about confidence than speed?id: 2006625850134044954
+@slimepriestess @_space_punk_ hmm, i am not sure this makes sense to me, i think there is a misunderstanding except i am 90% sure we have discussed this before? this is more a statement about confidence than speed?id: 2088731238014357688
+created_at: 2026-08-15T20:55:08Z
+url: https://x.com/cube_flipper/status/2088731238014357688
+kind: original
+likes: 21
+retweets: 1
+
+(epistemic status: brain kinda cooked, writing about unfamiliar maths through post-covid fatigue, mainly for self-education purposes)
+
+what symmetry group is the somatic field? naively, you might suggest the Euclidean group E(ℝ³) (https://en.wikipedia.org/wiki/Euclidean_group); transformations which preserve the Euclidean distance metric – i.e., translations, rotations, and reflections – also preserve structure (this assumes we do not think the somatic field has curvature, which it possibly does)
+
+but is this actually the case? let's say i close my eyes and hold a 1cm³ wooden cube – i can rotate it just fine, and all the dimensions are the same. never mind reflection for now – what about translation?
+
+if i hold the cube close to my eyes and roll it around in my fingers, and then i do the same thing but with the cube at arms' length – we've just translated the cube in space, but is it the same size? does the somatic field obey *perspective*, like visual stimuli do – i.e., things get smaller with distance from the origin? i find it kinda hard to tell, but i'm inclined to say yes.
+
+this question is complicated by the claim that the somatic field might or might not have a center point – and the presence of a privileged center point should also rule out translations being viable transformations here. personally, when i move my attention around in the somatic field, it feels like i'm illuminating everything with a conical light source, with the pointy end of the cone embedded somewhere between the eyes. something something perspective projection. it's possible through drugs or meditation to make this go away – to experience *somatic centerlessness*. this doesn't happen to me very often, but i know it feels nice. anyway, i wonder if this then changes the answer to this question. i've spend some time discussing this with @RogerThisdell.
+
+if we *can* then move the cube around – but the perspective projection is gone, and it's impossible to say if it's not bigger or smaller – this then implies that there is no absolute distance metric, only relative distances at best. the Euclidean group has a distance metric – but if we remove it, our Euclidean group becomes the similarity group (https://en.wikipedia.org/wiki/Similarity_(geometry)). so we lose a distance metric, but in return we gain a transformation – scaling.
+
+similarly, our Euclidean group has angles. if something happened and we could no longer gauge absolute angles within experience, our Euclidean group would become the equiareal group. we lose angles and gain a transformation – shears.
+
+if we then remove angles from the similarity group, or remove the distance metric from the equiareal group, we land in the same place – the affine group (https://en.wikipedia.org/wiki/Affine_space). so the set of all such groups forms a lattice – where edges in the lattice involve adding or removing symmetries/degrees of freedom.
+
+[note: i might be missing some bits and pieces relating to an absolute origin point or absolute direction. this thread is mostly for the benefit of my own self-education].
+
+anyway, back to before – whether or not the somatic field's group might be the Euclidean group, the similarity group, or something else – might depend on your meditative attainments. and perhaps there's an argument to be made that the bigger the group with the more degrees of freedom – the more pleasant its state space is.
+
+(the relevant dimensionalities: Euclidean 6, similarity 7, equiareal 11, affine 12)
+
+for further reading, see the 'Erlangen program' (https://en.wikipedia.org/wiki/Erlangen_program) – which looks to me to be one of the great mathematical refactorings of all time.
+
+cc: @RogerThisdell @WystanTBS @KanizsaBoundaryid: 2006625850134044954
 created_at: 2026-01-01T07:17:38Z
 url: https://x.com/cube_flipper/status/2006625850134044954
 kind: original
