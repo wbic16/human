@@ -859,7 +859,16 @@ retweets: 0
 in_reply_to_id: 2072386303509807543
 in_reply_to_user: arithmoquine
 
-@arithmoquine owid: 1926221564313276542
+@arithmoquine owid: 2091253263773663463
+created_at: 2026-08-22T19:56:46Z
+url: https://x.com/cube_flipper/status/2091253263773663463
+kind: reply
+likes: 2
+retweets: 0
+in_reply_to_id: 2091250627472920843
+in_reply_to_user: 42irrationalist
+
+@42irrationalist mehid: 1926221564313276542
 created_at: 2025-05-24T10:19:43Z
 url: https://x.com/cube_flipper/status/1926221564313276542
 kind: thread
