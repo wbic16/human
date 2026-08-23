@@ -104810,7 +104810,16 @@ retweets: 0
 in_reply_to_id: 1870627572276736183
 in_reply_to_user: george3d6
 
-@George_3d6 @adic_9 o1 does not yet have a license to write prescriptionsid: 2079777422749094015
+@George_3d6 @adic_9 o1 does not yet have a license to write prescriptionsid: 2091471489019375832
+created_at: 2026-08-23T10:23:55Z
+url: https://x.com/cube_flipper/status/2091471489019375832
+kind: reply
+likes: 1
+retweets: 0
+in_reply_to_id: 2091470793465012481
+in_reply_to_user: kepe__
+
+@kepe__ i actually think group theory/symmetry groups/etc will not be the ultimate true thing, as they fail to support *approximate symmetries*, you will need something closer to spectral decomposition for that. but so far as a first huck goes it's fineid: 2079777422749094015
 created_at: 2026-07-22T03:55:52Z
 url: https://x.com/cube_flipper/status/2079777422749094015
 kind: reply
