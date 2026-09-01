@@ -76182,7 +76182,19 @@ retweets: 0
 in_reply_to_id: 2054298430030446769
 in_reply_to_user: tr_babb
 
-@tr_babb @Lasermazer so, how do we do this in a way that gives us the preferred degree of coarse-graining across all, say, physically-instantiated computer systems (let's forget about humans now)id: 2094898681069834632
+@tr_babb @Lasermazer so, how do we do this in a way that gives us the preferred degree of coarse-graining across all, say, physically-instantiated computer systems (let's forget about humans now)id: 2094899273641123987
+created_at: 2026-09-01T21:24:42Z
+url: https://x.com/cube_flipper/status/2094899273641123987
+kind: thread
+likes: 1
+retweets: 0
+thread_id: 2094898681069834632
+in_reply_to_id: 2094898681069834632
+in_reply_to_user: cube_flipper
+answers: 23.8.14/10.8.13/1.1.2
+thread_root: 23.8.14/10.8.13/1.1.2
+
+@architectonyx one place to start is – the EM tensor is not invariant under Lorentz boosts, it is covariant. if for the sake of argument we associate consciousness with the EM field, does this transformation dissolve the structure we think is important?id: 2094898681069834632
 created_at: 2026-09-01T21:22:21Z
 url: https://x.com/cube_flipper/status/2094898681069834632
 kind: reply
