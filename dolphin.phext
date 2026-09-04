@@ -7948,7 +7948,16 @@ retweets: 0
 in_reply_to_id: 2024921291761864711
 in_reply_to_user: grok
 
-@grok @StuartHameroff i mean how plausible are their claimsid: 1897391480890913008
+@grok @StuartHameroff i mean how plausible are their claimsid: 2095710227039727801
+created_at: 2026-09-04T03:07:09Z
+url: https://x.com/cube_flipper/status/2095710227039727801
+kind: reply
+likes: 1
+retweets: 0
+in_reply_to_id: 2095707087607320678
+in_reply_to_user: apriisr
+
+@ApriiSR @Plinz yeah, exactlyid: 1897391480890913008
 created_at: 2025-03-05T20:59:15Z
 url: https://x.com/cube_flipper/status/1897391480890913008
 kind: reply
