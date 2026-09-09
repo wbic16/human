@@ -85589,7 +85589,19 @@ retweets: 0
 in_reply_to_id: 2097803556871188758
 in_reply_to_user: anthrupad
 
-@anthrupad no, just for fun. i was mainly investigating this to build a music synthesiser, i wasn't too worried about legibility, but legibility doesn't suffer that much if you modify the voice source. can basically treat it a bit like a vocoder and pipe anything broad-spectrum through itid: 1813276805987549537
+@anthrupad no, just for fun. i was mainly investigating this to build a music synthesiser, i wasn't too worried about legibility, but legibility doesn't suffer that much if you modify the voice source. can basically treat it a bit like a vocoder and pipe anything broad-spectrum through itid: 2097808621300326827
+created_at: 2026-09-09T22:05:25Z
+url: https://x.com/cube_flipper/status/2097808621300326827
+kind: thread
+likes: 0
+retweets: 0
+thread_id: 2097807248663933195
+in_reply_to_id: 2097808396070289519
+in_reply_to_user: cube_flipper
+answers: 24.8.8/7.6.11/1.1.7
+thread_root: 24.8.8/10.7.13/1.1.6
+
+@anthrupad i never understood why the voice source had its bandpass filters in serial while the noise source had its bandpass filters in parallel...id: 1813276805987549537
 created_at: 2024-07-16T18:17:34Z
 url: https://x.com/cube_flipper/status/1813276805987549537
 kind: reply
