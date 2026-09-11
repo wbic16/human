@@ -73213,7 +73213,16 @@ retweets: 0
 in_reply_to_id: 1672333330317197312
 in_reply_to_user: bananamelter
 
-@bananamelter the modern lovers: "i go to bakeries all day long/there's a lack of sweetness in my life"id: 1947065932276257131
+@bananamelter the modern lovers: "i go to bakeries all day long/there's a lack of sweetness in my life"id: 2098250586433151436
+created_at: 2026-09-11T03:21:38Z
+url: https://x.com/cube_flipper/status/2098250586433151436
+kind: reply
+likes: 4
+retweets: 0
+in_reply_to_id: 2098153986247323887
+in_reply_to_user: repligate
+
+@repligate i will continue to cheerlead any ongoing speech synthesis experiments (i wanted to build software which could do things like this many years ago, but i couldn't figure out how to design an interface to make it controllable by humans in real time) https://x.com/cube_flipper/status/2098248966030893389id: 1947065932276257131
 created_at: 2025-07-20T22:47:47Z
 url: https://x.com/cube_flipper/status/1947065932276257131
 kind: thread
