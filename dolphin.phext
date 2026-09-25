@@ -86360,7 +86360,25 @@ retweets: 0
 in_reply_to_id: 2060199937569411305
 in_reply_to_user: chrislakin
 
-@chrislakin @WillowChem i don't even know what this question means chris https://x.com/chrislakin/status/2060194584391823398id: 1839494911177154592
+@chrislakin @WillowChem i don't even know what this question means chris https://x.com/chrislakin/status/2060194584391823398id: 2103285325330338090
+created_at: 2026-09-25T00:47:53Z
+url: https://x.com/cube_flipper/status/2103285325330338090
+kind: original
+likes: 23
+retweets: 1
+
+actually, after i got sick to death of it, i am thinking about binding again. gotta go backwards to go forwards
+
+if we wish to take a group theoretic approach to understanding qualia (i.e., the qualia space inhabited by a given qualia is closely related to the symmetry group inhabited by the state space of the underlying physical structure; add to this that said pair of structures should also not violate locality/causality), should we also explore a group theoretic approach to binding? what might that resemble?
+
+perhaps "binding" would then be something as simple as a qualia space whose parts can't be transformed independently
+
+for example, if a visual field involves spatial motions E(2) and colour transformations U:
+
+- E(2) ⋉ U^X: each qualia pixel's colour can be transformed independently; experience is unchanged, because no pixel's colour is related to any other's
+- E(2) × U: changing one qualia pixel's colour alone does change the experience, because the relations between that pixel and all the others shift; only a transformation applied to every pixel at once leaves experience unchanged
+
+cc: @KanizsaBoundary @jessi_cataid: 1839494911177154592
 created_at: 2024-09-27T02:38:57Z
 url: https://x.com/cube_flipper/status/1839494911177154592
 kind: reply
