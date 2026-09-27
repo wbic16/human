@@ -87079,7 +87079,16 @@ retweets: 0
 in_reply_to_id: 1705962718765662519
 in_reply_to_user: wystantbs
 
-@WystanTBS i often find myself saying to people, if you're having a bad time on twitter you're probably just not following the right peopleid: 1710647684862976329
+@WystanTBS i often find myself saying to people, if you're having a bad time on twitter you're probably just not following the right peopleid: 2104299016196694218
+created_at: 2026-09-27T19:55:56Z
+url: https://x.com/cube_flipper/status/2104299016196694218
+kind: reply
+likes: 1
+retweets: 0
+in_reply_to_id: 2104296722272829471
+in_reply_to_user: architectonyx
+
+@architectonyx this is a specific example, the thing i am asking for is at the meta-level, can you describe a *general* process which extracts these coarse-grained models from bare physicsid: 1710647684862976329
 created_at: 2023-10-07T13:26:05Z
 url: https://x.com/cube_flipper/status/1710647684862976329
 kind: reply
