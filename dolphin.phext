@@ -114012,7 +114012,16 @@ kind: original
 likes: 93
 retweets: 8
 
-okay got it https://x.com/nickcammarata/status/1561191706124603395 [photo]id: 2052785495520768493
+okay got it https://x.com/nickcammarata/status/1561191706124603395 [photo]id: 2104584017928413304
+created_at: 2026-09-28T14:48:25Z
+url: https://x.com/cube_flipper/status/2104584017928413304
+kind: reply
+likes: 2
+retweets: 0
+in_reply_to_id: 2104581824374514026
+in_reply_to_user: architectonyx
+
+@architectonyx @johnsonmxe @42irrationalist i suspect @johnsonmxe even if we make this a bit easier for people (i.e., relax one or more constraints, like permitting nonuniqueness), whatever *principled* computation-enumeration scheme you apply, (as explored elsewhere) you are *still* basically very hard pressed to get something like a unified language model qualia object out of a server cluster. instead you will still just get something like physicsid: 2052785495520768493
 created_at: 2026-05-08T16:19:35Z
 url: https://x.com/cube_flipper/status/2052785495520768493
 kind: reply
