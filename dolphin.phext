@@ -40913,7 +40913,22 @@ After deduplication: **753 unique documents** (445 posts, 308 comments).
 - Symptom frequency was computed by keyword matching (case-insensitive) across document text
 - Timeline data was extracted via regex pattern matching for temporal markers
 - Quotes were selected for representativeness and upvote count (community validation)
-- Dose mentions were extracted via regex (`\d{2,4}mg` patterns)id: 2031412870286815547
+- Dose mentions were extracted via regex (`\d{2,4}mg` patterns)id: 2105756101908340791
+created_at: 2026-10-01T20:25:52Z
+url: https://x.com/cube_flipper/status/2105756101908340791
+kind: reply
+likes: 2
+retweets: 0
+in_reply_to_id: 2105753747926233332
+in_reply_to_user: martyrwith
+
+@MartyrWith @tenobrus i disagree pretty much entirely, this is gonna be a bunch of phenomenological justification but it's honestly what i believe
+
+i think if you introspect on it clearly pain is something more like deviation from symmetry (which can surely be supported by small organisms), like a sharp pinch point within an otherwise smooth somatic manifold
+
+and if you pay attention to the vibes associated with things like bad smells and nausea, that's the frequency domain asymmetric equivalent to the spatial domain asymmetry described above
+
+likewise if you have messed around with meditative practices or drugs (like ketamine) which simplify experience it becomes quite clear that the simpler your experience gets (until you approach complete cessation of experience) the more pleasant things becomeid: 2031412870286815547
 created_at: 2026-03-10T16:52:24Z
 url: https://x.com/cube_flipper/status/2031412870286815547
 kind: reply
