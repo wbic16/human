@@ -4,9 +4,13 @@
 //! Usage: cargo run --quiet --bin check_toc -- [file.phext ...]
 //! Defaults to incipit.phext. Exits 1 if any link dangles.
 //!
-//! A TOC entry is any line in the root scroll (1.1.1/1.1.1/1.1.1) shaped like
+//! The TOC is the root scroll (1.1.1/1.1.1/1.1.1). A TOC entry is any line
+//! shaped like
 //!   * <library>/<collection>/<chapter>: <title>
-//! Duplicate addresses are reported as warnings, not failures.
+//! (the leading "* " is optional). Any other non-blank line starts a new
+//! section, named by that line. The same address may appear in several
+//! sections on purpose; listing it twice within one section is reported
+//! as a warning, not a failure.
 //!
 //! Oracle: libphext. Born from the Counterexample Orchard (1.1.1/2.1.1/1.1.2).
 
@@ -23,7 +27,16 @@ fn is_address(s: &str) -> bool {
         })
 }
 
-fn check(path: &str) -> Result<(usize, usize), String> {
+/// Parse a TOC entry line into (address, title), if it is one.
+fn parse_entry(line: &str) -> Option<(&str, &str)> {
+    let rest = line.trim();
+    let rest = rest.strip_prefix("* ").unwrap_or(rest);
+    let (addr, title) = rest.split_once(':')?;
+    let addr = addr.trim();
+    is_address(addr).then_some((addr, title.trim()))
+}
+
+fn check(path: &str) -> Result<usize, String> {
     let text = std::fs::read_to_string(path).map_err(|e| format!("{path}: {e}"))?;
     let scrolls = phext::explode(&text);
     let root = scrolls
@@ -33,23 +46,34 @@ fn check(path: &str) -> Result<(usize, usize), String> {
 
     let mut ok = 0;
     let mut dangling = Vec::new();
-    let mut seen: HashMap<String, Vec<String>> = HashMap::new();
+    let mut warnings = Vec::new();
+    let mut section = String::from("(top)");
+    let mut seen: HashMap<String, usize> = HashMap::new(); // address -> first line, within the current section
 
     for (i, line) in root.lines().enumerate() {
-        let Some(rest) = line.trim().strip_prefix("* ") else { continue };
-        let Some((addr, title)) = rest.split_once(':') else { continue };
-        let addr = addr.trim();
-        if !is_address(addr) {
+        let line_no = i + 1;
+        if line.trim().is_empty() {
             continue;
         }
-        seen.entry(addr.to_string()).or_default().push(title.trim().to_string());
+        let Some((addr, title)) = parse_entry(line) else {
+            section = line.trim().to_string();
+            seen.clear();
+            continue;
+        };
+        if let Some(first) = seen.get(addr) {
+            warnings.push(format!(
+                "  warning: line {line_no}: {addr} ({title}) already listed at line {first} in section \"{section}\""
+            ));
+        } else {
+            seen.insert(addr.to_string(), line_no);
+        }
         let resolves = scrolls
             .get(&phext::to_coordinate(addr))
             .map_or(false, |t| !t.trim().is_empty());
         if resolves {
             ok += 1;
         } else {
-            dangling.push(format!("  line {}: {} -> {}", i + 1, addr, title.trim()));
+            dangling.push(format!("  line {line_no}: {addr} -> {title} (section \"{section}\")"));
         }
     }
 
@@ -57,12 +81,10 @@ fn check(path: &str) -> Result<(usize, usize), String> {
     for d in &dangling {
         println!("{d}");
     }
-    let mut dups: Vec<_> = seen.iter().filter(|(_, v)| v.len() > 1).collect();
-    dups.sort();
-    for (addr, titles) in dups {
-        println!("  warning: {addr} listed {} times ({})", titles.len(), titles.join(" | "));
+    for w in &warnings {
+        println!("{w}");
     }
-    Ok((ok, dangling.len()))
+    Ok(dangling.len())
 }
 
 fn main() -> ExitCode {
@@ -73,7 +95,7 @@ fn main() -> ExitCode {
     let mut failed = false;
     for f in &files {
         match check(f) {
-            Ok((_, 0)) => {}
+            Ok(0) => {}
             Ok(_) => failed = true,
             Err(e) => {
                 eprintln!("{e}");
