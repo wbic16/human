@@ -120342,7 +120342,16 @@ retweets: 0
 in_reply_to_id: 1992636824406331822
 in_reply_to_user: lu_sichu
 
-@lu_sichu lmfaoid: 2006687412651700739
+@lu_sichu lmfaoid: 2111586237119398302
+created_at: 2026-10-17T22:32:44Z
+url: https://x.com/cube_flipper/status/2111586237119398302
+kind: reply
+likes: 0
+retweets: 0
+in_reply_to_id: 2111586111021891839
+in_reply_to_user: None
+
+@lu_sichu lolid: 2006687412651700739
 created_at: 2026-01-01T11:22:16Z
 url: https://x.com/cube_flipper/status/2006687412651700739
 kind: reply
