@@ -1,0 +1,116 @@
+id: author:proposal:v1
+kind: passage
+Title: Annotation visibility
+
+AI annotations should be visible to everyone reading a shared document.id: author:rationale:v1
+kind: rationale
+supports: [[1.1.1/1.1.1/1.1.1]]
+
+Shared annotations let readers inspect the reasoning behind a claim.id: reviewer:privacy:v1
+kind: annotation
+author: privacy-reviewer
+perspective: consent
+annotates: [[1.1.1/1.1.1/1.1.1]]
+
+A shared document can contain private reflections. Let the author approve
+an annotation's audience before publishing it.id: reviewer:learning:v1
+kind: annotation
+author: learning-reviewer
+perspective: collaborative-learning
+annotates: [[1.1.1/1.1.1/1.1.1]]
+responds-to: [[1.1.1/1.1.1/2.1.1]]
+
+Visibility helps a study group learn together. Consent could be granted
+for a specific group rather than for every reader.id: reviewer:privacy:v2
+kind: annotation
+revision: 2
+supersedes: [[1.1.1/1.1.1/2.1.1]]
+informed-by: [[1.1.1/1.1.1/2.1.2]]
+annotates: [[1.1.1/1.1.1/1.1.1]]
+
+Revised view: consent can cover a named group and a defined scope.
+Ask again when either changes. Keep the earlier annotation as history.id: merge:visibility-decision:v1
+kind: synthesis-hyperedge
+members: [[1.1.1/1.1.1/1.1.1]], [[1.1.1/1.1.1/2.1.2]], [[1.1.1/1.1.1/2.1.3]]
+proposes: [[1.1.1/1.1.1/3.1.2]]
+
+These three nodes jointly motivate scoped visibility. This synthesis is
+itself an addressable node that another reader can annotate or dispute.
+It records a relationship among several nodes, not merely a pairwise link.id: author:proposal:v2
+kind: passage
+revision: 2
+supersedes: [[1.1.1/1.1.1/1.1.1]]
+derived-from: [[1.1.1/1.1.1/3.1.1]]
+
+AI annotations may be shared with an approved audience. Changes to the
+audience or scope require renewed consent. Earlier versions remain available.MERGING DOCUMENT GRAPHS WITH PHEXT
+
+This is a fictional worked example inspired by a discussion of AI annotations,
+multiple perspectives, temporal evolution, and hypergraphs. It is not a
+transcript or a claim about any real person's position.
+
+Start at 1.1.1/1.1.1/1.1.1. Chapter 1 contains the author's graph A.
+Chapter 2 contains the review graph B, relocated into the merged address space.
+Chapter 3 adds explicit cross-graph synthesis and a revised passage.
+Chapter 4 contains this guide and the relocation map.
+
+Each passage or annotation is a scroll: ordinary UTF-8 text. Actual byte 0x17
+separates scrolls. Actual byte 0x19 separates chapters and resets section and
+scroll counters to 1. All coordinates begin at 1. Only two of Phext's nine
+structural delimiters are needed here. The other dimensions remain available.
+
+Phext supplies boundaries and addresses. The id/kind/annotates/supersedes/
+members fields and double-bracket links are a convention chosen for this
+example, not built-in Phext syntax or automatic graph semantics. Applications
+can choose another vocabulary. Each link here resolves to a scroll in this file.
+
+A scroll can hold a document, but we chose one passage per scroll to make
+annotation targets explicit. For finer-grained anchors, define stable passage
+IDs or versioned text selectors at the application layer.
+
+Read the relocation map at 1.1.1/1.1.1/4.1.2.RELOCATION MAP AND MERGE PROCEDURE
+
+Before merging, A and B are separate files. Both start at the same coordinate.
+Their coordinates are file-local: A::address and B::address are distinct nodes.
+These file-qualified prefixes are an example convention, not native syntax.
+
+Source                                      Destination in merged.phext
+A::1.1.1/1.1.1/1.1.1 (proposal v1)           1.1.1/1.1.1/1.1.1
+A::1.1.1/1.1.1/1.1.2 (rationale)             1.1.1/1.1.1/1.1.2
+B::1.1.1/1.1.1/1.1.1 (privacy v1)            1.1.1/1.1.1/2.1.1
+B::1.1.1/1.1.1/1.1.2 (learning perspective)  1.1.1/1.1.1/2.1.2
+B::1.1.1/1.1.1/1.1.3 (privacy v2)            1.1.1/1.1.1/2.1.3
+
+1. Preserve A's two scrolls in chapter 1.
+2. Insert a chapter delimiter, then B's three scrolls in chapter 2.
+3. Rewrite every declared link using the source-qualified relocation map.
+   B's original privacy v2 supersedes B::1.1.1/1.1.1/1.1.1;
+   after relocation it supersedes [[1.1.1/1.1.1/2.1.1]].
+   Its annotates link targets A::1.1.1/1.1.1/1.1.1;
+   after merging that becomes [[1.1.1/1.1.1/1.1.1]].
+   Without source qualification, these identical numeric addresses would
+   incorrectly collapse the proposal and its privacy review into one node.
+4. Append the synthesis and revised passage as chapter 3.
+5. Verify all declared links resolve and all source IDs remain distinct.
+
+Graph union preserves source nodes and edges; synthesis adds new ones.
+The reviewer changes their position without overwriting their earlier view.
+The original passage remains separately addressable after revision.
+A hyperedge is represented as a scroll listing multiple participating nodes.
+
+This file contains the resulting merged graph, not three separate source files.
+To reconstruct source A, extract chapter 1. To reconstruct source B, extract
+chapter 2 and invert the map on declared links, retaining A:: and B:: qualifiers.
+
+Merge policy: do not silently deduplicate text or equate IDs. Keep conflicting
+versions separately, and record reconciliation explicitly. IDs in this example
+are illustrative; a real system must define identity and version policies.
+Coordinates locate content in a particular layout; they are not permanent IDs.
+Appending within reserved namespaces preserves existing addresses, while
+inserting or moving content can require link relocation or an ID resolver.
+This example demonstrates a deterministic namespace merge, not an automatic
+semantic conflict resolver, access-control system, or CRDT.
+
+Byte layout (labels below are explanatory, not the actual separators):
+A1 <SCROLL> A2 <CHAPTER> B1 <SCROLL> B2 <SCROLL> B3 <CHAPTER>
+Synthesis <SCROLL> Proposal-v2 <CHAPTER> Guide <SCROLL> Map
