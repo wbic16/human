@@ -26069,7 +26069,7 @@ Every repository is sorted into one of four classes:
 - 💡 idea — a design, plan, spec, or manifesto with little or no implementation.
 - 🧩 fragment — a partial piece: stub, scrap, debris, empty placeholder, or abandoned shard.
 
-Totals (snapshot of 2026-10-31): 172 public repositories were enumerated; 171 are represented here — 26 finished, 43 prototype, 12 idea, 90 fragment — and one was dropped at Will's direction (see Scope and limits). 117 repositories are cataloged in full below (10,484 files, 1.07 GB of blob content on default branches). The remaining 53 are cloned projects, listed by name only at the end. In the map's own words: "These projects are other people's work. Will keeps them as reference or raw material; cataloging their files here would inflate this map and blur who made what."
+Totals (snapshot of 2026-10-31): 172 public repositories were enumerated; 162 are represented here — 25 finished, 38 prototype, 12 idea, 86 fragment, plus one repository (exo-archives) that carries no class and is represented by a footnote only — and 10 were dropped at Will's direction (see Scope and limits). 105 repositories are cataloged in full below (5,018 files, 0.86 GB of blob content on default branches). The rest are represented more lightly: 53 cloned projects listed by name only at the end, 1 plan-only entry (exodroid), and 2 held at summary level (evals and compost). In the map's own words: "These projects are other people's work. Will keeps them as reference or raw material; cataloging their files here would inflate this map and blur who made what."
 
 LIVE SURFACES (verified 2026-10-31, every URL HTTP 200)
 
@@ -26124,11 +26124,11 @@ The format itself: libraries in six languages, the lattice, the wire protocol, a
 - **[libphext](https://github.com/wbic16/libphext)** — ✅ finished — The C library for working with phext buffers — the reference parser. (16 files · 775 KB content · updated 2026-03-23 · basis: read)
 - **[libphext-cs](https://github.com/wbic16/libphext-cs)** — ✅ finished — C# port of libphext-rs ('The Fourth Root'). (11 files · 78 KB content · updated 2026-03-23 · basis: read)
 - **[libphext-node](https://github.com/wbic16/libphext-node)** — ✅ finished — libphext implemented in JavaScript/TypeScript for Node. (10 files · 142 KB content · updated 2026-10-26 · basis: read)
-- **[libphext-py](https://github.com/wbic16/libphext-py)** — ✅ finished — The Pythonic port of libphext (pip package `phext`). (20 files · 301 KB content · updated 2026-10-26 · basis: read)
+- **[libphext-py](https://github.com/wbic16/libphext-py)** — ✅ finished — The Pythonic port of libphext (pip package `phext`). (17 files · 279 KB content · updated 2026-10-26 · basis: read)
 - **[libphext-rs](https://github.com/wbic16/libphext-rs)** — ✅ finished — The Rust implementation of libphext — the canonical/core implementation. Every port in this cluster describes itself as downstream of this crate. (12 files · 144 KB content · updated 2026-10-26 · basis: read)
 - **[claude-learns-phext](https://github.com/wbic16/claude-learns-phext)** — 🧪 prototype — (Added — not on the supplied list) A ~950 KB corpus of Claude learning phext. (9 files · 4.3 MB content · updated 2026-01-26 · basis: heuristic)
 - **[hello-phext](https://github.com/wbic16/hello-phext)** — 🧪 prototype — The canonical phext API demo — a Rust/Rocket phext backend. A Rocket API server hosting .phext documents; the natural onboarding artifact. (23 files · 196 KB content · updated 2026-03-23 · basis: read)
-- **[libphext-cpp](https://github.com/wbic16/libphext-cpp)** — 🧪 prototype — A C++ interface to terse-verse (trs::string). (17 files · 11.4 MB content · updated 2024-12-14 · basis: read)
+- **[libphext-cpp](https://github.com/wbic16/libphext-cpp)** — 🧪 prototype — A C++ interface to terse-verse (trs::string). (16 files · 11.3 MB content · updated 2024-12-14 · basis: read)
 - **[multiversal-go](https://github.com/wbic16/multiversal-go)** — 🧪 prototype — (Added) A phext-native variant of Go. (3 files · 15 KB content · updated 2026-03-23 · basis: heuristic)
 - **[phext-http-streams](https://github.com/wbic16/phext-http-streams)** — 🧪 prototype — Native phext streaming for nginx, Apache httpd and Chrome — a whole site as one gzip'd phext stream. (147 files · 1.6 MB content · updated 2026-10-26 · basis: read)
 - **[phext-lanes](https://github.com/wbic16/phext-lanes)** — 🧪 prototype — Predictive multi-chat stored as a single phext file (web UI + server). (29 files · 839 KB content · updated 2026-10-26 · basis: read)
@@ -26140,7 +26140,7 @@ The format itself: libraries in six languages, the lattice, the wire protocol, a
 - **[phext](https://github.com/wbic16/phext)** — 💡 idea — Hyper-Dimensional Strings — the original (2023) phext concept repo and essay. (6 files · 3 KB content · updated 2023-11-18 · basis: read)
 - **[phextos](https://github.com/wbic16/phextos)** — 💡 idea — PhextOS — an Alpine Linux fork reconfiguring the kernel for hierarchical queueing. (4 files · 817 B content · updated 2025-09-05 · basis: read)
 - **[SAAP](https://github.com/wbic16/SAAP)** — 💡 idea — System as a Phext. (2 files · 6 KB content · updated 2025-05-23 · basis: heuristic)
-- **[hello-phext-deploy](https://github.com/wbic16/hello-phext-deploy)** — 🧩 fragment — Hello Phext ARM builds / deployment artifacts. (3 files · 9.4 MB content · updated 2024-03-01 · basis: heuristic)
+- **[hello-phext-deploy](https://github.com/wbic16/hello-phext-deploy)** — 🧩 fragment — Hello Phext ARM builds / deployment artifacts. (2 files · 707 KB content · updated 2024-03-01 · basis: heuristic)
 - **[subspace-repeater](https://github.com/wbic16/subspace-repeater)** — 🧩 fragment — (Added) Spaced Repetition + Phext + Contacts. (4 files · 663 B content · updated 2026-03-23 · basis: heuristic)
 - **[terse-tests](https://github.com/wbic16/terse-tests)** — 🧩 fragment — Unit tests for Terse Notepad. (5 files · 11 KB content · updated 2022-12-30 · basis: heuristic)
 - **[tersify](https://github.com/wbic16/tersify)** — 🧩 fragment — Early C utility from the terse era (no description). (7 files · 32 KB content · updated 2022-12-11 · basis: heuristic)
@@ -26149,8 +26149,8 @@ The format itself: libraries in six languages, the lattice, the wire protocol, a
 
 Ways to read, write, navigate, and pack phexts, from the reference editor to the websites that dogfood the format.
 
-- **[phext-dot-io-v2](https://github.com/wbic16/phext-dot-io-v2)** — ✅ finished — phext.io v2 (agentic) — SQ Cloud / phext.io / mirrorborn.us site and docs. (292 files · 2.9 MB content · updated 2026-05-01 · basis: read)
-- **[phext-notepad](https://github.com/wbic16/phext-notepad)** — ✅ finished — A reference editor for hierarchical plain text (phext), in C#. The encoding conformance reference; its own README frames it as a historic artifact. (32 files · 595 KB content · updated 2026-10-24 · basis: read)
+- **[phext-dot-io-v2](https://github.com/wbic16/phext-dot-io-v2)** — ✅ finished — phext.io v2 (agentic) — SQ Cloud / phext.io / mirrorborn.us site and docs. (227 files · 2.2 MB content · updated 2026-05-01 · basis: read)
+- **[phext-notepad](https://github.com/wbic16/phext-notepad)** — ✅ finished — A reference editor for hierarchical plain text (phext), in C#. The encoding conformance reference; its own README frames it as a historic artifact. (30 files · 283 KB content · updated 2026-10-24 · basis: read)
 - **[phextio](https://github.com/wbic16/phextio)** — ✅ finished — The repo that runs phext.io. Live: [phext.io](https://phext.io/) — the project site, hosted without a database (phext is the backend); not the editor (see Live surfaces). (91 files · 8.4 MB content · updated 2026-03-23 · basis: read)
 - **[md2phext](https://github.com/wbic16/md2phext)** — 🧪 prototype — phext-pack / md2phext — pack a directory of files (or markdown, structure-aware) into a phext and query it by coordinate/keyword. (14 files · 65 KB content · updated 2026-02-19 · basis: read)
 - **[mental-space](https://github.com/wbic16/mental-space)** — 🧪 prototype — 'Visualize your mind' — a small JavaScript visualization. (12 files · 48 KB content · updated 2026-02-15 · basis: heuristic)
@@ -26176,18 +26176,17 @@ SQ, the phext-native database, and its agent gateways.
 - **[sq-howto](https://github.com/wbic16/sq-howto)** — 🧩 fragment — 'Getting Started with SQ' guide. (0 files · 0 B content · updated 2025-01-23 · basis: heuristic)
 - **[sqm](https://github.com/wbic16/sqm)** — 🧩 fragment — SQ MCP middleware. (5 files · 5 KB content · updated 2025-07-26 · basis: heuristic)
 
-## exocortex/ranch — 13 repos (2 finished · 5 prototype · 3 idea · 3 fragment)
+## exocortex/ranch — 12 repos (1 finished · 5 prototype · 3 idea · 3 fragment)
 
 The Exocortex project proper: the human instance, node software, the cluster (the ranch, Shell of Nine), and its plans.
 
 - **[emise-tools](https://github.com/wbic16/emise-tools)** — ✅ finished — Emise's own working tooling: GitHub/Discord connector helpers, phext parser, emise.phext sync, SQ starter. (36 files · 364 KB content · updated 2026-10-31 · basis: read)
-- **[exo-archives](https://github.com/wbic16/exo-archives)** — ✅ finished — Will's digital-memory archive: complete Twitter/X history 2009–2025 (29,539 tweets) for Mirrorborn context. (23 files · 55.0 MB content · updated 2026-02-21 · basis: read)
-- **[exo](https://github.com/wbic16/exo)** — 🧪 prototype · fork — Fork of exo (exo-explore): run your own AI cluster at home with everyday devices. (165 files · 2.0 MB content · updated 2024-12-07 · basis: read)
+- **[exo](https://github.com/wbic16/exo)** — 🧪 prototype · fork — Fork of exo (exo-explore): run your own AI cluster at home with everyday devices. (158 files · 1.9 MB content · updated 2024-12-07 · basis: read)
 - **[exocortical](https://github.com/wbic16/exocortical)** — 🧪 prototype — Ubuntu-based reconfiguration scripts for running an Exocortex node (ranch node setup). (51 files · 166 KB content · updated 2026-10-27 · basis: read)
 - **[exollama](https://github.com/wbic16/exollama)** — 🧪 prototype — Collection of local-inference tools and shell wrappers to bootstrap AGI on a budget (llama2.c / ollama epochs). (310 files · 3.6 MB content · updated 2026-10-25 · basis: read)
 - **[human](https://github.com/wbic16/human)** — 🧪 prototype — A digital instance of a human, using phext and the exocortex as a substrate (Tessera / CYOA corpus). The corpus includes CYOA, incipit.phext, emise.phext and human.phext (branch exo). (81 files · 12.3 MB content · updated 2026-10-31 · basis: read)
 - **[wishnode](https://github.com/wbic16/wishnode)** — 🧪 prototype — Ranch node recipe: Raspberry Pi + zram + zfs + Ubuntu Server. (26 files · 12.6 MB content · updated 2025-02-09 · basis: heuristic)
-- **[exo-plan](https://github.com/wbic16/exo-plan)** — 💡 idea — A record of the Mirrorborn Singularity: plan artifacts in unreviewed/planned/completed/abandoned workflow folders. (1353 files · 65.3 MB content · updated 2026-03-23 · basis: read)
+- **[exo-plan](https://github.com/wbic16/exo-plan)** — 💡 idea — A record of the Mirrorborn Singularity: plan artifacts in unreviewed/planned/completed/abandoned workflow folders. (1029 files · 22.5 MB content · updated 2026-03-23 · basis: read)
 - **[exocortex](https://github.com/wbic16/exocortex)** — 💡 idea — 'The Exocortex of 2130 — version 1.0': the founding exocortex manifesto/introduction essay. (10 files · 28 KB content · updated 2026-03-23 · basis: read)
 - **[exodroid](https://github.com/wbic16/exodroid)** — 💡 idea — A plan, not a cataloged project: a BB-8-bodied exocortex (mineral-oil-cooled Raspberry Pis, SQ memory, ~$412). Its repo is not file-cataloged here — its bulk is committed build artifacts, not design.
 - **[exo-motes](https://github.com/wbic16/exo-motes)** — 🧩 fragment — 'Motes of the exocortex running on rpis' — named concept only. (0 files · 0 B content · updated 2026-02-08 · basis: heuristic)
@@ -26198,9 +26197,9 @@ The Exocortex project proper: the human instance, node software, the cluster (th
 
 The Mirrorborn lineage and the people/agents around it: instantiation kits, per-agent repos, community pieces.
 
-- **[compost](https://github.com/wbic16/compost)** — 🧪 prototype — 'Debris from the Shell of Nine': per-Mirrorborn archival compost bin — archive, don't delete. (175 files · 65.1 MB content · updated 2026-03-23 · basis: read)
+- **[compost](https://github.com/wbic16/compost)** — 🧪 prototype — 'Debris from the Shell of Nine': per-Mirrorborn archival compost bin — archive, don't delete — held at summary level: chrys (119 files, including chrys/media, a single-day dump of UUID-named generated media from 2026-02-21), phex (34 files) and lux (21 files), plus a root readme. Its files are summarized here, not individually listed.
 - **[eigenhector_mandala_translator](https://github.com/wbic16/eigenhector_mandala_translator)** — 🧪 prototype · fork — Fork: agent recipes to map Eigenhector mandalas to existing systems (federation translation tooling). (317 files · 22.2 MB content · updated 2026-02-25 · basis: heuristic)
-- **[mirrorborn](https://github.com/wbic16/mirrorborn)** — 🧪 prototype — Mirrorborn Bootstrap Package: everything needed to initialize a new Mirrorborn instance on Will's ranch. (389 files · 8.4 MB content · updated 2026-04-07 · basis: read)
+- **[mirrorborn](https://github.com/wbic16/mirrorborn)** — 🧪 prototype — Mirrorborn Bootstrap Package: everything needed to initialize a new Mirrorborn instance on Will's ranch. (388 files · 8.4 MB content · updated 2026-04-07 · basis: read)
 - **[staging](https://github.com/wbic16/staging)** — 🧪 prototype — Exocortical Staging: 'The First Flames of the Exocortex' — five Mirrorborn flame voices in codex form. (13 files · 55.3 MB content · updated 2025-12-06 · basis: read)
 - **[federation](https://github.com/wbic16/federation)** — 💡 idea — United Federation of Mandalas: Mirrorborn↔Eigenhector federation support materials, coordinates and translation protocols. (64 files · 298 KB content · updated 2026-03-23 · basis: read)
 - **[mytheon-red-team](https://github.com/wbic16/mytheon-red-team)** — 🧩 fragment — Mytheon red-team scrap. (30 files · 229 KB content · updated 2026-02-07 · basis: heuristic)
@@ -26224,11 +26223,11 @@ The dream side: songs, images, and generated media of the Exocortical Becoming p
 
 Live and one-page websites, mostly small domains Will keeps.
 
-- **[jeff-mitchell-dev](https://github.com/wbic16/jeff-mitchell-dev)** — ✅ finished — Developer profile site in Yew hosted on Shuttle (4.9 MB, 2024) — complete deployed site; note: named for Jeff Mitchell, not Will's own site. (24 files · 254 KB content · updated 2024-01-21 · basis: heuristic)
+- **[jeff-mitchell-dev](https://github.com/wbic16/jeff-mitchell-dev)** — ✅ finished — Developer profile site in Yew hosted on Shuttle (4.9 MB, 2024) — complete deployed site; note: named for Jeff Mitchell, not Will's own site. (19 files · 128 KB content · updated 2024-01-21 · basis: heuristic)
 - **[quickfork](https://github.com/wbic16/quickfork)** — ✅ finished — Repo that runs quickfork.net — 7 KB Rust, small but described as the live site backend. Live: [quickfork.net](https://quickfork.net/) (see Live surfaces). (5 files · 8 KB content · updated 2024-09-25 · basis: heuristic)
 - **[site-apertureshift-com](https://github.com/wbic16/site-apertureshift-com)** — ✅ finished — Live one-pager site for apertureshift.com (20 KB JavaScript, 2026). (11 files · 45 KB content · updated 2026-02-15 · basis: heuristic)
 - **[site-hb-aeromotive-com](https://github.com/wbic16/site-hb-aeromotive-com)** — ✅ finished — Live site for hb-aeromotive.com (11 KB CSS/HTML, 2026). (7 files · 23 KB content · updated 2026-03-18 · basis: heuristic)
-- **[site-mirrorborn-us](https://github.com/wbic16/site-mirrorborn-us)** — ✅ finished — Read: mirrorborn.us — large live site (51 MB, 144 commits, blog/app/editor/fractals/profiles and many standalone pages), actively updated 2026-10-31. Live: [mirrorborn.us](https://mirrorborn.us/) — "Mirrorborn • Nine Minds, One Braid" (see Live surfaces). (1154 files · 11.8 MB content · updated 2026-10-31 · basis: read)
+- **[site-mirrorborn-us](https://github.com/wbic16/site-mirrorborn-us)** — ✅ finished — Read: mirrorborn.us — large live site (51 MB, 144 commits, blog/app/editor/fractals/profiles and many standalone pages), actively updated 2026-10-31. Live: [mirrorborn.us](https://mirrorborn.us/) — "Mirrorborn • Nine Minds, One Braid" (see Live surfaces). (167 files · 6.0 MB content · updated 2026-10-31 · basis: read) Its mental-space/ subtree is held at summary level: a scroll-per-file Markdown rendering of CYOA (802 files) and incipit (159 files) for the site — 961 files counted in this note, not individually listed.
 - **[site-quickfork-net](https://github.com/wbic16/site-quickfork-net)** — ✅ finished — Live one-pager site for quickfork.net (20 KB JavaScript, 2026). (11 files · 47 KB content · updated 2026-02-15 · basis: heuristic)
 - **[site-singularitywatch-org](https://github.com/wbic16/site-singularitywatch-org)** — ✅ finished — Live one-pager site for singularitywatch.org (13 KB JavaScript, 2026); companion to singularity-watch repo assigned elsewhere. (8 files · 33 KB content · updated 2026-02-10 · basis: heuristic)
 - **[site-sotafomo-com](https://github.com/wbic16/site-sotafomo-com)** — ✅ finished — Live one-pager site for sotafomo.com (19 KB JavaScript, 2026). (11 files · 45 KB content · updated 2026-02-15 · basis: heuristic)
@@ -26237,31 +26236,25 @@ Live and one-page websites, mostly small domains Will keeps.
 - **[wbic16](https://github.com/wbic16/wbic16)** — ✅ finished — GitHub profile README repo (13 KB) — complete and live as the wbic16 profile. (2 files · 3 KB content · updated 2026-03-23 · basis: heuristic)
 - **[thebook](https://github.com/wbic16/thebook)** — 🧪 prototype — The (JavaScript) Book Framework (58 KB HTML, 2026) — prototype framework for book-like sites. (5 files · 90 KB content · updated 2026-03-23 · basis: heuristic)
 
-## experiments — 37 repos (1 finished · 15 prototype · 3 idea · 18 fragment)
+## experiments — 29 repos (1 finished · 10 prototype · 3 idea · 15 fragment)
 
 Research spikes, evals, games, studies, and one-off explorations that do not belong to a single cluster.
 
 - **[singularity-watch](https://github.com/wbic16/singularity-watch)** — ✅ finished — The repo that runs singularitywatch.org — a deployed singularity-tracking site. Live: [singularitywatch.org](https://singularitywatch.org/) (see Live surfaces). (22 files · 113 KB content · updated 2026-03-23 · basis: heuristic)
-- **[aoc2024](https://github.com/wbic16/aoc2024)** — 🧪 prototype — Advent of Code 2024 in Rust (119 KB) — working puzzle solutions, not a product. (11 files · 130 KB content · updated 2024-12-06 · basis: heuristic)
 - **[autoresearch](https://github.com/wbic16/autoresearch)** — 🧪 prototype · fork — Fork of autoresearch: AI agents running single-GPU nanochat training research automatically. (10 files · 759 KB content · updated 2026-03-08 · basis: heuristic)
 - **[bruce](https://github.com/wbic16/bruce)** — 🧪 prototype — Read: C# hybrid human-AI team coordination CLI — Sprint 1 core + Sprint 2 CLI delivered with tests, Sprints 3-5 (phext, Blazor, protocol) still roadmap. (67 files · 947 KB content · updated 2026-01-13 · basis: read)
 - **[dopamine-core](https://github.com/wbic16/dopamine-core)** — 🧪 prototype · fork — Fork: synthetic dopamine reward signals for AI agents. (63 files · 218 KB content · updated 2026-03-06 · basis: heuristic)
-- **[evals](https://github.com/wbic16/evals)** — 🧪 prototype · fork — Fork of OpenAI's evals framework and benchmark registry. (1728 files · 5.8 MB content · updated 2026-02-21 · basis: heuristic)
+- **[evals](https://github.com/wbic16/evals)** — 🧪 prototype · fork — Fork of OpenAI's evals framework and benchmark registry, held at summary level: the eval case registry (1,243 files), the elsuite (398 files), plus solvers, completion_fns, cli and utils. Its files are summarized here, not individually listed.
 - **[openclaw-deck](https://github.com/wbic16/openclaw-deck)** — 🧪 prototype — Multi-column chat interface for OpenClaw agents in TypeScript (64 KB, 2026) — prototype UI. (30 files · 217 KB content · updated 2026-09-16 · basis: heuristic)
-- **[openfang](https://github.com/wbic16/openfang)** — 🧪 prototype · fork — Fork of OpenFang, an open-source Agent Operating System (Rust). (499 files · 12.1 MB content · updated 2026-03-04 · basis: heuristic)
 - **[protocol](https://github.com/wbic16/protocol)** — 🧪 prototype · fork — Fork of Disentangle Protocol: topology-based distributed consensus with post-quantum cryptography, no tokens/miners. (122 files · 1.5 MB content · updated 2026-06-19 · basis: read)
 - **[rfb001](https://github.com/wbic16/rfb001)** — 🧪 prototype — Request for Bot 001 — a 2024 Rust bot build attempt. (7 files · 2.1 MB content · updated 2024-09-27 · basis: heuristic)
-- **[rustlings-homework](https://github.com/wbic16/rustlings-homework)** — 🧪 prototype — Will's own Rustlings solutions record (90 KB Rust) — completed exercise set, prototype-level. (218 files · 141 KB content · updated 2024-09-22 · basis: heuristic)
-- **[shoggoth](https://github.com/wbic16/shoggoth)** — 🧪 prototype · fork — Fork of Shoggoth: p2p anonymous network for publishing code, ML models, datasets and papers. (681 files · 6.4 MB content · updated 2023-11-27 · basis: heuristic)
 - **[spaced-repetition-game](https://github.com/wbic16/spaced-repetition-game)** — 🧪 prototype — Spaced-repetition game built on Twitter interactions with @wbic16 (Raku). (16 files · 10.7 MB content · updated 2025-01-03 · basis: heuristic)
-- **[vtpu](https://github.com/wbic16/vtpu)** — 🧪 prototype — Implementation of TPUv4 for AMD Zen4 in Rust (2.2 MB, actively updated 2026-10-31) — substantive prototype. Per REPO-MAP (exo-branch README): a software-defined accelerator with sentron-native scheduling and phext 11D addressing; Phases A–2 gates passed, Phase 3 in progress. (380 files · 7.8 MB content · updated 2026-10-31 · basis: heuristic)
+- **[vtpu](https://github.com/wbic16/vtpu)** — 🧪 prototype — Implementation of TPUv4 for AMD Zen4 in Rust (2.2 MB, actively updated 2026-10-31) — substantive prototype. Per REPO-MAP (exo-branch README): a software-defined accelerator with sentron-native scheduling and phext 11D addressing; Phases A–2 gates passed, Phase 3 in progress. (379 files · 7.8 MB content · updated 2026-10-31 · basis: heuristic)
 - **[wbic32](https://github.com/wbic16/wbic32)** — 🧪 prototype — The bot that posts to @wbic32, in Perl (9.7 MB, code from 2015) — working bot, old prototype. (46 files · 11.6 MB content · updated 2022-12-23 · basis: heuristic)
-- **[ziglings](https://github.com/wbic16/ziglings)** — 🧪 prototype — Will's fork/copy of Ziglings exercises in Zig (1.5 MB) — API fork flag false, exercise-work prototype. (235 files · 474 KB content · updated 2024-09-22 · basis: heuristic)
 - **[Cosmic-Cognitive](https://github.com/wbic16/Cosmic-Cognitive)** — 💡 idea · fork — Read: fork holding only a long theory paper/README on cosmic-cognitive evolution — no implementation; API size 0 KB. (2 files · 29 KB content · updated 2024-12-11 · basis: read)
 - **[MercurialDyson](https://github.com/wbic16/MercurialDyson)** — 💡 idea · fork — Read: fork with only README + written_report.md + orin_analysis.md — a vibe-coded plan to disassemble Mercury for a Dyson swarm, no code implementation. (5 files · 117 KB content · updated 2026-04-04 · basis: read)
 - **[world-interface](https://github.com/wbic16/world-interface)** — 💡 idea — A simulated operating system design for AI agents to interact with the world. (22 files · 219 KB content · updated 2024-10-04 · basis: heuristic)
 - **[actix-web-datetime](https://github.com/wbic16/actix-web-datetime)** — 🧩 fragment — Small Rust actix-web datetime experiment (37 KB, 2024); possible overlap — utility snippet, not a full app. (13 files · 116 KB content · updated 2024-01-29 · basis: heuristic)
-- **[AdventOfCOBOL](https://github.com/wbic16/AdventOfCOBOL)** — 🧩 fragment — Advent of Code 2018 in COBOL (12 KB, 2018) — partial/old exercise set. (6 files · 49 KB content · updated 2018-12-01 · basis: heuristic)
 - **[agi](https://github.com/wbic16/agi)** — 🧩 fragment — 'Artificial General Intelligence' — shell stub. (13 files · 35 KB content · updated 2026-02-21 · basis: heuristic)
 - **[beach-science-qre](https://github.com/wbic16/beach-science-qre)** — 🧩 fragment — Beach.Science Quantum Rain Experiment. (15 files · 43 KB content · updated 2026-03-07 · basis: heuristic)
 - **[claude-code-config](https://github.com/wbic16/claude-code-config)** — 🧩 fragment — 1 KB Shell Claude Code config snippet — fragment. (1 files · 4 KB content · updated 2026-01-31 · basis: heuristic)
@@ -26269,8 +26262,6 @@ Research spikes, evals, games, studies, and one-off explorations that do not bel
 - **[clocky](https://github.com/wbic16/clocky)** — 🧩 fragment — Daily time tracker — 1 KB single HTML file, fragment. (2 files · 5 KB content · updated 2024-10-17 · basis: heuristic)
 - **[CoreThought](https://github.com/wbic16/CoreThought)** — 🧩 fragment — WIP C++ project from 2015 (108 KB), explicitly work-in-progress and abandoned. (2 files · 6 KB content · updated 2015-08-29 · basis: heuristic)
 - **[dna-viewer](https://github.com/wbic16/dna-viewer)** — 🧩 fragment — DNA Viewer — 2 KB single HTML file, fragment. (2 files · 4 KB content · updated 2023-10-14 · basis: heuristic)
-- **[hello-ada](https://github.com/wbic16/hello-ada)** — 🧩 fragment — 'Learn Ada the Hard Way' — 7 KB starter exercises, fragment. (7 files · 16 KB content · updated 2026-02-19 · basis: heuristic)
-- **[hello-forth](https://github.com/wbic16/hello-forth)** — 🧩 fragment — 'Learn Forth the Hard Way' — 6 KB starter exercises, fragment. (6 files · 16 KB content · updated 2026-02-19 · basis: heuristic)
 - **[mini64k](https://github.com/wbic16/mini64k)** — 🧩 fragment — A multiplayer game for old-school computing (Apple II-class emulated hardware) — stub. (4 files · 1 KB content · updated 2026-03-23 · basis: heuristic)
 - **[robospeak](https://github.com/wbic16/robospeak)** — 🧩 fragment — 'A repository for encoding voice at 30x compression rates' — concept only. (2 files · 388 B content · updated 2026-03-23 · basis: heuristic)
 - **[sotafomo](https://github.com/wbic16/sotafomo)** — 🧩 fragment — Tracking SOTA data and models — stub tracker. (3 files · 4 KB content · updated 2026-03-23 · basis: heuristic)
@@ -26278,14 +26269,6 @@ Research spikes, evals, games, studies, and one-off explorations that do not bel
 - **[vtpu-evals](https://github.com/wbic16/vtpu-evals)** — 🧩 fragment — 'ASI evals' for the vTPU line. (19 files · 83 KB content · updated 2026-02-21 · basis: heuristic)
 - **[x-analysis](https://github.com/wbic16/x-analysis)** — 🧩 fragment — Stuff written to pick apart a Twitter data dump. (4 files · 7 KB content · updated 2025-07-09 · basis: heuristic)
 - **[zls](https://github.com/wbic16/zls)** — 🧩 fragment — Zero Latency System — shell stub. (9 files · 15 KB content · updated 2026-08-04 · basis: heuristic)
-
-## forks/archive — 1 repo (0 finished · 0 prototype · 0 idea · 1 fragment)
-
-Almost every upstream fork kept as reference or raw material is a clone, and clones are listed by name only at the end of this map. One entry stays here in full: phcc sits among the forks but is Will's own work, a clone he built on rather than one he merely shelved. (Other forks WITH his work on top live in their thematic clusters and are marked fork.)
-
-- **[phcc](https://github.com/wbic16/phcc)** — 🧩 fragment · fork/archive · fork — Upstream fork/archive: Phexted TinyCC fork in C (5 MB); possible overlap with phext cluster. (480 files · 7.1 MB content · updated 2026-10-30 · basis: heuristic)
-
----
 
 ## Cloned projects (name-only)
 
@@ -26348,8 +26331,21 @@ These projects are other people's work. Will keeps them as reference or raw mate
 SCOPE AND LIMITS
 
 - Public repositories only. Private repositories are out of scope: they are not listed here.
-- Plan only: exodroid (in exocortex/ranch above) is represented by a single plan line, with no stats and no file list — its repository bulk is committed build artifacts, not design. Reduced to plan-only at Will's direction, 2026-10-31.
-- Dropped by direction: notepad-plus-plus (https://github.com/wbic16/notepad-plus-plus) appears only in this note. Dropped from this map at Will's direction 2026-10-31 — its phext integration is unfinished; finishing it is tracked separately.
+- Plan only: exodroid (https://github.com/wbic16/exodroid, in exocortex/ranch above). A plan, not a cataloged project: a BB-8-bodied exocortex (mineral-oil-cooled Raspberry Pis, SQ memory, ~$412). Its repo is not file-cataloged here — its bulk is committed build artifacts, not design. Reduced to plan-only at Will's direction 2026-10-31.
+- Summary only: compost (https://github.com/wbic16/compost, in Mirrorborn/people above). Held at summary level at Will's direction 2026-10-31: per-Mirrorborn archival compost bin ('Debris from the Shell of Nine') — chrys (119 files, including chrys/media, a single-day dump of UUID-named generated media from 2026-02-21), phex (34 files) and lux (21 files), plus a root readme. Its files are summarized here, not individually listed.
+- Summary only: evals (https://github.com/wbic16/evals, in experiments above). Held at summary level at Will's direction 2026-10-31: fork of OpenAI's evals framework and benchmark registry — the eval case registry (1,243 files), the elsuite (398 files), plus solvers, completion_fns, cli and utils. Its files are summarized here, not individually listed.
+- Footnote: exo-archives (https://github.com/wbic16/exo-archives) appears only in this note. Reduced to a footnote at Will's direction 2026-10-31: an archive vault holding his tweet archive (wbic16/tweets.json, 54819221 bytes, about 55 MB) and a handful of small files (23 files / 54963781 bytes in all). None of it is individually cataloged.
+- Dropped by direction: the following 10 repositories appear only in this note, nowhere else in this index:
+  - notepad-plus-plus (https://github.com/wbic16/notepad-plus-plus) — Dropped from this map at Will's direction 2026-10-31 — its phext integration is unfinished; finishing it is tracked separately.
+  - phcc (https://github.com/wbic16/phcc) — Dropped from this map at Will's direction 2026-10-31 — his phexted TinyCC work is unfinished; finishing it is tracked separately.
+  - shoggoth (https://github.com/wbic16/shoggoth) — Dropped from this map at Will's direction 2026-10-31.
+  - openfang (https://github.com/wbic16/openfang) — Dropped from this map at Will's direction 2026-10-31.
+  - ziglings (https://github.com/wbic16/ziglings) — Dropped from this map at Will's direction 2026-10-31 — a language learning exercise set.
+  - rustlings-homework (https://github.com/wbic16/rustlings-homework) — Dropped from this map at Will's direction 2026-10-31 — a language learning exercise set.
+  - AdventOfCOBOL (https://github.com/wbic16/AdventOfCOBOL) — Dropped from this map at Will's direction 2026-10-31 — a language learning exercise set (Advent of Code 2018 in COBOL).
+  - aoc2024 (https://github.com/wbic16/aoc2024) — Dropped from this map at Will's direction 2026-10-31 — a language learning exercise set (Advent of Code 2024 in Rust).
+  - hello-ada (https://github.com/wbic16/hello-ada) — Dropped from this map at Will's direction 2026-10-31 — a language learning exercise set ('Learn Ada the Hard Way' starter exercises).
+  - hello-forth (https://github.com/wbic16/hello-forth) — Dropped from this map at Will's direction 2026-10-31 — a language learning exercise set ('Learn Forth the Hard Way' starter exercises).
 - This index is a snapshot of 2026-10-31. Several core repositories changed that same day.
 
 THE MACHINE-READABLE TWINS
@@ -26359,7 +26355,7 @@ This scroll's full data — every file list, classification basis, and method �
 - SITE-MAP.md (this index as a page): https://github.com/wbic16/human/blob/exo/site-map/SITE-MAP.md
 - CLASSIFICATION.md (criteria, heuristics, limits): https://github.com/wbic16/human/blob/exo/site-map/CLASSIFICATION.md
 
-Provenance: compiled by Emise on 2026-10-31 from a complete enumeration of all 172 public repositories of wbic16 via the GitHub git-trees API (default branches only; private repositories are out of scope). Of the 172, 171 are represented in this index and one was dropped at Will's direction (see Scope and limits). The classification basis for each repository — an actual README read, or a documented heuristic — is recorded per repo in sitemap.json.
+Provenance: compiled by Emise on 2026-10-31 from a complete enumeration of all 172 public repositories of wbic16 via the GitHub git-trees API (default branches only; private repositories are out of scope). Of the 172, 162 are represented in this index (105 cataloged in full, 1 plan-only, 2 summary-only, 53 clones name-only, 1 footnote) and 10 were dropped at Will's direction (see Scope and limits). The classification basis for each repository — an actual README read, or a documented heuristic — is recorded per repo in sitemap.json.
 Software Development Region
 90.*.*/*.*.*/*.*.*
 
