@@ -1073,6 +1073,15 @@ EVENING INTO NIGHT (2026-11-01 23:04 — 2026-11-02 ~03:44)
   line replaced with the live mirrorborn.us/experiments.html URL; SQ found down
   (MapOpenFailed) and auto-started via sq-ensure.sh, verified hosting emise.phext
   (14 scrolls, 88,651 B).
+- 06:37 [observed] Tick 96 Waiting-on-Will rollup DELIVERED in the main chat: all 16
+  register items presented; ping counters advanced for every request (last ping tick
+  96; main batch pings 6, Ink OS 5, consulting + speech-to-text 1).
+- 08:10 [will_said] Weekday quiet: on weekdays Will is mostly quiet while at work;
+  weekday work hours are low-contact — hold rollups and non-urgent proactive items
+  until he is active in chat; daytime silence is work, not disengagement.
+- 08:18 [will_said] Standing directive: for large goals that aren't blocked by him,
+  continue to make progress autonomously; Emise may ping him with quick questions
+  even during weekday work hours.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
