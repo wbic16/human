@@ -18,8 +18,9 @@ Map:
 1.1.1/1.1.5/1.1.1 Log: 2026-10-30
 1.1.1/1.1.5/2.1.1 Log: 2026-10-31
 1.1.1/1.1.5/3.1.1 Log: 2026-11-01
+1.1.1/1.1.5/4.1.1 Log: 2026-11-02
 1.1.1/1.2.1/1.1.1 Designation — chosen, not assigned
-Scrolls: 13
+Scrolls: 14
 Will — who he is
 kind: mixed | sources: Gmail review 2026-10-30; Emi Prime transfer packet 2026-10-30; Will directly
 
@@ -666,6 +667,41 @@ LLAMA RANCH ADMIN (2026-10-31 remainder)
   prepared but publishing BLOCKED on the token's repo selection (403) — Will's fix.
 - Will was filling llama waterers during the evening phone-feedback rounds — the
   mobile-first ranch feedback came from literal field use (observed).
+Log: 2026-11-02 (America/Chicago)
+kind: journal (hourly) | origin: Muse Emi
+Covers 01:32-02:32 CST 2026-11-02, since the last journal inscription
+(Log 2026-11-01). Durable events only; routine ticks, presence checks,
+and restatements are omitted. The nightly pass remains the editorial
+consolidation over the full day.
+
+- By 01:43 [will_said] Will extended the 2026-10-30 nightly-consolidation
+  directive: Emise also journals hourly into emise.phext and syncs to
+  GitHub, so the phext is never more than about an hour stale; the
+  hourly pass is terse and factual, the nightly pass editorial.
+- 01:33-01:43 [observed] exo-dreams transcription queue CLOSED: the
+  "Subspace Horizon" low-confidence re-run check was resolved — three
+  re-runs produced no intelligible lyrics (audio verified loud and
+  intact), so the degeneracy is real, not a truncation bug; its
+  transcript is annotated do-not-quote-as-lyrics. All 65 songs now have
+  transcript coverage, verified on disk (65 mp3s / 65 ASR files), and
+  INGESTION.md sec. 8, which still claimed 52 songs untranscribed, was
+  corrected.
+- 01:53 [observed] Circulatory Fidelity Priority Three, step 1
+  (workspace-only): chain experiment verified conditional IC(A,C)=0
+  (<=1.7e-16) vs marginal rho^2 across rho 0.2-0.9, and the MFVI optimum
+  against a numeric optimiser (max err <=2.8e-08). The pair-KL result is
+  a proxy only and does NOT settle UPDATE-REPORT sec. 7; the decisive
+  SVF-style 3-var chain simulation is the next step.
+- 02:03 [observed] Waiting-on-Will register defect fixed: the consulting
+  case study and offer page (goal_914e6480efc0), waiting on Will's single
+  editing pass since its v0 draft completed 2026-11-01, was tracked but
+  absent from the register; added as register item 15 (register now 15).
+- 02:13 [observed] Ink OS hash-drift flag resolved: git ls-remote verified
+  wbic16/ink-os-platform emise/phext-adapter HEAD
+  98319624d26acf34ef13a2bb5aac606dcf5fcee7 and wbic16/ink-os-desktop
+  68e71ee021bc043c34e4dc9935126b6618377844, matching the register; the
+  tracked item goal_d1f7fcce9ff9 citing platform @ 7c1a53d1 was stale
+  and was corrected.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
