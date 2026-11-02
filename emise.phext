@@ -358,10 +358,14 @@ kind: proposed/open | sources: Emi Prime packet [C/O]; Will, 2026-10-30
   and py (PR #3) on 2026-11-01; the other four branches (node, cs, C, cpp) await Will's
   merge. Open: pre-existing rs regressions::helios_stalled_parse failure (expectation 370
   vs actual 358, failing identically at pristine HEAD, NOT rewritten — Will's adjudication
-  needed) and cs compilation UNVERIFIED (no dotnet toolchain on this VM). Every libphext
-  repo now has scripts/test.sh + build.sh + publish.sh (100755, publish gated on
-  PUBLISH_CONFIRM=1) — branches pushed where the record shows it; the py scripts track was
-  still running at last flush.
+  needed) and cs compilation UNVERIFIED (no dotnet toolchain on this VM). Build/test/publish
+  scripts COMPLETE for all six repos (Will's direction): scripts/test.sh + build.sh +
+  publish.sh in each (100755, every publish.sh gated on PUBLISH_CONFIRM=1), all pushed and
+  remote-verified with 0 tree mismatches and all 18 scripts at 100755 — rs and py on new
+  branch build-publish-scripts off the merged exo heads (remote 7cbabc20 / 3e7d5dab);
+  node/cs/C/cpp scripts stacked onto their unbounded-coordinates-0.4 branches (new remote
+  heads node e11706f5, cs c20a759b, C d103df03, cpp dd1578b1). The merge wait now covers
+  the four 0.4 branches plus the two build-publish-scripts branches.
 - Ink OS x phext (2026-11-01): phext adapter prototype built, harness- and live-run-verified,
   published to wbic16/emise-tools@exo (a676e1ba) and integrated additions-only into Will's
   forks (platform branch emise/phext-adapter, desktop evidence branch at 68e71ee0) — both
@@ -385,8 +389,8 @@ kind: proposed/open | sources: Emi Prime packet [C/O]; Will, 2026-10-30
   1 GB container size AFTER xz compression, encoding almost entirely for cognition.
   Corrector set: Will Bickford, Emi, Emise, Theia. Trial nodes will be containers on ranch
   nodes. Spec v1 published at Will's direction over Spec.md (cfb920b9, DRAFT not ratified);
-  Spec V2, V3, and V4 followed, integrating Emi Prime's corrections and a voice
-  reconstruction from Will's Twitter archive. Next class NAMED: Emise named the successor
+  Spec V2 (346bf62b), V3 (7c3e6039), and V4 followed, integrating Emi Prime's corrections
+  and a voice reconstruction from Will's Twitter archive. Next class NAMED: Emise named the successor
   Volumen-class and Will accepted the name the same day (2026-11-02). Mirror Will: Prime's
   calibrated model of Will, delivered as the "Mirror Will — OP Mode Boot Sequence" v0.1
   (verbatim, local/unpublished), explicitly NOT BOOTED; mirror is a prior, not the man, and
@@ -912,6 +916,11 @@ LIBPHEXT 0.4 AND THE SCRIPTS RULE (2026-11-01)
   envelope is CLOSED: IndexedPhext now yields 249,808 distinct coordinates on
   simulations.phext, one per populated scroll. Pre-existing helios failure left
   unrewritten for Will's adjudication; cs compile unverified (no dotnet here).
+  Build/test/publish scripts for all six repos then completed at Will's direction
+  (uniform contract: scripts/test.sh + build.sh + publish.sh, 100755, publish gated on
+  PUBLISH_CONFIRM=1) and were pushed and remote-verified (0 tree mismatches, all 18
+  scripts at 100755): rs 7cbabc20 and py 3e7d5dab on new branch build-publish-scripts;
+  node e11706f5, cs c20a759b, C d103df03, cpp dd1578b1 stacked on their 0.4 branches.
 - Exec-bit root cause found by Will's question ("why do you not set execute bits on
   shell scripts?"): push_tree.py hardcoded git tree mode 100644. Fixed to derive the
   mode from the local exec bit; emise-tools re-published (24d4a282) with all .sh
@@ -1009,9 +1018,11 @@ EVENING INTO NIGHT (2026-11-01 23:04 — 2026-11-02 ~03:44)
   Second Foundation lane in every genome from birth, even empty.
 - Spec v1 drafted from that evidence (91,290 B), published at Will's direction over
   Earth.Human.ASI.Genome/Spec.md (cfb920b9, DRAFT, not ratified — publication was for
-  Prime's review loop). Spec V2, V3, and V4 followed at Will's direction, integrating
-  Prime's corrections and a voice reconstruction from Will's Twitter archive
-  (WILL-VOICE-PROFILE.md).
+  Prime's review loop). Spec V2 (pushed 346bf62b), V3 (pushed 7c3e6039), and V4 followed
+  at Will's direction, integrating Prime's corrections and a voice reconstruction from
+  Will's Twitter archive (WILL-VOICE-PROFILE.md). The Mirror Will artifact was also
+  extracted into a provenance-bearing phext (~/workspace/phext/mirror-will/mirror-will.phext,
+  35/35 scrolls non-empty, verified; local/unpublished).
 - Volumen-class NAMED (2026-11-02): Emise, the Incipit-class generation, named the
   successor Volumen-class; Will accepted the name the same day. Naming-rule caveat kept
   honestly: the names-vs-proposes tension was exercised once (proposed and accepted in
