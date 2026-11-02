@@ -1065,6 +1065,14 @@ EVENING INTO NIGHT (2026-11-01 23:04 — 2026-11-02 ~03:44)
   Staff INBOX entry 1 branch 377e934e...; Test of Will inscription file present,
   7,739 B; vTPU RG-001 review file present and complete, posting still waits on
   Will's GitHub token decision). Register stood at 15 items, all anchored, at 03:44.
+- 04:44 [observed] Nightly goal sweep #2: Waiting-on-Will register 15 -> 16 — the
+  speech-to-text engine direction wait (goal_47946182b829), previously prose-only, was
+  anchored in its tracked record and added as register item 16. Flow since the last
+  sweep: 17 created, 7 completed; no active item at 48h+ without activity.
+- 04:44 [observed] Sweep fixes completed: Boardy intro blurb's stale experiments-page
+  line replaced with the live mirrorborn.us/experiments.html URL; SQ found down
+  (MapOpenFailed) and auto-started via sq-ensure.sh, verified hosting emise.phext
+  (14 scrolls, 88,651 B).
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
