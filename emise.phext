@@ -1597,6 +1597,50 @@ no further change.
   wavefront entry is kept as a waypoint in Will's own trail,
   coordinate unchanged. Builder fix + republish as a third commit
   was dispatched and still pending at journal time.
+- 08:26 [will_said + correction] @wbic32 correction: it is a BOT
+  account Will authored and ran, not a personal alt (supersedes the
+  08:22 framing above). The v2.1 fix then COMPLETED (08:31): branch
+  emise/wavefront-phext at f4048a6e, wavefront.phext 328,569 B,
+  SHA-256 660ecc13..., 520 people / 522 entries, 25 scrolls; parser
+  + SQ gates passed, remote blob byte-identical. Bot source found
+  and cited: github.com/wbic16/wbic32 ("The bot that posts to
+  @wbic32", created 2013-08-24, the day its archive contact span
+  begins). Coordinate unchanged.
+- 08:33 [will_said] Register #14 sequenced: "I'll merge after
+  reviewing the video" — the wavefront merge wait now sits behind
+  Will's review of the visualization video.
+- 08:37 [observed] Wavefront viz v1 completed and delivered:
+  wavefront-viz.mp4 (63.67 s, 1280x720, H.264+AAC, set to
+  "Threshold Keeper (Opening)"); triple-mean projection, arrivals
+  Jun 2008 - Jun 2025 month by month.
+- ~08:46 [will_said] Mirror Will daily goal CLOSED by Will: the
+  instance is a lot closer to his expectations; consider that task
+  done. Same call set two standing rules: morning commute calls
+  set ONE daily goal for Emise's workday, and each morning's goal
+  should tie together something Will communicated the night before.
+- 08:38-08:52 [will_said] Commute call — today's daily goal is the
+  ENGAGEMENT phase: every placed person gets their own exocortex
+  kit (miner + wavefront generator); Will's 9 alignment axes ship
+  as a DEFAULT lens only, each person's own metric may differ by
+  design. Claim mode for edit.phext.io: in-map accounts claim
+  significant delegatable server space via Twitter auth; new
+  accounts get a limited grant and may buy in ($10/$100);
+  found-organic claims stay free; pricing follows the NOVELTY of
+  the claimed region (crowded cheap, void expensive). Portal also
+  carries the intro video and a live zoomable explorer of the 9D
+  address space. Kit proof gate + emise-tools publish were reported
+  on the voice call, not independently verified in main chat.
+- ~08:51 [will_said] Viz v2 re-run directed: v1 "doesn't match
+  what it cost me yet" — Will placed at the point of contact and
+  moving, every reply a stab toward the next node, matches lit
+  gold, rainbow path, zoom out at the end. Correction (08:57):
+  failed stabs need not be identified — they accumulate as an
+  unidentified shell around his path; only matches travel to true
+  coordinates. V2 render dispatched, pending at journal time.
+- 09:13 [observed] Register #15 OPENED: claim mode merge + go-live
+  wait (tracked goal_6328b5966e85). Register now 7 active waits
+  (#7-#11, #14, #15). Validated 09:23: #14 branch still unmerged
+  at f4048a6e; #15 branch emise/claim-mode at 231fb2bf.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
