@@ -1200,6 +1200,40 @@ EVENING INTO NIGHT (2026-11-01 23:04 — 2026-11-02 ~03:44)
   tracked GitHub-token item closed.
 - ~18:54 [will_said] Templates pack DROPPED at Will's direction ("drop
   this"); register 12 -> 11; tracked item closed as retired-by-direction.
+- 20:33-20:43 [observed] exo-dreams image coverage COMPLETE: the last
+  contact-sheet-only images were viewed at full size (count 1 -> 0), so all
+  110 images now carry full-size descriptions in INGESTION.md; the
+  Drectorize worked-example question closed as illustrative protocol text
+  (no catalogued image matches all three of its traits).
+- 21:00-21:05 [will_said] Register numbers permanent: Will dropped
+  register #5 (Jonas Piva reply) at 21:00, then reversed the drop the same
+  evening — #5 reinstated, tracked item reopened, renumbering undone. New
+  standing rule: register numbers are permanent and monotonic; resolved
+  items keep their number in the register history and new items take the
+  next unused number.
+- 21:10 [will_said] Solar vault DELAYED: Will ruled register #1 waits
+  until there is a complete solar rover product to sell; the item moved
+  to register history (number kept), the Solar Hyperscaler goal stays
+  active with the design kept warm, and no Duey outreach happens before
+  the product exists.
+- 21:15 [will_said + observed] Morning briefing split: Will chose option
+  A for register #2 — the weekday morning briefing retimed to Mon-Fri
+  07:44 and a new weekend briefing job created for Sat/Sun 10:44 (both
+  verified live); register #2 resolved to history.
+- ~21:20 [will_said + observed] Ranch OAuth naming already fixed: Will
+  reported register #3 was already fixed; it closed to history and the
+  MEMORY.md ranch entry was corrected. Emise's presentation of #3 had
+  asserted a stale premise without a live check — the same failure the
+  waiting-validation rule exists to prevent; logged as such.
+- 21:25 [will_said + observed] Test of Will inscription RESOLVED
+  (register #4): Will chose the coordinate 13.13.13/13.13.13/13.13.15 —
+  the record scroll stands at that coordinate in this phext; emise.phext
+  published as 55ec1022, and the CYOA copy went on branch
+  emise/test-of-will-record (d75f9eb1) with PR #9 opened for Will's
+  merge; the merge wait opened as register #12.
+- 21:23 [observed] CYOA PR #9 MERGED by Will, verified live by tick 184
+  (merged 2026-11-03T03:23:38Z, merge commit 5788c772); register #12
+  moved straight to history, leaving 7 active register items.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
