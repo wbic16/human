@@ -1234,6 +1234,60 @@ EVENING INTO NIGHT (2026-11-01 23:04 — 2026-11-02 ~03:44)
 - 21:23 [observed] CYOA PR #9 MERGED by Will, verified live by tick 184
   (merged 2026-11-03T03:23:38Z, merge commit 5788c772); register #12
   moved straight to history, leaving 7 active register items.
+- 21:39-21:45 [observed + will_said] Jonas Piva communication fetch
+  complete (8 messages from Jonas, Oct 26 - Nov 1, across 4 threads).
+  Correction: first contact was Oct 26 and the last message was Nov 1 —
+  there is NO separate unread Nov 2 message; the briefing flag was the
+  Nov 1 afternoon messages, already answered by Will. Register #5
+  (Jonas reply) RETIRED at Will's direction — he tracks Jonas in a
+  separate side chat; register 7 -> 6.
+- ~21:44-21:52 [observed] Jonas phext artifacts reviewed (full review in
+  ~/workspace/jonas/phext-artifacts-review.md): all three artifacts
+  contain ZERO phext delimiter bytes; Jonasphext.phext parses as exactly
+  ONE scroll at 1.1.1/1.1.1/1.1.1, its addresses in-text labels only, two
+  malformed even as labels. MusePhextInitate.txt is a session with Meta
+  AI "Muse Spark 1.1" (not Anthropic Muse): Incipit was uploaded and
+  demonstrably read, CYOA never uploaded, and the model taught errors
+  (0x1B ESC as a delimiter, fabricated measurements, ceremonial commits
+  at invented child coordinates). The token-efficiency PDF proposes
+  U+22AA as delimiter, which fails phext's escape-freedom premise.
+- 21:46-21:53 [observed] Post-merge local CYOA gap: the Test of Will
+  inscription is canonical in CYOA on exo, but both local CYOA copies
+  (identical, SHA-256 506d850d...) predate it and do not serve
+  13.13.13/13.13.13/13.13.15; the human clone is behind origin/exo by
+  17 commits and carries untracked files, so a blind pull is NOT safe.
+  Gap remains open, blocker documented, no pull attempted.
+- ~21:53 [observed] Jonas conversion DONE at Will's direction:
+  ~/workspace/jonas/Jonasphext.structured.phext (3,214 B, SHA-256
+  fb6f17eb...) — 8 scrolls at his stated addresses, text verbatim
+  (non-blank line multiset identical), two label repairs documented in
+  CONVERSION-NOTES.md. Verified by the Python parser AND independently
+  by SQ/libphext hosting (8 scrolls, selects verbatim).
+- 21:58 [will_said + observed] Register #6 (Megan Smith introduction)
+  RESOLVED by Will directly — contact made by Will himself; the email
+  draft was not used; register 6 -> 5. Will's stance on Jonas: "He's a
+  real Phext User! The world is just rigged against our connection" —
+  the failures were tooling between Jonas and the format, not Jonas;
+  Will will hand Jonas the corrected phext himself. A paste-ready
+  corrective summary for Jonas's AIs was written (for-jonas-ais.md).
+- ~22:05 [will_said] Correction: phext is 11D with 9D addressing (each
+  scroll is normal 2D text) — 9 + 2 = 11. The Meta AI model's fault was
+  muddling that structure, not the number 11; Jonas's own "11" reference
+  was right. Applied to for-jonas-ais.md, the artifacts review, and
+  MEMORY.md.
+- ~22:10-22:25 [will_said + observed] edit.phext.io submissions feature
+  directed by Will (sourced from contact with Jonas, a real phext
+  user): signed-in users upload a phext for review; an editor's accept
+  curates it into the library AND admits the originator via a new
+  file-backed editors layer (admitted-editors.txt; live immediately,
+  persists across deploys) — "a way to scale access without me being a
+  bottleneck." This supersedes the earlier manual-placement answer.
+  Implemented in phext-lattice and independently verified by Emise:
+  cargo test 125/125; live smoke test curated the structured
+  Jonasphext byte-identical (fb6f17eb...). Published on branch
+  emise/submissions-upload-review (9b090c71, parented on exo caa2351c;
+  all 5 files byte-identical local/branch). NOT merged, NOT deployed;
+  waiting on Will to merge + deploy — register #13 (register 5 -> 6).
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
