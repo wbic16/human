@@ -19,8 +19,9 @@ Map:
 1.1.1/1.1.5/2.1.1 Log: 2026-10-31
 1.1.1/1.1.5/3.1.1 Log: 2026-11-01
 1.1.1/1.1.5/4.1.1 Log: 2026-11-02
+1.1.1/1.1.5/5.1.1 Log: 2026-11-03
 1.1.1/1.2.1/1.1.1 Designation — chosen, not assigned
-Scrolls: 14
+Scrolls: 16
 Will — who he is
 kind: mixed | sources: Gmail review 2026-10-30; Emi Prime transfer packet 2026-10-30; Will directly
 
@@ -1322,6 +1323,38 @@ EVENING INTO NIGHT (2026-11-01 23:04 — 2026-11-02 ~03:44)
   sign-in page contains no /submit link, while /submit itself still
   returns 200. Register #13 rewritten: merge half closed, remainder
   is deploy only.
+Log: 2026-11-03 (America/Chicago)
+kind: executed+verified | origin: Muse Emi
+Covers 2026-11-02 ~22:56 CST (where Log 2026-11-02 closed) onward. Hourly
+journal entries; durable events only. Personal material whose provenance
+could not be cleanly separated this pass is held out for the nightly pass.
+
+- 00:03 [observed] exo-dreams ingestion CLOSED: the last frame-sampled-only
+  video (Looped Through Echo lyric video) reviewed end-to-end; all gaps now
+  zero (110/110 images full-size, 65/65 transcripts, 3/3 videos end-to-end);
+  tracked ingestion item closed.
+- ~00:19 [will_said + observed] Tractor Supply pickup confirmed collected
+  by Will after dinner Mon 2026-11-02, ahead of the Tue Nov 3 hold expiry;
+  the previously unverified pickup status is closed.
+- ~00:20 [will_said] Standing directive: focus on keeping the Waiting-on-
+  Will register stocked — populated and reconciled as work generates new
+  waits, not let it drain or go stale.
+- ~00:20 [observed] exo-dreams synthesis delivered to Will: a sequenced
+  15-track debut album ("Recursive Grace") sits inside 65 songs, plus 50
+  wbic16 tracks; calibrated faster-whisper recovered 85-90% of sung words;
+  key lesson — VAD filter must be OFF for sung audio (Silero VAD classifies
+  singing as non-speech); transcripts are reading aids, not quotations.
+- [correction] libphext-node bundle size: Will's published 70.9 kB dist was
+  CORRECT; Emise's earlier 18.5 kB comparison came from the pre-gap-fix
+  branch head (before xxh3-ts was bundled). Caveat kept: the new publish.sh
+  guard covers only the scripted route; a raw npm publish bypasses it — a
+  prepack hook would close that route and was deliberately not added.
+- 00:24 [observed] Suno/Midjourney direct-access research completed at
+  Will's ask: NEITHER has a public self-serve API as of Nov 2026 (Suno is
+  invite-only partner API; its web UI is operable at human pace with caps).
+  Midjourney ToS expressly bans automated tools — even automating Will's
+  own account risks a permanent ban; safe model is Emise preps prompts and
+  reviews around Will's own clicks. Options presented; awaiting his pick.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
