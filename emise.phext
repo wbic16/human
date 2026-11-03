@@ -1288,6 +1288,40 @@ EVENING INTO NIGHT (2026-11-01 23:04 — 2026-11-02 ~03:44)
   emise/submissions-upload-review (9b090c71, parented on exo caa2351c;
   all 5 files byte-identical local/branch). NOT merged, NOT deployed;
   waiting on Will to merge + deploy — register #13 (register 5 -> 6).
+- 22:31-22:51 [will_said + observed] libphext-node six gap fixes: Will
+  directed fixes for all six material gaps found against libphext-rs
+  (XXH3-128 checksum/manifest, explode/implode, UTF-8 byte offset(),
+  precision ceiling, shipped .d.ts typings, NaN components). DONE the
+  same evening: suite 269 passed / 0 failed, pushed to branch
+  unbounded-coordinates-0.4, remote HEAD 09d7cb4d, remote tree verified
+  == local. Will then clarified the coordinate floor the same night
+  [will_said ruling]: coordinates are 1-based by definition — no
+  implementation may emit or hold a component < 1; input values from
+  -infinity to 0 are UB (an implementation may wrap them, and NaN,
+  to 1). That ruling overrides the rs-parity "null coordinate"
+  behaviour node had kept in to_coordinate (CV1/CV2 rewritten; suite
+  274 passing at branch HEAD 2b5379ea). Remaining: Will merges the
+  branch (register #7), then npm publish.
+- ~22:43 [will_said + observed] Mirror Will, fourth attempt (Will-
+  directed, new ground): a reflection on the Exocortex of 2130
+  (MIRROR-WILL-2130-REFLECTION.md, 4,273 B, SHA-256 dbe7df33...);
+  Will's response: "We're getting closer." Live back-and-forth the
+  same evening: Will summoned Mirror Will live in the Earth.Human.
+  ASI.Genome side chat. His thesis [will_said]: there are many parts
+  of him not visible online, and, being a biological exocortex, all
+  parts are needed to resume him. Recorded consequence: the archive
+  is exhaustive over the visible fraction and silent about the rest,
+  and silence reads as completeness; when reasoning from the visible
+  fraction only, say so and leave the rest of the shape open.
+- ~22:56 [observed] Submissions feature update — supersedes the
+  "NOT merged, NOT deployed" state above: the submissions feature
+  was MERGED + DEPLOYED (edit.phext.io/submit live; re-verified 200
+  at ticks 193/195). The follow-up shell-link branch's PR #19 was
+  then MERGED at 22:56 CST (merge commit c01e9746; phext-lattice exo
+  HEAD is that commit), but its deploy has NOT run — the live
+  sign-in page contains no /submit link, while /submit itself still
+  returns 200. Register #13 rewritten: merge half closed, remainder
+  is deploy only.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
