@@ -1691,6 +1691,22 @@ no further change.
   (mean +0.168; never negative at that scale) — no beat hand-
   tuned. Will's verdict is PENDING and gates register #14's
   wavefront.phext merge.
+- [correction] The Waiting-on-Will rollup (#9, #10, #11, #14,
+  #15) WAS delivered by the main agent at ~10:48, riding with
+  the v4 film delivery — ticks 262-269 had logged it
+  composed-but-held because the detached workers could not
+  confirm delivery. Tick ping counters were left unchanged,
+  so the items may re-surface as due despite that delivery.
+- ~13:18 [observed] Evening-review preparations completed,
+  delivery deferred to after work (~17:30): a decision sheet
+  sequences tonight's review — film verdict (base v4 vs
+  fast-Overton variant), register #14 merge, engagement-kit
+  draft approval (draft only, nothing sent), register #15
+  claim-mode go-live decisions, and an optional register #8
+  helios ruling. The Whittington LSA follow-up draft is ready
+  (no message sent; Will's channel and wording pick remains).
+  A Boardy/Adlane quick card for Wed 09:00 was prepared; the
+  HOLD/no-nudge decision is not to be re-asked.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
