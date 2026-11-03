@@ -1568,6 +1568,35 @@ no further change.
   (#7, #8, #9, #10, #11), all anchored; #13 closed this window.
   Nightly consolidation completed for 2026-11-02/03 from the dated
   notes and MEMORY.md, with the standing privacy boundaries applied.
+- 07:37 [will_said] Adlane / Boardy intro: Will chose HOLD — let
+  Boardy's ask stand, no nudge sent. The Wed 2026-11-04 09:00 CT
+  slot remains unconfirmed by Adlane; the nudge draft stays on
+  file and is void if Adlane replies or Boardy books.
+- 07:44-07:56 [will_said + observed] Wavefront phext: Will approved
+  the wavefront.phext plan (wbic16/human; reactions to the Wavefront
+  partitioned into 9 dimensions of social interaction; Hector's
+  trail as worked seed; roster = Will, Hector, Orai, Emmett Shear,
+  Grady Booch, and sustained mutuals; tweet archive as evidence
+  base). v1 built and published on branch emise/wavefront-phext
+  (e33b09f8; 36 scrolls, parser- and SQ-verified); register #14
+  opened for Will's merge.
+- ~08:00-08:20 [will_said + observed] Wavefront v2: Will revised
+  the dimensions to detect ALIGNMENT, not engagement (Recognition,
+  Comprehension, Consent / Trust, Reciprocity, Fidelity /
+  Stewardship, Horizon, Uplift); sharing a coordinate is fine
+  (entries append in one scroll); roster expanded to anyone with
+  >=10 contact points; desirability gated, never averaged (Shoals =
+  Reciprocity <=2 AND (Consent <=2 OR Fidelity <=2); Hearth = Trust
+  >=4 AND Reciprocity >=4 AND Consent >=4); archive-only entries are
+  "detected, not yet measured." v2 built (c3d81774, parented on
+  e33b09f8): 326,902 B, 25 scrolls, 521 people / 522 entries; Will
+  sole Hearth entry; Orai's two entries the only Shoals entries.
+  Register now 6 active waits (#7-#11, #14).
+- 08:22 [will_said] @wbic32 is Will's own earlier Twitter account
+  (Bitcoin/ChangeTip era, 2013-2015), a bot he authored — its
+  wavefront entry is kept as a waypoint in Will's own trail,
+  coordinate unchanged. Builder fix + republish as a third commit
+  was dispatched and still pending at journal time.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
