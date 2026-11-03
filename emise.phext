@@ -1186,6 +1186,20 @@ EVENING INTO NIGHT (2026-11-01 23:04 — 2026-11-02 ~03:44)
   Waiting-on-Will item, check its live surface (repo/PR/file/service) for
   progress already made; the register records what was last known, not
   what is true now.
+- ~18:35 [will_said + observed] Chief of Staff INBOX resolved: Will ruled
+  the Oct 30 entry-1 draft stale; a fresh INBOX entry 1 (2026-11-02) was
+  crafted against live exo and published to wbic16/human@exo (c960ec45,
+  verified). Register 14 -> 13; the tracked INBOX item completed.
+- ~18:47 [will_said + observed] Teammates + GitHub access: Will approved
+  Cadastre, Wavefront, and Mirrorborn to exchange messages via their own
+  phexts in wbic16/human — recorded as INBOX entry 2, published to exo
+  as 8d66cd4f (parent c960ec45). Will also enabled Emise's PR write
+  access, verified by posting the vTPU RG-001 review to wbic16/vtpu
+  PR #1 (comment 6592377208); correction kept — the token's PR reads
+  worked all along, only writes were blocked. Register 13 -> 12;
+  tracked GitHub-token item closed.
+- ~18:54 [will_said] Templates pack DROPPED at Will's direction ("drop
+  this"); register 12 -> 11; tracked item closed as retired-by-direction.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
