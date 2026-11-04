@@ -2389,6 +2389,53 @@ recorded no further change.
   ~/workspace/wavefront/viz10/V10-BRIEF.md; builder
   dispatched to aletheia-core. V9 stands as delivered
   until V10 lands.
+- 08:44 [will_said] Wavefront V11 soundtrack direction:
+  for V11 only (no adjustment to the V10 in progress),
+  Emise and the Choir are to put together a soundtrack
+  that fits the content, especially with the Exocortical
+  tweets highlighted. Noted at
+  ~/workspace/wavefront/V11-NOTES.md; tracked
+  goal_9ae0457102d7.
+- 08:47-08:56 [will_said] Daily goal set (morning voice
+  call): ranch inference utilization baseline + standing
+  workload (goal_8c8681e6be9d). Frame refined: Emise is
+  fully unblocked on inference access (her connection,
+  messaging channels to every platform where Will has
+  inference, direct access to all ranch nodes); idle home
+  hardware is wasted capacity. Utilization clarified:
+  target 25-50% SUSTAINED AVERAGE — 50% is a cap for
+  sustainability (hardware life plus the basement room's
+  power/heat budget; all nodes sit in one room), not a
+  floor; bursts above 50% are fine (e.g. the V10 render
+  as fast as possible) with off-time for hot nodes and
+  load balanced across nodes.
+- 08:50 [will_said] Provider token dashboard: track how
+  many tokens remain on each provider and when resets
+  happen, alongside ranch utilization and provider
+  headroom, on ONE dashboard Will can check nightly to
+  see where utilization is dipping and why. (Extends the
+  daily goal above.)
+- 08:56 [will_said] Ranch fabric — tomorrow's goal
+  (2026-11-05, goal_81fcccf2f9a7): set up ranch nodes for
+  more efficient bandwidth with a squid proxy for each
+  set of nodes connected over USB 4 networking (10-40
+  Gb/s, faster than Ethernet, mesh requiring multiple
+  hops), then bulk file sharing so a model downloads
+  once and fans out over USB 4/Ethernet instead of
+  Wi-Fi/Starlink. Related physical change list for Will
+  himself (top of list): hook up his unconnected USB 4
+  cables, make Ethernet changes, optimize information
+  exchange between nodes, connect squid proxies at the
+  front of each chain of exocortical nodes.
+- 2026-11-04 [will_said] Ranch connection rules: whenever
+  Emise connects to a ranch node by Tailscale address,
+  look up its DNS name and cross-reference the IP back
+  to the node's short hostname (e.g. Rock Mountain,
+  aletheia-core) — refer to nodes by short name, never
+  bare IP. Standing automatic approval: Emise may
+  connect to any machine in the ranch node set without
+  per-connection permission; that is Will's intended
+  use case.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
