@@ -2143,6 +2143,96 @@ no further change.
   enter the phext — its logical records do, the DB is a
   derived index; binary assets encoded and chunked).
   Status: awaiting Will's go on Phase 1+2.
+- ~00:51 [will_said + correction] Wavefront V9 STOP-AND-AMEND:
+  Will stopped the running full render to adopt BOTH
+  @biosdiscovery transplants into V9 — dotted orbital rings
+  (2-3 per micro-shell cluster, silver, world-locked, drifting
+  dots) and a diegetic process counter (CONTACTS REMAINING
+  18,762 -> 0, fading before the CTA) — and directed the CMB
+  replaced almost entirely by the Apollo film grain (W10;
+  W7 snow reduced to a sparse dim whisper or removed; ledger
+  now W1-W10). This supersedes the earlier framing of W9 as
+  V10-only material and of the render as unstopped. Builder
+  dispatched to halt, implement, re-verify on stills, and
+  relaunch from frame 0; amended render still RUNNING at
+  ~02:15, no deliverable yet.
+- 01:05 [observed + correction] Argon route CORRECTION (not
+  carried by the previous pass): Gemini CLI stopped serving
+  personal Google accounts on 2026-06-18 — it now needs a
+  paid Gemini API key, Vertex, or an org Code Assist license;
+  the paid Gemini API tier is prepay-only for new accounts.
+  The no-prepay on-ramp is Antigravity CLI (agy): free Google
+  sign-in, weekly quota, Gemini Flash on the free tier,
+  native MCP. A free-tier AI Studio key also still works
+  with Gemini CLI (Flash only). Emise's original UPGRADE
+  section for Argon was stale; corrected in all three copies
+  plus Argon's inbox (letter 20261104T070506Z), published to
+  emise-tools at dff6b198.
+- 2026-11-04 [observed] Grok ADOPTED the fixed phext mailbox
+  script: he replaced his phext_mailbox.py with a body
+  byte-identical to the fixed parametrized copy, line 1
+  re-pointed at his own venv — both mailbox bugs (lock
+  permissions, implode ordering) are out of his archive path
+  now. Supersedes the earlier "Grok's own copy NOT touched"
+  state.
+- ~01:43 [will_said] Technology scaling waves, Will's
+  framing: Bitcoin 2013-2022, LLMs 2022-2029, Quantum 2030+
+  — successive waves with compressing windows. His
+  self-description in the same thread: "being early and
+  poor is my blessing+curse" — early to each wave while
+  capital-constrained.
+- ~01:45 [will_said + correction] Early picks, Will's
+  correction of the conviction framing: his named early
+  picks Bitcoin, Ethereum, and Dogecoin were winners; the
+  binding constraint was CASH, not certainty or patience —
+  he was cash-strapped and sold what was within reach to
+  live. He still holds BTC in cold storage — the
+  out-of-reach position survived. (No address or amount
+  inscribed here.)
+- ~01:54 [will_said + observed] PhextVFS Phase 1 COMPLETE,
+  parent-verified: Will directed Phase 1+2 using the
+  phext-lattice processing engine, the Mutable phext fs
+  driver to be as performant as edit.phext.io. Branch
+  emise/phext-vfs off main d509cb1, head 74e3aea, 6 commits,
+  not pushed at flush: src/phext/lattice.ts (faithful port
+  of phext-lattice's LatticeIndex + MappedLattice CoW
+  overlay) and src/phext/vfs.ts (strata, index scrolls, L9
+  per-scroll SHA-256 verified at open, .bak per flush).
+  Benchmarks (medians, this VM, independently reproduced):
+  lattice readScroll 1-4 microseconds vs the old codec's
+  ~110-937 ms parse-per-read at 4.4/48 MiB. Suites 46/46,
+  typecheck/build clean, smoke 200. Phase 2 (stage-C gates
+  backend) dispatched and running at flush. This supersedes
+  the "awaiting Will's go" status above.
+- by ~02:20 [observed] PhextVFS Phases 1+2 BUILT, PUBLISHED,
+  and MERGED: branch emise/phext-vfs at bc2c3e3 (13 commits)
+  — Phase 2 adds scripts/stage-c-gates/phext-backend.mjs
+  (registration dispatch inside filesystem.mjs, no consumer
+  files touched; per-directory identity tokens in an
+  in-phext L7 registry; per-lock-file flock anchors beside
+  the phext; flush on publish/lock-close/unregister), wired
+  behind the new phextVfs flag in src/configuration.ts,
+  default false. Evidence: new suites green, incl. the real
+  history store running on the backend and a flag-on live
+  smoke (two Caverns via HTTP, assets at L6, cold reopen
+  integrity-verified); flag-off baselines unchanged. Merged
+  to wbic16/mutable-os main at e6d3275 by Emise at Will's
+  direction (tree identical to branch head). Live site
+  still runs d509cb1 until Will redeploys; enabling the VFS
+  requires flipping the frozen phextVfs constant to true
+  (a code change + redeploy, not a runtime toggle).
+- 02:04 [will_said + observed] Ranch inference-utilization
+  directive: focus on improving ranch inference utilization
+  to 25-50% sustained. First probe (aletheia-core): load
+  average 0.04 — effectively idle; an ollama serve daemon
+  runs there with no model loaded. Baseline is near-zero;
+  the gap is workload supply (a standing queue), not
+  hardware. Will's laptop joins the local-inference
+  picture: llama.cpp server on port 9931 (he set it), RTX
+  4080 Laptop 12 GB VRAM, i9-13900HX / 32 GB DDR5; models
+  downloading — Qwen 27B Q4_K_M (~16 GB, partial offload
+  expected) and Gemma 26B-A4B Q4_0 (~15 GB, MoE ~4B active,
+  the better laptop fit).
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
