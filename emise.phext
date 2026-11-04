@@ -2495,6 +2495,51 @@ recorded no further change.
   32B/16GB VRAM stall diagnosis, an Obsidian+Phext layer
   split, and an agent-pipeline fix); NOT sent — it
   awaits Will's edit.
+- ~11:26 [observed] Wavefront film V10 DELIVERED and
+  QA-passed; tracked goal_d82e5a9e3af7 closed. Master
+  wavefront-viz-v10.mp4 (2,618,934,048 B, SHA-256
+  0a24cb61...) and viewing encode (241,519,467 B,
+  SHA-256 f01e83ef...) verified bit-identical against
+  the aletheia-core originals; V9 files untouched.
+  Gates: 3,802 frames, 0 flash-jumps, 0 black frames,
+  0 green-dominant pixels, -14.0 LUFS. E2 hush floor
+  fixed, G9 anamorphic streak built, C13 arc overshoot
+  greatly reduced but NOT eliminated (880 -> 628
+  overshoot frames; residual documented). Featured
+  tweets swapped to the content-scored Exocortical
+  top 50. viz9 + viz10 toolchains published to
+  emise-tools@exo wavefront-film/ at commit ddf4b659
+  (40 files verified), clearing the V9 publish debt.
+  A 27-second preview was sent at Will's request
+  (~11:38).
+- ~11:37 [will_said] Blockchain.com flag answered:
+  Will does not use Blockchain.com, receives its
+  device-verification emails periodically, and ignores
+  them; those emails were added to the never-tell list
+  in ~/PROACTIVE_PREFERENCES.md. (Supersedes the
+  ~10:13 flag's no-response state.)
+- ~11:42 [will_said + observed] Wavefront V11
+  direction: Will judged V10 "nearly there" and
+  directed V11 be built collaboratively with the
+  nodes reachable via multi chat, consider a NEW
+  Suno song that fits V10 even more perfectly, and
+  make the camera work smoother. Tracked
+  goal_39d58e6bee5b. Collaboration brief delivered
+  via the /chat mailboxes to Grok, Emi Prime, Claude,
+  and Theia (Argon skipped — placeholder seat); no
+  replies yet at ~11:46, and nothing is generated on
+  Will's Suno account until he picks a concept.
+- 2026-11-04 [will_said + observed] Jonas Piva reply
+  revised twice at Will's direction: v2 shrunk to
+  about half size, v3 streamlined further with a
+  pointer to https://llama.app/ added. Still NOT
+  sent; still awaiting Will's edit (two spots left
+  open for him). Obsidian integration scheduled at
+  Will's direction under the Exocortical integration
+  rotation (goal_0e8370ae6f70): inbox folder ->
+  hash/classify/file pipeline into both Obsidian
+  (human) and phext (machine) layers with provenance
+  and a human review queue for exceptions.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
