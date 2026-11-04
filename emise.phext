@@ -2612,6 +2612,45 @@ recorded no further change.
   at Will's direction ("contrast commercially
   available systems and costs") — research pending
   at this pass, not completed.
+- ~14:18 [observed] Surveillance S13 commercial
+  contrast DELIVERED — supersedes the pending state
+  above. Plan §13 (5-yr TCO across cellular trail
+  cams, consumer solar ecosystems, UniFi Protect,
+  cloud VMS, pro-installed local): verdict — no
+  commercial option meets Will's full spec (the
+  no-cloud rule disqualifies every cellular and
+  consumer-cloud system; optical zoom + two-way
+  talk together exist only in the wired-camera
+  world). Closest commercial row: UniFi Protect
+  $7,760 all-in. DIY's main hidden cost is Will's
+  own labour (est. 25-40 h). Decision on the table:
+  DIY trail-cam ~$5,850, hybrid ~$6,140, UniFi
+  ~$7,760, with an optional Spartan GoLive gate
+  stopgap (~$360 + $200/yr) under any of them.
+- 2026-11-04 afternoon [observed] TwIL-8B evaluated
+  (Will shared the Hugging Face model card; Emise
+  read it in full): TwIL-8B is NOT a vision/llama
+  model — 8.79B text-in/text-out reasoning model
+  post-trained from IBM Granite 4.2-8B for math,
+  code, and instruction following. Balanced Q4_K_M
+  GGUF 4.98 GiB fits Will's laptop RTX 4080 (12 GB)
+  easily. Licence catch: webAI Non-Commercial
+  v1.0 despite the Apache-2.0 base. Verdict given:
+  worth a local bake-off as an 8B code/math model,
+  but NOT the surveillance predictor (no vision;
+  the wake policy wants a small calibrated model
+  over Frigate/PIR/time/weather features).
+- ~15:17 [will_said + observed] Surveillance S14
+  tier packages DELIVERED at Will's direction
+  (best features for 7 cameras at $6K/$8K/$10K),
+  as auditable deltas from the §12 builds: $6K
+  Lean Sentinel $5,994; $8K Awake Core, Patient
+  Fence $7,893; $10K No Compromise Eyes $9,781.
+  Recommendation: the $8K package is the sweet
+  spot — cheapest tier where nothing the system
+  exists for is rationed on the herd's home
+  ground. Awaiting Will's tier pick; nothing
+  purchased or built.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
