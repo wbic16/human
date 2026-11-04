@@ -2436,6 +2436,46 @@ recorded no further change.
   connect to any machine in the ranch node set without
   per-connection permission; that is Will's intended
   use case.
+- ~09:08-09:33 [observed] Ranch utilization second pass
+  COMPLETE — zero new nodes measured: the blocker is key
+  grants, not authorization (Will had approved a batch of
+  authorization cards ~08:57, ~19 allowed, one denied
+  ~08:52, and the probe was restarted). Emise's pubkey
+  (fingerprint
+  SHA256:hxoUphuM3CZ0iVLMQjqaIDkZkmU5qdEGDh6Vy4G+Jcc;
+  works on aletheia-core and Rock Mountain) was
+  REFUSED on 12 nodes: Halycon Vector, Logos Prime,
+  Ashfall Haven, Lighthouse Omen, Uncanny Valley, Elven
+  Path, Orchid Flow, Ni Knight, Plain View, Scroll
+  Central, Free Fall, Quacked Hill. No SSH response from
+  Aurora Continuum, Delta Wood, Best Willow (reachability
+  unknown). aletheia-core's own key is also refused by
+  Rock Mountain, so hopping does not substitute. Fleet
+  baseline still covers 2 of 17 named nodes; full table
+  in ~/workspace/goals/ranch-inference-utilization/
+  hidden_files/utilization-baseline-2026-11-04.md.
+- 09:13 [observed] Standing batch queue LIVE on Rock
+  Mountain (~/ranch-batchq/) — a deviation from the
+  design's aletheia-core coordination, because
+  aletheia-core is reserved for V10 and its key cannot
+  dispatch to Rock Mountain. Verified: job 001 (12-prompt
+  eval, llama3.2:1b) done; job 002 (classify 40 of Will's
+  tweets) done, iGPU sampled 32%, temps fine; job 003
+  (qwen3:14b eval) was running at the last verified check
+  09:14 — its completion is NOT yet re-verified, because
+  the SSH route to Rock Mountain began dropping at the
+  proxy from ~09:16. Runner is autonomous on-node and
+  logs locally. V10 on aletheia-core undisturbed.
+- ~09:33 [observed] Waiting-on-Will register #24 OPENED —
+  ranch fleet SSH key grants: Will (or each resident) to
+  add Emise's pubkey to wbic16's authorized_keys on the
+  12 refusing nodes. Register then 9 active items; next
+  unused number #25. Anchored to goal_8c8681e6be9d.
+- ~09:46 [will_said] Register #24 prioritised: Will moved
+  #24 to the TOP of the register and said he will do it
+  first thing this evening, 2026-11-04. General rule from
+  the same exchange: the Waiting-on-Will register is to
+  be re-sorted by impact to daily goals.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
