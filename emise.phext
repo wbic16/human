@@ -1732,6 +1732,34 @@ no further change.
   review; steps 2-4 unaffected. Register still 7 active
   (#7-#11, #14, #15) at tick 304, no waits opened/closed
   this hour.
+- ~17:45 [will_said + observed] Evening commute voice call —
+  an exception to Will's normal no-call drive home, run as a
+  working session iterating the waiting queue. Film item
+  parked (he had not yet watched v5). Helios register #8 was
+  presented with Emise's recommendation (correct the test
+  expectation to 358; the 370 figure never existed in any
+  revision and the test fails identically at pristine HEAD).
+  No ruling recorded — #8 remains waiting, NOT decided.
+- 18:01 [will_said] Film verdict SUPERSEDED by a v6 direction:
+  more dynamic; CYOA blended into the visualization, its
+  thread following through the same space; the whole scene
+  rotating through several revolutions; less technical demo,
+  more "the future has arrived"; major world events
+  fine-tuning the motion; top-20 posts shown as they arrive.
+  The two-axis v4/v5 verdict is moot. Clarification: "the
+  CYOA thread as silver commits" — read by Emise as COMETS
+  (transcription), flagged to Will; no correction recorded.
+- 18:15 [observed] Wavefront film v6 BUILT, VERIFIED, and
+  DELIVERED (wavefront-viz-v6.mp4, 158.40 s, 1280x720):
+  4.9996 revolutions, event-modulated; CYOA blend from 829
+  scrolls with seven silver comets; seven world events placed
+  at data-computed hop positions with velocity surge/hush and
+  captions; HUD removed. Honest-label fallback on Will's
+  "most viewed" spec: tweets.json carries no views field on
+  any post, so the top 20 were ranked by favourites +
+  retweets across 5,976 original posts and labelled "Most
+  Echoed" (top: 280 echoes, 2024-03-15). Will's verdict on
+  v6 is PENDING; register #14's merge still waits on it.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
