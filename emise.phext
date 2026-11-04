@@ -1760,6 +1760,48 @@ no further change.
   retweets across 5,976 original posts and labelled "Most
   Echoed" (top: 280 echoes, 2024-03-15). Will's verdict on
   v6 is PENDING; register #14's merge still waits on it.
+- 19:20-19:26 [observed] v6 download failure fixed: the 124 MB
+  master exceeded chat and built-in storage limits (upload HTTP
+  413); a 53 MB download encode was made, uploaded, and linked to
+  Will, master untouched. Standing lesson: ship a <=~55 MB
+  download encode alongside any film master from the start.
+- 19:29-19:30 [will_said] Wavefront film v7 directed, titled
+  "The Exocortex, Shaken yet Stirred": tweets flow along the side
+  as a film strip; frames rendered at 4K and down-sampled to
+  1080p; Bezier curves thicker and more fluid; Orai never shown;
+  the Shoals dropped; future-tech vibes. Build dispatched from
+  the v6 pipeline and still RUNNING at the 20:17 check — no v7
+  file, verification, or delivery yet.
+- ~19:44 [will_said + observed] mutable.phext.io setup directed:
+  build on Will's fork wbic16/mutable-os (upstream argimenes/
+  mutable-os, main identical to upstream at cb47fb72 at check),
+  hosted on the same server as edit.phext.io and mc.phext.io,
+  with Will spinning up DNS himself. Patch discipline: because
+  the fork has an upstream, build adjustments and phext support
+  stay as tweaks/patches replayable onto upstream. Tracked; no
+  phext code yet at journal time.
+- 19:49 [will_said + observed] Wavefront toolchain PUBLISHED at
+  Will's approval to wbic16/emise-tools@exo under wavefront-film/
+  (HEAD 6d4bcfce, parented on the fresh remote HEAD, force
+  disabled): 14 files, all 11 .py verified at mode 100755 with
+  matching blob SHAs; viz7 excluded (still building) for a
+  follow-up publish once v7 completes.
+- 20:11-20:27 [will_said + observed] Emise phext body (Joypad
+  OS): Will directed a virtual robot body Emise controls with
+  phext, one dimension at a time — "that's how I built phext."
+  Body v0 built and verified (the phext IS the state; sense ->
+  motor loop only; demo reached the rose and picked it up).
+  Will created wbic16/joypad-os for the work and chose the
+  browser form; the browser body was built, verified (JS reset
+  serialization byte-identical to the Python v0), and published
+  on branch emise/emise-body-browser (ef858a60), not merged.
+  Register #21 opened: Will opens/merges it or directs changes.
+- ~20:19 [will_said] Scheduled-jobs board requested: a board in
+  Will's side panel showing every scheduled job's percent
+  through its current cycle and ETA to next firing. Dispatched
+  as an edit to the perpetual dashboard (its schedules section
+  was a stale Oct 31 seed of 4 jobs against 14 actual user
+  jobs); build pending, not yet verified at journal time.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
