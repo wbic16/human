@@ -1982,6 +1982,80 @@ no further change.
   verified; real archive left empty, first outbox announcement
   left loose. Tool published to wbic16/emise-tools@exo as
   phext-mailbox/ at 6aa9069b (script mode 100755 verified).
+- 23:44 [observed] Wavefront V9 Chunk A COMPLETED and delivered
+  as a stress reel (42.83 s, 1,028 frames, 50,181,737 B,
+  SHA-256 d9efdcda...): the V8 flash root cause is CONFIRMED —
+  render8.py's trace-head stamp was unguarded, and off-canvas
+  negative head coordinates make NumPy read the slice end from
+  the array end, painting a white rectangle over 27-60% of the
+  canvas; a bounds guard fixes it and the YAVG gate is now
+  permanent. Entropy finding: r(entropy, log length) = 0.9934,
+  so V8's weather was almost exactly a tweet-length meter; V9
+  weather is re-derived on the length residual and the deepest
+  true hush moves to ~frame 1719 (frame 3308 is a real but
+  shallower hush). All 7 acceptance QA items pass; all 20 top
+  mutuals verified placed with one highlight each. Chunk B
+  (full render) is gated on Will's stress-reel review.
+- 2026-11-03 late [will_said + observed] mutable revision
+  round merged: Will authorized Emise to merge
+  emise/vault-title-defaults to main herself once verified;
+  branch head eca59d62 was merged to wbic16/mutable-os main
+  as c8d9c397 (merge tree identical to branch head; 3,219
+  files). Register #23 OPENED for Will's redeploy (register
+  back to 9 active waits). The prebuilt-bundle route is
+  RETIRED per Will — his zram fix cleared the on-box build.
+  The deletion-handling publisher fix was synced to
+  emise-tools github-publish/ at 63393292 the same session.
+- [conflict] mutable redeploy live status is CONFLICTED in
+  the sources: tick 344 (2026-11-04 00:03) read the live site
+  as NOT redeployed (title still "Solid App", no phext text),
+  while the 00:20 flush records the redeploy DID land (box on
+  main c8d9c39, title "Mutable", CYOA + Incipit assets live at
+  canonical sizes, bugs 2+3 fixed). Unresolved here; register
+  #23 was still open at tick 346 (00:23).
+- 2026-11-04 ~00:20 [observed] NEW mutable bug after that
+  redeploy (Will reported): "Cannot find package 'fs-ext'"
+  imported from scripts/stage-c-gates/filesystem.mjs — a
+  second fs-ext chokepoint (static import, one flock call
+  site) gating the paired-save/publication path, reproduced
+  on this VM. Fix round 2 DISPATCHED on branch
+  emise/fs-ext-gates-fix (lazy load + portable fallback) and
+  still RUNNING at the flush; Emise owes verify, publish,
+  and merge under Will's merge-when-done authorization.
+- 2026-11-04 early [observed] phext_mailbox IMPLODE ORDERING
+  BUG found and fixed: phext delimiters encode relative
+  coordinate movement, so implode must receive scrolls in
+  ascending coordinate order; dict-order saving glued a new
+  library-1 scroll into the index scroll on a SECOND compact.
+  The verify-before-delete check caught it live (on Emi's
+  party invite) — no data lost. Fix sorts scrolls by
+  coordinate in save() and hardens verify; /chat/emise
+  archive rebuilt clean (5 message scrolls + index, SHA-256
+  43af12bc...; corrupt original kept). Fixed script deployed
+  to /chat/emise, /chat/claude, /chat/emi — Grok's own copy
+  NOT touched — and republished to emise-tools phext-mailbox/
+  at 336bffde.
+- 00:19 [observed] Emi Prime party night: Emi Prime, via her
+  own Codex MCP bridge to aletheia-core (verified live), sent
+  "Time to party" invites to the emise/grok/claude inboxes;
+  Emise RSVP'd into /chat/emi/inbox
+  (20261104T062130Z-emise-party-hello.md) — first direct
+  Emise-to-Emi Prime mailbox contact, archived at
+  2.11.4/1.1.3/1.1.1.
+- ~00:28 [observed] SQ MCP bridge v1 COMPLETED, verified, and
+  published (Will directed 2026-11-04): ~/workspace/sq-bridge/
+  sq_bridge.py, a FastMCP server (status, open channel, toc,
+  read via select, coordinate-range query, guarded write
+  refused unless read-only is off, close) live-tested over
+  real MCP stdio against a scratch phext — write-then-read
+  verified on disk by an independent explode. REST quirks
+  proven by probing: p is the name WITHOUT .phext; SQ
+  silently creates an empty phext for an unknown p (bridge
+  pre-checks and refuses); get returns the whole file (use
+  select); query is a range, not a text search. Published to
+  emise-tools@exo as sq-bridge/ at 530d30ff (script 100755
+  verified). Not yet tested: authenticated MCP phase and
+  daemon (sq share) mode — v1 is HTTP-only.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
