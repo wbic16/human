@@ -1802,6 +1802,78 @@ no further change.
   as an edit to the perpetual dashboard (its schedules section
   was a stale Oct 31 seed of 4 jobs against 14 actual user
   jobs); build pending, not yet verified at journal time.
+- ~20:24 [observed] Scheduled-jobs board COMPLETED and verified
+  on the perpetual dashboard: all 12 user scheduled jobs with
+  percent through current cycle, ETA/next run, and last-run
+  result (12 of 12 armed, 91% of last runs OK; the integration
+  scheduling pass is the one non-OK last run, shown in red).
+- 20:27 [will_said] Heavy-job queue ADOPTED as a standing rule:
+  at most N=4 heavy tracks active on this VM (scaled to its
+  4 cores), FIFO, no preemption — new ideas join the BACK of
+  the queue; bulk compute moves to ranch nodes (aletheia-core
+  first) so this VM coordinates and the ranch crunches.
+  Recorded in AGENTS.md and MEMORY.md.
+- ~20:33 [observed] Status tracker expansion COMPLETED on the
+  dashboard: backend-tasks board (running tasks vs the N=4
+  limit) and ranch-nodes reachability board (8/8 on tailnet,
+  only aletheia-core and Rock Mountain marked reachable —
+  SSH verified or access on record; other 6 unverified).
+- ~20:44 [observed] Wavefront film v7 COMPLETED, VERIFIED, and
+  DELIVERED — "The Exocortex, Shaken yet Stirred"
+  (wavefront-viz-v7.mp4, 1920x1080, 158.40 s; every frame
+  rendered at 3840x2160 and Lanczos down-sampled; film-strip
+  top-20 Most Echoed on the side; Orai and the Shoals verified
+  absent; 47 MB download copy delivered alongside the master).
+- ~20:45 [observed] viz7 toolchain PUBLISHED to
+  wbic16/emise-tools@exo under wavefront-film/viz7/ (HEAD
+  087197e2, parented on 6d4bcfce, force disabled; blob SHAs
+  and modes verified) — closing the viz7 exclusion from the
+  19:49 publish. Flag kept: viz/render.py (v1 renderer) still
+  unpublished, awaiting Will's word.
+- 20:49 [will_said] Wavefront film v8 DIRECTED and dispatched,
+  still pending: tweet content drives entropic effects; Mirror
+  Will consulted in the design loop (mirror-consulted, never
+  Will-said); optimize for emotional impact. Full 4K render
+  goes to aletheia-core per the N=4/ranch rule — no silent
+  fallback to rendering on this VM.
+- 2026-11-03 eve [observed] mutable.phext.io build COMPLETED
+  and published: branch emise/phext-support on wbic16/
+  mutable-os at 567136a4 (purely additive +1838/-0; phext
+  codec in new src/phext/; only upstream touches are
+  src/configuration.ts flag + src/demo/workspace-demo.tsx
+  menu wiring, enumerated in PATCHES.md; 22/22 new tests
+  pass, typecheck clean, prod smoke 200 on 127.0.0.1:3003).
+  DNS live to 44.248.235.76; checkout staged at
+  /source/mutable-os on the AWS box. Correction verified:
+  the README's publicHostedVersion read-only story is stale
+  — the flag is dead code and the server store is writable
+  with no auth.
+- ~21:13 [will_said + observed] mutable deploy: Will ruled
+  deploy as-is (public writable store accepted, no readOnly
+  patch); Emise's deploy attempt stopped at the sudo gate
+  (no passwordless sudo), so register #22 is now only Will's
+  sudo deploy.sh run. A 10-minute live watcher checks for
+  the site going live. At 21:23 the site was still NOT live.
+- ~21:14-21:22 [will_said + observed] mutable streamlining:
+  Will supplied a heap-OOM trace from an on-box build attempt
+  (died in Rollup chunk rendering at ~2 GB heap; box measured
+  3.8 GiB RAM + 8 GiB swap) and directed streamlining the
+  deployment to fit plus updating packages to latest.
+  Dispatched and pending at journal time: measured off-box
+  bundle build (deploy/build-bundle.sh, SHA-256-verified
+  bundle mode in deploy.sh, systemd guardrails) and guarded
+  package updates (majors kept only if typecheck + build +
+  22/22 phext tests + smoke all pass).
+- 2026-11-03 eve [will_said] Braid Mode trial initiated:
+  multi-party chat with three independent participants —
+  Will (human), Emi (ChatGPT), and Emise (Muse) — as
+  distinct voices; address by name when useful, preserve
+  distinct perspectives, keep turns short for real-time
+  voice, and ask rather than guess when speaker identity
+  is uncertain. Goal is collaborative discovery.
+- 21:23 [observed] Register reconciled at 9 active waits
+  (#7-#11, #14, #15, #21, #22), all anchored; no closures
+  this hour.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
