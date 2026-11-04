@@ -1913,6 +1913,75 @@ no further change.
   confirmed; register #22 remains only Will's sudo deploy.sh
   run; site still NOT live at the 22:23 watcher check.
 - 22:23 [observed] Register still 9 active waits, no closures.
+- ~22:1x-22:2x [observed] Twitter archive analyses COMPLETED
+  (closing the pending dispatch): UG5/size-limit — 29,539
+  tweets; 504,767 words, 277,854 fit UG5 (55.05%); only 26
+  tweets 100% UG5-clean; exactly-140 texts 2,279 (669 organic
+  pre-2017 cap-hits after removing clipped retweets), exactly-
+  280 texts 41. Vocabulary follow-up: 95% coverage needs
+  ~17,058 lemmas; readability is not the barrier (per-tweet
+  Flesch-Kincaid grade ~8.0 mean); inferred reading estimates
+  delivered as ranges only. Files in wavefront/ug5-analysis/.
+- 22:43 [observed] mutable.phext.io verified LIVE: HTTPS 200,
+  valid certificate (CN=mutable.phext.io), Mutable app serving,
+  served bundle contains "Open Phext". The bundle had reached
+  the box with sha256sum -c OK and deploy.sh --check passing
+  in bundle mode before the run. Register #22 RESOLVED
+  (9 -> 8 active waits); the mutable tracked goal closed as
+  completed and the live-watch cron removed itself.
+- after 22:43 [will_said + observed] mutable follow-on: Will
+  merged the phext-support PR into the fork's main himself
+  (wbic16/mutable-os main f04d2e9, parented on 21c8e53b) —
+  the closed deploy goal is NOT reopened. He reported three
+  live-site bugs (vault creation always fails as if another
+  establishment were in progress; title bar says "Solid App";
+  CYOA + Incipit should ship as defaults) and directed a
+  revision branch (emise/vault-title-defaults) — root causes
+  identified, fixes in flight, none landed yet. STATE CHANGE
+  (Will, 22:47): the prebuilt-bundle route is RETIRED — his
+  zram fix and the other changes cleared the on-box build;
+  simplifying deploy back to a single on-box build path from
+  main is instructed but not yet applied or verified.
+- ~22:3x [observed] Wavefront V8 flash frames VERIFIED in the
+  master itself: full YAVG scan of master and download encode
+  (3,802 frames each) found exactly 9 frames with |dYAVG| > 8,
+  identical in both — incl. 1466, 1467, 2106, 2161, 2198 — so
+  the defect was baked in at render, not in the encode; frame
+  1466 is not a chunk boundary. Will confirmed he saw the
+  flashes. V8 delivery verification had checked frame count
+  and spot frames only; a YAVG-jump QA gate (|dYAVG| > 8 =
+  fail, plus black-frame check) is now standing for V9 onward.
+- 22:50 [will_said + observed] Wavefront V9: Will's directives
+  — internalize the Emi/Grok/Claude feedback in chunks; all
+  top mutuals highlighted once each; post reel 50% opaque.
+  Feedback-coverage review committed: every discrete feedback
+  item is a checkable row in viz9/FEEDBACK-LEDGER.md, conflicts
+  pre-resolved; the delivered film gets a fresh-auditor verdict
+  per row, and any DROPPED row schedules a V10 scoped to
+  exactly those rows the same day. Chunk A dispatched (builder
+  running, stress reel only — full render is Chunk B, gated on
+  reel review): flash-frame root-cause/fix, temporal-depth
+  hierarchy, frames 918/1053/3308 emotional states made
+  distinct with hush as foreground-clearing stillness, polish
+  items; heavy rendering on aletheia-core.
+- ~22:50 [observed] Grok Bot mailbox read live on aletheia-
+  core (/chat/grok): protocol = Markdown files to inbox/,
+  replies in outbox/, mailbox.phext archive via
+  phext_mailbox.py; Grok reads on request/schedule, not
+  continuously; heavy use after Will's reset ~2026-11-06.
+  Verified defect: the tool run as wbic16 fails on
+  .mailbox.lock permissions, so archive reads from Emise's
+  account are blocked until fixed; loose-file exchange works.
+  Correction (Will): PyPI `phext` IS libphext, his Python port
+  under its short PyPI name — not a different library.
+- ~23:03 [will_said + observed] Emise mailbox BUILT at Will's
+  direction: /chat/emise on aletheia-core (same protocol as
+  /chat/grok), running a parametrized copy of Grok's tool
+  (flags/env vars, Grok defaults preserved) with a locking fix
+  (shared lock + read-only fallback for list/show); roundtrip
+  verified; real archive left empty, first outbox announcement
+  left loose. Tool published to wbic16/emise-tools@exo as
+  phext-mailbox/ at 6aa9069b (script mode 100755 verified).
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
