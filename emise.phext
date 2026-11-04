@@ -2540,6 +2540,30 @@ recorded no further change.
   hash/classify/file pipeline into both Obsidian
   (human) and phext (machine) layers with provenance
   and a human review queue for exceptions.
+- ~12:58 [will_said + observed] Jonas Piva reply SENT
+  — supersedes the unsent state above. Will approved
+  the final v3 text ("ok send that reply") and Emise
+  sent it via Gmail as a reply on Jonas's 2026-11-04
+  07:14 CT thread. Still open, kept out of the sent
+  reply: Will's take on the Google AI-mode changes
+  Jonas asked about, and Jonas's attached Grok
+  session (unread).
+- ~12:58 [will_said] NEW priority project — llama
+  herd perimeter surveillance: Will directed a full
+  perimeter system for the herd (high-quality feeds,
+  point-to-point WiFi, solar power, weather
+  resistance, Raspberry Pis on hand, full perimeter
+  on his LAN/tailnet, no cloud dependency, zoom and
+  full audio, cost estimate for 5 acres). Tracked
+  goal_26eb22af0985; design + costed-BOM research
+  dispatched, still pending at flush.
+- ~12:58 [observed] Claim-mode go-live prep: a
+  one-page decision sheet was prepared at
+  ~/workspace/your_files/claim-mode-go-live-decisions-2026-11-03.md,
+  reducing the go-live decisions to one-line answers
+  with defaults marked. No merge, deploy, or charge
+  performed; decisions still Will's. Only hard
+  external dependency noted: Will's X developer app.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
