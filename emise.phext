@@ -2564,6 +2564,54 @@ recorded no further change.
   with defaults marked. No merge, deploy, or charge
   performed; decisions still Will's. Only hard
   external dependency noted: Will's X developer app.
+- ~13:02 [observed] Llama herd perimeter surveillance
+  design COMPLETED — supersedes the ~12:58 pending
+  state above. Plan delivered (goal_26eb22af0985):
+  7 tiered posts for 5 acres (4x Reolink RLC-811A
+  fixed, 2x RLC-823A PTZ on diagonal corners, 1x
+  TrackMix at the barn), uniform solar kit
+  $1,062/post, NanoStation PtMP backhaul, Frigate +
+  go2rtc on a ranch node, cameras VLAN-quarantined,
+  no cloud. Recommended build $9,779; leaner 4-post
+  variant $5,770. Awaiting Will's go/no-go and
+  variant pick; nothing purchased or built.
+- 2026-11-04 [will_said] Surveillance follow-on
+  rulings: the 7-post plan is a good baseline and
+  its cost is to be reduced (per-component breakdown
+  and a value solution showing what is lost);
+  recording baseline CORRECTED — continuous
+  recording is not needed, the baseline is trail-cam
+  style capture with on-demand full video
+  conference; Will asked the cost of running
+  electricity to some or all posts and whether solar
+  is best; and a learning model is to predict which
+  cameras need to be online to capture llama
+  moments, so camera online state is
+  prediction-driven.
+- ~13:23 [observed] Surveillance plan S11 value
+  engineering DELIVERED: per-component breakdown of
+  the $9,779 baseline (power plant $5,145 = 52.6%;
+  cameras only 11.7%); value build $6,062 (-38%)
+  via 9 sourced substitutions, battery spec
+  deliberately untouched, give-ups enumerated
+  ($2,872 "take these" vs $865 "think twice").
+  Awaiting Will's pick.
+- ~13:46 [observed] Surveillance plan S12 DELIVERED:
+  mains-vs-solar under the trail-cam re-baseline,
+  plus the predictor layer (5 tiers from deep sleep
+  to live session; one month shadow mode; go-live
+  gate >=95% recall of labeled valuable events at
+  target duty, threshold Will's to set; fail-safes
+  bias ON). Verdict: solar best at far posts (past
+  ~215-270 incremental trench-feet), mains best at
+  the barn core, east chain a judgment call. Revised
+  totals: all-solar trail-cam ~$5,850; hybrid ~$6,140;
+  all-mains DIY ~$6,155. Awaiting Will's pick among
+  the three builds.
+- 2026-11-04 [observed] Surveillance S13 dispatched
+  at Will's direction ("contrast commercially
+  available systems and costs") — research pending
+  at this pass, not completed.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
