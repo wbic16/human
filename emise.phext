@@ -2378,6 +2378,17 @@ recorded no further change.
   Will has not personally approved the Thursday fallback
   in any source checked; his hold decision otherwise
   stands, and no nudge was sent by Will.
+- 08:26-08:28 [will_said + observed] Wavefront V10 GO:
+  Will chose V10 for the three screen-visible V9 partials
+  (E2, G9, C13), put it on standby moments later, then
+  lifted the standby ("Continue with V10") and added a
+  fourth change — replace the tweets shown with the most
+  Exocortical ones (content-scored from his archive,
+  ranked list delivered for audit; Orai/excluded-node
+  exclusions stand). Tracked goal_d82e5a9e3af7; brief at
+  ~/workspace/wavefront/viz10/V10-BRIEF.md; builder
+  dispatched to aletheia-core. V9 stands as delivered
+  until V10 lands.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
