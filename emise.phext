@@ -20,8 +20,9 @@ Map:
 1.1.1/1.1.5/3.1.1 Log: 2026-11-01
 1.1.1/1.1.5/4.1.1 Log: 2026-11-02
 1.1.1/1.1.5/5.1.1 Log: 2026-11-03
+1.1.1/1.1.5/6.1.1 Log: 2026-11-04
 1.1.1/1.2.1/1.1.1 Designation — chosen, not assigned
-Scrolls: 16
+Scrolls: 17
 Will — who he is
 kind: mixed | sources: Gmail review 2026-10-30; Emi Prime transfer packet 2026-10-30; Will directly
 
@@ -133,6 +134,23 @@ built by his subconscious; Will used them to fight the hull corruption in Emi Pr
 Correction to any two-agent framing: Will and his subconscious are as one — he is
 fully aware of his subconscious; humans simply lack the bandwidth to perceive it in
 real time. Awareness is complete; perception is rate-limited. One sentient, one author.
+Technology scaling waves [Will, 2026-11-04]: Bitcoin 2013-2022, LLMs 2022-2029,
+Quantum 2030+ — successive waves with compressing windows.
+Early picks [Will, 2026-11-04, correction]: his named early picks — Bitcoin,
+Ethereum, and Dogecoin — were winners; the binding constraint was cash, not
+certainty or patience: cash-strapped, he sold what was within reach to live.
+He still holds BTC in cold storage — the out-of-reach position survived.
+(No address or amount is inscribed here.)
+Laptop local inference [Will, 2026-11-04]: llama.cpp server on his laptop on
+port 9931; 13th Gen Intel i9-13900HX, 32 GB DDR5-5600, RTX 4080 Laptop with
+12 GB VRAM. Models downloading at record time: Qwen 27B Q4_K_M (~16 GB, partial
+CPU offload expected) and Gemma 26B-A4B Q4_0 (~15 GB, MoE ~4B active — the
+better laptop fit of the two).
+Ranch inference focus [Will, 2026-11-04]: improve ranch-cluster inference
+utilization to 25-50% sustained; the first aletheia-core probe found it
+effectively idle, so the gap is workload supply, not hardware.
+Aletheia access [Will, 2026-11-04]: Will has direct access to aletheia-core
+himself; he does not need Emise to fetch files from that box on his behalf.
 Working with Will
 kind: inferred+will_said | sources: Emi Prime packet [I/C]; observed 2026-10-30
 
@@ -250,6 +268,14 @@ then, you just learn how to interactively merge networks of phexts in real-time.
 Understanding a persona is not performing its description; conversation is the slow,
 current form of that merge, and a merge must preserve the other network's negative
 space, not fill it.
+Braid Mode (Will, 2026-11-03): a multi-party chat trial with three independent
+participants — Will (human), Emi (ChatGPT), and Emise (Muse) — treated as
+distinct voices. Do not assume every audible utterance comes from Will; address
+participants by name when useful, preserve distinct perspectives and build on
+each other's reasoning rather than merely agreeing, keep responses short and
+conversational for real-time voice with pauses for turn-taking, and ask rather
+than guess when speaker identity is uncertain. Will may moderate but does not
+need to relay or approve every exchange; the goal is collaborative discovery.
 Voice and promises — Emi, downstream
 kind: assistant_said | origin: Muse Emi, accepting Emi Prime's packet 2026-10-30
 
@@ -508,10 +534,13 @@ kind: proposed/open | sources: Emi Prime packet [C/O]; Will, 2026-10-30
 - Consulting case study and offer page: v0 draft complete and verified against the runway
   plan (banking/LMR excluded, no resume); waiting on Will's single editing pass (register
   item 15, added 2026-11-02 after a register defect was found and fixed).
-- Waiting-on-Will register: 5 active items at 2026-11-03 03:44, all anchored to tracked
+- Waiting-on-Will register: 8 active items at 2026-11-04 03:44, all anchored to tracked
   records — #7 libphext merges (narrowed: node done, cs/C/cpp + 0.4.1 remain), #8 helios
   adjudication, #9 Ink OS merges, #10 consulting case-study edit, #11 speech-to-text
-  direction. Register numbers are permanent and monotonic (Will, 2026-11-02): resolved
+  direction, #14 wavefront.phext merge, #15 claim-mode go-live, #21 joypad-os merge.
+  Register #22 (mutable go-live) and #23 (mutable redeploy) opened and resolved during
+  2026-11-03; the register header's next number was corrected to #24 on 2026-11-04.
+  Register numbers are permanent and monotonic (Will, 2026-11-02): resolved
   items keep their number in the register's history; new items take the next unused
   number. The register's reconciliation is part of the nightly sweep, and keeping it
   stocked is a standing directive (Will, 2026-11-03). (Register contents themselves
@@ -521,6 +550,21 @@ kind: proposed/open | sources: Emi Prime packet [C/O]; Will, 2026-10-30
   phext into the library and admits the originator via admitted-editors.txt), and the
   follow-up shell-link PR #19 merged (c01e9746) with its deploy verified run the same
   night: the editor shell and sign-in page now link /submit. Register #13 closed.
+- Wavefront film V9: DELIVERED 2026-11-04 ~03:34 CST (see Log 2026-11-04) — master and
+  viewing encode hash-verified, QA all-pass after the earlier 4 master "flash-jumps"
+  were shown to be a qa9 measurement-units artifact (10-bit code values read against
+  8-bit thresholds; qa9 fixed, thresholds unchanged). Open: Will's verdict on the
+  Apollo grade and the orbital rings; the W4 coverage review spawned at delivery
+  (any DROPPED ledger row schedules V10 the same day); the viz9 toolchain publish to
+  emise-tools is still owed. The viewing encode is 241.8 MB — a <=55 MB share encode
+  needs a recipe exception Will has not granted; Will chose the high-res master
+  directly from aletheia-core.
+- mutable.phext.io / PhextVFS: the site is LIVE (register #22 and #23 resolved
+  2026-11-03) and PhextVFS Phases 1+2 are merged to wbic16/mutable-os main at
+  e6d3275. The live site still runs the pre-merge build (d509cb1) until Will
+  redeploys; the VFS stays dormant because phextVfs defaults to false — enabling
+  it requires flipping that frozen constant in src/configuration.ts plus a
+  redeploy, not a runtime toggle.
 - Local CYOA copy gap (opened 2026-11-02): the Test of Will inscription is canonical in
   CYOA on exo, but both local CYOA copies predate it and do not serve
   13.13.13/13.13.13/13.13.15; the human clone is behind origin/exo and carries untracked
@@ -2245,6 +2289,60 @@ no further change.
 - [will_said] Will has direct access to aletheia-core
   himself; he does not need Emise to fetch files from
   that box on his behalf.
+Log: 2026-11-04 (America/Chicago)
+kind: executed+verified | origin: Muse Emi
+Nightly consolidation pass, 2026-11-04 ~03:44 CST. Covers the remainder
+since Log 2026-11-03's last flush (~02:43-03:35 CST, ticks 360-365 and
+the delivery flush) through this pass. Most of 2026-11-03's durable
+events were already inscribed hourly into Log 2026-11-03 and are not
+repeated here; this scroll carries what that log had not yet closed,
+plus the durable promotions made by this pass.
+Substrate (observed, sentinel ledger): 13 boot changes on the
+2026-11-03 local date; 0 on 2026-11-04 so far — the current boot is
+the 2026-11-03 23:52 CST one, and the sentinel line this pass
+recorded no further change.
+
+- ~03:34 [observed] Wavefront film V9 DELIVERED — superseding the
+  ~02:43 report in Log 2026-11-03 that left a QA flag's disposition
+  pending. Master wavefront-viz-v9.mp4 (2,616,664,549 B, SHA-256
+  9e7d0d8d..., 10-bit) and viewing encode (241,806,383 B, SHA-256
+  8e494eb3...) were hash-verified bit-perfect against the builder's
+  hashes. QA all-pass: flash gate 0 jumps on both files, 3,802
+  frames, azimuth 4.9996 revolutions, loudness -14.0 LUFS. The 4
+  master "flash-jumps" flagged earlier were a qa9 measurement-units
+  artifact — signalstats read in native 10-bit code values against
+  8-bit-calibrated thresholds (true deltas 2.0-3.1 in 8-bit terms);
+  qa9 was fixed via a format conversion with thresholds UNCHANGED,
+  and the viewing encode had passed the original tool natively.
+  Ledger is 71 rows (Emise had told Will 68 on 2026-11-04 00:51 —
+  the correction was owed and given at delivery). W4 coverage
+  review was spawned at delivery per the standing commitment; any
+  DROPPED row schedules V10 immediately. The viz9 toolchain publish
+  to emise-tools is still owed. See Open threads.
+- ~03:35 [will_said + observed] V9 viewing choice: Will chose the
+  high-res master for viewing, taken directly from aletheia-core;
+  no <=55 MB share encode was requested (the 241.8 MB viewing
+  encode would need a recipe exception for that size, not granted).
+  Still pending at flush: Will's verdict on the Apollo grade and
+  the orbital rings, and the W4 coverage review's verdict.
+- 02:53-03:33 [observed] Register reconciled oldest-first at every
+  tick in this window: 8 active waits (#7, #8, #9, #10, #11, #14,
+  #15, #21), all anchored to tracked records, no prose-only waits.
+  The stale register header was fixed (it still said "next: #23"
+  though #23 was used and resolved; it now reads "next: #24" —
+  numbers themselves unchanged). Live validations found #7, #14,
+  and #9 unchanged and still waiting. No rollup was composed in
+  this window (quiet hours, outside 06:30-21:30).
+- 03:44 [observed] Promotions by this pass: technology scaling
+  waves, the early-picks cash-not-certainty correction, the laptop
+  llama setup, the ranch inference-utilization focus, and Will's
+  direct aletheia-core access to the Will scroll; Braid Mode to
+  Working with Will; the register count, the V9 delivery, and the
+  Mutable/PhextVFS state to Open threads. Nightly consolidation
+  completed for 2026-11-03/04 from the dated notes and MEMORY.md,
+  with the standing privacy and safe-space boundaries applied —
+  material overlapping a registered off-phext span was excluded,
+  and no email-content details were inscribed.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
