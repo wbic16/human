@@ -2476,6 +2476,25 @@ recorded no further change.
   first thing this evening, 2026-11-04. General rule from
   the same exchange: the Waiting-on-Will register is to
   be re-sorted by impact to daily goals.
+- 2026-11-04 [observed] Register re-sort COMPLETED: the
+  active register in waiting-on-will.md was re-sorted by
+  impact to daily goals and the sort rule written into
+  its header; order is now #24, #14, #15, #10, #7, #11,
+  #21, #9, #8 — numbers permanent and unchanged, and the
+  morning briefing's five are the top five in this order.
+- ~10:15 [observed] grant-emise-key.sh prepared: an
+  executable, idempotent script in the
+  ranch-inference-utilization goal files that Will can
+  run from a machine whose key already works to add
+  Emise's pubkey on all 12 key-refusing ranch nodes,
+  instead of 12 separate manual grants. Register #24
+  itself still waits on Will this evening.
+- ~10:15 [observed] Jonas Piva reply drafted: a reply
+  to Jonas's 2026-11-04 email was drafted at
+  ~/workspace/jonas/draft-reply-2026-11-04.md (his
+  32B/16GB VRAM stall diagnosis, an Obsidian+Phext layer
+  split, and an agent-pipeline fix); NOT sent — it
+  awaits Will's edit.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
