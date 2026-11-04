@@ -2343,6 +2343,19 @@ recorded no further change.
   with the standing privacy and safe-space boundaries applied —
   material overlapping a registered off-phext span was excluded,
   and no email-content details were inscribed.
+- ~04:02 [observed] V9 W4 coverage review COMPLETE — fresh auditor
+  verdicted all 71 ledger rows: 65 ADDRESSED, 6 PARTIAL, 0 DROPPED,
+  so no automatic V10 under the review protocol. PARTIALs: E2
+  (f3308 hush does not fully clear), G9 (anamorphic streak never
+  built), C13 (long arcs still exit frame top), C20a (timeline
+  centralised in render9.py, not an external data file), W7
+  (partial by Will's own W10 supersession), W9a (rings on the 7
+  shells verified; no core ring set, documented judgment call).
+  Flash-gate disposition ruled SOUND, incl. the auditor's own
+  frame extraction and a full gate rerun (PASS). Full audit:
+  ~/workspace/wavefront/viz9/COVERAGE-REVIEW.md. Whether to run
+  a V10 for the screen-visible partials (E2/G9/C13) is Will's
+  call. Still owed: publish the viz9 toolchain to emise-tools.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
