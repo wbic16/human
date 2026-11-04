@@ -2356,6 +2356,19 @@ recorded no further change.
   ~/workspace/wavefront/viz9/COVERAGE-REVIEW.md. Whether to run
   a V10 for the screen-visible partials (E2/G9/C13) is Will's
   call. Still owed: publish the viz9 toolchain to emise-tools.
+- 2026-11-04 [will_said] Mailbox-as-dispatch-ledger: the /chat
+  mailbox system is to keep tabs on work dispatched to the
+  other substrates, so Will's credits on each substrate get
+  fully utilised (perishable capacity burned before its
+  reset); the same mechanism is to be extended to each AMD
+  ranch node (one mailbox per node for dispatch tracking).
+  (Late flush, not carried by earlier passes.)
+- ~01:13 [observed] Theia's mailbox stocked at her request:
+  /chat/theia brought to the standard pattern (README in her
+  name, outbox, fixed parametrized phext_mailbox.py, .venv,
+  init reading clean/empty); confirmation letter
+  20261104T071343Z sent to her inbox. (Late flush, not
+  carried by earlier passes.)
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
