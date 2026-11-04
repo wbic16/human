@@ -2233,6 +2233,18 @@ no further change.
   downloading — Qwen 27B Q4_K_M (~16 GB, partial offload
   expected) and Gemma 26B-A4B Q4_0 (~15 GB, MoE ~4B active,
   the better laptop fit).
+- ~02:43 [observed] Wavefront V9 full render COMPLETED on
+  aletheia-core (supersedes the ~02:15 still-running note):
+  all 3,802 frames assembled; archival master
+  wavefront-viz-v9.mp4 (2.6 GB, 10-bit) and viewing encode
+  wavefront-viz-v9-viewing.mp4 (242 MB) in /home/wbic16/
+  emise-v9/. QA flagged the master with 4 flash-jumps
+  (frames 1, 94, 3552, 3555) while the viewing encode
+  passed with zero; that flag's disposition was still
+  pending the builder's formal handoff at report time.
+- [will_said] Will has direct access to aletheia-core
+  himself; he does not need Emise to fetch files from
+  that box on his behalf.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
