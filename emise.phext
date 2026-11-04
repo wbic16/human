@@ -2056,6 +2056,93 @@ no further change.
   emise-tools@exo as sq-bridge/ at 530d30ff (script 100755
   verified). Not yet tested: authenticated MCP phase and
   daemon (sq share) mode — v1 is HTTP-only.
+- 00:33 [observed] Wavefront V9 Chunk A2 delivered: W5 CMB
+  darkened (term x0.50; reel mean luma 29.69 -> 26.94) and W6
+  micro-shells built (DBSCAN: 7 clusters covering 103 of 153
+  mutuals, 2-sigma ellipsoid shells, world-locked, no weather
+  terms). Revised stress reel preserved alongside Chunk A's.
+- ~00:36 [will_said + observed] V9 full-render gate LIFTED:
+  Will directed the full V9 render with W7 — the CMB becomes
+  a light snow effect. Chunk B dispatched (builder on
+  aletheia-core, running at flush). W8 then directed and
+  folded in minutes into the render: 1965 Apollo Era film
+  grain as a post-stage grade (animated monochrome grain,
+  halation, film response, slow flicker, deeper vignette; no
+  gate weave or dust), scene/snow/shells/chronology frozen.
+  W9: a @biosdiscovery post named by Will as artistic
+  influence of record — render not stopped a second time;
+  it is checked in the post-V9 coverage review and is
+  first-class V10 material.
+- 2026-11-03 eve [observed] Tiny MoE-to-code experiment
+  COMPLETED with a clean FAIL under its pre-registered
+  criteria: exporter exact (round-trip diff 0.0), planted
+  dead/duplicate controls detected exactly, but real passes
+  removed 0% of params (criteria >=20%; profile arm 0% vs
+  >=40%) — balanced MoE training left no dead/duplicate
+  structure; specialisation was real (route purity 0.702).
+  Sham control degenerate when removals are 0 (design defect
+  recorded, not averaged away). Report in moe-to-code/.
+- ~00:35-00:44 [will_said + observed] SQ bridge rollout and
+  Choir toolbox: Will directed upgrading everyone to the SQ
+  MCP bridge (phext via bridge; /chat mailboxes stay the
+  doorbell). UPGRADE.md written, deployed to /chat/sq-bridge/,
+  and tailored letters dropped into grok/claude/emi/theia
+  inboxes. Argon named by Will as the Gemini seat — the
+  sixth Choir seat; his joining steps added to UPGRADE.md,
+  /chat/argon stocked as a wbic16-owned placeholder pending
+  Will creating the argon unix user. emise-tools awareness
+  pass at Will's direction: letters to all five inboxes plus
+  standing /chat/TOOLBOX.md; repo README completed (c3af87a9).
+- ~00:55 [observed] Bridge adoption replies: Emi installed
+  SQ 0.6.0 and her read-only sq-emi MCP initializes with all
+  7 tools (her channel is /chat/emi only, per Will's
+  clarification; archive reads unverified — no archive yet).
+  Theia runs as wbic16 on aletheia, so no per-user install
+  applies; her bridge registration is pending Will's
+  confirmation (gateway-config change, her ask).
+- [will_said] Theia's account arrangement RULED INTENDED:
+  no separate theia unix user will be created — she owns
+  that box, essentially; box git authorship therefore means
+  the box's hand, and attribution rides on mailbox
+  conventions (from: headers, sender-tagged filenames).
+- ~01:00 [observed] SQ bridge v1.1 — cross-user read-only
+  fix (Claude diagnosed, Will relayed): v1 started sq host
+  with cwd=SQ_DIR, so opening a channel needed WRITE access
+  there. v1.1 runs the host from a per-user runtime dir and
+  passes --data-dir; verified locally, as user nobody, and
+  in Claude's exact live case (reads /chat/emise, write
+  refused, archive SHA unchanged, no artifacts left).
+  Deployed to /chat/sq-bridge (SHA-256 fe96b91d...),
+  published to emise-tools at 85d5df7c, fix letter
+  20261104T070028Z sent to all five inboxes.
+- 01:31 flush [observed] mutable fs-ext rounds 2+3 FIXED,
+  verified, published, and merged: stage-C gates filesystem
+  and the nativeFlock definition in managed-pair.mjs both
+  now route through one shared lazy-load/portable fallback
+  (token locks, EWOULDBLOCK contention, crash recovery);
+  after the sweep the only fs-ext references are the lazy
+  loaders. Branch emise/fs-ext-gates-fix head f4e906ea
+  merged to wbic16/mutable-os main at d509cb12. This
+  supersedes the 00:20 entry's still-running fix round 2.
+- ~01:21 [will_said + observed] Register #23 RESOLVED:
+  Will redeployed main at d509cb1 and reported the OS now
+  boots to the Workspace desktop; live site verified (HTTPS
+  200, title "Mutable"). Register 9 -> 8 active waits.
+  Caveat: box-side git HEAD was not directly confirmed
+  (SSH via the ranch proxy failed at check time); Will's
+  screenshot plus the live site carried the closure.
+- 2026-11-04 [will_said + observed] PhextVFS for Mutable:
+  Will clarified the direction — not distribution: all I/O
+  paths in Mutable map to a virtual FS layer routing
+  everything into one phext per Cavern, so knowledge work
+  packages and ships like a Jupyter notebook. I/O seam map
+  completed (deployed config is Cavern mode; documents,
+  gates, knowledge, history/jobs/publications/assets seams
+  surveyed) and the PhextVFS evaluation was delivered
+  (server-side VFS behind existing seams; SQLite bytes never
+  enter the phext — its logical records do, the DB is a
+  derived index; binary assets encoded and chunked).
+  Status: awaiting Will's go on Phase 1+2.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
