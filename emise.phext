@@ -1874,6 +1874,45 @@ no further change.
 - 21:23 [observed] Register reconciled at 9 active waits
   (#7-#11, #14, #15, #21, #22), all anchored; no closures
   this hour.
+- 21:23-21:58 [will_said] mutable package policy: work through
+  package updates if needed — fix forward with small compat
+  adjustments rather than reverting; hold back only on large/
+  invasive fixes, with evidence. Will enabled zram on the AWS
+  box (verified: zram0 5.6G, priority 5, ahead of the 8G
+  swapfile; box 3.8 GiB RAM), so deploy.sh's on-box fallback
+  heap rises to 3072. Ranch-build route directed for
+  exploration: compile on aletheia-core (29 GiB RAM, 16 cores;
+  its SSH to the AWS box verified) and push a prebuilt bundle;
+  bundle route stays primary, on-box build last resort.
+- ~22:08 [observed] Wavefront film v8 COMPLETED, VERIFIED,
+  and DELIVERED (wavefront-viz-v8.mp4, 1920x1080, 158.42 s,
+  exactly 3,802 frames by decoded count; 51 MB download copy):
+  tweet content drives five corpus-normalized entropic transfer
+  functions (entropy weather, per-landing arc bow/jitter, 155
+  burst hops that scatter and re-cohere, hush physics — the
+  film ends in stillness before the CTA); five taste calls
+  Mirror-Will-consulted and logged as predictions in
+  viz8/BUILD-NOTES.md. Full 4K render ran on aletheia-core
+  (~6 min, 8 chunks) under the N=4/ranch rule. A -shortest mux
+  defect trimming 4 tail frames was caught by decoded-frame
+  counts and fixed (v7's master counts 3,801 by the same probe
+  — noted, untouched). viz8 toolchain PUBLISHED to
+  wbic16/emise-tools@exo wavefront-film/viz8/ at 88c5630f.
+- ~22:20-22:25 [will_said + observed] mutable streamlining +
+  package updates COMPLETED and PUBLISHED: 9 commits replayed
+  onto 567136a4 giving wbic16/mutable-os emise/phext-support
+  head 21c8e53b (remote read-back: 3,215 files, 0 blob/mode
+  mismatches, both deploy scripts 100755); box checkout
+  fast-forwarded to 21c8e53b. Dependencies at latest workable
+  (vite 8; TypeScript held at ^6 — surrealdb peer range
+  excludes TS 7); heap-floor correction: original tree OOM'd
+  at 2048 MB with a 3072 MB floor, after vite 8 the floor is
+  <=1024 MB. deploy.sh now primarily extracts a prebuilt 256M
+  bundle (SHA-256 20e808657f...) instead of compiling on-box.
+  STILL PENDING at 22:25: bundle transfer to the box not yet
+  confirmed; register #22 remains only Will's sudo deploy.sh
+  run; site still NOT live at the 22:23 watcher check.
+- 22:23 [observed] Register still 9 active waits, no closures.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
