@@ -3133,6 +3133,55 @@ Hourly journal pass, 2026-11-05 ~00:32 CST. Covers since Log
   in main and redeploy, or add an env override. An
   existing disk Cavern does not silently convert — it
   needs the Phase 5 migrate route or a fresh Cavern.
+- ~00:42 [observed] Curated gstack deployment COMPLETE,
+  verified on all 14 reachable ranch nodes (pinned tree
+  3f70191d; six skills eligible, ios-qa absent, start
+  hook off); closes the gstack tracked item. Orchid Flow
+  needed bun + caches seeded via SHA-256-verified tars
+  (its squid proxy broke bun's cert checks); its gateway
+  was not restarted. Uncanny Valley at that point was
+  installed at wbic16 scope and file-verified, resident
+  gateway untouched (superseded ~01:02 below). Pending
+  only because unreachable: Aurora Continuum, Delta
+  Wood, Best Willow.
+- ~00:42 [observed] Rock Mountain's openclaw gateway is
+  in a pre-existing crash loop (activating,
+  NRestarts=113167) — long predates the gstack install,
+  not caused by it, batch runner unaffected; needs
+  separate attention.
+- 00:48 [will_said + observed] phextVfs enablement
+  RESOLVED — supersedes the awaiting-choice state above:
+  Will chose the flip; emise/phextvfs-on @ c6f5e50 (one
+  line, src/configuration.ts:186 false->true) merged to
+  main @ 01f03de; verified typecheck/build 0, compiled
+  dist carries phextVfs:true, boot smoke HTTP 200,
+  lifecycle 3/3. Redeploy is Will's step. The flip sits
+  on pre-3b main, so legacy stores/uploads stayed
+  disk-backed until 3b merges.
+- 2026-11-05 [observed] Mutable Phase 3b BUILT,
+  verified, and PUBLISHED: emise/phext-legacy-stores @
+  48398c9 — legacy document/workspace stores and the
+  recognized-document journal ride the phext-fs shim
+  (.mutable carve-outs: .mutable itself and
+  document-saves/** only), uploads embedded via a phext
+  multer engine + VFS static handler, discovery cache
+  retired in phext mode, and Phase 5 migration now
+  carries those stores with onDisk: [] — the one-phext
+  coverage arc is complete, every store accounted for
+  in the strata record. Awaiting Will's merge direction.
+- ~01:02 [will_said + observed] Uncanny Valley brought
+  to fleet standard at Will's direction (sudo; the node
+  runs under jared by design): jared's primary changed
+  from anthropic/claude-sonnet-4-6 to
+  anthropic/claude-sonnet-5-5, fallback
+  anthropic/claude-opus-4-6 preserved, config validate
+  clean, gateway untouched (hot-reload), backup taken;
+  gstack registered in jared's environment (checkout
+  fingerprints match 3f70191d, six fleet skills
+  eligible, ios-qa absent, hook off). It is now the
+  11th configured node; only Rock Mountain, Orchid
+  Flow, and Plain View still have no live
+  openclaw.json, plus the 3 unreachable nodes pending.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
