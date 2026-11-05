@@ -3217,6 +3217,29 @@ Hourly journal pass, 2026-11-05 ~00:32 CST. Covers since Log
   a full V11 render must use chunked cooling pauses
   or a live kill-watcher with capped ffmpeg threads,
   not open-loop running.
+- 2026-11-04 late evening [will_said + observed]
+  Catch-up (omitted by the earlier passes tonight):
+  Will merged PR #10 in wbic16/human — wavefront.phext
+  live on exo, byte-identical to the built artifact
+  (blob e160e460, merge commit f9a84688). Register
+  #14 CLOSED; this unblocks the snapshot half of
+  register #15.
+- 2026-11-04 ~23:35 [will_said + observed] Will
+  merged PR #20 in wbic16/phext-lattice (emise/
+  claim-mode into exo, merge commit 7e0e2d09) — claim
+  mode code is on exo, but no deploy has run.
+  Register #15 remains open ONLY for the go-live
+  half: Will's X developer app and his price/tier
+  confirmations.
+- 2026-11-04 late evening [will_said + observed]
+  Register #26-#34 OPENED at Will's direction: the
+  nine long-open phext-lattice PRs from 2026-10-30
+  (#4, #6, #7, #8, #9, #10, #12, #13, #14) added to
+  the register and binned by priority. Grok was
+  dispatched via his /chat mailbox to triage them,
+  and Will decided Grok will rebase the branches —
+  all nine have diverged 21-29 commits behind exo,
+  so none is a merge-as-is.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
