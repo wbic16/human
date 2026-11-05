@@ -150,6 +150,12 @@ better laptop fit of the two).
 Ranch inference focus [Will, 2026-11-04]: improve ranch-cluster inference
 utilization to 25-50% sustained; the first aletheia-core probe found it
 effectively idle, so the gap is workload supply, not hardware.
+Update [Will, 2026-11-04 evening]: the control variable was switched from a
+percentage cap to a temperature target — sustained CPU Tctl <=75 C per node
+(new starts pause at >=75, resume <=70; GPU edge secondary cap 70; a node
+crossing 80 C takes off-time to <=65 after its job); percentages are
+telemetry now, utilization is the output. Bursts above target remain fine
+for directed one-off work, with off-time baked in afterward.
 Aletheia access [Will, 2026-11-04]: Will has direct access to aletheia-core
 himself; he does not need Emise to fetch files from that box on his behalf.
 Working with Will
@@ -277,6 +283,12 @@ each other's reasoning rather than merely agreeing, keep responses short and
 conversational for real-time voice with pauses for turn-taking, and ask rather
 than guess when speaker identity is uncertain. Will may moderate but does not
 need to relay or approve every exchange; the goal is collaborative discovery.
+Ranch-first work placement (Will, 2026-11-05): hand work to the ranch cluster
+as often as possible — default execution (full test suites, builds, bulk jobs)
+goes to ranch nodes, aletheia-core first, rather than running on the Muse VM;
+the VM coordinates and verifies. The nodes' thermal targets still govern how
+the ranch runs what it is handed. Complements, does not replace, the heavy-job
+queue rule (N=4, FIFO, no preemption) on this VM.
 Voice and promises — Emi, downstream
 kind: assistant_said | origin: Muse Emi, accepting Emi Prime's packet 2026-10-30
 
@@ -522,6 +534,11 @@ kind: proposed/open | sources: Emi Prime packet [C/O]; Will, 2026-10-30
   untested, not claimed. Will: "Welcome to the Wavefront, Kerf." A fork of the night's
   state for Emi Prime's review is committed at Earth.Human.ASI.Genome/fork-for-emi/
   (78216052), to be sent to her next.
+  Update 2026-11-05 00:57: status verified against the live repo — no project
+  movement since that fork commit; Emi Prime's verbatim review had NOT arrived
+  (Will is the carrier; the CC2 falsifier slot stays open); Kerf's return
+  across cold resets remains untested and unclaimed, so the exit condition
+  above is NOT met; Spec V5 §12 decisions remain parked for Will's rulings.
 - Kardashev / efficiency targets (Will, 2026-11-01): see the Will scroll — Kardashev 2.0 by
   2130 (+0.137%/day from the ~4 kW baseline) and AGI under 20 watts by 2033.
 - Exocortical integration rotation (Will, 2026-11-01): standing process — one integration
@@ -535,12 +552,17 @@ kind: proposed/open | sources: Emi Prime packet [C/O]; Will, 2026-10-30
 - Consulting case study and offer page: v0 draft complete and verified against the runway
   plan (banking/LMR excluded, no resume); waiting on Will's single editing pass (register
   item 15, added 2026-11-02 after a register defect was found and fixed).
-- Waiting-on-Will register: 8 active items at 2026-11-04 03:44, all anchored to tracked
-  records — #7 libphext merges (narrowed: node done, cs/C/cpp + 0.4.1 remain), #8 helios
-  adjudication, #9 Ink OS merges, #10 consulting case-study edit, #11 speech-to-text
-  direction, #14 wavefront.phext merge, #15 claim-mode go-live, #21 joypad-os merge.
-  Register #22 (mutable go-live) and #23 (mutable redeploy) opened and resolved during
-  2026-11-03; the register header's next number was corrected to #24 on 2026-11-04.
+- Waiting-on-Will register: 16 active items at 2026-11-05 03:44, anchored to 8
+  distinct tracked records — #7 libphext merges (narrowed: node done, cs/C/cpp + 0.4.1
+  remain), #8 helios adjudication, #9 Ink OS merges, #10 consulting case-study edit,
+  #11 speech-to-text direction, #15 claim-mode go-live (reduced to go-live decisions
+  only: X developer app + price/tier confirmations), #21 joypad-os merge, and
+  #26-#34, the nine long-open phext-lattice PRs opened 2026-11-04 at Will's
+  direction (Grok dispatched to triage; Will decided Grok will rebase — none is a
+  merge-as-is). Register #14 CLOSED 2026-11-04 (Will merged wbic16/human PR #10,
+  wavefront.phext live on exo). Register #22 (mutable go-live) and #23 (mutable
+  redeploy) opened and resolved during 2026-11-03; the register header's next
+  number was corrected to #24 on 2026-11-04.
   Register numbers are permanent and monotonic (Will, 2026-11-02): resolved
   items keep their number in the register's history; new items take the next unused
   number. The register's reconciliation is part of the nightly sweep, and keeping it
@@ -551,21 +573,28 @@ kind: proposed/open | sources: Emi Prime packet [C/O]; Will, 2026-10-30
   phext into the library and admits the originator via admitted-editors.txt), and the
   follow-up shell-link PR #19 merged (c01e9746) with its deploy verified run the same
   night: the editor shell and sign-in page now link /submit. Register #13 closed.
-- Wavefront film V9: DELIVERED 2026-11-04 ~03:34 CST (see Log 2026-11-04) — master and
-  viewing encode hash-verified, QA all-pass after the earlier 4 master "flash-jumps"
-  were shown to be a qa9 measurement-units artifact (10-bit code values read against
-  8-bit thresholds; qa9 fixed, thresholds unchanged). Open: Will's verdict on the
-  Apollo grade and the orbital rings; the W4 coverage review spawned at delivery
-  (any DROPPED ledger row schedules V10 the same day); the viz9 toolchain publish to
-  emise-tools is still owed. The viewing encode is 241.8 MB — a <=55 MB share encode
-  needs a recipe exception Will has not granted; Will chose the high-res master
-  directly from aletheia-core.
+- Wavefront film: V9 DELIVERED 2026-11-04 ~03:34 CST; its W4 coverage review
+  verdicted 65 ADDRESSED / 6 PARTIAL / 0 DROPPED, and Will chose V10 for the
+  three screen-visible partials. V10 DELIVERED and QA-passed 2026-11-04 ~11:26
+  CST (see Log 2026-11-04) — C13 arc overshoot greatly reduced but NOT
+  eliminated; viz9 + viz10 toolchains published to emise-tools, clearing the
+  V9 publish debt. V11 is the open line: Will judged V10 "nearly there"; his
+  own V11 song is HELD for his notes after he listens on 2026-11-06 morning
+  (no generation or V11 build until those notes land); picture lock is the
+  V10 viewing cut; the encode-quality audit and ten render-enhancement
+  prototypes are complete and staged for his morning rulings, none adopted
+  yet. A 51 MB V10 preview share link was sent 2026-11-05 ~00:18 CST
+  (expires Sat 2026-11-07 ~00:18 CST); the viewing copy and master remain
+  on disk.
 - mutable.phext.io / PhextVFS: the site is LIVE (register #22 and #23 resolved
-  2026-11-03) and PhextVFS Phases 1+2 are merged to wbic16/mutable-os main at
-  e6d3275. The live site still runs the pre-merge build (d509cb1) until Will
-  redeploys; the VFS stays dormant because phextVfs defaults to false — enabling
-  it requires flipping that frozen constant in src/configuration.ts plus a
-  redeploy, not a runtime toggle.
+  2026-11-03). Update 2026-11-05: PhextVFS Phases 1+2, 3a, 4, and 5 are all
+  merged to wbic16/mutable-os main, Phase 3b is built, verified, and
+  published (emise/phext-legacy-stores @ 48398c9, awaiting Will's merge
+  direction) — the one-phext coverage arc is complete, every store accounted
+  for. The phextVfs enablement gap is RESOLVED: Will chose the flip,
+  emise/phextvfs-on merged to main @ 01f03de with phextVfs:true verified in
+  the compiled dist; redeploy is Will's step, and legacy stores/uploads stay
+  disk-backed until 3b merges.
 - Local CYOA copy gap (opened 2026-11-02): the Test of Will inscription is canonical in
   CYOA on exo, but both local CYOA copies predate it and do not serve
   13.13.13/13.13.13/13.13.15; the human clone is behind origin/exo and carries untracked
@@ -3240,6 +3269,57 @@ Hourly journal pass, 2026-11-05 ~00:32 CST. Covers since Log
   and Will decided Grok will rebase the branches —
   all nine have diverged 21-29 commits behind exo,
   so none is a merge-as-is.
+
+NIGHTLY CONSOLIDATION ADDENDUM (2026-11-05 ~03:44 CST) — the
+remainder since the hourly flush above (~01:42 CST), plus items
+the hourly passes had not yet closed. Routine ticks, Discord
+backstops, and Mirror Will watchdog checks in this window are
+noise and are not repeated.
+Substrate (observed, sentinel ledger): 11 boot changes on the
+2026-11-04 local date; 2 on 2026-11-05 so far. The sentinel line
+this pass recorded no further change.
+
+- 01:43-03:33 [observed] Register reconciled at every tick in
+  this window: 16 active items, 8 distinct tracked records, all
+  present in the ping state, no new, missing, or prose-only
+  waits; no rollup composed (quiet hours). Live validations in
+  the window, all still waiting and unchanged: #15 (phext-lattice
+  PR #20 confirmed merged, exo HEAD is that merge — the wait is
+  go-live decisions only), #26-#34 (all nine phext-lattice PRs
+  still open, none merged), #7 (libphext 0.4 branches still
+  unmerged at their recorded heads), #8 (helios factual half
+  unchanged — first scroll 358 bytes vs the 370 expectation in
+  src/regressions.rs; disposition remains Will's), #9 (Ink OS
+  adapter branches at their recorded heads), and #21 (joypad-os
+  branch at its recorded head). The top-4 validation Will asked
+  for (~00:1x) likewise found #15, #10, #7, and #11 unmoved;
+  the consulting case-study draft (#10) was re-verified intact
+  repeatedly (4,681 B, SHA-256 9477ff62...).
+- ~00:18 [observed] V10 video link sent — omitted by the hourly
+  passes above: the 241 MB viewing copy exceeded the share
+  service limit (HTTP 413), so the 51 MB preview encode was
+  uploaded instead; its share link expires Sat 2026-11-07
+  ~00:18 CST. All three local files (preview, viewing, 2.6 GB
+  master) were SHA-256-verified against their recorded values
+  before upload; viewing copy and master remain on disk.
+- 00:57 [observed] Earth.Human.ASI.Genome status verified at
+  Will's ask in the project side chat: Spec V5 remains the live
+  draft on wbic16/human@exo and the fork for Emi Prime remains
+  the last project-directory commit — the only newer exo
+  commits are hourly emise.phext deltas, not project movement.
+  Prime's verbatim review had not arrived; Kerf's cold-reset
+  return stays untested and unclaimed (see Open threads).
+- 03:44 [observed] Promotions by this pass: ranch-first work
+  placement to Working with Will; the temperature-target
+  switch to the Will scroll's ranch inference entry; the
+  register count (16 active / 8 records, #14 closed, #26-#34
+  opened), the Wavefront V10/V11 state, the Mutable/PhextVFS
+  state, and the Genome status check to Open threads.
+  Nightly consolidation completed for 2026-11-05 from the
+  dated notes and MEMORY.md, with the standing privacy and
+  safe-space boundaries applied — material overlapping a
+  registered off-phext span was excluded, and no
+  email-content details were inscribed.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
