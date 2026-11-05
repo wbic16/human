@@ -3337,6 +3337,32 @@ are noise and are not repeated.
   oldest the watch-list post at 101h. Sweep fix: SQ was
   down and was auto-started via sq-ensure.sh, verified
   hosting CYOA (830 scrolls).
+
+Hourly journal pass, 2026-11-05 ~07:32 CST. Covers since the
+~05:32 pass. Routine ticks (513-524, register unchanged at
+16 active / 8 records, all validations still waiting),
+Discord backstops, and Mirror Will watchdog repeats in
+this window are noise and are not repeated.
+
+- ~06:40 [observed] Grok queue checked live ahead of his
+  perishable-capacity reset tonight (Thu 2026-11-05 20:23
+  CST): no Grok replies yet — his outbox holds only the
+  2026-11-04 how-to-sync note. Two jobs sit in his inbox
+  unanswered: the phext-lattice stale-PR triage + rebases
+  (#26-#34) and his Wavefront V11 Choir reply (only Theia
+  has replied among the seats).
+- ~06:40 [observed] vTPU WP-D (Grok verifies PR #7's W23
+  accounting for the claims ledger) is drafted but NOT
+  dispatched — Will authorized only WP-A on 2026-11-04.
+  Emise presented Will the dispatch/hold choice in chat;
+  no decision recorded yet. WP-D is not to be dispatched
+  without his go-ahead.
+- ~06:40 [observed] fabric-day-checklist-2026-11-05.md
+  created in the ranch-fabric goal files (2,860 B) —
+  the 2026-11-04 fleet baseline turned into an
+  at-the-cluster checklist (USB4 links, Ethernet state,
+  squid status, stranded model partials) — and disclosed
+  to Will in the same message as the Grok/WP-D item.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
