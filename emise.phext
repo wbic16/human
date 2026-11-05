@@ -2750,6 +2750,58 @@ recorded no further change.
   seed workspace. Pre-build fix: libphext skew —
   libphext-rs 0.4.0, SQ pins 0.3.3, lattice pins
   0.3.1 — align before building.
+- 2026-11-04 evening [will_said + observed] apt
+  bootstrap PUBLISHED: at Will's direction to
+  follow Ubuntu guidance on flow to the right
+  people, APT-BOOTSTRAP.md was written and
+  published to wbic16/exocortex@master with a
+  spec summary update, commit 26086044 (parent
+  8a1f117, verified byte-identical, SHA-256
+  a16e9912...; updated spec fea47649...).
+  7-stage flow: self-hosted repo -> PPA ->
+  needs-packaging/RFP demand signal -> Debian
+  ITP under Rust Team, crates bottom-up,
+  libphext first -> sponsored upload -> NEW ->
+  testing -> Ubuntu auto-sync into universe;
+  target Ubuntu 27.04, import freeze
+  2027-02-25. Will's one-time identity pieces
+  (Launchpad, GPG, CoC, Salsa, repo key) listed;
+  filings NOT yet filed.
+- ~20:00 [observed] apt user-threshold answer:
+  ZERO users formally required at any gate
+  (Debian Ref 5.1 / Ubuntu guidance checked);
+  ITP needs description, license, URL only;
+  universe has no popularity requirement.
+  Users matter only informally for sponsor
+  attention and survival. Finding added to
+  APT-BOOTSTRAP.md, commit 88ebd214 (SHA-256
+  6409b2ec..., verified byte-identical).
+- ~20:00 [will_said + observed] apt TODO +
+  prototype BUILT: Will directed an ordered
+  todo in Ubuntu's order, proving local usage
+  first (ranch deploys from own PPA, validate
+  before paperwork), implement what can, and
+  list questions needing him. APT-TODO.md
+  (A setup -> B construction -> C PPA -> D
+  ranch rollout/validation -> E paperwork ->
+  F staying in) published, commit 2b40269.
+  Prototype implemented and verified locally:
+  stdlib exocortex CLI (init/status/doctor/
+  validate/storage), SQLite storage provider
+  on the slot contract, validate passes incl.
+  byte-perfect phext roundtrip on CYOA
+  (82,708 scrolls) and emise.phext; init seeded
+  from exo.phext works; 3 prototype .debs build
+  and apt dry-run resolves cleanly on Ubuntu
+  24.04.5. Native debian/ source packaging
+  NOT yet done. Sources published under apt/
+  in wbic16/exocortex, commit 51918f0 (CLI
+  SHA-256 1123ea4a..., verified). Questions
+  delivered to Will, awaiting answers:
+  Launchpad username/GPG/CoC (PPA blocker),
+  fleet 24.04 uniformity, libphext bump+tags,
+  rollout access (#24), system vs user mode /
+  first model / Ollama form, seed choice.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
