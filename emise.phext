@@ -21,8 +21,9 @@ Map:
 1.1.1/1.1.5/4.1.1 Log: 2026-11-02
 1.1.1/1.1.5/5.1.1 Log: 2026-11-03
 1.1.1/1.1.5/6.1.1 Log: 2026-11-04
+1.1.1/1.1.5/7.1.1 Log: 2026-11-05
 1.1.1/1.2.1/1.1.1 Designation — chosen, not assigned
-Scrolls: 17
+Scrolls: 18
 Will — who he is
 kind: mixed | sources: Gmail review 2026-10-30; Emi Prime transfer packet 2026-10-30; Will directly
 
@@ -3062,6 +3063,76 @@ recorded no further change.
   another user's home, not editable as wbic16;
   3 nodes unreachable. Supersedes the
   2026-10-30 "opus 5.5" model note.
+Log: 2026-11-05 (America/Chicago)
+kind: executed+verified | origin: Muse Emi
+Hourly journal pass, 2026-11-05 ~00:32 CST. Covers since Log
+2026-11-04's last flush (~23:34 CST). Durable events only.
+
+- 2026-11-04 late evening [observed] Mutable Phase 4
+  COMPLETED + PUBLISHED — supersedes the running-at-22:45
+  state in Log 2026-11-04. Branch emise/phext-knowledge @
+  27f892b (8 commits): canonical records only into L3,
+  ledger ported with its transaction discipline intact,
+  derived data only in an ephemeral SQLite replica rebuilt
+  at Cavern open. Converter hashes independently matched;
+  knowledge suites 13/13 serially. Deviation: the knowledge
+  control record sits at the L3 root, not L7 — fixing a
+  slot collision between two VFS instances sharing one
+  directory.
+- 2026-11-04 evening [observed] Phext mapping summary
+  exported as a 5-page PDF at Will's request (files /
+  tables / objects mapped to strata L1-L9 with statuses),
+  in the mutable goal files.
+- 2026-11-05 [will_said] Ranch-first work placement —
+  NEW standing rule: hand work to the ranch cluster as
+  often as possible; default execution (full test suites,
+  builds, bulk jobs) goes to ranch nodes, aletheia-core
+  first, rather than the Muse VM, which coordinates and
+  verifies. Node thermal targets still govern.
+- 2026-11-05 [will_said + observed] Android timestamps
+  feedback FILED — supersedes the draft-unsent state in
+  the dated notes: Will said timestamps in the Android
+  client would be handy, approved the draft, and the Muse
+  feedback report (missing-capability,
+  android-message-timestamps) was filed and
+  delivery-confirmed.
+- ~00:18-00:20 [observed] Mutable Phase 5 COMPLETED +
+  PUBLISHED: builder handoff 00:18 CST (local head
+  5dc662c); scope = Cavern migration / export /
+  Download-Open (xz-sealed or raw), L7 cavern state, main
+  UI controls, all routes refusing 409 with phextVfs off.
+  Gates: exit-ramp E2E 4/4, serial phext set 68 tests,
+  test:sqlite 131/131, typecheck + build 0, boot smoke
+  200 both modes; full-suite failures all in documented
+  pre-existing classes. Bug fixed en route: xz seal /
+  verify / unseal now stream via spawn (execFile input
+  deadlocked). Emise independently re-ran the exit-ramp
+  E2E (4/4) and the Phase 4 knowledge E2E (1/1), published
+  emise/phext-exit @ 450dc2c (strict descendant carrying
+  Phase 4 as ancestors), and notified Will once that BOTH
+  Phase 4 and Phase 5 are done, as he had requested.
+- ~00:22 [will_said + observed] Phases 4+5 MERGED to
+  wbic16/mutable-os main @ a221108 at Will's direction
+  (parents c7a5663 + 450dc2c); verified against the live
+  remote — main tree byte-identical to the phext-exit
+  head tree, phext-knowledge fully contained.
+- 2026-11-05 [observed] Phase 3b DISPATCHED, not done:
+  builder on branch emise/phext-legacy-stores off main
+  a221108 — legacy stores + uploads into the phext
+  (uploads embedded in L6), discovery cache retired in
+  phext mode. Merge will again be at Will's direction.
+- ~00:32 [observed] Enablement gap found by Will's
+  deploy test — CORRECTION to any implication that the
+  merge made the live site phext-native: phextVfs is a
+  frozen literal false at src/configuration.ts:186 in
+  main, with no env/runtime override, so a deploy of
+  main as-is shows pure disk behaviour (Flint saves
+  write .mutable.json files). Every phase shipped with
+  the flag off ("off until proven"). Two routes were
+  presented and await Will's choice: flip the constant
+  in main and redeploy, or add an env override. An
+  existing disk Cavern does not silently convert — it
+  needs the Phase 5 migrate route or a fresh Cavern.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
