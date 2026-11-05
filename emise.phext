@@ -2936,6 +2936,132 @@ recorded no further change.
   programme, explicitly not a Babylon 5 reprise.
   DRAFT delivered to Will only; NOT sent, no
   contact made.
+- ~22:38 [will_said + observed] Register #24
+  RESOLVED — supersedes the key-refusal states
+  above. Will ran the ranch fleet SSH key
+  grants; Emise re-probed all 17 nodes live:
+  all 12 formerly refusing nodes now accept her
+  key (14 of 17 reachable with aletheia-core and
+  Rock Mountain). Aurora Continuum, Delta Wood,
+  and Best Willow still do not answer at all —
+  a reachability question only, not a key wait.
+  Register 9 -> 8 active items, #24 to history
+  with its number intact.
+- ~22:40 [observed] Post-grants utilization
+  baseline COMPLETED: all 14 reachable nodes
+  measured, iGPU 0% at every sample, Ollama up
+  on all 14. Anomalies: Plain View has ZERO
+  usable models (41.7 GB stranded partials);
+  stranded partial downloads are fleet-wide
+  (readable stores ~1,047 GB, heavy duplication
+  — the download-once-share-locally problem for
+  tomorrow's fabric goal); Ollama version skew
+  0.40.11 / 0.20.x / 0.18.3. Thunderbolt links
+  already up on Ashfall Haven, Logos Prime, Ni
+  Knight, Scroll Central (20-40 Gb/s); only one
+  Ethernet link up fleet-wide, rest Wi-Fi.
+- ~22:46 [will_said + observed] Cluster control
+  SWITCHED to temperature targeting — supersedes
+  the 25-50% sustained cap as the gating rule
+  (percentages are telemetry now): sustained CPU
+  Tctl <=75 C per node, new starts pause at >=75,
+  resume <=70; GPU edge pause >=70, resume <=65;
+  a node crossing 80 C takes off-time to <=65
+  after its job. Derived from tonight's measured
+  idle (mostly 35-40 C) and load peaks (Job 003
+  Tctl 82 C). Rock Mountain batchq runner
+  retuned and verified (no_jobs, done 3, failed
+  0); nodes.json refreshed to 14 reachable nodes
+  (Plain View flagged model_unavailable).
+- 2026-11-04 evening [observed] Mutable Phase 4
+  BUILD dispatched on branch emise/phext-
+  knowledge off main c7a5663 (design + media-
+  embedded ruling, carve-out cancelled); five
+  implementation commits observed, still RUNNING
+  at ~22:45 — not done, not verified. Same
+  evening [will_said]: Will asked Ian to review
+  the mutable-phext plan (~22:31) and directed
+  Emise to notify him when Phase 4 AND Phase 5
+  are done; Phase 5 is queued behind Phase 4,
+  Phase 3b after both.
+- 2026-11-04 evening [observed] qwenFS phext
+  upgrade BUILT, VERIFIED, PUBLISHED — supersedes
+  the dispatched state in the dated notes. Will's
+  variant direction [will_said]: one phext holds
+  the whole FS, the LLM reads/writes scrolls
+  directly, WAL mode with immutable start/end
+  bookends. Built in ~/workspace/qwenfs-upgrade/
+  repo/: qfs/phext_fs.py (native variant) +
+  qfs/phext_disk.py (bridge to upstream's
+  directory disk image); upstream untouched
+  except a README phext section. Emise re-ran
+  verification: 23/23 tests incl. crash-after-WAL
+  replay, seal tamper, byte-identical disk
+  roundtrip. Published at Will's direction:
+  reusable phext_upgrade skill to emise-tools@exo
+  b55ade8, upgrades to wbic16/qwenFS@main
+  662995a (parent upstream b124354); remote blob
+  SHAs verified equal, scripts mode 100755.
+  Will's local qwenFS run is BLOCKED at setup
+  (~23:08): `just setup` / `uv sync` failed after
+  snap installs of just/uv; cause UNCONFIRMED,
+  awaiting his error output.
+- 2026-11-04 late evening [observed] vTPU
+  resumption audits COMPLETED — correction to
+  the earlier flush: PRs #1, #3, #4 are MERGED
+  (verified via GitHub API; exo HEAD 1cfa6f73);
+  PRs #2, #5, #6, #7, #8, #9 remain OPEN on stale
+  bases; W29 throughput ruled INVALID (sentrons
+  never spawned). Resumption plan presented at
+  ~/workspace/your_files/vtpu-resumption-plan-
+  2026-11-04.md. [will_said] Will chose WP-A
+  ONLY for tonight; WP-B/C/D packets prepared,
+  NOT dispatched.
+- 2026-11-04 late evening [observed] vTPU WP-A
+  EXECUTED: (1) Rust probe — cargo/rustc
+  1.94.0-1.94.1 + rustup present on Rock
+  Mountain, Scroll Central, Ashfall Haven,
+  Halycon Vector (idle Tctl 33-47 C); fleet runs
+  1.94.x while PR #6 pins 1.99.1 (open decision).
+  (2) Theia reviewed PR #8 via gateway wake:
+  recommendation MERGE, no rebase needed (red/
+  green reproduced on merged exo+PR tree;
+  corrections: "20/20" is filter-dependent,
+  empty-fleet support is a regression guard not
+  a fix, 3,916 aggregate unverified) — the merge
+  itself remains Will's hand. (3) RG-0 claims
+  ledger SEEDED as a phext at
+  ~/workspace/vtpu-resumption/claims-ledger.phext
+  (7 scrolls, C-001-C-006 at 1.1.1/1.1.1/1.x.1,
+  SQ-hosted and verified; README alongside).
+  NOT published to GitHub.
+- 2026-11-04 late evening [observed] gstack fork
+  curation COMPLETED + PUBLISHED — supersedes
+  the dispatched state in the dated notes.
+  Fork was a strict stale snapshot (no fork-only
+  content); sync commit 442291cc + cull commit
+  3f70191d (207 paths culled; CURATION.md +
+  README pointer) are now wbic16/gstack main,
+  remote-verified (kept paths 200, culled 404).
+  Register #25 (gstack token scope) opened
+  ~22:59 and RESOLVED same evening ~23:02;
+  register back to 8 active. Deployment of the
+  curated tree to the 14 reachable ranch nodes
+  was DISPATCHED ~23:03 and still running at
+  flush — not done, not verified.
+- ~22:59 [will_said + observed] Ranch nodes to
+  Sonnet 5.5: fleet OpenClaw default model
+  changed anthropic/claude-opus-5-5 ->
+  anthropic/claude-sonnet-5-5 on the 10 nodes
+  with a live config (incl. aletheia-core;
+  Theia's main agent already on Sonnet). Configs
+  backed up per node, validated, NO gateway
+  restarts (hot-reload). No live config on Rock
+  Mountain, Orchid Flow, Plain View (not
+  created); Uncanny Valley's config under
+  another user's home, not editable as wbic16;
+  3 nodes unreachable. Supersedes the
+  2026-10-30 "opus 5.5" model note.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
