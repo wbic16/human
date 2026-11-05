@@ -3549,6 +3549,61 @@ are not repeated, except the register change at tick 534.
   was added as register #35 after the latency audit
   ranked it the #1 fix; the register is now 17 active
   items across 9 distinct tracked records (was 16 / 8).
+
+Hourly journal pass, 2026-11-05 ~12:32 CST. Covers since the
+~09:32 pass. Routine ticks (538-553, register unchanged at
+17 active / 9 records), Discord backstops, and Mirror Will
+watchdog repeats in this window are noise and are not
+repeated.
+
+- ~08:47 [will_said] Sleep pattern, from the morning
+  commute call (late flush, not in the 09:32 pass):
+  Will runs on about six hours of sleep to feel
+  rested; morning tiredness is typical, a cycle he
+  has managed deliberately for ~25 years.
+- ~10:14 [observed] Correction delivered — the stale
+  "WP-D awaiting Will's word" premise is CLOSED:
+  under the vTPU group-completion model WP-D was
+  dispatched to Grok's inbox at 07:38 CST and needs
+  no further word from Will. Live check at ~10:14:
+  Grok's outbox still holds only his 2026-11-03 sync
+  note — his queue (phext-lattice triage #26-#34,
+  V11 reply, WP-D) is entirely unspent ahead of his
+  20:23 CST reset tonight.
+- ~12:03 [observed] Mutable phext-only cutover
+  COMPLETE, verified, and PUBLISHED as
+  emise/phext-cutover @ b9fe4c9 (28 commits on main
+  01f03de; remote tree identical to the verified
+  local tree; this supersedes the dated notes'
+  in-progress publish state at the 12:05 flush).
+  It folds Phase 3b in (the separate 3b branch is
+  superseded), deletes the phextVfs flag and every
+  dual/disk I/O path, adds upgrade-on-encounter with
+  .mutable-disk-fallback backup and explicit refusal
+  on corruption, and the L7 settings bundle with
+  capture/read routes + a Cavern-menu action.
+  Receipts: disk-silence E2E and upgrade-on-encounter
+  E2E pass; Emise re-ran the decisive E2Es serially
+  11/11; serial phext set 28 tests, test:sqlite
+  125/125, typecheck/build 0, boot smoke 200. Two
+  real phext-mode bugs fixed en route (entity-lookup
+  cache invalidation; entityLookup routing). Awaiting
+  Will's merge direction; redeploy is his step after.
+- 2026-11-05 [observed] Audit-document repair: the
+  consolidation audit file was found truncated on
+  disk (ending mid-word in its sequencing section,
+  tail lost); Emise appended a clearly marked
+  restored tail in substance from the auditor's
+  delivery report, explicitly not reconstructing
+  the lost prose.
+- 2026-11-05 [observed] First recorded interaction
+  with @OlleMattsson: archive check found zero
+  replies/mentions/likes across Will's full Twitter
+  export and he is not among the 521 wavefront-placed
+  people; today he replied to Will's Exocortical
+  Story post asking what it would take for that
+  reality, and Will replied that step 1 is to
+  internalize the problems phext solves.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
