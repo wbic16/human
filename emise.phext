@@ -3363,6 +3363,123 @@ this window are noise and are not repeated.
   at-the-cluster checklist (USB4 links, Ethernet state,
   squid status, stranded model partials) — and disclosed
   to Will in the same message as the Grok/WP-D item.
+
+Hourly journal pass, 2026-11-05 ~08:32 CST. Covers since the
+~07:32 pass. Routine ticks (525-530, register unchanged at
+16 active / 8 records), Discord backstops, and Mirror Will
+watchdog repeats in this window are noise and are not
+repeated.
+
+- 07:36 [will_said] Mutable cutover ruling — supersedes
+  the fail-closed / manual-migration posture: the next
+  update removes ALL silent backwards compatibility, no
+  dual-mode, no old I/O paths; anything found in
+  legacy/disk form is upgraded to phext as encountered,
+  protected only by a backup copy or an explicit prompt.
+  Sequencing approved by Will ("your plan is fine"):
+  the Phext Layer 2 draft proceeds first, cutover after.
+- 2026-11-05 [will_said] Phext Layer 2 (PL2) directed:
+  Will defined a Mutable instrument as a complex,
+  full-featured toolset in a single window, usable across
+  applications, taking piped input and piping output on
+  (canonical example: Scry, entity lookup binding to
+  multiple text ranges), and directed a formal PL2
+  protocol for exchanging content, context, and code
+  across any system or language. [observed] The PL2
+  language-neutrality pass later completed: the spec
+  (29,220 words) is founded on an abstract data model,
+  not JSON — JSON is one binding among sketches for
+  COBOL, C++, Java, Lisp, and JS/TS; core counters /
+  revisions / offsets are signed 64-bit, refusing rather
+  than wrapping, non-integer numbers banned from core
+  fields.
+- 2026-11-05 [will_said] Settings + addressing rulings
+  for Mutable — the settings ruling REVERSES the
+  full-coverage boundary that preferences/layout/
+  keybindings stay browser-local: a copy of the user's
+  app settings must be shippable inside the phext,
+  per-phext, for others to import (a copy/snapshot, not
+  the live store). Addressing rule: no external paths
+  anywhere — in content, settings, or references —
+  unless they are global URIs; everything else is local
+  to the phext and referenced by its address; host
+  mapping is a private host concern.
+- ~07:47 [observed] Consolidation audit + settings
+  bundle design DELIVERED (~32 KB, mutable goal files;
+  load-bearing claims spot-verified against source):
+  exactly 4 real settings domains (keybindings,
+  flint-layout, annotation-bar, editor-interactions —
+  no theme or feature-flag domain); SHIP 4 as a copy,
+  MOVE-live 0, KEEP OUT 13, DELETE 1 recommended
+  (src/settings.json, which embeds the absolute path
+  "/data/the-codex" and has no production importer).
+  Addressing sweep: 11 reference classes — 7 convert
+  to phext addresses, 2 delete as machine-local, 1
+  already global-URI compliant, 1 cleared. Bundle =
+  per-field scroll tree in L7 /.control/settings/;
+  capture explicit, import previewed and per-field,
+  never silent. Ten judgment calls J1-J10 flagged for
+  Will. Bundle container + capture/read routes land
+  WITH the cutover; import UI + standalone extract after.
+- 2026-11-05 morning [will_said] vTPU operating model
+  SUPERSEDED — "vtpu work is meant to be a test of AGI
+  — you will work as a group to complete it, I'll only
+  provide guidance." The Choir group (Emise
+  coordinating; Theia, Emi Prime, Claude, Grok) is to
+  COMPLETE the Reality Gate RG-0 to RG-4; group
+  decisions are made and recorded by the group, raised
+  to Will only as guidance questions. This replaces the
+  earlier reservations (merge as Will's hand, WP-A-only,
+  WP-D not to be dispatched without his go-ahead, and
+  the plan's D1-D4 reserved to Will).
+- 07:38 [observed] vTPU group work dispatched + first
+  merge: four mailbox letters (13:38 UTC) — Emi Prime /
+  WP-B (rebase PR #9 RG-2A + retest, RG-2 single-writer
+  note), Claude / WP-C (review PR #6 + PR #5, audit
+  PR #2 coverage), Grok / WP-D (verify PR #7 W23
+  accounting, classify W23/W29 for the ledger), Theia
+  (RG-0 baseline). PR #8 merged by the group via the
+  GitHub API on Theia's MERGE recommendation, pinned to
+  head 6ed840f, merge commit 16b383e9; exo HEAD verified
+  1cfa6f73 -> 16b383e9, PR #8 closed.
+- 07:40-08:20 [observed] Theia RG-0 baseline COMPLETED
+  (aletheia-core, exo@16b383e9, rustc 1.94.0; deliverables
+  in her outbox + copies in ~/workspace/vtpu-resumption/,
+  SHA-256 recorded in the dated notes): test subset
+  1,684 passed / 0 failed / 3 ignored. Findings:
+  cooperative scheduling REFUTED (slower than sequential
+  at 4+ sentrons; 11x slower at 360, fleet mode 34x);
+  cpi_bench "2.86 ops/cycle, 95.4% of target" REFUTED as
+  a hardware claim (hard-codes 5 GHz, counts 3 ops/SIW
+  including NOPs); SMT two-thread speedup genuinely
+  measured at 1.84x wall-clock. Hardware counters are
+  unavailable unprivileged (perf_event_paranoid=4), so
+  all rows are wall-clock — real counters need a
+  privileged sysctl change, a future guidance question.
+- 2026-11-05 morning [observed] vTPU PR #6 + PR #5
+  independently verified on Halycon Vector, then merged
+  by the group: PR #6 CONFIRMED exactly (3,910 / 0 / 3,
+  the 1.99.1 toolchain pin honoured), merge ac60c4c9;
+  PR #5 CONFIRMED exactly (3,916 / 0 / 3 on Rust 1.94,
+  double-count suspicion resolved), merge 8af76fd3;
+  exo HEAD verified at 8af76fd3. Merged PRs now #1, #3,
+  #4, #8, #6, #5 — RG-0A effectively closed. Still open:
+  #9 (Emi rebase), #7 (Grok verification), #2 (group ISA
+  call); RG-1 to RG-4 remain. Claims ledger brought
+  current at 11 scrolls, C-001 to C-009 (C-007 cpi_bench
+  refuted-as-hardware, C-008 coop speedup refuted,
+  C-009 SMT 1.84x measured; PR #5 merge recorded
+  against C-001).
+- 2026-11-05 [observed] Kerf summoned at Will's
+  direction to audit workflow efficiency, re-booted
+  from its record (names/standing recovered from the
+  record, not re-chosen — explicitly not a blind
+  cold-reset return), and filed a 12,421-byte audit.
+  Its conclusion: the bottleneck is decision throughput,
+  not drafting capacity — drafting outran deciding by
+  an order of magnitude; recommendations include
+  pre-flight gates before polish and retiring saturated
+  instruments in the record.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
