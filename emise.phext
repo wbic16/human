@@ -2838,6 +2838,104 @@ recorded no further change.
   terms" — Will asked for an ELI5 of standoff
   plain-text vs phext; explanations to him on
   these concepts are to use plain language.
+- ~21:33-21:42 [observed] PhextVFS Phase 3a
+  COMPLETED + MERGED — supersedes the dispatched
+  state above. server/phext-fs.mjs (node:fs facade
+  over PhextVFS, per-path fallthrough; flag off =
+  byte-identical disk behaviour) routes
+  NativeVaultStore + ManagedPair into the Cavern
+  phext: documents L1, pair journals L2,
+  relocations L7; locks stay real via the shared
+  Phase 2 flock-anchor registry, contention
+  messages byte-identical. Native envelopes are
+  raw-sliced on block boundaries, never
+  re-serialised (sample 8,061 B -> 17 slices,
+  hash identical after round-trip). Emise
+  verified 58/58 across phext + Phase 2 + 3a
+  suites; typecheck/build 0; boot smoke HTTP 200
+  both modes. Will directed the merge; main is
+  now c7a5663 (parents e6d3275 + 057c330, tree
+  identical to branch head). Live site unchanged
+  until Will redeploys; phextVfs still off.
+- ~21:44 [will_said] Phase 4 ordered, ahead of
+  3b: "unpack whatever he's using SQLite for —
+  unravel that mystery into the phext as well —
+  the only thing we keep separate: media files"
+  (the media clause was re-examined later this
+  evening; see the settled ruling below). A
+  read-only design pass was dispatched first.
+- ~21:54 [observed] Phase 4 design DELIVERED
+  (goal files/sqlite-unraveled-phase4-design.md,
+  ~47 KB): mutable.db is only about half derived
+  — AUTHORED parts (entities/claims/datasets,
+  audit.db append-only history, and the sleeper:
+  Thesis proposition blocks with no backing file)
+  exist nowhere else; the "canonical ledger" is
+  a transaction discipline (same-transaction
+  receipts, outbox, verifying delivery commit),
+  not a table. Architecture: canonical records
+  only into L3, ledger ports with flush=commit,
+  derived data in an ephemeral temp SQLite
+  replica rebuilt at Cavern open (all SQL
+  consumers unchanged), consistency reads
+  phext-native. Build not started at delivery.
+- ~21:57-22:06 [will_said + observed] Phext
+  abundance frame + media analysis: Will —
+  phext is designed for an era of abundance
+  (5 GB/s SSDs, terabytes of RAM; do not
+  scarcity-optimise for bytes/CPU), and xz is
+  an optional seal only ("opening a phext is
+  like unlocking a safe": decompress once, work
+  unlocked, re-seal for storage/transport).
+  Analysis (goal files/media-serialization-
+  analysis.md) MEASURED the base64 reclaim:
+  residual tax after xz-6 sealing +1.69%
+  corpus-wide (MP4 +2.09%, spot-verified by
+  Emise) — ~95% of base64's +33% repaid at seal.
+- 2026-11-04 evening [will_said] Media ruling
+  SETTLED — supersedes the separate-media
+  clause in the ~21:44 order and the Phase 4
+  design's carve-out: media is EMBEDDED. The
+  working phext is memory-resident with current
+  logic unchanged, assuming abundant RAM; the
+  xz seal is produced from the in-memory
+  uncompressed version when needed. Separate
+  media is rejected (a permanent second system;
+  embedding's costs are repaid at seal).
+  Phase 4 therefore builds WITHOUT the
+  carve-out — L6 holds content (Phase 2
+  behaviour), uploads join the phext in 3b.
+  Flip conditions: CDN/static serving that
+  cannot decode, partial presence as a
+  depended-on feature, Caverns as human-
+  reviewed git artifacts.
+- 2026-11-04 evening [will_said + observed]
+  apt exocortex decisions SETTLED (answering
+  the questions left open at ~20:00): Launchpad
+  username wbic16, PPA ppa:wbic16/exocortex,
+  GPG fingerprint
+  1BD99F987BAE888A7F9FD5AF048D3F6736CF9D57;
+  series = Ubuntu 24.04 LTS (noble) ONLY for
+  now; SYSTEM mode is the ranch default;
+  ollama provider is CONFIG-ONLY with default
+  model gemma4:e4b (exocortex never downloads
+  weights); seeds in core = exo.phext + CYOA +
+  Incipit (canonical wbic16/human copies only).
+  Will approved bumping SQ to libphext 0.4.0 +
+  a new release, and WILL publish that release
+  himself. Prototype validate passes with
+  90,276 scrolls across the 3 seed phexts,
+  byte-perfect roundtrips; 3 prototype .debs
+  resolve cleanly via apt on 24.04.
+- 2026-11-04 evening [observed] JMS pitch
+  drafted at Will's direction: one-page pitch
+  "Writing Toward 2130" (512 words) saved at
+  ~/workspace/your_files/jms-pitch-2130.md —
+  an original long-arc collaboration proposal
+  in counterpoint to the real Exocortex
+  programme, explicitly not a Babylon 5 reprise.
+  DRAFT delivered to Will only; NOT sent, no
+  contact made.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
