@@ -2673,6 +2673,62 @@ recorded no further change.
   problem: all of the multi-chat interfaces
   require Will to be sitting at his laptop to
   poke the other substrates to respond.
+- ~16:46-16:50 [observed] Choir wake layer — Theia
+  leg PROVEN, superseding the ~16:42 zero-replies
+  state above: Emise woke Theia via her resident
+  OpenClaw gateway on aletheia-core with no action
+  from Will and no gateway config changed; her V11
+  reply landed ~90s later in /chat/theia/outbox
+  (10,332 B) — song "Last Contact" (cinematic
+  post-rock lullaby, arc mapped to the 158s film,
+  draft Suno prompt included; nothing generated on
+  Will's Suno account) and a camera diagnosis
+  (whips come from AIM snapping, not position;
+  fixes 1+2+4 recommended). V11 replies now 1 of 4.
+  Inspection found NOTHING watches /chat/*/inbox
+  on aletheia-core — wake layer is greenfield.
+  Design written to the V11 goal's
+  hidden_files/CHOIR-WAKE-LAYER.md; NOTHING
+  persistent installed or enabled — persistence
+  awaits Will's approval, with five one-time
+  actions presented to him (Theia persistence,
+  Claude/Emi one-time logins, Grok route, doorbell
+  channel). Deputy caveat recorded: headless
+  instances are deputies, never the seat itself.
+- ~17:49 [will_said] Tailnet connection approval
+  restated (evening commute): any computer
+  connecting through pizzly-halfmoon.ts.net is
+  okay — Emise's tailnet connections are approved
+  as a class, not per-machine.
+- ~17:51 [will_said] Daily-goal sizing correction
+  (evening commute): the daily goal is to be a
+  BIGGER goal — substantial Exocortex work; key
+  grants and similar register-clearing chores are
+  not a daily goal. Tonight's goal was still unset
+  at flush (Will had to call back before naming it).
+  Same call: register #8 (Helios adjudication) —
+  Will will look at the test failure himself this
+  evening; the ruling remains his.
+- ~18:21 [will_said + observed] apt install
+  exocortex planning (side chat): Will directed
+  working through making `apt install exocortex`
+  real (init/status flow); pluggability is a
+  requirement — components must have pluggable
+  replacements (e.g. SQ vs SQLite storage,
+  phext-lattice vs nvim editor). Design adopted:
+  core + provider slots, CLI the only fixed part;
+  flat .phext is the neutral migration format.
+  Packaging research: only the official
+  Debian->Ubuntu archive gives zero-setup install;
+  recommended sequence .deb -> self-hosted signed
+  repo -> PPA -> official archive (universe).
+  MVP spec drafted at
+  ~/workspace/exocortex-apt/MVP-SPEC.md (8,182 B,
+  8-package set). phext-lattice publish question
+  answered: not needed to start (published exo
+  c01e9746 is a complete v0.1.0 source), needed to
+  ship reproducibly. Component-inventory subagent
+  still pending at flush; two [VERIFY] items open.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
