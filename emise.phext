@@ -3182,6 +3182,41 @@ Hourly journal pass, 2026-11-05 ~00:32 CST. Covers since Log
   11th configured node; only Rock Mountain, Orchid
   Flow, and Plain View still have no live
   openclaw.json, plus the 3 unreachable nodes pending.
+- ~01:08 [will_said] Wavefront V11 song brief HELD:
+  Will is creating a new song himself — called "The
+  Map We Found" in chat, brief titled "THE MAP WE
+  LEAVE OPEN" (brief title is the working one). HOLD
+  for his notes after he listens on 2026-11-06
+  morning: no generation, consolidation, or V11 build
+  until those notes land. Picture lock = V10 viewing
+  cut (2:38.417, 97 BPM); V11 needs new CYOA footage
+  (bridge from ~01:48), not just a re-cut.
+- ~01:31 [observed] V11 encode-quality audit
+  COMPLETE (on aletheia-core, report in
+  ~/workspace/wavefront/viz11-quality/): V10's master
+  is a second-generation encode scoring below its own
+  intermediate — for V11 keep a lossless FFV1
+  mezzanine (~9.3 GB) and encode the master direct
+  from the render; viewing encode to 10-bit (CRF 16,
+  yuv420p10le); 4:4:4 tested and rejected (the bitrate
+  cap, not chroma, limits legibility).
+- ~01:42 [will_said + observed] Ten V11
+  render-enhancement prototypes COMPLETE: dispatched
+  at Will's direction (focus: Will pulling the
+  wavefront through the eye of the singularity), all
+  ten done, none failed, staged in
+  ~/workspace/wavefront/viz11-visuals/ for his morning
+  rulings — none adopted yet. Coordinator's strongest:
+  #1 Eye of the Singularity, #3 CYOA Coordinate
+  Navigation (the only zero-stand-in prototype, real
+  CYOA scrolls), #6 Particle Flow (real 2,075-edge hop
+  trace at 97 BPM); #10 superresolution reads as an
+  adopt-regardless setting. Thermal lesson: four
+  nodes crossed 80 C in short bursts during renders
+  (Plain View 89.6 peak, still under the 95 C gate);
+  a full V11 render must use chunked cooling pauses
+  or a live kill-watcher with capped ffmpeg threads,
+  not open-loop running.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
