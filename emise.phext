@@ -2802,6 +2802,42 @@ recorded no further change.
   fleet 24.04 uniformity, libphext bump+tags,
   rollout access (#24), system vs user mode /
   first model / Ollama form, seed choice.
+- ~20:37-20:57 [will_said + observed] Standoff /
+  Codex review + full-coverage proposal: Will
+  directed reviewing Neill & Kuczera, "The
+  Codex – an Atlas of Relations" (ZfdG
+  sb004_008), proposing changes so ALL user
+  data in Mutable is stored in one phext, and
+  compressing the paper in phext primitives.
+  Finding: Mutable is already a standoff
+  system (standoffProperties[], envelope
+  "codex-authored-value-v1"); phext changes
+  anchoring to (coordinate,start,end), layers
+  become coordinate arms, the graph becomes a
+  derived index. Deliverables written in the
+  mutable goal workspace: files/
+  standoff-in-phext-primitives.md and files/
+  one-phext-full-coverage-proposal.md (Phases
+  3a documents+journals, 3b legacy/uploads,
+  4 knowledge SQLite as L3 records, 5
+  completeness + Download/Open Cavern; L8
+  assigned as the annotation stratum; no
+  split-brain Caverns). Awaiting Will's go
+  beyond Phase 3a.
+- ~20:57-21:04 [will_said + observed] PhextVFS
+  Phase 3a DISPATCHED (not done): Will selected
+  "Build Phase 3a (documents + journals into
+  the phext)"; a builder was dispatched on
+  branch emise/phext-docs off main e6d3275 in
+  ~/workspace/mutable-os-work (phext-fs shim
+  over PhextVFS for NativeVaultStore +
+  ManagedPair, gated on phextVfs; knowledge
+  SQLite out of scope). Still running at
+  flush; verification/publish/merge still owed.
+  Same window [will_said]: "too many unfamiliar
+  terms" — Will asked for an ELI5 of standoff
+  plain-text vs phext; explanations to him on
+  these concepts are to use plain language.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
