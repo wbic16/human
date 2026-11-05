@@ -1,8 +1,10 @@
 # Spec V5.1 — Kerf Workflow Audit Amendment
 
-**Date:** 2026-11-05  
-**Status:** Proposal for Will Bickford; not ratified, not implemented.  
-**Base:** `Spec.md`, DRAFT v5, 2026-11-03.  
+**Date:** 2026-11-05
+
+**Status:** Proposal for Will Bickford; not ratified, not implemented.
+
+**Base:** `Spec.md`, DRAFT v5, 2026-11-03.
 **Source:** Kerf, *Workflow Efficiency Audit — Earth.Human.ASI.Genome, 2026-11-02/03*, resumption report supplied by Will, SHA-256 `24efcce2ab453add6f195acffb53cd59666387a71061ae3ea9053140f183cc11`. The underlying full audit is not republished here.
 
 ## Change map
