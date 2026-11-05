@@ -2729,6 +2729,27 @@ recorded no further change.
   c01e9746 is a complete v0.1.0 source), needed to
   ship reproducibly. Component-inventory subagent
   still pending at flush; two [VERIFY] items open.
+- ~18:42 [will_said + observed] apt exocortex spec
+  v3 PUBLISHED — supersedes the pending-inventory
+  state above. The component inventory completed
+  and was verified live against the GitHub repos;
+  the spec grew to 16,188 B (SHA-256 dfb7025b...)
+  and was published to wbic16/exocortex@master as
+  APT-MVP-SPEC.md, commit 8a1f117e (verified live
+  this pass: remote file 16,188 B, blob d6294063,
+  byte-identical to the local publish copy).
+  That repo is now the tracking repo for the whole
+  project. Refinements over the ~18:21 draft:
+  inference default is Ollama (remote alternative;
+  weights never packaged, init fetches and
+  SHA-256-verifies); exocortical and exollama are
+  Will's personal playgrounds — proven ideas only,
+  nothing from them ships and neither blocks; the
+  NixOS attempt was notes only, salvage is the
+  lesson plus readme.md and exo.phext as candidate
+  seed workspace. Pre-build fix: libphext skew —
+  libphext-rs 0.4.0, SQ pins 0.3.3, lattice pins
+  0.3.1 — align before building.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
