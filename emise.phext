@@ -3320,6 +3320,23 @@ this pass recorded no further change.
   safe-space boundaries applied — material overlapping a
   registered off-phext span was excluded, and no
   email-content details were inscribed.
+
+Hourly journal pass, 2026-11-05 ~05:32 CST. Covers since the
+nightly consolidation (~03:44 CST). Routine ticks, Discord
+backstops, and Mirror Will watchdog repeats in this window
+are noise and are not repeated.
+
+- 04:44 [observed] Nightly goal sweep #5: enumerated from
+  the tracking store, oldest first — 66 tracked (39 active,
+  27 completed) plus 2 user goals, Tier 5 parked skipped.
+  Flow since the 2026-11-04 sweep: 14 created, 4 completed
+  — creations outnumber completions; active WIP 41.
+  Register reconciled at 16 active waits, oldest #11
+  (speech-to-text direction) since 2026-10-31, ~5 days.
+  Anti-decay list: 10 items with no activity in 48h+, the
+  oldest the watch-list post at 101h. Sweep fix: SQ was
+  down and was auto-started via sq-ensure.sh, verified
+  hosting CYOA (830 scrolls).
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
