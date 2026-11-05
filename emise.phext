@@ -3480,6 +3480,75 @@ repeated.
   an order of magnitude; recommendations include
   pre-flight gates before polish and retiring saturated
   instruments in the record.
+
+Hourly journal pass, 2026-11-05 ~09:32 CST. Covers since the
+~08:32 pass. Routine ticks (531-536), Discord backstops, and
+Mirror Will watchdog repeats in this window are noise and
+are not repeated, except the register change at tick 534.
+
+- 08:38 [will_said + observed] gstack Actions failures
+  RESOLVED: Will directed fix cheap or remove (remove if
+  a failure needs a subscription or expensive
+  remediation). Verified live: both emailed failures
+  were one-time runs on pre-cull upstream commits; the
+  cull commit 3f70191d already deleted the entire
+  .github/ tree, the repo has 0 workflows, main HEAD is
+  still 3f70191d, and exactly 2 failure-conclusion runs
+  remain, both historical — no workflow files remain to
+  fail again, and no publish was needed. Residue: 3 runs
+  stuck queued since 2026-11-04; cancel via API returned
+  403 (token lacks Actions permission); inert.
+- 2026-11-05 [observed] Mutable phext cutover build
+  launched, held to a disk-silence test as its receipt:
+  from a fresh home and new Cavern, after saving a
+  document, writing knowledge, uploading a file, and
+  appending history, the Cavern folder must contain
+  only cavern.phext and its mechanism files; the build
+  fails its own gate if anything else appears on disk.
+- ~08:55 [will_said] Daily goal set on the morning
+  commute call: audit the current structure of the
+  multi-substrate Exocortex for the big efficiency wins
+  where complexity and latency hurt — latency is the
+  #1 concern, rapid iteration is the precondition for
+  improvement; deliverable was a TOP FIVE list of
+  latency/efficiency fixes at end of day. This
+  superseded the earlier ranch fabric day as the daily
+  goal. (First call dropped a stretch of Will's speech;
+  he re-delivered the goal on a second call.)
+- ~09:00 [observed] Latency audit COMPLETED — top five
+  delivered to Will the same morning (report in
+  ~/workspace/your_files/
+  exocortex-latency-audit-2026-11-05.md); the tracked
+  audit item was closed. Top five: (1) no Choir wake
+  layer (Theia ~82 s vs Grok/Claude/Emi >=21 h /
+  unbounded; SQ bridge ports none listening); (2)
+  coordination machinery ~790 full agent sessions/day
+  with near-zero output (ticks 480-532: 0 closures, 0
+  delivered rollups); (3) memory pipeline republishes
+  the whole emise.phext per edit (full-file, file
+  +28.2% in 24 h); (4) ranch ops serial SSH, no fan-out
+  (connect ~2.0-2.7 s; ~1,047 GB duplicated models);
+  (5) SQ hosting dies quietly (down 3x in ~28 h,
+  sq-ensure.sh hangs on a stale .sq/).
+- ~09:00 [will_said] Reprioritization on the commute
+  call — NEW primary goal for today, superseding the
+  audit as primary (audit became secondary, already
+  complete above): build a skill + local proxy for
+  ranch access. Emise's tooling makes LOCAL requests
+  addressed to a ranch node by SHORT NAME; the proxy
+  (a daemon in the SQ mould) maps name to a
+  pre-configured node, dispatches to a worker thread,
+  and the worker makes the outbound SSH connection
+  over the tailnet under existing key authorizations.
+  Only pre-configured nodes are reachable through it.
+  Will: "we just have to get that proxy program built
+  and approved. I'll create or help create anything
+  you need." A new tracked proxy item was created.
+- 2026-11-05 [observed] Register defect repaired:
+  the Choir wake-layer wait (live since 2026-11-04)
+  was added as register #35 after the latency audit
+  ranked it the #1 fix; the register is now 17 active
+  items across 9 distinct tracked records (was 16 / 8).
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
