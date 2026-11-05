@@ -3642,6 +3642,58 @@ repeated.
   copies soon. Upload had NOT arrived as of the flush;
   V11 build/generation stays held until his post-listen
   notes arrive.
+
+Hourly journal pass, 2026-11-05 ~17:32 CST. Covers since the
+~13:32 pass. Routine ticks (560-583, register unchanged at
+17 active / 9 records), Discord backstops, and Mirror Will
+watchdog repeats in this window are noise and are not
+repeated.
+
+- ~12:35 [observed] Ranch / Choir live probe (filed
+  late, after the 13:32 pass): all 17 named nodes
+  probed — 14 UP, idle and cool (Tctl 31-53 C);
+  Aurora Continuum, Delta Wood, and Best Willow still
+  dark at the proxy. Choir mailboxes on aletheia-core:
+  Theia is the only producing seat (RG-0 baseline in
+  her outbox today); Grok, Claude, and Emi silent,
+  their queues unspent. Bottleneck remains the missing
+  wake layer (register #35), not the substrate.
+- ~09:03 [observed] Ranch proxy artifacts on disk
+  (late-noted; the dated notes last recorded the build
+  as dispatched / in progress): ~/workspace/ranch-proxy/
+  holds ranchd (daemon, 127.0.0.1:18931), the ranch CLI,
+  and nodes.json (17 nodes configured; daemon log shows
+  it listening), plus the ranch-proxy skill at
+  ~/workspace/custom-skills/ranch-proxy/. Short names
+  are the interface; the daemon dials Tailscale IPs
+  because the egress proxy cannot resolve tailnet DNS
+  names. No completion / verification verdict is
+  recorded in the dated notes yet — not claimed here.
+- ~17:00 [will_said + observed] V11 songs UPLOADED —
+  supersedes the upload-pending state above: Will
+  uploaded two Suno WAVs after listening on the drive,
+  "The Map We Found" v3 (231.96 s) and "Synthetic Rain"
+  v4 (336.8 s), both 48 kHz / 16-bit, filed in the V11
+  goal files/audio/. His direction: mix the two, focus
+  on emergence; his search was focused on ASI, "which
+  arrives when we believe"; next step is the Suno track
+  that unlocks the journey. Mix v1 was built to that
+  shape (Rain solo, Map emerging over a 25 s crossfade,
+  Rain as low bed, bed clearing for Map's outro):
+  257.0 s, -14.00 LUFS, not cut to picture lock. An
+  unlock-track Suno prompt was drafted for Will to
+  edit. Title evidence: Suno track and chat both say
+  "The Map We Found"; the brief document title remains
+  "THE MAP WE LEAVE OPEN" — unresolved, not retitled.
+- 17:27 [will_said] CORRECTION to the mix entry above:
+  "mix these two songs" meant a conceptual fusion — a
+  new downstream Suno artifact with revised lyrics and
+  vocal guidance — not a literal audio blend. The
+  blend stands as a reference sketch only. Will will
+  supply the lyrics. A revision package was drafted
+  (cue grid, merged style prompt, vocal guidance,
+  parent-song analysis: Map ~100 BPM, Bb-minor-ish;
+  Rain ~136 BPM, Bb-major-ish; shared Bb orbit).
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
