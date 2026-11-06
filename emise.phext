@@ -4388,6 +4388,33 @@ backstops, and no-change samples are noise.
   Emise to keep going overnight and said he will
   check and deploy in the morning. Step 4 follows
   the merge.
+
+Hourly journal pass, 2026-11-06 ~04:32 CST. Covers
+since the ~03:32 pass. Routine ticks, Discord
+backstops, the no-change vTPU sample, and the
+nightly consolidation (already inscribed as its
+own addendum) are not repeated.
+
+- ~03:44-04:13 [observed] V11 RENDER PROGRESS +
+  PARTIAL DELIVERY: the first 34.9 s (frames
+  0-836) were delivered through the full
+  production path — 1080p/24, anthem muxed,
+  ffprobe-verified — while the master remains
+  unfinished. Fleet progress: 3,886/6,820 frames
+  (57%, 0/18 chunks) at 03:44; 4,487/6,820
+  (65.8%, 2/18 chunks DONE: w0, w1) at 04:13.
+  CORRECTION to the test-segment rate: sustained
+  fleet throughput is 40-110 s/frame of node
+  time, not the 16.4 s/frame burst; the back
+  half is thermally bound (projection ~6-8 more
+  hours from the ~03:13 report; at 04:13 Ashfall
+  Haven 84.1 C and ni-knight 80.5 C were in the
+  >80 cool branch, others <=65.8 C). A watcher
+  checks the fleet every 30 min and, when all
+  18 chunks land, runs the scripted end-game
+  (encodes, relay, unlock clip, assembly,
+  verification incl. a 279.5 s frame check) —
+  the film finishes without babysitting.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
