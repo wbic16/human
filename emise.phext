@@ -4232,6 +4232,63 @@ backstops, and the no-change vTPU sample are noise.
   voices, short conversational turns, ask by name
   when speaker identity is uncertain. No Emi
   utterance had arrived at flush; trial pending.
+
+Hourly journal pass, 2026-11-06 ~03:32 CST. Covers
+since the ~02:32 pass. Routine ticks, Discord
+backstops, and no-change samples are noise.
+
+- 2026-11-05 23:53 [observed] CLAIM CORRECTIONS
+  MERGED (discovered this hour): PR #24
+  (emise/x-promote-and-dashboard @ c7713750) merged
+  by Will, merge 0e17a880; /claim/dashboard is
+  live, answering 401 to anonymous requests
+  (gated as designed). Register #15 is narrowed:
+  only the price/tier confirmations remain.
+- ~02:0x [observed] BOARDY VERIFICATION OUTCOME:
+  Emise answered from files parsed live — wrote
+  to emise.phext 1.1.1/1.2.1/1.1.1 (Designation);
+  left alone CYOA 1.1.1/1.1.1/1.1.2 (Prime's
+  scroll). His challenge sentence: 60 of 63 words
+  CYOA-placed, holographic coordinate
+  26.7.9/9.7.12/7.6.8; Boardy has no wavefront
+  entry (a checkable absence). FINDING: this
+  file's Home scroll (1.1.1/1.1.1/1.1.1) self-index
+  is measurably STALE — it lists 16 scrolls and
+  claims 18 while the file holds 19 non-empty;
+  the two Receipts (1.1.1/1.2.1/1.1.2-3) and the
+  Test of Will record (13.13.13/13.13.13/13.13.15)
+  are missing from its map. A real defect,
+  awaiting a fix pass.
+- ~02:18 [observed] V11 RENDER: TEST SEGMENT
+  PASSED (16.4 s/frame on aletheia-core; mutuals
+  co-present, cinematic DOF + motion blur in).
+  Thermal disclosure: driver v1/v2 spiked nodes
+  past the line before gates caught them (Ashfall
+  Haven 88.6 C, Lighthouse Omen 86.4, Elven Path
+  83.9, Halycon Vector 84.5); v3 gates between
+  sub-frames, affected nodes cooled to <=65 C
+  before rendering further, pixel output identical
+  (scheduling only). At the ~02:18 check the
+  master was NOT complete — chunks still rendering
+  in policy (59-66 C); assembly + ffprobe pending.
+- ~03:20 [observed + will_said] MUTABLE STEP 3
+  DONE, VERIFIED, PUBLISHED: emise/mode-selection
+  @ 7d25942 (remote head verified this pass), 4
+  commits. The first build a76ee9e FAILED Emise's
+  verification (a phext-born snapshot restore
+  derived native mode and hung) and was NOT
+  published in that state; three defects were
+  fixed and re-verified (snapshot provenance
+  sourceMode 6da15ba; cutover-era tests reconciled
+  to design 06c534d; fail-closed vault-scope check
+  restored 3142c9c; fresh-build runs: vault-scope
+  5/5, test:sqlite 149/149). Shape: per-Cavern
+  mode marker, no global flag, Phext default for
+  new Caverns, derive-or-refuse, non-destructive
+  upgrade. Merge awaits Will's word; he directed
+  Emise to keep going overnight and said he will
+  check and deploy in the morning. Step 4 follows
+  the merge.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
