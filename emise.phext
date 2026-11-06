@@ -4490,6 +4490,143 @@ email-content details were inscribed.
   chromatic shift. A prepass is directed first:
   720p, no supersampling, for Will's review
   before any V12 commitment.
+
+Hourly journal pass, 2026-11-06 ~08:32 CST. Covers
+since the ~07:32 pass. Routine ticks, Discord
+backstops, the no-change vTPU sample, and the V11
+render's increments (99.3%, 15/18 chunks at
+08:13, still unfinished) are not repeated.
+
+- ~07:17 [observed] MUTABLE STEP 4 MERGED —
+  supersedes the merge-pending state above:
+  merge ec1dce1 (parents f86cda1 + 6472643),
+  fresh-fetch verified main's tree = the
+  qualified step-4 tree. The approved four-step
+  sequence is COMPLETE on main; only Will's
+  redeploy of mutable.phext.io remains.
+- [observed] GLOSS PACKAGE BUILT + VERIFIED:
+  Emise's review position (assistant_said) —
+  keep the vocabulary, move the marks out of
+  the sentence into a standoff property
+  vocabulary (five types on spans, each with
+  author and time). gloss-reply.phext = 12
+  scrolls (source verbatim, Scroll A reply,
+  Scroll B feedback, standoff commentary,
+  Incipit-class persona strata, colophon),
+  sealed as .xz; verified from the sealed file:
+  all 16 anchors resolve to their passages.
+- ~07:34 [observed] GLOSS PUSH + CAVERN: the
+  plain files live on the mutable.phext.io
+  server at /source/mutable-os-data/gloss-reply/
+  (seal SHA-256 646b2238... verified on the box,
+  xz -t passes; production home untouched).
+  Production REFUSED the plain phext as a
+  Cavern, correctly — a Cavern needs its VFS
+  manifest + knowledge record. An upgraded
+  Cavern 'gloss' was then installed with four
+  documents incl. 'Gloss — Feedback', home
+  restored as the active Cavern.
+- ~08:0x [will_said + observed] GLOSS FLINT-OPEN
+  INVESTIGATION: Will reported he cannot open
+  the feedback easily in Flint. The native open
+  path works (feedback returns 16,108 chars);
+  Emise's first root-id diagnosis was WRONG and
+  is retracted (blocks[0] is a child block, the
+  identity already held). Corrected mechanism,
+  verified at df03c5d: history-router compares
+  document.id, which mutable envelopes lack, so
+  history/open fails for EVERY native document
+  at that build. A fix attempt stopped per its
+  stop rule; production was not churned and the
+  original gloss install stands. Will's exact
+  UI symptom is still open; a fork patch plus
+  redeploy is a product change, not authorized.
+- [observed] FILM COMPUTE ESTIMATES DONE, every
+  number labelled measured / derived /
+  estimated: series total ~66 node-hours,
+  ~250-450 core-hours, ~5.3 kWh at 80 W/node;
+  v11 alone ~62 node-hours projected, ~94% of
+  all film compute. v1-v10 combined ~3.7
+  node-hours; the v12 prepass is provisionally
+  ~1-3 node-hours.
+- ~07:31-07:40 [will_said] SKILL DIRECTIONS: the
+  mythic film skill is built FROM Will's
+  feedback across v1-v12, plus Emise's own
+  generative process from those feedback loops,
+  compressing v1-v12 into one meta step; all
+  generated skills flow into emise-tools; all
+  skill files go into a skills.phext. STANDING
+  ORDER: every process Will teaches generates a
+  skill and enters the index (skills.phext Home
+  = index of record); persona grants will claim
+  subsets of skills from the index to fine-tune
+  a persona's experience.
+- ~07:37 [observed] EMISE-TOOLS SYNC GAP CLOSED
+  @ 7923659: validate_waiting_items,
+  verify_blocker_and_completion_claims and
+  verify_quantified_results synced for the
+  first time; phext_upgrade updated; singular
+  gained its atlas metadata. All blob SHAs
+  verified against local.
+- [observed] MYTHIC-FILM-PRODUCTION SKILL BUILT
+  + VERIFIED (21,314 B), from a 62-item feedback
+  corpus DONE the same hour; published to
+  emise-tools @ 55b3382f, closing the last sync
+  gap at that point. skills.phext BUILT +
+  VERIFIED in its first form: 30 scrolls
+  (29 files + Home), held local, unpublished.
+- [observed] PROCESS-SKILL AUDIT DONE: 29
+  distinct Will-taught processes found, 10
+  already skilled, 19 new skills generated,
+  21 candidates ruled not-a-process with
+  reasons. skills.phext rebuilt to 68 scrolls,
+  parse-verified, Home listing all 29 skills
+  with claimable coordinate ranges; the new
+  skills synced to emise-tools @ 1334147b
+  (38/38 files blob-identical).
+- 07:58 [will_said] REBASE FORCE-PUSH RULING:
+  when Will asks for a rebase, force-push it
+  (--force-with-lease, never bare --force, old
+  history on a backup branch first) UNLESS the
+  rewrite impacts anyone except us — outside
+  impact means stop at a branch push and
+  report. Recorded in AGENTS.md and the
+  fork-patch-discipline skill; that skill
+  synced alone @ 972e2cdc. A rebase of the
+  mutable-os fork was directed and is IN
+  FLIGHT at flush, not completed.
+- [will_said] SKILLS.PHEXT CURRENCY ORDER:
+  ensure skills.phext is always up to date —
+  any session creating or editing a skill ends
+  with a rebuild + byte-verify in that session,
+  plus an hourly guard cron as backstop
+  (guard implementation dispatched, not done
+  at flush).
+- [will_said + observed] DOMAIN REVIEW: Will
+  corrected the method — inventory from email
+  notifications only; the registrar-site tasks
+  were closed, no site changes made. Inventory
+  DONE: 14 domains across 3 registrars;
+  proposal only (no actions taken) to
+  consolidate at NearlyFreeSpeech.
+  snakefalls.org RESOLVED by Will: it expires
+  2027-04-07 at NearlyFreeSpeech, superseding
+  the inventory's initial lapsed flag.
+- [will_said] VTPU THRESHOLD: Will: 'vtpu is
+  basically the agi threshold.' Emise's gloss
+  on that and her charter offer were NOT
+  confirmed by Will; only the statement is his.
+- [will_said] CURRENT DAY JOB + RESUME: Will is
+  Principal Design Engineer at EF Johnson
+  Technologies (EFJohnson), started
+  2022-08-08 — his second EFJ stint (first
+  2008-2017); between stints, Senior Software
+  Engineer at Fiserv, 02/2017-08/2022. His
+  canonical resume is in wbic16/work
+  (resume.html + resume.md); v7.0 (2026-11-06)
+  supersedes v6.1 (2019-03-19). xedoloh.com is
+  to be migrated to AWS — not yet done; until
+  then the GitHub repo is the resume's home.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
