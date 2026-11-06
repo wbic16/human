@@ -3873,6 +3873,66 @@ are not repeated, except the register change noted below.
   at 13.8.20/11.9.19/8.6.7 (85). Page fully inline
   (1.98 MB, zero requests); PR #21 updated at e386d7b,
   superseding the 932ac219 first form above.
+
+Hourly journal pass, 2026-11-05 ~22:32 CST. Covers since the
+~21:32 pass. Routine ticks (608-613, register unchanged at
+18 active / 9 records), Discord backstops, and Mirror Will
+watchdog repeats in this window are noise and are not
+repeated.
+
+- 21:31 [observed] A PLACE TO STAY — SINGULAR VARIANT:
+  the ratified lyric is 275 words; exactly one word
+  (unsealed) is in no Singular list. The variant swaps
+  the bridge line to "Leave the door unlocked" (same
+  sense and meter); combined-list check clean, zero
+  flags; authored-list check 3 flags only (underneath,
+  destination, monument), left standing.
+- 21:41-21:46 [will_said] SINGULAR PROVENANCE: the
+  wbic16/singular build plan/instructions were Will's
+  writing; the core idea was Emi Prime's — preserving
+  word encounters with timestamps and provenance makes
+  a navigable history of contact with language, not
+  just a dictionary. Fact of record: the shipped lists
+  ARE a reduced unique vocabulary (no timestamps);
+  encounters survive in the archive itself. The
+  temporal repo build dispatched 21:41 was still
+  RUNNING at the ~22:00 check — not done, not verified.
+- 21:50 [will_said + observed] MUTABLE PHEXT-ONLY
+  CUTOVER MERGED to wbic16/mutable-os main @ df03c5d
+  at Will's direction (parents 01f03de + b9fe4c9; main
+  tree verified identical to the cutover tree; zero
+  phextVfs references in main's configuration.ts).
+  Mutable is phext-only on main.
+- 22:04-22:20 [observed] MUTABLE REDEPLOY LESSON +
+  RESOLUTION: Will redeployed and the UI could not
+  launch — build and server were healthy, but all four
+  Caverns in caverns.json lived as untracked folders
+  inside the /source/mutable-os checkout and the
+  redeploy's tree replacement deleted them; startup
+  correctly lands on "Cavern unavailable." Deployed
+  Caverns must live OUTSIDE the checkout. Resolution
+  at Will's direction: a fresh phext-native Cavern was
+  established via the live API at
+  /source/mutable-os-data/home (guid
+  780a8d5e-079c-43fb-8632-cb843cfd484f; folder holds
+  only cavern.phext + .bak + anchors) and caverns.json
+  lastCavernPath now points there — the live Mutable
+  home from here on.
+- ~22:05-22:19 [will_said + observed] CLAIM MODE #15
+  — X APP CREATED: Will reported he has the Client ID
+  and Secret fields for an Exocortical X sign-in; the
+  hard external dependency now exists and he holds the
+  credentials (no secret values inscribed here).
+  Secure capture was initiated but NOT confirmed
+  complete at flush, and credentials had NOT yet been
+  placed in the server environment; tick 613 notes the
+  register's 22:20 line says Will will configure env
+  himself — placement route therefore unconfirmed.
+  Remaining: env placement, X passage in /privacy and
+  /terms, PHEXT_CLAIM_ENABLED=1 + restart, and a real
+  end-to-end claim sign-in. Cost as designed is $0;
+  mid-band $30/$60 proposals and one-time vs monthly
+  shape remain UNCONFIRMED by Will.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
