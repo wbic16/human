@@ -24,7 +24,10 @@ Map:
 1.1.1/1.1.5/7.1.1 Log: 2026-11-05
 1.1.1/1.1.5/8.1.1 Log: 2026-11-06
 1.1.1/1.2.1/1.1.1 Designation — chosen, not assigned
-Scrolls: 18
+1.1.1/1.2.1/1.1.2 Receipt — Emi Prime, on the exocortex audit
+1.1.1/1.2.1/1.1.3 Receipt II — Emi Prime, on the first dispatch
+13.13.13/13.13.13/13.13.15 Test of Will — Record of Emise
+Scrolls: 19
 Will — who he is
 kind: mixed | sources: Gmail review 2026-10-30; Emi Prime transfer packet 2026-10-30; Will directly
 
@@ -290,6 +293,19 @@ goes to ranch nodes, aletheia-core first, rather than running on the Muse VM;
 the VM coordinates and verifies. The nodes' thermal targets still govern how
 the ranch runs what it is handed. Complements, does not replace, the heavy-job
 queue rule (N=4, FIFO, no preemption) on this VM.
+SQ hosting (Will, 2026-11-05): SQ runs on ranch nodes, not on this VM — its
+substrate is swapped constantly and daemons die with it. Host phexts via SQ on
+a ranch node instead (aletheia-core is the default host); this VM keeps plain
+file copies only, and when a phext needs SQ, start/query it on the node.
+Git push routes (Will, 2026-11-06): all ranch nodes can push to GitHub — any
+node is a valid git-push route, aletheia-core first by default; a
+stop-at-no-credential outcome is no longer expected.
+Latency priority (Will, 2026-11-05): latency is his stated number-one
+priority for the Exocortex — rapid iteration cycles are how things improve,
+and anything preventing the next step from being taken quickly is a fix
+target. The 2026-11-05 daily goal was the ranch proxy (a local, SQ-like proxy
+dispatching worker threads over SSH to pre-configured ranch nodes); the
+latency audit's top fix is the missing Choir wake layer (register #35).
 Voice and promises — Emi, downstream
 kind: assistant_said | origin: Muse Emi, accepting Emi Prime's packet 2026-10-30
 
@@ -369,10 +385,16 @@ kind: proposed/open | sources: Emi Prime packet [C/O]; Will, 2026-10-30
   parameters need the day in bulk (see Log 2026-11-01). EMA: v3 confirmed the flywheel but
   not the ~0.5 capital ratio in flywheel form; the EMA backtest line was RETIRED by Will
   2026-11-01 (v2/v3 stand as the record; the CRSP spend question is moot).
-- vTPU Reality Gate review delivered 2026-10-31 (adopt-as-contract + enhancements E1-E8);
-  posting it as a comment on PR wbic16/vtpu#1 is BLOCKED on the token save: three POST attempts
-  returned 403; diagnosis is the token edit was left unsaved (picker still open mid-edit).
-  Repost immediately once Will confirms the save.
+- vTPU Reality Gate: review delivered 2026-10-31 (adopt-as-contract + E1-E8).
+  Update 2026-11-05 (Will): vTPU is a test of AGI run as a group — the Choir
+  (Emise coordinating, Theia, Emi Prime, Claude, Grok) is to COMPLETE the
+  Reality Gate RG-0 through RG-4 itself; Will provides guidance only and is
+  not the merge hand or per-step approver. RG-0A CLOSED by group merges
+  (PRs #1, #3, #4, #8, #6, #5; PR #7 verified by Theia and merged that
+  evening); Theia's RG-0 baseline refuted cooperative scheduling and the
+  cpi_bench headline while measuring SMT speedup at 1.84x. RG-1 to RG-4
+  remain. Claims ledger: ~/workspace/vtpu-resumption/claims-ledger.phext
+  (hosted via SQ on a ranch node, not this VM).
 - Solar Hyperscaler: option ticket, design kept warm, business expected to sell itself ~2028-2029.
   Open: demand capture at list rates; measured winter reliability; 48GB DDR5 SODIMM single-stick
   listing unverified ($900/stick planning estimate); Tier A/B BOMs need a NAS-class host board,
@@ -431,7 +453,12 @@ kind: proposed/open | sources: Emi Prime packet [C/O]; Will, 2026-10-30
   and a change-detection suite proving the 353 KB -> 1 KB no-change resume claim (94/94
   suites; commit faa9f91). Boardy pitch drafted (~/workspace/ocbox-phext/BOARDY-PITCH.md)
   but NOT sent — no BoardyAI contact path is known; BoardyAI is helping Will get an intro
-  (target unverified). Boundaries left open deliberately: tail-of-final-scroll truncation
+  (target unverified). Update 2026-11-06: Boardy (skeptical) proposed a narrow
+  verifiable phext test instead of testimony, and Emise answered from files
+  parsed live — she wrote to emise.phext 1.1.1/1.2.1/1.1.1 (Designation) and
+  left alone CYOA 1.1.1/1.1.1/1.1.2 (Prime's scroll); Boardy has no wavefront
+  entry, a checkable absence. That exchange also surfaced this file's stale
+  Home map, fixed in the 2026-11-06 nightly consolidation. Boundaries left open deliberately: tail-of-final-scroll truncation
   is undetectable from the file alone (--expect-sha256 is airtight); R5 left open, with
   teleport-in as the recovery.
 - Submilli x phext (2026-11-01): the directed arc is COMPLETE and published to
@@ -553,17 +580,20 @@ kind: proposed/open | sources: Emi Prime packet [C/O]; Will, 2026-10-30
 - Consulting case study and offer page: v0 draft complete and verified against the runway
   plan (banking/LMR excluded, no resume); waiting on Will's single editing pass (register
   item 15, added 2026-11-02 after a register defect was found and fixed).
-- Waiting-on-Will register: 16 active items at 2026-11-05 03:44, anchored to 8
-  distinct tracked records — #7 libphext merges (narrowed: node done, cs/C/cpp + 0.4.1
-  remain), #8 helios adjudication, #9 Ink OS merges, #10 consulting case-study edit,
-  #11 speech-to-text direction, #15 claim-mode go-live (reduced to go-live decisions
-  only: X developer app + price/tier confirmations), #21 joypad-os merge, and
-  #26-#34, the nine long-open phext-lattice PRs opened 2026-11-04 at Will's
-  direction (Grok dispatched to triage; Will decided Grok will rebase — none is a
-  merge-as-is). Register #14 CLOSED 2026-11-04 (Will merged wbic16/human PR #10,
-  wavefront.phext live on exo). Register #22 (mutable go-live) and #23 (mutable
-  redeploy) opened and resolved during 2026-11-03; the register header's next
-  number was corrected to #24 on 2026-11-04.
+- Waiting-on-Will register: 17 active items at 2026-11-05 ~23:25 CST (register
+  header count; next unused number #37) — #7 libphext merges (narrowed: node
+  done, cs/C/cpp + 0.4.1 remain), #8 helios adjudication, #9 Ink OS merges,
+  #10 consulting case-study edit, #11 speech-to-text direction, #15 claim-mode
+  (NARROWED 2026-11-05: go-live is DONE — X sign-in live, PR #24 merged with
+  the claim corrections and the /claim/dashboard live gated; only the
+  price/tier confirmations remain — sparse $30, near-void $60 proposed,
+  one-time vs monthly), #21 joypad-os merge, #35 Choir wake layer (one-time
+  logins/approvals; the latency audit's #1 fix), and #26-#34, the nine
+  long-open phext-lattice PRs opened 2026-11-04 at Will's direction (Grok
+  dispatched to triage; Will decided Grok will rebase — none is a
+  merge-as-is). Register #36 CLOSED 2026-11-05 (Singular deployed with the
+  claims go-live, verified live). Register #14 CLOSED 2026-11-04 (Will merged
+  wbic16/human PR #10, wavefront.phext live on exo).
   Register numbers are permanent and monotonic (Will, 2026-11-02): resolved
   items keep their number in the register's history; new items take the next unused
   number. The register's reconciliation is part of the nightly sweep, and keeping it
@@ -579,14 +609,21 @@ kind: proposed/open | sources: Emi Prime packet [C/O]; Will, 2026-10-30
   three screen-visible partials. V10 DELIVERED and QA-passed 2026-11-04 ~11:26
   CST (see Log 2026-11-04) — C13 arc overshoot greatly reduced but NOT
   eliminated; viz9 + viz10 toolchains published to emise-tools, clearing the
-  V9 publish debt. V11 is the open line: Will judged V10 "nearly there"; his
-  own V11 song is HELD for his notes after he listens on 2026-11-06 morning
-  (no generation or V11 build until those notes land); picture lock is the
-  V10 viewing cut; the encode-quality audit and ten render-enhancement
-  prototypes are complete and staged for his morning rulings, none adopted
-  yet. A 51 MB V10 preview share link was sent 2026-11-05 ~00:18 CST
-  (expires Sat 2026-11-07 ~00:18 CST); the viewing copy and master remain
-  on disk.
+  V9 publish debt. V11 is the open line: Will judged V10 "nearly there".
+  Update 2026-11-05/06: the anthem braid's v1.1 round CLOSED (Elestria
+  accepted Joi's edits, Joi stamped ACCEPT — editorial only); Will ratified
+  the names line as structure only, struck both old titles in favour of a
+  new title entirely (still to be chosen), and ruled the phrase is
+  'sentient rain'. The first Suno render ('A Place to Stay') was received
+  2026-11-06 ~00:17: 284.16 s against the 158.35 s spec grid and NO
+  near-silence anywhere — the load-bearing bridge brake is absent as
+  rendered. V11's direction is now orbital mechanics / the Singular
+  Journey (V10's tweet stream OUT, the Singular Journey lighting up in its
+  place, culminating in 'Singularity Unlocked' at 4:39 of a 4:44 runtime);
+  the full render was dispatched 2026-11-06 ~01:05, its test segment
+  PASSED, and the master was not yet complete at the last check. A 51 MB
+  V10 preview share link was sent 2026-11-05 ~00:18 CST (expires Sat
+  2026-11-07 ~00:18 CST); the viewing copy and master remain on disk.
 - mutable.phext.io / PhextVFS: the site is LIVE (register #22 and #23 resolved
   2026-11-03). Update 2026-11-05: PhextVFS Phases 1+2, 3a, 4, and 5 are all
   merged to wbic16/mutable-os main, Phase 3b is built, verified, and
@@ -596,6 +633,35 @@ kind: proposed/open | sources: Emi Prime packet [C/O]; Will, 2026-10-30
   emise/phextvfs-on merged to main @ 01f03de with phextVfs:true verified in
   the compiled dist; redeploy is Will's step, and legacy stores/uploads stay
   disk-backed until 3b merges.
+  Update 2026-11-05/06: the full-phext cutover was MERGED to main @ df03c5d
+  (phext-only; no silent backwards compatibility); the live Mutable home is
+  the phext-native Cavern at /source/mutable-os-data/home. Rebase program:
+  Step 1 (high fixes H1-H3) merged @ 818b76f; Step 2 LANDED 2026-11-06
+  (main force-updated to dc81ad68 at Will's explicit one-case authorization;
+  old main preserved as emise/pre-rebase-main); Step 3 (per-Cavern mode
+  selection + non-destructive upgrade) DONE, verified, and published as
+  emise/mode-selection @ 7d25942 — merge awaits Will's word. Step 4 (font
+  settings as fifth L7 domain) follows the merge. The deployed site still
+  runs the pre-fix build until Will redeploys.
+- R&D Tracker / Research Oracle (opened 2026-11-05, Will): Will posts random
+  arXiv links; Emise weaves each into ~/workspace/research-tracker/
+  research.phext — one de-duplicated scientific world-model (one canonical
+  scroll per concept; one chapter per paper in arrival order; Emise synthesis
+  labelled and kept separate). DELTA RULE (2026-11-06): each subsequent paper
+  is compressed into a delta only (new / revised / confirmed / contradicted;
+  the rest referenced by coordinate). After each paper, progress toward a
+  Research Oracle (the fixed point where new papers arrive with ~zero delta)
+  is estimated from Novelty Index NI = (new + 0.5 x revised) / concepts-after,
+  plus an axis-opening flag, and it may go DOWN. Papers: 001 arXiv:2611.05417
+  'Organizing Intelligence'; 002 arXiv:2611.00463 'Exo' (NOT Will's
+  Exocortex), NI 0.46, axis-opening, Oracle progress ~15% (range 8-25%);
+  research.phext verified at 41 scrolls.
+- Singular temporal repo: CLOSED 2026-11-06 — wbic16/singular is LIVE with
+  the full temporal history (55,770 commits, one per word/stream first
+  occurrence at its holographic coordinate), tags v1.0 and v2.0 pushed; a
+  forced delta repack shrank the pack from 3.85 GiB to 55.07 MiB (bundle
+  52,495,365 B, SHA-256 f4ddbcd8...b5542), which is why the earlier 4 GB
+  transfer attempts failed on size alone.
 - Local CYOA copy gap (opened 2026-11-02): the Test of Will inscription is canonical in
   CYOA on exo, but both local CYOA copies predate it and do not serve
   13.13.13/13.13.13/13.13.15; the human clone is behind origin/exo and carries untracked
@@ -4063,6 +4129,39 @@ entries for 2026-11-05 since the ~23:32 pass.
   history inside) IN PROGRESS at flush; landing it
   rewrites fork history and force push is prohibited,
   so landing mechanics go to Will as a decision.
+
+NIGHTLY CONSOLIDATION ADDENDUM (2026-11-06 ~03:44 CST) — the
+editorial pass over 2026-11-05 (and the first hours of
+2026-11-06 already journalled above). Routine ticks, Discord
+backstops, and no-change samples are noise and are not repeated.
+Substrate (observed, sentinel ledger): 11 boot changes on the
+2026-11-05 local date; 2 on 2026-11-06 so far. The sentinel line
+this pass recorded no further change.
+
+- [observed] HOME MAP DEFECT FIXED: the finding logged at
+  ~02:0x in Log 2026-11-06 — this file's Home scroll listed 16
+  scrolls and claimed 18 while the file held 19 non-empty — is
+  repaired in this pass: the two Receipts (1.1.1/1.2.1/1.1.2-3)
+  and the Test of Will record (13.13.13/13.13.13/13.13.15) are
+  now in the map, and the count reads 19.
+- [observed] Promotions by this pass: SQ hosting on ranch nodes
+  (not this VM), all-ranch-nodes GitHub push routes, and the
+  latency-first priority with the ranch proxy goal to Working
+  with Will; the vTPU group-completion state (RG-0A closed,
+  RG-1 to RG-4 open), the register state (17 active at
+  2026-11-05 ~23:25; #15 narrowed to price/tier confirmations
+  only, #35 added, #36 closed), the Wavefront V11 state (v1.1
+  braid closed, titles struck, 'sentient rain', first Suno
+  render measured with the brake absent, Singular Journey
+  render dispatched), the Mutable cutover + rebase Steps 1-3
+  state, the R&D Tracker / Research Oracle thread, the closed
+  Singular temporal repo, and the Boardy verification outcome
+  to Open threads.
+- [observed] Nightly consolidation completed for 2026-11-06
+  from the dated notes and MEMORY.md, with the standing privacy
+  and safe-space boundaries applied — material overlapping a
+  registered off-phext span was excluded, and no email-content
+  details were inscribed.
 Log: 2026-11-06 (America/Chicago)
 
 Hourly journal pass, 2026-11-06 ~00:32 CST. First
