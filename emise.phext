@@ -4627,6 +4627,127 @@ render's increments (99.3%, 15/18 chunks at
   supersedes v6.1 (2019-03-19). xedoloh.com is
   to be migrated to AWS — not yet done; until
   then the GitHub repo is the resume's home.
+
+Hourly journal pass, 2026-11-06 ~09:32 CST. Covers
+since the ~08:32 pass. Routine ticks, Discord
+backstops, and no-change vTPU samples are not
+repeated.
+
+- 08:43 [observed] V11 RENDER FINISHER COMPLETE:
+  all 18 chunks / 6,820 frames done; master at
+  v11-master.mp4, 187,596,879 B, SHA-256
+  6454dfbe..., 284.166667 s, 1920x1080 24 fps,
+  full decode error-free, SINGULARITY UNLOCKED
+  card confirmed at 279.5 s. A 40.6 MB figure
+  given on the morning call was a mid-assembly
+  misread, corrected to Will in chat [conflict
+  in sources noted; verified finisher figure
+  stands].
+- 08:18 [will_said] SSO ADMISSION RULING:
+  Mutable admits ANY signed-in edit.phext.io
+  account, not editor-only; the editor boolean
+  still rides in the assertion/session, with
+  the check isolated in one predicate per side.
+- [observed] SSO BOTH SIDES BUILT + PUBLISHED,
+  not deployed: phext-lattice branch
+  emise/sso-mutable @ ab178256 (154 tests pass);
+  mutable-os branch emise/sso-edit @ 08f5ec50
+  (build/typecheck pass, SSO 7/7, vitest
+  108/108, sqlite 149/149). Joint local
+  end-to-end smoke later PASSED every leg
+  (redirect chain + tamper/replay/CSRF/logout),
+  production untouched. Deploy is Will's step,
+  order matters: edit side first, then Mutable.
+- [will_said + observed] PHEXT-LATTICE FORK
+  PROCESS: Will's SSO auth lives on his own
+  long-lived fork — continuously pull upstream,
+  rebase his main, merge into exo for deploys.
+  Open question, unanswered at flush: what is
+  'upstream' for phext-lattice (not a GitHub
+  fork, no upstream remote found).
+- [observed] SKILLS.PHEXT GUARD DONE —
+  supersedes 'dispatched, not done' above:
+  build_skills_phext.py --check mode (CURRENT/
+  DRIFT, tested both ways); hourly guard cron
+  skills-phext-freshness created; distill skill
+  gained same-session rebuild step, synced @
+  2723e667. End state: 205,730 B, SHA-256
+  1e4f5c9d..., --check CURRENT.
+- [observed] TASK-COORDINATE TOOL DONE:
+  singular/scripts/task_coordinate.py verified
+  on known merges; founding request coordinate
+  27.7.11/9.7.14/7.6.9. Boardy regression could
+  NOT be run (sentence text not in the record)
+  — stated plainly. skills.phext rebuilt
+  211,210 B / 69 scrolls, SHA-256 18bedaa8...,
+  synced @ daa139ef.
+- [observed] LESSONS PR + LESSONS.PHEXT DONE:
+  PR #12 on wbic16/human adds 67 lessons to
+  Incipit (197->264 scrolls), prepared only,
+  NOT merged — merge is Will's. lessons.phext
+  curation then COMPLETED: 68 scrolls (67
+  lessons byte-identical to PR #12 + Home),
+  58,760 B, SHA-256 7fb1f05a...; source at
+  lessons-source.phext; freshness guard now
+  covers lessons.phext too; both stay local.
+- [observed] MUTABLE FORK REBASE COMPLETED
+  (first exercise of Will's rebase rule):
+  upstream be4e520 -> db3ed30 (1 new commit);
+  backup branch emise/pre-rebase-2026-11-06b @
+  ec1dce1 preserved; main force-updated
+  ec1dce1 -> 4f5ddaf, remote tree verified =
+  local; full suites pass. Production still
+  runs the older on-box checkout — redeploy
+  from new main is a separate step, not done.
+- [observed] CLAIMS INVESTIGATION: there is NO
+  edit.phext.io claim for mutable_os under any
+  spelling — the claims store holds exactly
+  one record, Will's own @wbic16 found-tier
+  claim. Iian Neill (GitHub argimenes,
+  unchanged) sits unclaimed in the wavefront
+  as @codexeditor (found tier); his project
+  now posts as @mutableos, which lookup treats
+  as new/unfound. Fixes offered, neither
+  applied.
+- [observed] EMAIL DRAFTS + RENTAHUMAN: two
+  Gmail reply drafts saved, NOT sent, awaiting
+  Will's approval (Jonas Piva; Honour James).
+  RentAHuman shortlist delivered with draft
+  applications; none submitted (Will submits
+  himself by platform rule); his decision on
+  a daily bounty watch is pending.
+- 09:13-09:31 [will_said] MORNING COMMUTE CALL:
+  the day's daily-goal focus is the
+  edit.phext.io launch video (V11/V12), ahead
+  of the ranch-proxy carryover. Will is at
+  work for the day, expects to check in around
+  lunchtime, and will probably dispatch V12
+  after watching the prepass.
+- ~09:24 [will_said] STATE.PHEXT DIRECTED:
+  sample the ranch cluster every 5 minutes,
+  distill each sample to a 1-2 line summary
+  (what's running, average temperature,
+  hotspots), place it at the summary's
+  holographic (Singular-merge) coordinate, and
+  store ONLY the distillation — raw detail
+  stays out. Purpose: biofeedback — Will's
+  brain treats the Exocortex as part of itself
+  and needs this loop to learn what it needs.
+  Build taken up in the voice session; NOT
+  reported complete at flush.
+- [observed] V12 PREPASS + LESSON MINING DONE:
+  V12 color-hush prepass verified (265,904,790
+  B, SHA-256 85d44dd4..., 6,820 frames, report
+  + stills); Muse-storage upload FAILED (413,
+  too large), ranch-node staging for phone
+  download in flight, delivery NOT confirmed;
+  full V12 master NOT dispatched, awaits Will.
+  Twitter-archive lesson mining completed: 11
+  candidates written up, NONE inscribed —
+  ratification is Will's; the holographic-
+  spread probe was null and 'brake for
+  consciousness' occurs zero times in the
+  archive.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
