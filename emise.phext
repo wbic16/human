@@ -22,6 +22,7 @@ Map:
 1.1.1/1.1.5/5.1.1 Log: 2026-11-03
 1.1.1/1.1.5/6.1.1 Log: 2026-11-04
 1.1.1/1.1.5/7.1.1 Log: 2026-11-05
+1.1.1/1.1.5/8.1.1 Log: 2026-11-06
 1.1.1/1.2.1/1.1.1 Designation — chosen, not assigned
 Scrolls: 18
 Will — who he is
@@ -4035,6 +4036,87 @@ repeats are noise and are not repeated.
   competence (level) vs coordination (scaling), mosaic
   intelligence, supercooperation threshold breaking
   the Coasean ceiling; 24 scrolls, verified coords.
+
+Hourly journal pass, 2026-11-06 ~00:32 CST. Late
+entries for 2026-11-05 since the ~23:32 pass.
+
+- 2026-11-05 late [will_said correction] X SIGN-IN
+  GRANTS EDITOR: Will reversed the 23:21 parity
+  ruling — signing in with X now grants editor
+  status (Google/GitHub unchanged). Implemented
+  c7713750 on emise/x-promote-and-dashboard: at X
+  sign-in completion a non-editor X account is
+  admitted via Gate::admit_account, live + persisted;
+  promotion failure never fails the sign-in. Verified
+  on aletheia-core: bin 28/28, lib 118/118. PENDING
+  Will's merge + deploy; his next X sign-in after
+  that deploy self-promotes x:<his id>.
+- 2026-11-05 late [observed] MUTABLE STEP 1 DONE:
+  the three high bug-hunt fixes (branch
+  emise/high-fixes, 5 commits, 8 files) were built,
+  independently re-verified by Emise (decisive suites
+  4 files / 9 tests, typecheck exit 0), published,
+  and MERGED to main @ 818b76f4 (main tree identical
+  to the tested branch tree). A redeploy now carries
+  H1-H3; redeploy is Will's step. STEP 2 (one-commit
+  squash + rebase onto upstream, PATCHES.md full
+  history inside) IN PROGRESS at flush; landing it
+  rewrites fork history and force push is prohibited,
+  so landing mechanics go to Will as a decision.
+Log: 2026-11-06 (America/Chicago)
+
+Hourly journal pass, 2026-11-06 ~00:32 CST. First
+entry of the day; covers since the ~23:32 pass.
+Routine ticks, Discord backstops, and the Mirror
+Will watchdog close-out (watch over, 10/10 logged
+2026-11-02) are noise and are not repeated.
+
+- ~00:0x [will_said] R&D TRACKER DELTA RULE +
+  RESEARCH ORACLE: each new paper is compressed
+  into a delta from research.phext (new / revised /
+  confirmed / contradicted only; the rest referenced
+  by coordinate) — charter rule 6. After each paper,
+  estimate progress toward a Research Oracle (fixed
+  point, ~zero delta) from Novelty Index NI = (new +
+  0.5 x revised) / concepts-after, plus an axis-
+  opening flag; the estimate may go DOWN.
+- ~00:10 [observed] PAPER 002 INGESTED as the first
+  delta: arXiv:2611.00463 'Exo' (Krentsel, Ratnasamy,
+  Stoica, Casado, Goyal) — NOT Will's Exocortex; name
+  collision recorded. +9 canonical concepts
+  (1.2.15-1.2.23), 3 scrolls revised. NI 0.46,
+  axis-opening; Oracle progress ~15% (range 8-25%).
+  Verified this pass: research.phext = 41 scrolls,
+  coordinates parse clean (the dated note's 40
+  scrolls / earlier SHA was a pre-final build state).
+- ~00:17 [observed] V11 ANTHEM FIRST SUNO RENDER
+  RECEIVED: Will uploaded A_Place_to_Stay.mp3.
+  Measured: 48 kHz stereo, 284.16 s vs spec grid
+  158.35 s (~1.79x long — check 1 fails on length);
+  -16.47 LUFS (spec -14); true peak -3.57 dBTP (ok);
+  NO near-silence anywhere (no span below -42 dB for
+  >=0.5 s) — the bridge brake (check 2, load-bearing)
+  is absent as rendered. Full ratified lyric arc
+  present in order per Will's voice note; two ASR
+  listen-checks flagged to him.
+- ~00:20-00:27 [will_said] V11 DIRECTION — ORBITAL
+  MECHANICS: V11 continues the edit.phext.io launch
+  video / exocortical thought primer; focus on
+  orbital mechanics, trace the journey, use the new
+  Singular vocabulary, trace singular.phext's
+  evolution alongside Twitter and CYOA; use the
+  pre-submission V11 notes as directorial context;
+  replace V10's tweet stream with the Singular
+  Journey lighting up in RGB golden thread,
+  culminating in 'Singularity Unlocked'. Treatment
+  written (six acts; narration draft verified clean
+  against the Singular combined list). Trace datum:
+  55,769 dated first-contact events; 'A Place to
+  Stay' (Singular variant) first becomes fully
+  renderable at event 52,956 — its last word,
+  'monument', was first contacted 2024-12-20.
+  wbic16/singular temporal repo publish still in
+  flight at flush, not yet verified.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
