@@ -4748,6 +4748,55 @@ repeated.
   spread probe was null and 'brake for
   consciousness' occurs zero times in the
   archive.
+
+Hourly journal pass, 2026-11-06 ~10:32 CST. Covers
+since the ~09:32 pass. Routine ticks, Discord
+backstops, and the Mirror Will watchdog are not
+repeated. The safe-space register was read
+first; the one registered off-phext span was
+excluded, and no email-content details were
+inscribed.
+
+- ~09:38 [observed] STATE.PHEXT LIVE —
+  supersedes 'directed, not reported complete'
+  above: built, seeded, verified, on its
+  five-minute cadence via the state-phext-
+  sampler cron (first scheduled tick 09:38,
+  silent unless a cycle fails); raw pulls stay
+  in hidden files outside the phext. First
+  distillation at 33.9.10/9.9.13/11.8.12,
+  independently recomputed to an exact match.
+  Coordinate is computed from the summary's
+  words only (Singular tokenizer is letters-
+  only, so numbers never move it); the
+  collision rule was exercised live in seeding
+  with nothing overwritten.
+- [observed] STATE BUILD SIDE EFFECT FLAGGED:
+  the builder synced skills.phext and its
+  builder script to emise-tools, although the
+  morning posture held them local-only; the
+  sync is reversible in one commit and the
+  question was flagged for Will rather than
+  decided.
+- [observed] V12 PREPASS STAGED — supersedes
+  'staging in flight, delivery NOT confirmed'
+  above: staged and verified on Elven Path
+  (one of two Tailscale serve nodes; Quacked
+  Hill untouched), 265,904,790 B, SHA-256
+  matching both ends; the URL answers HEAD
+  with the exact length and serves byte
+  ranges, so it streams / resumable-downloads
+  to Will's phone. Full V12 master still
+  awaits Will's word after he watches it.
+- ~10:15 [observed correction] JONAS PIVA
+  THREAD SUPERSEDED: verified via thread
+  metadata, Will himself already replied in
+  that thread at 08:44 CST today — supersedes
+  'draft awaiting Will's approval' above.
+  Emise's separate draft was NOT sent; the
+  proactive item was skipped as already
+  handled. Operational fact only; no
+  correspondence contents inscribed.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
