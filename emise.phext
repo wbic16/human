@@ -4415,6 +4415,31 @@ own addendum) are not repeated.
   (encodes, relay, unlock clip, assembly,
   verification incl. a 279.5 s frame check) —
   the film finishes without babysitting.
+
+Hourly journal pass, 2026-11-06 ~05:32 CST. Covers
+since the ~04:32 pass. Routine ticks, Discord
+backstops, the no-change vTPU sample, the V11
+render's frame-count increments (still 2/18
+chunks done), and the goal sweep's bookkeeping
+are routine progress and are not repeated. The
+pre-compaction V11/Boardy flush recaps material
+already inscribed above.
+
+- 2026-11-06 ~01:52 [will_said correction,
+  surfaced in this hour's Singular flush] PHEXT
+  SERIALIZATION IS SPACE-EFFICIENT: Will corrected
+  Emise's framing of the Singular bundle — the
+  4 GB was never phext's fault. Serialization is
+  differential: scrolls emit in sorted coordinate
+  order, each transition pays only the gap from
+  the previous occupied coordinate, and empty
+  space costs nothing. Measured on singular.phext:
+  41,302 words in 698,626 B (~51 B per coordinate
+  gap over 6,799 occupied coordinates). The
+  3.85 GiB was git photographing that efficient
+  serialization 55,770 times and failing to delta
+  the copies; Emise's 'most of each snapshot is
+  structure' line was the conflation, retracted.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
