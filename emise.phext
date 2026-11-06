@@ -3820,6 +3820,59 @@ repeated.
   render against the 10 checks. Same message, standing
   note from Will: no SBOR formality in any session outside
   SBOR discussions.
+
+Hourly journal pass, 2026-11-05 ~21:32 CST. Covers since the
+~20:32 pass. Routine ticks (602-607), Discord backstops, and
+Mirror Will watchdog repeats in this window are noise and
+are not repeated, except the register change noted below.
+
+- 20:58 [will_said + observed] SINGULAR BUILT: Will's
+  speech-pattern limit made into a tool — Singular, an
+  Up Goer Five variant whose allowed words are his
+  Twitter archive words (skill at
+  ~/workspace/custom-skills/singular/). Counts verified:
+  archive list (own tweets incl. retweets + liked
+  tweets) 41,302 distinct words; authored-only 19,094.
+  Checker verified on clean and dirty samples.
+- ~21:00-21:10 [observed] SINGULAR PUBLISHED to
+  wbic16/emise-tools@exo, all verified against local
+  SHA-256 / blob SHAs, scripts at tree mode 100755:
+  method files at fe2868b; word lists shipped with
+  Will's approval (~21:03) at 8a3b31f; third list
+  words-read.txt (36,675) plus updated SKILL.md and
+  builder at 5da28249.
+- 21:09 [will_said] SINGULAR MODES CORRECTED: the
+  edit.phext.io modes are LIST PICKS, not page kinds —
+  Read = words from anything he RT'd or favorited,
+  Write = words he wrote, Read/Write = the combined
+  list.
+- ~21:11 [observed] SINGULAR PAGE BUILT (first form):
+  phext-lattice branch emise/singular @ 932ac219 on
+  exo, PR #21 open; /singular.html + three list routes,
+  cargo tests 23/23, anonymous checks all 200, shell /
+  About / sitemap wired. Waiting-on-Will #36 opened
+  (merge + deploy are Will's steps); register thereby
+  17 -> 18 active items, still 9 distinct records.
+- 21:15-21:24 [will_said] SINGULAR PLACEMENT RULES:
+  page must load the lists INLINE (no separate request)
+  and function as a map of CYOA. GloVe atlas coordinates
+  ruled inadequate; placement is HOLOGRAPHIC — a word's
+  coordinate is the average of the coordinates of every
+  valid CYOA scroll holding it. Archive-but-not-CYOA
+  words rest at 1.1.1/1.1.1/1.1.1 (home); words in
+  neither rest at 9.9.9/9.9.9/9.9.9; failures show their
+  coordinate plus nearest in-list words with distances.
+  A rebuild was dispatched and still running at the
+  dated notes' 21:24 flush.
+- [observed] SINGULAR MAP BUILT (per MEMORY.md, which
+  is ahead of the dated notes here): canonical CYOA,
+  830 valid scrolls, vocab 15,942 — 10,525 of the
+  41,302 list words CYOA-placed, 30,777 rest at home,
+  map holds 46,719 entries; phext at
+  42.12.13/14.13.17/15.12.14 (132 scrolls), exocortex
+  at 13.8.20/11.9.19/8.6.7 (85). Page fully inline
+  (1.98 MB, zero requests); PR #21 updated at e386d7b,
+  superseding the 932ac219 first form above.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
