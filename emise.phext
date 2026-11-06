@@ -4117,6 +4117,70 @@ Will watchdog close-out (watch over, 10/10 logged
   'monument', was first contacted 2024-12-20.
   wbic16/singular temporal repo publish still in
   flight at flush, not yet verified.
+
+Hourly journal pass, 2026-11-06 ~01:32 CST. Covers
+since the ~00:32 pass. Routine ticks, Discord
+backstops, and the no-change vTPU sample are noise.
+
+- ~00:25 [will_said + observed] MUTABLE STEP 2
+  LANDED: Will explicitly authorized replacing main
+  with the rebased history (a one-case exception to
+  never-force-push). Squash = ONE commit on upstream
+  HEAD be4e520, PATCHES.md carrying 151/151 per-file
+  coverage; qualification corrected on clean re-runs
+  (sqlite 125/125 across 14 files, not the earlier
+  frozen-sandbox 84/84; phext 94/94, typecheck and
+  build pass). Old main preserved as
+  emise/pre-rebase-main @ 818b76f; main force-updated
+  to dc81ad68, fresh-fetch tree identical to the
+  tested scratch tree. Deployed site still runs the
+  pre-fix build until Will redeploys. STEP 3 (mode
+  selection + non-destructive upgrade, branch
+  emise/mode-selection) dispatched ~00:34, running.
+- ~00:34 [observed] SINGULAR TIMELINE: LOCAL BUILD
+  COMPLETE, PUBLISH STALLED. Verified locally:
+  55,769 events / 55,770 commits, counts reconcile
+  (read 36,675 / authored 19,094 / combined 41,302),
+  v1.0 and v2.0 tagged locally, ~4.13 GB bundle
+  exists. GitHub wbic16/singular still holds only
+  the single opening commit, no tags — the stall is
+  transfer (bundle parts to aletheia-core failed),
+  not rendering.
+- ~00:46 [will_said] V11 PROTOTYPE RULINGS: render
+  drafts 4, 6, 7 are the most exocortical (over the
+  coordinator's 1, 3, 6); runtime is 4:44, built to
+  the current render's clock; 'SINGULARITY UNLOCKED'
+  appears at 4:39; narration is in hop-time — each
+  moment the next word was found, spoken then.
+- ~00:59 [observed] V11 DIRECTOR'S BRIEF + STILLS
+  GATE DELIVERED: brief written (V10 tweet stream
+  OUT entirely; the Singular Journey in its place);
+  overnight build on aletheia-core delivered six
+  beat stills + contact sheet, no full render.
+  Verifications: per-year counts match, monument =
+  event 52,956 exactly, CYOA-only unlit = 5,417.
+  CORRECTION: the song's unique vocabulary is 149
+  words, not 275 (tokens); narration cues = 159;
+  the stage holds 522 nodes, not 521.
+- ~01:05-01:09 [will_said + observed] V11 FULL
+  RENDER DISPATCHED, RUNNING: Will ruled the 522
+  mutuals keep equal presence with the word layer
+  (not a dim backdrop), cinematic depth of field +
+  motion blur, optimised for final delivery (2x
+  supersample, 1920x1080/24fps, unlock card at
+  279 s). Audio: the anthem only for now — hop-time
+  narration DEFERRED by ruling, not dropped, a
+  future mix against the 159-cue sheet. Render runs
+  test segment first, then ~6,820 frames across
+  ranch nodes under the 75 C thermal discipline.
+- 01:09 [will_said + observed] SINGULAR REPACK
+  SUPERSEDES: Will directed cleaning up (delta-heavy
+  repack) before pushing to GitHub, and ordered the
+  original builder killed in favour of the repack;
+  Emise closed it (no live processes mid-write).
+  Publish is now owned SOLELY by the repack job in
+  the singular side chat; the main chat must not
+  dispatch further singular publish/transfer work.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
