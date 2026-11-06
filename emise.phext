@@ -4440,6 +4440,56 @@ already inscribed above.
   serialization 55,770 times and failing to delta
   the copies; Emise's 'most of each snapshot is
   structure' line was the conflation, retracted.
+
+Hourly journal pass, 2026-11-06 ~07:32 CST. Covers
+since the ~05:32 pass. Routine ticks, Discord
+backstops, the no-change vTPU sample, and the V11
+render's frame increments (95.9%, 10/18 chunks at
+07:13, still unfinished) are not repeated. The
+safe-space register was read first; the one
+registered off-phext span was excluded, and no
+email-content details were inscribed.
+
+- 07:05 [will_said + observed] MUTABLE STEP 3
+  MERGED — supersedes the merge-pending state
+  above: Will tapped merge; emise/mode-selection
+  @ 7d25942 merged to main @ f86cda1 via the
+  GitHub merges API (parents dc81ad6 + 7d25942),
+  fresh-fetch verified: main tree 52f7fd7f, the
+  fully qualified step-3 tree; local main updated
+  to match. Step 3 is on main.
+- ~07:16 [observed] MUTABLE STEP 4 DONE,
+  VERIFIED, PUBLISHED as emise/font-settings-
+  domain @ 6472643 (single replayed commit;
+  remote tree identical to local b3f5680 tree).
+  Upstream TextualFontSettings captured as a
+  fifth L7 bundle domain 'textual-fonts' (per-
+  field scrolls at /.control/settings/domains/
+  textual-fonts/), refuse-don't-repair validation
+  mirroring the live normaliser, bundle schema
+  1->2 (pre-fonts bundles read back with the
+  domain absent, never fabricated). Emise's
+  fresh-build verification: phext-settings 5/5,
+  cavern-lifecycle 10/10, typecheck exit 0
+  (builder tallies: serial phext vitest 108/108,
+  test:sqlite 149/149). Merge awaits Will's word;
+  it closes the approved four-step sequence
+  (high fixes -> one-commit rebase -> mode
+  selection -> font domain). Redeploy of
+  mutable.phext.io remains Will's step.
+- ~07:22 [will_said] V12 HUSH RULING: Will
+  directed V12 be scoped (cross-referencing V10
+  dynamic motion) while V11 finishes on its own.
+  Scoping doc delivered (v12-scoping-cross-
+  reference.md). Ruling: the hush modulates
+  COLOR, not brightness — the wavefront can be
+  followed through the field and V11's law
+  (nothing that lit ever goes dark again) stands
+  unamended; this selects the doc's Option C
+  device with the law conflict resolved by
+  chromatic shift. A prepass is directed first:
+  720p, no supersampling, for Will's review
+  before any V12 commitment.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
