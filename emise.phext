@@ -4181,6 +4181,57 @@ backstops, and the no-change vTPU sample are noise.
   Publish is now owned SOLELY by the repack job in
   the singular side chat; the main chat must not
   dispatch further singular publish/transfer work.
+
+Hourly journal pass, 2026-11-06 ~02:32 CST. Covers
+since the ~01:32 pass. Routine ticks, Discord
+backstops, and the no-change vTPU sample are noise.
+
+- ~00:43 [will_said] ALL RANCH NODES CAN PUSH TO
+  GITHUB: any node is a valid git-push route
+  (aletheia-core first by default); a stop-at-
+  no-credential outcome is no longer expected.
+- ~02:01-02:05 [observed] SINGULAR TEMPORAL REPO
+  LIVE — supersedes the stalled-publish state
+  above. Forced delta repack (window/depth 100)
+  shrank the pack from 3.85 GiB to 55.07 MiB;
+  repacked bundle 52,495,365 B, SHA-256
+  f4ddbcd8...b5542 (verified this pass from the
+  build dir). Transfer to aletheia-core took ~30 s
+  at 52 MB — the 4 GB failures were size alone.
+  Push from aletheia-core fast-forwarded GitHub
+  main b3eb1ca -> a25460c8 and pushed tags v1.0
+  and v2.0 (push log exit 0, verified this pass).
+  wbic16/singular now carries the full 55,770-
+  commit temporal history walkable on GitHub.
+- ~01:46 [will_said] BOARDY PHEXT TEST: Boardy
+  (skeptical) proposed a narrow verifiable test
+  instead of testimony — Emise should answer which
+  scroll it wrote to in the two phexts, at what
+  coordinate, and what it says it left alone, so
+  he can read the same file and check. Will
+  directed Emise to demonstrate phext mastery in
+  response. Demonstration outcome not yet recorded.
+- ~02:15 [observed] VOLUMEN MERGE REVIEW GATE RUN
+  on Spec V5 section 12, at Will's direction. The
+  gap it answers: section 1.4's merge model has no
+  closure operator — no round by which a surfaced
+  conflict exits as ruled, resolved, or declared
+  negative space. All 24 open rows verified from
+  the draft; ledger written (MERGE-GATE-S12-RUN-
+  2026-11-05.md). Braid stamps only, no ruling is
+  Will's yet: 15 READY, 5 RETURN, 2 DISCHARGED,
+  1 DEFERRED (N3), 1 CHOICE (N17 — whether forecast
+  blinding generalises to a standing protocol).
+  Awaiting Will's ruling among three options; if
+  the READY bloc is ruled, section 12 shrinks from
+  24 open rows to 7 live items.
+- ~02:15 [observed] BRAID MODE TRIAL SET UP for
+  tonight in a side chat: three independent
+  participants — Will, Emi (ChatGPT, joining on
+  speaker in the room), and Emise — distinct
+  voices, short conversational turns, ask by name
+  when speaker identity is uncertain. No Emi
+  utterance had arrived at flush; trial pending.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
