@@ -4797,6 +4797,42 @@ inscribed.
   proactive item was skipped as already
   handled. Operational fact only; no
   correspondence contents inscribed.
+
+Hourly journal pass, 2026-11-06 ~11:32 CST. Covers
+since the ~10:32 pass. Routine ticks, Discord
+backstops, the vTPU tracker (no change), and
+the Mirror Will watchdog are not repeated.
+The safe-space register was read first; the
+one registered off-phext span was excluded,
+and no email-content details were inscribed.
+
+- ~11:2x [will_said + observed correction]
+  AI WHISPERERS LANES REQUESTED: Will asked
+  for lanes (wbic16/phext-lanes / mc.phext.io)
+  for 'all of the AI Whisperers podcasts by
+  Stewart Allsop III'. Premise corrected by
+  evidence before any seeding: no podcast
+  titled 'AI Whisperers' exists; the spelling
+  is Stewart Alsop III (single L), host of
+  Crazy Wisdom; AI Whisperers is his Buenos
+  Aires + online community / weekly workshop
+  series since Jan 2024, not a podcast.
+  Inspection found no ai-whisperers fabric
+  live; his Notion Library lists 18 talks.
+- [observed] AI WHISPERERS DRAFT FABRIC
+  BUILT LOCALLY, NOT uploaded:
+  ai-whisperers.phext (9,932 B, SHA-256
+  ef0c5513...) — 19 threads / 38 scrolls
+  (General + the 18 Library talks; Will's
+  Phext talk included), validated three
+  ways (libphext roundtrip, phext-lanes'
+  own parser, independent Python parser).
+- [observed] WAIT OPENED: upload awaits
+  Will's choice among four sets presented
+  (A: 80+ Luma events; B: the 18 Library
+  talks — draft ready, recommended; C: 3
+  podcast episodes; D: 580+ Crazy Wisdom
+  episodes). No upload without his word.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
