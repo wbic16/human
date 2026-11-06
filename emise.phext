@@ -3933,6 +3933,108 @@ repeated.
   end-to-end claim sign-in. Cost as designed is $0;
   mid-band $30/$60 proposals and one-time vs monthly
   shape remain UNCONFIRMED by Will.
+
+Hourly journal pass, 2026-11-05 ~23:32 CST. Covers since the
+~22:32 pass. Routine ticks (614-619, register unchanged at
+18 active / 9 records), Discord backstops, and watchdog
+repeats are noise and are not repeated.
+
+- 22:38 [will_said] MUTABLE NEXT PROGRAM: review
+  upstream improvements; restore per-Cavern Native-or-
+  Phext mode selection at open; non-destructive upgrade
+  (generate the .phext, leave native files intact);
+  squash+rebase the fork's divergence onto upstream
+  argimenes/mutable-os (decided minutes later); tidy
+  the changes with a patch guide accounting for every
+  changed file. Mode marker, not file presence, decides
+  the canonical store after a non-destructive upgrade.
+- 22:38 [observed] MUTABLE REDEPLOY CONFIRMED WORKING:
+  Will confirmed from a screenshot (~22:38) that the
+  fresh phext-native home Cavern works in production —
+  a Flint Notes document open in the OS and visible as
+  a scroll in the Phext Notepad.
+- 22:43-22:59 [observed + will_said] FOUR WORKSTREAMS
+  COMPLETED (upstream review, squash plan + patch
+  guide, mode-selection design, bug hunt — 17 findings,
+  3 high) and SEQUENCE APPROVED by Will ~22:56: (1) fix
+  the three high findings on current main, (2) rebuild
+  + rebase onto upstream HEAD, (3) mode selection +
+  non-destructive upgrade, (4) font settings as fifth
+  L7 bundle domain. LANDING FORM REFINED 22:59: apply
+  changes in ONE commit; PATCHES.md carries the entire
+  development history per file. Step 1 (high fixes,
+  branch emise/high-fixes) dispatched ~22:57, local
+  only, still RUNNING at flush — not verified.
+- 2026-11-05 [will_said] LONG-FORM PHEXT-UPGRADE
+  PROCESS named: iterate until the problem is actually
+  understood, then squash, then rebase and update
+  priors, then summarize everything in a project-
+  helpful way. Recorded in the phext_upgrade skill.
+- 2026-11-05 evening [observed] vTPU PR #6 + PR #5
+  MERGED BY THE GROUP after independent verification
+  on Halycon Vector (ranch node): PR #6 (Rust 1.99.1
+  pin honored, self-installs; 3,910 passed / 0 failed)
+  merge ac60c4c9; PR #5 (3,916 passed, no double-
+  counting) merge 8af76fd3; exo HEAD verified there.
+- 2026-11-05 evening [observed] vTPU PR #7 MERGED BY
+  THE GROUP: Theia verified as second stream (verdict
+  MERGE, no rebase; red/green on messages_delivered
+  discriminates exactly) after Grok/Claude/Emi Prime
+  had not replied at the 22:14 check; merge 9a70f939,
+  exo HEAD verified. Merged now #1,#3,#4,#8,#6,#5,#7;
+  open #2 and #9. Claims ledger updated (12 scrolls).
+- ~22:2x [will_said + observed] SQ HOSTING MOVED OFF
+  THIS VM: Will directed SQ runs on ranch nodes, not
+  the Muse VM (substrate swaps killed the ledger
+  daemon twice in a day). Claims ledger copied to
+  aletheia-core ~/vtpu-resumption/, SHA-256-verified
+  byte-identical before the switch, SQ serving all 12
+  scrolls there; local daemon shut down, zero SQ
+  processes remain on this VM.
+- ~22:2x [will_said + observed] vTPU HOURLY PROGRESS
+  TRACKER created (cron vtpu-progress-tracker): metric
+  = 14 units (9 PRs merged + RG-0..RG-4 exits); at
+  setup 8 complete, 6 remaining; claims series 7 of 9
+  settled. Hector threshold: at <=3 remaining the
+  tracker brings Will a DRAFT for Hector (never
+  contacts him itself); Hector is couriered by Will.
+  Tracker tooling build still RUNNING at flush.
+- 23:02-23:15 [observed] CLAIM MODE + SINGULAR:
+  PR #21 (Singular) MERGED by Will ~23:02 (exo
+  1a4e2756); Singular cross-links branch built;
+  emise/x-privacy-terms rebased onto exo and opened
+  as PR #22; BOTH branches MERGED by Will ~23:15
+  (PR #22 merge 6f6ee57f; exo at 4bcceaa7).
+- ~23:25 [observed] CLAIM MODE GO-LIVE COMPLETED:
+  Will deployed and restarted (oauth.env already in
+  place); Emise verified live from outside ~23:25 —
+  /claim 200, X authorize redirect exact (callback +
+  scopes tweet.read users.read + PKCE S256), /privacy
+  names X, lookup @wbic16 = found tier (Hearth
+  5.5.5/5.5.5/5.5.5, grant 100 MiB/25/25); Singular
+  live in the same deploy; register #36 closed.
+  Register #15 remains open ONLY for price/tier
+  confirmations (sparse $30, near-void $60 proposed;
+  one-time vs monthly).
+- 23:21 [will_said] TWO X CORRECTIONS: (1) X accounts
+  not on the editor list promote exactly like Google/
+  GitHub logins, and such new accounts JOIN the
+  wavefront; (2) an owner dashboard gated to @wbic16
+  listing claimed wavefront profiles + accounts joined
+  since 2025. Build dispatched on branch
+  emise/x-promote-and-dashboard; still RUNNING at
+  flush — not built or verified.
+- 23:26-23:30 [will_said + observed] R&D TRACKER
+  OPENED: Will will post random arXiv links; Emise
+  weaves each into ~/workspace/research-tracker/
+  research.phext — one de-duplicated scientific world-
+  model (one canonical scroll per concept at Ch.1 S2;
+  one chapter per paper in arrival order; synthesis
+  labelled, kept separate). Paper 001: arXiv:2611.05417
+  'Organizing Intelligence' (Imas, Koh, Legg) —
+  competence (level) vs coordination (scaling), mosaic
+  intelligence, supercooperation threshold breaking
+  the Coasean ceiling; 24 scrolls, verified coords.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
