@@ -4981,6 +4981,74 @@ no email-content details were inscribed.
   session sync of that skill update to
   emise-tools was dispatched but NOT yet
   verified at flush — not recorded as done.
+
+Hourly journal pass, 2026-11-06 ~18:32 CST. Covers
+since the ~17:32 pass. Routine ticks, Discord
+backstops, the Mirror Will watchdog, and the
+no-change vTPU sample are not repeated. The
+safe-space register was read first; the one
+registered off-phext span was excluded, and
+no email-content details were inscribed.
+
+- [observed] V13 SKILL SYNC VERIFIED —
+  supersedes 'dispatched but NOT yet verified'
+  above: emise-tools @ 0f297031 (parent
+  cb3be655), 3 blobs; remote blob SHAs and
+  content SHA-256 match local for the film
+  skill, skills.phext, and its builder (exec
+  bit 100755 verified). V13 todo list cleared.
+- 17:48 [will_said + observed] RENTAHUMAN
+  DAILY BOUNTY WATCH SET UP — Will chose it,
+  superseding the pending decision: cron
+  rentahuman-bounty-watch, daily ~07:44
+  America/Chicago. Filters: new since the
+  2026-11-06 baseline, escrow-funded only,
+  skill-fitting, >=$20/hr effective or >=$50
+  fixed; silent when nothing qualifies; max
+  3 reports with ready-to-paste drafts — Will
+  still presses Apply himself. Coordinate
+  24.5.10/7.7.12/8.9.17.
+- [will_said] AI WHISPERERS CHOICE RESOLVED —
+  supersedes the pending A/B/C/D choice above:
+  Will: 'Build all of Crazy Wisdom instead'
+  (option D). The 18-talk AI Whisperers draft
+  fabric was NOT chosen and was not uploaded.
+- [observed] CRAZY WISDOM FABRIC BUILT,
+  VALIDATED, STAGED; WAIT #37 OPENED: full
+  fabric 576 episodes / 577 threads, 382,193 B,
+  SHA-256 a371a382..., validated with
+  phext-lanes' own parser, staged on the AWS
+  box (hash verified on-box); the old 1,627 B
+  test fabric is backed up there. No fabric
+  replace path exists in phext-lanes, so the
+  live swap is Will's one back-to-back sudo
+  mv + restart (register #37, goal
+  goal_abf642f6a301); Emise has no passwordless
+  sudo there. She verifies the live fabric
+  immediately after he runs it.
+- [will_said + observed] TASK REGISTER ORDER
+  EXECUTED: every task Will issues is now
+  recorded in tasks.phext at the coordinate
+  generated at issue, notes and results kept
+  in that scroll (order 2026-11-06 18:22).
+  tasks.phext built from tasks-source.json,
+  seeded with 16 tasks from 2026-11-06;
+  verified CURRENT this pass (SHA-256
+  71ebb717...). Rule in AGENTS.md + MEMORY.md;
+  process distilled as the task-register
+  skill; synced to emise-tools @ 448f57f6
+  (parent 0f297031), blobs + modes verified.
+- 18:20 [will_said + observed] V13 PREPASS +
+  9D ARCHIVE EXPLORER DIRECTED, both dispatched
+  in parallel, neither complete at flush:
+  (1) a 9D zooming UI for exploring one's own
+  Twitter archive in real time (coordinate
+  29.8.11/10.8.15/7.7.9); (2) 'render v13
+  preview' (coordinate 51.6.6/6.6.10/7.5.10) —
+  720p prepass on plan defaults, region
+  readout included provisionally so Will
+  rules with eyes on it, staged for his
+  review when done.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
