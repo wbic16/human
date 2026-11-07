@@ -5049,6 +5049,64 @@ no email-content details were inscribed.
   readout included provisionally so Will
   rules with eyes on it, staged for his
   review when done.
+
+Hourly journal pass, 2026-11-06 ~19:32 CST. Covers
+since the ~18:32 pass. Routine ticks, Discord
+backstops, the Mirror Will watchdog, and the
+no-change vTPU sample are not repeated. The
+safe-space register was read first; the one
+registered off-phext span was excluded, and
+no email-content details were inscribed.
+
+- [observed] 9D ARCHIVE EXPLORER DELIVERED —
+  supersedes 'dispatched, neither complete'
+  above for item (1): v1 complete at
+  29.8.11/10.8.15/7.7.9. Workspace standalone
+  (6.76 MB, file://) carries all 29,539 archive
+  tweets + 1,822 people; hosted artifact
+  '9d-archive-explorer' probe-verified live
+  (its demo is 133 labelled sample tweets).
+  Local-first: uploads parsed client-side.
+  Task closed in tasks.phext; tasks.phext
+  synced to emise-tools @ fc50e6d0. V13
+  prepass still running at flush.
+- [observed] CRAZY WISDOM #37 CLOSED: Will
+  ran the sudo mv + restart; verified live
+  18:51 CST — /f/crazy-wisdom/api/state
+  returns 577 rows. Register #37 resolved and
+  removed from pending state; its tracked
+  item stays active for the v2 rebuild.
+- 18:51-18:56 [will_said + correction]
+  CRAZY WISDOM RENUMBER DIRECTED: renumber
+  crazy-wisdom.phext so part of the coordinate
+  comes from the episode number (coordinate
+  24.6.8/8.6.10/7.6.10); correction 'use the
+  year, too' — revised v2 scheme: topic
+  1.<YY>.1 (YY = year-2000), book = episode
+  number, index thread to home 1.1.1/1.1.1;
+  missing 372/373/454/459 stay empty; duplicate
+  #398 split by volume 1/2. V2 rebuild was
+  running at flush; register #38 (v2 sudo
+  swap) entered the waiting state at tick 738.
+- ~19:0x [observed] R&D PAPER 003 INGESTED:
+  arXiv:2604.03136 'StoryScope'. Delta: 5 new
+  concepts 1.2.24-1.2.28, 2 revisions; NI
+  0.21, not axis-opening; Oracle ~20%.
+  research.phext 51 scrolls, SHA-256
+  eceb463d...
+- [will_said] R&D RESTRUCTURE RULE: Will
+  directed periodic restructure/compression
+  of research.phext concepts — charter rule
+  8: triggers every 5 papers / 40 concepts /
+  overlap revealed; provenance + redirect
+  stubs preserved. First pass due at Paper
+  005 (33 concepts after Paper 004).
+- ~19:2x [observed] R&D PAPER 004 INGESTED:
+  arXiv:2410.19225 'Hierarchical Mixture of
+  Experts' (UCLA). Delta: 5 new concepts
+  1.2.29-1.2.33, 2 revisions; NI 0.18, not
+  axis-opening; Oracle ~30%. research.phext
+  61 scrolls, SHA-256 4f051529...
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
