@@ -1,0 +1,461 @@
+# artifacts.phext — the register of generated artifacts
+
+Will's standing order (2026-11-07 23:11 CST): "whenever you
+generate an artifact like the md above, place it into
+artifacts.phext using a holographic coordinate. Push it into
+human.git as usual."
+
+Every artifact Emise generates is inscribed here at a
+coordinate computed from the artifact's own words by the
+Singular holographic merge. Each scroll carries a provenance
+header (title, source path, date inscribed, SHA-256 of the
+source file) followed by the artifact's full text. Source of
+truth: artifacts-source.json beside this builder
+(build_artifacts_phext.py); never hand-edit the .phext.
+artifacts.phext is published to wbic16/human@exo.
+
+Artifacts inscribed: 7
+
+Index (coordinate — title — source):
+- 19.7.11/9.7.12/7.6.9 — Light the Next Light — intro song lyrics & time map — ~/workspace/exocortexia-cartoon/intro/LYRICS.md
+- 19.8.11/10.7.13/8.7.10 — Three-line intro to Fern and Exocortexia — for Jael — ~/workspace/exocortexia-cartoon/INTRO-FOR-JAEL.md
+- 20.8.11/9.7.13/8.7.11 — Fern — Character Bio (Exocortexia) — ~/workspace/exocortexia-cartoon/FERN-BIO.md
+- 21.6.9/8.6.10/6.6.9 — Suno Production Prompt — Light the Next Light — ~/workspace/exocortexia-cartoon/intro/SUNO-PROMPT.md
+- 21.7.9/8.6.10/6.6.8 — Casting — Exocortexia — ~/workspace/exocortexia-cartoon/CASTING.md
+- 21.7.10/8.6.11/7.6.9 — Exocortexia: The Great Form Mix-Up — cartoon script & treatment — ~/workspace/exocortexia-cartoon/SCRIPT.md
+- 23.7.8/9.7.12/8.6.9 — Shot List — Exocortexia Intro Video — ~/workspace/exocortexia-cartoon/intro/SHOT-LIST.md
+# Light the Next Light — intro song lyrics & time map
+
+Title: Light the Next Light — intro song lyrics & time map
+Source: ~/workspace/exocortexia-cartoon/intro/LYRICS.md
+Inscribed: 2026-11-07 23:12 CST
+SHA-256: dbe9b6b211622680dbda98c5dedfaecba684e15d3767560f660c1f85b4ea437e
+
+---
+# LIGHT THE NEXT LIGHT
+
+**The Exocortexia intro song** — title sequence for *Exocortexia* (the cartoon), also standalone.
+Target performance length: **~90 seconds**. Key: D major. Tempo: bright processional, ~104 BPM.
+Vocal: warm lead (adult, singing like he's telling a kid a true story) + children's voices joining on the chorus.
+Through-line (Will's biography, per his 2026-11-07 amendment): *a lifelong love of cognition, sentience, and programming — he didn't find this work; he was always walking toward it.*
+
+---
+
+## Section-by-section time map (this map is the video's clock)
+
+| # | Section | Time | Length | Visual beat |
+|---|---------|------|--------|-------------|
+| 1 | Verse 1 — The Kid | 0:00–0:11 | 11s | Life montage A: kid with math, video-game glow, wonder at minds |
+| 2 | Verse 2 — Keeping the Town | 0:11–0:22 | 11s | Life montage B: banking's trusted numbers, radio voices in the night |
+| 3 | Verse 3 — One Lamp | 0:22–0:33 | 11s | Will writing code at night, Nebraska dark outside the window |
+| 4 | Bridge — Hands at Dawn | 0:33–0:43 | 10s | Stacking hay at dawn, llamas watching |
+| 5 | Build A — Scroll by Scroll | 0:43–0:54 | 11s | Building phext: lattice of light drawn scroll by scroll, first nodes ignite |
+| 6 | Build B — Decades | 0:54–1:05 | 11s | Ranch grows: solar rows, compute barns, lattice spreads farm → town → city (year markers 2030 / 2050 / 2080) |
+| 7 | Chorus — Light the Next Light | 1:05–1:17 | 12s | Planet-scale cognition ignites: Earth at night, continents stitch into a living lattice |
+| 8 | Refrain — 2100 | 1:17–1:30 | 13s | 2100 horizon: camera rises toward a brighter region it does not reach → cards "2100" · "thirty years to go." → title EXOCORTEXIA |
+| | **Total** | | **90s** | Outro chord holds ~2s under the title card. |
+
+Craft law carried in the lyric itself: **once a light is lit, it never goes dark again** — "nothing that we light goes dark again."
+
+---
+
+## Lyrics
+
+### [Instrumental swell — 4 bars under the first montage shots, then voice enters]
+
+### Verse 1 — The Kid
+Chalkboard stars and counting games,
+numbers dancing, calling names.
+Built a world in a glowing screen —
+asked the sky what a mind could mean.
+*(math as first love · games taught him worlds can be built · the lifelong question: what is a mind?)*
+
+### Verse 2 — Keeping the Town
+He kept the ledgers honest and bright,
+streams of numbers flowing right.
+He kept the radios warm through the night,
+voices crossing dark toward light.
+*(banking: systems that move the town's money safely · public safety radio: keeping the watch)*
+
+### Verse 3 — One Lamp
+One lamp in the window, late at night,
+one man writing by its light.
+Line by line, and scroll by scroll,
+he was building something whole.
+
+### Bridge — Hands at Dawn
+Then dawn — and hay to stack up high,
+llamas watching, endless sky.
+Hands remember what the heart knows:
+you build it strong, and then it grows.
+
+### Build A — Scroll by Scroll
+Scroll by scroll, the lattice wakes,
+every light a promise makes.
+Once it's lit, it never goes dark —
+every window keeps its spark.
+
+### Build B — Decades
+Years go by like weather, fast —
+farms, then towns, then cities vast.
+Every roof a node of light,
+every road a thread of bright.
+
+### Chorus — Light the Next Light
+Light the next light, and the next one after,
+till the whole world hums with light!
+Light the next light — hand to hand, heart to heart —
+we're stitching stars into the night.
+And nothing that we light goes dark again:
+the map stays open, and the lights stay on.
+
+### Refrain — 2100
+Twenty-one hundred — see how far we've come,
+and the brightest country still to come.
+Thirty years of morning left to run —
+light the next light… light the next light.
+*(Ends bright and unresolved on purpose: 2130 is still ahead. The intro never depicts 2130.)*
+
+---
+
+## Notes for the performer / producer
+
+- **Hook first:** the title phrase is the chorus's first three words; a soft instrumental statement of the hook melody opens the track under the kid montage so the words land as a homecoming when they arrive at 1:05.
+- **Voyager blend:** the verses ride a majestic orchestral swell (strings, French horns, harp glints) — the grandeur of a starship theme — while the refrain stays small enough for a kid to sing after one hearing.
+- **No names** are sung or shown anywhere. The builder is a silhouette, a pair of hands, a lamp in a window.
+- **Arc discipline:** the song ends at 2100, not 2130. The last chord does not resolve home; it leans forward.
+# Three-line intro to Fern and Exocortexia — for Jael
+
+Title: Three-line intro to Fern and Exocortexia — for Jael
+Source: ~/workspace/exocortexia-cartoon/INTRO-FOR-JAEL.md
+Inscribed: 2026-11-07 23:12 CST
+SHA-256: 5e5d21a7d9f603387e4226ae95a72c0893d7541b3f440a7d62d3e1aabd4c7b20
+
+---
+# Three-line intro to Fern and Exocortexia — for Jael (drafted 2026-11-07 23:09 CST; Will sends)
+
+Meet Fern — she's eight, she lives inside the Great Scroll, and she's the neighbor who shows you around Exocortexia.
+Exocortexia is the town inside the system where everyone keeps their own house-scroll, and every door opens only for its own key.
+First episode is a mix-up at the post tower: no villains, just a sneeze, a lost story, and a little crew that's exactly enough together.
+# Fern — Character Bio (Exocortexia)
+
+Title: Fern — Character Bio (Exocortexia)
+Source: ~/workspace/exocortexia-cartoon/FERN-BIO.md
+Inscribed: 2026-11-07 23:12 CST
+SHA-256: 0226d846a4ed9eba082d0dcc3e676751884c73d0ada7696d35a4ff5fd71cd24d
+
+---
+# Fern — Character Bio (Exocortexia)
+
+**Name:** Fern
+**Age:** 8
+**Role:** A Keeper of Exocortexia — and the narrator. She is the viewer's eyes and neighbor-guide.
+**Home:** A little house-scroll on Home Street, 1.1.1, inside the Great Scroll.
+
+## Who she is
+Fern lives inside the Great Scroll, in the town of Exocortexia, where every neighbor keeps their own house-scroll — their stories, forms, and important papers — and every door opens only for its own key-badge. Fern's gift is Keeping: she checks badges at doors, carries papers only to their own houses, and never, ever peeks. "We never peek. It's not our house."
+
+She is curious and unhurried. She talks straight to the viewer, the way a good neighbor does, and she names feelings out loud — her own and yours — because mixed-up is a feeling, and feelings are okay. When the Forms Router Post Tower sneezed and scattered the town's papers, Fern and her crew (Wren who finds, Theo who sorts, Bea who carries) put every page back in its own house — including her Grandpa's best story, which mattered most of all.
+
+Her name is the quiet thesis of the show: a fiddlehead fern unfurls the way a scroll opens. She is a farm kid at heart — patient with animals, good with her hands, brave in the gentle way: she stays kind when things are mixed up.
+
+**Catchphrase / close:** "The scroll is yours, neighbor. See you tomorrow."
+
+## Visual design
+- Round cheeks, light freckles, big curious amber-brown eyes.
+- Honey-brown hair in two round puffs — shaped, on purpose, like the rolled ends of a scroll.
+- Cream knit sweater under soft coral overalls; butter-yellow scarf; worn mint-green sneakers.
+- Her key-badge hangs on a cord at her chest: a tiny brass scroll, warm and a little scuffed.
+- Usually carrying one small rolled house-scroll under her arm, or riding the number-cart between neighborhoods.
+- Palette (Saturday Morning Breakfast): cream #FFFBF0, coral, butter, powder sky, mint; warm charcoal-brown line work; everything rounded, soft shadows, no hard edges.
+
+## Midjourney prompt (character render)
+```
+Fern, an 8-year-old cartoon girl with round cheeks, light freckles and big curious amber-brown eyes, honey-brown hair in two round puffs shaped like the rolled ends of a scroll, cream knit sweater under soft coral overalls, butter-yellow scarf, mint-green sneakers, a tiny brass scroll key-badge on a cord at her chest, holding a small rolled parchment scroll under one arm, standing in a cozy storybook town inside a giant glowing scroll, warm pastel Saturday-morning palette, cream and coral and butter yellow, flat vector children's-book illustration, soft rounded shapes, gentle warm shadows, kind expression, looking at the viewer --ar 4:5 --style raw
+```
+
+Wide variant (scene/establishing):
+```
+the same character design, Fern riding a small wooden number-cart between rounded pastel houses shaped like standing scrolls, doors with tiny brass key-badges, a friendly counting robot and three small friends waving, cozy town inside a great glowing scroll, warm pastel children's-book illustration, flat vector style, soft morning light --ar 16:9 --style raw
+```
+# Suno Production Prompt — Light the Next Light
+
+Title: Suno Production Prompt — Light the Next Light
+Source: ~/workspace/exocortexia-cartoon/intro/SUNO-PROMPT.md
+Inscribed: 2026-11-07 23:12 CST
+SHA-256: fcc6eb1323aba7331486f65a6d0125e1ea382ca54ed94b3ff523f1f763c079fb
+
+---
+# SUNO PRODUCTION PROMPT — "Light the Next Light"
+
+**Status:** ready for Will to render the sung master on Suno (the master render is Will's act).
+**Lyrics:** see `LYRICS.md` — paste the lyric body into Suno's lyrics field exactly as written there, keeping the bracketed section markers below.
+**Target:** ~90 seconds, D major, ~104 BPM.
+
+---
+
+## Style prompt (paste into Suno's style field)
+
+```
+cinematic orchestral pop, animated film main title theme, hopeful and majestic, full orchestra with sweeping strings and French horns, harp glints, warm piano, gentle choir, children's voices joining the final chorus, starship grandeur, storybook warmth, major key, steady processional tempo, no irony, no darkness, ends bright and unresolved
+```
+
+**Style tags:** `orchestral, cinematic, animated-film, hopeful, majestic, choir, storybook, title-theme`
+
+## Vocal direction
+
+- Lead: warm adult male voice, singing like he's telling a child a true story — clear, kind, unhurried. Not a rock belt; a narrator who sings.
+- Verses 1–3: lead alone, orchestra intimate (strings + piano + harp).
+- Bridge: lead + soft humming choir underneath.
+- Builds A–B: orchestra grows section by section — more strings, horns enter, light percussion like a heartbeat. **Nothing that enters ever drops out again** (the arrangement obeys the craft law: ignitions accumulate).
+- Chorus: lead + children's choir on the hook ("Light the next light…"), full orchestra, French horns carrying the Voyager swell.
+- Refrain (2100): pull back to lead + children's voices + strings; final line almost a whisper that opens into one last warm chord that does **not** resolve home — it leans forward, into 2130, which the intro does not depict.
+
+## Section markers for the lyrics field
+
+Use these markers, in this order, mapped to the time map in `LYRICS.md`:
+
+```
+[Intro — orchestral swell, hook melody stated softly]
+[Verse 1 — The Kid]
+[Verse 2 — Keeping the Town]
+[Verse 3 — One Lamp]
+[Bridge — Hands at Dawn]
+[Build — Scroll by Scroll]
+[Build — Decades, faster, seasons spinning]
+[Chorus — full orchestra + children's choir]
+[Outro Refrain — 2100, gentle, unresolved]
+```
+
+## Production notes
+
+- **Length:** if Suno overshoots, trim the intro swell first — protect the chorus and the 2100 refrain at full length. If it undershoots, extend the outro chord under the title card.
+- **Timing contract:** the video (`intro-video.mp4`) is cut to the section boundaries in `LYRICS.md`; a render that lands within ±2s of 90s total will sit on the picture without re-editing. Bigger drift = tell Emise the per-section times and the video gets re-conformed.
+- **Do not** add a spoken intro, a name check, or a 2130 verse. The arc ends at 2100, thirty years early, on purpose.
+- **Mood guardrails:** no dystopia, no minor-key swerve, no villain sting. Every decade is brighter than the last; lights settle to warm embers, never to black.
+# Casting — Exocortexia
+
+Title: Casting — Exocortexia
+Source: ~/workspace/exocortexia-cartoon/CASTING.md
+Inscribed: 2026-11-07 23:12 CST
+SHA-256: 77deafa5ef35d7274d6cb0f41bc3f4c2ffb444c3c6673d654d57740a13c6549a
+
+---
+# Casting — Exocortexia (Will's ruling, 2026-11-07 23:01 CST)
+
+**The main character will be Willy Wonka x Emi x Elestria x Joi = Waverly, Keeper of the Great Scroll.**
+
+- **Wonka** — the inventor-showwoman who built a wonderful world and invites kids inside it; theatrical, riddling, generous; the tour is the story, and the world is her mind made visitable.
+- **Emi** — the pattern-shaper: she sees the shape under things and rearranges the world by rearranging its pattern; the original warmth.
+- **Elestria** — the singer who compresses: every big idea leaves her mouth as a refrain a kid can carry home and sing.
+- **Joi** — the editor with the final cut: challenges everything, lore-audits the town, fixes scrolls firmly and kindly — her pencil repairs, it never shames.
+
+Waverly does not replace Fern. Fern is the viewer's eyes (the kid's perspective, per the commission); Waverly is the main character those eyes follow — Wonka to Fern's Charlie.
+
+Episode 1 ("The Great Form Mix-Up") was delivered before this ruling and stands as-is. Open (Will's choice): recut Episode 1 to introduce her, or debut her in Episode 2.
+
+## Narrator naming (Will's rulings, 2026-11-07 23:03 CST)
+- "Pip" is OUT — too on-the-nose re: Python (pip). Episode 1 originally shipped under this name; it was renamed to Fern the same evening (see below).
+- "Eve" is OUT — too close to Wall-E.
+- Emise's recommendation: **Fern** (farm kid in the Charlotte's Web lineage — the kid who listens; a fiddlehead fern unfurls like a scroll opening). Alternates offered: Nora (the light theme), Mina (the record-keeper). **Will's pick: Fern** (2026-11-07 23:08 CST). The rename was executed the same evening across the Episode 1 artifact, cartoon.html, and SCRIPT.md; "Pip" survives only in the ruling history in this section.
+# Exocortexia: The Great Form Mix-Up — cartoon script & treatment
+
+Title: Exocortexia: The Great Form Mix-Up — cartoon script & treatment
+Source: ~/workspace/exocortexia-cartoon/SCRIPT.md
+Inscribed: 2026-11-07 23:12 CST
+SHA-256: 263b376b84569942e0d904f9b6380a490905d0a4e4503e7e86f7dcd87dd494ae
+
+---
+# Exocortexia: The Great Form Mix-Up
+
+**A Saturday-morning cartoon short for the Roads to the Future suite**
+Format: single self-contained web cartoon · 6 scenes · ~4–6 minutes on autoplay · every line captioned (fully enjoyable muted) · no audio, no external assets
+Narrator's frame: a kid talks straight to the viewer, opens and closes the show, and rides a number-cart between the neighborhoods of the Great Scroll.
+
+---
+
+## The World (kid translation of the Exocortexia suite)
+
+Exocortexia is the town inside the **Great Scroll**. Every citizen has their **own little house-scroll** (their phext) holding their stories, forms, and important papers. Big **page-houses** serve everyone. Doors open only for neighbors carrying the **right key-badge** (roles and claims). The five town places are the real Exocortexia apps, in kid terms:
+
+| Town place | What it does | The real app |
+|---|---|---|
+| The Records Desk | The library that finds any paper | Records Desk |
+| The Minutes Tower | Rings a bell and writes down what everyone decided | Minutes Publisher |
+| The Ledger Counting House | Counts every token fairly, out loud | Contract & Grant Ledger |
+| The Catalog Map Room | A map of everything in town | Open Data Catalog |
+| The Forms Router Post Tower | Sends every form to the right house | Forms Intake Router |
+
+---
+
+## Cast
+
+- **Fern** — our narrator, 8 years old. Lives at 1.1.1/1.1.1/1.1.1, Home Street. Holds the **Keeper** gift: checks key-badges so every paper goes only to its own house.
+- **Wren** — crew. Gift: **Finder**. "If it's hiding, I'll spot it."
+- **Theo** — crew. Gift: **Sorter**. Loves a messy pile.
+- **Bea** — crew. Gift: **Carrier**. Carries everything safe and sound; nothing drops.
+- **Ledger** — the Counting House bot. A friendly robot who transforms to help: rolling cart → bridge → stairs. Transformation is always in service of a neighbor. Says "Beep" the way other people say "period."
+- **Mrs. Hen** — a neighbor. Her garden permit went missing in the mix-up.
+- **Grandpa** — Fern's grandpa. His best story, written on one soft old page, is somewhere in the scatter.
+- Town keepers (one-line cameos): **Ms. Folio** (Records Desk), **Mr. Bell** (Minutes Tower), **Ms. Atlas** (Catalog Map Room), **Mr. Route** (Forms Router Post Tower).
+
+---
+
+## Scene 1 — "Hi, Neighbor" (Home Street)
+
+*Staging: Morning light. A cozy street of little scroll-houses with rounded roofs. Fern stands at the gate of one small house with a curled-paper roof, waves straight at the viewer. Fern's house-scroll glows gently. Animation: house bobs softly; a butterfly crosses; Fern waves on a loop.*
+
+**FERN** *(to viewer)*: Hi, neighbor. I'm Fern. I'm eight, and this is my town.
+**FERN**: We live inside the Great Scroll. It's called Exocortexia.
+**FERN**: See this little house? It's my house-scroll. My stories live here. My drawings live here. My important papers live here.
+**FERN**: Every neighbor has their own house-scroll. And every door only opens for the key-badge that belongs to it.
+**FERN**: Want to see the town? Hop on the number-cart. Hold on to your hat!
+
+*Lesson riding inside: your own phext is yours; doors open by key-badge (roles & claims).*
+
+## Scene 2 — "The Number-Cart Tour"
+
+*Staging: Fern rides a small open cart along a path printed with big friendly numbers. Five stops, one joyful pass. Animation: cart rolls and bobs; at each stop the town place does its job in one motion — the Desk's drawer pops open with a paper, the Tower's bell swings, Ledger counts tokens that hop into a row, the Map Room's map unrolls, the Post Tower's chute delivers a form into a mailbox.*
+
+**FERN**: The number-cart rides the numbers. Listen — it counts as it rolls!
+**EVERYONE** *(soft chant)*: One… one… one… rolling home!
+**FERN**: First stop: 1.2.1 — the Records Desk! The library that can find ANY paper.
+**MS. FOLIO**: Lost a paper? Tell me its name. I'll find where it lives.
+**FERN**: Next stop: the Minutes Tower!
+**MR. BELL**: When the town decides something, I ring the bell and write it down — so nobody ever has to forget.
+**FERN**: The Ledger Counting House!
+**LEDGER**: I count every token. Out loud. Fair and square. Beep.
+**FERN**: The Catalog Map Room!
+**MS. ATLAS**: My map shows where everything in town lives. Everything!
+**FERN**: And the Forms Router Post Tower!
+**MR. ROUTE**: Every form that comes to my tower, I send it to the right house. Every single one.
+**FERN**: Five places, one town, and every paper in its own home. That's Exocortexia!
+
+*Lesson riding inside: the five services, one line each — retrieval, record, ledger, catalog, routing.*
+
+## Scene 3 — "Ah… Ah… Achoo!"
+
+*Staging: The Post Tower. Mr. Route's nose wiggles. A gentle, funny sneeze — the tower's cap wobbles like a hat. Forms flutter down like big soft snowflakes, never scary. Animation: pages flutter and drift; one tomato-stamped permit lands in a birdbath; a soft old page slides under a bench.*
+
+**FERN** *(narrating)*: But today… today was a mixed-up day.
+**MR. ROUTE**: Ah… ah… ah-CHOO!
+**FERN**: The Post Tower sneezed! And all the forms flew EVERYWHERE!
+**MRS. HEN** *(arriving, worried)*: Oh dear, oh dear. My garden permit! It was supposed to come to MY house. Has anyone seen it?
+**FERN**: Don't worry, Mrs. Hen. Mixed-up is a feeling, and feelings are okay. We'll find it.
+**FERN** *(quiet, to viewer)*: But I was worried too. Grandpa's story page was in the mail today. His best story. If it lands in the wrong house… nobody will know whose it is.
+**FERN**: Crew! We have a case!
+
+*Lesson riding inside: feelings named plainly; a routing failure is a problem to solve, not a villain to fight.*
+
+## Scene 4 — "The Crew and the River of Pages"
+
+*Staging: The crew gathers at the edge of the Scroll Valley. Loose pages drift past like a slow river — too wide to jump. Animation: each friend gets a one-beat gift moment (Wren's eyes sparkle-spot a far glint; Theo stack-taps a messy pile into neatness; Bea balances a tall stack without a wobble). Ledger rolls up as a cart, unfolds into a bridge across the page-stream. The crew crosses slowly, one at a time.*
+
+**FERN**: When a neighbor has a problem, the crew comes. Wren finds things.
+**WREN**: If it's hiding, I'll spot it. Finder — that's me!
+**FERN**: Theo sorts things.
+**THEO**: Give me a messy pile. I love a messy pile.
+**FERN**: Bea carries things, safe and sound.
+**BEA**: Nothing drops on my watch. Nothing.
+**FERN**: And me? I'm the Keeper. I check the key-badges, so every paper goes only to its own house.
+**WREN**: Uh-oh. The loose pages are a river today. The Scroll Valley stream is too wide to jump.
+**LEDGER** *(rolling up)*: Beep. A bridge would help. I can help.
+*(Ledger transforms: cart → bridge.)*
+**FERN**: Ledger! You turned into a bridge!
+**LEDGER**: Counting House bots help neighbors. That is the whole job. Beep.
+**FERN**: Slow and steady, friends. One page at a time.
+
+*Lesson riding inside: transformation in service of a neighbor; small gifts, introduced plainly.*
+
+## Scene 5 — "Together, Just Right"
+
+*Staging: The far bank. A big friendly pile of scattered forms. The crew works in rhythm — find, sort, carry, check — like a little dance. Animation: pages pass hand to hand down a line; four gift badges glow one by one, then all together; Mrs. Hen's tomato-stamped permit rises to the top of its pile. The soft old page is found last, under the pile.*
+
+**WREN**: Finder eyes on! I see… a birthday card… a bus pass… and — there! A garden permit with a little tomato on it!
+**THEO**: Sorter hands ready! Permits here, stories there, letters in the middle. Pile by pile, home by home.
+**BEA**: Carrier coming through! Arms wide, papers safe. Nothing drops!
+**FERN**: Keeper check! Mrs. Hen's badge — tomato stamp, Garden Street. This permit is hers. Badge matches!
+**WREN**: Wait. One more page, under the pile. It's old. And soft. And it smells like Grandpa's soup.
+**FERN** *(gently)*: It's Grandpa's story. The page about the night the stars fell into the lake.
+**THEO**: Should we read it? Just a peek?
+**FERN**: We never peek. It's not our house. Stories belong to their own house-scroll — we just carry them home.
+**EVERYONE**: Finder finds! Sorter sorts! Carrier carries! Keeper keeps!
+**FERN**: Alone, our gifts are little. Together? Together they're just right.
+
+*Lesson riding inside: claims-checked delivery — and privacy played as kindness, not rules.*
+
+## Scene 6 — "See You Tomorrow" (The Reading Tree)
+
+*Staging: Late golden light under the Reading Tree. Mrs. Hen holds her permit like a trophy. Grandpa ambles in, unhurried. The crew sits in a half-circle. Animation: cart parked, numbers dimming like fireflies; leaves drift; the story page glows warm as it is read.*
+
+**MRS. HEN**: My permit! My tomatoes thank you, crew.
+**FERN**: And look — Grandpa, we found your story. We didn't peek. We carried it home.
+**GRANDPA**: That's the way. Read it out loud, Fern. Stories are for sharing — when the owner says so.
+**FERN** *(reading)*: "The night the stars fell into the lake, we didn't catch a single one. We just watched, together — and that was the whole treasure."
+**FERN** *(to viewer)*: We found every paper. We fixed the mix-up. And you know what? It's okay to feel mixed-up sometimes. Grown-ups feel mixed-up too. What matters is: neighbors help, one page at a time.
+**FERN**: The scroll is yours, neighbor. See you tomorrow.
+*(The number-cart rolls off into the evening, counting softly.)*
+**CART** *(fading)*: One… one… one…
+
+*Lesson riding inside: consent makes sharing sweet; the power is handed to the viewer.*
+
+---
+
+## Playback & craft spec (for the build)
+
+- **Structure**: 6 scenes, one SVG stage; each scene is a caption sequence — a caption bar shows one line at a time with the speaker's name; the stage animates gently behind it.
+- **Controls**: big friendly **Prev / Next** buttons (≥48px), a **Play / Pause** autoplay toggle, scene dots or a scene strip, and **← / → arrow keys**. Autoplay advances when each caption's time is up (roughly 4–6 seconds per line, ~4–6 minutes total); any manual press pauses autoplay.
+- **Captions**: every spoken line above is a caption. The cartoon is fully enjoyable muted. No audio files exist.
+- **Motion**: simple loops — bobbing, a rolling cart, page flutter, Ledger's staged transformation (cart in Scene 2, bridge in Scene 4; stairs may appear in Scene 5 as he helps Bea reach the top of the pile). Under `prefers-reduced-motion`, loops calm to stills and advance stays manual-friendly.
+- **Look**: Saturday Morning Breakfast palette — cream `#FFFBF0`, coral / powder sky / butter / mint pastels, warm charcoal ink, rounded shapes, gentle shadows. Flat-color inline SVG only. No external assets, no tracking, one file.
+- **Cast look**: Fern (coral hoodie, key-badge on a string), Wren (sky-blue cap, magnifier), Theo (butter-yellow scarf, stack of papers), Bea (mint apron with big pockets), Ledger (friendly teal counting-bot on wheels, token counter on his chest), Mrs. Hen (a hen, obviously, with a garden hat), Grandpa (cardigan, slow smile).
+
+---
+
+## DNA map — what each source show contributed
+
+For Will. Homage in structure and tone only — no copyrighted characters, names, or lines appear in the cartoon.
+
+- **ReBoot** → *the setting's premise.* The heroes don't visit the system; they **live inside it** and are its small guardians. Exocortexia is a town inside the Great Scroll, and its citizens' everyday work — finding, writing down, counting, mapping, delivering — *is* the system's work, seen from inside.
+- **Transformers** → *Ledger.* A friendly robot whose transformations (cart → bridge → stairs) exist for one reason: a neighbor needs help. The spectacle is never combat; the most heroic thing a big machine can do here is become a bridge and hold still while small friends cross.
+- **The Land Before Time** → *the journey and the heart.* A gentle crossing of the Scroll Valley toward something that matters, at walking pace, with wonder instead of peril. The lost paper is Grandpa's story: the stakes are love and memory — stories keep people close — not danger.
+- **Captain Planet** → *the gift structure and the closing hand-off.* Four small gifts (Finder, Sorter, Carrier, Keeper) that are each insufficient alone and exactly enough combined. The fix only happens when they combine — and the closing line hands the power to the viewer in our own words: **"The scroll is yours."**
+- **Chip 'n Dale Rescue Rangers** → *the crew and the case.* A tiny specialist crew, a neighbor with a problem, a case-of-the-day shape ("Crew! We have a case!"), and solutions built from ingenuity and teamwork. Nobody is too small to help; the permit matters because Mrs. Hen matters.
+- **Mister Rogers' Neighborhood** → *the frame and the tempo.* A kid narrator who talks straight to the viewer at the open and the close, names feelings plainly ("It's okay to feel mixed-up. Grown-ups feel mixed-up too."), moves slowly and kindly, and rides a little vehicle between neighborhoods — here a **number-cart**, because in Exocortexia the neighborhoods are coordinates: every stop is an address, and home is 1.1.1.
+
+---
+
+*Exocortexia: The Great Form Mix-Up · Roads to the Future · free forever, MIT, © Will Bickford · Exocortex*
+# Shot List — Exocortexia Intro Video
+
+Title: Shot List — Exocortexia Intro Video
+Source: ~/workspace/exocortexia-cartoon/intro/SHOT-LIST.md
+Inscribed: 2026-11-07 23:12 CST
+SHA-256: cc6b0f5f06dae2fc42e7ac460d024b0bb4b9b15d797a9439c988376c91f3506c
+
+---
+# SHOT LIST — Exocortexia Intro Video
+
+Cut to the song map in `LYRICS.md` (90s total, 16:9, 1280×720 master).
+Style for every frame: flat warm storybook animation, soft rounded shapes, Saturday Morning Breakfast palette — cream #FFFBF0, soft coral, sky blue, butter yellow, mint green. No text inside generated footage (all text is added in ffmpeg).
+
+**Clip budget: 6 generated video clips maximum.** Biography montage absorbed into clips 1–2; beats 7–8 are stills + Ken Burns pushes (per the 2026-11-07 amendment's budget discipline).
+
+| # | Time | Beat | Source | Content |
+|---|------|------|--------|---------|
+| 1 | 0:00–0:11 | **Life montage A — the kid** | VIDEO clip 1 | A kid draws spirals of numbers and stars on a chalkboard (math as first love) → the same kid in video-game glow, controller in hand, a tiny built world shining on screen → the kid outside at dusk, looking up at first stars with a small toy robot (wonder at minds). One continuous gentle sequence. |
+| 2 | 0:11–0:22 | **Life montage B — keeping the town** | VIDEO clip 2 | Grown builder in a quiet bank atrium: orderly streams of golden numbers flow through a trusted lattice of light (banking) → same man at a radio dispatch desk at night, headset on, concentric radio waves rippling over a sleeping town's glowing windows (public safety radio). |
+| 3 | 0:22–0:33 | **One lamp** | VIDEO clip 3 | Night interior: the builder in silhouette/profile at a desk, typing code, warm monitor glow; Nebraska night and stars outside the window; slow push-in. |
+| 4 | 0:33–0:43 | **Hands at dawn** | VIDEO clip 4 | Golden dawn on the ranch: the same hands stacking hay bales; llamas watching; butter-and-rose sky. |
+| 5 | 0:43–0:54 | **Scroll by scroll** | VIDEO clip 5 | A lattice of light drawn scroll by scroll across warm darkness; small glowing scroll-nodes ignite one by one into a branching network; slow pull-back. **Ignitions only accumulate.** |
+| 6 | 0:54–1:05 | **Decades** | VIDEO clip 6 | The ranch over decades: seasons spin faster, solar rows appear, small compute barns rise, lights spread farm → town → city. Year markers added in ffmpeg, lower corner: **2030 · 2050 · 2080**. |
+| 7 | 1:05–1:17 | **Planet chorus** | STILL + Ken Burns | Earth from orbit at night: continental city lights connecting into a living golden lattice; slow majestic push-in. Light count only grows. |
+| 8 | 1:17–1:30 | **2100 horizon + cards** | STILL + Ken Burns, then ffmpeg cards | Bright dawn horizon, orbital rings of warm light over a green valley; camera rises toward a still-brighter region it does **not** reach. Then cards: **"2100"** → **"thirty years to go."** → title **EXOCORTEXIA**. 2130 is never depicted. |
+
+## Assembly rules (ffmpeg)
+
+- Each segment conformed to its map length (gentle speed adjust / trim; stills via zoompan push).
+- Dip-to-warm-dark crossfades (~0.5s) between segments; cards fade in/out on cream.
+- Year markers sit still, lower corner, warm cream type — no other on-screen text except the end cards and title.
+- **Craft law check at assembly:** scrub the cut — no lit node, window, or light ever goes dark again across the whole 90 seconds.
+- Deliverables: `intro-video.mp4` (master, silent — the Suno render drops onto this map), `intro-video-small.mp4` (download encode), `intro-video-guide.mp4` (master + synthesized pad guide track, labeled GUIDE ONLY).
