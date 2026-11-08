@@ -14,13 +14,14 @@ truth: artifacts-source.json beside this builder
 (build_artifacts_phext.py); never hand-edit the .phext.
 artifacts.phext is published to wbic16/human@exo.
 
-Artifacts inscribed: 7
+Artifacts inscribed: 8
 
 Index (coordinate — title — source):
 - 19.7.11/9.7.12/7.6.9 — Light the Next Light — intro song lyrics & time map — ~/workspace/exocortexia-cartoon/intro/LYRICS.md
 - 19.8.11/10.7.13/8.7.10 — Three-line intro to Fern and Exocortexia — for Jael — ~/workspace/exocortexia-cartoon/INTRO-FOR-JAEL.md
 - 20.8.11/9.7.13/8.7.11 — Fern — Character Bio (Exocortexia) — ~/workspace/exocortexia-cartoon/FERN-BIO.md
 - 21.6.9/8.6.10/6.6.9 — Suno Production Prompt — Light the Next Light — ~/workspace/exocortexia-cartoon/intro/SUNO-PROMPT.md
+- 21.6.11/8.6.13/6.6.10 — Fern — Episode 1 Key Frames for Midjourney — ~/workspace/exocortexia-cartoon/FERN-KEYFRAMES-MJ.md
 - 21.7.9/8.6.10/6.6.8 — Casting — Exocortexia — ~/workspace/exocortexia-cartoon/CASTING.md
 - 21.7.10/8.6.11/7.6.9 — Exocortexia: The Great Form Mix-Up — cartoon script & treatment — ~/workspace/exocortexia-cartoon/SCRIPT.md
 - 23.7.8/9.7.12/8.6.9 — Shot List — Exocortexia Intro Video — ~/workspace/exocortexia-cartoon/intro/SHOT-LIST.md
@@ -233,6 +234,82 @@ Use these markers, in this order, mapped to the time map in `LYRICS.md`:
 - **Timing contract:** the video (`intro-video.mp4`) is cut to the section boundaries in `LYRICS.md`; a render that lands within ±2s of 90s total will sit on the picture without re-editing. Bigger drift = tell Emise the per-section times and the video gets re-conformed.
 - **Do not** add a spoken intro, a name check, or a 2130 verse. The arc ends at 2100, thirty years early, on purpose.
 - **Mood guardrails:** no dystopia, no minor-key swerve, no villain sting. Every decade is brighter than the last; lights settle to warm embers, never to black.
+# Fern — Episode 1 Key Frames for Midjourney
+
+Title: Fern — Episode 1 Key Frames for Midjourney
+Source: ~/workspace/exocortexia-cartoon/FERN-KEYFRAMES-MJ.md
+Inscribed: 2026-11-07 23:17 CST
+SHA-256: 608bceac96077868954add96ff134e47598a22726c89ba309d8fcc2ccd934817
+
+---
+# Fern — Episode 1 Key Frames for Midjourney
+
+Ready-to-paste Midjourney prompts for the key frames of **Exocortexia: The Great Form Mix-Up** (Episode 1), built from Will's canonical Fern render (the saved high-quality portrait — scroll-puff buns, freckles, coral overalls, brass key-badge — is the design of record).
+
+## How to use these
+
+- Every prompt below is **character block + the moment + style block**, complete and paste-ready. The character block and style block are identical in all eight prompts — do not edit them between frames; that sameness is what holds Fern's likeness across the set.
+- In each prompt, replace **FERN_URL** with the image URL of the saved Fern render (upload it to Midjourney/Discord first) so `--cref` locks her face, hair, and outfit. `--cw 90` keeps the reference strong on the outfit too; drop to `--cw 60–70` if a pose comes out stiff, raise to `--cw 100` if her clothes drift.
+- For extra style lock, the same render can go in as `--sref FERN_URL`. `--cref` is the important one; `--sref` is optional seasoning.
+- All frames are `--ar 16:9` (episode frames). For a poster/portrait of any frame, re-run it with `--ar 4:5`.
+
+## Canonical character block (identical in every prompt)
+
+> Fern, an 8-year-old cartoon girl, big round head and round cheeks, light freckles across her nose, huge amber-brown eyes with bright orange irises and a gentle kind smile, warm brown hair in two big round puff buns shaped like the rolled ends of a scroll, cream cable-knit sweater, coral overalls with rolled cuffs and brass buttons, butter-yellow scarf tied in a bow at her neck, a tiny brass scroll key-badge hanging on a dark cord at her chest, mint-green sneakers, holding a small rolled parchment scroll in one hand
+
+## Canonical style block (identical in every prompt)
+
+> lush painterly storybook illustration for a children's animated film, a whimsical town built inside a giant luminous golden scroll, parchment-gold glow, warm cream coral and butter palette with deep plum and teal shadows at the edges, soft rounded storybook architecture with curled-paper roofs and glowing windows, cinematic Saturday-morning warmth, soft golden-hour light, gentle sparkle dust in the air, rich hand-painted texture --ar 16:9 --style raw --cref FERN_URL --cw 90
+
+---
+
+## Frame 1 — Hero portrait at Home Street
+
+*The establishing Fern: morning on Home Street, her own glowing house-scroll behind her, waving straight at us.*
+
+```
+Fern, an 8-year-old cartoon girl, big round head and round cheeks, light freckles across her nose, huge amber-brown eyes with bright orange irises and a gentle kind smile, warm brown hair in two big round puff buns shaped like the rolled ends of a scroll, cream cable-knit sweater, coral overalls with rolled cuffs and brass buttons, butter-yellow scarf tied in a bow at her neck, a tiny brass scroll key-badge hanging on a dark cord at her chest, mint-green sneakers, holding a small rolled parchment scroll in one hand, standing at the gate of her own little house on a cozy morning street, waving hello straight at the viewer, her house behind her shaped like a small standing scroll with a curled-paper roof and one warm glowing window, a butterfly drifting past, lush painterly storybook illustration for a children's animated film, a whimsical town built inside a giant luminous golden scroll, parchment-gold glow, warm cream coral and butter palette with deep plum and teal shadows at the edges, soft rounded storybook architecture with curled-paper roofs and glowing windows, cinematic Saturday-morning warmth, soft golden-hour light, gentle sparkle dust in the air, rich hand-painted texture --ar 16:9 --style raw --cref FERN_URL --cw 90
+```
+
+**Check:** both puff buns round and scroll-like, scarf bow at her neck, brass badge visible at her chest, house reads as a scroll (curled roof), not a plain cottage.
+
+## Frame 2 — "Hi, neighbor" (the greeting close-up)
+
+*The Mister Rogers beat: Fern close to camera, talking right to the viewer, the Great Scroll glowing behind her.*
+
+```
+Fern, an 8-year-old cartoon girl, big round head and round cheeks, light freckles across her nose, huge amber-brown eyes with bright orange irises and a gentle kind smile, warm brown hair in two big round puff buns shaped like the rolled ends of a scroll, cream cable-knit sweater, coral overalls with rolled cuffs and brass buttons, butter-yellow scarf tied in a bow at her neck, a tiny brass scroll key-badge hanging on a dark cord at her chest, mint-green sneakers, holding a small rolled parchment scroll in one hand, warm close-up portrait, face and shoulders filling the frame, looking directly into the camera with a welcoming wave, mid-sentence as if saying hello to a friend, the glowing golden curve of a giant scroll and a soft-focus storybook town behind her, lush painterly storybook illustration for a children's animated film, a whimsical town built inside a giant luminous golden scroll, parchment-gold glow, warm cream coral and butter palette with deep plum and teal shadows at the edges, soft rounded storybook architecture with curled-paper roofs and glowing windows, cinematic Saturday-morning warmth, soft golden-hour light, gentle sparkle dust in the air, rich hand-painted texture --ar 16:9 --style raw --cref FERN_URL --cw 90
+```
+
+**Check:** eyes looking *at* the viewer (not off-frame), freckles present, puff buns fully in frame — if the crop cuts a bun, re-run with "head and shoulders, whole head in frame."
+
+## Frame 3 — Riding the number-cart through town
+
+*The tour: the cart rolls a path printed with big friendly numbers; the five town places pass in one joyful sweep.*
+
+```
+Fern, an 8-year-old cartoon girl, big round head and round cheeks, light freckles across her nose, huge amber-brown eyes with bright orange irises and a gentle kind smile, warm brown hair in two big round puff buns shaped like the rolled ends of a scroll, cream cable-knit sweater, coral overalls with rolled cuffs and brass buttons, butter-yellow scarf tied in a bow at her neck, a tiny brass scroll key-badge hanging on a dark cord at her chest, mint-green sneakers, holding a small rolled parchment scroll in one hand, riding in a small open wooden number-cart rolling along a cobbled path painted with big friendly golden numbers, waving as she passes a row of storybook town buildings: a library with a drawer popping open and a paper flying out, a bell tower with a swinging bell, a counting house where a friendly teal robot counts glowing tokens, a map room with a huge unrolling map, a post tower with a chute delivering a letter into a mailbox, lush painterly storybook illustration for a children's animated film, a whimsical town built inside a giant luminous golden scroll, parchment-gold glow, warm cream coral and butter palette with deep plum and teal shadows at the edges, soft rounded storybook architecture with curled-paper roofs and glowing windows, cinematic Saturday-morning warmth, soft golden-hour light, gentle sparkle dust in the air, rich hand-painted texture --ar 16:9 --style raw --cref FERN_URL --cw 90
+```
+
+**Check:** Fern recognizably herself at small scale (puffs + coral overalls read first), the numbers on the path are big and friendly, all five town places present even if simplified.
+
+## Frame 4 — The Post Tower sneeze
+
+*The mix-up, played gentle: a whole tower sneezes and the forms come down like soft snow. Fern is delighted, not scared.*
+
+```
+Fern, an 8-year-old cartoon girl, big round head and round cheeks, light freckles across her nose, huge amber-brown eyes with bright orange irises and a gentle kind smile, warm brown hair in two big round puff buns shaped like the rolled ends of a scroll, cream cable-knit sweater, coral overalls with rolled cuffs and brass buttons, butter-yellow scarf tied in a bow at her neck, a tiny brass scroll key-badge hanging on a dark cord at her chest, mint-green sneakers, holding a small rolled parchment scroll in one hand, wide joyful shot in a storybook town square, a tall whimsical post tower mid-sneeze with its roof wobbling like a hat, hundreds of paper forms fluttering down like big soft snowflakes, one permit stamped with a little red tomato landing in a birdbath, Fern laughing with delight and reaching toward the falling pages, nothing scary, everything gentle and funny, lush painterly storybook illustration for a children's animated film, a whimsical town built inside a giant luminous golden scroll, parchment-gold glow, warm cream coral and butter palette with deep plum and teal shadows at the edges, soft rounded storybook architecture with curled-paper roofs and glowing windows, cinematic Saturday-morning warmth, soft golden-hour light, gentle sparkle dust in the air, rich hand-painted texture --ar 16:9 --style raw --cref FERN_URL --cw 90
+```
+
+**Check:** Fern's expression is delight (mouth open in a laugh is right; fear is a re-roll), pages read as paper not confetti, the tomato stamp visible on at least the birdbath permit.
+
+## Frame 5 — The River of Pages (Ledger becomes a bridge)
+
+*The Transformers beat, in service of a neighbor: the counting-bot mid-transformation, cart becoming bridge over a river of loose pages, the crew watching.*
+
+```
+Fern, an 8-year-old cartoon girl, big round head and round cheeks, light freckles across her nose, huge amber-brown eyes with bright orange irises and a gentle kind smile, warm brown hair in two big round puff buns shaped like the rolled ends of a scroll, cream cable-knit sweater, coral overalls with rolled cuffs and brass buttons, butter-yellow scarf tied in a bow at her neck, a tiny brass scroll key-badge hanging on a dark cord at her chest, mint-green sneakers, holding a small rolled parchment scroll in one hand, standing at the edge of a valley where loose paper pages drift past like a slow wide river, beside her three small friends — a girl in a sky-blue cap holding a magnifier, a boy in a butter-yellow scarf hugging a stack of papers, a girl in a mint apron with big pockets — all watching a friendly teal counting robot with a token counter on its chest caught mid-transformation, unfolding from a rolling cart into a low arched bridge across the river of pages, one wheel still visible, everyone amazed and grateful, lush painterly storybook illustration for a children's animated film, a whimsical town built inside a giant luminous golden scroll, parchment-gold glow, warm cream coral and butter palette with deep plum an
+...[truncated 7370 chars]
 # Casting — Exocortexia
 
 Title: Casting — Exocortexia
