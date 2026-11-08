@@ -14,7 +14,7 @@ truth: artifacts-source.json beside this builder
 (build_artifacts_phext.py); never hand-edit the .phext.
 artifacts.phext is published to wbic16/human@exo.
 
-Artifacts inscribed: 10
+Artifacts inscribed: 11
 
 Index (coordinate — title — source):
 - 19.7.11/9.7.12/7.6.9 — Light the Next Light — intro song lyrics & time map — ~/workspace/exocortexia-cartoon/intro/LYRICS.md
@@ -27,6 +27,7 @@ Index (coordinate — title — source):
 - 21.7.10/8.6.11/7.6.9 — Scrolltown: The Great Form Mix-Up — cartoon script & treatment — ~/workspace/exocortexia-cartoon/SCRIPT.md
 - 23.7.8/9.7.12/8.6.9 — Shot List — Scrolltown Intro Video — ~/workspace/exocortexia-cartoon/intro/SHOT-LIST.md
 - 32.6.7/7.6.10/6.5.9 — Neovim + Phext — Design: Phext-Scale Navigation in a Modal Editor — ~/workspace/goals/neovim-phext-support-merge-ready-pr-compiled-with-phcc/files/neovim-phext-design.md
+- 33.6.9/8.6.11/7.5.9 — Desktop SSO for Phext Notepad — the cookie paste is gone — ~/workspace/phext-notepad-perf/REPORT-DESKTOP-SSO.md
 # Light the Next Light — intro song lyrics & time map
 
 Title: Light the Next Light — intro song lyrics & time map
@@ -1413,3 +1414,295 @@ don't have to guess and v2 doesn't relitigate silently:
 3. Should `:PhextGoto` accept the URL-encoded (`;`-separated) coordinate form
    libphext supports (`to_urlencoded`)? Cheap to add; only worth it if
    edit.phext.io links are expected to be pasted into Neovim.
+# Desktop SSO for Phext Notepad — the cookie paste is gone
+
+Title: Desktop SSO for Phext Notepad — the cookie paste is gone
+Source: ~/workspace/phext-notepad-perf/REPORT-DESKTOP-SSO.md
+Inscribed: 2026-11-08 07:47 CST
+SHA-256: be4f829aa1c40d07db17e55a585c8e54e0885704dfb9972ba4ce4d24e02a8b9c
+
+---
+# Desktop SSO for Phext Notepad — the cookie paste is gone
+
+Task 46.5.5/6.5.10/5.5.7 · 2026-11-08 · Status: **built, verified end to end,
+both branches pushed. Merge + deploy + arming are Will's acts** (runbook at
+the end).
+
+Track B's sign-in worked but asked the user to paste the `phext_session`
+cookie value out of the browser's developer tools once per 14 days. This
+build replaces that with phext-edit's own SSO machinery, shaped for a
+desktop app: the browser still does the provider sign-in, but it now
+redirects back to the app itself, and the app trades what it catches for a
+session — no paste, and no secret ever ships in the binary.
+
+## A note on the base branch (read first)
+
+The brief named lattice branch `emise/sso-exocortexia` @ 122ff68 as the
+base. **That branch no longer exists on the remote — it was merged into
+`exo` via PR #26** (merge commit eb450bc). Verified directly:
+`git merge-base --is-ancestor 122ff68e33d7 origin/exo` is true, so exo
+already carries the generalized allowlist this work composes with,
+content identical to the named base plus the merge. The new branch is
+therefore based on exo @ eb450bcd94230d6fe12ccaf9a01b5428421d1f8e rather
+than on a deleted ref. Nothing was rebased; the branch is a single commit
+directly on current exo.
+
+## The final flow
+
+1. **Probe.** Connect starts (after the stored-session reuse fails) with
+   `GET /api/auth/sso/desktop?return=http://127.0.0.1:8912/&state=<probe>`
+   and redirects off. **302 ⇒ armed** (desktop flow); **404 ⇒ unarmed or
+   an older server** (paste fallback, shown only then).
+2. **Catch.** The app binds a `LoopbackCatch`: a TCP listener on
+   `127.0.0.1` at an ephemeral port, and mints a per-attempt state nonce
+   (32 hex chars, SHA-256 over pid + wall clock + a process counter).
+3. **Browser.** The app opens the system browser at
+   `{server}/api/auth/sso/desktop?return={loopback URL}&state={nonce}`.
+   - Signed out there: the server 302s to `/?next=<this endpoint,
+     return+state preserved>` — the ordinary sign-in bounce — and after
+     the provider sign-in the browser lands back on the mint.
+   - Signed in: the server mints and 302s straight to the loopback
+     return with `?assertion=<sealed>&state=<nonce>`.
+4. **Land.** The catch ignores unrelated knocks (favicon, probes),
+   requires the landing's `state` to equal the attempt's nonce, answers
+   the browser with a small "you can close this tab" page, and hands the
+   assertion to the app.
+5. **Exchange.** The app POSTs `POST /api/auth/desktop/exchange` with
+   headers `x-phext-assertion` / `x-phext-state` (the gate's route layer
+   has no body channel; headers are how this API already carries the
+   CSRF credential). The server verifies, burns, checks the editors
+   list, and answers `200 {"session": <sealed phext_session>, "csrf":
+   <token>}`.
+6. **As before.** The client stores the returned pair in the same
+   owner-only 0600 session file, verifies via `GET /api/session`, learns
+   CSRF from it, and every Track B sync behavior proceeds unchanged
+   (SyncBook base hashes, conflict model, one-open-phext refusal).
+
+## The security argument
+
+- **No secret ships.** A web consumer can hold `PHEXT_SSO_SECRET`; a
+  distributed binary cannot — anything sealed inside it is public. So
+  the desktop audience never verifies anything app-side: the app is a
+  courier. The assertion is verified only by phext-edit, at the
+  exchange, under the SSO secret that never leaves the server. The one
+  server-side acceptance of an assertion is new and deliberate: the
+  desktop audience is the exception to "this server never accepts one
+  back," because the alternative (app-side verification) is the thing
+  that cannot be done safely.
+- **Single-use is enforced server-side.** Web audiences burned `jti`s
+  themselves. The exchange burns the desktop `jti` into an in-memory
+  set on the `Gate` (pruned by expiry on every burn, so it holds at
+  most one 120-second lifetime's worth of exchanges) *before* the
+  editor check: any verified presentation spends the assertion,
+  including a non-editor's — there is no probing with a spent token,
+  and replays answer the same flat 401 as every other failure (the
+  endpoint never says which check a bad assertion failed).
+- **Loopback validation is literal, not parsed.** `loopback_return`
+  admits exactly: scheme `http` (no CA certifies loopback; RFC 8252
+  native-app practice is plain http on the interface, which never
+  leaves the machine), host the literal `127.0.0.1` or `[::1]`
+  (**`localhost` is rejected** — a name is whatever the resolver and
+  the hosts file say it is, and the app binds the numeric loopback
+  anyway; `127.0.0.2` and shorthand forms are rejected too), an
+  explicit port 1–65535, and a plain-character path/query tail. No
+  userinfo, no fragment, no whitespace or non-ASCII, total length
+  capped so the value still fits the sign-in bounce's `next`. The
+  check runs **before any session handling** at the mint (a bad return
+  is a 400, never carried into the bounce) and again inside
+  `sso_assertion_desktop` at the moment of sealing, so no caller can
+  seal an unvalidated return.
+- **Arming is a flag, not a URL.** Web audiences arm by configuring a
+  target origin. The desktop audience has no fixed origin to configure
+  — inventing one (e.g. a `PHEXT_SSO_DESKTOP_URL`) would be a lie about
+  where assertions go. It is armed by `PHEXT_SSO_DESKTOP=1` alone (plus
+  the existing real SSO secret). Until then, both desktop endpoints
+  answer 404 — *before* any session handling, like every unconfigured
+  audience — which is also exactly the signal the app's fallback keys
+  on.
+- **The state nonce, and the honest residual.** The app generates a
+  fresh state per attempt; it travels in the mint request, rides
+  **sealed inside the assertion** (new optional `st` claim —
+  `skip_serializing_if` absent for web audiences, whose assertion bytes
+  are unchanged), is echoed on the redirect, and the exchange demands
+  it back and compares. The catch refuses a landing whose state is not
+  its own attempt's, so an assertion minted for a different attempt —
+  e.g. raced onto the listener by another local process — is detected,
+  not exchanged. A wrong-state exchange attempt does *not* burn the
+  assertion (it was never the attempt's exchange). Residual, stated
+  plainly (RFC 8252 has the same one): a same-user local process that
+  captures *both* the assertion and the state off the loopback redirect
+  inside its 120 seconds can race the exchange — but that process is
+  already inside the trust boundary the 0600 session file assumes, and
+  what it could win is the same session the file holds.
+- **Editor gate semantics mirror the web flow exactly.** The assertion
+  mints for any signed-in account (`sso_admits`, unchanged). At the
+  exchange, editors are checked **fresh against the current list** (not
+  the assertion's `editor` claim). A non-editor receives
+  `403 {"ok":false,"error":"This account is not on the editor list."}`
+  — the gate's own refusal sentence — with no credential in the body,
+  and the assertion is spent. The app's existing checks then also catch
+  a signed-in non-editor via `/api/session` as before.
+- **Session issuance is shared, not duplicated.** `Oauth::issue_session`
+  is factored out of the OAuth callback's `finish()` (fresh CSRF +
+  `SESSION_TTL` seal); the callback now calls it with unchanged
+  behavior, and the exchange calls the same helper. Sessions handed to
+  the app are ordinary sessions: the gate admits them, `/api/session`
+  reads them, logout/revocation semantics are the server's as ever.
+
+Routing note: the exchange takes its credential in headers because
+`Gate::route()` — shared with `uml6d_edit` — receives no request body;
+widening its signature for one endpoint was rejected. No changes to
+`phext_edit.rs` or `uml6d_edit.rs` were needed at all.
+
+## Files changed
+
+**wbic16/phext-lattice — branch `emise/sso-desktop` @ 65cb909d** (1 commit
+on exo eb450bc; +668/−12)
+
+- `src/oauth.rs` — everything: `PHEXT_SSO_DESKTOP` arming
+  (`Oauth::sso_desktop_ready`); `loopback_return` + `valid_state_nonce`;
+  optional `st` claim on `SsoAssertionBody`; `Oauth::sso_assertion_desktop`;
+  `Oauth::open_sso_assertion` (via an `open_with(secret)` refactor of
+  `open`); `Oauth::issue_session` factored from `finish()`;
+  `Gate::sso_desktop` mint handler (dispatched from `Gate::sso` ahead of
+  the target lookup); `Gate::desktop_exchange` + the pruned in-memory
+  burned-jti set; the exchange route arm. 10 new tests.
+- `deploy/deploy.md` — new "Desktop (Phext Notepad) single sign-on"
+  section in the style of the Exocortexia/Wishnode sections, plus a
+  one-line pointer from the Wishnode section.
+
+**wbic16/phext-notepad — branch `emise/desktop-sso` @ c83778ed** (1 commit
+on `emise/edit-sync` a9f604e7; +603/−53)
+
+- `native/core/src/sync.rs` — `EditClient::desktop_sso_url`,
+  `desktop_sso_probe` (302/404 → `DesktopSso`), `desktop_exchange`
+  (stores the returned session + CSRF on the client); `LoopbackCatch`
+  (bind / state / wait / serve); `new_state_nonce`; form encode/decode.
+  4 new tests. The module doc now describes the flow.
+- `native/app/src/main.rs` — `sync_connect` probes the desktop endpoint
+  when locked: armed → `desktop_sign_in` (catch on a thread, FLTK pumped
+  while waiting, exchange, session verify); unavailable → the pre-
+  existing paste block, moved verbatim into `paste_sign_in`. The shared
+  tail (editor refusal, session store, library pick, pull) is untouched.
+- `native/core/examples/sync_probe.rs` — new `desktop-login` command:
+  probe, mock-browser bounce/mint/landing legs, exchange, session print,
+  and `COOKIE`/`CSRF` lines for scripting.
+
+## Tests
+
+- **Lattice suite: 176 passed, 0 failed** (baseline 166 = 132 lib + 31
+  phext-edit bin + 3 integration; now 142 lib + 31 + 3). The 10 new:
+  loopback accept/reject table (incl. localhost, 127.0.0.2, https,
+  missing/zero port, userinfo, fragment); desktop mint carrying state;
+  signed-out bounce shape; bad return/state 400 before session work;
+  404-until-armed for both endpoints; exchange happy path (session
+  opens, CSRF matches, gate admits); burn/replay; wrong-state refused
+  without burning; tampered/expired/foreign-aud/garbage all 401;
+  non-editor 403 + spent.
+- **Notepad core: 33 passed, 0 failed** (29 baseline + 4 new: URL
+  encoding, nonce shape/distinctness, catch takes only its own
+  attempt's landing, catch refuses a foreign attempt's landing). The
+  FLTK app builds and links clean (needed the known VM workarounds:
+  `TAR_OPTIONS=--no-same-owner` for fltk-sys, and X11 dev symlinks for
+  libXinerama/libXcursor/libXfixes).
+- **Joint E2E: 27/27 legs passed** against the **real `phext-edit`
+  binary** built from `emise/sso-desktop` (three instances: armed+open
+  editors, unarmed, armed+restrictive editors) and the **real
+  `sync_probe`**. Harness: `~/workspace/desktop-sso/e2e/run_e2e.sh`
+  (rerunnable; per-leg `LEG-PASS/FAIL` lines).
+  - Desktop flow via the probe: probe-armed, signed-out bounce,
+    mint redirect to the loopback, landing 200, exchange session
+    identity (`github:424242`, editor), credentials yielded.
+  - Round trip **on the exchanged session only**: open → update →
+    save → fetch reads it back → **persisted in the on-disk phext** →
+    pull (pulled=1) → local edit → push (pushed=1, saved=true) →
+    fetch verifies the pushed text.
+  - HTTP negatives (curl): mint, exchange 200, **replay 401, tamper
+    401, wrong-state 401, localhost return 400, https return 400,
+    unknown audience 404**.
+  - Unarmed instance: mint 404, exchange 404, probe prints
+    `PROBE unavailable` (the fallback signal the app keys on).
+  - Non-editor instance: exchange **403** with the exact refusal text,
+    **no `session` in the body**, second presentation **401** (spent).
+
+### Which legs are harness-driven vs human-only
+
+Harness-driven (all passing above): everything from the sign-in bounce
+onward — mint, loopback, exchange, session use, sync round trip, and all
+negatives — against unmodified server code from the branch.
+
+Human-only, by necessity (same honest limit as Track B): **the provider
+credential leg**. The local server's GitHub OAuth is configured with
+dummy credentials, so a real GitHub sign-in cannot complete here; the
+harness mints a `phext_session` cookie with the harness session secret,
+sealed byte-for-byte as the server seals (verified: the server reads it
+as `github:424242`, editor), and the mock browser presents it where a
+signed-in browser would present its own. In production the browser's
+cookie comes from Will's real sign-in; nothing downstream of that point
+differs.
+
+## Landing state
+
+Both branches were pushed from aletheia-core over SSH as wbic16, each
+parented on its stated base's fresh remote HEAD (verified on fresh
+clones on the node immediately before pushing), force disabled, and
+both refs re-verified through the GitHub API afterwards:
+
+- `wbic16/phext-lattice` `emise/sso-desktop` = `65cb909dbfcc9dfb38d94e56e0f48da69e2dc3eb`
+- `wbic16/phext-notepad` `emise/desktop-sso` = `c83778ed55129f43d91fcfa5ce622ca82508e6d1`
+
+Merge-order note: `emise/drop-token-footer-cleanup` @ ca6495ce (token
+removal + footer) is also based on exo eb450bc and does not touch the SSO
+endpoints; `emise/sso-desktop` does not touch the token path or the shell
+footer. The two branches are independent — either merge order works; any
+overlap is confined to `src/oauth.rs` regions they do not share (the
+drop-token work removes token plumbing; this work adds desktop arming,
+handlers, and tests).
+
+## Will's runbook
+
+1. **Merge the lattice side.** Merge `emise/sso-exocortexia` is already
+   in exo (PR #26) — nothing to do there. Merge `emise/sso-desktop`
+   into exo, and `emise/drop-token-footer-cleanup` in whichever order
+   you prefer (see the merge-order note).
+2. **Deploy phext-edit** from the merged exo as usual
+   (`deploy/deploy.sh` on the edit.phext.io host).
+3. **Arm the audience.** Add one line to `/etc/phext-edit/oauth.env`:
+   `PHEXT_SSO_DESKTOP=1` (`PHEXT_SSO_SECRET` is already there — no new
+   secret) and restart phext-edit.
+4. **Verify arming:**
+   `curl -s -o /dev/null -w '%{http_code}' 'https://edit.phext.io/api/auth/sso/desktop?return=http://127.0.0.1:8912/&state=attempt-state-0123456789'`
+   → **302** (toward `/?next=…` while logged out). 404 = the line or the
+   restart didn't take; 400 = the check URL is malformed.
+5. **Merge the notepad side.** Merge `emise/desktop-sso` (it sits on
+   `emise/edit-sync`; that stack's merges are yours in whatever order
+   you've planned) and use a notepad build from it. First Connect
+   against the armed server runs the automated flow; against anything
+   else it still offers the paste, so nothing strands if arming lags
+   the app or vice versa.
+
+## Open residuals
+
+- **The provider leg is untested locally** (see above) — the first real
+  sign-in on the deployed server is the true end-to-end test of the
+  bounce with a live GitHub/Google/X session. All server-side legs
+  after that point are covered.
+- **Burned-jti state is per-process memory.** A phext-edit restart
+  forgets spent jtis; a replayed assertion would still need to arrive
+  inside its 120-second life *and* win the race against the restart —
+  the same posture as the server's other in-memory auth state (rate
+  limiter, pending sign-ins). If phext-edit ever runs multi-process,
+  the burn set needs to move to shared state first.
+- **The app's wait is 5 minutes** (catch deadline); a user who starts
+  sign-in and wanders off gets a clean "sign-in timed out" and can
+  retry. The listener dies with the attempt either way.
+- **The exchange answers with the session in a JSON body** — by design,
+  only over the authenticated exchange itself, never logged server-side
+  (the handler logs nothing), and the app treats it exactly like the
+  pasted cookie (0600 store). Anyone who preferred the cookie never
+  exist outside a `Set-Cookie` header should weigh that this is a
+  loopback-and-TLS API call the app itself initiates, equivalent in
+  exposure to the paste it replaces.
+- Windows/macOS builds of the notepad remain Will's to verify (the app
+  change is platform-neutral Rust + the existing `open_url`; the catch
+  binds `127.0.0.1`, which the server's validator admits on every OS).
