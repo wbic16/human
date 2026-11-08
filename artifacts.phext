@@ -142,8 +142,8 @@ First episode is a mix-up at the post tower: no villains, just a sneeze, a lost 
 
 Title: Fern — Character Bio (Scrolltown)
 Source: ~/workspace/exocortexia-cartoon/FERN-BIO.md
-Inscribed: 2026-11-07 23:56 CST
-SHA-256: 917b9169091fa96ffd9628ca4b004f3089dbb0c254578c54eeeccc8724a2d79d
+Inscribed: 2026-11-07 23:57 CST
+SHA-256: 9f3a085965833969420fcbaf8da6a03adbf2e79acc6372cdcb7ed2918a8f23c9
 
 ---
 # Fern — Character Bio (Scrolltown)
@@ -168,7 +168,7 @@ Her name is the quiet thesis of the show: a fiddlehead fern unfurls the way a sc
 
 Episode 1 was audited under this rule on 2026-11-07: of her 31 lines, 17 were already clean, 7 were rewritten into compliance (meaning, warmth, and teaching unchanged), and 7 stand flagged for Will's word — the blockers are his own coinage "Scrolltown" (the town's name, twice), the cast names Wren, Theo, Bea, and Mrs. Hen, and one badge-check line where Mrs. Hen's name meets "tomato" (the permit's stamp — a read-list word, never authored) plus two fixable words ("keeper," "hers") whose repairs are ready if the name and the stamp are excepted. Both of her catchphrases pass clean, word for word: "We never peek. It's not our house." and "The scroll is yours, neighbor. See you tomorrow."
 
-**Her sound.** Will picked the catalog voice **Heroic Bugle** — bright, curious — on 2026-11-07. Speed is still his to choose among the 90/100/110/120 auditions.
+**Her sound.** Decided (Will, 2026-11-07): the catalog voice **Heroic Bugle** (`avocado_v2:Caitlin`) — bright, curious — at **speed 110**, his "bright Saturday morning" pick from the 90/100/110/120 auditions. Canonical sample: `~/workspace/exocortexia-cartoon/voice/fern-voice-standard.mp3`.
 
 ## Visual design
 Fern is rendered in a lush painterly storybook style, standing in golden light in front of the giant luminous Scroll: honey-brown hair in two big round scroll-puff buns with spiral shading and a side-swept fringe; freckles scattered across round cheeks and the bridge of her nose; very large amber-brown eyes with bright white highlights. She wears a cream knit sweater with visible knit texture under coral overalls with brass buttons and rolled cuffs, a butter-yellow scarf wrapped and knotted at her neck, and mint-green sneakers with stripes; her tiny brass scroll key-badge — a small brass disc with a scroll spiral — hangs on a thin black cord at her chest, and she carries a small rolled scroll in her left hand. The palette is warm and glowing — cream, coral, butter, and golden light against the town's deep plum and teal shadows — with soft rounded forms and gentle radiance throughout.
@@ -349,8 +349,8 @@ Fern, an 8-year-old cartoon girl, big round head and round cheeks, light freckle
 
 Title: Casting — Scrolltown
 Source: ~/workspace/exocortexia-cartoon/CASTING.md
-Inscribed: 2026-11-07 23:56 CST
-SHA-256: 3c87f7e12a48d796a31e7a775f490164e263c0eb562b068f36d3eddea47cedc1
+Inscribed: 2026-11-07 23:57 CST
+SHA-256: cca8c0afe297a25aeab54f7263e6de3c59e003d1f085693663617d66f6f420b6
 
 ---
 # Casting — Scrolltown (Will's ruling, 2026-11-07 23:01 CST)
@@ -374,7 +374,7 @@ Episode 1 ("The Great Form Mix-Up") was delivered before this ruling and stands 
 ## Fern's voice (Will's ruling, 2026-11-07 23:50 CST)
 - **Fern speaks Singular exclusively**: only words from Will's Twitter archive, Write mode (the 19,094 words he authored); the Singular checker is the test, and a line that cannot comply is flagged to Will — never improvised around. Full statement of the rule: FERN-BIO.md, "Voice."
 - Episode 1 audited the same evening: 17 of her 31 lines clean as written, 7 repaired into compliance (applied to the artifact and SCRIPT.md), 7 flagged for Will — blockers: "Scrolltown" (his coinage, ×2 lines), the cast names Wren, Theo, Bea, Mrs. Hen (×2 lines), and the badge-check line (Mrs. Hen's name + "tomato," with ready fixes for "keeper" and "hers"). Both catchphrases pass clean.
-- **Sound**: Will picked the catalog voice "Heroic Bugle" (bright, curious) the same evening; his speed pick among the 90/100/110/120 auditions is still open.
+- **Sound**: decided (Will, 2026-11-07) — catalog voice "Heroic Bugle" (`avocado_v2:Caitlin`), bright and curious, at **speed 110** ("bright Saturday morning"), picked from the 90/100/110/120 auditions. Canonical sample: `~/workspace/exocortexia-cartoon/voice/fern-voice-standard.mp3`.
 
 ## Show naming (Will's ruling, 2026-11-07 23:37 CST)
 - The show is renamed **Scrolltown** — Episode 1 is "Scrolltown: The Great Form Mix-Up"; the town Fern lives in, inside the Great Scroll, is Scrolltown. Renamed to keep the show separate from the Statewide systems template project (the five-app civic suite), which keeps the name **Exocortexia**.
