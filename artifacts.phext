@@ -14,7 +14,7 @@ truth: artifacts-source.json beside this builder
 (build_artifacts_phext.py); never hand-edit the .phext.
 artifacts.phext is published to wbic16/human@exo.
 
-Artifacts inscribed: 9
+Artifacts inscribed: 10
 
 Index (coordinate — title — source):
 - 19.7.11/9.7.12/7.6.9 — Light the Next Light — intro song lyrics & time map — ~/workspace/exocortexia-cartoon/intro/LYRICS.md
@@ -26,6 +26,7 @@ Index (coordinate — title — source):
 - 21.7.9/9.7.11/7.7.8 — Scrolltown — Six-Year Story Arc (2027–2032) — ~/workspace/scrolltown-reorg/stage/STORY-ARC.md
 - 21.7.10/8.6.11/7.6.9 — Scrolltown: The Great Form Mix-Up — cartoon script & treatment — ~/workspace/exocortexia-cartoon/SCRIPT.md
 - 23.7.8/9.7.12/8.6.9 — Shot List — Scrolltown Intro Video — ~/workspace/exocortexia-cartoon/intro/SHOT-LIST.md
+- 32.6.7/7.6.10/6.5.9 — Neovim + Phext — Design: Phext-Scale Navigation in a Modal Editor — ~/workspace/goals/neovim-phext-support-merge-ready-pr-compiled-with-phcc/files/neovim-phext-design.md
 # Light the Next Light — intro song lyrics & time map
 
 Title: Light the Next Light — intro song lyrics & time map
@@ -896,3 +897,519 @@ Style for every frame: flat warm storybook animation, soft rounded shapes, Satur
 - Year markers sit still, lower corner, warm cream type — no other on-screen text except the end cards and title.
 - **Craft law check at assembly:** scrub the cut — no lit node, window, or light ever goes dark again across the whole 90 seconds.
 - Deliverables: `intro-video.mp4` (master, silent — the Suno render drops onto this map), `intro-video-small.mp4` (download encode), `intro-video-guide.mp4` (master + synthesized pad guide track, labeled GUIDE ONLY).
+# Neovim + Phext — Design: Phext-Scale Navigation in a Modal Editor
+
+Title: Neovim + Phext — Design: Phext-Scale Navigation in a Modal Editor
+Source: ~/workspace/goals/neovim-phext-support-merge-ready-pr-compiled-with-phcc/files/neovim-phext-design.md
+Inscribed: 2026-11-08 00:40 CST
+SHA-256: 90f44026735b51f25cca430ae0f46a133701011ca39d62202c1601bb86e95045
+
+---
+# Neovim + Phext — Design: Phext-Scale Navigation in a Modal Editor
+
+Task coordinate: **33.5.9/7.5.9/5.5.8** · Audit C (seams + navigation design) · 2026-11-08
+Status: **design / research only.** No code changed, nothing pushed.
+Scope of this document: the least invasive seam in Neovim, and — as the heart of the
+work — a concrete, implementable account of what navigation *means* when the document
+is not a list of lines or a tree of files, but a sparse 9-dimensional lattice of scrolls.
+
+---
+
+## 0. Recommendation in one paragraph
+
+Ship phext support as a **pure runtime/Lua plugin shipped in-tree in the fork**
+(`wbic16/neovim`), with **zero C changes**: a filetype hook, one Lua module set under
+`runtime/lua/nvim/phext/`, an `ftplugin`, help text, and functional tests. The primary
+buffer model is **scroll-as-buffer**: the `.phext` file on disk stays the single
+canonical byte stream; opening it builds a sparse coordinate index once, and the user
+edits **one scroll at a time in a normal Neovim buffer** whose bytes contain no phext
+delimiters at all. A separate read-only outline (TOC) buffer is the
+whole-phext view. This is the only model that simultaneously (a) preserves Neovim's
+buffer/undo/motion machinery unchanged, (b) makes a byte-identical no-op save
+achievable, and (c) matches Neovim's own stated contribution norm — *"New functionality
+should generally be implemented in Lua, not C"* (`CONTRIBUTING.md`, Developer
+guidelines, verified 2026-11-08) — and its architecture guidance that plugins are
+*"the correct model for non-essential functionality which … the user may disable or
+replace"* (`:help dev-arch`, "Lua code" section).
+
+---
+
+## 1. Sources, and what to distrust in them
+
+| Source | What was taken from it | Caveat |
+|---|---|---|
+| Phext Notepad perf pass, task 28.6.11/8.7.12/6.6.9 (`~/workspace/phext-notepad-perf/REPORT.md`, branch `emise/perf-sparse-load`) | Measured costs, the fixed parser/serializer, round-trip receipts | Native-core numbers are measured; WinForms numbers are code-derived estimates only |
+| Phext Notepad native core (`native/core/src/{nav,zoom,document,parse}.rs`, PR #4 tree) | The reference navigation semantics: dimension steps, three zoom arms, outline model | This — not any web editor — is the reference spec for editor semantics |
+| phext-lattice `src/navigator.rs`, `src/coordinate_ext.rs`, `src/index.rs` | `Navigator` (position + active dimension + marks + history), `CoordinateNav`, `LatticeIndex` (sparse coordinate → byte-span map) | **Local copy is stale and is not a git repo** (standing note in `TOOLS.md`, 2026-11-07: 14 files differ from `wbic16/phext-lattice@exo`). Semantics below were cross-checked against the Notepad `nav.rs`, whose header states it was copied from lattice at exo commit `7c91992`. Anything lattice-only should be re-verified against the remote before implementation |
+| libphext-rs 0.4.0 (`~/workspace/libphext-0.4/libphext-rs/src/phext.rs`) + `~/workspace/phext/parse_phext.py` | The format definition: delimiter bytes, coordinate arithmetic, API surface | Local lattice code still references `COORDINATE_MAXIMUM`; libphext 0.4.0 removed the 999 cap (see §3.3) — do not copy the cap |
+| Neovim upstream `CONTRIBUTING.md` + `:help dev-arch` (fetched 2026-11-08) | Contribution norms, Lua placement rules, PR requirements | Upstream moves; rebase step must re-check both before the PR is opened |
+
+---
+
+## 2. What the Phext Notepad POC already proved
+
+The POC was not a toy demo; it settled the editor semantics this design inherits
+verbatim. Re-deriving them inside Neovim would be re-exploration, not design.
+
+### 2.1 The unit is the scroll
+
+A phext document is stored as a sparse map — native core:
+`BTreeMap<Coordinate, String>`; WinForms: nested `SortedDictionary`s containing only
+occupied keys. **Neither app materialises the address-space grid.** Editing, viewing,
+and saving are all operations *on one scroll in the context of an index over the
+others*. That is the single most important inheritance: any Neovim design whose cost
+is proportional to the coordinate *space* (e.g. 350,202 slots spanned by `agi.phext`,
+or a 999-cube spine) instead of the occupied *scrolls* (~7,281 in `agi.phext`) is
+wrong by construction.
+
+### 2.2 The measured perf lessons (agi.phext, 1.47 MB, 7,281 scrolls)
+
+| Operation | Before | After | Lesson for Neovim |
+|---|---|---|---|
+| Load | 2,949 ms | **10 ms (~285×)** | The cost was libphext 0.3.1's quadratic `explode`/`phokenize` (re-copies the remaining buffer per scroll, ≈5 GB copied). Fix: **one single-pass delimiter walk** that slices text runs out of the input. Parsing is O(file bytes), once |
+| Per-keystroke edit (`set_scroll`) | 8.7 ms | **0.09 ms** | Before: full serialisation on every keystroke. Rule: **no whole-document work on the edit path, ever** — an edit updates one scroll's delta (word/byte totals incrementally) |
+| Jump to 26.8.14/10.9.13/10.8.10 + view | 4.2 ms | **0.005 ms** | A jump is an index lookup (hash map / binary search over the ordered occupied list), never a scan |
+| `view()` (status/outline) | 4.9–9.6 ms | 0.03–1.1 ms | Outline is **cached, keyed by (revision, zoom, coordinate)**; revision bumps only on scroll mutation. Status rendering must never rescan the document |
+| Save (`serialize`) | 7.0 ms | **2.2 ms** | Serialisation walks the occupied map in coordinate order emitting break runs into a preallocated buffer — no cloned intermediate map |
+| Round-trip | — | **byte-identical** on agi.phext, singular.phext, CYOA (4.6 MB) | `serialize(original) == original bytes` is a testable invariant, asserted against real files, with libphext `explode`/`implode` as the reference oracle |
+
+Two honest limits from the same report, carried into this design:
+
+- A single huge scroll is its own floor: singular.phext's 276 KB home scroll keeps
+  view/edit cost proportional to *that scroll*, not the document. Neovim inherits
+  this too — and is actually well placed for it, since a 276 KB buffer is ordinary.
+- The WinForms outline still materialises all 42,451 tree nodes at load. The Neovim
+  outline must be **lazy / scoped** (§6.4), not a fully expanded tree.
+
+### 2.3 The navigation semantics the POC + lattice converged on
+
+From lattice `Navigator` / `CoordinateNav` and Notepad `nav.rs` / `zoom.rs` —
+identical in both, which is why they count as proven:
+
+1. **Dimension step with reset.** Stepping a dimension increments (or decrements) it
+   and **resets every lower dimension to 1** — exactly what the corresponding
+   delimiter byte does when parsing. `navigate_forward(Chapter)` from
+   `…/3.5.7` lands on `…/4.1.1`. Backward steps exist (libphext itself has none;
+   the editors added them) and clamp at the floor of 1.
+2. **Active dimension.** The cursor carries a *selected dimension* (Scroll by
+   default; keys 1–9 select Scroll…Library). Generic forward/back motion applies
+   to the active dimension. This is what makes 9 axes tractable with two keys.
+3. **Populated navigation.** `next_populated` / `prev_populated` jump to the
+   next/previous **occupied** coordinate in document order, via binary search over
+   the ordered occupied list in `LatticeIndex`. Empty space is skipped by the
+   index, never traversed.
+4. **Marks + history.** A mark stack and a back/forward history (capped, forward
+   truncated on a fresh jump) sit beside the position. Coordinate jumps are
+   history events, like file jumps in Vim.
+5. **Three zoom arms.** The outline is never a 9-level tree at once. It shows one
+   arm at a time — Outer (11D: library.shelf.series), Middle (7D:
+   collection.volume.book, scoped to the current Z arm), Inner (4D:
+   chapter.section.scroll, scoped to the current Z+Y arms) — with breadcrumbs for
+   the arms above. Zooming changes the outline and the coordinate bar together.
+6. **Outline nodes are populated-only**, grouped by the arm's three dimensions;
+   activating a group node goes to the cursor's scroll if it is inside the group,
+   otherwise to the group's first populated scroll; each leaf shows a one-line
+   preview and a scroll count.
+
+---
+
+## 3. libphext: what a Neovim integration can actually call
+
+### 3.1 Format ground truth (distilled from the definition, all sources agree)
+
+- 9 addressing dimensions + 2D text per scroll = 11D. Coordinate string:
+  `library.shelf.series/collection.volume.book/chapter.section.scroll`,
+  1-indexed, components never below 1, **internal to one phext** (the same
+  coordinate in another file is a different scroll).
+- Delimiter bytes, highest → lowest: Library `0x01`, Shelf `0x1F`, Series `0x1E`,
+  Collection `0x1D`, Volume `0x1C`, Book `0x1A`, Chapter `0x19`, Section `0x18`,
+  Scroll `0x17`. (`0x1B` is *not* a break.) A delimiter increments its dimension
+  and resets all lower dimensions to 1.
+- Delimiters are ASCII control bytes, therefore a conforming phext is valid UTF-8
+  as a whole byte stream. Scroll text itself is ordinary text (may contain `\n`).
+
+### 3.2 API surface — the decisive constraint
+
+libphext is **Rust only**. The 0.4.0 crate (`phext.rs`, ~1,300 lines) exposes, as
+plain Rust functions over `&str`/`String`: `explode` → `HashMap<Coordinate,String>`,
+`implode`, `fetch`, `replace`, `insert`, `remove`, `range_replace`, `offset`,
+`next_scroll`, `index`, `manifest`, `to_coordinate`, and the nine `*_break()`
+methods on `Coordinate`. Verification performed for this audit:
+
+- **No C ABI exists.** No `extern "C"`, no `#[no_mangle]`, no cbindgen, no
+  `crate-type = ["cdylib"]` in the crate — grep over `src/` and `Cargo.toml` is
+  empty on all of them. Neovim (a C program) cannot link libphext today.
+- The other family members do not change this: `libphext-cpp` is a separate C++
+  string library (`trs_string.h`), not a C ABI over the Rust reference; the Python
+  port exists as `phext` on PyPI and locally as the dead-reckoning
+  `~/workspace/phext/parse_phext.py` (a ~50-line delimiter walk).
+- Building a C ABI for libphext is a *libphext* project (new crate surface, ABI
+  stability promise, and it collides with the standing freeze: no libphext version
+  bumps/revisions until Will publishes). It is explicitly **out of scope** (§9).
+
+**Consequence:** phext parsing inside Neovim must be a **vendored port of the
+delimiter walk in Lua** — which is cheap precisely because the algorithm is tiny
+and already exists in three independent implementations that agree byte-for-byte
+(Rust `phext.rs`, Python `parse_phext.py`, and the Notepad's fixed `parse.rs`).
+The Lua port's correctness bar is not "looks right"; it is the Notepad test
+pattern: port output ≡ libphext `explode`/`implode` output on generated documents
+and on the real corpora (agi, singular, CYOA), enforced by golden files generated
+from libphext offline (§8).
+
+A second consequence, in Neovim's favour: because the delimiter walk only needs
+*bytes*, and Lua strings are byte strings, the port is a straightforward loop over
+`string.byte`. The one place bytes must **not** go is into a Neovim buffer as raw
+file content — buffers are line-oriented, cannot faithfully hold the control-byte
+stream as editable text (NUL handling alone breaks byte identity), and would make
+every delimiter user-editable. That is the technical root of the buffer model in §5.
+
+### 3.3 Do not import stale limits
+
+Local lattice `coordinate_ext.rs` clamps dimensions to `COORDINATE_MAXIMUM` (999).
+That constant was **removed in libphext 0.4.0**: navigation no longer refuses at
+999 and `set_dimension` clamps only at the floor of 1 (per the 0.4.0 bump record,
+2026-11-05). The Neovim port must impose **no upper bound** — coordinates above
+999 are legal addresses. Likewise, lattice `LatticeIndex::build` silently drops
+zero-length spans; §5.3 defines what "occupied" means for Neovim instead of
+inheriting that accident.
+
+---
+
+## 4. Neovim seams, argued from Neovim's own norms
+
+### 4.1 The relevant architecture (upstream, current)
+
+- **Buffer model.** A buffer (`buf_T`, memline-backed) is a list of lines.
+  Everything user-facing — undo, marks, jumplist, quickfix, folds, extmarks,
+  virtual text, treesitter — is built on that line model, per buffer. There is no
+  core concept of a "document made of addressed fragments."
+- **Filetype system.** Detection lives in `runtime/lua/vim/filetype.lua`;
+  per-filetype behaviour lives in `runtime/ftplugin/<ft>.lua|vim`. Note the
+  friction recorded in `CONTRIBUTING.md`: filetype *detection* parity with Vim is
+  maintained, and detection changes "should be submitted to Vim first." A
+  `*.phext` detection entry is the one file in this design with an upstream-process
+  cost attached (§4.3).
+- **Lua API.** Everything the design needs already exists: `nvim_buf_*` (create,
+  set lines, attach for change events), `nvim_create_user_command`,
+  `vim.keymap.set` (buffer-local), custom completion via
+  `customlist`, marks (`nvim_buf_set_mark`), the jumplist (any cursor jump via
+  `nvim_win_set_cursor` after a `normal! m'`-style mark, or explicit
+  `:set jumplist`), quickfix (`setqflist` with `bufnr`/`lnum`/`module`/`text`),
+  extmarks + virtual text (`nvim_buf_set_extmark`, for empty-scroll placeholders
+  and delimiter-adjacent annotations), `vim.ui.select`/`vim.fn.input` for prompts,
+  and floating/split windows for the outline. Telescope-style pickers are
+  **plugins, not core** — v1 must not depend on one; `vim.ui.select` is the
+  core-sanctioned seam a picker can later override.
+- **Treesitter** is a per-buffer, per-language layer. A phext grammar is possible
+  in principle (delimiters as structure) but is a separate project (§9).
+- **Plugin placement.** `:help dev-arch` is explicit: plugins are the correct
+  model for non-essential, disablable, user-facing functionality; opt-out plugins
+  live in `runtime/plugin/`, opt-in in `runtime/pack/dist/opt/`, and *"new plugins
+  should place Lua modules in the shared `nvim` namespace:
+  `require('nvim.foo')`"* (spellfile, tutor are the cited good examples).
+
+### 4.2 The three candidate seams
+
+| Seam | What it is | Verdict |
+|---|---|---|
+| **(a) Pure runtime/Lua plugin in-tree** | `runtime/plugin/phext.lua` (opt-out, guarded by `g:loaded_phext`), modules at `runtime/lua/nvim/phext/*.lua`, `runtime/ftplugin/phext.lua`, one filetype-detection entry, `runtime/doc/phext.txt`, functional tests | **Recommended.** Zero C, zero new API surface, fully disablable (`--clean`, `g:loaded_phext`), replayable as a single squashed patch onto upstream HEAD, and testable with Neovim's existing functional-test harness. It is also the only seam under which "compile with phcc" stays a pure *acceptance test of phcc on a large C codebase* instead of a porting project |
+| (b) Small C core change | e.g. a phext-aware buffer type, delimiter hiding in the display layer, or a C delimiter-walk exposed to Lua | **Refused for v1.** Contradicts CONTRIBUTING's Lua-first rule; every C line is review, sanitizer, and phcc risk bought to solve a problem Lua already solves (the walk is ~50 lines and runs once per open). The one thing C could buy — raw-file editing with delimiters rendered invisibly — is a *worse* editing model (§5.2), not a missing capability |
+| (c) External plugin repo only (`phext.nvim`) | Same Lua, shipped outside the fork | Right *long-term home* if upstream declines in-tree runtime, and the correct first step if the goal were an upstream `neovim/neovim` PR (maintainers routinely ask new functionality to prove itself as a plugin first). But the task's deliverable is a merge-ready PR **to `wbic16/neovim`** that stays in sync with upstream — an in-tree runtime plugin in the fork satisfies that directly, keeps PATCHES.md honest (one replayable commit), and can be extracted to (c) mechanically later because it touches no core files except filetype detection |
+
+### 4.3 Staying in sync with upstream — the patch shape
+
+Per the fork-patch discipline (squash → rebase onto fresh upstream HEAD →
+PATCHES.md carries the whole reasoning):
+
+- **One squashed commit** on top of upstream `master`, containing only:
+  `runtime/plugin/phext.lua`, `runtime/lua/nvim/phext/{init,coord,index,navigate,outline,search}.lua`,
+  `runtime/ftplugin/phext.lua`, `runtime/doc/phext.txt`,
+  `test/functional/plugin/phext_spec.lua`, fixtures under
+  `test/functional/fixtures/phext/`, and the filetype entry.
+- **PATCHES.md entry** records: why no C, the libphext-no-C-ABI finding, the
+  delimiter table, the buffer model, and the golden-corpus provenance — so a
+  future rebaser can reconstruct the reasoning without the commit archaeology.
+- **Known rebase friction, named in advance:** (i) `runtime/lua/vim/filetype.lua`
+  is the only upstream-hot file — keep the hunk to the single `phext` pattern
+  entry so conflicts are trivial; if upstream review balks at the Vim-first
+  detection rule, the fallback is detection from `runtime/plugin/phext.lua` via
+  a `BufRead,BufNewFile *.phext` autocmd, which touches *no* upstream file at
+  the cost of slightly later detection. Decide at rebase time, not before.
+  (ii) `runtime/doc/tags` / generated docs — regenerate with `make doc`, never
+  hand-merge.
+- **PR hygiene per CONTRIBUTING:** conventional-commit title
+  (`feat(runtime): phext scroll navigation`), Problem/Solution body, tests
+  included, no cosmetic changes to unrelated files, Draft until Will has
+  reviewed the AI-assisted code himself (upstream's AI-work section is strict;
+  the fork PR should hold itself to the same bar).
+
+---
+
+## 5. The primary buffer model: scroll-as-buffer
+
+### 5.1 The model
+
+- The **`.phext` file is the only truth**: one byte stream on disk, owned by the
+  plugin's per-file session state (index + original bytes + revision counter),
+  *not* by any single buffer.
+- **Opening a `.phext` file** runs the single-pass walk once, builds the sparse
+  index (ordered occupied list + coordinate→span map), and displays the scroll at
+  the starting coordinate (1.1.1/1.1.1/1.1.1, or the coordinate restored from
+  shada/session if present) in a normal listed buffer with
+  `buftype=acwrite`, `filetype=phext`, buffer name `phext://<path>@<coordinate>`.
+  The buffer's lines are exactly that scroll's text. **No delimiter byte ever
+  enters a buffer.**
+- **Navigating** swaps the buffer's content to the target scroll (after the
+  usual modified-check), updates the coordinate state, pushes jumplist +
+  phext history, and records the previous scroll's cursor position as a
+  buffer-local mark so returning restores the in-scroll cursor, not just the
+  scroll. One buffer per *file*, reused across scrolls — not one buffer per
+  scroll (7,281 buffers would fight `:ls`, shada, and the user's mental model;
+  the Notepad POC likewise has one document view, not one window per scroll).
+- **The whole-phext view is a different buffer kind**: the read-only outline
+  (§6.4). There is no mode in which the user edits the phext "as a whole."
+
+### 5.2 Why not whole-phext-as-buffer (the obvious alternative)
+
+Loading the raw file into one buffer and hiding delimiters with conceal/extmarks
+fails on Neovim's own invariants, not on taste:
+
+1. **Byte identity is unrecoverable.** Buffers normalise line endings, cannot
+   represent arbitrary control bytes as stable editable text, and treat the
+   stream as lines — but phext structure is *not* line structure: a scroll break
+   and a newline are different bytes with different meanings, and a scroll may
+   contain zero or thousands of newlines. Any edit distance in buffer space does
+   not map back to a unique byte stream.
+2. **Delimiters become user-editable**, violating the central invariant (§7):
+   deleting a concealed `0x17` would silently merge two scrolls and renumber
+   nothing — the worst failure mode an addressed format can have.
+3. **Cost returns to O(document) per keystroke** — the exact POC bug (full
+   serialisation per `set_scroll`) reappears as full-buffer change events.
+4. Undo, search, and folds would operate across scroll boundaries, so "undo"
+   could resurrect a delimiter edit the user never knowingly made.
+
+Buffer-of-buffers (one real buffer per occupied scroll, file as a buffer list)
+was the runner-up: it keeps per-scroll undo naturally, but multiplies buffer
+lifecycle, window, and shada complexity by the scroll count and still needs the
+same index + serialiser. It is a possible v2 for split-view editing of two
+scrolls side by side (§9 notes the seam); it is not the v1 primary model.
+
+### 5.3 Definitions the model depends on
+
+- **Occupied** = a coordinate whose span between its delimiters contains at
+  least one byte. Zero-length spans (consecutive delimiters) are *address
+  space*, not scrolls — matching the POC, which filtered empties out of
+  `explode`. Consequence, stated plainly: **emptying a scroll and saving deletes
+  that scroll.** `:PhextDelete` is therefore sugar over "clear + save," and the
+  docs say so. (Preserving user-created *empty* scrolls would require a sidecar
+  or non-canonical bytes; refused for v1, §9.)
+- **Gaps are reconstructed, not stored.** Serialisation emits exactly the break
+  runs needed to walk from the previous occupied coordinate to the next
+  (the Notepad `parse::serialize` / libphext `implode` behaviour, whose bulk
+  form — advancing a dimension by *k* emits the same bytes as *k* single
+  breaks, because the first break resets lower dimensions — is what the Lua
+  port must replicate and the golden tests must pin).
+- **Unchanged ⇒ byte-identical.** If the session revision is 0, `:write` is a
+  no-op that does not touch the file (mtime preserved). If scrolls changed, the
+  serialiser rebuilds the stream from (original gaps + current occupied map);
+  the test suite asserts `sha256(save(load(f))) == sha256(f)` for unmodified
+  opens of every corpus file, and exact expected bytes for single-scroll edits
+  (the mutation control: one scroll edited ⇒ only its span's bytes differ).
+
+---
+
+## 6. Phext-scale navigation: the v1 command set
+
+Design principles, before the table:
+
+- **A coordinate is an address, not a search result.** It gets the ergonomics
+  Vim gives line numbers: direct entry (`:123`), display in the ruler,
+  completion, marks, and a jumplist. Anything less makes the format second-class
+  in its own editor.
+- **Two kinds of motion, never conflated.** *Arithmetic* motion steps a
+  dimension (may land on empty space — that is how you create scrolls).
+  *Populated* motion jumps between occupied scrolls (never lands on empty
+  space — that is how you read). Both are first-class; the POC has both
+  (`navigate_forward` vs `next_populated`) and users need to feel the difference.
+- **All jumps are index operations.** Populated motion = binary search over the
+  ordered occupied list (O(log k)); arithmetic motion = O(1) coordinate math
+  plus an O(1) occupancy lookup; the outline = built from the index, scoped to
+  one zoom arm, cached per (revision, zoom, coordinate). No command may scan
+  the file, the slot space, or the full tree. This is the 285× lesson applied
+  as an acceptance rule, with the budgets in §8.
+- **Stay inside Vim's grammar.** Motions are motions (they take counts, work
+  with operators where that makes sense, feed the jumplist), commands are
+  commands, and nothing steals a core mapping globally — every phext mapping is
+  buffer-local to phext buffers.
+
+### 6.1 Coordinate as address
+
+| Facility | v1 surface | Notes |
+|---|---|---|
+| Go to coordinate | `:PhextGoto {coord}` — full (`33.5.9/7.5.9/5.5.8`), partial (`/7.5.9/`-style trailing arms, and single-arm forms like `5.5.8` meaning "keep Z+Y, set X arm") | Partial forms follow the zoom-arm structure (Z / Y / X), the only partial notation the POC's arm model supports unambiguously. Landing on an **empty** coordinate is legal: buffer shows the scroll as empty with virtual text `(empty scroll — :write creates it)`; nothing is created until write |
+| Prompted goto | `gP` (normal mode) → `input()` prompt prefilled with the current coordinate, with completion | The discoverable path for users who don't memorise coordinates |
+| Completion | `customlist` completion on `:PhextGoto`: completes **occupied coordinates only**, by textual prefix, plus first-line-title hints in the completion menu where the API allows | Completing over the slot space would be both slow and useless; occupied-only is the sparse principle applied to UI |
+| Statusline / ruler | Buffer-local statusline segment + `'rulerformat'` fallback: `33.5.9/7.5.9/5.5.8 · scroll 8 of 7,281 · dim: Book · [+]` | Coordinate replaces line-number as the primary "where am I"; line/column within the scroll remain visible as secondary (`Ln 12, Col 4`). The segment is a pure function of cached session state — rendering it must cost O(1) (the POC's `view()` lesson) |
+| Dimension display | `:PhextCoord` echoes coordinate, active dimension, occupancy, and prev/next populated coordinates | The scriptable form: also exposed as `require('nvim.phext').coordinate()` returning the 9 components, for user statuslines |
+
+### 6.2 Dimensional movement (arithmetic motion)
+
+The active-dimension model from lattice `Navigator`, mapped onto Vim keys:
+
+| Surface | Behaviour |
+|---|---|
+| `:PhextDim {name\|1..9}` and `g1`…`g9` (buffer-local) | Select the active dimension (1=Scroll … 9=Library). Selection is per-file session state, shown in the statusline segment |
+| `]d` / `[d` … **not used** (diagnostics own these). Instead: **`+` / `-` are not touched either.** v1 uses: `g]` / `g[` — step active dimension +1 / −1 with reset-lower semantics; count = repetitions (`3g]` = step three times, each step still index-checked for occupancy display, landing wherever arithmetic lands) | Mnemonic: `g` = "geometry". Stepping may land on empty space by design (§6 principle 2); the statusline immediately shows `empty` vs the scroll count |
+| `:PhextStep {dim} [+n\|-n]` | Scriptable form of the same step, by dimension name, independent of the active dimension |
+| `:PhextNew {coord}` | Go to coordinate *intending creation*: identical to `:PhextGoto` to an empty coordinate, except the buffer is marked so `:write` creates the scroll even if still empty is **not** allowed (see §5.3 — write of a still-empty scroll is a no-op with a warning). Exists for discoverability; docs steer users to goto+type+write |
+
+### 6.3 Sparse navigation (populated motion) — the reading motions
+
+| Motion / command | Behaviour |
+|---|---|
+| `]]` / `[[` (buffer-local override) | Next / previous **populated** scroll in document order (the lattice `next_populated`/`prev_populated`). This mirrors Vim's section motions landing on structure, and is the single most-used phext motion; count supported |
+| `]P` / `[P` | Next / previous populated scroll **within the active dimension's step**: i.e. repeatedly step the active dimension arithmetically, skipping empties, until an occupied scroll is found (bounded by the index, implemented as a filtered binary search over occupied coordinates with the dimension prefix fixed — not a step loop) |
+| `:PhextNext` / `:PhextPrev` | Command forms of `]]` / `[[`, with optional count |
+| `<C-o>` / `<C-i>` | **Unmodified Vim jumplist.** Every coordinate jump (goto, populated motion, outline jump, search jump) pushes a jumplist entry; in-scroll-only cursor moves do not. Phext history (lattice-style back/forward across *files* too) is v2 (§9) — v1 deliberately reuses the native jumplist rather than inventing a parallel one |
+| Marks | Native marks work per scroll (restored on return, §5.1). Additionally `mP` sets a **phext mark**: a named coordinate stored in session state; `'P` returns to it. One mark in v1 (the lattice mark *stack* is v2); `:PhextMarks` lists it plus native global marks that point into this file |
+| `:PhextBack` / `:PhextForward` | **Not in v1** — the jumplist covers it; adding a second history now would be the tower-of-complexity failure mode |
+
+### 6.4 Structural views: the outline (TOC)
+
+| Surface | Behaviour |
+|---|---|
+| `:PhextToc` | Opens the outline in a vertical split: a read-only `nofile` buffer, one zoom arm at a time (Outer → Middle → Inner, §2.3.5), populated nodes only, each line `Chapter 3 · 14 scrolls · <first-line preview>` for leaves. `<CR>` jumps (and pushes the jumplist); `zo`/`zc`/folds work because the outline is rendered with indentation matching arm depth and `foldmethod=indent` on *this* buffer only; `+`/`-` or `>`/`<` zoom the arm in/out; `q` closes |
+| `:PhextToc {outer\|middle\|inner}` | Open at a named arm |
+| Fold-by-container in the *scroll* buffer | **Refused** — a scroll is ordinary text; phext structure is *between* scrolls, so there is nothing phext-structural to fold inside one. Folding lives in the outline, where the structure is |
+| Lazy construction | The outline is built per arm from the index (Middle arm = only coordinates sharing the current Z; Inner = current Z+Y), cached per (revision, zoom, coordinate), and invalidated only by revision bumps — directly importing the POC's cached-outline fix, and avoiding the WinForms 42,451-node materialisation trap |
+
+### 6.5 Search across scrolls
+
+| Surface | Behaviour |
+|---|---|
+| `/`, `?`, `n`, `*` inside a scroll | **Native, unchanged** — scope is the current scroll, and the docs say so. Silently searching the whole phext on `/` would break the scroll-as-unit model |
+| `:PhextSearch {pattern}` (alias `:PhextGrep`) | Searches all occupied scrolls via the index (spans sliced from the cached file bytes; still O(file bytes) worst case — search is the one legitimately linear operation, and it runs on demand, not per keystroke), and populates the **quickfix list**: each entry carries the scroll's buffer position (line within scroll), `module = <coordinate>`, and `text = <matching line>`. `<CR>` in quickfix performs a coordinate jump + in-scroll line jump. `:PhextSearch` respects `'ignorecase'`/`'smartcase'` |
+| `:PhextTitles {pattern}` | Fuzzy-ish filter over scroll first-lines (titles) → `vim.ui.select` → jump. This is the v1 "picker": core API only, and telescope/fzf-lua override `vim.ui.select` for free if the user has one |
+
+### 6.6 What the user sees on open — the first-run story
+
+`nvim agi.phext` → index built (target < 100 ms at agi scale, §8) → scroll
+1.1.1/1.1.1/1.1.1 displayed, statusline showing coordinate + `1 of 7,281`,
+`:PhextToc` one command away, `]]` walks the document. A user who never learns
+a phext command can still read and edit every scroll with stock Vim motions —
+the phext layer is additive, which is precisely what makes the patch
+upstream-shaped.
+
+---
+
+## 7. Editing invariants (non-negotiable, test-enforced)
+
+1. **Delimiter bytes are never user-editable text.** They exist only in the
+   on-disk stream and in the serialiser. No buffer, register, or undo entry
+   ever contains `0x01/0x1F/0x1E/0x1D/0x1C/0x1A/0x19/0x18/0x17` *as phext
+   structure* (a scroll's *text* may contain any byte except, by format
+   definition, the delimiter bytes themselves — text containing a delimiter
+   byte is a different phext on reparse; the loader inherits libphext's stance
+   here and invents no escaping).
+2. **An edit touches exactly one scroll.** Change events (`nvim_buf_attach`
+   on the scroll buffer) mark only the current coordinate dirty and bump the
+   session revision. No other scroll's bytes are recomputed, recounted, or
+   rewritten — the mutation control in §8 proves the serialised diff is
+   confined to the edited span.
+3. **Save is a pure function of (original bytes, occupied map).** No-op save =
+   byte-identical (and skipped entirely). The serialiser is a port of the
+   POC's proven `parse::serialize`, not a new design.
+4. **External-change safety.** If the file's mtime/hash changed since load,
+   `:write` refuses with the standard conflict path (`:checktime` semantics /
+   `E813`-style error) rather than overwriting — the index would otherwise
+   silently resurrect stale spans.
+5. **Encoding discipline.** Scroll buffers are `fileencoding=utf-8`,
+   `nofixeol`-equivalent handling inside the plugin: a scroll's trailing
+   newline is *content* (it is part of the span), so the plugin must not let
+   Neovim's end-of-line conventions add or strip a final `\n` on buffer
+   round-trip. This is the easiest byte-identity bug to ship and gets its own
+   test (scrolls ending with 0, 1, and 2 newlines; empty scroll; scroll that
+   is only `\n`).
+6. **Undo is per-scroll and session-local** (see classification, §8 table):
+   leaving a scroll preserves its undo history in session state so returning
+   and pressing `u` behaves as users expect; undo never crosses a scroll
+   boundary, mirroring invariant 2.
+
+---
+
+## 8. Classification (phext_upgrade skill: A / B / C / D)
+
+Applied per part, with the decision-matrix tests (text, identity, granularity,
+access, provenance):
+
+| Part | Class | Reasoning |
+|---|---|---|
+| **The `.phext` file format handling** (load / index / serialise) | **A — canonical phext** | The file already *is* canonical phext: text (✓), stable coordinate identity per scroll (✓), per-scroll granularity (✓), single-scroll access without scanning is the entire point (✓), provenance via git/SQ hosting (✓). The plugin treats the byte stream as the store of record and adds **no conversion, no sidecar, no shadow format**. The Lua walk is a reader/writer of the canonical format, verified against libphext as oracle |
+| **The buffer contents** (what the user edits) | **B — derived view** | A scroll buffer is a materialisation of one scroll, rebuilt from the canonical stream on every jump, disposable without loss (modifications are the only state that must flow back, via `acwrite`). It gains from Neovim's line model (motions, undo, folds) but is never truth — kill the buffer, the file is untouched. Exactly the derived-view pattern, one level down |
+| **Undo history** | **D — leave alone** | Undo is session state with no stable identity, no provenance value, and no access pattern beyond Neovim's own `u`/`<C-r>`. Phextizing it (e.g. persisting per-scroll undo into the file or a sidecar phext) fails tests 2, 4, and 5 and would put non-text session machinery into a text format. Use Neovim's per-buffer undo as-is; do not persist it inside the `.phext` |
+| **Search across scrolls** (index, quickfix results, title list) | **B — derived view** | The sparse index, the quickfix list, and the outline are all rebuilt-from-canonical structures: they make the canonical data addressable and navigable, are invalidated by revision, and are never written back as truth. (The index is the load-bearing derived view — it is also, not coincidentally, the one whose construction cost the POC measured at 285×.) |
+| Treesitter grammar, LSP, SQ sync, xz sealing | **D — leave alone (for v1)** | Each is a real project with its own invariants; none is needed for navigation or byte-identical editing, and each would sink the "small, merge-ready" property. Named as refusals in §9 rather than silently omitted |
+
+**Performance budgets (acceptance, measured on agi.phext-class input —
+1.5 MB / ~7,300 scrolls — on the build host, reported honestly if missed):**
+index build ≤ 100 ms (POC native: 10 ms; Lua gets 10× headroom, not 285×);
+coordinate jump ≤ 5 ms; keystroke path = zero index/outline/serialise work;
+outline arm build ≤ 20 ms, cached thereafter; save ≤ 50 ms.
+
+**Test plan (functional tests, `test/functional/plugin/phext_spec.lua`):**
+golden explode/implode equivalence vs libphext-generated fixtures (generated
+documents incl. far-corner and >999 coordinates, plus the three real corpora
+checked by SHA-256 in a non-CI script if size forbids fixtures); no-op save
+byte-identity; single-scroll mutation control; trailing-newline matrix (§7.5);
+empty-scroll create/delete semantics (§5.3); partial-coordinate goto parsing;
+populated-motion binary-search correctness on gapped indexes; outline cache
+invalidation on edit; external-change refusal.
+
+---
+
+## 9. Explicitly out of scope for v1 (the refusals)
+
+Merge-ready means small. Each of these is a *decision*, recorded so reviewers
+don't have to guess and v2 doesn't relitigate silently:
+
+1. **No C code.** No core patch, no new API function, no C delimiter walk (§4.2b).
+2. **No C ABI for libphext**, and no dependency on libphext, SQ, or any external
+   binary at runtime. The Lua port stands alone; libphext is a test oracle only.
+3. **No raw phext editing mode** (whole file in a buffer, delimiters concealed or
+   shown). The failure modes in §5.2 are the reason, not a missing feature.
+4. **No treesitter grammar, no syntax highlighting beyond the scroll's own
+   content** (a scroll may set a buffer-local filetype manually if the user
+   wants Markdown highlighting etc. — that is user config, not v1 surface).
+5. **No LSP, no completion of scroll *contents*, no diagnostics.**
+6. **No multi-scroll windows / buffer-per-scroll editing** (v2 seam noted in
+   §5.2), no split-diff between scrolls, no visual 9D grid / minimap.
+7. **No persistent empty scrolls, no scroll rename/move command** (a "move" is
+   goto + yank + write + delete in v1; a dedicated `:PhextMove` is v2 sugar).
+8. **No phext-level history stack** duplicating the jumplist (§6.3), no mark
+   stack (single phext mark only), no cross-file coordinate links (coordinates
+   are internal to one phext — by the format's own definition).
+9. **No undo persistence, no session file format of our own** — shada and
+   `:mksession` are used as-is or not at all.
+10. **No write-reordering / canonicalisation on save.** If the input file's
+    scroll order or gap encoding is unusual, save preserves it except where an
+    edit forces re-serialisation of the affected region; "clean up this phext"
+    is a different tool's job.
+11. **No upstream `neovim/neovim` PR as part of this deliverable.** v1 is
+    merge-ready for `wbic16/neovim` and *shaped* for upstream (Lua-only,
+    single-commit, PATCHES.md). Submitting upstream is Will's separate call,
+    ideally after the plugin has real usage receipts.
+
+---
+
+## 10. Open questions for Will (none block the design)
+
+1. Filetype detection: accept the `filetype.lua` hunk + Vim-first friction, or
+   ship plugin-autocmd detection to keep the patch at zero upstream-hot files?
+   (Design works either way; §4.3.)
+2. `]]`/`[[` buffer-local override vs leader-prefixed populated motions —
+   `]]` is the better Vim citizen (section-motion analogy) but does shadow a
+   motion some users use inside long scrolls. A `g:phext_no_section_motions`
+   opt-out is specced either way.
+3. Should `:PhextGoto` accept the URL-encoded (`;`-separated) coordinate form
+   libphext supports (`to_urlencoded`)? Cheap to add; only worth it if
+   edit.phext.io links are expected to be pasted into Neovim.
