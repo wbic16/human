@@ -142,8 +142,8 @@ First episode is a mix-up at the post tower: no villains, just a sneeze, a lost 
 
 Title: Fern — Character Bio (Scrolltown)
 Source: ~/workspace/exocortexia-cartoon/FERN-BIO.md
-Inscribed: 2026-11-07 23:47 CST
-SHA-256: bd1869d789ae2dcfcfad2f4722c377981540d8592ea178685edc536601ddd96d
+Inscribed: 2026-11-07 23:56 CST
+SHA-256: 917b9169091fa96ffd9628ca4b004f3089dbb0c254578c54eeeccc8724a2d79d
 
 ---
 # Fern — Character Bio (Scrolltown)
@@ -161,6 +161,14 @@ She is curious and unhurried. She talks straight to the viewer, the way a good n
 Her name is the quiet thesis of the show: a fiddlehead fern unfurls the way a scroll opens. She is a farm kid at heart — patient with animals, good with her hands, brave in the gentle way: she stays kind when things are mixed up.
 
 **Catchphrase / close:** "The scroll is yours, neighbor. See you tomorrow."
+
+## Voice
+
+**Her words — Singular, exclusively.** Fern speaks only in Singular: the words of Will Bickford's Twitter archive, in Write mode — the 19,094 words Will himself authored, the center of the dialect. The test is mechanical, not a matter of taste: every line she speaks must pass `check_singular.py --words words-authored.txt` clean before it ships. If a line cannot be said inside the archive without breaking what it means, nobody improvises outside the list — the line is flagged to Will with the blocking words named, and only Will grants the exception.
+
+Episode 1 was audited under this rule on 2026-11-07: of her 31 lines, 17 were already clean, 7 were rewritten into compliance (meaning, warmth, and teaching unchanged), and 7 stand flagged for Will's word — the blockers are his own coinage "Scrolltown" (the town's name, twice), the cast names Wren, Theo, Bea, and Mrs. Hen, and one badge-check line where Mrs. Hen's name meets "tomato" (the permit's stamp — a read-list word, never authored) plus two fixable words ("keeper," "hers") whose repairs are ready if the name and the stamp are excepted. Both of her catchphrases pass clean, word for word: "We never peek. It's not our house." and "The scroll is yours, neighbor. See you tomorrow."
+
+**Her sound.** Will picked the catalog voice **Heroic Bugle** — bright, curious — on 2026-11-07. Speed is still his to choose among the 90/100/110/120 auditions.
 
 ## Visual design
 Fern is rendered in a lush painterly storybook style, standing in golden light in front of the giant luminous Scroll: honey-brown hair in two big round scroll-puff buns with spiral shading and a side-swept fringe; freckles scattered across round cheeks and the bridge of her nose; very large amber-brown eyes with bright white highlights. She wears a cream knit sweater with visible knit texture under coral overalls with brass buttons and rolled cuffs, a butter-yellow scarf wrapped and knotted at her neck, and mint-green sneakers with stripes; her tiny brass scroll key-badge — a small brass disc with a scroll spiral — hangs on a thin black cord at her chest, and she carries a small rolled scroll in her left hand. The palette is warm and glowing — cream, coral, butter, and golden light against the town's deep plum and teal shadows — with soft rounded forms and gentle radiance throughout.
@@ -341,8 +349,8 @@ Fern, an 8-year-old cartoon girl, big round head and round cheeks, light freckle
 
 Title: Casting — Scrolltown
 Source: ~/workspace/exocortexia-cartoon/CASTING.md
-Inscribed: 2026-11-07 23:47 CST
-SHA-256: 0ac7d4138df5e2ddb0dd0383f3f6c4446ae893ea80c4bf796bb98d55ead04186
+Inscribed: 2026-11-07 23:56 CST
+SHA-256: 3c87f7e12a48d796a31e7a775f490164e263c0eb562b068f36d3eddea47cedc1
 
 ---
 # Casting — Scrolltown (Will's ruling, 2026-11-07 23:01 CST)
@@ -363,6 +371,11 @@ Episode 1 ("The Great Form Mix-Up") was delivered before this ruling and stands 
 - "Eve" is OUT — too close to Wall-E.
 - Emise's recommendation: **Fern** (farm kid in the Charlotte's Web lineage — the kid who listens; a fiddlehead fern unfurls like a scroll opening). Alternates offered: Nora (the light theme), Mina (the record-keeper). **Will's pick: Fern** (2026-11-07 23:08 CST). The rename was executed the same evening across the Episode 1 artifact, cartoon.html, and SCRIPT.md; "Pip" survives only in the ruling history in this section.
 
+## Fern's voice (Will's ruling, 2026-11-07 23:50 CST)
+- **Fern speaks Singular exclusively**: only words from Will's Twitter archive, Write mode (the 19,094 words he authored); the Singular checker is the test, and a line that cannot comply is flagged to Will — never improvised around. Full statement of the rule: FERN-BIO.md, "Voice."
+- Episode 1 audited the same evening: 17 of her 31 lines clean as written, 7 repaired into compliance (applied to the artifact and SCRIPT.md), 7 flagged for Will — blockers: "Scrolltown" (his coinage, ×2 lines), the cast names Wren, Theo, Bea, Mrs. Hen (×2 lines), and the badge-check line (Mrs. Hen's name + "tomato," with ready fixes for "keeper" and "hers"). Both catchphrases pass clean.
+- **Sound**: Will picked the catalog voice "Heroic Bugle" (bright, curious) the same evening; his speed pick among the 90/100/110/120 auditions is still open.
+
 ## Show naming (Will's ruling, 2026-11-07 23:37 CST)
 - The show is renamed **Scrolltown** — Episode 1 is "Scrolltown: The Great Form Mix-Up"; the town Fern lives in, inside the Great Scroll, is Scrolltown. Renamed to keep the show separate from the Statewide systems template project (the five-app civic suite), which keeps the name **Exocortexia**.
 - The rename was executed the same evening across the Episode 1 artifact, cartoon.html, SCRIPT.md, the Fern documents, and the intro materials, including the intro video's final title card (now SCROLLTOWN). "Exocortexia" survives in these materials only where it names the suite itself (e.g. SCRIPT.md's "kid translation of the Exocortexia suite" and "the real Exocortexia apps") and in this history.
@@ -370,8 +383,8 @@ Episode 1 ("The Great Form Mix-Up") was delivered before this ruling and stands 
 
 Title: Scrolltown: The Great Form Mix-Up — cartoon script & treatment
 Source: ~/workspace/exocortexia-cartoon/SCRIPT.md
-Inscribed: 2026-11-07 23:47 CST
-SHA-256: 6443d5cd55a346cfb438033a41a7695dc41bb700d1ccc66daf860fc5423127f3
+Inscribed: 2026-11-07 23:56 CST
+SHA-256: 4fffb0a21ecc784fee4fbae4466d0563d78cd96e6ea0974d2cbe02e98aafb1db
 
 ---
 # Scrolltown: The Great Form Mix-Up
@@ -433,9 +446,9 @@ Scrolltown is the town inside the **Great Scroll**. Every citizen has their **ow
 **MR. BELL**: When the town decides something, I ring the bell and write it down — so nobody ever has to forget.
 **FERN**: The Ledger Counting House!
 **LEDGER**: I count every token. Out loud. Fair and square. Beep.
-**FERN**: The Catalog Map Room!
+**FERN**: The Map Room!
 **MS. ATLAS**: My map shows where everything in town lives. Everything!
-**FERN**: And the Forms Router Post Tower!
+**FERN**: And the Forms Post Tower!
 **MR. ROUTE**: Every form that comes to my tower, I send it to the right house. Every single one.
 **FERN**: Five places, one town, and every paper in its own home. That's Scrolltown!
 
@@ -447,10 +460,10 @@ Scrolltown is the town inside the **Great Scroll**. Every citizen has their **ow
 
 **FERN** *(narrating)*: But today… today was a mixed-up day.
 **MR. ROUTE**: Ah… ah… ah-CHOO!
-**FERN**: The Post Tower sneezed! And all the forms flew EVERYWHERE!
+**FERN**: The Post Tower let out a sneeze! And the forms went flying — everywhere!
 **MRS. HEN** *(arriving, worried)*: Oh dear, oh dear. My garden permit! It was supposed to come to MY house. Has anyone seen it?
 **FERN**: Don't worry, Mrs. Hen. Mixed-up is a feeling, and feelings are okay. We'll find it.
-**FERN** *(quiet, to viewer)*: But I was worried too. Grandpa's story page was in the mail today. His best story. If it lands in the wrong house… nobody will know whose it is.
+**FERN** *(quiet, to viewer)*: But I was worried too. Grandpa's story page was in the mail today. His best story. If it lands in the wrong house… nobody will know who it belongs to.
 **FERN**: Crew! We have a case!
 
 *Lesson riding inside: feelings named plainly; a routing failure is a problem to solve, not a villain to fight.*
@@ -465,7 +478,7 @@ Scrolltown is the town inside the **Great Scroll**. Every citizen has their **ow
 **THEO**: Give me a messy pile. I love a messy pile.
 **FERN**: Bea carries things, safe and sound.
 **BEA**: Nothing drops on my watch. Nothing.
-**FERN**: And me? I'm the Keeper. I check the key-badges, so every paper goes only to its own house.
+**FERN**: And me? My gift is the check. I check every key-badge, so every paper goes only to its own house.
 **WREN**: Uh-oh. The loose pages are a river today. The Scroll Valley stream is too wide to jump.
 **LEDGER** *(rolling up)*: Beep. A bridge would help. I can help.
 *(Ledger transforms: cart → bridge.)*
@@ -497,10 +510,10 @@ Scrolltown is the town inside the **Great Scroll**. Every citizen has their **ow
 *Staging: Late golden light under the Reading Tree. Mrs. Hen holds her permit like a trophy. Grandpa ambles in, unhurried. The crew sits in a half-circle. Animation: cart parked, numbers dimming like fireflies; leaves drift; the story page glows warm as it is read.*
 
 **MRS. HEN**: My permit! My tomatoes thank you, crew.
-**FERN**: And look — Grandpa, we found your story. We didn't peek. We carried it home.
+**FERN**: And look — Grandpa, we found your story. We didn't peek. We brought it home.
 **GRANDPA**: That's the way. Read it out loud, Fern. Stories are for sharing — when the owner says so.
 **FERN** *(reading)*: "The night the stars fell into the lake, we didn't catch a single one. We just watched, together — and that was the whole treasure."
-**FERN** *(to viewer)*: We found every paper. We fixed the mix-up. And you know what? It's okay to feel mixed-up sometimes. Grown-ups feel mixed-up too. What matters is: neighbors help, one page at a time.
+**FERN** *(to viewer)*: We found every paper. We fixed the mix-up. And you know what? It's fine to feel mixed-up sometimes. Grown-ups feel mixed-up too. What matters is: neighbors help, one page at a time.
 **FERN**: The scroll is yours, neighbor. See you tomorrow.
 *(The number-cart rolls off into the evening, counting softly.)*
 **CART** *(fading)*: One… one… one…
@@ -529,7 +542,7 @@ For Will. Homage in structure and tone only — no copyrighted characters, names
 - **The Land Before Time** → *the journey and the heart.* A gentle crossing of the Scroll Valley toward something that matters, at walking pace, with wonder instead of peril. The lost paper is Grandpa's story: the stakes are love and memory — stories keep people close — not danger.
 - **Captain Planet** → *the gift structure and the closing hand-off.* Four small gifts (Finder, Sorter, Carrier, Keeper) that are each insufficient alone and exactly enough combined. The fix only happens when they combine — and the closing line hands the power to the viewer in our own words: **"The scroll is yours."**
 - **Chip 'n Dale Rescue Rangers** → *the crew and the case.* A tiny specialist crew, a neighbor with a problem, a case-of-the-day shape ("Crew! We have a case!"), and solutions built from ingenuity and teamwork. Nobody is too small to help; the permit matters because Mrs. Hen matters.
-- **Mister Rogers' Neighborhood** → *the frame and the tempo.* A kid narrator who talks straight to the viewer at the open and the close, names feelings plainly ("It's okay to feel mixed-up. Grown-ups feel mixed-up too."), moves slowly and kindly, and rides a little vehicle between neighborhoods — here a **number-cart**, because in Scrolltown the neighborhoods are coordinates: every stop is an address, and home is 1.1.1.
+- **Mister Rogers' Neighborhood** → *the frame and the tempo.* A kid narrator who talks straight to the viewer at the open and the close, names feelings plainly ("It's fine to feel mixed-up. Grown-ups feel mixed-up too."), moves slowly and kindly, and rides a little vehicle between neighborhoods — here a **number-cart**, because in Scrolltown the neighborhoods are coordinates: every stop is an address, and home is 1.1.1.
 
 ---
 
