@@ -14,7 +14,7 @@ truth: artifacts-source.json beside this builder
 (build_artifacts_phext.py); never hand-edit the .phext.
 artifacts.phext is published to wbic16/human@exo.
 
-Artifacts inscribed: 11
+Artifacts inscribed: 12
 
 Index (coordinate — title — source):
 - 19.7.11/9.7.12/7.6.9 — Light the Next Light — intro song lyrics & time map — ~/workspace/exocortexia-cartoon/intro/LYRICS.md
@@ -28,6 +28,7 @@ Index (coordinate — title — source):
 - 23.7.8/9.7.12/8.6.9 — Shot List — Scrolltown Intro Video — ~/workspace/exocortexia-cartoon/intro/SHOT-LIST.md
 - 32.6.7/7.6.10/6.5.9 — Neovim + Phext — Design: Phext-Scale Navigation in a Modal Editor — ~/workspace/goals/neovim-phext-support-merge-ready-pr-compiled-with-phcc/files/neovim-phext-design.md
 - 33.6.9/8.6.11/7.5.9 — Desktop SSO for Phext Notepad — the cookie paste is gone — ~/workspace/phext-notepad-perf/REPORT-DESKTOP-SSO.md
+- 36.6.7/7.6.11/7.5.9 — Phext Notepad — libphext v0.5.0 parity — ~/workspace/phext-notepad-perf/REPORT-V050-PARITY.md
 # Light the Next Light — intro song lyrics & time map
 
 Title: Light the Next Light — intro song lyrics & time map
@@ -1706,3 +1707,207 @@ handlers, and tests).
 - Windows/macOS builds of the notepad remain Will's to verify (the app
   change is platform-neutral Rust + the existing `open_url`; the catch
   binds `127.0.0.1`, which the server's validator admits on every OS).
+# Phext Notepad — libphext v0.5.0 parity
+
+Title: Phext Notepad — libphext v0.5.0 parity
+Source: ~/workspace/phext-notepad-perf/REPORT-V050-PARITY.md
+Inscribed: 2026-11-08 17:05 CST
+SHA-256: fa64dea67934f12cde17687525405bd12d0f08a2d03e2addc170d55b57ac9ec5
+
+---
+# Phext Notepad — libphext v0.5.0 parity
+
+Task coordinate 36.12.9/14.14.18/13.11.15 · Branch `emise/ultra-open-fix` · 2026-11-08
+Commit **`636989ea0132bf2c8ab8732bdf57a23b33d67909`** on top of `2c75b8d` (the ultra-open fix),
+pushed via aletheia-core SSH as wbic16 — fast-forward `2c75b8d..636989e`, force disabled,
+remote ref re-verified via the GitHub API at `636989e`. No new branch, no PR, nothing merged.
+All builds/tests ran on aletheia-core (cargo 1.94.0, .NET SDK 8.0.427, system liblzma 5.4.5).
+
+## Verdict up front
+
+The native app is at libphext 0.5.0 parity. The 1000-component cap that collapsed
+ultra.phext to 41,963 of 320,958 scrolls is gone end to end: **ultra.phext now loads at
+full fidelity — 320,958 scrolls — and serializes byte-identically to the source file**
+(SHA-256 `fd68c5b0fd93a7388516fc20ae248f7fb16ebe2b1bb9b9b78d2ceedf8da8ac93`). Binary
+scrolls and the xz seal are implemented in the core and proven byte-identical against the
+real libphext-rs 0.5.0 crate with a mirror harness. The WinForms app needed **no code
+change**: its parity obligation is round-trip preservation of binary scrolls, proven
+headlessly (below). No libphext repo was bumped, tagged, or republished — the freeze binds
+the libraries, and none was touched.
+
+## Audit — where 0.3.1 semantics lived
+
+**Native (Rust/FLTK).** `native/core` depended on `libphext = "0.3.1"` from crates.io for
+the `Coordinate` type, break constants, and break methods; parsing/serialization were
+already the app's own single-pass `parse.rs` from the perf pass. The 1000 cap entered in
+three places:
+
+1. **The dependency itself.** libphext 0.3.1's `Coordinate::*_break()` saturate at
+   `COORDINATE_MAXIMUM = 1000`. `parse::explode` advances its walk coordinate with those
+   methods, so every component pinned at 1000 and scrolls collided in the map — the
+   ultra-open report's 41,963/320,958.
+2. **`document::parse_coordinate`** rejected any component above 1000, so the jump box
+   could not address most of ultra even where scrolls survived.
+3. **`nav::CoordinateNav`** refused forward steps at 1000 and clamped `set_dimension`
+   to 1000, capping the steppers the same way.
+
+The FLTK app (`native/app`) has **no binary or seal surface at all** — open/save are
+plain phext only, and `Document::load_path` rejects non-UTF-8 files. Seal therefore went
+into the core layer with tests and **no UI was added or invented** (scope call per brief).
+
+**WinForms (C#).** Its vendored model (post ultra-open fix) already has `int`
+coordinates and needs nothing for coordinate parity. It has no binary API and no byte
+ingestion path: it opens text files (`File.ReadAllText`) and stores scrolls as strings.
+A canonical binary scroll *is* text (header line + base64, pure ASCII), so it can neither
+be mis-parsed as structure nor mangled by the model — the parity question for this app is
+exactly round-trip preservation, including at coordinates past its old `short` wrap.
+**Scope call: no WinForms code changes; preservation proven by harness (below).** If the
+WinForms app ever needs to *create* or *decode* binary scrolls, the parity surface already
+exists for it in libphext-cs 0.5.0's `BinaryScroll` / `Phext.Seal`.
+
+## Dependency decision
+
+crates.io tops out at libphext **0.4.0** — that has unbounded coordinates but *no* binary
+scrolls and *no* seal, so it is not parity. The core now pins the reference crate by git
+rev, with the `binary` and `xz` features enabled:
+
+```toml
+libphext = { git = "https://github.com/wbic16/libphext-rs", rev = "e85d8b5676c6461e6bad6a89fe7a3d2eb06f552d", features = ["binary", "xz"] }
+```
+
+`e85d8b5` was verified via the GitHub API as libphext-rs `exo` HEAD at build time — the
+PR #9 merge carrying version 0.5.0. The committed `Cargo.lock` records the same rev, so a
+fresh clone reproduces the build bit-for-bit. Alternatives rejected: vendoring the crate
+into the repo (duplicates upstream and drifts), and an in-app `Coordinate` type (would
+fork document/nav/zoom away from the reference and still leave binary/seal to write).
+**Residual for Will:** when he publishes libphext 0.5.0 to crates.io, this pin should be
+swapped for `version = "0.5.0"` — a one-line change, deliberately left for that day.
+
+## What changed (commit `636989e`, 10 files, +402/−21)
+
+- `native/core/Cargo.toml` — the git pin + features (rationale in a comment).
+- `native/Cargo.lock` — regenerated: libphext 0.5.0 from git, plus base64, xz2,
+  liblzma-sys and their transitive deps.
+- `native/core/src/nav.rs` — forward steps no longer refuse at a maximum (there is
+  none); `set_dimension` clamps only the floor of 1.
+- `native/core/src/document.rs` — `parse_coordinate` accepts any component ≥ 1; the
+  jump error text no longer cites 1000. New Document idiom: `scroll_bytes()`
+  (fetch-binary semantics at the current coordinate), `set_scroll_bytes()` (the
+  ingestion rule), `set_binary_scroll()` (unconditional), `from_bytes()` (ingest path
+  for foreign byte streams), `from_sealed()` / `seal()`.
+- `native/core/src/binary.rs` — **new.** The canonical string-level surface
+  (`is_binary_scroll`, `encode_scroll`, `decode_scroll`, `insert_binary`,
+  `replace_binary`, `fetch_binary`, `insert_bytes`, `replace_bytes`,
+  `phokenize_bytes`, `ingest`, `BINARY_SCROLL_HEADER`), re-exporting the reference
+  implementation so the semantics are canonical by construction, plus 8 tests ported
+  in substance from rs `test_binary.rs`.
+- `native/core/src/seal.rs` — **new.** `seal` / `seal_bytes` / `unseal` /
+  `unseal_string` / `SEAL_PRESET` (= 6), re-exported the same way, plus 2 tests.
+- `native/core/src/lib.rs`, `parse.rs` — module wiring and doc updates (coordinate
+  semantics are the reference crate's; the walk is now unbounded by construction).
+- `native/README.md`, `docs/native-publishing.md` — the stale present-tense
+  "libphext 0.3.1 … coordinate limits" descriptions corrected.
+- The FLTK app crate is untouched, and still compiles (`cargo check -p phext-notepad`).
+
+## Verification (all measured on aletheia-core)
+
+**Test suites**
+- Core suite on the exact pushed tree (`~/push-notepad` at `636989e`):
+  **37 passed, 0 failed** — the perf branch's 23 baseline + 8 binary + 2 seal +
+  4 new document tests (past-the-caps navigation/round-trip, binary round-trip through
+  the Document, foreign-stream ingest, seal round-trip).
+- WinForms ultra-open harness re-run against this branch's (unchanged) C# sources:
+  **43/43 checks pass** — nothing regressed.
+
+**Ultra full fidelity** (`agi_bench` + a load-only bench, same binary family)
+- scrolls loaded: **320,958** (was 41,963); load matches `libphext::explode`
+  (empties filtered): **true**; serialize matches `libphext::implode`: **true**;
+  `serialize == input bytes`: **true**; fixed point: **true**.
+- Spot checks: jump to `9.9.9/9.9.9/9.9.223854` (ultra's maximum scroll) works and
+  views its scroll; unit tests pin jumps/materialization at 1001, 40001, and 223854.
+
+**Parity harness** (mirror of the libphext-cs interop approach; harness kept at
+`~/workspace/phext-notepad-v050/harness/`, bins `refbin` = libphext 0.5.0 itself,
+`corebin` = the notepad core's own Document API + its own serializer). One construction
+script — the cs script's doc (plain/non-ASCII text, all-256-byte binary, empty-payload
+binary, break-byte payload via byte insert, UTF-8 via byte replace, **1 MiB + 13 payload
+at scroll 1006**, insert-then-replace pair, malformed binary, text-inserted
+header+base64 namespace claim) plus an equal extension past every cap (binary at scroll
+40001, text at `9.9.9/9.9.9/9.9.223854`) — and one ingest stream:
+
+| Check | Result |
+|---|---|
+| Constructed doc, ref vs core | **byte-identical** (SHA-256 `8647c69bcb1468f1…`) |
+| Ingest output, ref vs core | **byte-identical** |
+| Per-scroll manifest (fetch text + fetch_binary) | **identical** |
+| Decode-verdict battery (41 candidates, the cs list verbatim) | **identical** |
+| 1 MiB + 13 payload fetched at 1.1.1006 | **byte-identical** |
+| Seals of agi / cyoa / doc / empty / small, ref vs core | **byte-identical, all five** |
+| Cross-unseal both directions (agi, cyoa, doc) | **PASS**, exact originals |
+| System `xz -dc` on the core's doc seal | exact original |
+| Core unseals foreign seals: xz CLI preset 0, 9e + SHA256, 6 + no-check, 3 + CRC32 | exact originals — "any valid xz stream" holds |
+
+One honesty note: `binary`/`seal` in the core re-export the reference functions, so
+decode/seal agreement is by construction; the harness's independent weight sits in what
+is *not* shared — the core's own parser, serializer, coordinate parsing, and Document
+wiring, which produced the identical doc, ingest, and manifest bytes from the other side.
+
+**WinForms binary preservation** (new harness, `~/workspace/phext-notepad-v050/winforms-binary/`,
+compiling the branch's actual model sources): a canonical file holding a plain scroll,
+an all-256-byte binary scroll, an empty-payload binary scroll, a malformed binary
+scroll, a header-claim text scroll, and a binary scroll at `1.1.1/1.1.1/1.1.40001` —
+**9/9 pass**: `Serialize()` round-trips byte-identically (40,501 chars), all 6 scrolls
+held at their true coordinates with stored text intact, direct fetch at 40001 verbatim.
+
+**Corpus regressions** (`agi_bench` equivalence legs): agi.phext (7,452 scrolls),
+singular.phext (6,799), CYOA (830) — load matches explode, serialize matches implode,
+round-trip and fixed point all **true**, as before.
+
+**Performance guard** (ranch, same machine, load-only bench, median of 3)
+
+| ultra.phext | Before (`2c75b8d`) | After (`636989e`) |
+|---|---|---|
+| Load | 74.0 ms | **166.2 ms** (agi_bench: 159.0 ms) |
+| Scrolls held | 41,963 / 320,958 | **320,958 / 320,958** |
+| Serialized bytes | 16,070,807 (≠ input) | **37,953,029 (= input)** |
+| Peak RSS after load | 101,644 KiB | **238,396 KiB** |
+
+Read this honestly: the "before" figures are the cost of the *collapsed* document —
+13% of the scrolls, most overwritten by collisions. Per retained scroll the new load is
+cheaper, and 233 MB is simply the true weight of holding all 320,958 scrolls plus the
+38 MB source (the C# harness process measured 272 MB holding the same content). The
+work is not the same work, so this is not a regression — but two ultra-scale costs are
+worth naming: **jump + first view at the maximum coordinate: 57.7 ms** (first outline
+build for the giant book; inner view at home: 4.7 ms), and **`set_scroll` ≈ 9.4 ms per
+call on ultra**, dominated by the perf pass's O(scrolls) `serialized_len` arithmetic
+walk. At agi scale that walk is the 0.09 ms/call the perf pass measured; on ultra it is
+a real typing-latency number, flagged below rather than hidden.
+
+## Residuals / Will's calls
+
+- **Publish-day pin swap:** when libphext 0.5.0 reaches crates.io (Will's act under
+  the freeze), replace the git pin with `version = "0.5.0"` — one line in
+  `native/core/Cargo.toml` + lock refresh.
+- **No seal/binary UI in the FLTK app** (core layer only, by design). Adding
+  open-sealed / save-sealed or a paste-binary affordance is a product decision.
+- **`load_path` unchanged:** it still rejects non-UTF-8 files with the existing
+  message. `Document::from_bytes` (the ingest path) exists in the core; routing the
+  app's Open through it would change open semantics, so it waits for Will's word.
+- **`set_scroll` byte-count walk at ultra scale** (~9.4 ms/keystroke, above):
+  pre-existing perf-pass design, fine at agi scale; worth an incremental-totals
+  rework only if ultra editing latency starts to matter.
+- **WinForms parity surface, if ever needed:** libphext-cs 0.5.0's `BinaryScroll` /
+  `Phext.Seal` (already on cs exo, awaiting Will's NuGet publish) — the WinForms app
+  vendors its own phext sources today and does not consume the library.
+
+## Locations
+
+- Branch: `emise/ultra-open-fix` @ `636989ea0132bf2c8ab8732bdf57a23b33d67909`
+  (API-verified after push; parent `2c75b8d`, no force, no PR).
+- Parity harness: `~/workspace/phext-notepad-v050/harness/` (create the `core-link`
+  symlink → the repo's `native/core`, then `cargo build --release`; modes
+  `gen <fixturedir> <outdir>` and `unseal <in.xz> <out>` on both bins).
+- WinForms binary harness: `~/workspace/phext-notepad-v050/winforms-binary/`
+  (`repo-link` symlink → repo root; `dotnet run -c Release`).
+- Ranch copies: `~/phext-notepad-v050/` (work tree), `~/push-notepad/` (pushed clone
+  at `636989e`), parity outputs in `~/parity/out-ref` and `~/parity/out-core`.
