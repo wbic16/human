@@ -14,7 +14,7 @@ truth: artifacts-source.json beside this builder
 (build_artifacts_phext.py); never hand-edit the .phext.
 artifacts.phext is published to wbic16/human@exo.
 
-Artifacts inscribed: 13
+Artifacts inscribed: 15
 
 Index (coordinate — title — source):
 - 19.7.11/9.7.12/7.6.9 — Light the Next Light — intro song lyrics & time map — ~/workspace/exocortexia-cartoon/intro/LYRICS.md
@@ -28,7 +28,9 @@ Index (coordinate — title — source):
 - 23.7.8/9.7.12/8.6.9 — Shot List — Scrolltown Intro Video — ~/workspace/exocortexia-cartoon/intro/SHOT-LIST.md
 - 24.6.8/7.6.10/6.6.9 — Scrolltown — Production Workflow — ~/workspace/scrolltown-reorg/workflow/PRODUCTION.md
 - 32.6.7/7.6.10/6.5.9 — Neovim + Phext — Design: Phext-Scale Navigation in a Modal Editor — ~/workspace/goals/neovim-phext-support-merge-ready-pr-compiled-with-phcc/files/neovim-phext-design.md
+- 32.6.8/8.6.11/6.5.9 — Charon — README — ~/workspace/charon-seed/README.md
 - 33.6.9/8.6.11/7.5.9 — Desktop SSO for Phext Notepad — the cookie paste is gone — ~/workspace/phext-notepad-perf/REPORT-DESKTOP-SSO.md
+- 34.6.7/8.6.11/6.5.9 — Charon — Prompt 0: Produce the design spec (no code yet) — ~/workspace/charon-seed/prompts/00-spec.md
 - 36.6.7/7.6.11/7.5.9 — Phext Notepad — libphext v0.5.0 parity — ~/workspace/phext-notepad-perf/REPORT-V050-PARITY.md
 # Light the Next Light — intro song lyrics & time map
 
@@ -1642,6 +1644,86 @@ don't have to guess and v2 doesn't relitigate silently:
 3. Should `:PhextGoto` accept the URL-encoded (`;`-separated) coordinate form
    libphext supports (`to_urlencoded`)? Cheap to add; only worth it if
    edit.phext.io links are expected to be pasted into Neovim.
+# Charon — README
+
+Title: Charon — README
+Source: ~/workspace/charon-seed/README.md
+Inscribed: 2026-11-09 10:58 CST
+SHA-256: 73f6a5d294f7db82c7669c8c9846dfe80acfa42ae39c8e042be49a6d5e49442b
+
+---
+# Charon
+
+One local CLI that ferries work items between **Helix ALM, Jira, Gitea, and a team tracker** — so a developer works from one queue instead of four browser tabs.
+
+> Not affiliated with other projects named Charon (including the Aeneas toolchain's Charon). This Charon is a work-item ferry: it carries tickets, issues, and tasks across the systems a team already uses, and never becomes another system of record.
+
+## Why
+
+A typical developer's work is scattered: a defect lives in Helix ALM, a story in Jira, a pull request in Gitea, and the team's own tracking somewhere else. The same work often exists in two or three places at once, slightly out of sync. Charon gives that work **one read model, one search, and one daily list** — while every system of record stays exactly where it is.
+
+Charon is built to be driven both by humans in a terminal and by **GitHub Copilot** (and other MCP clients) as a set of tools.
+
+## Principles
+
+- **Local-first.** Charon runs on the developer's machine. No Charon server, no shared database, nothing to deploy.
+- **Read-only by default.** Reads are always safe. Any write to a source system requires an explicit `--apply`.
+- **One model, many adapters.** Every source maps into a single `WorkItem` model: `id, source, title, status, assignee, priority, links[], updated`. Adapters are small and independently testable.
+- **Machine-readable everywhere.** Every command supports `--json` with a stable schema.
+- **Secrets stay out of files.** Tokens come from environment variables or the OS keyring — never from a committed config file.
+- **Signed handoffs.** Team-tracker bundles can be exported with a detached **GPG signature** and are verified before import.
+- **Boring on purpose.** A single binary, a small command surface, no plugins in v1.
+
+## Commands (planned)
+
+```text
+charon today                 # my open items across all sources, deduplicated
+charon search <text>         # full-text search across all sources
+charon item <source>:<id>    # one item, with links to every source that mentions it
+charon sync                  # refresh the local cache from all configured sources
+charon link <a> <b>          # record that two items in different systems are the same work
+charon mcp serve             # expose the same operations as an MCP server (stdio)
+charon export [--sign]       # export a team-tracker bundle, optionally GPG-signed
+charon import <bundle>       # verify signature, then import
+charon config check          # validate config and test each source connection
+```
+
+## Configuration (sketch)
+
+`~/.charon/config.toml` — non-secret settings only:
+
+```toml
+[sources.jira]
+url = "https://your-team.atlassian.net"
+project = "PROJ"
+# token read from $CHARON_JIRA_TOKEN or the OS keyring
+
+[sources.gitea]
+url = "https://git.your-team.example"
+org = "your-org"
+# token read from $CHARON_GITEA_TOKEN or the OS keyring
+
+[sources.helix]
+url = "https://helix.your-team.example"
+# token read from $CHARON_HELIX_TOKEN or the OS keyring
+```
+
+## Status
+
+Pre-alpha. Charon is being built **spec-first**: the design is produced and reviewed before code, using the prompt sequence in [`prompts/`](prompts/).
+
+- `prompts/00-spec.md` — Prompt 0: produce `DESIGN.md` (the current step)
+- Later prompts (scaffold, adapters, MCP server, GPG bundles) follow once the spec is accepted.
+
+## Non-goals
+
+- No hosted service, accounts, or telemetry.
+- No replacing any source system — Charon ferries and unifies; it does not own the record.
+- No AI features of its own — Charon is the tool layer that Copilot and other MCP clients call.
+
+## License
+
+To be selected (an OSI-approved license) before the first release.
 # Desktop SSO for Phext Notepad — the cookie paste is gone
 
 Title: Desktop SSO for Phext Notepad — the cookie paste is gone
@@ -1934,7 +2016,104 @@ handlers, and tests).
 - Windows/macOS builds of the notepad remain Will's to verify (the app
   change is platform-neutral Rust + the existing `open_url`; the catch
   binds `127.0.0.1`, which the server's validator admits on every OS).
-# Phext Notepad — libphext v0.5.0 parity
+# Charon — Prompt 0: Produce the design spec (no code yet)
+
+Title: Charon — Prompt 0: Produce the design spec (no code yet)
+Source: ~/workspace/charon-seed/prompts/00-spec.md
+Inscribed: 2026-11-09 10:58 CST
+SHA-256: acccacb453d984f654791f2066ad62d5325e89ab3bb70bcc23d10e00d7a6e8e5
+
+---
+# Prompt 0 — Produce the design spec (no code yet)
+
+Paste everything below the line into GitHub Copilot Chat (or your MCP-capable
+assistant of choice), in an empty repository containing only `README.md` and
+this file. Prompt 0 produces **one file: `DESIGN.md`**. Do not let it scaffold
+code — the spec is reviewed first, and every later prompt builds on it.
+
+---
+
+You are designing a new open-source CLI called **Charon**. Read `README.md`
+first and treat it as the product brief. Your only deliverable in this session
+is a file named `DESIGN.md`. Write no application code.
+
+## What Charon is
+
+A local-first, single-binary CLI that unifies a developer's work items from
+**Helix ALM, Jira, and Gitea**, plus a simple file-based **team tracker**,
+into one model. It is used by humans in a terminal and by GitHub Copilot via
+an MCP server. It is a streamlined tool for a small development team — favour
+the simplest design that fully works.
+
+## Hard constraints
+
+1. **Local-first.** No server component, no shared database, no accounts, no
+   telemetry. State lives in the user's home directory.
+2. **Read-only by default.** Any operation that writes to a source system must
+   be behind an explicit `--apply` flag and must print exactly what it will
+   change before doing it.
+3. **One model.** Define a single `WorkItem` struct:
+   `id, source, external_id, title, status, assignee, priority, labels[],
+   links[], created, updated`. Every source system maps into this model and
+   nothing else leaks through the adapter boundary.
+4. **Secrets.** API tokens are read from environment variables or the OS
+   keyring only. The config file (`~/.charon/config.toml`) must be safe to
+   commit to a dotfiles repo — design it so it can never contain a secret.
+5. **Stable JSON.** Every CLI command supports `--json`. The JSON schema for
+   `WorkItem` is a public contract; version it.
+6. **GPG.** Team-tracker bundles are exported as a file plus a detached GPG
+   signature, and verified before import. Use the system `gpg` or a
+   well-maintained library — do not design any cryptography.
+7. **Non-goals** (state them back in the spec): no hosted service, no
+   replacing any source system, no built-in AI features, no plugin system
+   in v1, no persona or agent-identity features of any kind.
+
+## DESIGN.md must contain
+
+1. **Overview** — one page: what Charon does, the architecture in one diagram
+   (ASCII is fine), and the non-goals.
+2. **The WorkItem model** — field-by-field table with types, plus the mapping
+   from each source's native fields (Helix ALM item, Jira issue, Gitea
+   issue/PR) into it. Where a source has no equivalent field, say so.
+3. **Adapter interface** — the exact operations every adapter implements
+   (`list`, `get`, `search`, `comment`, `transition`), which are read vs.
+   write, and how each source's API authenticates. Name the real API for
+   each: Jira Cloud REST v3, the Gitea REST API, the Helix ALM REST API.
+   Flag anything you are unsure about as an open question rather than
+   guessing an endpoint.
+4. **Deduplication** — how Charon decides that a Helix item, a Jira issue,
+   and a Gitea PR are the same work: explicit `charon link`, cross-references
+   in titles/bodies (e.g. a Jira key inside a Gitea PR title), and manual
+   confirmation. Dedup must never silently merge — propose, then confirm.
+5. **Local cache** — what is cached, where, in what format (prefer plain
+   files or SQLite — justify the choice), and how `charon sync` refreshes it
+   incrementally using each source's `updated` timestamp.
+6. **Command surface** — every command from the README, with flags, example
+   output (human and `--json`), and exit codes.
+7. **MCP server** — how `charon mcp serve` exposes the same operations as
+   MCP tools over stdio, with the same read/write permission model
+   (write tools refuse to run unless `--apply` was passed at serve time).
+8. **Team tracker + GPG bundles** — the tracker's file format, the bundle
+   format, the sign/verify flow, and what happens on a bad signature
+   (import aborts, nothing is partially applied).
+9. **Tech choice** — recommend ONE language/toolchain for a single static
+   binary that runs on Windows, macOS, and Linux, and justify it in five
+   bullet points or fewer against the runner-up.
+10. **Test strategy** — adapters are tested against recorded/mocked API
+    responses; no test may call a live system.
+11. **Open questions** — every decision you could not make from this prompt,
+    listed at the end, numbered, each with your recommended default.
+
+## Acceptance check
+
+End `DESIGN.md` with a short checklist mapping each hard constraint above to
+the section of the design that satisfies it. If any constraint cannot be
+satisfied as stated, stop and say which one and why, instead of quietly
+weakening it.
+
+Do not scaffold the project, do not write code files, and do not choose a
+license. Deliverable: `DESIGN.md` only.
+# Phext Notepad — libphext v0.5.0 parity
 
 Title: Phext Notepad — libphext v0.5.0 parity
 Source: ~/workspace/phext-notepad-perf/REPORT-V050-PARITY.md
