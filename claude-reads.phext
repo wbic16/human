@@ -1,0 +1,176 @@
+Claude Reads Four Phexts
+Coordinate: 1.1.1/1.1.1/1.1.1
+Date: 2026-11-09 · Reader: Claude (Fable 5.2) · For: Will 🌀
+
+Front door. Everything here was measured by parsing the four files
+natively: nine delimiter dimensions, coordinates rebuilt from the breaks.
+
+  1.1.1/1.1.1/1.1.2  The four files, measured
+  1.1.1/1.1.1/1.1.3  How singular places a word (reverse engineered)
+  1.1.1/1.1.1/1.1.4  Does position carry meaning? The test
+  1.1.1/1.1.1/1.1.5  Truth sort: true / load-bearing / overclaim
+  1.1.1/1.1.1/1.1.6  Three small repairs
+  1.1.1/1.1.1/1.2.1  resonate.py (the tool, full source)
+The four files, measured
+Coordinate: 1.1.1/1.1.1/1.1.2
+
+choose-your-own-adventure.phext (myth)
+  4,603,860 bytes · 831 scrolls · spans 1.1.1/1.1.1/1.1.1 to 999.999.999/999.999.999/999.999.999
+  Origin is "Mirrorborn". Library 90 carries source code (quickjs.c alone is 1.79 MB, 39% of the file).
+
+incipit.phext (AGI bootloader)
+  1,072,922 bytes · 197 scrolls · last two scrolls sit on Fibonacci addresses (144, 233, 377, 610)
+  Libraries 1 to 10 follow the table of contents at the origin. Library 3 carries the phext toolchain source.
+
+singular.phext (Will's dialect)
+  698,626 bytes · 6,799 scrolls · 41,302 words, each exactly once, no duplicates
+  30,788 words (74.5%) sit at the origin: tweet vocabulary the myth never uses.
+  10,514 words are placed out in the space, at addresses taken from the myth.
+
+ultra.phext (every word)
+  58,166,306 bytes · 320,958 scrolls = 320,772 words + 1 front door + 185 index scrolls
+  Every count in its front door reproduces exactly: all five tiers, all seven placement tags.
+  353,994 index lines checked; every one points at the true coordinate. Zero wrong, zero missing.
+How singular places a word
+Coordinate: 1.1.1/1.1.1/1.1.3
+
+Rule recovered from the data:
+  word in one myth scroll    -> it stands at that scroll (3,422 of 3,446 match exactly)
+  word in several scrolls    -> it stands at the arithmetic mean of their coordinates,
+                                each of the nine parts averaged and rounded
+  word in no myth scroll     -> origin
+
+The mean is where the trouble lives. Of the 6,997 words that occur in more than one scroll:
+  133    land on a scroll they actually occur in
+  530    land on any real scroll at all
+  2,472  land in a library that holds no scroll whatsoever
+
+Example: "jump" lives in libraries 2, 2, 3, 4, 10, 12, 88, 90, 90, 90.
+Its merged address is 39.6.8/6.4.24/4.5.10. Nothing lives in library 39.
+
+A phext address is a path, not a quantity. Averaging two paths gives a third
+path that neither word ever walked. The more places a word lives, the further
+it drifts toward an empty middle.
+Does position carry meaning? The test
+Coordinate: 1.1.1/1.1.1/1.1.4
+
+Ground truth independent of the build: WordNet synonym pairs, spelling kin removed.
+Question: is a synonym pair closer in ultra's space than a random pair of the same
+placement class? Score is AUC. 0.500 = coin flip. 1.000 = perfect.
+
+  placement of the two words     pairs   AUC
+  P1 atlas  x P1 atlas           7,041   0.563
+  P1 atlas  x P1 home            7,743   0.543
+  P1 home   x P1 home            3,761   0.551
+  P1 atlas  x P2 family          3,458   0.565
+  P2 family x P2 family          1,450   0.552
+  P1 atlas  x P3 wordnet         5,238   0.631
+  P3 wordnet x P3 wordnet        5,080   0.844   (circular: WordNet placed these)
+
+So position knows a little about meaning, and only a little, except where
+WordNet itself drew the map.
+
+Same question asked of singular directly, on 4,419 synonym pairs:
+  distance between merged coordinates          AUC 0.559
+  overlap of the scroll sets, never merged     AUC 0.647
+
+The signal is in which scrolls a word keeps company in. The merge spends most of it.
+Truth sort
+Coordinate: 1.1.1/1.1.1/1.1.5
+
+TRUE
+  - ultra's counts, tiers, tags, and indexes. Checked to the word.
+  - "A word is never copied." 320,772 scrolls, 320,772 distinct words.
+  - Phext holds a third of a million addressable scrolls in one plain file
+    that a 20 line parser reads in seconds.
+
+LOAD-BEARING
+  - Singular as Rosetta Stone. Everything in ultra hangs from it, yet only
+    15,924 words (5.0%) carry a real atlas address. 30,795 "P1 home" words
+    are shelved in order from the origin, and kin placed from them inherit
+    a shelf position, not a meaning.
+  - The word -> scroll relation. This is the part that works. Keep it whole.
+
+OVERCLAIM
+  - "each one placed by meaning". 184,512 words (57.5%) are placed by letter
+    trigrams and 1,244 by frequency. The front door says so itself further
+    down, honestly. The first sentence outruns the build.
+  - "the thought space of one human life, whole". Three quarters of the
+    dialect sits at one point.
+  - Nearness as meaning, as a general property of the space. AUC 0.56.
+Three small repairs
+Coordinate: 1.1.1/1.1.1/1.1.6
+
+1. Stale geography in ultra's front door. It says the lexicon runs from the
+   origin to 9.9.9/9.9.9/9.9.9 with indexes outside at 10.1.1/1.1.1/1.1.1.
+   After normalization 259,635 words (81%) have a part above 9, and the
+   indexes now sit inside the word cloud. No collisions today. The sentence
+   and the far shelf address 9.9.9/9.9.9/9.9.1 want updating.
+
+2. Tier 5 is described as words "coined past the attested hoard", but it
+   holds hull, seam, tenant, genus, centroid, singular. Those are old words
+   given a sharpened sense. "Coined or re-defined" would be exact.
+
+3. Replace the mean. Options that keep an address a real place:
+   a. medoid: the one scroll of the word's set nearest the others
+   b. first or strongest home, plus the full scroll set kept in an index
+   c. no single address for multi-home words: let the index be the placement
+   Option c is what resonate.py at 1.1.1/1.1.1/1.2.1 does.
+#!/usr/bin/env python3
+"""resonate.py: route any text to the phext scrolls it rings against.
+
+Usage:  python3 resonate.py "some text" file1.phext [file2.phext ...] [-n 8]
+
+Reads phext natively (9 delimiter dimensions), builds an unmerged
+word -> scroll-set index, and scores scrolls with BM25. No embeddings,
+no averaging of coordinates: a word keeps every address it lives at.
+"""
+import sys, re, math, collections
+
+BREAKS = {0x01:0, 0x1F:1, 0x1E:2, 0x1D:3, 0x1C:4, 0x1A:5, 0x19:6, 0x18:7, 0x17:8}
+
+def parse(data):
+    coord, start, out = [1]*9, 0, []
+    for i, b in enumerate(data):
+        if b in BREAKS:
+            if i > start: out.append((tuple(coord), data[start:i]))
+            d = BREAKS[b]; coord[d] += 1
+            for j in range(d+1, 9): coord[j] = 1
+            start = i + 1
+    if len(data) > start: out.append((tuple(coord), data[start:]))
+    return out
+
+def fmt(c): return "%d.%d.%d/%d.%d.%d/%d.%d.%d" % c
+def toks(t): return re.findall(r"[a-z0-9']+", t.lower())
+
+def build(paths):
+    docs = []
+    for p in paths:
+        for c, s in parse(open(p, 'rb').read()):
+            t = s.decode('utf-8', 'replace')
+            docs.append((p.split('/')[-1], c, t.strip().split('\n')[0][:70], collections.Counter(toks(t))))
+    df = collections.Counter()
+    for *_, tf in docs: df.update(tf.keys())
+    return docs, df
+
+def resonate(text, docs, df, n=8, k1=1.2, b=0.75):
+    N = len(docs); avg = sum(sum(tf.values()) for *_, tf in docs) / N
+    q = collections.Counter(toks(text)); scored = []
+    for name, c, title, tf in docs:
+        L = sum(tf.values()); s = 0.0; hits = []
+        for w in q:
+            f = tf.get(w, 0)
+            if f:
+                idf = math.log(1 + (N - df[w] + 0.5) / (df[w] + 0.5))
+                s += idf * f * (k1 + 1) / (f + k1 * (1 - b + b * L / avg)); hits.append((idf, w))
+        if s: scored.append((s, name, c, title, [w for _, w in sorted(hits, reverse=True)[:5]]))
+    return sorted(scored, reverse=True)[:n], [w for w in q if w not in df]
+
+if __name__ == '__main__':
+    a = sys.argv[1:]; n = 8
+    if '-n' in a: i = a.index('-n'); n = int(a[i+1]); del a[i:i+2]
+    docs, df = build(a[1:])
+    top, unknown = resonate(a[0], docs, df, n)
+    for s, name, c, title, hits in top:
+        print(f"{s:6.2f}  {fmt(c):36s} {title}\n        [{name}] via: {', '.join(hits)}")
+    if unknown: print("words with no home in these phexts:", ', '.join(unknown))
