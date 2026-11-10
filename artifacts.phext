@@ -14,7 +14,7 @@ truth: artifacts-source.json beside this builder
 (build_artifacts_phext.py); never hand-edit the .phext.
 artifacts.phext is published to wbic16/human@exo.
 
-Artifacts inscribed: 15
+Artifacts inscribed: 16
 
 Index (coordinate — title — source):
 - 19.7.11/9.7.12/7.6.9 — Light the Next Light — intro song lyrics & time map — ~/workspace/exocortexia-cartoon/intro/LYRICS.md
@@ -27,6 +27,7 @@ Index (coordinate — title — source):
 - 21.7.10/8.6.11/7.6.9 — Scrolltown: The Great Form Mix-Up — cartoon script & treatment — ~/workspace/exocortexia-cartoon/SCRIPT.md
 - 23.7.8/9.7.12/8.6.9 — Shot List — Scrolltown Intro Video — ~/workspace/exocortexia-cartoon/intro/SHOT-LIST.md
 - 24.6.8/7.6.10/6.6.9 — Scrolltown — Production Workflow — ~/workspace/scrolltown-reorg/workflow/PRODUCTION.md
+- 31.7.9/9.6.12/6.6.9 — The Power of Phext — Walkthrough Package — ~/workspace/phext-walkthrough/WALKTHROUGH.md
 - 32.6.7/7.6.10/6.5.9 — Neovim + Phext — Design: Phext-Scale Navigation in a Modal Editor — ~/workspace/goals/neovim-phext-support-merge-ready-pr-compiled-with-phcc/files/neovim-phext-design.md
 - 32.6.8/8.6.11/6.5.9 — Charon — README — ~/workspace/charon-seed/README.md
 - 33.6.9/8.6.11/7.5.9 — Desktop SSO for Phext Notepad — the cookie paste is gone — ~/workspace/phext-notepad-perf/REPORT-DESKTOP-SSO.md
@@ -1128,7 +1129,362 @@ its last ones, and the finale named in STORY-ARC.md closes each fill.
 direction ("build up a queue of storyboards, scripts, episodes, intro
 videos… and fill out the full story arc") · companion to STORY-ARC.md ·
 the live board is production/QUEUE.md.*
-# Neovim + Phext — Design: Phext-Scale Navigation in a Modal Editor
+# The Power of Phext — Walkthrough Package
+
+Title: The Power of Phext — Walkthrough Package
+Source: ~/workspace/phext-walkthrough/WALKTHROUGH.md
+Inscribed: 2026-11-09 22:52 CST
+SHA-256: b3540a3ab53384ad25096f8fd1282e2b331147b00fd358721d6a511cec13f4f1
+
+---
+# The Power of Phext — Walkthrough Package
+
+**Framing:** Wikipedia in a box, without a database backend.
+**Hero surface:** Phext Edit — https://edit.phext.io
+**Supporting artefact:** `demo/` in this folder — a working mini-encyclopedia in one phext file, free to download and run.
+**Status:** package for Will's approval. Nothing in here has been posted.
+
+---
+
+## 1. Concept + hook
+
+Every encyclopedia you have ever used is a database wearing a website as
+a hat. The articles live in tables; a server you don't control answers
+your questions; the knowledge is only yours while the backend is up and
+lets you in.
+
+Phext removes the backend. An encyclopedia becomes **one plain-text
+file** in which every article lives at an address — a coordinate — and
+the addressing does the work the database used to do. You can open the
+file, read it, diff it, email it, version it, seal it. To use it you
+need a text editor. To *browse* it beautifully, you need Phext Edit.
+
+**The one-sentence pitch:**
+
+> Phext is Wikipedia in a box: an entire encyclopedia as one addressable
+> plain-text file — no database backend, no lock-in — and you can try it
+> right now, in your browser, at edit.phext.io.
+
+**Site tagline (the site's own words):** "Write in 11 dimensions:
+plain text, no lock-in."
+
+---
+
+## 2. YouTube script (target 6–8 minutes)
+
+Narration is written for ~140 words/minute. On-screen cues in
+`[brackets]`. Anything marked **[CONFIRM]** is a recording-day check
+listed in §5 — the script is worded so it stays true either way.
+
+### Chapter list (upload with the video)
+
+```
+0:00 Wikipedia, no database
+0:35 The backend problem
+1:20 What phext actually is
+2:00 Phext Edit: the tour
+3:10 Jump to a coordinate
+3:50 Search the whole lattice
+4:30 Edit one scroll, save
+5:15 Carry your own encyclopedia
+6:15 Why this matters (and the AI angle)
+6:50 Try it yourself
+```
+
+### Script
+
+**0:00 — Cold open.**
+`[SCREEN: edit.phext.io already open on a phext, mid-browse. Cursor moves through the lattice.]`
+"This is an encyclopedia. Not a website backed by an encyclopedia —
+the encyclopedia itself. Every article in it lives at an address, in
+one plain-text file, and there is no database anywhere in this picture.
+No server farm, no SQL, no backend to keep alive. Just text, with
+coordinates. Watch."
+
+**0:35 — The problem.**
+`[SCREEN: cutaway — a typical wiki stack diagram: browser → app server → database. Each layer gets a red X in turn.]`
+"We're used to knowledge being locked behind backends. Your notes app,
+your wiki, your company handbook — the words are yours, but they sit in
+somebody's database, in somebody's format, retrievable only while
+their server runs and their API permits. Export, when it exists, is a
+funeral rite: everything you had, flattened, after you've already
+decided to leave. There's a quieter option, and it's older than the
+database: a text file — if the text file had addresses."
+
+**1:20 — What phext is.**
+`[ON-SCREEN TEXT: "phext = plain text + coordinates"]`
+`[SCREEN: a phext file open in a plain editor; scroll through raw text.]`
+"Phext is plain text divided into chunks called scrolls. Each scroll
+lives at a coordinate — nine numbers, grouped like a library address:
+library, shelf, series; collection, volume, book; chapter, section,
+scroll. Count the text inside a scroll as two more dimensions and you
+get the tagline on the site: eleven dimensions, plain text, no
+lock-in. A scroll that uses no structure is still just text — open it
+anywhere. But because every scroll has an address, software can fetch
+exactly one article, change exactly one article, and leave the other
+twenty thousand untouched. And the structure costs almost nothing:
+nine separator bytes, borrowed from the unused corners of the
+character set, are the entire machinery. No binary format, no schema,
+no container. If every phext tool vanished tomorrow, you could still
+read the file with your eyes — the addresses are a convention written
+in the text, not a lock on it."
+
+**2:00 — Phext Edit: the tour.**
+`[SCREEN: fresh browser tab → edit.phext.io. Let the page load on camera.]`
+"This is Phext Edit, at edit.phext.io. It's the editor this format
+ships with, it's open source, and the public utilities on the site run
+without signing in — **[CONFIRM: which demo phext is offered to a
+signed-out visitor today, and start there]** Start where any reader
+starts: browsing. The phext opens as a space you can navigate —
+dimension by dimension, scroll by scroll.
+`[ON-SCREEN TEXT: "every scroll has an address"]`
+Notice what's not happening: no page reloads from a database, no query
+language. The file's own structure is the index."
+
+**3:10 — Jump to a coordinate.**
+`[SCREEN: navigate/jump by coordinate to a specific scroll; show the coordinate on screen.]`
+"Because every scroll has an address, you can go straight to one.
+Here's a coordinate — **[CONFIRM: use a coordinate that exists in the
+demo phext on screen]** — and here is its scroll, immediately. That's
+what a database index does, except the index isn't a separate machine
+or a separate file. It's the shape of the text itself. An address you
+can say out loud, write in a notebook, or put in a footnote — and it
+still works in ten years, because it's just numbers in a text file."
+
+**3:50 — Search.**
+`[SCREEN: run a search for a word; results come back as coordinates.]`
+"Of course you can search the whole lattice — and notice what a search
+result *is* here: not a page, a coordinate. The place where the thing
+lives. Search hands you addresses, and addresses are permanent in a
+way URLs never were."
+
+**4:30 — Edit one scroll, save.**
+`[SCREEN: open one scroll, change one line, save.]`
+"Now the edit. I change one line, in one scroll, and save. Phext
+Edit holds edits in an overlay and rebuilds the file on save —
+byte-perfect everywhere I didn't touch. One scroll changed; the rest
+of the encyclopedia is bit-for-bit what it was. If you've ever watched
+a wiki turn a one-line correction into an unreviewable database
+transaction, you know why that matters: here, an edit is a diff a
+human can read."
+
+**5:15 — Carry your own encyclopedia.**
+`[SCREEN: terminal. The downloadable demo: demo/wiki.phext + query_demo.py from this package.]`
+"And when you want the box itself, take the file. This is a complete
+miniature encyclopedia — twenty-four articles, forty-nine scrolls,
+twenty-one and a half kilobytes — one phext. Watch me ask it questions
+with nothing but a small script and the file:
+`[ON-SCREEN: query_demo.py toc → get 1.1.1/2.1.2/2.1.1 → the Oak article]`
+Table of contents, straight from the coordinates. One article,
+fetched by address. And an edit:
+`[ON-SCREEN: query_demo.py edit … then a byte-diff summary]`
+I rewrote one summary scroll; the bytes before it and after it are
+byte-identical — the change is exactly one scroll wide. And if I want
+this box on the network, a small open-source server called SQ hosts
+the file and serves individual scrolls by coordinate — the file is
+still the database; the server is just a doorman. Seal it with
+xz and the whole encyclopedia is nine kilobytes: small enough to
+email, small enough to keep in a git repo, small enough to carry on a
+laptop into a place with no network at all. **Wikipedia in a box.**"
+
+**6:15 — Why it matters (and the AI angle).**
+`[ON-SCREEN TEXT: "diff it · version it · email it · seal it"]`
+"So: one file you can diff, version, back up, and hand to someone.
+That's the human case. There's a second case arriving fast: AI
+systems need memory that outlives a session, and a phext is a memory
+a machine can address precisely — fetch one scroll of context, update
+one scroll of record, prove later what changed. The same property
+that makes a good encyclopedia makes a good exocortex. I keep my own
+working memory this way; this channel's notes live in scrolls."
+
+**6:50 — Close + CTA.**
+`[SCREEN: back to edit.phext.io; end card with the URL.]`
+"Try it. Edit.phext.io — the public demos run right in your browser,
+no sign-in for the utilities, and the whole stack is open source. The
+mini-encyclopedia from this video is linked below; download the file
+and run it yourself. Wikipedia in a box. No database was harmed —
+because there isn't one."
+
+### Shot list (in recording order)
+
+1. Browser: edit.phext.io pre-loaded mid-browse (cold open), then a fresh-tab load for the tour.
+2. Cutaway graphic: browser → app server → database, layers crossed out (simple slide).
+3. Plain-text editor: raw phext file, slow scroll.
+4. Editor: navigation/browse pass; coordinate jump; search; one-line edit + save.
+5. Terminal: `query_demo.py toc`, `get`, `edit` on demo/wiki.phext, byte-diff printout, `xz` seal size.
+6. End card: edit.phext.io URL + tagline.
+
+---
+
+## 3. YouTube metadata
+
+**Title options**
+1. Wikipedia in a Box (No Database Required) — phext walkthrough
+2. Your Encyclopedia Doesn't Need a Backend: Write in 11 Dimensions
+3. One Text File, 24 Articles, Zero Databases — the power of phext
+
+**Description**
+
+```
+Wikipedia in a box — with no database backend.
+
+Phext is plain text with coordinates: every article ("scroll") in an
+encyclopedia lives at a 9-number address inside a single text file,
+and the addressing does the work a database index usually does. In
+this walkthrough we browse, search, jump by coordinate, and edit a
+phext live in Phext Edit — then download a complete mini-encyclopedia
+and query it from the terminal with nothing but the file.
+
+Try it now (public demos, no sign-in for the utilities):
+https://edit.phext.io
+
+Get the demo from this video (wiki.phext + query tool):
+[DEMO LINK]
+
+Measured in the demo: 49 scrolls, 21,504 bytes, one-coordinate edits
+that leave every other byte untouched, 9,300 bytes sealed with xz.
+The same format carries production artefacts — the phcc compiler's
+source rides in a 64,399-scroll phext in an open-source repo.
+
+Chapters:
+0:00 Wikipedia, no database
+0:35 The backend problem
+1:20 What phext actually is
+2:00 Phext Edit: the tour
+3:10 Jump to a coordinate
+3:50 Search the whole lattice
+4:30 Edit one scroll, save
+5:15 Carry your own encyclopedia
+6:15 Why this matters (and the AI angle)
+6:50 Try it yourself
+
+Source: [GITHUB LINK] · phext format + SQ server: [LINK]
+```
+
+**Tags:** phext, plain text, digital garden, knowledge management,
+offline first, wikipedia, text files, open source, data ownership,
+exocortex, AI memory, no database, future of text
+
+**Thumbnail text options**
+1. WIKIPEDIA IN A BOX
+2. NO DATABASE. JUST TEXT.
+3. 11 DIMENSIONS OF TEXT
+
+**Pinned comment draft**
+
+> The mini-encyclopedia from 5:15 is a real file you can download and
+> run — 24 articles, one phext, no server. Link in the description.
+> What would you put in a box like this?
+
+---
+
+## 4. X package
+
+**Announcement post** (≤280 chars — the link counts as 23):
+
+> Wikipedia in a box. No database backend.
+>
+> phext = plain text where every article lives at a coordinate — one file you can diff, version, email, seal.
+>
+> New walkthrough: browsing, searching & editing it live in Phext Edit 👇
+> edit.phext.io
+
+**Thread (7 posts)**
+
+1/ Every encyclopedia you've used is a database wearing a website as a
+hat. The words are yours; the retrieval is rented. If the backend
+dies, your knowledge is a backup file and a prayer.
+
+2/ phext deletes the backend. Take plain text, divide it into scrolls,
+give every scroll a coordinate — library.shelf.series /
+collection.volume.book / chapter.section.scroll. The addressing IS
+the index.
+
+3/ A scroll with no structure is still just text: open it anywhere.
+But with addresses, software can fetch exactly one article, edit
+exactly one scroll, and leave the other 24,000 untouched. An edit
+becomes a diff a human can read.
+
+4/ This is Phext Edit — edit.phext.io. Browse the lattice, jump to a
+coordinate, search and get addresses back, edit a scroll and save:
+the file rebuilds byte-perfect everywhere you didn't touch.
+
+5/ And when you want the box itself: our demo encyclopedia is 24
+articles, 49 scrolls, 21,504 bytes — one file. One-coordinate edit
+measured: 926 bytes before the scroll and 20,578 after it,
+byte-identical. Sealed with xz: 9,300 bytes. Email-sized Wikipedia.
+
+6/ Same format, production scale: the phcc compiler's entire source
+rides in a phext of 64,399 scrolls. An encyclopedia is the same shape,
+just more volumes. The addressing doesn't change as it grows.
+
+7/ Try it: edit.phext.io — public demos in the browser, no sign-in
+for the utilities, all open source. Write in 11 dimensions: plain
+text, no lock-in. What would you put in the box?
+
+**Native-video cutdown outline (60–90 s)**
+
+- 0:00–0:08 — Hook over editor footage: "This is an encyclopedia. There is no database."
+- 0:08–0:25 — Coordinate jump + search results as coordinates (from the long cut, 3:10/3:50).
+- 0:25–0:45 — One-line edit + save; overlay line: "one scroll changed, everything else byte-identical."
+- 0:45–1:10 — Terminal: `get` one article from the downloaded file; seal size on screen: "the whole encyclopedia: 9,300 bytes, sealed."
+- 1:10–1:25 — End card: edit.phext.io + "Write in 11 dimensions: plain text, no lock-in."
+
+---
+
+## 5. Production notes
+
+**Recording checklist (capture in this order)**
+
+1. Terminal block first (it's deterministic): `query_demo.py toc`,
+   `get 1.1.1/2.1.2/2.1.1` (Oak), `edit` demo on a scratch copy,
+   byte-diff summary, `xz -9` seal size. Script + commands in `demo/`.
+2. Plain-editor raw-file scroll (any editor; use demo/wiki.phext).
+3. Browser block at edit.phext.io: fresh-tab load, browse, coordinate
+   jump, search, one-line edit, save. Clear cookies first so the
+   signed-out experience is what's on camera.
+4. Cutaway stack-diagram slide (build once, reuse in the cutdown).
+5. End card.
+
+**Confirm during recording (not asserted as fact anywhere above)**
+
+- Which phext the site offers a signed-out visitor (demo/welcome
+  content, its name, and whether browsing it needs sign-in today).
+- Exact on-screen labels/gestures for: opening a phext, the dimension
+  navigation UI, coordinate jump, search box, save. (Capabilities are
+  verified from the phext-lattice repo — Navigator/search/overlay-save
+  are real — but the hosted UI's exact presentation is checked on the
+  day, and B-roll follows the checker, not this script.)
+- Whether a custom phext (e.g. demo/wiki.phext) can be loaded into the
+  hosted editor by a visitor, and how (the repo documents /submit as
+  a *signed-in* upload-for-review flow — do not present it as a
+  no-login import). If wiki.phext can't be shown in the hosted editor,
+  the script already carries the concept on the site's own content and
+  the proof on the local file.
+- The current public utilities list on the site (Up Goer Five,
+  Coordinate TTS demo, Learn You Phext per the standing record).
+
+**Runtime estimate (estimate, labelled):** narration measures 842 spoken
+words ≈ 6–7 min at 140 wpm, plus demo pauses (page loads, terminal
+runs) that are performed, not spoken — inside the 6–8 min target. Recording + screen capture ≈ 45–75 min;
+edit ≈ half a day. All estimates, not measurements.
+
+**Claims to avoid**
+
+- ❌ "Wikipedia has been converted to phext" / any implication the
+  full Wikipedia is in the box. The claim is architectural: an
+  encyclopedia *can* be carried this way; the demo is 24 articles.
+- ❌ Any performance number not measured in the demo README or cited
+  from the phext-lattice README / phcc repo (no "100× faster" claims).
+- ❌ "No server at all" for the hosted editor — edit.phext.io is a
+  hosted web app. The no-backend claim is about *your data's* shape:
+  the file carries itself; SQ/edit are thin hosts, not a DBMS.
+- ❌ A no-login *import/upload* flow (see confirm list).
+- ❌ SQL comparisons beyond the framing ("no query language needed
+  for this") — don't claim phext replaces databases generally.
+- ❌ Coordinates as global/unique across files — coordinates are
+  internal to each phext; say "in this file" when it matters.
+# Neovim + Phext — Design: Phext-Scale Navigation in a Modal Editor
 
 Title: Neovim + Phext — Design: Phext-Scale Navigation in a Modal Editor
 Source: ~/workspace/goals/neovim-phext-support-merge-ready-pr-compiled-with-phcc/files/neovim-phext-design.md
