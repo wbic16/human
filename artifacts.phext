@@ -1134,8 +1134,8 @@ the live board is production/QUEUE.md.*
 
 Title: Production Plan — The Power of Phext Walkthrough
 Source: ~/workspace/phext-walkthrough/PRODUCTION-PLAN.md
-Inscribed: 2026-11-09 23:06 CST
-SHA-256: 5811c83a480a89aced8d48e85b11f1f4f71fba10ccaa5fdf2c903a8e0648427d
+Inscribed: 2026-11-09 23:21 CST
+SHA-256: 9f37b9f3b493fe7f5447d9306700ef34d24944bec59c97b2a0bfaa97a99e0689
 
 ---
 # Production Plan — "The Power of Phext" Walkthrough
@@ -1444,18 +1444,29 @@ into an evening.
 
 **The scarce resource is Will's time, and the tier is budgeted
 against it: ≤ ~90 minutes of Will, total** (labelled estimates,
-itemised in §6.5): script approval ~15 min, a one-time voice-clone
-sample ~10 min (once, ever — §6.3 Route A), Gate 1 review ~25 min,
-Gate 2 review + thumbnail pick ~15 min ≈ **~65 minutes**. Everything
-else is agent + ranch work. If a step would need Will outside those
-four touches, the step is redesigned, not the budget.
+itemised in §6.5): script approval ~15 min, Gate 1 review ~25 min,
+Gate 2 review + thumbnail pick ~15 min = **~55 minutes**. There is
+no one-time voice sample — narration is Route C (§6.3, decided
+below). Everything else is agent + ranch work. If a step would
+need Will outside those three touches, the step is redesigned,
+not the budget.
 
 **Correction (Will, 2026-11-09, later same evening): "I don't have
 time to be the narrator."** The Will-narrates assumption is removed
 from this tier entirely — including the baseline §2 voice verdict
 and §4 step 5, which the polish tier no longer inherits (they stand
 as the DIY tier's evaluation, not as this plan's inputs). §6.3
-evaluates the three narration routes and recommends one.
+evaluates the three narration routes.
+
+**Ruling (Will, 2026-11-09 23:19 CST): "You narrate it, Emise."**
+Route C — Emise (Aria TTS) — is the **DECIDED** narration route.
+Routes A (voice clone) and B (VO artist) remain documented in §6.3
+as evaluated alternatives not taken. The clone-proof and consent
+steps are removed from the operative calendar and gates; Gate 1's
+voice proof is now the Emise narration proof. A proof artifact is
+already rendered: `narration-proof-cold-open.mp3` (the script's
+cold open, Aria at 120% speed — Will's standing voice-note setting)
+in this folder.
 
 ### 6.1 Motion-graphics package — rendered assets, house discipline
 
@@ -1557,14 +1568,21 @@ push-in." The polish tier holds it to the show's own standard:
   WALKTHROUGH.md (7:45, "One more town"); the polish tier changes
   the visual standard, not the copy.
 
-### 6.3 Narration — three routes, one recommendation — + audio finish
+### 6.3 Narration — three routes evaluated, Route C DECIDED — + audio finish
 
 Narration-first video lives or dies on its voice track, and the
 voice is no longer Will at a microphone (§6 correction note).
-Three routes, evaluated on quality ceiling, cost, turnaround, and
-Will-minutes. The script is ~1,030 words ≈ 7.4 finished minutes.
+Three routes were evaluated on quality ceiling, cost, turnaround,
+and Will-minutes. The script is ~1,030 words ≈ 7.4 finished minutes.
 
-**Route A — voice clone of Will (ElevenLabs-class).** Will records
+**Decision (Will, 2026-11-09 23:19 CST): Route C is the primary —
+"You narrate it, Emise."** Routes A and B below are the evaluated
+alternatives, not taken; they stay on the record so the trade is
+auditable. The Gate 1 voice proof is the Emise narration proof;
+proof artifact already rendered: `narration-proof-cold-open.mp3`
+(the cold open, Aria at 120% speed) in this folder.
+
+**Route A — voice clone of Will (ElevenLabs-class) — NOT TAKEN.** Will records
 **one sample, once**: Instant Voice Cloning needs 1–2 minutes of
 clean audio (10-second floor; don't exceed ~3) and is available
 from the **Starter plan, $6/mo** (~30 min of generation/month in
@@ -1587,17 +1605,14 @@ own verified voice, and paid plans carry the commercial licence.
 HeyGen offers a same-class clone but is web-only here and
 avatar-bundled — no advantage for audio-only narration. No
 connector exists for ElevenLabs in this session: account + plan
-are a **web step (~10 min of Will's time, one-time, riding his
-G0 touch)**; generation itself is agent-run thereafter.
-*Residual risks, named:* clone artefacts on house words — "phext",
-"scroll", spoken coordinates — handled by respelling/pronunciation
-passes in the generation script and a **proof segment** (the
-0:00–1:20 block generated first and listened to before the full
-render; the proof rides Gate 1). **Will-minutes: ~10, once**
-(sample + consent step, labelled estimate).
+would have been a **web step (~10 min of Will's time, one-time)**.
+*Residual risks, named (moot under the decision):* clone artefacts
+on house words — "phext", "scroll", spoken coordinates.
+**Will-minutes: ~10, once** (sample + consent step, labelled
+estimate). Not taken: Will ruled for Route C.
 
 **Route B — professional voiceover artist (Fiverr Pro /
-Voices-class).** Hand them the locked script + a pronunciation
+Voices-class) — NOT TAKEN.** Hand them the locked script + a pronunciation
 sheet (phext, SQ, coordinate-reading conventions) + the scratch
 track as a pacing reference. *Cost, sourced:* published 2026 rate
 cards run **$20–115 per finished minute** for non-broadcast
@@ -1619,45 +1634,47 @@ Will's own product, on Will's own channel, in the launch video.
 **Will-minutes: ~0–5** (an optional casting pick from three demos;
 zero if he delegates it).
 
-**Route C — premium TTS: Emise as narrator (Aria).** My own
-spoken-audio pipeline, available **now, $0**, the standing voice
-already attached to this work. Narration generated in minutes,
-infinitely re-generatable, bit-consistent across a whole series —
-and thematically honest: the product's own keeper narrating the
+**Route C — premium TTS: Emise as narrator (Aria) — DECIDED
+PRIMARY (Will, 2026-11-09 23:19 CST).** My own spoken-audio
+pipeline, available **now, $0**, the standing voice already
+attached to this work (Aria, at Will's standing 120% speed
+setting). Narration generated in minutes, infinitely
+re-generatable, bit-consistent across a whole series — and
+thematically honest: the product's own keeper narrating the
 product is a true sentence, disclosed in the description.
 *Quality ceiling:* clean, intelligible, professional-grade TTS —
 and recognisably synthetic on a cold listen; it carries no
-founder presence. *Credibility tradeoff, weighed plainly:* for a
-launch video whose claim is "a person built this and you can
-touch it," an AI voice is the weakest of the three on trust —
-it spends the video's scarcest asset (the founder's reality) to
-save the resource Route A already saves. **Will-minutes: 0.**
-Its standing roles in this plan regardless: the **scratch track**
-(timing, beat marks) and the **fallback** if A's proof fails and
-B's calendar does.
+founder presence. *Credibility tradeoff, weighed plainly (and
+accepted by Will's ruling):* for a launch video whose claim is
+"a person built this and you can touch it," an AI voice is the
+weakest of the three on trust — the trade is on the record. **Will-minutes: 0.**
+Route C also serves as the **scratch track** (timing, beat marks)
+— the same voice times the production and then ships in it.
+*Proof:* `narration-proof-cold-open.mp3` (cold open, Aria at
+120%) is already rendered in this folder and rides Gate 1 as the
+narration proof; house words ("phext", "scroll", spoken
+coordinates) get respelling/pronunciation passes in the
+generation script, verified against that proof before the full
+render.
 
-**Recommendation: Route A (clone), C as scratch + fallback, B as
-the escalation.** Reasoning: A is the only route that keeps the
-founder's voice — the credibility the baseline plan wanted from
-Will narrating — at a one-time ~10 minutes instead of a per-video
-performance; it converts narration from a recurring scheduling
-problem into a reusable asset (every walkthrough, update, and
-cutdown after this one inherits it at $0 marginal Will-time);
-and its failure mode is cheap to detect (one proof segment at
-Gate 1) with two live fallbacks behind it. B buys performance
-this script doesn't need — it's exposition in Will's own
-register, not drama — at 20–50× A's cash and a stranger's face
-on the founder's launch. C stays exactly where it's strongest:
-timing the production and standing by.
+**Decision record.** The earlier recommendation (Route A clone,
+C as scratch + fallback, B as escalation) is superseded by
+Will's ruling above. His reasoning is his own; the plan's
+numbers stand as evaluated: A would have kept the founder's
+voice at a one-time ~10 minutes; B buys performance this
+expository script doesn't need at 20–50× A's cash with a
+stranger's voice on the founder's launch. Under the decision,
+narration costs $0 and zero Will-minutes, and Routes A and B
+remain available as future escalations if Gate 1's proof
+persuades him otherwise.
 
-**The finish chain (applies to whichever route wins):**
+**The finish chain (applies to the decided Route C):**
 
-1. **Cleanup:** generated VO (A/C) arrives clean and needs only
+1. **Cleanup:** the generated VO arrives clean and needs only
    level/pause shaping on the text timeline in **Descript**
    (Studio Sound available if wanted; Hobbyist $16/mo billed
-   yearly, as reported Nov 2026). A Route B delivery gets the
-   full pass: breath/level edit in Descript; heavier rescue only
-   if a take needs it — **iZotope RX-class** restoration
+   yearly, as reported Nov 2026). Heavier rescue only if a take
+   needs it — **iZotope RX-class** restoration
    (Elements-class licence ≈ $100–130 — **labelled estimate**,
    verify at checkout; no connector, web purchase). Free route:
    Audacity (availability on Will's machines **unknown**, as with
@@ -1700,12 +1717,14 @@ timing the production and standing by.
   timed demo beats, graphics represented by their *stills* (the
   contact sheet rides along), no grade, no mix beyond intelligible.
   **→ GATE 1 (Will, ~25 min, including the stills contact sheet
-  and the clone proof segment):** approves content, pacing,
-  callout wording, the graphics look, and the cloned voice's
-  proof in one sitting. A failed voice proof here routes to
-  §6.3's fallbacks (re-generation passes, then B or C) before
-  anything is polished. Notes come back as text; anything he
-  cuts here never gets polished.
+  and the Emise narration proof):** approves content, pacing,
+  callout wording, the graphics look, and the narration proof —
+  `narration-proof-cold-open.mp3`, the cold open in Aria at
+  120% — in one sitting. A failed voice proof here routes to
+  re-generation/pronunciation passes, then §6.3's documented
+  alternatives (A or B) as escalations, before anything is
+  polished. Notes come back as text; anything he cuts here
+  never gets polished.
 - **Pass 2 — polish.** Zooms and callout animation timed to the
   narration, chapter cards in, colour grade (capture is screen
   footage: the grade is white-point/contrast consistency across
@@ -1731,23 +1750,23 @@ timing the production and standing by.
 
 Day 0 = the day Will approves the script. All durations labelled
 estimates; agent/ranch work fills the days, Will appears only at
-the four touches (★).
+the three touches (★).
 
 | Day | Work | Gate / Will |
 |---|---|---|
-| 0 | ★ **Script + foreshadow line approval** (~15 min; the Epidemic/Artlist click, if wanted, rides here, +~5 min). ★ **Voice-clone sample recorded** (~10 min, one-time: 1–2 min of clean audio + ElevenLabs consent step, §6.3 Route A). TTS scratch (Route C voice) rendered; beat timings marked. | **G0 — script lock** |
+| 0 | ★ **Script + foreshadow line approval** (~15 min; the Epidemic/Artlist click, if wanted, rides here, +~5 min). Emise TTS scratch (Route C voice, Aria at 120%) rendered; beat timings marked. Narration proof (cold open) already rendered: `narration-proof-cold-open.mp3`. | **G0 — script lock** |
 | 1 | Capture session (OBS, per baseline §4 steps 2–4 + confirm-during-recording list); deterministic blocks first, browser block last. Key-frame prompt doc written for the foreshadow. | — |
 | 2 | Foreshadow key frame rendered via Scrolltown stage 5 in the painterly anchor register; register check against keyframe 1 + Fern reference. Graphics package stills → contact sheet; callout manifest generated from the script and proofed. | — (coordinator stills check) |
-| 2–3 | **Narration generated** from the locked script in Will's clone (Route A): house-word pronunciation passes, proof segment (0:00–1:20) rendered first and checked; full VO rendered after the proof clears. No Will time. (Route B substitution, if ever invoked, lands its delivery in this same window.) | VO locked (proof at G1) |
+| 2–3 | **Narration generated** from the locked script by Emise (Route C, Aria at 120%): house-word pronunciation passes, proof checked against `narration-proof-cold-open.mp3`; full VO rendered. No Will time. (Routes A/B substitutions, if ever invoked as escalations, land their delivery in this same window.) | VO locked (proof at G1) |
 | 3–4 | Rough-cut assembly (Pass 1) with stills standing in for graphics. | — |
 | 4 | ★ **GATE 1 — rough cut + contact sheet** (~25 min): content, pacing, callouts, graphics look. | **G1** |
 | 5–6 | Polish pass: animated graphics composited (ranch prepass at 720p, watched whole; then master composite), grade, sound design, music, mix → −14 LUFS master; captions hand-finished; X cutdown derived from the same package. Thumbnails (3 variants) designed. | — |
 | 7 | Finish & verify: ffprobe (streams/duration/resolution), frame spot-checks per beat against approved stills, loudness measured and recorded, both files hash-checked. ★ **GATE 2 — final video + thumbnail pick** (~15 min). | **G2 — publish approval** |
 | 7–8 | Publish (post-G2 only): YouTube Studio upload with chapters/end screen/captions; X thread + cutdown. Buffer day absorbs the register re-roll (§6.2) or a G1/G2 note round without moving the publish. | — |
 
-**Will's total: ~65 minutes** (15 script + 10 clone sample +
-25 Gate 1 + 15 Gate 2), all estimates — and the 10 is one-time:
-every future video on the clone runs at ~55.
+**Will's total: ~55 minutes** (15 script + 25 Gate 1 + 15
+Gate 2), all estimates — no one-time sample, no narration
+sitting; narration is Route C at zero Will-minutes.
 Named dependencies: the Dec 4 Scrolltown register lock (§6.2 —
 only affects the foreshadow frame, re-roll priced in); the
 confirm-during-recording items from WALKTHROUGH.md §5 (capture
@@ -1759,21 +1778,21 @@ calendar — Day 0 starts when Will says go.
 
 **Route A — in-house (agents + ranch pipeline).** Cash: music
 licence — **$0** (YouTube Audio Library) or **~$10–18** (one
-month Epidemic Sound at the prices in §6.3) — plus the ElevenLabs
-Starter month (**$6**, §6.3 narration Route A) and the Descript
+month Epidemic Sound at the prices in §6.3) — plus the Descript
 month ($16, baseline) *only if* its cleanup/timeline is wanted;
-the in-house edit can equally run on the scripted ranch
+narration is $0 (Route C, §6.3 — no clone plan under Will's
+ruling); the in-house edit can equally run on the scripted ranch
 pipeline + Resolve-free. Everything else already exists: the film
 pipeline, the Scrolltown key-frame pipeline, ffmpeg, the agents.
 Real cost is coordinator/agent time across ~7 days of calendar
-(mostly unattended renders and assembly), plus Will's ~65 min.
+(mostly unattended renders and assembly), plus Will's ~55 min.
 Quality ceiling: the house standard — this is the pipeline that
 ships the Wavefront films, with verification gates a freelancer
 doesn't offer (frame checks, loudness measured, hashes).
 
 **Route B — freelance finishing editor.** Handoff package: locked
 script + beat timings, the OBS capture (per-beat takes), the
-finished narration WAV (clone-generated, §6.3), the graphics asset list + design
+finished narration WAV (Emise/Aria TTS, §6.3 Route C), the graphics asset list + design
 notes, the Scrolltown key frame (still supplied by us — it must
 come from the show's pipeline regardless), and the claims-to-avoid
 list from WALKTHROUGH.md §5 as a compliance page. Market, from
@@ -1817,11 +1836,11 @@ to *this* video:
    prepass → master on the ranch, the Scrolltown key-frame stage,
    measured-loudness finishing: the polish tier is an application
    of standing machinery, not a new capability purchase. Route A's
-   cash cost (licences + clone plan, ≤ ~$40 worst case with
-   Descript) is an order of magnitude under Route B for the
-   same gates.
+   cash cost (licences only, ≤ ~$34 worst case with Descript —
+   narration is $0 under the Route C ruling) is an order of
+   magnitude under Route B for the same gates.
 3. **Will's time budget decides it.** Route A keeps Will at
-   ~65 minutes in four touches. Route B *adds* hiring, briefing,
+   ~55 minutes in three touches. Route B *adds* hiring, briefing,
    and revision management on top of the same approval gates —
    the scarce resource gets spent managing a stranger instead of
    approving a cut.
@@ -1832,8 +1851,8 @@ block that can leave the house without taking accuracy with it.
 
 Title: The Power of Phext — Walkthrough Package
 Source: ~/workspace/phext-walkthrough/WALKTHROUGH.md
-Inscribed: 2026-11-09 23:06 CST
-SHA-256: b26662574e08d0b51a7f372d94d413516f2f309d08459a886db891a3af1c7c9d
+Inscribed: 2026-11-09 23:21 CST
+SHA-256: 44aa7ce095d67c2e0f1f5e895a251cf68097388a5f54785cbfdd0e7c5efdabe6
 
 ---
 # The Power of Phext — Walkthrough Package
@@ -2194,11 +2213,17 @@ January. 🔥
 **Operative plan:** PRODUCTION-PLAN.md **§6 (Polish Tier)** governs
 production — two-pass edit with gates, rendered motion-graphics
 package, key-frame-standard Scrolltown foreshadow, finished audio,
-~65 minutes of Will's time total. Will does not narrate (his
-correction, 2026-11-09): narration is a one-time voice clone —
-see PRODUCTION-PLAN §6.3. The checklist below remains the
-capture-day reference; where it and §6 differ (edit estimates,
-finishing steps), §6 wins.
+~55 minutes of Will's time total (script approval ~15 + Gate 1
+~25 + Gate 2 ~15; no one-time sample, no narration sitting).
+Will does not narrate (his correction, 2026-11-09), and he ruled
+the voice himself (2026-11-09 23:19 CST): **"You narrate it,
+Emise"** — narration is Route C, Emise/Aria TTS, per
+PRODUCTION-PLAN §6.3 (clone and VO-artist routes documented there
+as evaluated alternatives not taken). Proof artifact already
+rendered: `narration-proof-cold-open.mp3` in this folder (the
+cold open, Aria at 120% speed), riding Gate 1. The checklist
+below remains the capture-day reference; where it and §6 differ
+(edit estimates, finishing steps), §6 wins.
 
 **Recording checklist (capture in this order)**
 
