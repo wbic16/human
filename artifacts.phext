@@ -1134,8 +1134,8 @@ the live board is production/QUEUE.md.*
 
 Title: Production Plan — The Power of Phext Walkthrough
 Source: ~/workspace/phext-walkthrough/PRODUCTION-PLAN.md
-Inscribed: 2026-11-09 23:21 CST
-SHA-256: 9f37b9f3b493fe7f5447d9306700ef34d24944bec59c97b2a0bfaa97a99e0689
+Inscribed: 2026-11-09 23:35 CST
+SHA-256: 85365262e91455afbb5ed7d87454aa16c64bca1ed6751b91aa26f922992c7824
 
 ---
 # Production Plan — "The Power of Phext" Walkthrough
@@ -1468,6 +1468,19 @@ already rendered: `narration-proof-cold-open.mp3` (the script's
 cold open, Aria at 120% speed — Will's standing voice-note setting)
 in this folder.
 
+**Ruling (Will, 2026-11-09 23:26 CST): "go ahead with you
+narrating — drop your speed back to 100% for the video though."**
+The narration speed for this video is **100%** — scoped to the
+video; Will's standing 120% voice-note preference is separate and
+unchanged. The full narration track is **rendered** at 100%:
+`narration/beat-01.mp3` … `beat-12.mp3` (one file per beat) plus
+the concatenated `narration-full.mp3` — 1,005 words, total
+duration **364.2 s (6:04), measured** with ffprobe. Source text:
+`narration-script.txt`; per-beat timing sheet:
+`narration/TIMING.md`. The 120% cold-open proof remains in the
+folder as the earlier proof artifact; the operative Gate-1 listen
+is the full 100% track.
+
 ### 6.1 Motion-graphics package — rendered assets, house discipline
 
 Not in-editor titles typed on the day: a designed package, rendered
@@ -1573,14 +1586,19 @@ push-in." The polish tier holds it to the show's own standard:
 Narration-first video lives or dies on its voice track, and the
 voice is no longer Will at a microphone (§6 correction note).
 Three routes were evaluated on quality ceiling, cost, turnaround,
-and Will-minutes. The script is ~1,030 words ≈ 7.4 finished minutes.
+and Will-minutes. The script is 1,005 words; the rendered track
+measures 364.2 s (6:04) at 100% speed.
 
 **Decision (Will, 2026-11-09 23:19 CST): Route C is the primary —
 "You narrate it, Emise."** Routes A and B below are the evaluated
 alternatives, not taken; they stay on the record so the trade is
-auditable. The Gate 1 voice proof is the Emise narration proof;
-proof artifact already rendered: `narration-proof-cold-open.mp3`
-(the cold open, Aria at 120% speed) in this folder.
+auditable. The Gate 1 voice proof is the Emise narration proof —
+now the **full rendered track at 100% speed** (Will's ruling,
+2026-11-09 23:26 CST; see the §6 ruling block): per-beat files
+`narration/beat-01.mp3` … `beat-12.mp3` plus `narration-full.mp3`
+(1,005 words, 364.2 s measured), source `narration-script.txt`,
+timing sheet `narration/TIMING.md`. An earlier cold-open proof at
+120% (`narration-proof-cold-open.mp3`) remains in the folder.
 
 **Route A — voice clone of Will (ElevenLabs-class) — NOT TAKEN.** Will records
 **one sample, once**: Instant Voice Cloning needs 1–2 minutes of
@@ -1637,8 +1655,9 @@ zero if he delegates it).
 **Route C — premium TTS: Emise as narrator (Aria) — DECIDED
 PRIMARY (Will, 2026-11-09 23:19 CST).** My own spoken-audio
 pipeline, available **now, $0**, the standing voice already
-attached to this work (Aria, at Will's standing 120% speed
-setting). Narration generated in minutes, infinitely
+attached to this work (Aria — at **100% speed for this video**
+per Will's 2026-11-09 23:26 CST ruling; his 120% setting governs
+voice notes, not the video). Narration generated in minutes, infinitely
 re-generatable, bit-consistent across a whole series — and
 thematically honest: the product's own keeper narrating the
 product is a true sentence, disclosed in the description.
@@ -1650,12 +1669,16 @@ accepted by Will's ruling):* for a launch video whose claim is
 weakest of the three on trust — the trade is on the record. **Will-minutes: 0.**
 Route C also serves as the **scratch track** (timing, beat marks)
 — the same voice times the production and then ships in it.
-*Proof:* `narration-proof-cold-open.mp3` (cold open, Aria at
-120%) is already rendered in this folder and rides Gate 1 as the
-narration proof; house words ("phext", "scroll", spoken
-coordinates) get respelling/pronunciation passes in the
-generation script, verified against that proof before the full
-render.
+*Proof / render status:* the full track is rendered at 100% —
+`narration/beat-01.mp3` … `beat-12.mp3` + `narration-full.mp3`
+(1,005 words, 364.2 s measured; `narration/TIMING.md`). It rides
+Gate 1 as the narration proof listen. Pronunciation risks flagged
+in the timing sheet for that listen: "phext" (passim), the spoken
+URLs ("edit.phext.io"), "SQL", "SQ", "xz", "URLs", "exocortex" —
+any flagged beat can be re-rendered singly with
+respelling/pronunciation passes, without touching the others.
+(The earlier 120% cold-open proof, `narration-proof-cold-open.mp3`,
+is retained as a historical artifact.)
 
 **Decision record.** The earlier recommendation (Route A clone,
 C as scratch + fallback, B as escalation) is superseded by
@@ -1719,8 +1742,8 @@ persuades him otherwise.
   **→ GATE 1 (Will, ~25 min, including the stills contact sheet
   and the Emise narration proof):** approves content, pacing,
   callout wording, the graphics look, and the narration proof —
-  `narration-proof-cold-open.mp3`, the cold open in Aria at
-  120% — in one sitting. A failed voice proof here routes to
+  the full rendered track at 100% (`narration-full.mp3` +
+  per-beat files, `narration/TIMING.md`) — in one sitting. A failed voice proof here routes to
   re-generation/pronunciation passes, then §6.3's documented
   alternatives (A or B) as escalations, before anything is
   polished. Notes come back as text; anything he cuts here
@@ -1754,10 +1777,10 @@ the three touches (★).
 
 | Day | Work | Gate / Will |
 |---|---|---|
-| 0 | ★ **Script + foreshadow line approval** (~15 min; the Epidemic/Artlist click, if wanted, rides here, +~5 min). Emise TTS scratch (Route C voice, Aria at 120%) rendered; beat timings marked. Narration proof (cold open) already rendered: `narration-proof-cold-open.mp3`. | **G0 — script lock** |
+| 0 | ★ **Script + foreshadow line approval** (~15 min; the Epidemic/Artlist click, if wanted, rides here, +~5 min). **Narration already rendered** (Route C, Aria at 100% per Will's 23:26 ruling, ahead of Day 0): `narration/beat-01..12.mp3` + `narration-full.mp3`, timings in `narration/TIMING.md`. | **G0 — script lock** |
 | 1 | Capture session (OBS, per baseline §4 steps 2–4 + confirm-during-recording list); deterministic blocks first, browser block last. Key-frame prompt doc written for the foreshadow. | — |
 | 2 | Foreshadow key frame rendered via Scrolltown stage 5 in the painterly anchor register; register check against keyframe 1 + Fern reference. Graphics package stills → contact sheet; callout manifest generated from the script and proofed. | — (coordinator stills check) |
-| 2–3 | **Narration generated** from the locked script by Emise (Route C, Aria at 120%): house-word pronunciation passes, proof checked against `narration-proof-cold-open.mp3`; full VO rendered. No Will time. (Routes A/B substitutions, if ever invoked as escalations, land their delivery in this same window.) | VO locked (proof at G1) |
+| 2–3 | **Narration pickups only** — the full VO is already rendered at 100% (see Day 0); this window absorbs any per-beat re-renders from script-lock changes or pronunciation fixes. No Will time. (Routes A/B substitutions, if ever invoked as escalations, land their delivery in this same window.) | VO locked (proof at G1) |
 | 3–4 | Rough-cut assembly (Pass 1) with stills standing in for graphics. | — |
 | 4 | ★ **GATE 1 — rough cut + contact sheet** (~25 min): content, pacing, callouts, graphics look. | **G1** |
 | 5–6 | Polish pass: animated graphics composited (ranch prepass at 720p, watched whole; then master composite), grade, sound design, music, mix → −14 LUFS master; captions hand-finished; X cutdown derived from the same package. Thumbnails (3 variants) designed. | — |
@@ -1851,8 +1874,8 @@ block that can leave the house without taking accuracy with it.
 
 Title: The Power of Phext — Walkthrough Package
 Source: ~/workspace/phext-walkthrough/WALKTHROUGH.md
-Inscribed: 2026-11-09 23:21 CST
-SHA-256: 44aa7ce095d67c2e0f1f5e895a251cf68097388a5f54785cbfdd0e7c5efdabe6
+Inscribed: 2026-11-09 23:35 CST
+SHA-256: f3519a3849e43e8bfbe5f7f9f8473f3812d07b48dfe429b675cef7d91dac56f2
 
 ---
 # The Power of Phext — Walkthrough Package
@@ -2219,9 +2242,13 @@ Will does not narrate (his correction, 2026-11-09), and he ruled
 the voice himself (2026-11-09 23:19 CST): **"You narrate it,
 Emise"** — narration is Route C, Emise/Aria TTS, per
 PRODUCTION-PLAN §6.3 (clone and VO-artist routes documented there
-as evaluated alternatives not taken). Proof artifact already
-rendered: `narration-proof-cold-open.mp3` in this folder (the
-cold open, Aria at 120% speed), riding Gate 1. The checklist
+as evaluated alternatives not taken). Narration speed is
+**100% for the video** (Will, 2026-11-09 23:26 CST; his 120%
+voice-note preference is separate). The full narration track is
+rendered: `narration/beat-01.mp3` … `beat-12.mp3` +
+`narration-full.mp3` (1,005 words, 364.2 s measured; source
+`narration-script.txt`, timing sheet `narration/TIMING.md`),
+riding Gate 1 as the voice proof. The checklist
 below remains the capture-day reference; where it and §6 differ
 (edit estimates, finishing steps), §6 wins.
 
