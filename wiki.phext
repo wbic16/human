@@ -1,0 +1,256 @@
+# The Mini Encyclopedia — a Wikipedia in a box, in one phext file
+
+This file is a complete, working miniature encyclopedia carried as a
+single phext: plain text divided into scrolls, each scroll living at a
+9-component coordinate. No database server, no index files, no query
+language — the addressing IS the index.
+
+Scheme: Library.Shelf.Series / Collection.Volume.Book / Chapter.Section.Scroll
+- 1.1.1 / 1.1.1 / 1.1.1 — this home scroll (Collection 1 is the box itself)
+- Collection 2 = the encyclopedia; Volume = topic area (1 The Living World, 2 Earth and Sky,
+  3 Human Ingenuity, 4 Ideas and Numbers, 5 Everyday Science,
+  6 Exploration)
+- Book = article within the area (1-4)
+- Chapter 1 = one-line summary, Chapter 2 = the article
+
+Try it: python3 query_demo.py toc | get 1.1.1/2.1.2/2.1.1 | stats
+Honeybee — in one line
+
+A honeybee colony is a single organism made of tens of thousands of cooperating insects.
+# Honeybee
+
+A honeybee colony can hold tens of thousands of workers, a few hundred drones, and one queen. The workers are all female. They gather nectar and pollen, build wax comb, guard the hive, and feed the young, changing jobs as they age.
+
+Bees communicate the location of flowers with a waggle dance: the angle of the dance on the comb encodes direction relative to the sun, and its length encodes distance. A colony also decides together. When scouts find candidate homes for a swarm, they argue the case in dances until one site wins.
+
+Because bees pollinate a large share of the world's crops and wild plants, their health is tied directly to ours. A hive is therefore two things at once: a farm animal's home, and a small democracy with wings.
+Oak — in one line
+
+An oak can live for centuries and feed more other species than almost any other tree.
+# Oak
+
+Oaks are long-lived trees of the genus Quercus, with several hundred species spread across the northern hemisphere. A mature oak may stand for three hundred years, and some individuals pass a thousand. Its fruit, the acorn, ripens in a scaly cup and feeds jays, deer, pigs, and squirrels.
+
+Few organisms support more life. A single oak hosts hundreds of insect species, which in turn feed birds; its bark shelters bats and beetles, and fungi thread through its roots, trading nutrients with the tree. Fallen oaks keep working for decades as deadwood habitat.
+
+Oak timber is strong, dense, and slow to rot, which is why it framed ships, barns, and barrels. The tree that takes longest to grow is trusted with the loads that must last longest.
+Octopus — in one line
+
+The octopus is a mollusc with three hearts, blue blood, and arms that can taste what they touch.
+# Octopus
+
+Octopuses are soft-bodied molluscs with eight arms lined with suckers. They have three hearts and copper-based blue blood. Two hearts pump blood to the gills; the third serves the body and often rests while the animal swims, one reason octopuses prefer crawling.
+
+Their intelligence is the famous part. Octopuses open jars, solve mazes, and learn by watching. About two-thirds of their neurons live in their arms, and each arm can taste by touch, so an octopus explores the world with eight semi-independent investigators.
+
+With no shell and no bones, an octopus can squeeze through any gap its beak fits through. It changes colour and texture in a fraction of a second, using pigment cells under direct control of the brain.
+Mushroom — in one line
+
+A mushroom is only the fruit; the real fungus is a vast hidden web of threads in soil and wood.
+# Mushroom
+
+What we call a mushroom is the fruiting body of a fungus. The organism itself is the mycelium: a web of microscopic threads called hyphae, spreading through soil, leaf litter, or dead wood, digesting its food externally and absorbing the results.
+
+Many fungi partner with trees, wrapping or entering their roots and trading mineral nutrients for sugars. These mycorrhizal networks can connect many trees at once. Other fungi are decomposers, recycling the lignin in wood that few other organisms can break down; without them, forests would bury themselves in their own remains.
+
+Fungi are neither plants nor animals, though they are closer kin to animals. The largest known fungus, a honey fungus in Oregon, covers several square kilometres and may be thousands of years old.
+River — in one line
+
+A river is water negotiating with gravity, carrying mountains to the sea a grain at a time.
+# River
+
+A river begins where rain or meltwater gathers into a channel and starts downhill. From source to mouth it sorts the land it crosses: steep and fast in its youth, carving valleys; slower and wider with age, laying down floodplains of silt.
+
+Rivers are the planet's great movers. They carry sediment eroded from mountains to deltas and the sea floor, transport nutrients that feed fisheries, and refill the aquifers that wells depend on. The Amazon alone discharges roughly a fifth of all the river water reaching the oceans.
+
+Civilisation grew along rivers because they bundle gifts: water to drink, silt to farm, a road that flows. The same river that gives can take away in flood, so living with one has always been a negotiation.
+Volcano — in one line
+
+A volcano is a place where the Earth's interior briefly becomes part of its surface.
+# Volcano
+
+A volcano forms where molten rock, called magma while underground, finds a path to the surface and erupts as lava, ash, and gas. Most sit at the edges of tectonic plates; some, like Hawaii, rise over hot spots in the mantle itself.
+
+Eruptions vary enormously. Fluid basalt lava can flow like a slow river, while gas-rich magma can explode into a column of ash tens of kilometres high. The 1816 'year without a summer' followed the Tambora eruption, whose ash veil cooled the whole planet.
+
+For all their danger, volcanoes build land: Iceland, Hawaii, and much of Indonesia are volcanic. Their ash weathers into rich soil, which is why people keep farming in the shadow of the mountain that may bury them.
+Moon — in one line
+
+Earth's Moon is a companion world whose gravity steadies our seasons and drags our oceans.
+# Moon
+
+The Moon is Earth's only natural satellite, about a quarter of Earth's diameter. The leading theory holds that it formed from debris after a Mars-sized body struck the young Earth. It is slowly drifting away, a few centimetres per year, and its rotation has locked so the same face always turns toward us.
+
+The Moon's gravity raises the tides and stabilises Earth's axial tilt, keeping the seasons regular over geological time. Its cratered surface records a bombardment history that Earth's weather and geology have erased at home.
+
+Twelve people have walked on it, between 1969 and 1972. Its far side, shielded from Earth's radio noise, is prized as a site for future telescopes.
+Glacier — in one line
+
+A glacier is a river of ice that flows under its own weight and remembers ancient air.
+# Glacier
+
+A glacier forms where more snow falls than melts. Buried snow compacts into firn and then into dense ice, which slowly deforms and flows downhill under its own weight, sometimes surging, sometimes creeping only metres a year.
+
+Glaciers store about seventy percent of Earth's fresh water. They carve U-shaped valleys, grind rock to flour, and leave moraines as receipts of where they have been. Ice cores drilled from them trap bubbles of ancient atmosphere, giving scientists direct samples of air from hundreds of thousands of years ago.
+
+Because they balance snowfall against melt, glaciers are sensitive thermometers. Most of the world's glaciers are currently retreating, and their meltwater feeds rivers that hundreds of millions of people depend on.
+Printing Press — in one line
+
+The printing press turned books from handcrafted luxuries into mass-produced goods.
+# Printing Press
+
+Printing with movable type existed in China and Korea centuries before it reached Europe, but around 1440 Johannes Gutenberg combined metal type, oil-based ink, and a screw press into a system that could produce books quickly and cheaply.
+
+The economics changed everything. A scribe might copy a book in months; a press produced hundreds of copies in weeks. The price of text collapsed, and with it the cost of spreading ideas: science, scripture, newspapers, and novels all rode the same machine.
+
+Historians rank the press among the most consequential inventions because it standardised knowledge. Identical copies meant readers in different cities could argue about the same page, a precondition for modern science.
+Sail — in one line
+
+The sail is a wing stood upright: it lets a boat steal motion from moving air.
+# Sail
+
+A sail works because air flowing around its curved surface moves at different speeds on each side, generating a force that a keel converts into forward motion. With the right rig, a vessel can sail not only downwind but at angles into the wind, zigzagging toward where the wind comes from.
+
+For most of human history, sails were the fastest transport on Earth. They carried grain across the Mediterranean, Polynesian voyagers across the Pacific using star compasses and swell patterns, and tea clippers racing home at speeds steam took decades to beat.
+
+Sailing never disappeared; it changed jobs. Modern cargo experiments use rigid wing sails and kites to cut fuel use, and every racing yacht is a laboratory of aerodynamics.
+Clock — in one line
+
+A clock is any process regular enough to count; civilisation runs on agreed counts.
+# Clock
+
+The earliest clocks counted shadows, dripping water, and burning candles. The breakthrough came with oscillators: pendulums, balance springs, quartz crystals, and finally atoms, each ticking more evenly than the last. A modern atomic clock would take millions of years to drift by one second.
+
+Clocks reorganised society. Monasteries rang prayer hours; railways forced towns onto a single standard time; factories and schools ran to the bell. Precise time at sea solved the longitude problem and made accurate maps possible.
+
+Today, satellite navigation is applied clockwork: GPS receivers locate themselves by comparing the tick rates of atomic clocks in orbit. Your position on Earth is, quite literally, a measurement of time.
+Suspension Bridge — in one line
+
+A suspension bridge hangs its road from cables, trading stone's push for steel's pull.
+# Suspension Bridge
+
+In a suspension bridge, the deck hangs from vertical suspenders attached to main cables, which drape over towers and anchor into the ground at each end. The design puts the great forces into tension, where steel is strongest, instead of compression, where stone is needed in bulk.
+
+That efficiency buys span. Suspension bridges cross wider water than any other type; the longest spans approach two kilometres. They are also flexible, swaying in wind and quakes by design, and engineers study aerodynamics carefully: the Tacoma Narrows Bridge twisted itself apart in 1940, in view of a camera.
+
+From rope bridges in the Andes and Himalayas to the Golden Gate, the principle is the same: hang the road, and let the cables do the work.
+Zero — in one line
+
+Zero is two inventions in one: a number for nothing, and a placeholder that makes place value work.
+# Zero
+
+Zero does double duty. As a placeholder, it distinguishes 42 from 402 in positional notation. As a number in its own right, it can be added, subtracted, and multiplied, with its own rules. Babylonian scribes used a placeholder mark; Indian mathematicians made zero a full number, and the seventh-century scholar Brahmagupta wrote down rules for computing with it.
+
+From India the concept travelled through Arabic scholarship into Europe, carrying the numerals we now use worldwide. Resistance was real: some cities banned the new numerals as suspicious or demonic.
+
+Modern computing rests on zero. Binary code is built from 0 and 1, and the idea of an empty set, a false value, and a null result all descend from treating nothing as something you can reason about.
+Map — in one line
+
+A map is an argument about the world, drawn: everything included is a claim, everything omitted a choice.
+# Map
+
+Every map selects. A projection must flatten a round Earth onto flat paper, and something always gives: shapes, areas, distances, or directions. The Mercator projection preserves angles for sailors and inflates the poles; equal-area maps keep sizes honest and stretch shapes instead.
+
+Maps are older than writing in some forms: carved sticks, clay tablets, and Polynesian stick charts encoding ocean swells. Portolan charts guided medieval sailors with rhumb lines; modern maps are built from satellite imagery and surveyed coordinates.
+
+A map's deepest power is persuasion. Borders, place names, and colours assert what exists and who rules it. Reading a map well means asking who drew it, for whom, and what they chose to leave out.
+Alphabet — in one line
+
+An alphabet compresses all of speech into about two dozen signs that a child can memorise.
+# Alphabet
+
+Most writing systems ask learners to master hundreds or thousands of signs. An alphabet instead maps roughly one sign to each sound of the language, so a few dozen letters can write anything sayable. The idea appears to have been invented once, by Semitic workers adapting Egyptian signs about 3,800 years ago.
+
+From that root grew the Phoenician script, then Greek, which added letters for vowels, then Latin, Cyrillic, and many others. The letters you are reading descend in an unbroken line from marks scratched in a turquoise mine.
+
+Cheap to learn means cheap to spread. Alphabetic literacy repeatedly outran logographic systems in mass education, not because it is more expressive, but because the entrance fee is a few weeks instead of years.
+Money — in one line
+
+Money is a shared record of who owes what, kept so that strangers can cooperate.
+# Money
+
+Money solves the problem of barter: the baker who wants shoes need not find a shoemaker who wants bread. Anything a community agrees to treat as a store of value and medium of exchange can serve: salt, shells, silver, paper, or entries in a ledger.
+
+Most money today is the ledger kind. Bank deposits are records, moved by instructions; physical cash is a small minority. Coins began around the seventh century BCE in Lydia, and paper notes spread from China, where they were used by the Song dynasty.
+
+Because money is a record system, its history is a history of record-keeping: tally sticks, double-entry bookkeeping, and now digital ledgers. Whoever keeps the record holds power, which is why money and trust are the same subject.
+Bread — in one line
+
+Bread is controlled fermentation: microbes make gas, gluten makes the cage, heat sets the trap.
+# Bread
+
+Bread begins when flour meets water and wild yeasts and bacteria wake up. The microbes ferment sugars and release carbon dioxide; the elastic gluten network in wheat flour stretches to hold the gas, and the loaf rises. Baking sets the structure, crisps the crust, and stops the fermentation.
+
+Leavened bread is at least fourteen thousand years old, baked by hunter-gatherers in Jordan before farming began. Egyptians industrialised it, Greeks and Romans refined it, and the sourdough starter, a living culture passed between bakers, remains the oldest kitchen technology still in daily use.
+
+Bread is also a unit of civilisation: wages were paid in it, riots began over its price, and 'breadwinner' still means the one who provides.
+Soap — in one line
+
+Soap works by being two-faced: one end loves water, the other loves grease, and dirt is torn between them.
+# Soap
+
+Soap is made by reacting fats with a strong alkali, a process called saponification known since Babylonian times. The resulting molecule has a split personality: a head that dissolves in water and a tail that dissolves in oil.
+
+In wash water, soap molecules surround grease and dirt with tails inward, forming spheres called micelles that rinse away. Soap also disrupts the fatty membranes of many bacteria and viruses, which is why handwashing with plain soap is such reliable medicine.
+
+Hard water fights back: its calcium and magnesium ions react with soap to form scum. Synthetic detergents, built to ignore those ions, took over laundry, but soap itself remains chemically unbeaten at its original job.
+Mirror — in one line
+
+A mirror is a surface polished until light has no choice but to behave.
+# Mirror
+
+Reflection happens whenever light crosses a boundary, but a useful mirror needs a surface smooth at the scale of a wavelength and a reflective coating behind it. Polished obsidian served the ancient world; bronze and silvered glass followed, and modern mirrors use a thin layer of aluminium or silver on glass.
+
+Mirrors reverse front and back, not left and right, though it takes a moment's geometry to see why. They also fold light paths, which is why telescopes use curved mirrors to gather light from huge areas into small instruments: the largest telescope mirrors exceed eight metres across.
+
+Two mirrors face to face make an infinity corridor; a mirror angled in a tube makes a periscope. Few objects do so much with so little: just a boundary, made honest.
+Coffee — in one line
+
+Coffee is a seed's chemical armoury, borrowed: caffeine evolved to poison insects, and humans took a liking to it.
+# Coffee
+
+Coffee beans are the seeds of a cherry-like fruit from shrubs native to Ethiopia's highlands. The caffeine in them is a natural insecticide. Roasting triggers hundreds of reactions that create coffee's aroma compounds, which is why fresh-roasted beans smell so different from green ones.
+
+From Ethiopia coffee travelled to Yemen, where Sufi monks drank it to stay awake for night prayer, then to Constantinople, Venice, and every port after. Coffeehouses became engines of news and argument, nicknamed 'penny universities' in London because a cup bought a seat in the conversation.
+
+Caffeine works by blocking adenosine, the molecule that signals tiredness. It does not add energy; it hides the meter. The debt comes due as the familiar afternoon crash.
+Compass — in one line
+
+A compass needle is a small magnet voting with the Earth's enormous one.
+# Compass
+
+A compass works because a magnetised needle, free to rotate, aligns with Earth's magnetic field. Chinese navigators used lodestone compasses by the eleventh century, possibly earlier for geomancy; the tool reached European sailors around the twelfth century and quietly redrew the seas.
+
+Magnetic north is not true north: the magnetic pole wanders, currently hundreds of kilometres from the geographic pole, and the difference, called declination, must be corrected for accurate navigation. The field itself is generated by churning liquid iron in Earth's core, and it has flipped polarity hundreds of times in geological history.
+
+Even so, the compass's gift was certainty in fog and open ocean: a direction that did not depend on stars, landmarks, or weather.
+Lighthouse — in one line
+
+A lighthouse is a promise made of light: here is where the land is, do not hit it.
+# Lighthouse
+
+Lighthouses mark coasts, harbours, and hazards. Each flashes a unique pattern, its character, so sailors can identify which light they see. The Pharos of Alexandria, one of the wonders of the ancient world, guided ships for over a thousand years.
+
+The technology climbed steadily: open fires, candles, oil lamps with mirrors, then the Fresnel lens of 1822, which gathered a lamp's light into a beam visible for tens of kilometres using concentric rings of glass. Automation retired the keepers through the twentieth century.
+
+Satellites now do most navigation, yet lights still stand watch, independent of any network. A lighthouse asks for nothing and broadcasts to everyone: the original open signal.
+Telescope — in one line
+
+A telescope is a bucket for light: the wider the bucket, the fainter the worlds it can catch.
+# Telescope
+
+Telescopes gather light. Refractors bend it through lenses; reflectors bounce it off mirrors, and mirrors can be made far larger, which is why every major research telescope is a reflector. Aperture is destiny: double the diameter, collect four times the light.
+
+The instrument appeared in the Netherlands in 1608, and Galileo's improvements turned it on the sky in 1609: Jupiter's moons, the phases of Venus, mountains on the Moon. Each was an argument against an Earth-centred cosmos, delivered by a tube of glass.
+
+Radio, infrared, and space telescopes extended the eye beyond visible light. The pattern holds across four centuries: build a bigger bucket, see a bigger universe.
+Railway — in one line
+
+The railway was the first land transport faster than a horse, and it standardised time itself.
+# Railway
+
+Railways pair a guided steel wheel with a prepared way: low friction lets one locomotive haul hundreds of tonnes. Steam locomotion proved itself in Britain in the 1820s and 1830s, and networks spread across continents within a generation.
+
+The effects ran deeper than speed. Railways demanded standard time, because timetables cannot run on every town's local noon; they created commuter suburbs, mass tourism, and fresh food in inland cities. Gauges, signals, and couplings had to standardise too, making railways an early lesson in network effects.
+
+Electric and diesel traction replaced steam, and high-speed trains now cruise at 300 kilometres per hour. The core idea is unchanged from 1825: fix the path, and the vehicle can be simple, fast, and strong.
