@@ -1134,8 +1134,8 @@ the live board is production/QUEUE.md.*
 
 Title: Production Plan — The Power of Phext Walkthrough
 Source: ~/workspace/phext-walkthrough/PRODUCTION-PLAN.md
-Inscribed: 2026-11-09 23:00 CST
-SHA-256: 9d8b9a93b3d67e2c1b0c3e08813d2c1a9cebb65d9d9082cda4c2f799c8b3c606
+Inscribed: 2026-11-09 23:04 CST
+SHA-256: 1887ee46d7cffb672fa32e4ee33a90cc66987f76b05fb3cbe8da567a3eee8783
 
 ---
 # Production Plan — "The Power of Phext" Walkthrough
@@ -1428,12 +1428,310 @@ slated Saturday 2027-01-02, 312 weekly episodes across 2027–2032,
 narrator Fern — none of the specifics beyond name/town/January are
 promised in the copy, because the story is in flux). The walkthrough's
 subject stays phext; this is a door left open, not a trailer.
+
+---
+
+## 6. POLISH TIER — the operative plan (task 21.6.8/7.5.9/5.5.8)
+
+**Will's ruling (2026-11-09): "I want it more polished than I can do
+in an evening."** Sections 1–5 above remain on the record as the
+**baseline (DIY) tier** — the evaluation stands; this section
+supersedes it as the plan we actually execute. The difference is not
+different taste, it is a different production shape: a designed
+graphics package, a key-frame-standard foreshadow, a finished audio
+mix, and a two-pass edit with gates — spread over days, not squeezed
+into an evening.
+
+**The scarce resource is Will's time, and the tier is budgeted
+against it: ≤ ~90 minutes of Will, total** (labelled estimates,
+itemised in §6.5): script approval ~15 min, one narration sitting
+~30 min, Gate 1 review ~25 min, Gate 2 review + thumbnail pick
+~15 min. Everything else is agent + ranch work. If a step would
+need Will outside those four touches, the step is redesigned, not
+the budget.
+
+### 6.1 Motion-graphics package — rendered assets, house discipline
+
+Not in-editor titles typed on the day: a designed package, rendered
+as assets, composited identically into the master and the cutdown.
+
+**The package (six asset classes):**
+
+1. **Animated title card** (~4 s): "The Power of Phext" over the
+   dimension-tree motif; type resolves along a coordinate readout.
+2. **Lower-thirds** (3 variants): speaker/name, "edit.phext.io" URL
+   card, and a plain caption strip — one design language, phext
+   palette, coordinates as the decorative system (never fake ones:
+   every coordinate shown anywhere is a real coordinate from the
+   demo or the script).
+3. **Coordinate callouts for the demo beats**: overlay cards that
+   pin to the UI at the coordinate-jump (3:10), search (3:50), and
+   edit+save beats — the coordinate types itself in, a bracket
+   lands on the target scroll. Callout text is **generated from a
+   manifest built out of WALKTHROUGH.md's own beat list**, then
+   proof-read against the script — callouts are the highest-typo-
+   risk surface in the video and are never hand-typed in the edit.
+4. **Chapter cards**: one per chapter in WALKTHROUGH.md §3 — full-
+   frame, 1.2 s, consistent grid; they double as the YouTube
+   chapter visual rhythm.
+5. **The stack-diagram cutaway**, upgraded from the baseline's
+   one-off slide to the package's design language (same grid,
+   same type), so it reads as part of the film, not an intrusion.
+6. **End card**: edit.phext.io + the site's own headline ("Write in
+   11 dimensions: plain text, no lock-in"), held clean under the
+   7:25 CTA; the Scrolltown beat after it stays graphics-free by
+   design (see WALKTHROUGH.md §5 note in the baseline plan).
+
+**How they're made — the house film discipline, applied at this
+scale** (the Wavefront series' meta-step, per the mythic-film
+skill: stills → prepass → master; every render on the ranch):
+
+- **Stills first.** Every card/callout is rendered as a still and
+  assembled into a contact sheet. The sheet is checked for design
+  consistency and text accuracy *before anything moves* — this is
+  also where coordinate text gets its proof pass.
+- **Cheap prepass.** The full video is composited once at 720p
+  with the animated package in place and watched end-to-end for
+  pacing, legibility at small size, and callout timing.
+- **Master.** Final composite at 1080p; graphics elements rendered
+  at 2× and downscaled so text edges stay crisp over the native-
+  resolution capture (the capture itself is never upscaled).
+- **Where:** all rendering/compositing runs on **ranch nodes**
+  (aletheia-core as assembly point) under the standing thermal
+  gates — sustained Tctl ≤75 °C, new starts pause ≥75 °C, resume
+  ≤70 °C. **No video work runs on the Muse VM** (standing rule,
+  2026-11-08); the VM coordinates and verifies. Work is submitted
+  in small chunks, per standing practice. Toolchain: the proven
+  in-house one — scripted still/overlay rendering + ffmpeg
+  assembly (the same pattern the film series renders its cards and
+  HUD with), ffprobe + frame spot-checks + loudness measurement at
+  the finish. Compute estimate (labelled): graphics renders +
+  prepass + master composites ≈ **1–3 node-hours** — trivial next
+  to the film series' rows, because this is compositing, not
+  per-frame generation.
+- **Fallback** if the scripted pipeline fights a specific element:
+  build that element in Descript/Canva and export it as a rendered
+  asset into the same package — the package structure (stills →
+  prepass → master) doesn't change, only the authoring tool for
+  that one card.
+
+### 6.2 The Scrolltown foreshadow — key-frame standard
+
+The baseline settled for "a still from the pipeline + an editor
+push-in." The polish tier holds it to the show's own standard:
+
+- **Commission the frame through Scrolltown's production stage 5**
+  (keyframes/art, per `wbic16/scrolltown` PRODUCTION.md): a prompt
+  doc for the beat — a town of glowing scrolls at dusk, streets made
+  of scrolls, lamplight register — rendered in **Midjourney in the
+  show's register**, following the FERN-KEYFRAMES-MJ pattern
+  (character + style blocks), even though this frame carries no
+  characters: register consistency is the point, and a one-shot
+  generation in a foreign style would read as a different show.
+- **Register caveat, on the record:** the show's visual-register
+  decision (2D painterly — the Fern reference + keyframe 1 register
+  — vs the glossy-3D drift in keyframes 2–4) is **Will's open
+  decision, due Fri 2026-12-04**, with painterly as the workflow's
+  recommendation. This frame is therefore rendered in the
+  **painterly anchor register** (keyframe 1 + reference), and if
+  the December lock goes the other way, the frame is re-rolled in
+  the locked register before the video ships — one frame is cheap
+  to re-roll; that's priced into the calendar (§6.5) as a named
+  dependency, not discovered later.
+- **The push-in is rendered, not editor-zoomed:** a slow push-in
+  rendered through the ranch pipeline at 2× from the key frame
+  (the film series' supersampling habit), so the move has the
+  show's texture rather than a digital-zoom feel. If a living
+  touch (lamp flicker, drifting light) is wanted, Muse's media
+  image-to-video (available now) or Runway (connector present,
+  not connected) animates from the same key frame — decided at
+  the stills gate by which result matches the register better.
+- The narration line stays exactly the approved draft from
+  WALKTHROUGH.md (7:45, "One more town"); the polish tier changes
+  the visual standard, not the copy.
+
+### 6.3 Audio finish
+
+Narration-first video lives or dies on its voice track. Chain:
+
+1. **Capture clean at the source:** Will records in one sitting
+   against the TTS scratch timing (baseline §4 step 1 stands),
+   two takes kept. Quiet room beats any plug-in; the scratch
+   track session doubles as the mic/room check.
+2. **Cleanup:** breath/level edit on the text timeline in
+   **Descript** (its Studio Sound one-pass cleanup is in the
+   Hobbyist plan already priced in the baseline: $16/mo billed
+   yearly, as reported Nov 2026). Heavier rescue, only if a take
+   needs it: **iZotope RX-class** restoration (the trade standard;
+   Elements-class licence ≈ $100–130 — **labelled estimate**,
+   verify at checkout; no connector, web purchase). Free route:
+   Audacity (availability on Will's machines **unknown**, as with
+   all local NLE state in §1).
+3. **Music bed — licensed, named routes:**
+   - **$0 route:** YouTube Audio Library (inside YouTube Studio;
+     free, cleared for YouTube) — perfectly serviceable, thinner
+     catalogue.
+   - **Recommended:** one month of **Epidemic Sound** — Creator
+     $9.99/mo billed yearly / $17.99 month-to-month; Pro $16.99/mo
+     billed yearly (2026 pricing roundups checked 2026-11-09;
+     verify at checkout). Creator covers one channel per platform,
+     which is exactly this case. **Artlist** Music & SFX is the
+     equivalent alternative ($9.99/mo billed yearly; Pro ~$24.92/mo
+     billed yearly, same sources). Neither has a connector in this
+     session — **web purchase by Will, ~5 minutes, inside his
+     script-approval touch** if he wants it off his plate later;
+     the licence (not just the file) is saved alongside the project.
+   - A bed is chosen against the *polish-pass* cut, ducked under
+     narration (sidechain or manual rides in the mix pass), and
+     never under the Scrolltown beat — that beat keeps the show's
+     own quiet (a breath of room tone, then the line).
+4. **Light sound design:** transition ticks/whooshes only where a
+   chapter card or callout lands (library sounds from the same
+   music licence — Epidemic's catalogue includes SFX; Artlist's
+   Music & SFX bundle likewise), plus the UI's real sounds where
+   the capture has them. Restraint is the brief: three or four
+   moments, not a carpet.
+5. **Mastering:** final mix measured and normalised with ffmpeg
+   `loudnorm` (two-pass) to the **YouTube target: −14 LUFS
+   integrated, true peak ≤ −1 dBTP**; the X cutdown gets the same
+   master (X applies no normalisation, so the same −14 LUFS file
+   is the safe common deliverable). Loudness is *measured and
+   reported* in the finish step, not assumed from a preset.
+
+### 6.4 Edit structure — two passes, two gates
+
+- **Pass 1 — rough cut.** Assembly strictly to the narration:
+  content and pacing decisions only. Capture selects, scratch-
+  timed demo beats, graphics represented by their *stills* (the
+  contact sheet rides along), no grade, no mix beyond intelligible.
+  **→ GATE 1 (Will, ~25 min, including the stills contact sheet):**
+  approves content, pacing, callout wording, and the graphics
+  look in one sitting. Notes come back as text; anything he cuts
+  here never gets polished.
+- **Pass 2 — polish.** Zooms and callout animation timed to the
+  narration, chapter cards in, colour grade (capture is screen
+  footage: the grade is white-point/contrast consistency across
+  takes + the cards' palette, not a film look), sound design,
+  music ducking, the §6.3 mix and loudnorm master, end card.
+  **Captions hand-finished from the script** in this pass — the
+  baseline's script-derived SRT, now with a human timing/line-
+  break pass against the final cut (coordinates broken across
+  lines correctly, "phext" spelled by the script, never by ASR).
+  **→ GATE 2 (Will, ~15 min):** the finished video, plus the
+  thumbnail choice below. Approval here is the publish gate
+  (social-publishing rule: exact copy + media, then Studio/X).
+- **Thumbnails — 2–3 designed variants for Will's pick**, all from
+  real frames in the package's design language: (1) the baseline's
+  pick, encyclopedia mid-browse + "WIKIPEDIA IN A BOX"; (2) the
+  coordinate-jump moment + "NO DATABASE."; (3) the plain-editor
+  contrast (structured view vs raw text split-frame) + "IT'S JUST
+  TEXT." Variant 3 is the curiosity play; variant 1 the clarity
+  play. vidIQ scoring (connector present, not connected) as a
+  check if handy — his pick decides, not the score.
+
+### 6.5 Schedule — multi-day calendar, gates named
+
+Day 0 = the day Will approves the script. All durations labelled
+estimates; agent/ranch work fills the days, Will appears only at
+the four touches (★).
+
+| Day | Work | Gate / Will |
+|---|---|---|
+| 0 | ★ **Script + foreshadow line approval** (~15 min; the Epidemic/Artlist click, if wanted, rides here, +~5 min). TTS scratch rendered; beat timings marked. | **G0 — script lock** |
+| 1 | Capture session (OBS, per baseline §4 steps 2–4 + confirm-during-recording list); deterministic blocks first, browser block last. Key-frame prompt doc written for the foreshadow. | — |
+| 2 | Foreshadow key frame rendered via Scrolltown stage 5 in the painterly anchor register; register check against keyframe 1 + Fern reference. Graphics package stills → contact sheet; callout manifest generated from the script and proofed. | — (coordinator stills check) |
+| 2–3 | ★ **Narration sitting** (~30 min: two takes against scratch timing). Scheduled when Will is fresh, not end-of-day. | narration locked |
+| 3–4 | Rough-cut assembly (Pass 1) with stills standing in for graphics. | — |
+| 4 | ★ **GATE 1 — rough cut + contact sheet** (~25 min): content, pacing, callouts, graphics look. | **G1** |
+| 5–6 | Polish pass: animated graphics composited (ranch prepass at 720p, watched whole; then master composite), grade, sound design, music, mix → −14 LUFS master; captions hand-finished; X cutdown derived from the same package. Thumbnails (3 variants) designed. | — |
+| 7 | Finish & verify: ffprobe (streams/duration/resolution), frame spot-checks per beat against approved stills, loudness measured and recorded, both files hash-checked. ★ **GATE 2 — final video + thumbnail pick** (~15 min). | **G2 — publish approval** |
+| 7–8 | Publish (post-G2 only): YouTube Studio upload with chapters/end screen/captions; X thread + cutdown. Buffer day absorbs the register re-roll (§6.2) or a G1/G2 note round without moving the publish. | — |
+
+**Will's total: ~85 minutes** (15 + 30 + 25 + 15), all estimates.
+Named dependencies: the Dec 4 Scrolltown register lock (§6.2 —
+only affects the foreshadow frame, re-roll priced in); the
+confirm-during-recording items from WALKTHROUGH.md §5 (capture
+day facts, fallback beats already scripted); Product Hunt launch
+day for Phext Edit (Nov 10) is *not* a production day in this
+calendar — Day 0 starts when Will says go.
+
+### 6.6 Routes, priced — and the recommendation
+
+**Route A — in-house (agents + ranch pipeline).** Cash: music
+licence only — **$0** (YouTube Audio Library) or **~$10–18**
+(one month Epidemic Sound at the prices in §6.3) — plus the
+Descript month ($16, baseline) *only if* its cleanup/timeline is
+wanted; the in-house edit can equally run on the scripted ranch
+pipeline + Resolve-free. Everything else already exists: the film
+pipeline, the Scrolltown key-frame pipeline, ffmpeg, the agents.
+Real cost is coordinator/agent time across ~7 days of calendar
+(mostly unattended renders and assembly), plus Will's ~85 min.
+Quality ceiling: the house standard — this is the pipeline that
+ships the Wavefront films, with verification gates a freelancer
+doesn't offer (frame checks, loudness measured, hashes).
+
+**Route B — freelance finishing editor.** Handoff package: locked
+script + beat timings, the OBS capture (per-beat takes), the
+narration WAV (both takes), the graphics asset list + design
+notes, the Scrolltown key frame (still supplied by us — it must
+come from the show's pipeline regardless), and the claims-to-avoid
+list from WALKTHROUGH.md §5 as a compliance page. Market, from
+2026 rate guides checked 2026-11-09 (hammadj.com 2026 pricing
+guide; kometmedia.com editor guide; markstudios.com 2026 cost
+survey — roundups of Fiverr/Upwork market data, cited as sources,
+not quotes): long-form YouTube editing runs **$8–50 per finished
+minute** or **$25–150/hr**; mid-level freelancers **$45–85/hr or
+$200–600 per video**; established US freelancers **$300–500 per
+video**; senior/motion-graphics work **$600–1,500+**. For this
+video (7.5 min, graphics package, sound finish, captions, two
+revision rounds) a realistic finishing quote is **$300–800,
+labelled estimate** — marketplace-bottom offers ($40–125/video)
+exist and are the template-tier the polish ruling exists to
+avoid. Add platform fees (Fiverr ≈5.5% + $3.50/order; Upwork ≈5%
+client fee, per the same guides) and **management overhead:
+~2–4 hours** (brief, handoff, two revision rounds, and a
+mandatory accuracy proof-pass — an outside editor does not know
+phext and *will* mistype a coordinate or a term somewhere; every
+callout and caption needs checking against the script before
+anything ships). No connector exists for Fiverr/Upwork in this
+session — hiring is a web flow, and per standing practice Will
+sends external outreach himself. Turnaround: 3–7 days typical
+(labelled estimate), plus revision latency.
+
+**Route C — hybrid.** In-house rough cut + graphics package +
+foreshadow (the accuracy- and register-critical parts), freelancer
+hired *only* for the polish pass against the locked rough cut.
+Cash ≈ Route B at the lower end (**~$200–500, labelled estimate**
+— less scope to price), overhead ~1–2 hours. Buys outside hands
+for grade/mix polish while keeping every phext fact in-house.
+
+**Recommendation: Route A — in-house.** Three reasons, all tied
+to *this* video:
+1. **Accuracy is the product.** The demo's credibility is real
+   footage and *exactly right* coordinates, terms, and claims.
+   In-house, callouts are generated from the script and proofed at
+   the stills gate; outsourced, correctness becomes a proof-pass
+   we must run anyway — the saving evaporates into checking.
+2. **The pipeline already exists and is verified.** Stills →
+   prepass → master on the ranch, the Scrolltown key-frame stage,
+   measured-loudness finishing: the polish tier is an application
+   of standing machinery, not a new capability purchase. Route A's
+   cash cost (licence-only, ≤ ~$34 worst case with Descript) is
+   an order of magnitude under Route B for the same gates.
+3. **Will's time budget decides it.** Route A keeps Will at
+   ~85 minutes in four touches. Route B *adds* hiring, briefing,
+   and revision management on top of the same approval gates —
+   the scarce resource gets spent managing a stranger instead of
+   approving a cut.
+Route C is the named fallback if the calendar collides with the
+Scrolltown January-launch crunch: the polish pass is the one
+block that can leave the house without taking accuracy with it.
 # The Power of Phext — Walkthrough Package
 
 Title: The Power of Phext — Walkthrough Package
 Source: ~/workspace/phext-walkthrough/WALKTHROUGH.md
-Inscribed: 2026-11-09 23:00 CST
-SHA-256: 07900947bbba272f11e105acfb925e9922e5c5d10293bd3f958031b383f73688
+Inscribed: 2026-11-09 23:04 CST
+SHA-256: e89074fa8a37a130b41ed05f489daccacb101fc7f2dca3019ddb84fb9df4dc73
 
 ---
 # The Power of Phext — Walkthrough Package
@@ -1790,6 +2088,13 @@ January. 🔥
 ---
 
 ## 5. Production notes
+
+**Operative plan:** PRODUCTION-PLAN.md **§6 (Polish Tier)** governs
+production — two-pass edit with gates, rendered motion-graphics
+package, key-frame-standard Scrolltown foreshadow, finished audio,
+~85 minutes of Will's time total. The checklist below remains the
+capture-day reference; where it and §6 differ (edit estimates,
+finishing steps), §6 wins.
 
 **Recording checklist (capture in this order)**
 
