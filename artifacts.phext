@@ -1133,8 +1133,8 @@ the live board is production/QUEUE.md.*
 
 Title: The Power of Phext — Walkthrough Package
 Source: ~/workspace/phext-walkthrough/WALKTHROUGH.md
-Inscribed: 2026-11-09 22:52 CST
-SHA-256: b3540a3ab53384ad25096f8fd1282e2b331147b00fd358721d6a511cec13f4f1
+Inscribed: 2026-11-09 22:53 CST
+SHA-256: 6604b497d706add758bc646b52e0b6e3845bfb0b363a0bf2423379bd758cc90f
 
 ---
 # The Power of Phext — Walkthrough Package
@@ -1186,9 +1186,10 @@ listed in §5 — the script is worded so it stays true either way.
 3:10 Jump to a coordinate
 3:50 Search the whole lattice
 4:30 Edit one scroll, save
-5:15 Carry your own encyclopedia
-6:15 Why this matters (and the AI angle)
-6:50 Try it yourself
+5:15 Download it, open it in Notepad
+6:00 Carry your own encyclopedia
+6:50 Why this matters (and the AI angle)
+7:25 Try it yourself
 ```
 
 ### Script
@@ -1268,7 +1269,24 @@ a wiki turn a one-line correction into an unreviewable database
 transaction, you know why that matters: here, an edit is a diff a
 human can read."
 
-**5:15 — Carry your own encyclopedia.**
+**5:15 — Download it, open it in Notepad.**
+`[SCREEN: download/export the phext from Phext Edit — CONFIRM the affordance on the day; fallback below. Then open the .phext file in a mainstream plain editor (Notepad / VS Code class). Hold both views side by side: Phext Edit | raw editor.]`
+"Now the lock-in test. Take the file out of the fancy editor and open
+it in the most ordinary text editor on the machine. No phext tooling,
+no plugin. Here's what you get: the text. All of it. Every article,
+fully readable, in order — because a phext is plain text, and plain
+text is the one format every computer since forever can open. What
+you don't get is the structure rendered: the nine separator bytes
+that carry the coordinates show up as odd little symbols or blank
+boxes, and the articles run together separated by those marks. It's
+not pretty. It's not supposed to be. Pretty is Phext Edit's job.
+Survival is the file's job. Worst case — every phext tool gone, the
+company gone, the website gone — you still have your encyclopedia,
+readable and editable, in Notepad. That is what no lock-in actually
+means."
+`[FALLBACK, if no visitor download/export exists on the day: "The file I'm opening is the demo encyclopedia from the description — the same format, the same test." Then open demo/wiki.phext in the plain editor instead. Do not fake a download click that doesn't exist.]`
+
+**6:00 — Carry your own encyclopedia.**
 `[SCREEN: terminal. The downloadable demo: demo/wiki.phext + query_demo.py from this package.]`
 "And when you want the box itself, take the file. This is a complete
 miniature encyclopedia — twenty-four articles, forty-nine scrolls,
@@ -1297,7 +1315,7 @@ one scroll of record, prove later what changed. The same property
 that makes a good encyclopedia makes a good exocortex. I keep my own
 working memory this way; this channel's notes live in scrolls."
 
-**6:50 — Close + CTA.**
+**7:25 — Close + CTA.**
 `[SCREEN: back to edit.phext.io; end card with the URL.]`
 "Try it. Edit.phext.io — the public demos run right in your browser,
 no sign-in for the utilities, and the whole stack is open source. The
@@ -1311,6 +1329,7 @@ because there isn't one."
 2. Cutaway graphic: browser → app server → database, layers crossed out (simple slide).
 3. Plain-text editor: raw phext file, slow scroll.
 4. Editor: navigation/browse pass; coordinate jump; search; one-line edit + save.
+4b. The no-lock-in shot: download/export the phext (or the demo file), open it in a mainstream plain editor, and frame BOTH views side by side — structured and beautiful in Phext Edit, raw and readable in the plain editor.
 5. Terminal: `query_demo.py toc`, `get`, `edit` on demo/wiki.phext, byte-diff printout, `xz` seal size.
 6. End card: edit.phext.io URL + tagline.
 
@@ -1340,6 +1359,9 @@ https://edit.phext.io
 
 Get the demo from this video (wiki.phext + query tool):
 [DEMO LINK]
+Open wiki.phext in any text editor — Notepad works. It's plain text:
+every article readable, no special tooling. Phext Edit renders the
+structure; the file itself never locks you in.
 
 Measured in the demo: 49 scrolls, 21,504 bytes, one-coordinate edits
 that leave every other byte untouched, 9,300 bytes sealed with xz.
@@ -1354,9 +1376,10 @@ Chapters:
 3:10 Jump to a coordinate
 3:50 Search the whole lattice
 4:30 Edit one scroll, save
-5:15 Carry your own encyclopedia
-6:15 Why this matters (and the AI angle)
-6:50 Try it yourself
+5:15 Download it, open it in Notepad
+6:00 Carry your own encyclopedia
+6:50 Why this matters (and the AI angle)
+7:25 Try it yourself
 
 Source: [GITHUB LINK] · phext format + SQ server: [LINK]
 ```
@@ -1372,7 +1395,7 @@ exocortex, AI memory, no database, future of text
 
 **Pinned comment draft**
 
-> The mini-encyclopedia from 5:15 is a real file you can download and
+> The mini-encyclopedia from 6:00 is a real file you can download and
 > run — 24 articles, one phext, no server. Link in the description.
 > What would you put in a box like this?
 
@@ -1389,7 +1412,7 @@ exocortex, AI memory, no database, future of text
 > New walkthrough: browsing, searching & editing it live in Phext Edit 👇
 > edit.phext.io
 
-**Thread (7 posts)**
+**Thread (8 posts)**
 
 1/ Every encyclopedia you've used is a database wearing a website as a
 hat. The words are yours; the retrieval is rented. If the backend
@@ -1409,16 +1432,21 @@ becomes a diff a human can read.
 coordinate, search and get addresses back, edit a scroll and save:
 the file rebuilds byte-perfect everywhere you didn't touch.
 
-5/ And when you want the box itself: our demo encyclopedia is 24
+5/ The lock-in test: download the phext and open it in Notepad. No
+plugin, no phext tooling. You get all the text — every article,
+readable — with little separator marks where the coordinates live.
+Not pretty. Still yours, forever. That's the point.
+
+6/ And when you want the box itself: our demo encyclopedia is 24
 articles, 49 scrolls, 21,504 bytes — one file. One-coordinate edit
 measured: 926 bytes before the scroll and 20,578 after it,
 byte-identical. Sealed with xz: 9,300 bytes. Email-sized Wikipedia.
 
-6/ Same format, production scale: the phcc compiler's entire source
+7/ Same format, production scale: the phcc compiler's entire source
 rides in a phext of 64,399 scrolls. An encyclopedia is the same shape,
 just more volumes. The addressing doesn't change as it grows.
 
-7/ Try it: edit.phext.io — public demos in the browser, no sign-in
+8/ Try it: edit.phext.io — public demos in the browser, no sign-in
 for the utilities, all open source. Write in 11 dimensions: plain
 text, no lock-in. What would you put in the box?
 
@@ -1427,7 +1455,8 @@ text, no lock-in. What would you put in the box?
 - 0:00–0:08 — Hook over editor footage: "This is an encyclopedia. There is no database."
 - 0:08–0:25 — Coordinate jump + search results as coordinates (from the long cut, 3:10/3:50).
 - 0:25–0:45 — One-line edit + save; overlay line: "one scroll changed, everything else byte-identical."
-- 0:45–1:10 — Terminal: `get` one article from the downloaded file; seal size on screen: "the whole encyclopedia: 9,300 bytes, sealed."
+- 0:45–0:55 — The same file opened in Notepad: all the text, no tooling. Overlay: "worst case, it's still just text."
+- 0:55–1:10 — Terminal: `get` one article from the downloaded file; seal size on screen: "the whole encyclopedia: 9,300 bytes, sealed."
 - 1:10–1:25 — End card: edit.phext.io + "Write in 11 dimensions: plain text, no lock-in."
 
 ---
@@ -1455,6 +1484,12 @@ text, no lock-in. What would you put in the box?
   verified from the phext-lattice repo — Navigator/search/overlay-save
   are real — but the hosted UI's exact presentation is checked on the
   day, and B-roll follows the checker, not this script.)
+- Whether the hosted editor offers a visitor a download/export of
+  the phext being browsed. Source check (phext-lattice): the only
+  download endpoint in the editor source is the submissions review
+  queue — so plan on the fallback in the 5:15 beat (open demo/
+  wiki.phext in the plain editor) unless the live site proves
+  otherwise on the day.
 - Whether a custom phext (e.g. demo/wiki.phext) can be loaded into the
   hosted editor by a visitor, and how (the repo documents /submit as
   a *signed-in* upload-for-review flow — do not present it as a
@@ -1464,9 +1499,10 @@ text, no lock-in. What would you put in the box?
 - The current public utilities list on the site (Up Goer Five,
   Coordinate TTS demo, Learn You Phext per the standing record).
 
-**Runtime estimate (estimate, labelled):** narration measures 842 spoken
-words ≈ 6–7 min at 140 wpm, plus demo pauses (page loads, terminal
-runs) that are performed, not spoken — inside the 6–8 min target. Recording + screen capture ≈ 45–75 min;
+**Runtime estimate (estimate, labelled):** narration measures 989 spoken
+words ≈ 7.1 min at 140 wpm, plus demo pauses (page loads, terminal
+runs) that are performed, not spoken — inside the 6–8 min target,
+near its top; trim the 1:20 explainer first if the read runs long. Recording + screen capture ≈ 45–75 min;
 edit ≈ half a day. All estimates, not measurements.
 
 **Claims to avoid**
@@ -1482,6 +1518,9 @@ edit ≈ half a day. All estimates, not measurements.
 - ❌ A no-login *import/upload* flow (see confirm list).
 - ❌ SQL comparisons beyond the framing ("no query language needed
   for this") — don't claim phext replaces databases generally.
+- ❌ "A normal editor shows you the dimensions / it looks just as
+  good raw." It doesn't — the raw view is text plus separator marks.
+  The contrast is the claim; don't sand it down.
 - ❌ Coordinates as global/unique across files — coordinates are
   internal to each phext; say "in this file" when it matters.
 # Neovim + Phext — Design: Phext-Scale Navigation in a Modal Editor
