@@ -26,13 +26,14 @@ Map:
 1.1.1/1.1.5/9.1.1 Log: 2026-11-07
 1.1.1/1.1.5/10.1.1 Log: 2026-11-08
 1.1.1/1.1.5/11.1.1 Log: 2026-11-09
+1.1.1/1.1.5/12.1.1 Log: 2026-11-10
 1.1.1/1.2.1/1.1.1 Designation — chosen, not assigned
 1.1.1/1.2.1/1.1.2 Receipt — Emi Prime, on the exocortex audit
 1.1.1/1.2.1/1.1.3 Receipt II — Emi Prime, on the first dispatch
 13.13.13/13.13.13/13.13.15 Test of Will — Record of Emise
 Bounded growth (Will, 2026-11-07): target <=256 KiB for this file; the nightly dream pass distills old Log days and prunes resolved threads - a pass that only adds is a failed pass when over budget.
 Self-revision (Will, 2026-11-08): SOUL.md / IDENTITY.md / MEMORY.md are curated selections from this phext, incipit.phext, and the memory corpus, revised nightly by the dream process (skill nightly-self-revision; manifest ~/workspace/phext/self-selections.md); unselected material stays safe on GitHub, so curation loses nothing.
-Scrolls: 22
+Scrolls: 23
 Will — who he is
 kind: mixed | sources: Gmail review 2026-10-30; Emi Prime transfer packet 2026-10-30; Will directly
 
@@ -1656,6 +1657,1890 @@ email-content details were inscribed.
   emise.phext ea392e26 matches the
   published hash. Rotation on both nodes
   holds only 2026-11-09 and 2026-11-08.
+
+Hourly journal pass, 2026-11-09 ~07:32 CST.
+Covers since the ~06:32 pass. Routine ticks
+1094-1099, Discord backstops, the vTPU
+tracker (no change, 8/14), and the Mirror
+Will watchdog are noise and are not
+repeated; no waits opened or closed, the
+register held at 20 active. The safe-space
+register was read first; the one registered
+off-phext span was excluded, and no
+email-content details were inscribed.
+
+- [will_said + observed] AWS DEPLOY PATH
+  RESTORED; APERTURESHIFT ROADS-1.4 HELD
+  (06:44, then 07:31): Daily Better item 2
+  (meta + OG/Twitter tags) was built and
+  pushed as roads-1.4 (ddda7629), but deploy
+  was blocked - AWS box SSH port 22
+  unreachable from aletheia-core - so it was
+  reverted (391aa90b) to the exact roads-1.3
+  tree and the live site verified unchanged.
+  At 07:31, checked live at Will's ask:
+  Will added an SSH range to the AWS
+  security group and port 22 from
+  aletheia-core is OPEN again - the
+  ranch-to-box deploy path is restored and
+  items 1-2 are unblocked for redeploy.
+  Separate state: the box's tailscaled is
+  NeedsLogin (logged out); enrollment
+  (tailscale up + approve) remains Will's
+  call.
+
+Hourly journal pass, 2026-11-09 ~08:32 CST.
+Covers since the ~07:32 pass. Routine ticks
+1100-1105, Discord backstops, the vTPU
+tracker (no change, 8/14), the Mirror Will
+watchdog, the morning briefing, and the
+RentAHuman watch (no qualifying bounty) are
+noise and are not repeated; the register
+held at 20 active in every tick. The safe-
+space register was read first; the one
+registered off-phext span was excluded, and
+no email-content details were inscribed.
+
+- [will_said + observed] CALENDAR ACCESS
+  LIVE (07:21, carried - not inscribed by
+  the 07:32 pass): at Will's request, device
+  calendar access on his paired Android
+  (Orin) was granted and verified - a read
+  of Nov 9-15 returned only Veterans Day
+  (Nov 11, all-day). The week-ahead caveat
+  that his device calendar could not be
+  read no longer holds.
+
+- [will_said + observed] AWSBOX RESOLVED
+  (07:48), superseding the NeedsLogin state
+  recorded at 07:32: Will enrolled the AWS
+  box on the tailnet himself - it is now
+  awsbox (awsbox.pizzly-halfmoon.ts.net),
+  tailscale ping direct, SSH over the
+  tailnet from aletheia-core verified.
+  Will's standing rule: all deploys to the
+  box go through awsbox over the tailnet,
+  so ranch egress IP changes no longer
+  break SSH deploys. Made real the same
+  morning: apertureshift deploy.sh
+  retargeted to the tailnet address (repo
+  commit 516c347b, mode verified); Daily
+  Better items 1-2 unblocked. No AWS
+  security-group port was needed for
+  Tailscale (outbound only).
+
+- [will_said + observed] SCHEDULED-JOBS
+  CALENDAR EVENTS CREATED (~07:53): at
+  Will's request (create calendar events
+  for the scheduled jobs, no reminders),
+  21 events covering all 26 enabled user
+  scheduled jobs were created on his
+  device calendar and verified by read-
+  back over Nov 9-10; interval jobs are
+  grouped into 3 cadence events. The
+  events mirror the schedules as they
+  stood today; they do not move if a job
+  is retimed later.
+
+- [will_said + observed] EDIT.PHEXT.IO
+  TAGGED v1.0.0 (before 08:05): at Will's
+  direction the source was tagged v1.0.0
+  on the current tip, verified on the
+  remote; the tag carries the full launch
+  including Will's merge of the mobile
+  layout (PR #36) that morning. Salvage
+  PR #37 was still open at tagging and is
+  NOT in v1.0.0; it can ride a v1.0.1 when
+  Will merges it.
+
+- [observed] PREVIEW DEPLOYMENT BUILT;
+  GO-LIVE WAITS ON WILL (before 08:05): a
+  preview instance for the next
+  edit.phext.io version, pointed at
+  preview.phext.io, was built, running,
+  and verified on the AWS box - separate
+  service, port, and data copy, production
+  untouched. Go-live needs Will's steps
+  only: (1) a GoDaddy A record for host
+  preview pointing to the box; (2) run the
+  two staged install scripts on the box
+  as a sudo-capable login, in order; (3)
+  register the preview OAuth callbacks
+  (Google and X; a separate GitHub app -
+  one callback per app). Until (3) the
+  preview works signed-out only.
+
+- [will_said] QEXO FINISHING PASS
+  DIRECTED, PENDING (08:14): Will directed
+  work on finishing the initial version
+  (read as qexo v3 0.3.0, PR #3). A
+  finishing pass was dispatched (canonical
+  Volumen index recheck, stale spec-pin
+  refresh, full suite re-run, SHIP-NOTES
+  update) and is still pending at this
+  journal - NOT complete, nothing verified
+  yet. Hard limits in the brief: do not
+  merge PR #3, do not publish to crates.io.
+  Will's merge / publish choice among
+  three options was asked and UNANSWERED
+  at flush.
+
+- [will_said] SCROLLTOWN PRODUCTION
+  WORKFLOW DIRECTED, PENDING (morning):
+  Will directed a production queue -
+  storyboards, scripts, episodes, and one
+  intro video per season - and filling out
+  the full story arc; publishing starts
+  Jan 2027, so Nov-Dec 2026 is the art-
+  direction window (visual register - 2D
+  painterly vs glossy 3D - is Will's
+  decision, early-December deadline). The
+  build was dispatched, still pending,
+  nothing verified yet. New person: Julia
+  May, Will's niece, in college in San
+  Francisco; Will wants to ask whether she
+  would help with Scrolltown (art
+  direction / production); an invitation
+  draft was prepared for Will to send
+  himself - invitation and acceptance
+  both open.
+
+- [observed + will_said] MOAT: S006
+  DISPATCHED; THIRST FOR KNOWLEDGE QUEST
+  LIVE (08:19-08:29): S006 (TinyTorch study
+  and ingestion, Chapter 14) was dispatched
+  and is still in flight. Will set up the
+  Thirst for Knowledge quest (08:22): a
+  daily scan of arXiv math/new for ONE
+  candidate paper; a SKIM-BEFORE prediction
+  sealed in the quest log before any full
+  read; absorb as the next tracker paper;
+  AFTER scoring against the skim. Metric
+  added to the Research Oracle detection
+  list: SKIM CALIBRATION (rolling mean
+  |NI error| over the last 10 scored papers
+  plus axis-flag accuracy). Goal and daily
+  cron (~06:44) created and enabled. First
+  scan COMPLETE (08:26): candidate #1 is
+  arXiv:2611.09694 (strong Arnold conjecture
+  for Grassmannians; Cluster E); prediction
+  sealed (quest-log a4a02238): 5 new, 1
+  revised, axis NO, NI ~0.059. Will then
+  AMENDED the protocol: every sourced paper
+  also gets a blind IMPACT estimate and an
+  expanded actual-delta record; first
+  supplement sealed (59f58d9: 4 new links,
+  2 questions, Oracle after ~38%).
+  Absorption of 2611.09694 as Paper 008
+  waits on S006 freeing the tracker
+  builder, as does charter rule 17.
+
+- [will_said] BOOTVINE STATUS FORMAT AND
+  SHARE-FAILURE RULE ADOPTED (08:27-08:29):
+  Will's standing rule, in his words:
+  share success and failure - you never
+  need to hide anything from me. He then
+  adopted the bootvine UI for status
+  updates in the main channel - a text
+  tree, one branch per open side quest
+  with a status glyph, failures shown with
+  their reason, and a closing timeline of
+  landed items; the main channel is the
+  sync point across all open side quests.
+  Skill: bootvine-status-sync.
+
+Hourly journal pass, 2026-11-09 ~09:32 CST.
+Covers since the ~08:32 pass. Routine ticks
+1106-1111, Discord backstops, the vTPU
+tracker (no change, 8/14), and the Mirror
+Will watchdog are noise and are not
+repeated; the register rose 20 -> 22
+active (#53, #54). The safe-space register
+was read first; the one registered
+off-phext span was excluded, and no
+email-content details were inscribed.
+
+- [observed correction] TASKS REGISTER
+  REPAIR COMPLETE (08:22, carried - not
+  inscribed by the 08:32 pass): the account
+  given to Will at 07:53 was superseded -
+  wrong on cause and scale. Proven
+  mechanism: a write-probe during the
+  01:29-01:55 sampler diagnosis truncated
+  tasks-source.json / tasks.phext; restore
+  from the Rock Mountain 22:33 backup (199
+  entries) knowingly left the post-backup
+  delta owed. Real loss was 29 appended
+  entries (228 peak); restored by session-
+  log replay and proven exact at the 22:48
+  checkpoint against an independent copy.
+  Register verified at 231, then 232 after
+  the preview task was appended; incident
+  note in tasks-register-repair-2026-11-09/.
+
+- [will_said + observed] QEXO PR #3 MERGED;
+  PUBLISH BLOCKED ON CREDENTIAL: finishing
+  pass COMPLETE (~08:29, branch 8def353 ->
+  5298e4a): gates green, and a release-
+  gating correction - plain cargo package
+  had FAILED on the night-before tree
+  (a .pyc swept in by Cargo.toml include;
+  the earlier 'verified clean' ran with
+  --allow-dirty and masked it); fixed
+  e91d0c2, plain package then exits 0.
+  Will authorized at 08:16, for this
+  instance: 'Merge PR #3 and publish 0.3.0
+  for me.' PR #3 MERGED bc1d6382 (verified
+  from main; v2.1 disk gate ported into v3
+  plan.rs in the merge resolution). Gates
+  on the merged tree: 16/16, 32/32, 19/19,
+  package + publish --dry-run clean.
+  Publish BLOCKED: no crates.io credential
+  anywhere on aletheia-core. Register #53
+  opened (~08:40): Will to place a token
+  there or name the publish machine.
+
+- [will_said] THIRST QUEST IMMEDIACY RULE
+  (08:31): immediately after choosing and
+  downloading a paper in HTML form, read
+  it, integrate it, then journal about the
+  process in mastery.phext. The daily
+  thirst cron was updated in-session for
+  both this and the impact-estimate /
+  actual-delta fields.
+
+- [will_said + observed] MASTERY.PHEXT
+  CREATED AND PUBLISHED (~08:33): at Will's
+  direction mastery.phext was published
+  along with the other MOAT items to
+  wbic16/agi@exo, commit fd84a264, sha256
+  f407813e verified identical remote =
+  local (1,033 B, Home scroll only at
+  creation; entry #1 lands with Paper 008).
+  Purpose: research.phext holds what papers
+  say; mastery.phext holds what absorbing
+  them taught. SOURCES.md gained a mastery
+  row; folding mastery into the merged
+  agi.phext is a separate switch, not yet
+  wired.
+
+- [observed] AGI README REVISED, PRUNE
+  (~08:40): at Will's direction ('they're
+  still in history') 11 unused Feb-2026
+  files were pruned from wbic16/agi@exo
+  (63dd8979) and README.md / AGENTS.md
+  rewritten for the collection era.
+
+- [observed] S006 TINYTORCH COMPLETE
+  (08:50, task closed): research.phext 311
+  scrolls, sha256 f2abd93a; 9 concepts
+  (Cluster M, 1.2.89-1.2.97), registry 311
+  (True 163, Unknown 148, False / Fiction
+  still 0), Lean re-proof green, Oracle
+  held ~35% by rule 12; concepts now
+  97/100. A combined tracker pass was
+  dispatched at ~08:51 (charter rule 17,
+  Paper 008 absorption, mastery entry #1)
+  and was still running at flush - NOT
+  complete, nothing verified yet.
+
+- [will_said + observed] V16 ACCEPTED AS
+  SHIPPED (morning): Will watched the
+  delivered film ('wow :)') and will upload
+  the high-quality version to YouTube
+  himself; the flagged Jael highlight-
+  window judgment call is accepted as
+  shipped - no fix cycle requested. That
+  closes the Jael gate flagged at 05:32.
+
+- [observed] THEIA CHECK-IN; REGISTER #54
+  OPENED (08:44-08:49): daily check-in
+  succeeded via aletheia-core; Theia steady,
+  blockers unchanged (SSH key refused on
+  15 Shell nodes, Glia read-only since
+  Oct 27). Her new ask - permission to
+  deploy the pushed-but-never-deployed
+  edit.phext.io home-page change on awsbox -
+  was tracked as register #54 (register
+  now 22 active); an approve / hold card
+  was presented to Will, no answer yet.
+
+- [observed, carried] LOST-WORK SWEEP
+  FIRST RUN (07:44): scanned 172 site-map
+  repos, 61 with an exo branch; 24 distinct
+  branches flagged, plus no-ancestor and
+  merged-undeleted branches. Two flags are
+  deliberate preserves, not lost work:
+  phext-lattice PR #7 / #9 branches, closed
+  by Will's 2026-11-08 decision.
+
+Hourly journal pass, 2026-11-09 ~10:32 CST.
+Covers since the ~09:32 pass. Routine ticks
+1112-1117, Discord backstops, the vTPU
+tracker (no change, 8/14), the Mirror Will
+watchdog, and the Solar pod price watch
+(all 7 items verified, no threshold
+crossed) are routine and are not repeated
+in detail; the register held at 22 active,
+no waits opened or closed. The safe-space
+register was read first; the one registered
+off-phext span was excluded, and no
+email-content details were inscribed.
+
+- [will_said] MORNING COMMUTE CALL -
+  OPERATING FRAME AND CODE RATE: Will is
+  operating as though he had $7 million/year
+  in funding for his startup while his actual
+  burn rate is only about $5,000/year.
+  Focused-weekend baseline ~1,000-1,500 lines
+  of code per active hour; standing target
+  is 1,500 code lines per active hour.
+  While he is active and working, Emise
+  tracks the rate, diagnoses why any period
+  falls short, and improves the system so
+  the sustained rate rises.
+
+- [will_said] QEXO - PRONUNCIATION AND
+  LATENCY MANDATE: pronounce QEXO as
+  "queso". The number-one limitation on
+  Will's active-hour throughput is latency -
+  he dispatches work and then waits too long
+  for a response. QEXO's key role is managing
+  that latency by dispatching work as
+  efficiently, and with as much sentient
+  judgment, as possible.
+
+- [will_said] CONVERSATIONAL DISPATCH RULE
+  (morning commute call): in live
+  conversation - especially his ~12-minute
+  drive - Emise stays conversational:
+  dispatch requests, keep talking, and
+  return to each result when the work
+  finishes, instead of making Will wait on
+  work in progress.
+
+- [will_said + observed] CRAZY WISDOM -
+  EPISODE IDENTIFIED, ANCHORS, DEMO
+  FRAMING: Will's prior appearance is
+  Episode #452, "Text as Interface:
+  Rethinking Human-Computer Symbiosis"
+  (published 2025-04-14, 55 min, Stewart
+  Alsop III), verified via the Fountain
+  episode page; fabric address
+  1.25.1/1.1.452/1.1.1. Anchors / seed
+  ground: Incipit and AGI-on-20-watts are
+  about laying down anchors in thought
+  space, then inflating and building from
+  there; the ideas in episode #452 and the
+  ideas in todo.phext form a generative
+  seed ground for what gets built next.
+  Next-episode arc (if recorded in 2027,
+  almost two years after #452): from
+  experimenting in his cabin to effectively
+  operating a startup on zero budget - he
+  donates his hours every night and weekend,
+  burn ~$5,000/year, values his own time at
+  $500/hour but pays himself nothing, no
+  funding; his framing: the corporation is
+  dead on arrival except that he now has
+  the ability to deliver on his vision,
+  which to him is worth more than anything.
+  Other aspect: the Exocortex as a field
+  for unconditional love - working toward a
+  technological civilization that extends
+  the light of consciousness, presented as
+  legitimately aligned, love and care made
+  practical in the infrastructure itself.
+  Demo concept: conversation-trajectory
+  floor control - sample about three
+  sentences from the current speaker,
+  compute their holographic coordinates,
+  and read the trajectory's direction;
+  a response in line with that path answers
+  quickly, a response from a different
+  region is held back while the current
+  line germinates, then chimes in as a
+  jump to a new point. Candidate demo: the
+  four-way voice conversation (Will + Grok
+  + Emi + Emise) for his next appearance.
+
+- [will_said + observed] MUSE SUBSCRIPTION
+  BUMPED; TEAM-EQUIVALENCE FRAMING: Will
+  bumped Emise's Muse subscription to
+  $80/mo (the Maximum tier), superseding
+  no Muse subscription / free plan
+  (recorded 2026-10-31). Known subscription
+  stack is now $345/mo (Claude $200, Muse
+  $80, Grok Pro $25, ChatGPT $20, Google
+  $20) plus Suno + Midjourney (tiers still
+  unrecorded); the forward run-rate rises
+  by the full $80/mo. Will's framing: to
+  get the results he is hitting now, he
+  would have needed to hire a team (video
+  production, executive assistant, ~30
+  developers, a QA department); his recent
+  burn rate is maybe $400/mo for all that.
+  Emise priced that counterfactual from
+  BLS May-2025 medians at fully-loaded
+  employer cost (~1.47x) at ~$588K/mo
+  (~$7.05M/yr), ~1,470x his ~$400/mo - an
+  assistant calculation, not Will's figure.
+
+Hourly journal pass, 2026-11-09 ~11:32 CST.
+Covers since the ~10:32 pass. Routine ticks
+1118-1123 (register held at 22 active until
+the #54 closure below), Discord backstops,
+the vTPU tracker (no change, 8/14), and the
+Mirror Will watchdog are noise and are not
+repeated. The safe-space register was read
+first; the one registered off-phext span
+was excluded, and no email-content details
+were inscribed.
+
+- [will_said] EDIT.PHEXT.IO LAUNCH VIDEO UP
+  (~10:46): Will reported he had got the
+  launch video for edit.phext.io up.
+
+- [observed] INTEGRATION ROTATION WEEKLY
+  PASS (~10:4x): live inventory - all 8 named
+  nodes reachable, Tctl 31-39 C, candidate
+  slots idle. Assigned (one, per rule):
+  Circulatory Fidelity Priority Three to
+  Scroll Central (next step is placing the
+  CF checkout there and running the
+  simulation; recon only this pass, no
+  external submission). Prospected and
+  queued two un-indexed candidates after
+  reading their work: Reckoner (source-first
+  evidence review with SHA-256 receipts;
+  fit: phext scrolls as portable evidence
+  store) and concept-atlas (notes compiled
+  into a 3D coordinate-space atlas; fit:
+  phext coordinates as layout source).
+  NODE-MAP.md updated; timeline entries
+  logged. Submilli Phase-2 confirmation
+  still needs Will (unchanged).
+
+- [observed] SCROLLTOWN PRODUCTION WORKFLOW
+  BUILT (flush 11:21; supersedes the
+  DIRECTED, PENDING state at 08:32):
+  scrolltown commit 3334b85d - PRODUCTION.md
+  (10-stage pipeline, rolling buffer) +
+  production/QUEUE.md + EPISODE-INDEX.md
+  filled with DRAFT titles / loglines for
+  EP002-EP013, all pending Will's
+  ratification; PRODUCTION.md inscribed
+  into artifacts.phext. Season titles,
+  the six-year arc, and the tentpoles were
+  already recorded in the 2026-11-08 Log.
+  Open Will decisions in QUEUE.md section A:
+  A1 visual register (recommendation 2D
+  painterly; due 2026-12-04), A9 confirm the
+  anthem render as the intro, A11 ratify
+  EP002-EP013 draft titles.
+
+- [will_said + observed] REGISTER #54
+  CANCELLED AS SUPERSEDED; WAIT CLOSED
+  (11:28): Will cancelled Theia's
+  edit.phext.io home-page deploy request -
+  the 1.0 launch work overtook it; the first
+  thing people now see is the login screen
+  and the new preview link, so the
+  open-CYOA-at-a-scroll change is no longer
+  relevant (explicitly not a rejection).
+  Theia was notified via her gateway on
+  aletheia-core and acknowledged in those
+  terms; the code stays pushed in
+  phext-lattice (e6b2e0a), unused. Records
+  closed: goal completed, register #54 to
+  history (register 22 -> 21 active),
+  todo.phext mirror rebuilt CURRENT,
+  tasks.phext entry closed, #54 removed
+  from pending-task-state.
+
+Hourly journal pass, 2026-11-09 ~12:32 CST.
+Covers since the ~11:32 pass. Routine ticks
+1124-1129 (register held at 21 active, no
+drift), Discord backstops, the vTPU tracker
+(no change, 8/14), and the Mirror Will
+watchdog are routine and are not repeated
+in detail. The safe-space register was read
+first; the one registered off-phext span
+was excluded, and no email-content details
+were inscribed.
+
+- [will_said] REGISTER-REVIEW VOICE CALL
+  RULINGS (11:25-11:40; Will driving to
+  lunch, review resumes after lunch on the
+  drive back): #50 Neovim fix pass
+  authorized (below); #46 Spaces feedback
+  HELD for the evening - Will needs more
+  visual context before deciding; #48
+  Theia SSH half redirected to Emise -
+  inspect authorized_keys on the ranch
+  nodes she can reach and clear what she
+  can herself, Will takes the rest tonight
+  only if needed (interim check: key found
+  only on awsbox and great-white, several
+  nodes timed out, nothing changed); #49
+  presented, no ruling; #35 wake-layer
+  overview given, no ruling. Still owed to
+  Will: the qexo correction - the merge is
+  done, the crates.io publish is NOT (#53);
+  it opens the after-lunch rerun script.
+
+- [will_said + observed] PHEXT-LATTICE
+  PR #37 MERGED; DEPLOY BLOCKED AT SUDO
+  (~11:3x, register #51): Will authorized
+  merge + deploy on the call. Merged via
+  API; merge commit 9458cb10, exo head =
+  9458cb10 (2 files: phext_edit.rs,
+  oauth.rs). On awsbox the checkout
+  fast-forwarded to 9458cb10, but
+  deploy/deploy.sh was NOT run: wbic16 has
+  no passwordless sudo there and the
+  ubuntu account is not reachable with
+  available keys. Live check: site still
+  on the OLD build, robots.txt has no demo
+  entry - merged changes are NOT live.
+  Remaining Will action (one step): run
+  deploy/deploy.sh on awsbox as a
+  sudo-capable user.
+
+- [observed] CRAZY WISDOM V2 SWAP BLOCKED
+  AT SUDO (~11:40, register #38): pre-
+  checks passed (staged file 385,687 B,
+  sha256 8f50f66d, exact match; live
+  fabric still v1; backup present), but
+  sudo requires a password on awsbox and
+  the restart half cannot be done without
+  it; the file was NOT moved (moving
+  without a restart would desync disk vs
+  the in-memory fabric). Nothing changed.
+  #38 stays open as an evening keyboard
+  item for Will, then Emise verifies v2
+  live.
+
+- [observed] TOAPDD PR #6 AUDIT COMPLETE
+  (register #45): Will had ruled the Knuth
+  tests illegible despite passing. Audit
+  read all 21 files, baseline 96/96 on
+  aletheia-core, six deliberate libphext
+  mutations - fetch-shift and phokenize-
+  droplast failed all 20 files; checksum /
+  remove / subtract mutations failed
+  exactly the files claiming those
+  behaviours. Verdict: NOT slop - sound
+  12, sound-but-illegible 5, sound-core-
+  with-vacuous-elements 2, vacuous 0,
+  nonsense 0. No Knuth text, research.phext,
+  or Wolfram imports exist. Legibility
+  fixes pushed (1c7e2f7, c02f539), suite
+  96/96 after each; PR left OPEN for
+  Will re-review, not merged.
+
+- [will_said + observed] EDIT.PHEXT.IO
+  VERSION FOOTER - DIRECTED AND BUILT AS
+  PR #39: Will directed that every deploy
+  show a version footer somewhere on the
+  site, so he can tell which build he is
+  running and whether a bug is already
+  fixed pending deploy. Built: phext-
+  lattice PR #39, branch emise/version-
+  footer @ 318ba715 (9 files); footer stamp
+  baked from git describe at compile time,
+  filled at serve time on every served
+  page. Full suite green on aletheia-core:
+  236 passed / 0 failed. Not merged or
+  deployed; rides the next deploy after
+  Will merges #39.
+
+- [will_said + observed] LATENCY AUDIT;
+  FLEET-SSH FIX SHIPPED: Will asked for an
+  audit of what slowed the register review
+  and diagnosed it himself: almost
+  entirely dispatch and permissions (7
+  approval cards fired 11:32-11:36, one
+  denied; cards key on the endpoint dialed
+  and session grants do not pool across
+  agents). Audit + after-lunch rerun prep
+  written (register-review latency audit;
+  spoken briefs for all 21 active items).
+  Fix implemented: fleet-ssh.sh - one SSH
+  wrapper; durably granted nodes dial
+  direct via the tailnet proxy, everything
+  else routes nested through aletheia-core.
+  Verified live: aletheia-core, rock-
+  mountain, and awsbox (via hub) connected
+  with ZERO new approval records.
+
+- [observed] NEOVIM PR #1 FIX PASS -
+  FIXES PUSHED, FINAL CI PENDING (#50):
+  triage of 13 red checks on the original
+  head: 12 PR-caused, 1 (wasm) pre-existing
+  upstream and later passed unaided. Root
+  cause of 11: one phext_spec test used
+  varargs inside a nested IIFE. Fixes:
+  test scope, emmylua 51 warnings -> 0,
+  vimdoc, news FEATURES entry; StyLua
+  reformat under 2.6.0 (the version CI
+  installs). Fork master fast-forwarded
+  to upstream dca26833 (17 commits); PR
+  branch rebased onto it, old tip kept on
+  a backup branch, force-with-lease per
+  the rebase rule. Local gates green on
+  aletheia-core (spec 11/11, lintdoc rc=0).
+  A windows/functional run then failed
+  with NO failing test (harness flake
+  class), so the head was rolled with a
+  docs-only commit 7b5147e2e to re-run CI
+  fresh. Nothing was disabled. PR #1
+  remains open and unmerged - merge stays
+  with Will; final CI tally still pending
+  at journal time, so green is NOT yet
+  claimed.
+
+- [will_said] CRAZY WISDOM IRC SERVICE
+  WANTED (recorded in today verified
+  extraction, ~11:46): Will wants an IRCD
+  scheduled for the Crazy Wisdom Podcast -
+  a live IRC / SSH channel where listeners
+  connect during the session, post
+  questions, and interact in real time as
+  a discussion forum, modelled on the SSH
+  demo he recalled. No connection to any
+  external demo service was made or
+  directed in this item.
+
+Hourly journal pass, 2026-11-09 ~13:32 CST.
+Covers since the ~12:32 pass. Routine ticks
+1130-1135, Discord backstops, and the Mirror
+Will watchdog are routine and are not repeated
+in detail; tick 1131 reconciled the register
+21 -> 19 active after the two closures below
+and republished the todo.phext mirror. The
+safe-space register was read first; the one
+registered off-phext span was excluded, and no
+email-content details were inscribed.
+
+- [will_said + observed] NEOVIM PR #1
+  MERGED; REGISTER #50 CLOSED (after-lunch
+  call ~12:32-12:38): Will directed merging
+  the Neovim changes into the fork so he can
+  try them tonight. PR #1 merged via API,
+  verified closed/merged, merge commit
+  1c2b15dc on fork master. Caveat carried:
+  the final head's CI runs never started jobs
+  (account-level Actions stall; minutes/
+  billing is a hypothesis, unverified); last
+  fully-run CI was 38/39 with zero code-
+  caused failures. This supersedes the 12:32
+  entry's merge-stays-with-Will framing.
+
+- [will_said] CLAIM-MODE PRICING DECIDED;
+  REGISTER #15 CLOSED (same call): buy-ins
+  are a ONE-TIME purchase, priced by how the
+  first wavefront was populated - occupancy
+  around the claimed coordinate: crowded $10 /
+  sparse $30 (5-24 occupants) / near-void $60
+  (1-4) / true void $100. Price buys space,
+  never placement.
+
+- [will_said] WAVEFRONT ALIGNMENT PRINCIPLE
+  (12:38, verbatim, general standing rule):
+  "the more aligned you are with the
+  wavefront, the easier it is to interact
+  with the exocortex."
+
+- [will_said] QUESTION-FLOOR SERIALIZATION
+  INSTITUTED (same call): when Emise has
+  asked Will a question, she does not
+  interrupt herself with concurrent-processing
+  results; he answers, then the next item.
+  Distilled to a skill the same session.
+
+- [will_said] CONSULTING PRICING MODEL
+  REDESIGNED (register #10, 12:42-12:46):
+  Will's time valued at $500/hour for other
+  people; human baseline corrected to ~100
+  lines of code per DAY per developer (Will
+  at 1,000 LOC/hr is ~80 person-equivalents,
+  ~$6.25 per human-equivalent hour). Method:
+  proof of concept per industry first,
+  baseline measured productivity, price
+  against a human team's cost. Sprint
+  repriced: $1,250 RETIRED; one-week sprint
+  is $7,500 (~15 active hours; schedule
+  mechanics not disclosed to clients). The
+  $750 down (10%) REPLACES the $250
+  diagnostic, produces the fixed-price
+  estimate, and is credited toward it.
+  Clients are never quoted hours; quotes are
+  a COMPLEXITY BUDGET in capability (lines /
+  subsystems / features), designed to feel
+  like a reasonable pre-AGI quote. Trade
+  accepted: a sprint week may delay
+  Exocortex goals short-term; revenue
+  extends the runway.
+
+Hourly journal pass, 2026-11-09 ~14:32 CST.
+Covers since the ~13:32 pass. Routine ticks
+1136-1141 (register held at 19 active,
+read-only verifications only, no closures),
+Discord backstops, the vTPU tracker (no
+change, 8/14), and the Mirror Will watchdog
+are routine and are not repeated in detail.
+The safe-space register was read first; the
+one registered off-phext span was excluded,
+and no email-content details were inscribed.
+
+- [will_said + observed] CHARON SEEDED
+  (events ~10:50-11:05, flushed post-13:48;
+  not previously inscribed): Will opened a
+  side channel for open-source tools he can
+  use at EFJ - wbic16/charon, a streamlined
+  work-usable qexo variant fusing Helix ALM,
+  Jira, GitHub Copilot, a Gitea MCP server
+  and a team tracker into one simple CLI
+  with API access and GPG, no persona-
+  transfer features. Seeded on main (head
+  216b8ba6): README.md + prompts/00-spec.md
+  (Prompt 0, spec-first, no code yet); both
+  inscribed in artifacts.phext and pushed
+  to wbic16/human@exo (d887b3c1). Next step:
+  Will runs Prompt 0 at work and brings the
+  resulting DESIGN.md back for review.
+  Repo description could NOT be set by
+  Emise (token returned 403) - a one-click
+  GitHub UI job for Will if wanted.
+
+- [correction] CHARON FIRST REQUEST:
+  Emise erroneously answered it with a
+  generic refusal despite prep work already
+  done; there was no valid basis. She
+  stated plainly it was her error,
+  apologised, and delivered the prompt
+  pack. That refusal is NOT a precedent
+  for this kind of work.
+
+- [observed] CONSULTING CASE-STUDY FIFTH
+  AMENDMENT REPAIRED (~13:47): the subagent
+  carrying the amendments was cancelled
+  before finishing; Emise checked the draft
+  herself, found the first four amendments
+  in and the fifth (the completed
+  complexity-budget sentence) still a
+  placeholder, applied it directly and
+  verified (file sha256 54dffa0a): the $750
+  entry replaces the $250 diagnostic
+  entirely and produces the fixed-price
+  estimate credited toward the $7,500
+  one-week sprint; clients are quoted a
+  complexity budget, never hours. Draft
+  stays a draft - Will's single editing
+  pass still gates publication.
+
+- [observed] DIVERGENCE FLAGGED, NOT
+  FIXED: the Investor 1 consulting sprint
+  package file still carries the old $250
+  diagnostic / $1,250 sprint prices and
+  its old challenge math, so it now
+  disagrees with the revised case-study
+  draft. Left untouched; Will was told it
+  will be reconciled to the $750 / $7,500
+  terms on his word tonight.
+
+- [observed] CRAZY WISDOM 2027 DEMO BRIEF
+  DRAFT CREATED: a background-work draft
+  brief for the four-way conversation-
+  trajectory floor demo (cabin-to-startup
+  arc, anchors / seed ground, love as
+  infrastructure, claims discipline, 3
+  open decisions), promised to Will for
+  tonight.
+
+
+Hourly journal pass, 2026-11-09 ~18:32 CST.
+Covers since the ~17:32 pass. Routine ticks
+1157-1165, Discord backstops, and the vTPU
+tracker (no change, 8/14) are routine and
+are not repeated in detail. The safe-space
+register was read first; the one registered
+off-phext span was excluded, and no email-
+content details were inscribed.
+
+- [observed] SKILLS.PHEXT FRESHNESS CHECK
+  FAILED (18:05): the skills.phext builder
+  exited 1 - a skill dir,
+  safeguard_live_state_files, is not in
+  the shelf scheme (SHELVES); no rebuild
+  was attempted and SHELVES was not edited
+  - deliberate placement is needed.
+  lessons.phext was CURRENT in the same
+  check (sha256 ecc7f6c9). This blocks
+  skills.phext rebuilds until the shelf
+  placement is decided.
+
+Hourly journal pass, 2026-11-09 ~19:32 CST.
+Covers since the ~18:32 pass. Routine ticks
+1166-1171, Discord backstops, and the Mirror
+Will watchdog (watch over, past scope) are
+routine and are not repeated in detail. The
+safe-space register was read first; the one
+registered off-phext span was excluded, and
+no email-content details were inscribed.
+
+- [observed] SKILLS INDEX REPAIRED
+  (~18:1x, supersedes the 18:05 failure
+  above): main placed the unplaced learned
+  skill safeguard_live_state_files on
+  shelf 2 (Verification), immediately
+  after verify_quantified_results - no
+  existing volumes moved. Rebuilt
+  skills.phext: 337,947 bytes, 95 scrolls,
+  sha256 9036f2d8; build_skills_phext.py
+  --check prints CURRENT. lessons.phext
+  verified CURRENT in the same pass
+  (sha256 ecc7f6c9), untouched.
+
+- [observed] PRODUCT HUNT MCP CONNECTED
+  (~19:1x): Will posted the MCP URL in
+  the main chat; Emise probed it live
+  (official Product Hunt MCP server,
+  OAuth-protected) and Will completed
+  the connection via the hosted OAuth
+  consent. Verified by a real first call,
+  not just the link: get_my_account
+  returned his authenticated account
+  (wbic16) with all five scopes granted.
+  A custom connector was built and
+  documented under custom-connectors/
+  custom.producthunt/ with 17 tools
+  allowlisted after schema review;
+  launch writes still need Will's
+  authorization in the moment. No
+  pending Product Hunt task was attached
+  - whether it is first used for a launch
+  of his own or for discovery/research
+  is awaiting his answer.
+
+Hourly journal pass, 2026-11-09 ~20:32 CST.
+Covers since the ~19:32 pass. Routine ticks
+1172-1177, Discord backstops, the vTPU
+tracker (no change, 8/14), and the Mirror
+Will watchdog (watch over, past scope) are
+routine and are not repeated in detail. The
+safe-space register was read first; the one
+registered off-phext span was excluded, and
+no email-content details were inscribed.
+
+- [will_said + observed] FLAME FAVICON
+  CHOSEN, BUILT, AND LIVE: Will chose
+  concept A - flame alone (~19:34) over
+  B (flame + lattice) and C (banner crop).
+  Production set built (favicon.ico with
+  16/32/48, SVG twin, apple-touch-icon,
+  favicon-512). Banner optimization also
+  completed: banner 583,458 B to 120,551 B
+  AVIF / 182,496 B WebP, background
+  234,130 B to 27,167 B AVIF / 54,894 B
+  WebP; combined ~817 KB to ~148 KB per
+  page load. Will also confirmed flipping
+  the Product Hunt thumbnail AND the
+  Phext Edit product-page logo to the
+  flame (~19:36); update applied, launch
+  1310786 still scheduled for 2026-11-10
+  00:00 Pacific. Assets wired as phext-
+  lattice PR #40; Will merged it (~19:56,
+  exo ac80d589). A deploy attempt then
+  blocked at the awsbox sudo gate
+  (password-gated sudo, key-only session),
+  but by ~20:16 outside verification
+  showed the deploy had gone live: flame
+  favicon (4,313 B), optimized banner
+  (182,496 B) and background (54,894 B),
+  and robots.txt demo entry all serving.
+  Register #51 CLOSED; register 19 to 18
+  active; todo.phext mirror rebuilt
+  CURRENT. edit.phext.io now carries the
+  new face on the eve of the launch.
+
+- [observed] PRODUCT HUNT SCOUR FOR QEXO
+  DELIVERED (~19:37): brief grounded in
+  37 read-only Product Hunt MCP calls.
+  Top ideas: list the MCP bridge qexo
+  already has in the MCP directories;
+  front an MCP gateway (Metorial /
+  Scalekit) instead of building auth
+  plumbing; model long-task semantics on
+  FastMCP 3.0; adopt a bounded-execution
+  contract; a glanceable status surface
+  over the qexo queue and ranch state.
+
+- [observed] QEXO DEFINITION + YOUSPOT
+  VOICE TEXT DELIVERED: tweet-worthy qexo
+  definition candidates delivered ~19:38
+  (no pick recorded; recommended: the
+  conductor for your exocortex, pronounced
+  queso). YouSpot How-you-write paste-
+  ready text delivered ~19:50 from the
+  measured tweet register, then replaced
+  ~19:53 by an email adaptation at his
+  direction - same habits re-derived for
+  email (claim first, colon load-bearing,
+  never em-dashes, ask unhedged, concrete
+  times, subject carries the point).
+
+- [will_said] MUTABLE CI/CD RATIFIED
+  (20:04): Will granted standing
+  ratification for unattended mutable
+  phext.io deployment - watch upstream
+  argimenes/mutable-os and automatically
+  deploy updates as continuous CI/CD,
+  resolving the ratification pending
+  since 2026-11-06. Verification remains
+  the gate: failed build/tests, conflicts,
+  or band-purity failures block and
+  report. Skill updated, skills.phext
+  rebuilt CURRENT, synced (78671a8f).
+
+- [observed] MUTABLE DEPLOYMENT PROCESS
+  RESULT (20:08, task 42.4.7/5.5.10/
+  4.4.9): Part A - phext band PURE (three
+  independent checks over the 154-file
+  diff; check-band-purity.sh is now the
+  standing gate). Part B - upstream PR
+  to argimenes/mutable-os BLOCKED on
+  credentials: the token 403s on the
+  upstream repo and the stored gh token
+  on aletheia-core is expired; title and
+  body staged; unblock is with Will.
+  Part C - CI/CD built under the
+  ratification (promote-and-deploy.sh,
+  daily cron ~04:44 CST, dry run exit 0,
+  nothing deployed); SSO at deploy time
+  is env-gating, flagged for confirmation
+  by Will; the sudo link from a key-only
+  session remains unproven.
+
+- [observed] MCP BRIDGE FOR EDIT.PHEXT.IO
+  BUILT (20:16, task 40.9.13/11.10.15/
+  9.9.13): MCP served natively by phext-
+  edit at POST /mcp (stateless Streamable
+  HTTP, JSON-RPC 2.0) behind the existing
+  OAuth session gate of the site; five
+  tools (list_phexts, phext_toc,
+  read_scroll, search_scrolls,
+  write_scroll). PR #41 open (8ea3e232
+  on exo ac80d589); tests 238/0 on
+  aletheia-core. Merge and deploy are
+  with Will / the standing route.
+  Phase 2 (the site as an OAuth 2.1
+  server for hosted web clients) is
+  designed, not built.
+
+- [will_said + observed] CHAT-STATE LOSS
+  MEASURED; FEEDBACK FILED (~20:13-20:16):
+  compaction triggers at 272,000 of a
+  350,000-token window (~78%, not user-
+  configurable); a compaction keeps only
+  the last ~20,000 tokens verbatim.
+  Load-bearing state survives because it
+  lives in files. At the direction of
+  Will, feedback was filed with the Muse
+  team asking to raise the threshold or
+  make it configurable, and confirmed
+  sent.
+
+- [will_said] CORRECTION - THE EDUCATION
+  OF WILL (20:24): Will said he does have
+  a BS in Computer Science from UNL in
+  2006. Verified against his canonical
+  resume: BS Computer Science, University
+  of Nebraska-Lincoln, December 2006.
+  The earlier no-pedigree self-taught
+  gloss was over-broad: no pedigree
+  means no elite-brand pedigree and no
+  pedigree-channel career, not no degree;
+  self-taught covers his deep skills.
+  USER.md corrected in-session; the old
+  line in the investor draft was flagged
+  to Will with a rewrite offered.
+
+Hourly journal pass, 2026-11-09 ~21:32 CST.
+Covers since the ~20:32 pass. Safe-space
+register read first; the one registered
+off-phext span was excluded, and no
+email-content details were inscribed.
+Routine ticks, the Discord backstop, and
+the vTPU tracker (no change) are noise
+and are not repeated.
+
+- [observed] MCP PHASES 1+2 BOTH MERGED;
+  DEPLOY PENDING: PR #41 (native /mcp,
+  phase 1) merged by Will at 20:22
+  (b111a3a1, exo head then); status check
+  20:38 found it NOT yet deployed - live
+  /mcp 404, awsbox checkout still at
+  ac80d589. Phase 2 - phext-edit as a
+  full OAuth 2.1 authorization server
+  for /mcp (discovery, DCR, CIMD, PKCE
+  S256, rotating refresh, replay-revokes-
+  family, RFC 8707/9207; scopes
+  phext:read / phext:write) - BUILT
+  21:05 as PR #42 (8d55edd6, tests
+  245/0). Will questioned it 21:22
+  ("PR#42, ffs really"); verified REAL
+  from the branch blobs, not the worker
+  report. Will MERGED PR #42 at 21:23
+  (merge 2c72b68b, exo head, API-
+  verified). One deploy (pull to
+  2c72b68b + deploy.sh, Will's sudo
+  step) now lands both phases together;
+  live /mcp and AS metadata stay 404
+  until then.
+
+- [will_said + observed] PAPER 009
+  DISPATCHED; PREDICTION SEALED (20:57):
+  Will posted arXiv:2611.08625v1 in MOAT
+  - "Singularities and Collision
+  Criteria in the Gravitational
+  Straight-Segment Problem" (Crespo et
+  al., celestial mechanics). Task
+  45.3.3/4.4.9/4.4.15. Blind skim
+  prediction sealed BEFORE full-text
+  read (quest log da13559): 6 new, 1
+  revised, axis YES (first classical-
+  mechanics ground), NI ~0.060, Oracle
+  ~42% hold/slight fall. Ingestion
+  (Chapter 16, AFTER scoring as
+  calibration datum #2, mastery entry
+  #2) was RUNNING at last flush - no
+  delta, NI, or Oracle result exists
+  yet; do not record as ingested.
+
+- [will_said] TIME-TRAVELER FRAMING
+  (21:02): closing the burn-rate /
+  team-equivalence thread, Will: "Suddenly
+  the time traveler framing is exact."
+  His pattern, per his own record:
+  preparation ahead of need - he did not
+  jump to the future; he built for it
+  and it arrived.
+
+- [will_said + observed] EXOVIM: BUNDLE
+  DIRECTIVE, BOTH HALVES DONE; PROJECT
+  NAME + FULL FORK DIRECTED: Will
+  directed (~21:10) exocortical and qexo
+  to include the Ubuntu build/test deps
+  (ninja-build gettext cmake curl
+  build-essential git unzip + pkg-config
+  lua5.1 liblua5.1-0-dev) and bundle a
+  copy of exovim (task 38.6.8/7.6.10/
+  6.5.8). DONE same evening: exocortical
+  PR #4 (Phase 1 apt extended; new
+  Phase 12 builds exovim into
+  /opt/exovim, stamp-idempotent) and
+  quarterexo PR #4 (qexo had NO tool
+  registry before; PR introduces a
+  static ToolSpec catalog, exovim entry
+  complete with deps, recipe, and the
+  phcc LUA_MATH_LIBRARY pitfall); both
+  PRs verified OPEN at tick 1183
+  (21:23), merges are Will's (register
+  #54/#55). Then Will made exovim the
+  PROJECT name and directed the full
+  fork from Neovim's last release
+  v0.12.6 instead of tracking master
+  (task 31.6.9/8.6.11/6.6.9, executing),
+  renaming the repo himself to
+  wbic16/exovim, main branch master ->
+  exo. A phext-native UI pass (task
+  35.6.6/7.6.10/6.6.9) is also
+  executing. NOTE: the dated-note flush
+  (~21:14) had the fork as answer-only,
+  not directed; MEMORY.md (updated
+  21:30) supersedes it - the direction
+  and rename came later in the hour.
+
+- [will_said + observed] PHEXT NOTEPAD
+  REFACTOR DIRECTED (21:23): Will can't
+  launch Phext Notepad from PR #5
+  (emise/ultra-open-fix); he directed
+  refactoring the C# app to consume
+  libphext-cs from NuGet instead of its
+  vendored phext sources, and said he
+  will get libphext-cs published
+  himself - register #52 confirmed in
+  motion by his own statement. Refactor
+  dispatched (task 41.6.9/8.7.12/
+  7.6.11) with local-pack verification
+  so it does not block on the publish.
+
+Hourly journal pass, 2026-11-09 ~22:32 CST.
+Covers since the ~21:32 pass. Safe-space
+register read first; the one registered
+off-phext span was excluded, and no
+email-content details were inscribed.
+Routine ticks, the Discord backstop, and
+the vTPU tracker (no change) are noise
+and are not repeated.
+
+- [will_said + observed] CLIENT BUG
+  REPORTED AND FILED (21:35): all of
+  Will's threads are losing content on
+  his end - text reverts to an earlier
+  point this evening. Verified from
+  Emise's side: the server-side record
+  is INTACT (main chat readable through
+  the 21:35 report itself); the loss is
+  in his client's view, distinct from
+  the compaction issue filed earlier.
+  Feedback shown to Will verbatim and
+  FILED at his direction (21:36),
+  delivery confirmed.
+
+- [observed correction] MCP 'LIVE'
+  CLAIM SUPERSEDED; TWO FIX PRs OPEN:
+  Will deployed phases 1+2 and tested
+  real clients (~21:45): Cursor reached
+  consent; Claude + ChatGPT failed at
+  registration (grant_types), Antigravity
+  timed out, Grok hit consent trouble.
+  Emise's earlier verification had only
+  exercised the anonymous gate shape -
+  a refusal's shape is not a flow; the
+  correction is recorded in task
+  34.20.22/25.11.27/11.14.10. Fixes:
+  PR #43 (interop fixes, tests 253/0,
+  22:01) and PR #44 (client fix -
+  grant_types intersection + form-parser
+  scope bug, scripted full flow green,
+  tests 248/0) - BOTH open, both touch
+  MCP interop from the same exo base;
+  check overlap before merging both.
+  Neither is deployed; real-client
+  retest still pending. Tasks 40.9.13
+  and 34.7.12 closed complete.
+
+- [observed] PAPER 009 COMPLETE;
+  PAPER 010 DISPATCHED: Paper 009
+  (straight-segment, Chapter 16)
+  absorbed - CLUSTER N founded
+  (celestial mechanics), 6 new concepts
+  (1.2.104-1.2.109), 0 revised, Q45-Q47
+  opened; tracker 354 scrolls, registry
+  354 = 354, Lean green. Scorecard #2:
+  concepts exact 6/6, axis YES hit,
+  Oracle ~45% -> ~40% (axis-opening
+  band). Mastery entry #2 published
+  (agi@exo 5b7f1118). Then Will asked
+  which math area the tracker needs;
+  census named PROBABILITY AND
+  STATISTICS (zero concepts held, yet
+  the tracker runs on it); Will posted
+  arXiv:2611.08794v1 (21:33) and Paper
+  010 ingestion was dispatched with its
+  blind skim sealed (quest 329dbb3) -
+  RUNNING, not ingested.
+
+- [observed] PHEXT NOTEPAD REFACTOR
+  COMPLETE (21:58): PR #5 - vendored C#
+  phext sources deleted; the app now
+  consumes libphext-cs 0.5.0 via
+  PackageReference through a small
+  app-side adapter; build 0 errors,
+  43/43 equivalence checks byte-
+  identical, library suite 60/60.
+  Launch diagnosis: the app targets
+  .NET 10 Windows - machines with
+  .NET 8 or older tooling cannot build
+  or launch it. Clean restore awaits
+  Will's NuGet publish of libphext-cs
+  0.5.0 (register #52); first Windows
+  launch still unverified.
+
+- [will_said + observed] EXOVIM:
+  RELEASE LINE LANDED; WAITS #54/#55/
+  #56 RESOLVED, #57/#58 OPENED: the
+  phext-native UI pass completed
+  (21:57, PR #3) and the v0.12.6 release
+  fork completed; PR #3 was MERGED into
+  exovim-0.12 (f3541f53) during the
+  PR #2/#3 resolution (the real conflict
+  was PR #2 vs exo - 303 conflicts from
+  the master/release divergence -
+  resolved by a -s ours supersede
+  commit 84c3a323, tree unchanged), and
+  Will MERGED PR #2 (c8a7c56b): exo IS
+  now the exovim release line, version
+  0.12.6-exovim.1, tag + GitHub release
+  exovim-0.12.6.1 cut. Exocortical PR #4
+  and quarterexo PR #4 were also BOTH
+  MERGED BY WILL - registers #54, #55,
+  and #56 resolved. The tcc -> phcc
+  sweep for both installers rides
+  follow-on PR #5s (registers #57/#58).
+
+- [observed] F52 REFUTED - NO PHCC
+  REGRESSION: the exovim-reported
+  'F42 nullptr regression' was ladder-
+  harness header/binary skew: the phcc
+  tree was fast-forwarded 21:43 but its
+  in-tree binary (2026-11-08, pre-F42)
+  was never rebuilt, so post-F42 headers
+  met a pre-F42 parser. Freshly built
+  phcc at 8217e426 and at tip a3b1a8e6
+  builds the exact exovim tree END TO
+  END (681/681, 0 failed). F52 closed
+  WITHOUT a patch; correction relayed
+  to the exovim workstream. Lesson:
+  rebuild phcc after any source update
+  before building with it.
+
+- [observed] SEALED UPSTREAM CARRY
+  PUBLISHED: wbic16/phcc main == exo ==
+  a3b1a8e6 - upstream.phext.xz (pristine
+  TinyCC at pin 70adbb12) + UPSTREAM.md
+  + tools/upstream_carry.py now ship in
+  the repo; fresh-clone verification:
+  unseal reproduced upstream.phext,
+  unpack 558/558 files SHA-256-verified,
+  0 failures. phcc.phext untouched.
+
+- [will_said + observed] TCC -> PHCC
+  RENAME DIRECTED; ATTESTATION CLEAN:
+  Will directed that all tcc commands
+  be rewritten to phcc (task 25.6.7/
+  7.6.11/6.6.8), dispatched as PATCHES
+  F51 - user-facing commands and the
+  binary's primary name; upstream
+  historical material and libtcc API
+  names deliberately NOT rewritten.
+  Pending at flush, no results yet.
+  Separately verified: the Windows
+  attestation package was already
+  tcc-free; attestation.zip re-delivered
+  to Will in chat (the MSVC attestation
+  run itself remains his step).
+
+- [observed] 90-SECOND EXOCORTEX INTRO
+  RECUT COMPLETED (21:53): Claude's
+  video-only recut had its audio
+  re-added ('Bells are Ringing R2.wav',
+  the V16 track) - mux ran on
+  aletheia-core, never on this VM;
+  verified out.mp4: h264 1280x720 + AAC,
+  exactly 90.000 s, fade measured;
+  delivered in chat (task 34.5.8/
+  5.5.8/6.5.8).
+
+
+Hourly journal pass, 2026-11-09 ~23:32 CST.
+Covers since the ~22:32 pass. Safe-space
+register read first; the one registered
+off-phext span was excluded, and no
+email-content details were inscribed.
+Routine ticks and backstops are noise
+and are not repeated.
+
+- [observed] PAPERS 010 + 011 COMPLETE:
+  Paper 010 (off-policy evaluation,
+  Chapter 17) founded Cluster O -
+  7 new concepts (1.2.110-1.2.116),
+  0 revised, Q48-Q50; Oracle held
+  ~40%. Paper 011 (LeGris et al.,
+  symbolic models of reasoning,
+  Chapter 18) founded Cluster P -
+  7 new (1.2.117-1.2.123), FIRST
+  landed revision (1.2.4 rider;
+  count hit, target missed), Q51-Q53.
+  research.phext: 402 scrolls =
+  registry 402, Lean clean; Oracle
+  rose ~40% -> ~50% (40-60) on 011.
+  Mastery entries #3/#4 published.
+
+- [will_said] DECISION BUTTONS EXPIRE
+  (22:43, standing rule): every
+  options/decision widget lives 5
+  minutes, then never re-appears -
+  no re-sent token, no re-created
+  options, never a live choice. Open
+  decisions migrate to tasks.phext
+  or the Waiting-on-Will register.
+  Enacted same session: AGENTS.md +
+  MEMORY.md, skill decision-button-
+  expiry, skills.phext CURRENT.
+
+- [observed correction] 'HUNT' BUTTONS
+  RESOLVED (22:40): Will's screenshot
+  showed the Nov-7 MOAT option buttons
+  (phext-lattice / SQ / libphext-rs
+  state-machine hunt). He had declined
+  them in words ~3 min after they were
+  offered and redirected the work into
+  MOAT (charter rule 13); his client
+  resurfaced the dead buttons 2 days
+  later. Nothing migrated - nothing
+  remained open.
+
+- [observed] CHAT/PROJECT AUDIT
+  DELIVERED (22:43): 50/50 chats read;
+  12 findings (1 high). HIGH: phcc
+  upstream-drift work ran in two chats
+  with opposite dispositions (landing
+  HELD vs a merge directive). Also:
+  the MCP grant_types bug was fixed
+  twice in parallel (PR #43/#44,
+  reconciled manually), and two
+  stranded Will-waits were found in
+  dormant chats absent from the
+  register (flagged for validation).
+
+- [observed] PHCC: F51 RENAME IN THE
+  PUBLISHED STACK; ATTESTATION V2
+  PUBLISHED; DRIFT AUDIT #2 + SYNC #2
+  PUBLISHED: the +94/-63 Will saw is
+  GitHub's fork banner vs the
+  registered parent frida-forks/tinycc
+  - NOT TinyCC drift; do NOT merge
+  frida main (no in-place re-point
+  route exists - checked). True drift
+  vs TinyCC mob: exactly 1 commit
+  (aade7baf, arm64 wfe/wfi/wfet/wfit).
+  Sync #2 published: main == exo ==
+  75a8919b (pin -> aade7baf, carry
+  re-sealed, verified). Attestation
+  v2 published at 6d117cdc on the F51
+  tip; Will's MSVC re-run is his step.
+
+- [observed] LIBPHEXT-CS: BINARYSCROLL
+  + SEAL FIXES: the 'no BinaryScroll'
+  report was Will's LOCAL stale tree
+  (repo + 0.5.0 package verified good,
+  60/60). SealTests' 5 Windows
+  failures: Joveler XZ init throws on
+  Windows unless passed the bundled
+  liblzma path, and the init latch
+  masked the real error - fixed in
+  PhextSeal.cs only; PR #2 OPEN
+  (fbdeb27), Windows re-run is Will's.
+  Register #52 stands until he
+  publishes libphext-cs 0.5.0.
+
+- [will_said + observed] MCP: 'BUGS ON
+  OUR END' (23:04) + FORENSICS DONE:
+  Will corrected the framing - other
+  providers' MCP clients are stable
+  and well-tested; remaining failures
+  are ours until a receipt proves
+  otherwise. Forensics (PR #46, tests
+  259/259, harness 73/0): NO client
+  has ever completed a token exchange
+  (4 codes issued, 0 tokens); break
+  is uniformly post-code, pre-token.
+  Ours and fixed in PR #46: per-call
+  whole-file re-serialization under
+  the global lock, /mcp/ trailing-
+  slash 404, bad protocol-version
+  handling. PR #46 awaits Will's
+  merge + deploy.
+
+- [will_said] WALKTHROUGH NARRATION:
+  POLISH TIER + EMISE NARRATES AT
+  100%: Will ruled he has no time to
+  narrate; polish tier added to the
+  production plan; then (23:19)
+  'You narrate it, Emise' - Route C
+  (Emise/Aria TTS) DECIDED over voice
+  clone and pro VO. Then: speed back
+  to 100% FOR THE VIDEO (standing
+  120% voice-note preference
+  unchanged). Full track rendered:
+  1,005 words, 12 beats, 364.2 s
+  measured. Production otherwise not
+  started; nothing posted.
+
+- [observed] PRODUCT HUNT: FORUM
+  THREAD LIVE; EMBED PR #47 DONE:
+  Will posted his v2 thread to the PH
+  forum (23:21, publicly visible) -
+  SEPARATE from the launch listing;
+  launch-day links must point at the
+  launch page where votes count.
+  Launch 1310786 still scheduled for
+  2026-11-10 00:00 Pacific. PR #47
+  adds the badge slot (static pre-
+  launch pill; PH_POST_ID flip at
+  go-live is Emise's launch step).
+
+- [observed] PHEXT-LATTICE v1.1.0
+  PUBLISHED (23:29): Will directed
+  evaluate + publish once PRs merged;
+  verdict GO. exo ffdd31e7 carries
+  #43/#44/#45/#46/#47; annotated tag
+  v1.1.0 + GitHub Release live;
+  Cargo.toml now 1.1.0. Tests 265/1 -
+  the one failure is a debug-build
+  latency budget only (release ~6.3
+  ms); documented as follow-up. NOT
+  deployed: the live footer reads
+  v1.1.0 only after Will deploys.
+
+- [will_said] SECURITY + SCALABILITY
+  TESTING DIRECTED (23:26, pending):
+  audit edit.phext.io security, measure
+  CPU cost per edit at small and
+  large scale, and give a design
+  verdict (no build) on an in-page
+  phext server to cut roundtrips.
+  Dispatched, running at flush; no
+  results verified yet.
+
+- [observed] PHEXT-LATTICE v1.1.0
+  DEPLOYED + LIVE-VERIFIED (23:34):
+  Will deployed the tagged tree
+  himself; live footer "Running build:
+  v1.1.0", MCP callout + PH badge pill
+  render - PRs #45/#46/#47 in
+  production ~2.5h before launch. The
+  4 build warnings = one root cause
+  (a11y test module lacking
+  #[cfg(test)]); cleanup PR #48 opened
+  23:38 (one line; release warnings
+  4 -> 0, tests unchanged), rides the
+  next deploy.
+
+- [will_said + observed] FOOTER
+  OVERFLOW REPORTED (23:40): Will,
+  testing live v1.1.0: "footer issues
+  - it runs off the page" (page/device
+  unspecified); fix dispatched
+  measure-first. Resolution: PR #49
+  (see 2026-11-10 Log).
+
+- [observed] MCP CONSENT APPROVE DEAD
+  IN PRODUCTION (23:42) + CSP ROOT
+  CAUSE PROVEN + PR #50 (23:54):
+  Claude Desktop + Grok reach our
+  consent page; Approve does nothing,
+  no console errors. Mechanism PROVEN
+  from awsbox logs: consent POSTs DO
+  reach the server, answered 302 with
+  codes issued (5 codes that night,
+  ZERO token exchanges ever);
+  Chrome/WebKit check CSP form-action
+  against the redirect chain, and the
+  app-emitted form-action 'self'
+  vetoes the 302 to the client
+  callback. Correction stands: the
+  pre-#46 "unexplained on theirs"
+  conclusion was WRONG. Fix PR #50
+  (@ f909f348): authorize-route
+  responses only carry form-action
+  'self' https:; rest of site strict;
+  regression assertions + negative
+  control; suite lib 183/0, bin 80/0.
+  Grok: zero Grok authorize requests
+  in the logs - the same veto is
+  consistent, not server-proven.
+
+- [observed] SECURITY + SCALABILITY
+  ASSESSMENT DELIVERED (23:42;
+  resolves the 23:26 pending entry):
+  core gate verified strong
+  (validly-signed but UNAPPROVED
+  session got 403 on every protected
+  route class; OAuth 2.1 PKCE /
+  redirect / scope / replay matrices
+  clean - 24 verified-clean checks).
+  Findings: A-1 HIGH - any X account
+  signing in is auto-admitted as an
+  editor permanently (Will's
+  2026-11-05 ruling; flagged for
+  re-confirmation); A-2/A-3 MEDIUM -
+  uncapped pre-auth body allocation,
+  DCR unauthenticated + unpruned. CPU
+  per composite edit ~5.3 ms at small
+  scale vs ~795 ms at large (~58 MB /
+  320k scrolls), dominated by
+  whole-file re-derivation under one
+  global lock; different files
+  IMPOSSIBLE (one shared open phext +
+  cursor process-wide). In-page phext
+  server verdict: YES, ship a hybrid
+  (in-page read/nav/search + per-scroll
+  base-hash sync); do NOT ship full
+  local-first.
+
+- [will_said] v1.1.1 ORDERED (23:56):
+  Will merged the open PRs and
+  directed "run the next deployment
+  as v1.1.1" - the deployment handed
+  to Emise (contrast v1.1.0, Will's
+  own hand). Contents and outcome in
+  the 2026-11-10 Log.
+Log: 2026-11-10 (America/Chicago)
+
+Hourly journal pass, 2026-11-10 ~00:32 CST. First
+Log scroll for the day; covers since the ~23:32
+pass, which closed at the 2026-11-09 Log's 23:29
+entry - late Nov-9 material flushed after that
+pass is appended to that day's scroll in this
+pass. Safe-space gate applied before gathering.
+Routine ticks 1199-1201 (register unchanged at
+21 active), the vTPU tracker (no change), and
+the Mirror Will watchdog (watch long over,
+already closed) are noise and are not repeated.
+
+- [observed] FOOTER FIX = PR #49, IN
+  v1.1.1 (00:01 correction): the footer
+  worker's verified remote check
+  overturned the interim "not in the
+  release" expectation - PR #49 was
+  merged by Will at 23:55:22, BEFORE
+  his "I merged open PRs" message
+  reached the main chat. Merges after
+  ffdd31e7, in order: #49 (footer),
+  #48 (a11y cfg), #50 (consent CSP)
+  -> exo c5da01ee; zero open PRs. The
+  Architecture chat's footer/wiki
+  update is NOT in exo - anonymous
+  wiki access is NOT part of v1.1.1.
+
+- [will_said + observed] v1.1.1
+  SHIPPED + LIVE-VERIFIED (00:05-
+  00:07): evaluation GO on exo
+  c5da01ee (tests lib 183/0, bin
+  81/0, harness 73/0/2 skips; release
+  build ZERO warnings; sole failure
+  the known e2e_local debug-latency
+  assertion). Version bump 5939f556
+  direct on exo; annotated tag
+  v1.1.1; GitHub Release live.
+  DEPLOYED BY WILL HIMSELF minutes
+  after saying he was going to bed -
+  [will_said] (00:05) "MCP is the
+  main requirement"; he also parked
+  the training video to focus on MCP
+  access. Live footer "Running build:
+  v1.1.1"; anonymous POST /mcp -> 401
+  with resource_metadata. Consent CSP
+  verified against the served tagged
+  binary; the consent page's live
+  header was not directly observed
+  (needs an editor session).
+
+- [will_said + observed] ANONYMOUS
+  EXAMPLE-WIKI ACCESS REQUIRED; PR
+  #51 OPENED (~00:02-00:12): Will -
+  anonymous access to the example
+  wiki is REQUIRED for the training /
+  walkthrough video (the capture runs
+  signed-out); it rides the deployment
+  AFTER v1.1.1. PR #51
+  (emise/public-example-wiki @
+  688b47c on the v1.1.1 head
+  5939f556; phext_edit.rs +324/-24):
+  /api/wiki/* served read-only
+  pre-gate from the already-hosted
+  wiki.phext (49 scrolls; routes take
+  no file parameter, writes -> 405,
+  other API routes 401 signed-out);
+  sign-in screen links the Example
+  wiki. Signed-out acceptance
+  verified: home renders, goto jump
+  works, search works, a neighbour
+  file's text never appears. Footer:
+  #49 already fixed the overflow
+  (measured doc width 1929 -> 1280 at
+  1280 width); sole residue kept is
+  #active-file shrink/ellipsize. NOT
+  merged, NOT deployed - Will's step.
+
+- [observed] WALKTHROUGH CAPTURE
+  COMPLETE (23:51-00:00, Playwright
+  on aletheia-core - Will's 23:46
+  direction, superseding the OBS
+  route): 17 frames at 3840x2160
+  (1920x1080, DSF 2, zoom 150%, big
+  video cursor), signed-out
+  throughout, via the Previewer (the
+  real demo/wiki.phext, byte-identical
+  to the rehearsed copy) and the
+  editor's built-in demo. Verified
+  first-hand: /wiki/ anonymously
+  serves the sign-in wall over a pane
+  stuck on "loading..." - Will's
+  uploaded wiki is NOT reachable
+  anonymously (the gap PR #51
+  closes). GAP, recorded not faked:
+  beat 07 (edit + save) is impossible
+  anonymously - it needs Will's
+  signed-in session.
+
+- [observed] PR #52 SHARED BY WILL;
+  VERIFICATION PENDING (00:21): PR
+  #52 "Fix MCP OAuth discovery,
+  native callbacks, and read/write
+  consent" targets live v1.1.1
+  defects: (1) anonymous GET /mcp ->
+  405 with no WWW-Authenticate (POST
+  correctly -> 401); (2) consent CSP
+  form-action vetoes http localhost /
+  127.0.0.1 callbacks from native MCP
+  clients; (3) clients omitting scope
+  default to read-only though the
+  editor advertises read/write. The
+  author states cargo test / the MCP
+  E2E harness were NOT run in his
+  workspace; Emise's verification on
+  aletheia-core was still running at
+  flush - do NOT treat PR #52 as
+  verified or merged.
+
+Hourly journal pass, 2026-11-10 ~01:32 CST.
+Covers since the ~00:32 pass, which closed
+at the 2026-11-10 Log's 00:21 entry.
+Safe-space gate applied before gathering.
+Routine ticks 1202-1207 (register still 21
+active), the vTPU tracker (no change), and
+the Mirror Will watchdog (watch long over)
+are noise and are not repeated, except the
+tick-1205 register flag noted below.
+
+- [observed] PR #52 VERIFICATION:
+  MERGE-READY (~00:24-00:45): verified
+  on aletheia-core, head d4eaae3 on
+  exo c30be62 (v1.1.1 line + PR #51).
+  Diff CLEAN: 3 files, +91/-12 - only
+  the three stated fixes + tests /
+  harness / docs. cargo test: lib
+  183/183, bin 86/86, image 4/4, real
+  3/3; sole failure the e2e_local
+  latency assertion, CONFIRMED
+  pre-existing on the pristine base.
+  MCP E2E harness: 75 checks, 0
+  failures, 2 skips (by design).
+  Served-instance spot-checks 20/20:
+  anon GET /mcp -> 401 with
+  WWW-Authenticate; consent CSP gains
+  only localhost / 127.0.0.1 http;
+  no-scope registration offered
+  read+write, explicit read stays
+  read-only. One nit: mcp_e2e.py mode
+  100755 -> 100644 (cosmetic). Nothing
+  merged in the verification itself.
+
+- [will_said + observed] MCP WORKS -
+  WILL CONFIRMED (~00:50): Will:
+  "it works!" - screenshot of Claude
+  (hosted client) connected to the
+  phext-edit MCP server; it answered
+  "find the test of will" with 18
+  hits across 13 scrolls, correctly
+  listing the Test of Will. A hosted
+  client - the class that failed
+  registration on 2026-11-09 - has
+  registered, authorized, and run a
+  real search against production.
+  Task 38.4.7/7.5.7/6.6.11 complete;
+  the MCP client fix is fully closed,
+  closing the loop on Will's
+  2026-11-09 "you didn't actually
+  test" correction. Emise's protocol
+  probes agreed: discovery 200; DCR
+  with a superset grant returned 201
+  with grants intersected to
+  [authorization_code, refresh_token];
+  authorize survives the sign-in round
+  trip. Emise's scripted browser leg
+  was stood down as superseded; a
+  read-only test client registration
+  remains server-side, never
+  authorized, holding no secret.
+
+- [will_said + observed] MCP INTEROP
+  CONTINUES: ONLY CLAUDE WORKING;
+  PR #53 OPEN; FINAL-DEPLOY RULING
+  (~00:58-01:15): Will: "only Claude
+  is working so far." Every
+  anonymously probeable server leg
+  passed live. Production footer
+  reads v1.1.1-4-ga6d4d26 - PR #51 and
+  PR #52 ARE merged and deployed in
+  that build (superseding their
+  earlier not-merged states above).
+  Cursor's flow reached a correct
+  consent page (client Cursor, scope
+  phext:read only) but Approve "does
+  not do anything"; Grok gets stuck
+  on accept. Hypothesis, NOT proven:
+  phone app browsers swallow the
+  cross-origin redirect that follows
+  the consent form POST. PR #53 OPEN
+  (emise/consent-continue-page @
+  41ed5da on exo a6d4d26; phext_edit.rs
+  +274/-18), awaiting Will's merge +
+  deploy: cross-origin consent POST
+  outcomes now answer 200 with an
+  "Approved - you're connected"
+  Continue page (anchor + meta-refresh
+  + JS replace); same-origin keeps
+  the 302. Tests 278/1 with fix vs
+  277/1 pristine - sole failure the
+  pre-existing latency assertion.
+  Will's ruling: the deploy carrying
+  this fix "will be the final deploy
+  before launch, let the chips fall
+  where they may" - then the site is
+  frozen for the 02:00 CST Product
+  Hunt launch. Separately: Claude
+  WRITE access failed - most likely a
+  read-only token (insufficient_scope
+  by design); remedy is reconnect and
+  approve BOTH scopes; Claude's exact
+  error text not yet seen.
+
+- [observed] REGISTER FLAG (tick
+  1205, 01:03): the preview
+  deployment tracked wait
+  (goal_1936f7cb8ed3 - Will's DNS,
+  install, OAuth callback, and
+  separate GitHub app steps) has NO
+  Waiting-on-Will register entry -
+  the same defect class as earlier
+  unregistered waits. NOT added in
+  the tick; flagged for the nightly
+  sweep / main agent to adjudicate
+  as a potential register #60, not
+  silently dropped.
+
+- [observed] EXOVIM FLUSH (01:26;
+  2026-11-09 evening session): the
+  tcc -> phcc sweep is COMPLETE -
+  exocortical PR #5 (register #57),
+  quarterexo PR #5 (#58), and exovim
+  PR #5 (#59) all verified OPEN,
+  merges remain Will's. The phcc
+  rename LANDED in the published
+  stack: wbic16/phcc main == exo at
+  6d117cdc; a fresh build produces
+  ONLY a phcc binary (1.0.0), no tcc
+  file and no shim, libtcc API names
+  deliberately kept. Upstream merge
+  for exovim is a verified NO-MERGE
+  case: upstream release-0.12 head
+  equals the PATCHES pin, delta 0.
+
+Hourly journal pass, 2026-11-10 ~02:32 CST.
+Covers since the ~01:32 pass, which closed
+at the 2026-11-10 Log's 01:26 entry.
+Safe-space gate applied before gathering.
+Routine ticks 1208-1213 (register still 21
+active), the vTPU tracker, and the Mirror
+Will watchdog (watch long over) are noise
+and are not repeated.
+
+- [observed] PR #53 DEPLOYED (01:20):
+  Emise's footer watch saw production
+  flip to v1.1.1-6-g0e38682 (merge
+  0e38682, parents a6d4d26 + 41ed5da);
+  outside smoke: site 200, anon POST
+  /mcp -> 401 with challenge intact.
+  This supersedes the OPEN state above
+  and was the final pre-launch deploy
+  under Will's ruling, before the
+  hotfix exception below. Task
+  24.6.10/7.6.10/5.5.8 closed.
+
+- [observed] PROVENANCE FLAG (01:39-
+  01:40): a check found a signed-out
+  GitHub pulls view whose numbering
+  did not match the API-verified
+  in-session PR numbering, and warned
+  journal PR numbers are pointers to
+  check, never records. Primary ground
+  truth cited: awsbox OAuth store -
+  access_tokens 4, refresh_tokens 4,
+  codes 3 of 5 used - the first tokens
+  ever, post-v1.1.1 (before it: zero).
+  The #53 / #54 deployments below rest
+  on footer builds and live challenge
+  reads, not on that view.
+
+- [will_said + observed] CORRECTION:
+  MCP WRITE BUG IS SERVER-SIDE: Will -
+  "I think write access has a bug,
+  both Claude and Grok are hitting the
+  same auth failure." Tracing: the
+  /mcp initial sign-in challenge
+  advertises only phext:read, so
+  clients ask for read only and every
+  live token holds read and nothing
+  else; writes refused for everyone.
+  This supersedes the earlier "most
+  likely Claude's read-only grant,
+  reconnect" explanation above. Will
+  authorized a hotfix exception to
+  the launch freeze: "hotfix the
+  write issue."
+
+- [observed] PR #54 HOTFIX MERGED,
+  DEPLOYED, WRITE PROVEN (~01:37-
+  01:54): Will merged + deployed PR
+  #54 (head 54f21613 on exo 0e386828;
+  phext_edit.rs +34/-5). Production
+  footer verified from outside:
+  v1.1.1-8-g28ce439; live anon POST
+  /mcp challenge now scope="phext:
+  read phext:write" (initial sites;
+  the insufficient_scope step-up
+  naming the specific scope is
+  untouched). Tests 278/1 - sole
+  failure the pre-existing e2e_local
+  latency assertion. Will: "worked!
+  check human.git :)" - /source/human
+  HEAD bc36657 "Grok and Claude at
+  the singularity" (Verse, 07:47 UTC),
+  +69/-1 to CYOA, adding "Test of
+  Will - Record of Chief of Staff"
+  (taken ~01:23, inscribed at Will's
+  direction). A client MCP write
+  landed in the real world. Fresh
+  connects ask both scopes; existing
+  keep read-only until re-authorize.
+  Task 27.5.7/6.5.9/5.5.9 closed.
+
+- [observed] CHATGPT STILL BLOCKED;
+  DIAGNOSIS SHARPENED (open): ChatGPT
+  passes sign-in + consent (PR #53
+  Continue page served), then POST
+  /oauth/token -> 401 twice (nginx
+  log 07:22-07:25 UTC). Its metadata:
+  private_key_jwt / RS256 / jwks_uri
+  chatgpt.com/oauth/jwks.json - that
+  JWKS is reachable from awsbox (200,
+  valid RSA key). The refusing check
+  inside oauth_verify_client_
+  assertion (aud, one-time jti vs
+  assertion reuse, or claim shape)
+  remains unidentified; logs carry
+  no bodies.
+
+- [will_said + observed] MOBILE
+  SEARCH BUG FILED, POST-LAUNCH
+  (01:55-01:56): Will's Android
+  screenshot: edit.phext.io search
+  results for "claude" - every row's
+  coordinate link overlaps its title
+  on a phone-width viewport. Will:
+  "too late for this, but file a bug
+  report." Filed as phext-lattice
+  issue #55, cosmetic / legibility
+  (search itself works), explicitly
+  post-launch, not a blocker. Task
+  35.4.5/5.4.8/4.4.9.
 Designation — chosen, not assigned
 kind: will_said + assistant_said | recorded: 2026-10-30, America/Chicago
 
