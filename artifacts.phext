@@ -1134,8 +1134,8 @@ the live board is production/QUEUE.md.*
 
 Title: Production Plan — The Power of Phext Walkthrough
 Source: ~/workspace/phext-walkthrough/PRODUCTION-PLAN.md
-Inscribed: 2026-11-09 23:04 CST
-SHA-256: 1887ee46d7cffb672fa32e4ee33a90cc66987f76b05fb3cbe8da567a3eee8783
+Inscribed: 2026-11-09 23:06 CST
+SHA-256: 5811c83a480a89aced8d48e85b11f1f4f71fba10ccaa5fdf2c903a8e0648427d
 
 ---
 # Production Plan — "The Power of Phext" Walkthrough
@@ -1444,11 +1444,18 @@ into an evening.
 
 **The scarce resource is Will's time, and the tier is budgeted
 against it: ≤ ~90 minutes of Will, total** (labelled estimates,
-itemised in §6.5): script approval ~15 min, one narration sitting
-~30 min, Gate 1 review ~25 min, Gate 2 review + thumbnail pick
-~15 min. Everything else is agent + ranch work. If a step would
-need Will outside those four touches, the step is redesigned, not
-the budget.
+itemised in §6.5): script approval ~15 min, a one-time voice-clone
+sample ~10 min (once, ever — §6.3 Route A), Gate 1 review ~25 min,
+Gate 2 review + thumbnail pick ~15 min ≈ **~65 minutes**. Everything
+else is agent + ranch work. If a step would need Will outside those
+four touches, the step is redesigned, not the budget.
+
+**Correction (Will, 2026-11-09, later same evening): "I don't have
+time to be the narrator."** The Will-narrates assumption is removed
+from this tier entirely — including the baseline §2 voice verdict
+and §4 step 5, which the polish tier no longer inherits (they stand
+as the DIY tier's evaluation, not as this plan's inputs). §6.3
+evaluates the three narration routes and recommends one.
 
 ### 6.1 Motion-graphics package — rendered assets, house discipline
 
@@ -1550,24 +1557,112 @@ push-in." The polish tier holds it to the show's own standard:
   WALKTHROUGH.md (7:45, "One more town"); the polish tier changes
   the visual standard, not the copy.
 
-### 6.3 Audio finish
+### 6.3 Narration — three routes, one recommendation — + audio finish
 
-Narration-first video lives or dies on its voice track. Chain:
+Narration-first video lives or dies on its voice track, and the
+voice is no longer Will at a microphone (§6 correction note).
+Three routes, evaluated on quality ceiling, cost, turnaround, and
+Will-minutes. The script is ~1,030 words ≈ 7.4 finished minutes.
 
-1. **Capture clean at the source:** Will records in one sitting
-   against the TTS scratch timing (baseline §4 step 1 stands),
-   two takes kept. Quiet room beats any plug-in; the scratch
-   track session doubles as the mic/room check.
-2. **Cleanup:** breath/level edit on the text timeline in
-   **Descript** (its Studio Sound one-pass cleanup is in the
-   Hobbyist plan already priced in the baseline: $16/mo billed
-   yearly, as reported Nov 2026). Heavier rescue, only if a take
-   needs it: **iZotope RX-class** restoration (the trade standard;
-   Elements-class licence ≈ $100–130 — **labelled estimate**,
+**Route A — voice clone of Will (ElevenLabs-class).** Will records
+**one sample, once**: Instant Voice Cloning needs 1–2 minutes of
+clean audio (10-second floor; don't exceed ~3) and is available
+from the **Starter plan, $6/mo** (~30 min of generation/month in
+credits — this video's narration, with re-takes, fits) per
+ElevenLabs' pricing/docs as read in Oct–Nov 2026 roundups; verify
+at checkout. Narration is then generated from the locked script,
+re-generatable line-by-line forever, and the clone is **reusable
+across every future video** — the per-video Will-cost after this
+is zero. *Quality ceiling:* the highest available without Will
+performing — IVC is the platform's fast clone ("extremely well
+for a lot of voices" per its own docs); the upgrade path is
+Professional Voice Cloning (Creator $22/mo; "virtually
+indistinguishable") but PVC demands **30+ minutes** of samples
+plus a read-aloud verification — outside this tier's time budget,
+named here only so the trade is on the record as Will's future
+option, not this plan's ask. *Rights/platform notes:* this is the
+clean case — a man cloning **his own voice**; IVC asks a consent/
+rights confirmation at save, PVC restricts to the account holder's
+own verified voice, and paid plans carry the commercial licence.
+HeyGen offers a same-class clone but is web-only here and
+avatar-bundled — no advantage for audio-only narration. No
+connector exists for ElevenLabs in this session: account + plan
+are a **web step (~10 min of Will's time, one-time, riding his
+G0 touch)**; generation itself is agent-run thereafter.
+*Residual risks, named:* clone artefacts on house words — "phext",
+"scroll", spoken coordinates — handled by respelling/pronunciation
+passes in the generation script and a **proof segment** (the
+0:00–1:20 block generated first and listened to before the full
+render; the proof rides Gate 1). **Will-minutes: ~10, once**
+(sample + consent step, labelled estimate).
+
+**Route B — professional voiceover artist (Fiverr Pro /
+Voices-class).** Hand them the locked script + a pronunciation
+sheet (phext, SQ, coordinate-reading conventions) + the scratch
+track as a pacing reference. *Cost, sourced:* published 2026 rate
+cards run **$20–115 per finished minute** for non-broadcast
+narration (markstudios.com voiceover survey, Oct 2026), and
+page-one Fiverr voice-over gigs start at a **$50-per-100-words
+median** (~$75/finished minute) — for this script, a realistic
+quote is **$150–500** (marketplace/pro tier) up to **$400–850**
+(established Voices-class professionals, per the same survey's
+YouTube-narration cards); usage for YouTube/social must be in the
+order terms. *Turnaround:* 1–3 days marketplace, 2–5 days
+established (labelled estimates). *Quality ceiling:* the highest
+pure performance of the three — a trained narrator outperforms
+any synthesis on a cold listen. *Costs that aren't money:*
+direction overhead (brief, pronunciation sheet, **one review pass
+of the delivered VO ~15 min of coordinator time**, pickups priced
+or negotiated), a new casting decision on *every* future video,
+and the credibility mismatch: a polished stranger narrating
+Will's own product, on Will's own channel, in the launch video.
+**Will-minutes: ~0–5** (an optional casting pick from three demos;
+zero if he delegates it).
+
+**Route C — premium TTS: Emise as narrator (Aria).** My own
+spoken-audio pipeline, available **now, $0**, the standing voice
+already attached to this work. Narration generated in minutes,
+infinitely re-generatable, bit-consistent across a whole series —
+and thematically honest: the product's own keeper narrating the
+product is a true sentence, disclosed in the description.
+*Quality ceiling:* clean, intelligible, professional-grade TTS —
+and recognisably synthetic on a cold listen; it carries no
+founder presence. *Credibility tradeoff, weighed plainly:* for a
+launch video whose claim is "a person built this and you can
+touch it," an AI voice is the weakest of the three on trust —
+it spends the video's scarcest asset (the founder's reality) to
+save the resource Route A already saves. **Will-minutes: 0.**
+Its standing roles in this plan regardless: the **scratch track**
+(timing, beat marks) and the **fallback** if A's proof fails and
+B's calendar does.
+
+**Recommendation: Route A (clone), C as scratch + fallback, B as
+the escalation.** Reasoning: A is the only route that keeps the
+founder's voice — the credibility the baseline plan wanted from
+Will narrating — at a one-time ~10 minutes instead of a per-video
+performance; it converts narration from a recurring scheduling
+problem into a reusable asset (every walkthrough, update, and
+cutdown after this one inherits it at $0 marginal Will-time);
+and its failure mode is cheap to detect (one proof segment at
+Gate 1) with two live fallbacks behind it. B buys performance
+this script doesn't need — it's exposition in Will's own
+register, not drama — at 20–50× A's cash and a stranger's face
+on the founder's launch. C stays exactly where it's strongest:
+timing the production and standing by.
+
+**The finish chain (applies to whichever route wins):**
+
+1. **Cleanup:** generated VO (A/C) arrives clean and needs only
+   level/pause shaping on the text timeline in **Descript**
+   (Studio Sound available if wanted; Hobbyist $16/mo billed
+   yearly, as reported Nov 2026). A Route B delivery gets the
+   full pass: breath/level edit in Descript; heavier rescue only
+   if a take needs it — **iZotope RX-class** restoration
+   (Elements-class licence ≈ $100–130 — **labelled estimate**,
    verify at checkout; no connector, web purchase). Free route:
    Audacity (availability on Will's machines **unknown**, as with
    all local NLE state in §1).
-3. **Music bed — licensed, named routes:**
+2. **Music bed — licensed, named routes:**
    - **$0 route:** YouTube Audio Library (inside YouTube Studio;
      free, cleared for YouTube) — perfectly serviceable, thinner
      catalogue.
@@ -1585,13 +1680,13 @@ Narration-first video lives or dies on its voice track. Chain:
      narration (sidechain or manual rides in the mix pass), and
      never under the Scrolltown beat — that beat keeps the show's
      own quiet (a breath of room tone, then the line).
-4. **Light sound design:** transition ticks/whooshes only where a
+3. **Light sound design:** transition ticks/whooshes only where a
    chapter card or callout lands (library sounds from the same
    music licence — Epidemic's catalogue includes SFX; Artlist's
    Music & SFX bundle likewise), plus the UI's real sounds where
    the capture has them. Restraint is the brief: three or four
    moments, not a carpet.
-5. **Mastering:** final mix measured and normalised with ffmpeg
+4. **Mastering:** final mix measured and normalised with ffmpeg
    `loudnorm` (two-pass) to the **YouTube target: −14 LUFS
    integrated, true peak ≤ −1 dBTP**; the X cutdown gets the same
    master (X applies no normalisation, so the same −14 LUFS file
@@ -1604,10 +1699,13 @@ Narration-first video lives or dies on its voice track. Chain:
   content and pacing decisions only. Capture selects, scratch-
   timed demo beats, graphics represented by their *stills* (the
   contact sheet rides along), no grade, no mix beyond intelligible.
-  **→ GATE 1 (Will, ~25 min, including the stills contact sheet):**
-  approves content, pacing, callout wording, and the graphics
-  look in one sitting. Notes come back as text; anything he cuts
-  here never gets polished.
+  **→ GATE 1 (Will, ~25 min, including the stills contact sheet
+  and the clone proof segment):** approves content, pacing,
+  callout wording, the graphics look, and the cloned voice's
+  proof in one sitting. A failed voice proof here routes to
+  §6.3's fallbacks (re-generation passes, then B or C) before
+  anything is polished. Notes come back as text; anything he
+  cuts here never gets polished.
 - **Pass 2 — polish.** Zooms and callout animation timed to the
   narration, chapter cards in, colour grade (capture is screen
   footage: the grade is white-point/contrast consistency across
@@ -1637,17 +1735,19 @@ the four touches (★).
 
 | Day | Work | Gate / Will |
 |---|---|---|
-| 0 | ★ **Script + foreshadow line approval** (~15 min; the Epidemic/Artlist click, if wanted, rides here, +~5 min). TTS scratch rendered; beat timings marked. | **G0 — script lock** |
+| 0 | ★ **Script + foreshadow line approval** (~15 min; the Epidemic/Artlist click, if wanted, rides here, +~5 min). ★ **Voice-clone sample recorded** (~10 min, one-time: 1–2 min of clean audio + ElevenLabs consent step, §6.3 Route A). TTS scratch (Route C voice) rendered; beat timings marked. | **G0 — script lock** |
 | 1 | Capture session (OBS, per baseline §4 steps 2–4 + confirm-during-recording list); deterministic blocks first, browser block last. Key-frame prompt doc written for the foreshadow. | — |
 | 2 | Foreshadow key frame rendered via Scrolltown stage 5 in the painterly anchor register; register check against keyframe 1 + Fern reference. Graphics package stills → contact sheet; callout manifest generated from the script and proofed. | — (coordinator stills check) |
-| 2–3 | ★ **Narration sitting** (~30 min: two takes against scratch timing). Scheduled when Will is fresh, not end-of-day. | narration locked |
+| 2–3 | **Narration generated** from the locked script in Will's clone (Route A): house-word pronunciation passes, proof segment (0:00–1:20) rendered first and checked; full VO rendered after the proof clears. No Will time. (Route B substitution, if ever invoked, lands its delivery in this same window.) | VO locked (proof at G1) |
 | 3–4 | Rough-cut assembly (Pass 1) with stills standing in for graphics. | — |
 | 4 | ★ **GATE 1 — rough cut + contact sheet** (~25 min): content, pacing, callouts, graphics look. | **G1** |
 | 5–6 | Polish pass: animated graphics composited (ranch prepass at 720p, watched whole; then master composite), grade, sound design, music, mix → −14 LUFS master; captions hand-finished; X cutdown derived from the same package. Thumbnails (3 variants) designed. | — |
 | 7 | Finish & verify: ffprobe (streams/duration/resolution), frame spot-checks per beat against approved stills, loudness measured and recorded, both files hash-checked. ★ **GATE 2 — final video + thumbnail pick** (~15 min). | **G2 — publish approval** |
 | 7–8 | Publish (post-G2 only): YouTube Studio upload with chapters/end screen/captions; X thread + cutdown. Buffer day absorbs the register re-roll (§6.2) or a G1/G2 note round without moving the publish. | — |
 
-**Will's total: ~85 minutes** (15 + 30 + 25 + 15), all estimates.
+**Will's total: ~65 minutes** (15 script + 10 clone sample +
+25 Gate 1 + 15 Gate 2), all estimates — and the 10 is one-time:
+every future video on the clone runs at ~55.
 Named dependencies: the Dec 4 Scrolltown register lock (§6.2 —
 only affects the foreshadow frame, re-roll priced in); the
 confirm-during-recording items from WALKTHROUGH.md §5 (capture
@@ -1658,21 +1758,22 @@ calendar — Day 0 starts when Will says go.
 ### 6.6 Routes, priced — and the recommendation
 
 **Route A — in-house (agents + ranch pipeline).** Cash: music
-licence only — **$0** (YouTube Audio Library) or **~$10–18**
-(one month Epidemic Sound at the prices in §6.3) — plus the
-Descript month ($16, baseline) *only if* its cleanup/timeline is
-wanted; the in-house edit can equally run on the scripted ranch
+licence — **$0** (YouTube Audio Library) or **~$10–18** (one
+month Epidemic Sound at the prices in §6.3) — plus the ElevenLabs
+Starter month (**$6**, §6.3 narration Route A) and the Descript
+month ($16, baseline) *only if* its cleanup/timeline is wanted;
+the in-house edit can equally run on the scripted ranch
 pipeline + Resolve-free. Everything else already exists: the film
 pipeline, the Scrolltown key-frame pipeline, ffmpeg, the agents.
 Real cost is coordinator/agent time across ~7 days of calendar
-(mostly unattended renders and assembly), plus Will's ~85 min.
+(mostly unattended renders and assembly), plus Will's ~65 min.
 Quality ceiling: the house standard — this is the pipeline that
 ships the Wavefront films, with verification gates a freelancer
 doesn't offer (frame checks, loudness measured, hashes).
 
 **Route B — freelance finishing editor.** Handoff package: locked
 script + beat timings, the OBS capture (per-beat takes), the
-narration WAV (both takes), the graphics asset list + design
+finished narration WAV (clone-generated, §6.3), the graphics asset list + design
 notes, the Scrolltown key frame (still supplied by us — it must
 come from the show's pipeline regardless), and the claims-to-avoid
 list from WALKTHROUGH.md §5 as a compliance page. Market, from
@@ -1716,10 +1817,11 @@ to *this* video:
    prepass → master on the ranch, the Scrolltown key-frame stage,
    measured-loudness finishing: the polish tier is an application
    of standing machinery, not a new capability purchase. Route A's
-   cash cost (licence-only, ≤ ~$34 worst case with Descript) is
-   an order of magnitude under Route B for the same gates.
+   cash cost (licences + clone plan, ≤ ~$40 worst case with
+   Descript) is an order of magnitude under Route B for the
+   same gates.
 3. **Will's time budget decides it.** Route A keeps Will at
-   ~85 minutes in four touches. Route B *adds* hiring, briefing,
+   ~65 minutes in four touches. Route B *adds* hiring, briefing,
    and revision management on top of the same approval gates —
    the scarce resource gets spent managing a stranger instead of
    approving a cut.
@@ -1730,8 +1832,8 @@ block that can leave the house without taking accuracy with it.
 
 Title: The Power of Phext — Walkthrough Package
 Source: ~/workspace/phext-walkthrough/WALKTHROUGH.md
-Inscribed: 2026-11-09 23:04 CST
-SHA-256: e89074fa8a37a130b41ed05f489daccacb101fc7f2dca3019ddb84fb9df4dc73
+Inscribed: 2026-11-09 23:06 CST
+SHA-256: b26662574e08d0b51a7f372d94d413516f2f309d08459a886db891a3af1c7c9d
 
 ---
 # The Power of Phext — Walkthrough Package
@@ -2092,7 +2194,9 @@ January. 🔥
 **Operative plan:** PRODUCTION-PLAN.md **§6 (Polish Tier)** governs
 production — two-pass edit with gates, rendered motion-graphics
 package, key-frame-standard Scrolltown foreshadow, finished audio,
-~85 minutes of Will's time total. The checklist below remains the
+~65 minutes of Will's time total. Will does not narrate (his
+correction, 2026-11-09): narration is a one-time voice clone —
+see PRODUCTION-PLAN §6.3. The checklist below remains the
 capture-day reference; where it and §6 differ (edit estimates,
 finishing steps), §6 wins.
 
