@@ -14,7 +14,7 @@ truth: artifacts-source.json beside this builder
 (build_artifacts_phext.py); never hand-edit the .phext.
 artifacts.phext is published to wbic16/human@exo.
 
-Artifacts inscribed: 16
+Artifacts inscribed: 17
 
 Index (coordinate — title — source):
 - 19.7.11/9.7.12/7.6.9 — Light the Next Light — intro song lyrics & time map — ~/workspace/exocortexia-cartoon/intro/LYRICS.md
@@ -27,6 +27,7 @@ Index (coordinate — title — source):
 - 21.7.10/8.6.11/7.6.9 — Scrolltown: The Great Form Mix-Up — cartoon script & treatment — ~/workspace/exocortexia-cartoon/SCRIPT.md
 - 23.7.8/9.7.12/8.6.9 — Shot List — Scrolltown Intro Video — ~/workspace/exocortexia-cartoon/intro/SHOT-LIST.md
 - 24.6.8/7.6.10/6.6.9 — Scrolltown — Production Workflow — ~/workspace/scrolltown-reorg/workflow/PRODUCTION.md
+- 28.6.8/8.6.10/6.6.9 — Production Plan — The Power of Phext Walkthrough — ~/workspace/phext-walkthrough/PRODUCTION-PLAN.md
 - 31.7.9/9.6.12/6.6.9 — The Power of Phext — Walkthrough Package — ~/workspace/phext-walkthrough/WALKTHROUGH.md
 - 32.6.7/7.6.10/6.5.9 — Neovim + Phext — Design: Phext-Scale Navigation in a Modal Editor — ~/workspace/goals/neovim-phext-support-merge-ready-pr-compiled-with-phcc/files/neovim-phext-design.md
 - 32.6.8/8.6.11/6.5.9 — Charon — README — ~/workspace/charon-seed/README.md
@@ -1129,12 +1130,310 @@ its last ones, and the finale named in STORY-ARC.md closes each fill.
 direction ("build up a queue of storyboards, scripts, episodes, intro
 videos… and fill out the full story arc") · companion to STORY-ARC.md ·
 the live board is production/QUEUE.md.*
-# The Power of Phext — Walkthrough Package
+# Production Plan — The Power of Phext Walkthrough
+
+Title: Production Plan — The Power of Phext Walkthrough
+Source: ~/workspace/phext-walkthrough/PRODUCTION-PLAN.md
+Inscribed: 2026-11-09 23:00 CST
+SHA-256: 9d8b9a93b3d67e2c1b0c3e08813d2c1a9cebb65d9d9082cda4c2f799c8b3c606
+
+---
+# Production Plan — "The Power of Phext" Walkthrough
+
+**Task:** 34.11.13/13.11.14/11.11.14 · **Companion to:** WALKTHROUGH.md
+(task 28.5.8/7.6.12/6.5.8) · **Date:** 2026-11-09
+**Subject video:** a ~7.5 min screen-demo walkthrough of edit.phext.io
+plus a plain-editor beat and narration — YouTube long-form + a 60–90 s
+X cutdown. Nothing in this plan has been purchased, connected, or posted.
+
+**Method note.** Tool *fit* is judged against this video's shape:
+real UI footage where text legibility is the product, narration-first
+script, a handful of zooms/callouts, one still-image foreshadow beat.
+*Availability* was checked live on 2026-11-09 (connector search +
+`status` on each candidate CLI). *Prices* are US list prices as read
+from vendor pricing pages by the cited roundups in Nov 2026 — pricing
+pages change; verify at checkout before any purchase. Anything not
+verified is labelled **unknown**, not guessed.
+
+---
+
+## 1. Availability ledger — what is actually reachable from here
+
+| Service | State in this environment (checked 2026-11-09) |
+|---|---|
+| Runway (MCP connector) | Connector present; `status` = **not_connected**. Connectable in one step via its authorize flow. Credit-based generation; balance readable after connecting (`show_plans_and_credits`). |
+| vidIQ (MCP connector) | Connector present; `status` = **not_connected**. Connectable the same way. Its doc is explicit: it **cannot upload or publish** to YouTube — research/scoring only. |
+| Canva (connector) | Connector present; `status` = **not_connected** (OAuth). Connectable. |
+| HeyGen | **No connector in this session** (connector search: no match). Web-only. |
+| Krea | **No connector in this session.** Web-only. |
+| Magnific | **No connector in this session.** Web-only. |
+| Upload-Post | **No connector in this session.** Not available here as a publishing route. |
+| Muse media generation (image + video) | **Available now** in this environment (structured media pipeline) — stills, image-to-video push-ins, icon art. |
+| Muse spoken audio (TTS voice notes) | **Available now** (spoken-audio skill; Will's standing voice is Aria) — scratch narration. |
+| ffmpeg | **Present** on this VM (8.1.2) for assembly/verification; per standing rules, heavy renders run on the ranch, never on the Muse VM (the Wavefront film pipeline there is real and proven). |
+| OBS Studio | **Not installed** on this VM (checked) — and this VM is the wrong place for it anyway; it belongs on Will's recording machine. Free download. |
+| Any local NLE on Will's machines (Premiere/Resolve/etc. already licensed?) | **Unknown** — not verified. Check before buying anything in §3. |
+| YouTube / X accounts & upload rights | **Unknown** from here — the publish route is YouTube Studio + X native in the browser, with Will approving exact copy first (social-publishing rule). |
+
+**Availability surprise, stated plainly:** of the seven services the
+brief named, only three (Runway, vidIQ, Canva) exist as connectors in
+this session, and all three are present-but-not-connected. HeyGen,
+Krea, Magnific, and Upload-Post are web-only from here.
+
+---
+
+## 2. Verdicts by production role
+
+### Capture — the demo footage
+
+**Verdict: OBS Studio (primary) · OS-native capture (fallback) ·
+browser/cloud recorders rejected for hero footage · AI video
+generators rejected outright for UI.**
+
+- This video's credibility *is* the footage: a real editor, on a real
+  site, doing real things. Any generated or "recreated" UI would be
+  both visibly wrong at text scale and dishonest. Runway/Krea-class
+  tools are therefore disqualified from the demo itself, full stop.
+- **OBS Studio** — free, open source, no watermark, no time limit
+  (obsproject.com / project documentation). Records at display
+  resolution with separate mic/system tracks, which is what UI text
+  legibility needs. Settings that matter: record at native resolution
+  (1440p or 4K canvas if the display allows), browser zoom 125–150%
+  so interface text survives YouTube compression, capture in short
+  per-beat takes matching the WALKTHROUGH.md shot list.
+- **OS-native** (Windows Game Bar / macOS screen recording) — zero
+  install, fine as a fallback for the terminal block; fewer controls,
+  single mixed audio track.
+- **Browser-based recorders** (Loom/ScreenPal class) — convenient, but
+  their compression is tuned for faces-and-slides, not dense UI text,
+  and the footage lives in someone else's cloud first. Acceptable for
+  a scratch rehearsal pass, not for the master.
+
+### Voice — narration
+
+**Verdict: Will records the final narration (primary) · TTS scratch
+track for timing (supporting) · avatar presenter: skip.**
+
+- **Will's own voice** is the credibility play: it is his format, his
+  site, his channel, and the script is written in his register. Cost:
+  $0; effort estimate: two or three takes of a ~7.5 min script inside
+  one sitting (estimate, not a measurement).
+- **Scratch TTS first:** render the full script as a spoken-audio
+  scratch track (available here now, $0) *before* the recording
+  session. It times every demo beat, exposes tongue-twisters, and
+  becomes the temp track the first edit is assembled against. It is
+  not the final voice and should not ship.
+- **Avatar-presenter services** (HeyGen class): web-only from here;
+  reported pricing from heygen.com/pricing roundups (Nov 2026):
+  Free = 3 videos/mo at ≤1 min, Creator = $29/mo. Fit for this video:
+  poor. A synthetic presenter adds an uncanny layer to a demo whose
+  whole argument is "this is real and you can touch it," and the
+  walkthrough needs at most a face-free intro/outro. **Recommendation:
+  no avatar.** If a face is wanted on the intro/outro, Will on webcam
+  inside the OBS capture beats a digital twin on both cost and trust.
+
+### Edit — assembling the walkthrough
+
+**Verdict: Descript (primary, fastest path) · Camtasia (best
+purpose-built alternative) · DaVinci Resolve free (zero-cost
+fallback) · Premiere (capable, no advantage) · CapCut (cutdown-only
+option).**
+
+- **Descript** — text-based editing matches this production exactly:
+  the script is the timeline. Delete a word, delete the footage;
+  filler-word removal, captions from the same transcript, chapter
+  markers, screen-recording import, competent zooms/callouts for UI.
+  Pricing as reported from descript.com/pricing (Nov 2026): Free $0
+  (60 media min/mo, 720p watermarked — trial only); **Hobbyist
+  $16/person/mo billed yearly ($24 monthly)** — 1080p watermark-free,
+  enough for this video; Creator $24/mo billed yearly adds 4K.
+- **Camtasia** — the screen-demo specialist: recorder + editor in one,
+  SmartFocus-style zoom/pan and the deepest callout/annotation kit of
+  the group. If walkthroughs become a series, this is the tool shaped
+  like the job. Price: **Essentials $179.88/year** (watermark-free
+  editor; Starter $39/yr is watermarked) as reported from TechSmith's
+  pricing (Nov 2026). Steeper than one month of Descript, cheaper
+  than a year of it.
+- **DaVinci Resolve** — the free edition is a complete professional
+  NLE (Edit/Color/Fusion/Fairlight, UHD delivery, no watermark);
+  Studio is $295 one-time (Blackmagic list). Trade-offs for *this*
+  video: the learning curve is the cost, and several Neural Engine
+  conveniences (e.g. transcription-based editing, voice isolation)
+  are Studio-only per Blackmagic's edition split — while the script
+  already exists, so transcription matters less here. Best fallback
+  if the answer to "what's already installed?" is "nothing, and
+  budget is $0."
+- **Adobe Premiere** — $22.99/mo single-app (annual, billed monthly,
+  Adobe US list). Fully capable, but a subscription with no
+  walkthrough-specific advantage over Descript/Camtasia for this
+  shape of video. Only if it's already in Will's stack (unknown — §1).
+- **CapCut** — fast, friendly, and genuinely good at the 60–90 s
+  cutdown's shape (captions, punch-ins); reported Standard $9.99/mo /
+  Pro $19.99/mo. Weak choice for the 7.5 min master's precise
+  callout/chapter work; fine as the cutdown-only lane if Descript
+  isn't already open.
+
+### Motion graphics + the foreshadow visual
+
+**Verdict: in-editor graphics for the walkthrough body · Scrolltown's
+own key-frame pipeline for the foreshadow still · Muse media
+generation (available now) to animate it · Runway as fallback ·
+Krea/Magnific unnecessary.**
+
+- The body needs almost nothing: the stack-diagram cutaway (one simple
+  slide, buildable in Canva or any editor), on-screen text cues, and
+  the end card. Any editor above does this natively. No motion-graphics
+  package is worth buying for it.
+- **The foreshadow beat** (added to WALKTHROUGH.md §2, 7:45 "One more
+  town"): one still + a slow push-in for ~17 s. The still should come
+  from **Scrolltown's own art pipeline** — the show's key frames are
+  rendered in a locked Midjourney register, with likeness/register
+  checks as a production stage, and the assets live in
+  wbic16/scrolltown (production workflow of record:
+  `~/workspace/scrolltown-reorg/workflow/PRODUCTION.md` §1 stage 5,
+  §3). A town-of-glowing-scrolls frame commissioned in that register
+  keeps the foreshadow visually continuous with the show when it
+  arrives — a generator one-off in a different style would not.
+- **Animating the still:** a slow push-in is a zoom, not a generation
+  problem — the editor does it natively. If a living touch is wanted
+  (lamp flicker, drifting light), Muse's media pipeline can animate
+  the still image-to-video *here, now, no new account*; **Runway**
+  (connector present, not connected; check credits after connecting)
+  is the fallback for the same job. Krea/Magnific are web-only from
+  here and buy nothing this beat needs.
+
+### Thumbnail + metadata
+
+**Verdict: real frame + Canva (primary design lane) · vidIQ as a
+scoring check, not an author (supporting) · titles already drafted.**
+
+- Thumbnail: a real Phext Edit frame (the encyclopedia mid-browse)
+  with one of the three drafted texts from WALKTHROUGH.md §3 —
+  "WIKIPEDIA IN A BOX" is the strongest at small sizes. **Canva**
+  (connector present, not connected; free tier exists, paid pricing
+  unverified here — **unknown**, check after connecting) is the fast
+  lane for text-over-frame design and resizing; the editor itself or
+  any image tool is the fallback.
+- **vidIQ** (connector present, not connected): use its title/
+  thumbnail scoring and keyword research as a *check* on the drafted
+  metadata before upload. It cannot upload or publish (its own doc),
+  and generated titles should not replace Will's register.
+
+### Captions
+
+**Verdict: script-derived captions (primary) · YouTube auto-captions
++ Studio correction (fallback) · burned-in on the X cutdown.**
+
+- The narration script already exists, so the best caption track is
+  built *from the script*, timed in the editor (Descript does this
+  natively; Resolve/Camtasia accept an SRT). This skips ASR entirely
+  for the words that matter: "phext", "scroll", and coordinates are
+  exactly what speech recognition mangles.
+- Fallback per YouTube's own Help: upload, take the automatic track
+  in YouTube Studio → Subtitles → **Duplicate and edit**, correct,
+  publish. Same mandatory correction pass, more manual timing work.
+- X cutdown: burn captions into the picture in the editor — simplest,
+  and they survive reposts and muted autoplay, which is how X video
+  is mostly watched.
+
+### Upload / publish
+
+**Verdict: YouTube Studio + X native, by hand, after approval.**
+
+- No cross-posting connector exists in this session: Upload-Post is
+  absent, vidIQ cannot upload, and there is no YouTube/X connector
+  here. The route is the ordinary one — YouTube Studio in the browser
+  (upload, chapters from WALKTHROUGH.md §3, end-screen elements on the
+  7:25 CTA segment, captions track attached), then the X thread +
+  native cutdown upload.
+- Per the social-publishing rule: **nothing publishes until Will
+  approves the exact copy and media.** This plan changes nothing
+  about that gate.
+
+---
+
+## 3. Recommended stack
+
+| Role | Primary | Fallback |
+|---|---|---|
+| Capture | OBS Studio (on Will's machine) | OS-native capture |
+| Voice — final | Will, recorded in one sitting | — (don't synthetic-substitute) |
+| Voice — scratch | Muse spoken-audio TTS | Descript AI voice (in-plan) |
+| Edit — master | Descript Hobbyist ($16/mo billed yearly, as reported Nov 2026) | DaVinci Resolve free ($0); Camtasia Essentials ($179.88/yr) if walkthroughs become a series |
+| Motion graphics | In-editor (Descript) + one Canva/slide cutaway | Resolve Fusion (free, slower) |
+| Foreshadow visual | Scrolltown key-frame pipeline still (wbic16/scrolltown register) + editor push-in | Muse media image-to-video; Runway after connecting |
+| Thumbnail | Canva (connect first) over a real frame | Editor-native frame + text |
+| Metadata check | vidIQ scoring (connect first) | The drafted titles as-is |
+| Captions | Script-derived SRT via editor | YouTube auto + Studio Duplicate-and-edit |
+| Assembly/verify | ffmpeg (present) — ffprobe checks, loudness sanity | Editor export presets |
+| Publish | YouTube Studio + X native (manual, post-approval) | — none available as connector |
+
+**Total new spend for the primary stack: $0–16** (OBS $0, scratch
+TTS $0, Descript Hobbyist one month at the reported annual-billing
+rate is the only line item; $0 if Resolve-free is chosen instead).
+Every paid figure above is a reported list price, not a quote —
+verify at checkout.
+
+## 4. What I'd do Monday morning
+
+1. **Timing pass (30 min, $0).** Render the WALKTHROUGH.md script as
+   a TTS scratch track; mark the beat timings on the shot list; fix
+   any line that doesn't survive being spoken.
+2. **Connect + capture setup (30 min).** Install OBS on the recording
+   machine; build two scenes (browser, terminal); browser zoom set
+   for text legibility; test-record the coordinate jump and watch it
+   back at 50% size — if the text isn't readable small, it isn't
+   readable on YouTube.
+3. **Capture the deterministic blocks first** (per WALKTHROUGH.md §5):
+   terminal demo, plain-editor raw-file scroll — they never change
+   between takes.
+4. **Browser block at edit.phext.io**, working the confirm-during-
+   recording list as I go (demo phext offered to a signed-out
+   visitor, exact UI labels, download/export reality for the 5:15
+   beat — fallback already scripted).
+5. **Will records narration** against the scratch timing — two takes,
+   keep both.
+6. **Edit in Descript:** assemble to the narration, zooms/callouts on
+   the UI beats, stack-diagram cutaway, chapter markers from §2,
+   script-derived captions; drop the foreshadow still + push-in at
+   7:45 (art pulled from the Scrolltown pipeline, §2 above).
+7. **Package:** thumbnail in Canva from a real frame; optional
+   15-minute vidIQ scoring pass on title + thumbnail; export master
+   (1080p) and the X cutdown (burned-in captions); ffmpeg-verify both
+   files (ffprobe: streams, duration, resolution).
+8. **Approval gate:** Will sees the exact video, thumbnail, title,
+   description, and X copy. Only then: YouTube Studio upload, then
+   the X thread. Nothing in steps 1–7 posts anything.
+
+## 5. The foreshadow, as placed
+
+Per this task's second deliverable, WALKTHROUGH.md now carries the
+Scrolltown foreshadow in three separable places:
+
+- **Script §2, 7:45 "One more town"** — a closing beat *after* the
+  CTA: one draft narration line (~40 words ≈ 17 s, marked DRAFT for
+  Will's approval), one visual (a town of glowing scrolls at dusk in
+  the Scrolltown key-frame register, slow push-in, no characters),
+  and an end-screen note (end-screen elements ride the 7:25 CTA; the
+  foreshadow stays clean).
+- **Shot list item 7** — the still is captured/sourced with the rest
+  of the production, from wbic16/scrolltown's art pipeline.
+- **X thread** — one optional teaser post (post 9), in its own block,
+  written to be deleted without touching posts 1–8.
+
+Discipline kept: Scrolltown facts used are only the ones on record —
+the name, a town inside the Great Scroll, episodes beginning in
+January (per its production record: publishing starts January, EP001
+slated Saturday 2027-01-02, 312 weekly episodes across 2027–2032,
+narrator Fern — none of the specifics beyond name/town/January are
+promised in the copy, because the story is in flux). The walkthrough's
+subject stays phext; this is a door left open, not a trailer.
+# The Power of Phext — Walkthrough Package
 
 Title: The Power of Phext — Walkthrough Package
 Source: ~/workspace/phext-walkthrough/WALKTHROUGH.md
-Inscribed: 2026-11-09 22:53 CST
-SHA-256: 6604b497d706add758bc646b52e0b6e3845bfb0b363a0bf2423379bd758cc90f
+Inscribed: 2026-11-09 23:00 CST
+SHA-256: 07900947bbba272f11e105acfb925e9922e5c5d10293bd3f958031b383f73688
 
 ---
 # The Power of Phext — Walkthrough Package
@@ -1190,6 +1489,7 @@ listed in §5 — the script is worded so it stays true either way.
 6:00 Carry your own encyclopedia
 6:50 Why this matters (and the AI angle)
 7:25 Try it yourself
+7:45 One more town (foreshadow)
 ```
 
 ### Script
@@ -1323,6 +1623,23 @@ mini-encyclopedia from this video is linked below; download the file
 and run it yourself. Wikipedia in a box. No database was harmed —
 because there isn't one."
 
+**7:45 — One more town (foreshadow).**
+`[SCREEN: the end card fades. A single still, in the key-frame register
+of the Scrolltown art pipeline: a small town at dusk whose streets are
+unfurled, glowing scrolls, lamps lit along them. No characters. Slow
+push-in, hold, then small end text: "Scrolltown — January".]`
+`[END SCREEN: keep this beat clean — no overlays and no end-screen
+elements on it. YouTube end-screen elements (subscribe / next video)
+ride the 7:25 CTA segment, not this one.]`
+`[DRAFT NARRATION — Will's approval required; ~40 words ≈ 17 s:]`
+"One last thing. Everything today lives in a scroll — and scrolls can
+hold more than articles. Somewhere inside the Great Scroll there's a
+town where the scrolls are the streets. Its name is Scrolltown.
+Episodes begin in January. Come see."
+`[Foreshadow discipline: no plot, no characters named or shown,
+nothing promised beyond the town, the name, and January. A door left
+open — the walkthrough's subject stays phext.]`
+
 ### Shot list (in recording order)
 
 1. Browser: edit.phext.io pre-loaded mid-browse (cold open), then a fresh-tab load for the tour.
@@ -1332,6 +1649,10 @@ because there isn't one."
 4b. The no-lock-in shot: download/export the phext (or the demo file), open it in a mainstream plain editor, and frame BOTH views side by side — structured and beautiful in Phext Edit, raw and readable in the plain editor.
 5. Terminal: `query_demo.py toc`, `get`, `edit` on demo/wiki.phext, byte-diff printout, `xz` seal size.
 6. End card: edit.phext.io URL + tagline.
+7. Foreshadow still: one Scrolltown key-frame-register still (a town
+   of glowing scrolls at dusk, lamps lit — from the show's art
+   pipeline, wbic16/scrolltown), slow push-in, end text "Scrolltown —
+   January". No characters in frame.
 
 ---
 
@@ -1380,6 +1701,7 @@ Chapters:
 6:00 Carry your own encyclopedia
 6:50 Why this matters (and the AI angle)
 7:25 Try it yourself
+7:45 One more town
 
 Source: [GITHUB LINK] · phext format + SQ server: [LINK]
 ```
@@ -1450,6 +1772,12 @@ just more volumes. The addressing doesn't change as it grows.
 for the utilities, all open source. Write in 11 dimensions: plain
 text, no lock-in. What would you put in the box?
 
+**Optional teaser (separable — delete it without touching posts 1–8)**
+
+9/ Somewhere inside the Great Scroll there's a town where the
+scrolls are the streets. Its name is Scrolltown. Episodes begin in
+January. 🔥
+
 **Native-video cutdown outline (60–90 s)**
 
 - 0:00–0:08 — Hook over editor footage: "This is an encyclopedia. There is no database."
@@ -1499,8 +1827,8 @@ text, no lock-in. What would you put in the box?
 - The current public utilities list on the site (Up Goer Five,
   Coordinate TTS demo, Learn You Phext per the standing record).
 
-**Runtime estimate (estimate, labelled):** narration measures 989 spoken
-words ≈ 7.1 min at 140 wpm, plus demo pauses (page loads, terminal
+**Runtime estimate (estimate, labelled):** narration measures 1,029 spoken
+words (989 + the 40-word Scrolltown foreshadow draft) ≈ 7.4 min at 140 wpm, plus demo pauses (page loads, terminal
 runs) that are performed, not spoken — inside the 6–8 min target,
 near its top; trim the 1:20 explainer first if the read runs long. Recording + screen capture ≈ 45–75 min;
 edit ≈ half a day. All estimates, not measurements.
