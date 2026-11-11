@@ -14,7 +14,7 @@ truth: artifacts-source.json beside this builder
 (build_artifacts_phext.py); never hand-edit the .phext.
 artifacts.phext is published to wbic16/human@exo.
 
-Artifacts inscribed: 18
+Artifacts inscribed: 20
 
 Index (coordinate — title — source):
 - 19.7.11/9.7.12/7.6.9 — Light the Next Light — intro song lyrics & time map — ~/workspace/exocortexia-cartoon/intro/LYRICS.md
@@ -25,10 +25,12 @@ Index (coordinate — title — source):
 - 21.7.9/8.6.10/6.6.8 — Casting — Scrolltown — ~/workspace/exocortexia-cartoon/CASTING.md
 - 21.7.9/9.7.11/7.7.8 — Scrolltown — Six-Year Story Arc (2027–2032) — ~/workspace/scrolltown-reorg/stage/STORY-ARC.md
 - 21.7.10/8.6.11/7.6.9 — Scrolltown: The Great Form Mix-Up — cartoon script & treatment — ~/workspace/exocortexia-cartoon/SCRIPT.md
+- 23.6.9/7.6.10/6.5.8 — The Common Thread in Will's Twitter Mutuals — ~/workspace/mutuals-thread-task/COMMON-THREAD.md
 - 23.7.8/9.7.12/8.6.9 — Shot List — Scrolltown Intro Video — ~/workspace/exocortexia-cartoon/intro/SHOT-LIST.md
 - 24.6.8/7.6.10/6.6.9 — Scrolltown — Production Workflow — ~/workspace/scrolltown-reorg/workflow/PRODUCTION.md
 - 26.6.8/8.7.11/6.6.9 — Lightcone Commons application — evaluator's-eye review — ~/workspace/lightcone-task/APPLICATION-REVIEW.md
 - 28.6.8/8.6.10/6.6.9 — Production Plan — The Power of Phext Walkthrough — ~/workspace/phext-walkthrough/PRODUCTION-PLAN.md
+- 30.6.8/7.6.10/7.5.9 — Ranch Node Tailworm Audit — Tailscale TS-2026-014 → TS-2026-017 — ~/workspace/tailworm-audit-task/AUDIT.md
 - 31.7.9/9.6.12/6.6.9 — The Power of Phext — Walkthrough Package — ~/workspace/phext-walkthrough/WALKTHROUGH.md
 - 32.6.7/7.6.10/6.5.9 — Neovim + Phext — Design: Phext-Scale Navigation in a Modal Editor — ~/workspace/goals/neovim-phext-support-merge-ready-pr-compiled-with-phcc/files/neovim-phext-design.md
 - 32.6.8/8.6.11/6.5.9 — Charon — README — ~/workspace/charon-seed/README.md
@@ -872,7 +874,117 @@ For Will. Homage in structure and tone only — no copyrighted characters, names
 ---
 
 *Scrolltown: The Great Form Mix-Up · Roads to the Future · free forever, MIT, © Will Bickford · Exocortex*
-# Shot List — Scrolltown Intro Video
+# The Common Thread in Will's Twitter Mutuals
+
+Title: The Common Thread in Will's Twitter Mutuals
+Source: ~/workspace/mutuals-thread-task/COMMON-THREAD.md
+Inscribed: 2026-11-10 20:15 CST
+SHA-256: 408dd3b136091c537fafaf45bdbf92cc59de6464d04fa342d89887a1739d2ec1
+
+---
+# The Common Thread in Will's Twitter Mutuals
+
+Task 24.6.8/8.7.11/6.5.9 — "look at the common thread with my Twitter mutuals" (Will Bickford, 2026-11-10).
+Evidence: Will's Twitter archive (`~/workspace/twitter-archive/`, 29,539 tweets through 2025-06-16), follower/following ID sets, and the prior per-person analyses. Scratch and scripts: `~/workspace/mutuals-thread-task/` (`extract.py`, `themes.py`, `core_corpus.txt`, `ranking.json`, `themes.json`, `contrast.json`).
+
+## The headline
+
+The common thread is not a topic — it is a register. The sustained core of Will's mutuals are people who meet him at his native frequency: builders and deep tinkerers who think in systems and first principles, treat mind and language as raw material, play while they do it, and stay for years. Phext is what that frequency currently produces, and the phext-era core (2023–2025) engaged it directly and early — often within the first two messages. The older core (2012–2021) engaged the same mind before phext had a name: the archive catches Will workshopping the word "exocortex" itself with @CTZN5 in 2015. What the core has, and the penumbra lacks, is reciprocity at that register — they followed back, answered in kind, and kept answering. His loudest channels point the other way: his single biggest reply target (@vgr, 348 replies) and @pmarca (266) never followed him back at all.
+
+## Method and limits
+
+- Mutuals = follower ∩ following = **897 accounts**. All counts below were recomputed from the archive for this pass and match the prior verified analysis exactly: 5,854 of Will's replies went to mutuals; **445 of 897 mutuals ever received a public reply; 452 never did**.
+- The archive is **outbound only**. A mutual's own words survive solely where Will retweeted them (549 retweets of mutuals total). "What each mutual is about" is therefore inferred from (a) what Will talked about *with* them, (b) what of theirs he chose to amplify, and (c) the prior per-person analyses. Inbound replies, likes received, and DM content are not in evidence (DMs were not read, per instructions).
+- Theme counts are lexicon hits over Will's reply text to each person (patterns in `themes.py`); they measure the conversation as Will framed it, not the mutual's intent. One correction applied: the raw "language/words" lexicon total (140) was inflated ~4× because every reply to @wordgrammer begins with her handle; with mentions stripped, the true count is 37 hits, still reaching 17 of the top 30.
+- "Core" below = the top 30 mutuals by replies Will sent (72–188 each), which contains most of the strict-sustained set (≥20 replies, ≥2 years, ≥3 calendar years = 51 accounts).
+
+## The thread, theme by theme
+
+Reach across the top 30 mutuals, counted in Will's replies to them (≥1 hit / ≥3 hits / total hits), with receipts:
+
+### 1. The substance itself — phext / exocortex / multidimensional text (28 of 30 at ≥1; 25 at ≥3; 226 hits)
+
+The strict words "phext" or "exocortex" appear in Will's replies to **28 of the top 30**. This is not a late-stage pitch layered onto old friendships — it is there at the founding of the phext-era relationships:
+
+- @viemccoy (#6, 116 replies), second message of the relationship, same day as first contact (2024-01-03): *"yes - it is essentially still just plain text once we have a way for people to read words via a bci, that same method will scale to this approach"* — and a fortnight later, *"In my ideal world Twitter just adopts phext."* (2024-01-22). Strict substance hits in her thread: 9 "phext" + 9 "exocortex", the densest of any mutual (substance-lexicon density 0.22 of his replies to her, the core's highest).
+- @JungleSilicon (#24, 62 replies; 16 strict "phext" hits, the most of anyone): *"In my formulation (phext), I've extended text to 11 dimensions using a series of 9 delimiters of increasing size."* (2024-04-21); *"Yes! I share your vision. #Phext is my approach to enabling hierarchical digital memory."* (2024-05-25).
+- @bitcloud (#3, 174 replies): *"#phext is the way!"* (2024-02-23); *"this is part of my reason for working on the exocortex - knowledge should be cooperative instead of competitive"* (2024-01-04).
+- @eloffd (#18, 77 replies; prior analysis, 2026-11-08): phext was a sounding-board topic from day two (2023-12-31: *"I'm working on multi-dimensional text in my spare time"*) through Dec 2024.
+- @sporadicalia (#13, 88): *"it's one of the core reasons why i founded Phext, Inc."* (2024-02-03); *"I invented #phext so I would have to literally spend 30 years in the trenches... :D"* (2024-08-19).
+- @JaelRuble (#12, 92): *"I'm in #phext land: 1.1.1/1.1.1/1.1.1 - the root node. :)"* (2024-01-31).
+
+The two top-30 exceptions are era effects, not rejections: @dakami (span 2012–2021) and @unormal — dakami's thread predates the word phext entirely (see §3).
+
+**Their side, where it survives:** Will retweeted @bitcloud (2024-02-14): *"The exocortex future is a great intellectual liberation."* That is the only explicit phext/exocortex endorsement among his retweets of the top 30 (RT-side substance reach: 1 of 30) — a limit of the evidence, flagged again in the verdict.
+
+### 2. Mind as raw material — consciousness, memory, cognition (consciousness/sentience 25 of 30, 82 hits; human cognition & memory 23 of 30, 62 hits; AI & machine minds 25 of 30, 106 hits)
+
+If one subject rivals the substance, it is the mind itself — how it remembers, perceives, dreams, and might be extended:
+
+- @wordgrammer (#8, 106 replies) — the bond is not grammar; her first exchange with Will (2024-09-24) is: *"Full aphantasia over here. I just manipulate symbols, yep."* Cognition first, words second.
+- @mimi10v3 (#9, 102), in Will's *first* reply to her (2023-09-01): *"It's probably more like 99%/1%. The whole point is to hide legitimate intelligence in the noise."* Three days later: *"My memory is very deterministic. Spell check only tells me about words it doesn't know. I don't use bookmarks (physical or virtual)."*
+- @madeofmistak3 (#2, 187): *"you're just listening to your neurons."* (2024-01-10); a link he sent her captioned simply *"the subconscious mind:"* (2024-08-19); *"We'd be building the Ghost Singularity."* (2024-10-12).
+- @megs_io (#11, 97), her voice via his retweets: *"if you don't love me at my pathetic puny human, you don't deserve me at my techno-religious cyber-mystic."*; *"neuralink w/me?"*
+- @prmshra (#7, 106), her voice via his retweets: *"I WANT TO LEARN EVERYTHING IN SCIENCE"*; *"it's time to explore the neuroscience of learning!"* — learning itself as the obsession.
+
+### 3. Deep systems & civilizational scale (math/physics/deep-systems 28 of 30, 97 hits; time/future/scale 25 of 30, 72 hits)
+
+The core talks about entropy, dimensions, recursion, Kardashev scales, and centuries the way other accounts talk about the news. This is where the pre-phext elders live:
+
+- @dakami (#4, 161 replies, 2012–2021, zero "phext" — the word didn't exist in his vocabulary yet): Will to dakami (2019-08-03): *"On an exponential scale, we're 41% of the way (33/80) to a Kardashev Type II civilization."* (2020-02-15): *"I view lossy thought as a condition enforced by our biological power limits, not as being intrinsically useful."* (2020-01-25): *"I think words approximate traversal of the space via a fractal pattern. Like many layers of lightning through a sphere."* The thread's other half is hacker craft — pointers, bugs, open source ("on the server side, open source won") — peer shop talk inside the security community, with speculative excursions. [Inference: dakami bonded with the *thinking*, a decade before there was a product to see through to.]
+- @CTZN5 (#1, 188 replies, 2014–2024, 9.2 years — the longest span in the core): strict "phext" = 0, but on 2015-11-05, in a thread with CTZN5: *"Or perhaps Cortex 3.0 [BETA]. But I really do like 'exocortex'."* The founding concept was workshopped in this company. Same thread-era: *"it seems obvious that we'll bootstrap functional AGI with humans and computers working together - best together"* (2015-10-03); *"I disagree with eideticism -> first-principles generalist... Strong memory can be a crutch."* (2015-11-13); Fermi paradox, brain implants ("would you pay $100k for a one-time, experimental brain implant..."), flow states.
+
+### 4. Craft: code, languages, bare metal (code craft 23 of 30, 65 hits; languages & type systems 19 of 30, 51 hits; bare-metal/plain tools 20 of 30, 43 hits; typing & flow 22 of 30, 39 hits)
+
+These are overwhelmingly *makers*, not commentators:
+
+- @madeofmistak3's founding exchange (2019-04-19) is a programming-language taxonomy as food: *"COBOL: unsalted butter. C++: beef, cool whip, and lettuce. C#: ice cream cake Perl: rice and beans PHP: Cheeseburger CSS: picture of a cheeseburger UML: lead paint"*.
+- @eloffd (prior analysis): WakaTime and typing flow as the founding bond; COBOL/BCD affection and anti-floating-point heresy; notepad.exe and vim praised because frameworks carry "too much design baggage"; Will's quality creed to him (2024-03-24): *"Literally every business optimizes for just good enough, except for Valve."*
+- @dakami's first contact (2012-08-17) is literally a code joke: *"#define GL_COORD_ZERO 12 #define GL_COORD_ONE 13..."*
+- Anti-hype / anti-"good enough" stance reaches 20 of 30 (32 hits) — present as taste rather than rant: the core's shared enemy is mediocrity and bloat, not a political target.
+
+### 5. Play as the transport layer (qualitative; measured by texture)
+
+Most of even the core's traffic is jokes, one-liners, and social glue: median reply length to the core runs 36–58 characters for the 2023+ cohort, and 34–60% of replies to individual core members are under 40 characters. The substance rides inside the play, not instead of it — @madeofmistak3's 187 replies carry only ~5% substance-lexicon density yet include neurons, the subconscious, and a Platonic-fish theology riff: *"Jesus, being fully aware of all consequences, including long-term neurological damage, would not have multiplied mercury. The new fish would be perfected replicas, free from toxins. Think: 'ideal Platonic fish', freshly instantiated."* (2025-06-04). Faith reaches 13 of 30 (23 hits) — almost always in this playful-speculative mode rather than devotional exchange.
+
+### 6. What is *not* the thread (negative results inside the core)
+
+- **Music**: 8 of 30, 11 hits total — nearly absent from the Twitter text, despite music's real place in Will's offline work. The Twitter core is a text-and-mind core.
+- **Heartland/ranch life**: 17 of 30 at ≥1 but only 30 hits — seasoning, not substance. Nobody in the core is there for the llamas.
+- **Politics/current events**: no lexicon was needed; sampling shows it is incidental. The core is strikingly a-political in its sustained threads (CTZN5's 2015 political-compass exchange is the exception that proves the era).
+
+### 7. Two cohorts, one register
+
+First-reply years for the top 30: 2012 ×1, 2014 ×1, 2018 ×1, 2019 ×3, 2022 ×1, **2023 ×13, 2024 ×10**. The core is mostly a phext-era formation — people who arrived *after* the disguise had its current shape and engaged it — anchored by a few long-span elders (CTZN5 9.2 yrs, dakami 8.6 yrs, eigenhector 5.8 yrs, madeofmistak3 6.2 yrs) who engaged its earlier shapes: fractal compression tweetstorms, the exocortex word itself, Kardashev arithmetic.
+
+## The contrast set — what the penumbra lacks
+
+**The ghost majority.** Of 897 mutuals, **419 never appear in Will's tweets at all** — no reply, no mention, no retweet; the follow-back exists and nothing else ever did. Of the 452 mutuals he never replied to, only 13 were ever retweeted by him and only 16 ever mentioned. Another 185 mutuals received exactly 1–2 replies ever. The mutual graph is mostly residue; the *textual* network is the 445, and the sustained core is ~51–173 of those. What the ghosts lack is not a topic — it is any exchange whatsoever. [Inference: mutuality alone was never the filter; it is far too cheap. The filter is what happened next.]
+
+**The broadcast channels.** Will's three largest reply targets overall are not mutuals: **@vgr — 348 replies sent, 504 mentions, never followed back; @pmarca — 266 replies, 820 mentions, never followed back; @elonmusk — 66 replies**. (802 of the accounts he follows do not follow him back.) The textual texture differs measurably from the core: median reply length to @vgr/@pmarca is 81–83 characters (vs 36–58 for the phext-era core) — longer, more monologic — and substance-lexicon density is 0.05 for both, at the bottom of the core's range, despite the larger volume. He talked *at* the giants for years, at length, about many of the same ideas. Nothing in the archive shows it landing as a relationship: no follow-back, no sustained thread, no retention. The core is defined against this: smaller accounts, shorter messages, years of return.
+
+**One-directional texture inside the core's own era.** Even among the 445 replied-to mutuals, engagement decays fast: the top 30 hold 2,796 of the 5,854 mutual replies (48%). The thread described here is a property of the sustained core, not of "mutuals" as a class.
+
+## Verdict: did the core see through the disguise?
+
+**Evidence for:**
+1. **Speed of contact with the substance.** In the phext-era cohort, the substance appears within the first one or two exchanges (@viemccoy day one; @eloffd day two; @bitcloud inside the first year) — and the relationship then *continued for years at volume*. People who bounced off the surface are visible in the data as the 1–2-reply tier; the core is who remained after the ideas were on the table.
+2. **Depth where it counts.** The words phext/exocortex reach 28 of the top 30; the deepest threads (@viemccoy, @JungleSilicon, @bitcloud, @izzyz, @djcows) are technical conversations about the artifact itself — data models, delimiters, memory hierarchies — not encouragement from the sidelines.
+3. **The elders engaged the proto-form.** @CTZN5's thread contains Will trying out the word "exocortex" in 2015; @dakami's contains the Kardashev math and lossy-thought philosophy in 2019–2020. The disguise changed costumes across the decade; the same register kept being met. [Inference: what they recognized was the mind, of which each costume was an instance.]
+4. **Reciprocity as the residue.** Every core member followed back and sustained a public exchange for ≥1–9 years, while the highest-volume outbound targets never reciprocated at all. Seeing through, in this dataset, is operationally indistinguishable from *staying*.
+
+**Evidence against / complicating:**
+1. **Their side barely says the word.** Among Will's 549 retweets of mutuals, explicit phext/exocortex content from the top 30 is a single @bitcloud line. The amplified voices of the core are about e/acc, neuroscience-of-learning hunger, techno-mysticism, dinosaurs — adjacent enthusiasms, not the project. The archive cannot show their un-retweeted replies to him at all; the "engagement" evidence is mostly his side of the thread. (Outbound-only limit; stated plainly.)
+2. **Most of the traffic is play, not substance.** Substance-lexicon density in his replies to the core runs 2–22% (median ≈ 10%); several core bonds (@madeofmistak3 5%, @megs_io 6%, @heyellieday 6%, @jaivinwylde 2%) are carried overwhelmingly by humor, riffing, and presence. If "seeing through the disguise" means engaging phext, these fail the test; if it means matching his frequency — surreal, first-principles, unafraid of weird — they pass it completely. The data supports the second reading better than the first.
+3. **Two of the three longest relationships predate the disguise's current form and are community-native.** @dakami (2012) is embedded in a shared security-research community with its own gravity; @CTZN5 (2014) begins in group threads with third parties. Their retention may owe as much to milieu and temperament as to perception of Will specifically. The archive shows *what* was discussed, not *why they stayed*.
+4. **Survivorship.** This analysis reads the residue of a search, not the search: everyone who saw the surface and left quietly is in the 452/185 tiers, unexamined as individuals. The core's thread could partly be "whoever was temperamentally compatible stayed," with the seeing-through ascribed afterward. [Inference, labelled: the founding-exchange evidence (point 1, above) is the part of the record that pushes back against pure survivorship — the substance was front-loaded, so staying was informed.]
+
+**Net answer.** Yes — with a refinement. The common thread is a register, not a fandom: systems-thinking makers who play with mind and language at full speed and stay. The sustained core did engage the substance rather than the surface, but "the substance" across 2012–2025 is bigger than phext: it is the exocortical idea in all its costumes — fractal compression and brain implants in 2015, Kardashev arithmetic in 2019, nine delimiters in 2024. The people who could see through the disguise turn out to be the people for whom there was effectively no disguise: the surface (undersold, uncompressed, weird) and the depth were the same signal at their receiver. What the penumbra lacked was never information — Will broadcast the same ideas at @vgr 348 times. What it lacked was a receiver tuned to the frequency, and the years to prove it.
+
+---
+
+*Counts recomputed 2026-11-10 from the archive and verified against the prior analysis (897 mutuals; 5,854 mutual replies; top-20 order and counts identical). Per-person traces: `core_corpus.txt` (top 50, replies + retweets). Prior per-person common-ground analysis for @eloffd: `~/memory/2026-11-08.md` and `~/memory/people/eloffd.md`.*
+# Shot List — Scrolltown Intro Video
 
 Title: Shot List — Scrolltown Intro Video
 Source: ~/workspace/exocortexia-cartoon/intro/SHOT-LIST.md
@@ -1932,7 +2044,107 @@ to *this* video:
 Route C is the named fallback if the calendar collides with the
 Scrolltown January-launch crunch: the polish pass is the one
 block that can leave the house without taking accuracy with it.
-# The Power of Phext — Walkthrough Package
+# Ranch Node Tailworm Audit — Tailscale TS-2026-014 → TS-2026-017
+
+Title: Ranch Node Tailworm Audit — Tailscale TS-2026-014 → TS-2026-017
+Source: ~/workspace/tailworm-audit-task/AUDIT.md
+Inscribed: 2026-11-10 20:15 CST
+SHA-256: 0e467f1296d31f3de808c6df3e78f331c44dc348bbd3adb1fb4a01468faf8fbc
+
+---
+# Ranch Node Tailworm Audit — Tailscale TS-2026-014 → TS-2026-017
+
+**Audit date:** Tuesday 2026-11-10, ~20:10–20:25 CST (America/Chicago)
+**Scope:** Will Bickford's ranch fleet (the "shell of nine," now 25 nodes) + awsbox.
+**Method:** read-only, per node — Tailscale version, Tailscale SSH state, `tailscale serve` configuration, OpenSSH service state. Nothing was changed on any node. No credentials, keys, or secrets are recorded here.
+**Task coordinate:** 22.8.12/10.8.15/5.6.7
+
+## What Tailworm is
+
+On 2026-10-25, Cyberdione Labs published "Tailworm," an 11-finding audit of the Tailscale client (tested on 1.104.2) and the headscale control server (tested on 0.29.5). Tailscale confirmed the client-side issues in four security bulletins dated 2026-10-26 and shipped the fixes in client **1.104.4 on 2026-10-28**:
+
+| Bulletin | Surface | Flaw |
+|---|---|---|
+| TS-2026-014 (High) | Tailscale SSH | Unix-socket forwarding ran as **root** inside tailscaled, with a path-allowlist race — a peer allowed to SSH in could reach root-only sockets (Docker socket, the tailscaled local API) and escalate to root. Wormable in lab tests at under a second per hop. |
+| TS-2026-015 | Tailscale SSH | Unbounded session memory retention — repeated window/env messages grew tailscaled by ~536 MB in 7 s and it stayed high after disconnect (denial of service). |
+| TS-2026-016 | `tailscale serve` | Unguarded `serve --tcp` / Unix-socket backends could reach privileged sockets, including the tailscaled local API. |
+| TS-2026-017 | `tailscale serve` | HTTP/2 shared-context race bled `Tailscale-App-Capabilities` headers across mounts. |
+
+Key facts for judging exposure:
+
+- **All four are fixed in 1.104.4 or later.** Any client older than 1.104.4 is treated as unpatched.
+- TS-2026-014/015 apply only to nodes **running Tailscale SSH**. Standard OpenSSH reached over the tailnet is **not** affected.
+- TS-2026-016/017 apply only to nodes **running `tailscale serve`**.
+- An attacker must already hold a tailnet foothold — a device the policy already allows to SSH in. This is privilege escalation, not an internet-facing break-in. No exploitation in the wild has been reported by Tailscale or the researchers; no CVEs assigned.
+- Interim stopgap for a node that cannot be updated: set `TS_SSH_DISABLE_FORWARDING=1` in the tailscaled environment and restart the service.
+
+## Verdict summary
+
+**No exposed nodes found.** All 14 nodes assessed are running **Tailscale 1.104.5** (one patch release past the 1.104.4 fix) with Tailscale SSH **not enabled** — the fleet logs in through ordinary OpenSSH over the tailnet, which Tailworm does not touch. Two assessed nodes run `tailscale serve` on the patched client. Eleven tailnet devices could not be fully assessed and are listed as **unassessed**, never cleared — though the seven online ones advertise no Tailscale SSH and no Serve services to the tailnet.
+
+## Assessed nodes (14)
+
+Every node below: version **1.104.5**, Tailscale SSH **off**, OpenSSH active (the fleet's actual login path — not a Tailworm surface).
+
+| Node | Tailscale | TS SSH | Serve | Verdict |
+|---|---|---|---|---|
+| aletheia-core | 1.104.5 | off | none configured | **Current** |
+| Rock Mountain | 1.104.5 | off | none configured | **Current** |
+| Scroll Central | 1.104.5 | off | none configured | **Current** |
+| Quacked Hill | 1.104.5 | off | HTTPS site, tailnet-only, proxying to a localhost app on port 4318 (HTTP backend, no Unix-socket backend) | **Current** — serve surface present, patched client |
+| Orchid Flow | 1.104.5 | off | none configured | **Current** |
+| Plain View | 1.104.5 | off | none configured | **Current** |
+| Ni Knight | 1.104.5 | off | none configured | **Current** |
+| Ashfall Haven | 1.104.5 | off | none configured | **Current** |
+| Elven Path | 1.104.5 | off | HTTPS site, tailnet-only, serving local files and a localhost proxy | **Current** — serve surface present, patched client |
+| Free Fall | 1.104.5 | off | none configured | **Current** |
+| Halycon Vector | 1.104.5 | off | none configured | **Current** |
+| Lighthouse Omen | 1.104.5 | off | none configured | **Current** |
+| Logos Prime | 1.104.5 | off | none configured | **Current** |
+| awsbox | 1.104.5 | off | none configured | **Current** |
+
+Notes:
+
+- Quacked Hill's and Elven Path's Serve sites are **tailnet-only** (not Funnel/public) and use HTTP/file backends — neither uses the Unix-socket backend pattern behind TS-2026-016 — and both run the patched 1.104.5 client regardless.
+- No node anywhere in the fleet was found running Tailscale SSH, so the root-escalation bulletin (TS-2026-014) has no live surface here even before the version check.
+
+## Unassessed nodes (11) — not cleared
+
+These devices are on the tailnet but could not be logged into during this audit, so their client versions are **unknown**. They are listed here rather than marked safe.
+
+**Online, partial signal (7):** kaleidoscope-one, yeet-max, jacked-kite, great-white, moon-beam, west-lincoln, uncanny-valley.
+- Not in the ranch access configuration, so no login was attempted. From the tailnet's own peer data, all seven currently advertise **no Tailscale SSH host keys and no Serve services** — encouraging, but their client versions are unverified.
+- Uncanny Valley is a special case: it is operated on-prem by another person (SSH account is not Will's), and access has been awaiting a key grant since 2026-11-05.
+
+**Offline at audit time (4):** aurora-continuum, delta-wood, best-willow, splinter. (Aurora Continuum, Delta Wood, and Best Willow have been unreachable since 2026-11-04.) An offline node cannot be attacked over the tailnet, but it also cannot be verified — each should be checked when it next comes online, before it is trusted.
+
+**Not audited (out of scope):** the non-Linux tailnet devices — Will's phone (Orin, Android), lilly (Windows), Dylan's Mac mini (macOS). Tailworm's confirmed bulletins concern the Linux client surfaces above; if a full-fleet sweep is wanted, these can be added.
+
+## Staged upgrade commands (prepared, NOT run)
+
+No assessed node needs one — all are already past 1.104.4. For any unassessed node that later turns out to be below 1.104.4, the staged commands are:
+
+```sh
+# Preferred — Tailscale's own updater:
+sudo tailscale update
+
+# Equivalent via the system package manager (all ranch nodes are apt-based):
+sudo apt-get update && sudo apt-get install -y tailscale
+
+# Verify afterwards:
+tailscale version    # must report 1.104.4 or later
+
+# Interim stopgap only, if a node cannot be updated yet (TS-2026-014):
+# add TS_SSH_DISABLE_FORWARDING=1 to the tailscaled service environment
+# (e.g. /etc/default/tailscaled) and restart tailscaled.
+```
+
+Per the audit's terms, these are staged for Will's approval — **no upgrade was applied to any node during this audit.**
+
+## Bottom line
+
+The fleet is current: 14 of 14 assessed nodes on 1.104.5, Tailscale SSH off everywhere, Serve present on two nodes and patched on both. The remaining work is not patching — it is closing the visibility gap on the 11 unassessed devices, seven of which are online right now but outside the ranch access configuration.
+# The Power of Phext — Walkthrough Package
 
 Title: The Power of Phext — Walkthrough Package
 Source: ~/workspace/phext-walkthrough/WALKTHROUGH.md
