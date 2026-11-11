@@ -14,7 +14,7 @@ truth: artifacts-source.json beside this builder
 (build_artifacts_phext.py); never hand-edit the .phext.
 artifacts.phext is published to wbic16/human@exo.
 
-Artifacts inscribed: 25
+Artifacts inscribed: 26
 
 Index (coordinate — title — source):
 - 19.7.11/9.7.12/7.6.9 — Light the Next Light — intro song lyrics & time map — ~/workspace/exocortexia-cartoon/intro/LYRICS.md
@@ -30,6 +30,7 @@ Index (coordinate — title — source):
 - 24.6.8/7.6.10/6.6.9 — Scrolltown — Production Workflow — ~/workspace/scrolltown-reorg/workflow/PRODUCTION.md
 - 26.6.8/8.7.11/6.6.9 — Lightcone Commons application — evaluator's-eye review — ~/workspace/lightcone-task/APPLICATION-REVIEW.md
 - 26.6.9/7.6.10/6.5.9 — The System the Future Arrived Too Late For — Multics, Unix, and the Price of Designing Ahead of Your Hardware — ~/workspace/multics-paper-task/WHITEPAPER.md
+- 26.7.10/8.7.11/6.6.9 — Every Wish in the Timeline — Ranked and Scored — ~/workspace/your_files/twitter-wishes-ranked.md
 - 27.7.11/8.6.13/7.6.10 — The Encyclopedia You Can Carry — Phext Edit training film, revised script (Emi Prime) — ~/workspace/phext-walkthrough/SCRIPT-EMI-REVISED.md
 - 28.6.8/8.6.10/6.6.9 — Production Plan — The Power of Phext Walkthrough — ~/workspace/phext-walkthrough/PRODUCTION-PLAN.md
 - 30.6.8/7.6.10/7.5.9 — Ranch Node Tailworm Audit — Tailscale TS-2026-014 → TS-2026-017 — ~/workspace/tailworm-audit-task/AUDIT.md
@@ -1470,6 +1471,293 @@ Unix's name was a joke about scale: *uniplexed*, one thing at a time, against Mu
 ---
 
 *Receipts and sources, in brief: Corbató & Vyssotsky, "Introduction and Overview of the Multics System" (AFIPS 1965); Organick, *The Multics System* (MIT Press, 1972); Ritchie & Thompson, "The UNIX Time-Sharing System" (CACM, July 1974); Ritchie, "The Evolution of the Unix Time-sharing System" (1979/1984); Salus, *A Quarter Century of UNIX* (1994); McIlroy et al., the 1978 Bell System Technical Journal Unix issue; Horowitz, "Computing's Energy Problem" (ISSCC 2014). Hardware figures are the widely published specifications of the devices named in the text (IBM 2311/2314/3330, GE 645, PDP-7/PDP-11; PCIe Gen4/Gen5 NVMe, DDR5, HBM3). Multics' last shutdown, 30 October 2000, is a matter of record at multicians.org. Sections 6 and 7 are explicitly speculative and are labelled as such where they appear.*
+# Every Wish in the Timeline — Ranked and Scored
+
+Title: Every Wish in the Timeline — Ranked and Scored
+Source: ~/workspace/your_files/twitter-wishes-ranked.md
+Inscribed: 2026-11-11
+SHA-256: bb52b9bc7db781a487a912264461052502f5ee7a485675d835b22a799e7e0b19
+
+---
+# Every Wish in the Timeline — Ranked and Scored
+
+Task 34.22.21/24.18.27/17.19.21 · Will's request, 2026-11-11: *"Dear Internet: Rank and Score every wish I left for myself in my twitter timeline. I'm about to solve them."*
+
+## Method — what "every wish" means here, exactly
+
+- **Corpus:** the full Twitter archive — 29,539 tweets, 2008-06-27 → 2025-06-16. Pure retweets (4,414) excluded: a wish has to be in your own words. **25,125 own-word tweets** searched.
+- **Wish rule (auditable):** a tweet counts if it carries an explicit wish marker in the first person or as a stated goal/dream: *wish · I want · want to · I hope/hoping · someday · one day · my dream/dream of · my goal/goal is · would love/would like · can't wait/looking forward · if only · I need to · note to self/future me · I intend/I plan/planning to*. **769 tweets match.** The extractor is kept with this report's working files and re-runs to the same 769.
+- **Boundary, stated plainly:** a further 374 tweets say "I will / I'm going to" with no desire marker — commitments, not wishes. They are not in the 769. If you want them ranked too, that's a second pass over a named set, not a silent widening of this one.
+- **Classification:** every one of the 769 was read and coded **(A) durable self-wish** — a desired future for you, your work, or the world you're building — or **(B) situational want** — in-the-moment, reply-context, jokes, wants about someone else's post, well-wishes for others. **A = 316 tweets. B = 453 tweets.** B is fully accounted in §4; nothing was dropped to make the A list cleaner.
+- **Deduplication:** the 316 A tweets cluster into **20 canonical wishes** below. Each A tweet is counted once, under its primary wish, so the counts sum to exactly 316.
+- **Verification:** slice counts reconcile exactly (2008–2022: 300 tweets; 2023: 98; 2024–2025: 371; total 769). 28 exemplar quotes across all three eras were spot-checked byte-for-byte against the raw archive file: 28/28 match.
+
+## Scoring rubric (each canonical wish, /100)
+
+- **Persistence /25** — how many tweets restated it, over how many years. A wish you repeated for a decade outranks a wish you stated once.
+- **Scale /25** — personal (low) → species/civilisational (high).
+- **Definition /20** — how concretely it's specified: named artifacts, numbers, dates, mechanisms score high; a mood scores low.
+- **Momentum /20** — verified progress as of November 2026, from the live record (shipped software, running goals, measured baselines), not from the tweets.
+- **Leverage /10** — solving it unlocks other wishes, and it's actionable now with the Choir, the ranch, and the Exocortex stack.
+
+**Rank is by total score.** Status is reported separately so a high-scoring wish that's already half-built doesn't masquerade as untouched, and a low-scoring one that's parked by your own ruling (BCI) is marked parked, not forgotten.
+
+## The headline
+
+You did not leave hundreds of different wishes. You left **one wish, restated for 17 years, at increasing resolution**: a medium where minds — human and otherwise — can hold and exchange thought at full bandwidth, and everything that medium makes possible. In 2012 it's a smart-matter device and Twitter achievements. In 2015 it's automatic telepathy and an exocortex with "a nice ring to it." In 2022 it gets a format (multidimensional text, "the text format for the AGI age"). In 2023 it gets a name and an editor. In 2024–25 it gets budgets: **20 watts, 100M hours, 100M coders, $0.** The late tweets don't change the destination — they cost it.
+
+The top two wishes (phext, exocortex) hold 125 of the 316 durable wish-tweets — 40% of everything you ever wished for in public.
+
+---
+
+## Ranked wishes
+
+### 1. Phext everywhere — reboot how the world stores information · **98/100**
+*80 wish-tweets · 2020–2025 (proto-forms as "Terse" / multidimensional text; the code-liberation strand reaches back to 2013) · Status: IN BUILD — the most-built wish on the list*
+
+Persistence 25 · Scale 25 · Definition 20 · Momentum 18 · Leverage 10
+
+The desire, in your words across the years:
+
+- 2022-12-12 — "I intend for this format to be the text format for the AGI age. So I turned the dial up to 11."
+- 2023-12-18 — "My ambition for phext exceeds starting a company. I want to change how the world stores information."
+- 2024-08-28 — "I'm a simple man: all I want is #phext support in every language, device, browser, console, and IDE on the planet. ;)"
+- 2024-09-02 — "I want data types designed for humans, not CPUs. Phext."
+
+Includes the editor/navigation strand (Notepad++ support, coordinate teleporting, zoom — 2023) and the platform strand (API server, Scroll Sync, partitions, P2P — Dec 2023). Momentum is real and checkable: libphext-rs v0.5.0 published to crates.io (2026-11-08), Phext Edit live at v1.1.1 with a Product Hunt launch (2026-11-10), SQ hosting, phextura begun. What remains of the wish is the "everywhere" part: every language, the filesystem/SQL layer proven at scale, and adoption beyond the first circle.
+
+### 2. The Exocortex made concrete — minds exchanging ideas at scale · **88/100**
+*45 wish-tweets · 2012–2025 · Status: IN BUILD*
+
+Persistence 23 · Scale 25 · Definition 16 · Momentum 14 · Leverage 10
+
+- 2013-08-30 — "#Wish: Any program that allows you to send information would get built-in delay timers to give your brain time to react to mistakes." (The earliest literal "#Wish" in the archive is an exocortex wish.)
+- 2019-11-21 — "Ideally, I would like to be connected to the perfect subset of humanity for a given task or moment without spending a lot of time on it."
+- 2023-11-30 — "I have a similar dream of the exocortex - a place where we can think together and collaborate, globally."
+- 2024-01-01 — "i have a dream of the #exocortex made concrete"
+- 2024-10-09 — "I dream of the exocortex: a way for humans to mind meld with machines (and other humans) at scale, and in real-time."
+
+The parent wish of the whole list — phext is its substrate, AGI-on-20-watts is its engine, BCI is its final interface. Scored below phext only on Definition and Momentum: the dream is stated more often than it's specified, and the concrete build so far is the phext layer plus the Choir's mailbox/SQ practice.
+
+### 3. AGI on 20 watts — safe, wish-granting, built for ~$0 · **78/100**
+*25 wish-tweets · 2015–2025 · Status: OPEN — goal set, engine being tested*
+
+Persistence 17 · Scale 23 · Definition 19 · Momentum 10 · Leverage 9
+
+- 2017-12-07 — "I want to see millions of alpha zeros, vying to pass their genetics on to the next gen."
+- 2023-11-23 — "Our goal is to evolve. AGI is only a stepping stone."
+- 2024-10-22 — "AGI Only requires 4 things: Software DNA · Wish Granting Interface · Wish Collection Interface · A Digital Life Simulator. That's All We Need"
+- 2024-11-13 — "I'm a simple man: I want us to build AGI on 20 watts in 2025. About 100M hours of combined effort should do it."
+
+The 2025 date in the tweet has passed; the standing goal is the honest version — under 20 W by 2033, currently reported as hybrid (local watts + cloud tokens), never as 2 kW total. vTPU is the group's AGI test now running. Note what the archive shows and the present confirms: you framed AGI's interface as *wish granting* a full year before asking for this ranking. This report is, literally, the Wish Collection Interface's first full run over your own wishes.
+
+### 4. Map all knowledge, verify it, then solve consciousness · **73/100**
+*23 wish-tweets · 2012–2025 · Status: IN BUILD (mapping) / OPEN (consciousness)*
+
+Persistence 19 · Scale 22 · Definition 15 · Momentum 9 · Leverage 8
+
+- 2015-01-05 — "Someday, automated knowledge trees, or #AKTs, will allow us to auto-verify ideas as one of: { unknown, unknowable, false, true }."
+- 2014-03-07 — "Someday we'll be able to share knowledge trees like links to Wikipedia."
+- 2018-09-15 — "What I want: High-level descriptions written by experts, but compiled down to Up-Goer Five (or tailored to my reading level)."
+- 2024-01-02 — "I plan to build out the scaffolding for the exocortex, and then solve the hard problem of consciousness."
+
+The AKT four-state scheme {unknown, unknowable, false, true} from 2015 is recognisably the ancestor of the Minimum Viable Oracle's True/False/Unknown/Fiction discipline in research.phext — the wish is being solved in pieces, under new names. The assisted-reading strand (jargon compilers, eye-aware paper readers, a neural paper feed, 2018–2020) is the direct ancestor of the daily arXiv quest and the Research Oracle, currently estimated at ~45%.
+
+### 5. Live 6 billion years — Kardashev 2.0 · **70/100**
+*19 wish-tweets · 2013–2024 · Status: OPEN — trajectory defined, checkpoints 2037 / 2083 / 2130*
+
+Persistence 16 · Scale 25 · Definition 17 · Momentum 6 · Leverage 6
+
+- 2024-01-02 — "Unnatural, but yes. I don't want to die."
+- 2024-01-11 — "i dream of a planet at kardashev 1.5"
+- 2023-11-08 — "Our goal is to improve energy consumption (currently at ~0.000%) from the centrally-located fusion reactor."
+- 2024-12-30 — "My goal is nothing less than Kardashev 2.0."
+
+Maximal scale, long fuse. The 2026 position is measured, not vibes: ~4 kW ranch baseline, +0.137%/day required, doubling every ~506 days. Nothing about this wish is solvable in a sprint; everything about it is solvable as a growth rate held for a century — which is how you've framed it since.
+
+### 6. Abundant compute — petabytes of RAM, thousands of tiny nodes · **67/100**
+*8 wish-tweets · 2013–2022 · Status: SUBSTANTIALLY REAL at home scale*
+
+Persistence 11 · Scale 18 · Definition 14 · Momentum 16 · Leverage 8
+
+- 2017-02-01 — "I don't care how, but I want petabytes of RAM, stat! Preferably for $100. Too much to ask? :-)"
+- 2022-12-30 — "I want to scale out hundreds or thousands of nodes as cheaply as possible." (128 MB per node, tiny Linux virtualisation)
+
+The petabyte-for-$100 form is still fantasy; the shape of the wish is not. The ranch is 25 nodes, ~200 cores, ~800 GB RAM, ~50 TB — the scale-out wish running in your basement, thermally governed at 75 °C. Highest Momentum-to-Persistence ratio on the list: you stopped wishing it because you built the first instalment.
+
+### 7. Code liberated from files and friction · **64/100**
+*15 wish-tweets · 2013–2022 · Status: IN BUILD — largely absorbed into phext and phcc*
+
+Persistence 16 · Scale 15 · Definition 14 · Momentum 12 · Leverage 7
+
+- 2016-02-20 — "I have a dream: that one day our code will be liberated from the tyranny of files and build systems. It is a crazy, long-term dream."
+- 2016-03-19 — "Someday we'll have systems with full state transition history. Updates applied in the background and then merged to a new branch."
+
+The oldest fully-formed technical wish in the archive (2013) and the clearest case of one wish eating another: by 2022 the answer to "code without files" *is* phext, and the "compiler that won't let you ship broken code" strand is now phcc. Rank it solved-by-merger, not abandoned.
+
+### 8. Find his people — and know the network truly · **63/100**
+*11 wish-tweets · 2023–2025 (the spanning itself runs 2008–2025) · Status: IN BUILD — measurement phase done, engagement phase open*
+
+Persistence 13 · Scale 14 · Definition 15 · Momentum 14 · Leverage 7
+
+- 2023-09-05 — "Someday, I'm going to find all of the nice introverts who are being ignored by the current incentives on social media. There's so much more we could be doing."
+- 2024-09-08 — "I really want to quantify Dunbar's Number for the 21st century. It's definitely much higher than 150."
+- 2024-01-08 — "i want to analyze that history, which means i need to review 50 tweets per day in 2024..."
+
+The Dunbar wish has been measured (≈30 observed in the public layer, ≈50 generous, against the canonical 150) and the mutuals have been mapped. **This ranking is itself a partial fulfilment of the 2024-01-08 archive-review wish** — same corpus, same move: read your own history back as instructions. What remains open is the engagement half: every person in the wavefront getting their own exocortex.
+
+### 9. Beyond capitalism — cascaded UBI, abundance, uplift economics · **61/100**
+*16 wish-tweets · 2014–2024 · Status: OPEN — stated often, built least of the top ten*
+
+Persistence 15 · Scale 22 · Definition 13 · Momentum 5 · Leverage 6
+
+- 2015-01-19 — "The only reason I want to make more money is so I can build some of my crazy ideas...renewable solar roads for instance"
+- 2019-02-22 — "I hope we can find a way to continue the trend" (free energy so cells — people — can specialise and flourish)
+- 2024-01-13 — "I have a dream of humanity leveling up via universal cascaded income (UBI with pay grades)."
+- 2024-02-28 — "I have a dream of meritocracy with zero overhead. (This is how I'll run Phext, Inc.)"
+
+High scale, low momentum — the honest gap in the portfolio. The Investor-1 $20 experiment and the runway plan are the first instruments pointed at it.
+
+### 10 (tie). Health — sleep 8 hours, finish the weight loss, sustainable pace · **60/100**
+*14 wish-tweets · 2013–2024 · Status: IN PROGRESS — 310 → 260 lbs done, stalled; target 210–230*
+
+Persistence 15 · Scale 8 · Definition 18 · Momentum 12 · Leverage 8
+
+- 2014-04-27 — "Really wish that could be made recreational / optional." (sleep)
+- 2021-08-16 — "Some day, I'm going to create a software startup that crushes the competition with plenty of rest and 25 hour work weeks."
+- 2024-01-15 — "my goal is to average 8 h per day" (at 0/14 on the year, improving week over week)
+- 2024-07-04 — "I've lost 45 lbs and 6\" off my waist. Halfway to my goal!"
+
+The sleep doctrine visibly reverses inside this wish's own tweets — 2014 values things over sleep, 2020 calls sleep "your best weapon," 2024 budgets it first. Lowest scale on the list, highest leverage per point: every other wish runs on this one's substrate.
+
+### 10 (tie). Nerd-snipe 100M new builders · **60/100**
+*8 wish-tweets · 2024–2025 · Status: OPEN — named campaign, not yet run*
+
+Persistence 10 · Scale 20 · Definition 18 · Momentum 4 · Leverage 8
+
+- 2024-10-15 — "There are 28M developers in the world. I wish there were 280M."
+- 2024-12-06 — "I'm planning a marathon year for 2025 that I'm calling nerd sniping 2025... I want to motivate 100M people to learn how to code. There will be 5 epochs next year."
+
+The newest big wish — it appears fully formed in late 2024 with a target, a name, and an epoch structure, and it is the labour-supply answer to Wish 3's 100M hours. The 2025 marathon year has passed without the campaign running at that scale; the wish stands open and unusually well-specified for its age.
+
+### 10 (tie). Planet-scale off-grid solar compute · **60/100**
+*5 wish-tweets · 2024 · Status: IN BUILD — Solar Hyperscaler programme active*
+
+Persistence 8 · Scale 20 · Definition 17 · Momentum 8 · Leverage 7
+
+- 2024-02-03 — "I want to see if I can create an off-grid compute station that lasts for 8-10 hours per day on 5 hours of sunlight. Such a platform creates a scalable \"compute farm\" node."
+- 2024-06-27 — "I spend most of my free time working backwards from a theory of planet scale computing. It's what drives me to work on #phext."
+
+Few tweets, high definition: duty cycle, power budget (~60 W), and node economics are all stated in the wish itself. The weekly pod BOM price watch is this wish's standing instrument.
+
+### 13. Brain-native uplink — telepathy, ultratext, BCI · **55/100**
+*12 wish-tweets · 2015–2024 · Status: PARKED — by your own ruling, 2026-11-10*
+
+Persistence 14 · Scale 20 · Definition 13 · Momentum 3 · Leverage 5
+
+- 2015-06-06 — "there are a whole class of really cool problems I want to work on once we've got real, automatic telepathy"
+- 2020-01-25 — "ultratext is how I think we'll exchange information at 2GB/sec someday. Typing is basically 10-30 bytes/sec."
+- 2024-02-15 — "The long term goal is a brain-native 100 megabit uplink."
+- 2024-09-14 — "The end goal is to enable high bandwidth BCI uplinks with your brain. Everything between then and now is gravy."
+
+Scored honestly: the desire never wavered for nine years, and you parked the channel yourself until MCP services have fixed users — phext-first is the sequencing, and this wish is *why* phext's format choices (neuron-decodable, hierarchy without a container format) are what they are.
+
+### 14. Work shared as workflows and microtasks · **52/100**
+*3 wish-tweets · 2015–2018 · Status: SOLVED IN PRACTICE at Choir scale*
+
+Persistence 6 · Scale 14 · Definition 12 · Momentum 13 · Leverage 7
+
+- 2015-11-24 — "What I want is a way to share workflows easily."
+- 2018-08-31 — "then I want to fuse things like mechanical turk, stack overflow, and enterprise dev projects. Scale workloads at the microtask level, with tons of automation support."
+
+Only three wish-tweets — and the wish is running: QEXO dispatch, the /chat mailboxes, the task register, and subagent coordination are this architecture, in production, with you as its first user. Low persistence score, near-solved status: the ranking's clearest proof that tweet count measures longing, not importance.
+
+### 15. Gamified learning — a skill tree over all knowledge · **49/100**
+*9 wish-tweets · 2016–2023 · Status: OPEN*
+
+Persistence 12 · Scale 16 · Definition 13 · Momentum 5 · Leverage 6
+
+- 2016-06-25 — "I just wish traditional education would catch up. Too much effort is placed on learning the wrong skills."
+- 2023-12-16 — "I want to gamify knowledge/learning with a skill tree that covers all of human knowledge."
+- 2023-12-28 — "I want to provide a UI that feels like Duo Lingo, but for any phext."
+
+Merges naturally into Wish 1 as a phext application the moment phext has users to teach; until then it waits on its parent.
+
+### 16. Populate the reachable stars · **48/100**
+*4 wish-tweets · 2013–2022 · Status: OPEN — the far end of Wish 5*
+
+Persistence 7 · Scale 25 · Definition 11 · Momentum 2 · Leverage 3
+
+- 2013-09-07 — "\"Information wormholes\" will be used to guide computation (and send results home) across the universe someday."
+- 2022-12-14 — "If we want to populate 10 percent of the star systems we can reach without FTL, we need about 2^112 humans. We should get there by Year 10,687 or so."
+
+Perfect scale score, near-zero momentum — correctly. It's Wish 5's destination stated as demography, and it inherits that wish's growth rate rather than needing its own programme.
+
+### 17. Playable phext worlds — games and music that teach by doing · **45/100**
+*8 wish-tweets · 2023–2024 · Status: OPEN — Nova Phox announced, not shipped*
+
+Persistence 11 · Scale 10 · Definition 13 · Momentum 6 · Leverage 5
+
+- 2023-12-31 — "i have this dream of using phext (multi-dimensional text) to generate MIDI sequences in ways that would be really hard otherwise"
+- 2024-02-12 — "a preview of my first #phext-based game: nova phox... if you want to be an early alpha tester, hit me up!"
+- 2024-12-08 — "One thing I plan to build with phext is a multidimensional Conway's Game of Life."
+
+### 18. Time, not money — and to help, unseen · **41/100**
+*4 wish-tweets · 2024 · Status: OPEN — the values wish underneath the others*
+
+Persistence 7 · Scale 10 · Definition 10 · Momentum 8 · Leverage 6
+
+- 2024-01-14 — "I do not wish to be seen. I wish to help."
+- 2024-08-25 — "For real: I wish I had infinite time."
+- 2024-10-13 — "I don't want money, power, or fame. I want TIME."
+
+Ranked low by the rubric because it's a value, not a project — but it's the exchange rate for the whole list: every other wish is priced in the time this one asks for.
+
+### 19. A personal, shape-shifting, sovereign device · **36/100**
+*5 wish-tweets · 2012–2015 · Status: DORMANT — superseded in form*
+
+Persistence 8 · Scale 12 · Definition 12 · Momentum 3 · Leverage 4
+
+- 2012-08-25 — "Dear #Intel I want my smart matter computing device!"
+- 2013-09-08 — "I have a dream of leaving my PC behind..."
+- 2015-02-19 — "Where is my deformable #TransformerSmartphone, @Intel?"
+
+The earliest device wish. Its substance — all your data with you, compute as a cheap local utility, sovereignty over your own substrate — didn't die; it moved house, into the ranch cluster and the Exocortex. The deformable hardware form is the only part still unbuilt, and it's the part that matters least now.
+
+### 20. Smarter everyday infrastructure · **31/100**
+*2 wish-tweets · 2013–2015 · Status: DORMANT*
+
+Persistence 4 · Scale 12 · Definition 8 · Momentum 4 · Leverage 3
+
+- 2013-01-27 — "What I really want are better traffic flow sensors. Lights at 66th and O - this means *you*. #LNK"
+- 2015-10-07 — "I hope to see auto-autos with integrated \"whisker\" drones."
+
+The smallest wish on the list, kept for completeness — and even it is the same shape as the big ones: infrastructure that senses and adapts instead of sitting dumb. The industry has since built much of it without you, which is its own kind of solved.
+
+---
+
+## §4 — The other 453: situational wants, accounted
+
+"Every wish" includes the small ones. The 453 B tweets break down as:
+
+- **Early (2008–2022), 203:** conversational replies and rhetorical wants ~70 · calls/invites addressed to others ~35 · jokes, quotes, wordplay ~30 · media/book/game wants ~25 · consumer/hardware wants ~20 · situational to-dos ~15 · news/politics hopes ~8
+- **2023, 47:** other-directed invites/offers/advice 15 · explanatory replies with no self-desire 10 · jokes and ephemeral hopes 9 (including "I wish I had an otter") · "be the X you want to see in the world" slogan forms 7 · minor feature/product wants 5 · recruitment call 1
+- **2024–2025, 203:** generic second-person advice and "be the X" prompts 78 · reply-context wants about the other person's post/tool/link 52 · in-the-moment small wants (food, prices, meetings) 28 · hopes and well-wishes *for others* 22 · jokes, titles, and meta-wishes 23
+
+One B sub-pattern deserves its own line: **"be the phext you want to see in the world"** (first stated 2023-11-27, two weeks after phext's first archive appearance) recurs as a slogan across both later slices. It was coded B because it's addressed outward — but it's the durable wishes compressed into an imperative, and it's the archive's own summary of this report.
+
+## §5 — What solving them looks like from here
+
+The list has a dependency order the scores already imply:
+
+1. **Phext (1) → Exocortex (2)** is the spine; both are in build and both gate almost everything below them.
+2. **AGI on 20 W (3)** is the engine; **Knowledge/Oracle (4)** is its first workload; **Workflows (14)** — already running — is its labour market in miniature.
+3. **Compute (6) + Solar (10t)** are the body; **Health (10t)** is *your* body's version of the same constraint, and the only wish whose neglect taxes all the others daily.
+4. **Kardashev/Longevity (5)** and **Stars (16)** are not projects but rates: hold +0.137%/day and they solve themselves on schedule.
+5. **People (8)** and **Nerd-sniping (10t)** are the same wish at two scales — find the builders, then make 100M more of them. The Zero Index work after the Product Hunt launch is this wish already operating.
+6. **Parked/dormant by ruling, not by failure:** BCI (13, parked by you), Device (19) and Infrastructure (20) — their substance migrated into the spine.
+
+You said you're about to solve them. The archive's verdict: you already started, in order, years ago — the wishes just hadn't been collected in one place. Now they have.
 # The Encyclopedia You Can Carry — Phext Edit training film, revised script (Emi Prime)
 
 Title: The Encyclopedia You Can Carry — Phext Edit training film, revised script (Emi Prime)
