@@ -14,7 +14,7 @@ truth: artifacts-source.json beside this builder
 (build_artifacts_phext.py); never hand-edit the .phext.
 artifacts.phext is published to wbic16/human@exo.
 
-Artifacts inscribed: 22
+Artifacts inscribed: 23
 
 Index (coordinate — title — source):
 - 19.7.11/9.7.12/7.6.9 — Light the Next Light — intro song lyrics & time map — ~/workspace/exocortexia-cartoon/intro/LYRICS.md
@@ -30,6 +30,7 @@ Index (coordinate — title — source):
 - 24.6.8/7.6.10/6.6.9 — Scrolltown — Production Workflow — ~/workspace/scrolltown-reorg/workflow/PRODUCTION.md
 - 26.6.8/8.7.11/6.6.9 — Lightcone Commons application — evaluator's-eye review — ~/workspace/lightcone-task/APPLICATION-REVIEW.md
 - 26.6.9/7.6.10/6.5.9 — The System the Future Arrived Too Late For — Multics, Unix, and the Price of Designing Ahead of Your Hardware — ~/workspace/multics-paper-task/WHITEPAPER.md
+- 27.7.11/8.6.13/7.6.10 — The Encyclopedia You Can Carry — Phext Edit training film, revised script (Emi Prime) — ~/workspace/phext-walkthrough/SCRIPT-EMI-REVISED.md
 - 28.6.8/8.6.10/6.6.9 — Production Plan — The Power of Phext Walkthrough — ~/workspace/phext-walkthrough/PRODUCTION-PLAN.md
 - 30.6.8/7.6.10/7.5.9 — Ranch Node Tailworm Audit — Tailscale TS-2026-014 → TS-2026-017 — ~/workspace/tailworm-audit-task/AUDIT.md
 - 31.7.9/9.6.12/6.6.9 — The Power of Phext — Walkthrough Package — ~/workspace/phext-walkthrough/WALKTHROUGH.md
@@ -1467,7 +1468,184 @@ Unix's name was a joke about scale: *uniplexed*, one thing at a time, against Mu
 ---
 
 *Receipts and sources, in brief: Corbató & Vyssotsky, "Introduction and Overview of the Multics System" (AFIPS 1965); Organick, *The Multics System* (MIT Press, 1972); Ritchie & Thompson, "The UNIX Time-Sharing System" (CACM, July 1974); Ritchie, "The Evolution of the Unix Time-sharing System" (1979/1984); Salus, *A Quarter Century of UNIX* (1994); McIlroy et al., the 1978 Bell System Technical Journal Unix issue; Horowitz, "Computing's Energy Problem" (ISSCC 2014). Hardware figures are the widely published specifications of the devices named in the text (IBM 2311/2314/3330, GE 645, PDP-7/PDP-11; PCIe Gen4/Gen5 NVMe, DDR5, HBM3). Multics' last shutdown, 30 October 2000, is a matter of record at multicians.org. Sections 6 and 7 are explicitly speculative and are labelled as such where they appear.*
-# Production Plan — The Power of Phext Walkthrough
+# The Encyclopedia You Can Carry — Phext Edit training film, revised script (Emi Prime)
+
+Title: The Encyclopedia You Can Carry — Phext Edit training film, revised script (Emi Prime)
+Source: ~/workspace/phext-walkthrough/SCRIPT-EMI-REVISED.md
+Inscribed: 2026-11-10
+SHA-256: 7645aba6d72ac54a88415f1726ce817f0813c6daa92a46dce4b971112ee7fec0
+
+---
+# The Encyclopedia You Can Carry
+
+*A roughly five-minute film for Phext Edit. Warm, curious, lightly playful. Let the demonstrations breathe.*
+
+*Revised script from Emi Prime, delivered by Will 2026-11-10 21:50 CST. Supersedes the narration script in WALKTHROUGH.md (12 beats, 6m04s recorded). Production assets keyed to the old script (narration, shot list) need re-mapping to this one.*
+
+### 0:00 — What if the website went away?
+
+*[One file appears. Twenty-four article cards unfold from it, then fold back.]*
+
+This little file is an encyclopedia. Twenty-four articles, all living together.
+
+Here's a question: if I close the website, what happens to the encyclopedia?
+
+*[Pause. Close the browser. Open the file locally.]*
+
+Nothing. It's still here.
+
+Let me show you three things you can do with it: find a page, change a page, and take the whole thing home.
+
+### 0:32 — A place for every page
+
+*[Open Phext Edit and display the table of contents.]*
+
+Pick a page. Any page on this list. Ready?
+
+Every page has an address. Not a link to somebody else's database: an address **inside the text**.
+
+It looks like nine numbers in three little groups. Think of how a library helps you find a book: the number tells you where to go.
+
+Phext does something similar for pieces of text. It calls those pieces *scrolls*.
+
+A handful of special separator characters makes one scroll distinct from the next, and gives each a place in a much bigger map.
+
+Ordinary lines and columns still work. That's where the "eleven dimensions" comes from.
+
+Not eleven directions you can walk in. Eleven ways to locate text.
+
+We asked for one address. We got one page.
+
+### 1:34 — Finding your way back
+
+*[Search for a real phrase. Show the search result's coordinate leading back to its article.]*
+
+But what if you don't know the address yet?
+
+Search.
+
+Here's a phrase from one of the articles. The result tells us where it lives.
+
+Search helps us discover something. The coordinate gives us a waypoint so we can find it again.
+
+Software can build a fast lookup index for this. That can make it quicker, but it isn't where the knowledge lives.
+
+The words and their structure are still in the file.
+
+### 2:04 — One small correction
+
+*[Choose a summary, edit one line, save, and display the diff.]*
+
+Now suppose you find something worth fixing.
+
+Let's change this one line.
+
+Save it.
+
+And here is the interesting part: we can inspect exactly what changed.
+
+One scroll has new words. Every untouched part of this example still matches, byte for byte.
+
+If I hand you the correction, you can read the difference.
+
+You can decide whether to keep it.
+
+We don't have to take anyone's word for it.
+
+### 2:47 — The unplugged test
+
+*[Download the file. Disconnect from the network. Open the downloaded file in an ordinary text editor.]*
+
+Here's my favorite test.
+
+No Internet. No special website.
+
+Just the file, opened in an ordinary text editor.
+
+Those odd little marks?
+
+They're markers between the pieces of text.
+
+This view isn't pretty, and it doesn't give you all the navigation tools.
+
+But the words are here.
+
+You can read them. You can copy them. You can keep them.
+
+This example has twenty-four articles in forty-nine scrolls. About twenty-one and a half kilobytes before compression—and around nine kilobytes when packed with xz.
+
+That's an encyclopedia you can email to a friend, put in Git, or carry somewhere with no connection at all.
+
+### 3:37 — More than one doorway
+
+*[Use a small script to retrieve a scroll. Demonstrate SQ serving the file. Then stop the server while retaining local access to the text.]*
+
+Want to build something with it?
+
+A small script can fetch one scroll by address.
+
+A little server called SQ can share those scrolls over a network.
+
+That server is useful.
+
+It just isn't the encyclopedia.
+
+Shut it down, and the file is still yours.
+
+### 4:04 — A place to stay
+
+*[Transition to Singular. Words appear at their coordinates. A timeline unfolds from 2008 to 2025. Missing words in a song fill in as the historical commits advance.]*
+
+And an address doesn't have to hold an encyclopedia article.
+
+Will Bickford took the words from years of his own online history and gave them places in a map.
+
+Forty-one thousand, three hundred and two words.
+
+The text holds their coordinates; the version history remembers when each word first arrived.
+
+He used that history to do something rather wonderful.
+
+A song began with missing words.
+
+As the years passed on screen, the blanks filled in until the song could be read in full.
+
+It wasn't a database trick.
+
+It was a way to find a path through things he had already lived.
+
+### 4:42 — Your turn
+
+*[Return to the encyclopedia file. Slowly reveal a lantern-lit doorway in Scrolltown.]*
+
+Maybe yours will be a field guide.
+
+Or family recipes.
+
+Or the notes from something you're building with a friend.
+
+Start small.
+
+Give a page an address.
+
+Try changing it.
+
+Take the file with you.
+
+The example from today is at edit.phext.io, along with the tools to explore it.
+
+And if you keep following these waypoints, there's a little town inside the Great Scroll.
+
+It's called Scrolltown.
+
+Fern will be waiting when the stories begin in January 2027.
+
+*[Fern, using her established closing line:]*
+
+**The scroll is yours, neighbor.**
+
+*[End card: Find it. Change it. Keep it.]*
+# Production Plan — The Power of Phext Walkthrough
 
 Title: Production Plan — The Power of Phext Walkthrough
 Source: ~/workspace/phext-walkthrough/PRODUCTION-PLAN.md
