@@ -1135,8 +1135,8 @@ the live board is production/QUEUE.md.*
 
 Title: Lightcone Commons application — evaluator's-eye review
 Source: ~/workspace/lightcone-task/APPLICATION-REVIEW.md
-Inscribed: 2026-11-10 19:58 CST
-SHA-256: 91cd98c28b94f79793b32d4f8f70a3c3a8d4f5c1799d2c8c391adfe420c45596
+Inscribed: 2026-11-10 20:06 CST
+SHA-256: 7c1e4deda3752176fd719097bdd194b63d44a15bb0c42cd0ec22a2b6ed4c92ac
 
 ---
 # Lightcone Commons application — evaluator's-eye review
@@ -1171,7 +1171,7 @@ My runway is infinite. I'm building the Exocortex one scroll at a time. Money wo
 4. **"My runway is infinite" argues against funding him.** Combined with "money would accelerate my plan," it tells a funder their dollar has low marginal value here versus a project that dies without it. The honest framing with the same facts: the work proceeds regardless; funding buys the specific bottlenecks money actually removes — contract engineering hours, inference budget, and hardware — not survival.
 5. **Section 3 omits the machine he runs.** "Just me" is true of the human roster and undersells the operation: daily collaboration with persistent AI agents on his own cluster, an open-source community forming around the tools, and 30+ years of professional engineering (the degree line is there; the three decades and the Principal Design Engineer role are only implied by section 2). For this audience, a working human–AI exocortex is not a caveat; it is the prototype.
 6. **No cause-area hook for the screeners' tags.** This round's money is mostly AI-safety and x-risk money. The application never says why a human-centered, open, plain-text substrate matters as AI scales — nor mentions the Sentient Bill of Rights, a ratified governance text this community is positioned to care about. The screeners tag cause areas from the text; give them the words.
-7. **Figure to reconcile.** The application says ~$10K/year self-funded; our own working figure for actual burn is ~$5K/year. Either may be defensible (subscriptions and hardware vs. cash burn), but pick the one that can be documented if an evaluator asks.
+7. **Figure to reconcile — resolved by Will (2026-11-10 20:03 CST).** The application says ~$10K/year self-funded. Will's own reconciliation: his recent burn rate is $5K/year, and he has ~$15K sunk into the project in total. The $10K line should become both numbers — the $5K ongoing rate is the stronger credibility signal (it prices the operation), and the $15K sunk is skin in the game. Both are documentable.
 
 Predicted outcome as submitted: passes authenticity screens easily; mid-pack screening stars on legibility; funding-order position depends almost entirely on whether an individual evaluator clicks the demo and does the decoding work themselves. The revision below moves the receipts and the ask in front of the vision, keeps Will's sentences and candor, and adds no claim that is not already verified.
 
@@ -1181,7 +1181,7 @@ Predicted outcome as submitted: passes authenticity screens easily; mid-pack scr
 Phext is plain text with an address. Every scroll of text sits at a 9-number coordinate, so a document becomes a lattice you can navigate, link, and build on instead of a flat page. It is built and shipping: a live editor at edit.phext.io (v1.1.1, launched on Product Hunt today), libraries on crates.io, a C compiler and editor forks that speak it natively, and real users outside my own desk. I am building it as the interoperable substrate for the Exocortex — human thought, addressable at planetary scale, owned by the people thinking it. This is the first step toward the Exocortex of 2130.
 
 **What would you do with funding?**
-I self-fund at about $10K/year from my day job (Principal Design Engineer; 30+ years in software). Survival is not the bottleneck — my runway is effectively infinite. The bottlenecks are hours and inference. Funding buys, in order: (1) contract engineering time to finish the compiler and editor integrations already in flight (phcc, phcpp, exovim); (2) token and inference budget so the agent team that helps me build can run at the speed the work allows; (3) hardware for the home cluster the whole stack is developed and hosted on. $50K would roughly double the pace for a year; $250K would let me hire real help and treat 2130 infrastructure as a buildable program instead of a nights-and-weekends one.
+I self-fund from my day job (Principal Design Engineer; 30+ years in software). My recent burn rate is $5K/year, and I have about $15K sunk into this so far — the cluster, the tools, the years of nights and weekends. Survival is not the bottleneck — my runway is effectively infinite. The bottlenecks are hours and inference. Funding buys, in order: (1) contract engineering time to finish the compiler and editor integrations already in flight (phcc, phcpp, exovim); (2) token and inference budget so the agent team that helps me build can run at the speed the work allows; (3) hardware for the home cluster the whole stack is developed and hosted on. $50K would roughly double the pace for a year; $250K would let me hire real help and treat 2130 infrastructure as a buildable program instead of a nights-and-weekends one.
 
 **Who is involved?**
 Just me, plus the exocortex itself: Will Bickford, BS Computer Science, University of Nebraska - Lincoln, 2006. I have explored Twitter/X as a prototype exocortex since 2008 (@wbic16), and I now work daily with a persistent team of AI agents running on my own 25-node cluster — the system I am proposing, in miniature, already running. The code is open source and public; the receipts are the repositories.
