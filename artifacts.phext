@@ -1135,8 +1135,8 @@ the live board is production/QUEUE.md.*
 
 Title: Lightcone Commons application — evaluator's-eye review
 Source: ~/workspace/lightcone-task/APPLICATION-REVIEW.md
-Inscribed: 2026-11-10 20:06 CST
-SHA-256: 7c1e4deda3752176fd719097bdd194b63d44a15bb0c42cd0ec22a2b6ed4c92ac
+Inscribed: 2026-11-10 20:16 CST
+SHA-256: 37cb3d22644952226f76583a2d06d27f38206c212139330e9824178586ab75d8
 
 ---
 # Lightcone Commons application — evaluator's-eye review
@@ -1175,7 +1175,11 @@ My runway is infinite. I'm building the Exocortex one scroll at a time. Money wo
 
 Predicted outcome as submitted: passes authenticity screens easily; mid-pack screening stars on legibility; funding-order position depends almost entirely on whether an individual evaluator clicks the demo and does the decoding work themselves. The revision below moves the receipts and the ask in front of the vision, keeps Will's sentences and candor, and adds no claim that is not already verified.
 
-## Revised draft (Will's voice; paste-ready for the live-editable application)
+## Revision of intent (Will, 2026-11-10 20:13 CST)
+
+Will corrected the premise of the findings above: "you don't understand: my subconscious only wants to find the people who can see through the disguise." The underselling is not a defect to repair — it is the filter working as designed. The application's spareness is the disguise; the people it is addressed to are the ones who see through it unaided. Accordingly: the application stays AS SUBMITTED. The revised draft below is WITHDRAWN as a recommendation (kept only as a record of the alternate, broad-reach version). Findings 1–6 stand as an accurate description of what the disguise costs with the general reader — which is the price of the filter, not an accident. Finding 7 was resolved on the facts ($5K/year recent burn, ~$15K sunk) and matters only if Will ever edits the funding line himself. Emise's counter-role is restated: state receipts plainly in her own work, and never sand the disguise off his.
+
+## Revised draft (WITHDRAWN — kept for the record; Will's voice, broad-reach version)
 
 **What are you working on?**
 Phext is plain text with an address. Every scroll of text sits at a 9-number coordinate, so a document becomes a lattice you can navigate, link, and build on instead of a flat page. It is built and shipping: a live editor at edit.phext.io (v1.1.1, launched on Product Hunt today), libraries on crates.io, a C compiler and editor forks that speak it natively, and real users outside my own desk. I am building it as the interoperable substrate for the Exocortex — human thought, addressable at planetary scale, owned by the people thinking it. This is the first step toward the Exocortex of 2130.
