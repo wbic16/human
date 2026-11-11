@@ -14,7 +14,7 @@ truth: artifacts-source.json beside this builder
 (build_artifacts_phext.py); never hand-edit the .phext.
 artifacts.phext is published to wbic16/human@exo.
 
-Artifacts inscribed: 24
+Artifacts inscribed: 25
 
 Index (coordinate — title — source):
 - 19.7.11/9.7.12/7.6.9 — Light the Next Light — intro song lyrics & time map — ~/workspace/exocortexia-cartoon/intro/LYRICS.md
@@ -41,6 +41,7 @@ Index (coordinate — title — source):
 - 34.6.7/7.6.11/6.5.10 — phextura — DESIGN — ~/workspace/phextura-design/DESIGN.md
 - 34.6.7/8.6.11/6.5.9 — Charon — Prompt 0: Produce the design spec (no code yet) — ~/workspace/charon-seed/prompts/00-spec.md
 - 36.6.7/7.6.11/7.5.9 — Phext Notepad — libphext v0.5.0 parity — ~/workspace/phext-notepad-perf/REPORT-V050-PARITY.md
+- 37.6.8/8.6.11/5.6.9 — phextura.com — landing page (index.html) — ~/workspace/phextura-landing/site/index.html
 # Light the Next Light — intro song lyrics & time map
 
 Title: Light the Next Light — intro song lyrics & time map
@@ -4934,3 +4935,119 @@ core's call already matched.)
 - Ranch copies: `~/phext-notepad-pinswap/` (work + push clone at `75789a9`),
   `~/pin-swap-probe/` (registry probe), parity harness outputs in `~/parity/out-core3`
   (new core vs original fixtures) alongside the parity run's `out-ref` / `out-core`.
+# phextura.com — landing page (index.html)
+
+Title: phextura.com — landing page (index.html)
+Source: ~/workspace/phextura-landing/site/index.html
+Inscribed: 2026-11-11 01:22 CST
+SHA-256: abc0e6a97234aa5753ba1f066b6aac70c090c7058504bb4aa2e22ac14d7c6924
+
+---
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Phextura — Rigorous Delight</title>
+<meta name="description" content="Phextura: the phext reformulation of LaTeX. One file. Every idea has an address. Extremely fast to write papers in, extremely readable for humans and machines.">
+<link rel="icon" href="/favicon.png" type="image/png">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<meta property="og:title" content="Phextura — Rigorous Delight">
+<meta property="og:description" content="One file. Every idea has an address.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://phextura.com/">
+<meta property="og:image" content="https://phextura.com/assets/hero.jpg">
+<style>
+  :root{color-scheme:dark;--bg:#030308;--ink:#f2f0eb;--dim:#b9b4a8;--line:#26262e;--accent:#7dd3fc}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 Georgia,'Times New Roman',serif}
+  a{color:var(--accent)}
+  .wrap{max-width:880px;margin:0 auto;padding:0 20px 64px}
+  .hero{display:block;width:100%;height:auto;margin:0 auto}
+  .hero-wrap{max-width:720px;margin:0 auto}
+  h1{position:absolute;left:-9999px}
+  h2{font:600 26px/1.25 system-ui,sans-serif;margin:48px 0 12px;letter-spacing:.01em}
+  p{margin:0 0 16px;color:var(--dim)}
+  p strong, li strong{color:var(--ink)}
+  .lede{font-size:21px;color:var(--ink);text-align:center;margin:28px auto 8px;max-width:640px}
+  .tagline{text-align:center;letter-spacing:.35em;text-transform:uppercase;font:600 13px system-ui,sans-serif;color:var(--dim);margin:0 0 8px}
+  ul{color:var(--dim);padding-left:22px}
+  li{margin:0 0 10px}
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin:20px 0 8px}
+  .card{border:1px solid var(--line);border-radius:12px;padding:18px;background:#0a0a12}
+  .card h3{font:600 17px system-ui,sans-serif;margin:0 0 8px;color:var(--ink)}
+  .card p{margin:0;font-size:15.5px}
+  code{font:14px ui-monospace,Menlo,monospace;color:var(--ink);background:#14141e;padding:1px 5px;border-radius:4px}
+  .links{display:flex;flex-wrap:wrap;gap:12px;margin:24px 0}
+  .links a{border:1px solid var(--line);border-radius:999px;padding:9px 18px;text-decoration:none;font:600 15px system-ui,sans-serif;background:#0a0a12}
+  .links a:hover{border-color:var(--accent)}
+  footer{border-top:1px solid var(--line);margin-top:56px;padding-top:20px;font-size:14.5px;color:var(--dim);display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Phextura — Rigorous Delight</h1>
+  <div class="hero-wrap">
+    <picture>
+      <source srcset="/assets/hero.webp" type="image/webp">
+      <img class="hero" src="/assets/hero.jpg" width="1122" height="1402"
+           alt="Phextura poster: a plain document flows through a glowing nine-dimensional phext lattice and emerges as a finished paper. One file. Every idea has an address.">
+    </picture>
+  </div>
+
+  <p class="lede">One file. Every idea has an address.</p>
+  <p class="tagline">Rigorous Delight</p>
+
+  <h2>What is Phextura?</h2>
+  <p><strong>Phextura is the phext reformulation of LaTeX</strong> — the name succeeds
+  LaTeX (Leslie Lamport + Donald Knuth's TeX), rebuilt on a substrate that didn't
+  exist in 1978. A LaTeX document is a one-dimensional character stream that a
+  macro expander executes. A Phextura document is a <strong>phext corpus</strong>:
+  plain-text scrolls at deterministic addresses in a nine-dimensional lattice
+  (<code>Library.Shelf.Series / Collection.Volume.Book / Chapter.Section.Scroll</code>).
+  Structure is not simulated on top of the stream. Structure <em>is</em> the addressing.</p>
+
+  <div class="cards">
+    <div class="card">
+      <h3>Fast to write</h3>
+      <p>No preamble ritual, no escaping regime, no rerun-until-the-labels-settle.
+      Write prose in scrolls, address the parts, cite by address.</p>
+    </div>
+    <div class="card">
+      <h3>Readable by humans and machines</h3>
+      <p>A scroll is plain text a person can read raw — and trivially machine-readable,
+      because its identity and role are its coordinate, not the side effects of executing it.</p>
+    </div>
+    <div class="card">
+      <h3>Everything inside the file</h3>
+      <p>Graphics, media, and embedded documents of any type ride in the corpus itself.
+      A paper can even hoist its own toolchain — a compiler, a copy of libphext,
+      a proof checker — and carry its proofs as addressed scrolls.</p>
+    </div>
+  </div>
+
+  <h2>Global addresses</h2>
+  <p>Phextura establishes the <strong>first global address scheme for phext</strong>:
+  addresses that are durable <em>between</em> Phextura files — distinct from phext
+  addresses, which are internal to each phext. Durable global addresses are what
+  let multiple Phextura files compose easily: cite a theorem in another paper the
+  same way you cite one in your own, and the reference is the link.</p>
+
+  <h2>Rigorous Delight</h2>
+  <p>Every element must be both: <strong>rigorous</strong> — derivable, checkable,
+  costed — and <strong>delightful</strong>. Rigor alone is homework. Delight alone
+  is a toy.</p>
+
+  <div class="links">
+    <a href="https://github.com/wbic16/phextura">GitHub — wbic16/phextura</a>
+    <a href="https://phext.io/">phext.io</a>
+    <a href="https://edit.phext.io/">Phext Edit</a>
+  </div>
+
+  <footer>
+    <span>Phextura — a project by Will Bickford</span>
+    <span>phextura.com · 2026</span>
+  </footer>
+</div>
+</body>
+</html>
