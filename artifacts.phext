@@ -2754,7 +2754,7 @@ edit ≈ half a day. All estimates, not measurements.
 Title: edit.phext.io — Security + Scalability Testing, and the In-Page Phext Server Verdict
 Source: ~/workspace/phext-edit-secscale/REPORT.md
 Inscribed: 2026-11-10
-SHA-256: b5af3a024d58631a7090f488a92a11d6802c0e343a4fa52c95486fd680e0ce82
+SHA-256: 645b4f98a4e74b88255c03b53f04ac03ae6a8fdc0d146bbeb7ef687c480b0695
 
 ---
 # edit.phext.io — security + scalability testing, and the in-page phext server verdict
@@ -2870,6 +2870,18 @@ This names what the first addendum called "the manifest" and makes it precise: *
 - **Server cost.** The server already holds every scroll's content; maintaining the envelope is one hash per scroll, recomputed only for scrolls that change — the same invalidation shape as the nav-density cache in the four cheap fixes. Serving it is a static-shaped response per phext version.
 
 With addendum 1: page load = seed envelope (compressed, O(N)); reading = stream-on-view into a hash-verified cache; editing = local-first against seed hashes. The document's content size has left the page-load equation entirely.
+
+## Part C addendum 3 (2026-11-10) — Will's cache-aware fetch protocol
+
+Will's direction, verbatim: "(in a cache-aware fetch call, the client provides the current hash, a flag indicating if it has the content locally, and requests an update) if there's no new content, the return is very small — if the client needs content or is out of sync, the fetch runs as normal" (build task 41.6.8/9.8.14/7.6.10).
+
+The fetch call, precisely:
+
+- **Request:** the coordinate, the client's current hash for that scroll, and a flag — has-content — saying whether the client actually holds the bytes locally. (Knowing a hash from the seed envelope is not having the content; the flag keeps those cases distinct.)
+- **Small return:** has-content is true AND the client's hash matches the server's current hash → there is no new content, and the response carries no content at all — a minimal unchanged confirmation. Revalidation of a warm cache costs almost nothing, per scroll, at any document scale.
+- **Normal fetch:** the client lacks the content (flag false, whatever its hash says) OR its hash is out of sync → the fetch runs as normal: full content plus the current hash, which the client verifies and caches.
+
+The condition is a conjunction, and each half earns its place: hash-match alone can't serve a client that knows the hash but never fetched the bytes; has-content alone can't serve one whose copy is stale. Together they make every fetch exactly as large as the client's actual need — nothing when in sync, the scroll when not.
 
 ## Part C — In-page phext server: verdict
 
