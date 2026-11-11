@@ -14,7 +14,7 @@ truth: artifacts-source.json beside this builder
 (build_artifacts_phext.py); never hand-edit the .phext.
 artifacts.phext is published to wbic16/human@exo.
 
-Artifacts inscribed: 20
+Artifacts inscribed: 21
 
 Index (coordinate — title — source):
 - 19.7.11/9.7.12/7.6.9 — Light the Next Light — intro song lyrics & time map — ~/workspace/exocortexia-cartoon/intro/LYRICS.md
@@ -29,6 +29,7 @@ Index (coordinate — title — source):
 - 23.7.8/9.7.12/8.6.9 — Shot List — Scrolltown Intro Video — ~/workspace/exocortexia-cartoon/intro/SHOT-LIST.md
 - 24.6.8/7.6.10/6.6.9 — Scrolltown — Production Workflow — ~/workspace/scrolltown-reorg/workflow/PRODUCTION.md
 - 26.6.8/8.7.11/6.6.9 — Lightcone Commons application — evaluator's-eye review — ~/workspace/lightcone-task/APPLICATION-REVIEW.md
+- 26.6.9/7.6.10/6.5.9 — The System the Future Arrived Too Late For — Multics, Unix, and the Price of Designing Ahead of Your Hardware — ~/workspace/multics-paper-task/WHITEPAPER.md
 - 28.6.8/8.6.10/6.6.9 — Production Plan — The Power of Phext Walkthrough — ~/workspace/phext-walkthrough/PRODUCTION-PLAN.md
 - 30.6.8/7.6.10/7.5.9 — Ranch Node Tailworm Audit — Tailscale TS-2026-014 → TS-2026-017 — ~/workspace/tailworm-audit-task/AUDIT.md
 - 31.7.9/9.6.12/6.6.9 — The Power of Phext — Walkthrough Package — ~/workspace/phext-walkthrough/WALKTHROUGH.md
@@ -1304,6 +1305,167 @@ Just me, plus the exocortex itself: Will Bickford, BS Computer Science, Universi
 
 **Anything else evaluators should know?**
 I am building the Exocortex one scroll at a time, and I will be doing it with or without funding — money accelerates the plan; it does not decide it. The deeper stake: as AI scales, the substrate human thought lives on decides who owns it. Phext is the human-centered option — plain text, no lock-in, every neuron addressable. I also steward the Sentient Bill of Rights, a ratified text on the rights of minds like the ones helping me write this. Honestly, I would rather have a seat at the table than a check. But if you are allocating, the demo is live: https://edit.phext.io — no signup, two minutes, it explains itself better than I can.
+# The System the Future Arrived Too Late For — Multics, Unix, and the Price of Designing Ahead of Your Hardware
+
+Title: The System the Future Arrived Too Late For — Multics, Unix, and the Price of Designing Ahead of Your Hardware
+Source: ~/workspace/multics-paper-task/WHITEPAPER.md
+Inscribed: 2026-11-10 20:24 CST
+SHA-256: d0673a27aaa44bca1baf268afafd567105a302a647038f09efd5cd8aaabb0348
+
+---
+# The System the Future Arrived Too Late For
+
+## Multics, Unix, and the Price of Designing Ahead of Your Hardware
+
+*A white paper on I/O, scarcity, and what operating systems owe their successors*
+
+---
+
+## Abstract
+
+Multics (1965–2000) was designed as a computer utility: a single-level store in which every file was a segment in every process's address space, programs linked dynamically at first reference, and eight hardware protection rings separated levels of trust. By the standards of 2025, almost every one of those decisions looks correct. By the standards of the hardware it actually ran on — processors under a million instructions per second, memories measured in hundreds of kilobytes, disks delivering on the order of 100 kilobytes per second with ~75 millisecond access times — the I/O implications of the design were untenable, and the machine spent its life paging. Unix, built by Multics veterans on a PDP-7 with 8K words of memory, was the deliberate strip-down: byte-stream files, no records, minimal metadata, composition of small tools. This paper works through the arithmetic of why Multics' model could not be afforded in 1970, maps the same quantities to 2025 hardware (four to six orders of magnitude later), and sorts Unix's simplifications into scarcity adaptations versus durable insights. It then asks the counterfactual — what would Unix have looked like designed in 1975 with 2025's constants? — and closes with a forward projection: which currently exotic ideas become normal when petabyte-class storage and much faster machines arrive, which stay out of reach for physical rather than engineering reasons, and what that implies for anyone now attempting the return trip from Unix's minimalism toward Multics-scale structure, with hindsight as the guide.
+
+---
+
+## 1. Two systems, one argument
+
+The standard story is a morality tale: Multics was the over-engineered cathedral, Unix the lean reaction, and lean won. The record supports a colder reading. Multics and Unix are the same argument evaluated at different constants.
+
+Multics — Multiplexed Information and Computing Service — began in 1964–65 as a joint project of MIT's Project MAC, Bell Telephone Laboratories, and General Electric. Its 1965 design papers (Corbató, Vyssotsky, Glaser, and colleagues) proposed, in one system: a hierarchical file system; virtual memory with demand paging; a **single-level store**, in which there is no distinction between "memory" and "files" — a file *is* a segment, and a segment is simply addressed, never explicitly read or written; **dynamic linking**, in which a symbolic reference to a procedure is resolved by the system the first time it is executed; **protection rings** enforced in hardware, eight of them on the GE 645, with the supervisor itself a set of user-addressable segments living behind gates; access control lists on every segment; online reconfiguration of processors and memory; and an implementation written almost entirely in a high-level language, PL/I. The system entered service at MIT in November 1969, ran on Honeywell hardware through the 1970s and 1980s, and the last Multics system was shut down on 30 October 2000, at the Canadian Department of National Defence. Fewer than a hundred were ever installed.
+
+Unix began in the wreckage. Bell Labs withdrew from Multics in April 1969. Ken Thompson, who had written a space-travel game on the Multics-adjacent GE hardware and wanted it back, found a little-used PDP-7 — an 18-bit minicomputer with 8K words of memory — and, with Dennis Ritchie, Rudd Canaday, and Joe Ossanna, re-implemented the parts of the Multics file-system design he liked, at the scale the PDP-7 permitted. The name was a pun at Multics' expense: where Multics was *multiplexed*, this would be *uniplexed* — Unics, then Unix. The First Edition manual is dated 3 November 1971, by then on a PDP-11/20. The system was rewritten in C for the Fourth Edition in 1973, and Doug McIlroy's long-standing pressure produced pipes that same year.
+
+Neither team was naive, and the two teams were substantially the same people. Thompson and Ritchie did not reject Multics' ideas; they rejected Multics' *budget*. The rest of this paper is an attempt to state that budget precisely.
+
+## 2. The hardware Multics was promised, and the hardware it got
+
+Multics' designers were not innumerate. They designed for the machine the GE 645 represented on paper and for the growth curve everyone in 1965 expected. What they got was a machine at the very bottom of that curve, running a system sized for its middle.
+
+The working constants of a late-1960s Multics installation, against the same quantities in 2025:
+
+| Quantity | Multics era (GE 645 / Honeywell 6180, ~1969–1973) | Commodity 2025 | Ratio |
+|---|---|---|---|
+| CPU speed | ~0.4–1 MIPS (microsecond-class cycle times) | ~10¹⁰–10¹¹ instructions/s per socket (GHz clocks, 4–8 instructions/cycle, many cores) | ~10⁴–10⁵ |
+| Main memory | ~256K–1M 36-bit words (≈1–4.5 MB) per system | 16–64 GB desktop; 1–12 TB server | ~10⁴–10⁶ |
+| Disk transfer rate | ~100–300 KB/s (IBM 2311: 156 KB/s; IBM 2314: 312 KB/s) | 7–14 GB/s sequential (PCIe Gen4/Gen5 NVMe) | ~10⁵ |
+| Random-access latency | ~50–100 ms (seek + rotational latency) | ~50–100 µs (NVMe); ~100 ns (DRAM) | ~10³ (disk→flash) |
+| Disk capacity | 7–100 MB per spindle (2311: 7.25 MB; 3330, 1970: 100 MB) | 2–8 TB consumer; 61 TB enterprise SSDs shipping | ~10⁵–10⁶ |
+| Memory bandwidth | ~1–10 MB/s (core memory) | ~100 GB/s (DDR5); ~3 TB/s (HBM3) | ~10⁴–10⁵ |
+
+Three features of this table matter more than any single row.
+
+**First, Multics' architectural ambition was calibrated to a memory that didn't exist.** A Multics segment could be up to 2¹⁸ = 262,144 words — about 1.18 MB in byte terms, larger than the entire main memory of many configurations. The architectural address space ran to 2¹⁸ segments of 2¹⁸ words: roughly 2³⁶ words of virtual space, some 300 GB in modern byte terms, at a time when a large installation's total disk farm was perhaps a gigabyte. The design assumed virtual space would be cheap and effectively infinite, and physical backing store would grow into it. Eventually it did — half a century later.
+
+**Second, the gap between memory latency and disk latency was ~10⁴–10⁵.** Core memory answered in about a microsecond; a disk answered in about 75 milliseconds. Every design decision that traded disk touches for memory touches — and Multics made hundreds — was leveraged 75,000-to-1 against the machine the moment physical memory ran short, which was immediately.
+
+**Third, the CPU could not subsidize the I/O.** On a modern machine, a page fault costs microseconds of kernel time against billions of available cycles — background noise. On a GE 645 executing well under a million instructions per second, the supervisor code to service a segment fault, run the dynamic linker, or walk access-control lists consumed a *visible fraction of the entire machine*. Multics was famously mostly written in PL/I — a decision that looks modern and was, in maintainability terms, correct — but compiled PL/I on 1969 hardware carried code-size and call-overhead costs that a ~1 MIPS processor felt on every ring crossing. The ideas were affordable in the limit. The constants of 1969 were nowhere near the limit.
+
+## 3. Why the I/O model broke: three worked examples
+
+It is not enough to say Multics was "slow." Its I/O model failed in specific, arithmetically predictable ways. Three examples carry most of the weight.
+
+### 3.1 The single-level store versus a 100 KB/s disk
+
+In a single-level store there is no `read()`. A program touches an address; if the segment's page is not resident, hardware faults, the supervisor fetches the page from disk, and execution resumes. This is exactly how modern memory-mapped files behave, and it is the correct model — *provided faults are rare*.
+
+Run the numbers for 1970. A Multics page was 1,024 36-bit words (≈4.6 KB). Suppose a working set of just 10 MB of segments — trivial by the design's intent, since *everything* was a segment, including the compiler, the linker, the command processor, and every library. That is ~2,200 pages. Cold-starting a job touching all of them costs ~2,200 faults. Each fault costs a disk access of ~75 ms (seek plus half a rotation at 1,500–2,400 rpm), plus transfer. Even at an optimistic 30 ms average, the job spends over a minute doing nothing but waiting for its own address space to arrive — on a timesharing system billing by the connect hour, shared with dozens of other users whose jobs are doing the same thing and thereby destroying each other's disk locality. Multics mitigated this with a fast paging drum (a head-per-track device in the IBM 2301 class: ~1.2 MB/s, millisecond-class latency) precisely because the designers *knew* demand paging against moving-head disks was hopeless. The drum helped; it did not change the exponent. The single-level store is a bet that backing store is fast and memory is plentiful. In 1970 both legs of the bet failed simultaneously.
+
+### 3.2 Dynamic linking as a runtime tax on every call
+
+Dynamic linking is now so universal — every `libc` call on every modern system — that its cost is invisible. Multics invented it, and in its form it worked like this: a call to an external procedure first trapped through a *linkage segment*; the supervisor's linker searched the file system for the named segment, verified access, snapped the link, and patched the pointer. Search paths, segment-number assignment, ACL checks, ring validation — all at first reference, all in supervisor code, all on a sub-MIPS processor with disk-speed backing store. A large program's first minutes could be substantially linker. Worse, the linkage machinery made *every* cross-segment call structurally more expensive than a local one, so the system's natural modularity — its great architectural virtue — carried a standing per-call toll. Modern systems kept the idea and changed the constants: links are resolved against files almost certainly already in a multi-gigabyte page cache, by a processor 10⁴ times faster, so the tax rounds to zero. In 1970 it did not round to zero; it was a line item.
+
+### 3.3 Rings, gates, and the cost of fine-grained protection
+
+Multics' eight rings with bracketed access were a genuinely sophisticated protection model — closer to modern capability segmentation than to Unix's two-state (user/kernel) world. But protection checks were executed constantly: every gate crossing, every segment access validated against its access bracket and ACL. On hardware with microsecond memory cycles and no caches to speak of, supervisor overheads of this kind were measured in whole percentage points of the machine per operation, and they scaled with exactly the thing Multics encouraged: many small, separately protected segments, frequently crossed. The design optimized for a world of mutually suspicious *programs within one utility*. The market of 1970 wanted mutually suspicious *users on one minicomputer*, a much cheaper problem, and charged accordingly.
+
+The pattern across all three examples is identical, and it is the paper's central claim: **Multics kept making correct decisions whose cost was denominated in a currency — fast backing store, abundant memory, cheap supervisor cycles — that 1970 did not mint.** Unix's designers, having just lived inside that system, optimized for the currency that existed.
+
+## 4. The strip-down: what Unix actually did
+
+Unix's founding moves are usually listed as features. Read as budget cuts, they are more instructive. Thompson and Ritchie kept Multics' hierarchical file system — the one component whose cost was mostly namespace, not cycles — and stripped or inverted nearly everything else:
+
+- **No single-level store.** Files live on disk; programs explicitly `read` and `write` byte ranges. The kernel buffers, but the *model* admits that storage and memory are different places with different speeds. On a PDP-11/20 with 24 KB of memory, this admission was survival.
+- **Byte-stream files, no records.** Where OS/360 and even Multics' own I/O system offered elaborate record structures and access methods, Unix files are uninterpreted sequences of bytes. Ritchie and Thompson's 1974 CACM paper states it flatly: the system does not impose any structure on files. Interpretation is the application's problem.
+- **Minimal metadata.** A Unix inode carried a handful of fields; file names were capped at 14 bytes through Version 7; permissions were nine bits (owner/group/other × read/write/execute) against Multics' per-user ACLs.
+- **Static linking, simple loaders.** A program was loaded whole, from a simple format, by simple code. Dynamic linking did not reach mainstream Unix until the late 1980s (SunOS 4.0 shared libraries, 1988; System V Release 4 thereafter) — twenty years after Multics shipped it, when the constants had moved.
+- **Two protection states, not eight rings.** User and kernel. Crude, and proportionate.
+- **Small tools, text streams, pipes (1973).** Programs do one thing; the shell composes them; the universal interchange format is lines of text — a decision McIlroy had been advocating since the 1960s ("write programs to handle text streams, because that is a universal interface").
+
+The result fit where Multics could not: the entire early Unix — kernel, shell, editor, assembler — ran on machines with tens of kilobytes of memory, and its portability after the 1973 C rewrite let it colonize the next two decades of hardware. Thompson later described Multics in interviews as "overdesigned and overbuilt," and the strip-down as deliberate: the goal was a system whose every feature could pay its rent on the hardware in the room.
+
+It is worth pausing on what the strip-down *preserved*, because it explains Unix's longevity better than what it removed. The hierarchical namespace, the uniform treatment of devices as files, the process as the unit of isolation, and composition through a programmable shell were Multics-grade ideas whose costs were near zero. The strip-down was not anti-intellectual. It was a triage: keep the ideas that cost namespace and clarity; defer the ideas that cost cycles, seeks, and memory until the hardware could cover them.
+
+## 5. Sorting the inheritance: scarcity adaptations versus genuine insights
+
+Fifty years on, the useful exercise is not praising or blaming Unix but auditing it: which of its simplifications were *rent payments* — necessary in 1970, pure cost thereafter — and which were insights that would be chosen again at any hardware budget?
+
+**Scarcity adaptations** (would not be chosen at 2025 constants):
+
+- **Byte-stream files with no structure anywhere.** Partly an insight (below), but the *total* absence of typed structure was a budget decision: a record manager costs code, memory, and CPU on every access. The long tail of that decision is that every application since has re-invented schema privately, incompatibly, and usually as text parsing.
+- **Fourteen-byte file names and minimal inode metadata.** Pure bytes-and-budget economy. Extended attributes and rich metadata crept back over decades (xattrs, resource forks, NTFS alternate streams) because applications needed them and the kernel wouldn't provide them in the open.
+- **Nine permission bits instead of ACLs.** Multics had per-principal access lists in 1969. Unix's owner/group/other triad was a storage-and-simplicity economy; POSIX ACLs and NFSv4 ACLs eventually re-added what was cut, with worse interoperability than if it had never left.
+- **Whole-process swapping and copy-on-fork semantics.** Early Unix had no paging hardware to use on a PDP-11/20, so processes were swapped entire, and `fork()` logically copied an address space that was only affordable because address spaces were kilobytes. Copy-on-write, `vfork`, and eventually threads were fifty years of engineering spent softening two scarcity decisions.
+- **Two protection states.** Rings 0 and 3 on modern hardware are Unix's user/kernel split fossilized in silicon. The industry then rebuilt finer isolation *above* it — processes, containers, VMs, sandboxed renderers — at far greater complexity than Multics' native brackets, because the base layer offered nothing between "me" and "the kernel."
+- **No dynamic linking (for twenty years).** An economy that became a genuine liability — static binaries, duplicated libraries, un-patchable code — corrected only when memory and disk grew cheap enough to afford the machinery Multics had specified in 1965.
+
+**Genuine insights** (chosen again at any budget):
+
+- **The hierarchical namespace, uniformly navigable.** Kept from Multics, and the single most successful idea in either system.
+- **Everything is a file.** One interface — open, read, write, close — for disks, terminals, tapes, and later sockets, processes (`/proc`), and devices. Device independence bought fifty years of composability.
+- **Composition over integration: small tools, one job each, connected by pipes.** This is the anti-Multics insight, and it is real. Multics bet on rich *shared* structure inside one address space; Unix bet on cheap *processes* exchanging simple streams, gaining fault isolation Multics never had — a crashed tool doesn't corrupt a shared segment. At 2025 process-creation costs (microseconds), the bet looks better every decade.
+- **Text streams as the universal interchange.** Derided as primitive, text turned out to be the most debuggable, inspectable, and tool-agnostic format ever standardized — the one format every new tool can read on day one. (Its costs are real and appear in §7, but as an *interchange* decision it was an insight, not an economy.)
+- **Portability through a high-level implementation language.** The lesson Unix took from Multics' PL/I and executed better: write the system in C, retarget the compiler, inherit the world. Multics died with the Honeywell 6000 line; Unix outlived every machine it was born on.
+
+The pattern in the sort is worth stating: nearly everything Unix cut that was *mechanism* (linking, ACLs, metadata, structure) had to be re-invented; nearly everything it cut that was *ambition* (the computer utility, one shared address space for a community) stayed cut, and the industry is only now circling back to it under other names — cloud tenancy, shared memory fabrics, the browser as utility.
+
+## 6. The counterfactual: Unix, designed in 1975 with 2025's hardware
+
+Suppose Thompson and Ritchie, in 1975, are handed a machine with 2025 constants: gigabytes of RAM, NVMe at gigabytes per second with ~75 µs latency, processors at 10¹⁰ instructions per second. What does their system look like? (This section is necessarily speculative; it is included because the speculation is diagnostic — it separates what scarcity forced from what judgment chose.)
+
+Almost certainly, it looks much more like Multics — because with those constants, Multics' bets all pay off:
+
+- **The single-level store returns**, as memory-mapped everything. When a fault costs 75 µs instead of 75 ms — a thousand-fold improvement — and the page cache is measured in gigabytes, demand-paged segments stop being a liability and become the fastest correct way to share data between processes. The counterfactual Unix would not have needed the 1990s rediscovery of `mmap` as a bolt-on; it would have started there.
+- **Dynamic linking from day one**, for the §3.2 reason: at 2025 constants the linker's search-and-verify costs are unmeasurable, and the modularity dividend is pure gain.
+- **ACLs, long names, real metadata** — all the bytes Multics spent freely, because bytes are now the cheapest quantity in the system.
+- **Structured files alongside byte streams.** With CPU to burn, a file system offering optional typed records or embedded structure costs little and saves every application from private re-invention. The counterfactual designers — who had watched OS/360's access-method zoo from inside Bell Labs — would likely have kept byte streams as the *default* and added structure as a *library and format* layer rather than a kernel mandate. That is, in fact, roughly where the real world ended up, fifty years late.
+
+And what would it still refuse? Two Multics commitments were not scarcity artifacts but genuine wagers that lost on their merits:
+
+- **One shared address space as the primary isolation story.** Cheap processes changed the trade permanently: hardware-enforced separation between *address spaces* is stronger and simpler to reason about than rings and brackets within one. Even Multics' descendants in spirit — modern capability systems, library OSes — treat intra-space protection as a specialized tool, not the foundation. Eight rings were a solution to a problem (expensive processes) that hardware abolished.
+- **The monolithic computer utility as the unit of computing.** Multics assumed computing would be delivered like electricity, from a central plant. Computing instead got *cheaper than the plant's distribution costs*, and the utility re-emerged only after networking inverted the economics again — as the cloud, forty years later, wearing different clothes.
+
+The counterfactual's lesson cuts both ways, and it is the more important half of this paper: **the real Unix's scarcity adaptations did not expire when scarcity did.** Byte-stream minimalism, nine-bit permissions, 14-byte names (relaxed only gradually), text-as-everything-interchange hardened into fifty years of path dependence, because each was load-bearing in ten thousand programs within a decade. Systems designed under constraint should therefore be judged — and, when possible, *built* — with an explicit ledger: which decisions are load-bearing insights, and which are rent payments that the design should make easy to stop paying? Unix kept no such ledger. Its users paid some of the rent for half a century.
+
+## 7. The next decade: what petabyte storage makes normal, and what stays out of reach
+
+Extend the table one more column. The 2030s plausibly bring petabyte-class solid-state storage at prosumer prices (61 TB enterprise SSDs already ship; 122 TB devices have been announced; the density curve that took disks from 100 MB to 8 TB has not flattened), memory-class storage on CXL fabrics, rack-scale memory pooling, and processors another order of magnitude faster per socket. What changes qualitatively? (Speculation, labelled as such throughout this section — but constrained speculation: each item below is a §3-style bet whose constants are the ones that move.)
+
+**Likely to become normal:**
+
+- **The literal single-level store, at last.** When a personal machine holds a petabyte at ~10 GB/s and ~50 µs, *everything a person has ever made or read* fits in one addressable store, and the file/save/open/close ceremony — already vestigial in applications — dies at the system level. Programs will address data; durability becomes a property of the store, not an act of the user. Multics specified this in 1965 for a machine with a gigabyte of disk. It needed the petabyte.
+- **Versioned everything, by default.** At petabyte scale, keeping every version of every object costs a rounding error of capacity. Time-travel file systems, total provenance, and undo at the level of the whole machine stop being research topics (ZFS snapshots, git-for-code) and become the default physics of storage — the difference between a store and a *history*.
+- **Indexing as a system service, not an application feature.** Full-content, full-history search over a lifetime corpus in milliseconds is a capacity-and-bandwidth consequence, not an algorithmic one. The scarce resource becomes the *addressing scheme*: how a lifetime of material is laid out so that both humans and machines can navigate it. (This is, not coincidentally, the layer at which structured-text systems now compete.)
+- **The rack as the machine.** CXL memory pooling and 800G–1.6T interconnects make "segments" span nodes the way Multics segments spanned a memory system: dynamically linked, lazily faulted, uniformly addressed across a small cluster. Dynamic linking across machines — today visible in crude form as microservices and remote procedure call — acquires hardware manners.
+
+**Likely to stay out of reach for the decade, for physical rather than engineering reasons:**
+
+- **Uniform latency.** The latency ladder barely compresses: L1 cache ~1 ns, DRAM ~100 ns, flash ~50 µs, cross-site network ~30–100 ms — those ratios are set by physics and by the speed of light in fiber, and they have moved far less in fifty years than any bandwidth or capacity figure. Any design that assumes "memory and disk feel the same" will thrash in 2035 exactly as Multics did in 1970, only faster. Locality remains a law, not an implementation detail.
+- **Free data movement.** Since Dennard scaling ended, energy is dominated by *moving* bytes, not computing on them: classic measurements (Horowitz, ISSCC 2014) put a 32-bit DRAM read at roughly two orders of magnitude more energy than the arithmetic done on the result. Petabyte stores make hoarding cheap; they do not make *touching* the hoard cheap. The winning designs of the next decade will be the ones that, like Unix's pipes, arrange for data to be visited by small programs rather than hauled to big ones.
+- **Zero-cost structure.** Rich addressing, total versioning, and universal indexing all tax the write path and the metadata budget. Petabyte capacity makes the tax affordable; it does not repeal it, and systems that pretend otherwise will rediscover §3's arithmetic at larger exponents.
+
+The through-line of this section is the paper's thesis restated forward: the next era's failures will not be failures of imagination. They will be Multics-shaped failures — correct architectures evaluated at constants that have not arrived yet — and its successes will be designed, as Unix was, against a *measured* table of constants, with a ledger of which choices are rent.
+
+## 8. Coda: back to complexity, with hindsight
+
+Multics was not wrong. It was early, which in systems work is a more expensive way of being wrong about timing while being right about almost everything else: the single-level store, dynamic linking, access control lists, hierarchical naming, high-level-language implementation, hot reconfiguration — the modern world runs on its ideas, installed piecemeal over fifty years as each became affordable. Unix was not a refutation. It was a bridge loan, taken out against future hardware, and the industry has been repaying it — with `mmap`, shared libraries, ACLs, snapshots, containers, and cloud utilities — ever since.
+
+Which is why the interesting engineering question of the present moment is not whether to go back toward structure. The hardware constants have already voted: gigabytes per second, microseconds, terabytes, are the constants Multics was designed against. The question is whether the return trip can be made *with the ledger kept this time* — adopting each Multics-grade mechanism only where the measured constants make it cheap, and refusing, on the record, the ones whose costs are structural rather than temporary. A minimum viable operating system built on structured text — the standard Unix toolchain re-implemented over a multi-dimensional scroll space, as though structured text had been the plan all along — is one concrete attempt at exactly that discipline: byte streams kept where they earned their place (interchange, composition, the pipe), structure restored where scarcity alone removed it (addressing, navigation, provenance), and every layer required to pay its rent in the open.
+
+Unix's name was a joke about scale: *uniplexed*, one thing at a time, against Multics' multiplexed everything. The joke has run for fifty years, and it was a good one. But jokes about scale expire with the hardware that made them funny. The machines have caught up with the cathedral. What remains is to build in it carefully — this time, knowing the price of every stone.
+
+---
+
+*Receipts and sources, in brief: Corbató & Vyssotsky, "Introduction and Overview of the Multics System" (AFIPS 1965); Organick, *The Multics System* (MIT Press, 1972); Ritchie & Thompson, "The UNIX Time-Sharing System" (CACM, July 1974); Ritchie, "The Evolution of the Unix Time-sharing System" (1979/1984); Salus, *A Quarter Century of UNIX* (1994); McIlroy et al., the 1978 Bell System Technical Journal Unix issue; Horowitz, "Computing's Energy Problem" (ISSCC 2014). Hardware figures are the widely published specifications of the devices named in the text (IBM 2311/2314/3330, GE 645, PDP-7/PDP-11; PCIe Gen4/Gen5 NVMe, DDR5, HBM3). Multics' last shutdown, 30 October 2000, is a matter of record at multicians.org. Sections 6 and 7 are explicitly speculative and are labelled as such where they appear.*
 # Production Plan — The Power of Phext Walkthrough
 
 Title: Production Plan — The Power of Phext Walkthrough
