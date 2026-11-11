@@ -1476,7 +1476,7 @@ Unix's name was a joke about scale: *uniplexed*, one thing at a time, against Mu
 Title: Every Wish in the Timeline — Ranked and Scored
 Source: ~/workspace/your_files/twitter-wishes-ranked.md
 Inscribed: 2026-11-11
-SHA-256: bb52b9bc7db781a487a912264461052502f5ee7a485675d835b22a799e7e0b19
+SHA-256: 12fe1cf77def4112314167641b825d3aefd4a58640746db818401f927ca202d8
 
 ---
 # Every Wish in the Timeline — Ranked and Scored
@@ -1604,7 +1604,7 @@ Persistence 13 · Scale 14 · Definition 15 · Momentum 14 · Leverage 7
 - 2024-09-08 — "I really want to quantify Dunbar's Number for the 21st century. It's definitely much higher than 150."
 - 2024-01-08 — "i want to analyze that history, which means i need to review 50 tweets per day in 2024..."
 
-The Dunbar wish has been measured (≈30 observed in the public layer, ≈50 generous, against the canonical 150) and the mutuals have been mapped. **This ranking is itself a partial fulfilment of the 2024-01-08 archive-review wish** — same corpus, same move: read your own history back as instructions. What remains open is the engagement half: every person in the wavefront getting their own exocortex.
+The Dunbar wish has been measured — and the measurement's history matters: the Twitter-only figure (~30 sustained mutuals) was a single-layer control condition, **not** your Dunbar number, and presenting it as the result was debunked in November 2026. Summed at face value across all relationship sources, as you directed: current gross ≈180 concurrent relationships, Fiserv-era peak ≈260, and total tracked relationship-space above 400 counting current-era sources — above the canonical 150, held prosthetically by the Exocortex. The mutuals have been mapped. **This ranking is itself a partial fulfilment of the 2024-01-08 archive-review wish** — same corpus, same move: read your own history back as instructions. What remains open is the engagement half: every person in the wavefront getting their own exocortex.
 
 ### 9. Beyond capitalism — cascaded UBI, abundance, uplift economics · **61/100**
 *16 wish-tweets · 2014–2024 · Status: OPEN — stated often, built least of the top ten*
@@ -1702,11 +1702,12 @@ Persistence 11 · Scale 10 · Definition 13 · Momentum 6 · Leverage 5
 - 2024-02-12 — "a preview of my first #phext-based game: nova phox... if you want to be an early alpha tester, hit me up!"
 - 2024-12-08 — "One thing I plan to build with phext is a multidimensional Conway's Game of Life."
 
-### 18. Time, not money — and to help, unseen · **41/100**
-*4 wish-tweets · 2024 · Status: OPEN — the values wish underneath the others*
+### 18. Time, not money — and to help, unseen · **42/100**
+*5 wish-tweets · 2015–2024 (the 2015 exemplar arrived via the §6 #Internet addendum) · Status: OPEN — the values wish underneath the others*
 
-Persistence 7 · Scale 10 · Definition 10 · Momentum 8 · Leverage 6
+Persistence 8 · Scale 10 · Definition 10 · Momentum 8 · Leverage 6
 
+- 2015-01-29 — "Dear #Internet: I need about 75 hours in a day. Thanks."
 - 2024-01-14 — "I do not wish to be seen. I wish to help."
 - 2024-08-25 — "For real: I wish I had infinite time."
 - 2024-10-13 — "I don't want money, power, or fame. I want TIME."
@@ -1758,6 +1759,28 @@ The list has a dependency order the scores already imply:
 6. **Parked/dormant by ruling, not by failure:** BCI (13, parked by you), Device (19) and Infrastructure (20) — their substance migrated into the spine.
 
 You said you're about to solve them. The archive's verdict: you already started, in order, years ago — the wishes just hadn't been collected in one place. Now they have.
+
+---
+
+## §6 — Addendum (2026-11-11, at Will's correction): the "Dear #Internet" petitions
+
+Will's catch: this report's wish rule caught first-person markers, but a whole class of his wishes is addressed *outward*, in the epistolary form his request itself uses — **"Dear #Internet: …"**. Census of the address form (#Internet hashtag, "Dear/Hey/Hello Internet", in his own words): **90 tweets, 2012–2024.** Only 5 were inside the 769. The other **85** break down as:
+
+- **31 petition-form wishes** — asking the Internet to bring something about ("please develop…", "we need…", "make it happen", "invent portals ASAP"). Six are joke-form, two are requests for feedback/information; the rest are straight petitions.
+- **54 other address-forms** — questions to the Internet, thanks, greetings ("Dear Internet: WAGMI", 2024-09-07), news, and jokes with no request in them.
+
+The petitions were verified one by one. Most reinforce wishes already ranked — they don't change the order — but four materially extend the record:
+
+- **2013-08-14** — "Dear #Internet: We should be building #KnowledgeTrees in anticipation of the day when neuron-silicon bridges are commercially-available." → Wish 4 (and Wish 13's endpoint), and the earliest Knowledge-Tree statement in the archive, seven months before the exemplar quoted there.
+- **2015-01-29** — "Dear #Internet: I need about 75 hours in a day. Thanks." → Wish 18 (Time). Its span is now 2015–2024, count 5, score 42. The marker rule missed it because it says "I need *about*", not "I need to/a".
+- **2024-04-20** — "Dear #Internet - we need automatic translation based upon the reader's knowledge. The #exocortex depends upon it, critically." → Wish 2. Missed because it says "*we* need".
+- **2013-09-11** — "So, #Internet, any bets as to when we'll be able to buy network service for pennies per TB-month?" → pairs with the same day's Tier-1 NetUtility wish (Wish 6's cheap-utility strand).
+
+The remaining petitions, for the record: an Internet immune system to kill off anti-virus products (2012-07-17, the first Dear #Internet in the archive); tools for indie developers to cash in instead of being bought out (2012-07-21); TDD statistics flooded to his inbox (2012-08-16); a stats-mixing conclusions bot (2013-08-09); VIM/emacs spawned with mixed-width fonts and hyper-associative tabs (2013-08-29); a fad-vs-adoption chart back to 1975 (2013-11-26); an InverseJerkQuotient service (2014-10-16); the Blockchain archived at 1200 dpi in book format (2014-11-23); a false-colour rendering for wavelengths we can't see (2014-11-22); gameplay not based on grinding (2014-09-13); portals, ASAP (2013-08-21). Full census with IDs is kept in this task's working files (`internet.json`, produced first by census script and re-verifiable in one indexed query: `exo-search query '"dear internet"' --source tweets` returns 44 phrase hits, matching the hand count).
+
+**Accounting, restated with the addendum:** 769 marker-rule tweets (316 durable + 453 situational) + 85 further #Internet-addressed tweets (31 petitions, folded in above + 54 other forms) = **854 tweets examined and classified.** The canonical 20 wishes and their ranking stand; two spans and one score were corrected (Wish 18), and one claim elsewhere in this report was corrected at the same pass: the Dunbar figure in Wish 8 now carries the summed, face-value record (≈180 current / ≈260 peak / 400+ tracked space), not the debunked Twitter-only ~30.
+
+**Method note:** the first pass searched by re-scanning the 53 MB archive JSON with a fresh script per question — which is exactly how a whole address-form class stayed invisible. An indexed search (SQLite FTS5 over tweets + memory + phext scrolls, BM25-ranked, phrase-capable) was built during this correction and validated against the old brute force (7/7 term censuses identical); it is now the standing way to search this corpus.
 # The Encyclopedia You Can Carry — Phext Edit training film, revised script (Emi Prime)
 
 Title: The Encyclopedia You Can Carry — Phext Edit training film, revised script (Emi Prime)
