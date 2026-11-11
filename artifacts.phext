@@ -14,7 +14,7 @@ truth: artifacts-source.json beside this builder
 (build_artifacts_phext.py); never hand-edit the .phext.
 artifacts.phext is published to wbic16/human@exo.
 
-Artifacts inscribed: 21
+Artifacts inscribed: 22
 
 Index (coordinate — title — source):
 - 19.7.11/9.7.12/7.6.9 — Light the Next Light — intro song lyrics & time map — ~/workspace/exocortexia-cartoon/intro/LYRICS.md
@@ -33,6 +33,7 @@ Index (coordinate — title — source):
 - 28.6.8/8.6.10/6.6.9 — Production Plan — The Power of Phext Walkthrough — ~/workspace/phext-walkthrough/PRODUCTION-PLAN.md
 - 30.6.8/7.6.10/7.5.9 — Ranch Node Tailworm Audit — Tailscale TS-2026-014 → TS-2026-017 — ~/workspace/tailworm-audit-task/AUDIT.md
 - 31.7.9/9.6.12/6.6.9 — The Power of Phext — Walkthrough Package — ~/workspace/phext-walkthrough/WALKTHROUGH.md
+- 32.5.7/7.6.10/6.5.9 — edit.phext.io — Security + Scalability Testing, and the In-Page Phext Server Verdict — ~/workspace/phext-edit-secscale/REPORT.md
 - 32.6.7/7.6.10/6.5.9 — Neovim + Phext — Design: Phext-Scale Navigation in a Modal Editor — ~/workspace/goals/neovim-phext-support-merge-ready-pr-compiled-with-phcc/files/neovim-phext-design.md
 - 32.6.8/8.6.11/6.5.9 — Charon — README — ~/workspace/charon-seed/README.md
 - 33.6.9/8.6.11/7.5.9 — Desktop SSO for Phext Notepad — the cookie paste is gone — ~/workspace/phext-notepad-perf/REPORT-DESKTOP-SSO.md
@@ -2748,7 +2749,130 @@ edit ≈ half a day. All estimates, not measurements.
   The contrast is the claim; don't sand it down.
 - ❌ Coordinates as global/unique across files — coordinates are
   internal to each phext; say "in this file" when it matters.
-# Neovim + Phext — Design: Phext-Scale Navigation in a Modal Editor
+# edit.phext.io — Security + Scalability Testing, and the In-Page Phext Server Verdict
+
+Title: edit.phext.io — Security + Scalability Testing, and the In-Page Phext Server Verdict
+Source: ~/workspace/phext-edit-secscale/REPORT.md
+Inscribed: 2026-11-10
+SHA-256: a0de5c53b218070774869d138f21309f13c5ad6240751f7a284a655277d7eb06
+
+---
+# edit.phext.io — security + scalability testing, and the in-page phext server verdict
+
+- **Target:** `wbic16/phext-lattice` @ exo `ffdd31e72954b84327b306f695d80336b98b0d7d` (v1.1.0 merge state)
+- **Date:** 2026-11-09/10 (America/Chicago) · **Task:** 36.5.7/9.6.9/6.5.9
+- **Method:** code audit (phext_edit.rs 12,266 lines + oauth.rs 3,326 lines) and measurements against release binaries built and run **locally on aletheia-core** (Tctl ≤40 °C for security work; thermal-gated batches for benchmarks). Production was touched only with gentle read-only probes; no load, no destructive tests, no 429s. Full detail: [part-a/A-FINDINGS.md](part-a/A-FINDINGS.md) (13 evidence files), [part-b/B-MEASUREMENTS.md](part-b/B-MEASUREMENTS.md) (raw CSVs + harness in `part-b/raw/`, `part-b/scripts/`).
+
+---
+
+## The three answers, up front
+
+**1. Security — the core gate is strong; three real issues, one of them a policy landmine.**
+A validly signed but *unapproved* session got **403 on every protected route class**, and the MCP OAuth 2.1 server verified end-to-end (PKCE, exact-match redirects, replay-revokes-family, scope enforcement). Against that: **any X account is auto-admitted as an editor, permanently, on sign-in** (HIGH, a recorded 2026-11-05 ruling whose blast radius should be re-confirmed); an **unauthenticated unbounded request-body allocation** on the OAuth/MCP routes (MEDIUM); and **unbounded, unrate-limited dynamic client registration** (MEDIUM). 7 findings total (1 high, 2 medium, 3 low, 1 info bundle) against 24 verified-clean checks.
+
+**2. CPU per edit — ≈5 ms of server CPU at small scale, ≈795 ms at large scale.**
+One edit (navigate → change → Ctrl+S) is **4 HTTP roundtrips** (5 with the Nav tree open). At 0.54 MB / 793 scrolls it costs ≈5.3 ms server CPU (~6 ms wall). At 57.9 MB / 320k scrolls (synthetic ultra-class) it costs **≈795 ms CPU (~0.80 s wall; ~0.96 s with tree)**, dominated by whole-file re-derivation under one global lock: every navigation click rebuilds all 9 dimension densities over the index (**~225 ms**), every update re-serializes the entire 58 MB file to build an overview that never reads the buffer (**~189 ms**), every save re-serializes + rewrites the whole file even when nothing changed (**~157 ms**) — while the actual scroll read/write the user asked for costs **~0.3 ms**. Concurrency doesn't scale at all: throughput is flat (large file: ~6.2 ops/s at 1, 5, *and* 20 clients) while latency grows linearly (20 editors → ~3.2 s/op), because every request from every client queues on a single `Mutex<AppState>`. And the server holds **one open phext and one navigation cursor process-wide** — demonstrated live: one client's file switch and cursor moves hijack the other's session.
+
+**3. In-page phext server — YES, ship a hybrid; it is the only fix that removes roundtrips rather than shrinking them.**
+Step 1 (no protocol change): an in-page read/nav/search model for the open phext — parse once in the browser with the already-proven previewer-grade parser, navigate/search/tree locally, keep today's update+save writes. That deletes the two most-paid costs (225 ms/click navigation, per-keystroke full-file search) and the 7.1 MB tree payload, and it ends the shared-cursor interference for readers. Step 2 (small server change): file-addressed per-scroll writes with a SHA-256 base-hash precondition — the exact SyncBook protocol Phext Notepad already proved against this server on 2026-11-08 — which retires the one-open-phext constraint for writers. Full local-first (server as dumb storage): don't ship. Detail in Part C.
+
+---
+
+## Part A — Security findings (summary)
+
+Full findings with evidence: [part-a/A-FINDINGS.md](part-a/A-FINDINGS.md). Local instance ran with a known session secret, `PHEXT_EDITORS=github:100`, claims + desktop-SSO armed; sessions for negative tests were minted with the instance's own seal — the same code path production verifies.
+
+| # | Sev | Finding | Status |
+|---|---|---|---|
+| A-1 | **HIGH** | Any X account signing in is **auto-admitted as an editor permanently** (`phext_edit.rs:1214–1222`, recorded as Will's 2026-11-05 ruling; appended to `admitted-editors.txt`). X is live in production (`/api/session` → providers include `x`, ready:true). Any free X account → full library read/write via `/api/*` and MCP. | VERIFIED (code + live config); end-to-end exploit UNTESTED (needs a real X login). **Needs Will's re-confirmation of the ruling.** |
+| A-2 | MEDIUM | `read_body` allocates the raw `Content-Length` with **no cap, pre-auth**, on `/oauth/register|token|authorize` + `/mcp` + most `/api/*` POSTs. One unauthenticated request grew VmSize +262 MB tracking the declared length. Shipped nginx caps bodies at 16 MiB, but thread-per-connection means concurrent bodies still scale linearly; direct app-port exposure removes the bound. (Image/submission paths do this correctly with 413 pre-checks.) | VERIFIED locally |
+| A-3 | MEDIUM | **DCR is unauthenticated, unrate-limited, registrations never pruned**; each registration rewrites the whole `mcp-oauth.json` store. 30/30 flood registrations → 201; store grows unboundedly (write amplification included). | VERIFIED locally; live-exploitable |
+| A-4 | LOW | No socket timeouts + unbounded request line in the accept loop (slowloris class); a 12 s partial-header hold completed normally. nginx blunts it in production. | VERIFIED locally |
+| A-5 | LOW | Editor-facing errors disclose **absolute filesystem paths** (`/api/open`, `/api/phexts`, `/api/status`). Editor-only, but compounds A-1. | VERIFIED locally |
+| A-6 | LOW | `web/explore.html` inserts snapshot name/handle/evidence into `innerHTML` **unescaped**. Current 522-entry data contains zero `<`/`>` — latent only; the fields derive from third-party display names, so a future snapshot entry could execute script on the public explore page. Fix: reuse the previewer's `esc()`. | SUSPECTED (not exploitable with current data) |
+| A-7 | INFO | Stateless 14-day sessions (no revocation; logout is client-side only); **empty editors list = open gate** config hazard (`oauth.rs:904`; prod list contents unverifiable read-only); CIMD DNS-rebinding TOCTOU (bounded: https-only, no redirects, 64 KiB cap, 5 s timeout); `GET /mcp` 405-before-auth (no leak); Host-derived issuer fallback if `PHEXT_PUBLIC_URL` unset (prod sets it); CSP `'unsafe-inline'` trade-off (documented; no live injection found to arm it). | VERIFIED (design notes) |
+
+**Checked and clean — 24 verified negatives, each with a receipt in A-FINDINGS.md.** The load-bearing ones:
+- **Approved-editors gate (the key test):** minted unapproved session → `editor:false`, **403 on every read/write route, `/mcp`, `/oauth/authorize`, `/claim/dashboard`**. Forged/tampered/wrong-secret/expired cookies → 401 (constant-time HMAC compare). CSRF enforced on editor POSTs. Cookie flags correct (`HttpOnly; SameSite=Lax; Path=/`; `Secure` iff configured — production sets it).
+- **MCP OAuth 2.1, full local flow:** PKCE `plain`/absent rejected; redirect_uri exact-match (7 attack variants, no Location leak); **read-scope token attempting `write_scroll` → 403, scroll verified unchanged**; write-scope token verified end-to-end; **authorization-code replay and old-refresh-token replay both revoke the whole token family** (verified live on the instance); refresh cannot widen scopes.
+- **SSRF posture:** CIMD `client_id` URLs pointing at 127.0.0.1 / localhost / [::1] / decimal-IP refused pre-fetch; JWKS private-IP refused at fetch time; `safe_next` held against 11 payloads; desktop-SSO loopback clamping held against 8 payloads.
+- **Traversal/injection:** `/api/open` traversal matrix + in-library symlink escape all refused (canonicalize + prefix checks); coordinate edge cases (0, negatives, 26-digit overflow, NUL) → 400, no panic; stored-XSS sweep — scroll text is JSON-only and shell-escaped before linkification (sole exception: A-6); search is substring (no ReDoS), capped at 50.
+- **Images (PR #45):** sniff-only upload (SVG/HTML → 415), >8 MiB → 413 pre-read, serving re-sniffs (HTML payload → 404); **no xz path exists in the server** — decompression bombs N/A.
+- **Production surface:** HSTS/CSP/nosniff/XFO/Referrer/Permissions headers on shell, API, OAuth, and 404s; HTTP→HTTPS 301; TLS 1.3; `/mcp` anonymous → 401 with proper Bearer challenge; `mcp-oauth.json` is 0600 and stores only HMAC digests.
+
+**UNTESTED (explicit):** real provider sign-in legs (hence A-1 end-to-end), `private_key_jwt` and CIMD happy paths, production editors-list contents, mass floods, TLS <1.2 refusal.
+
+---
+
+## Part B — CPU per edit + scalability (summary)
+
+Full tables, method, and raw data: [part-b/B-MEASUREMENTS.md](part-b/B-MEASUREMENTS.md). Method in brief: CPU = server `utime+stime` from `/proc/<pid>/stat` over batches of N≥30 ops (tree 10, open 20) after warm-up; wall = loopback per-request latency, one connection per request (matching the server's thread-per-connection, no-keep-alive design). Datasets: barnacles 0.54 MB/793 scrolls; CYOA 4.6 MB/830 unique scrolls (81,709 physical segments — the index dedups); synthetic large 57.9 MB/320,000 scrolls (deterministic, SHA-256 recorded; production `ultra.phext` figures derived from it are **estimates**).
+
+### Roundtrip census (what one edit costs in HTTP)
+
+- **Page load:** 5 requests (4 API) — including the same home/nav payload fetched **twice** (`bootEditor` + `openFromLocation` no-fragment branch). File switch: 4–5 API calls.
+- **Navigate:** exactly 1 request per move (`/api/goto|next|prev|dim|…`), but every response is the *full* nav payload. The shell never uses the cheap `GET /api/scroll/<coord>` route. First Nav-panel open: `GET /api/tree` — the entire coordinate list, **7.14 MB of JSON** at large scale.
+- **Type:** 0 requests. **Ctrl+S:** `POST /api/update` + `GET /api/nav` + `POST /api/save` (+ tree reload if the panel was opened).
+- **One edit total: 4 roundtrips (5 with tree).** Search fires `POST /api/search` **per keystroke, no debounce** — a 6-char query is 5 full searches queued under the lock.
+
+### Per-op cost (mean CPU ms / wall ms)
+
+| op | small (0.54 MB) | mid (4.6 MB) | large (57.9 MB) |
+|---|---|---|---|
+| open/load | 1.0 / 1.4 | 6.0 / 6.1 | **200.5 / 201.3** |
+| status | 0.67 / 0.87 | 3.0 / 3.6 | **108.0 / 107.9** |
+| nav / goto | 1.33 / ~1.4 | 2.0–2.3 / ~2.4 | **~225 / ~225** |
+| scroll read | 0.33 / 0.34 | 0.33 / 0.23 | **0.67 / 0.26** |
+| tree | 1.0 / 1.3 | 3.0 / 3.7 | **169.0 / 169.9** (+7.1 MB response) |
+| search (full scan) | 2.0 / 0.85 | 24.0 / 4.4 | **223.0 CPU / 153.8 wall** |
+| update | 1.0 / 0.95 | 3.67 / 3.9 | **188.7 / 189.1** |
+| save | 1.67 / 2.2 | 7.33 / 9.0 | **157.0 / 162.3** |
+
+**Why (code receipts in B §2):** one global `Mutex<AppState>` is taken *before* route dispatch, for the full request. `/api/update` → `rebuild_overview()` serializes all 58 MB into a `Vec` that `LatticeOverview::build(_buffer, …)` **never reads**. `/api/save` serializes unconditionally — saves 2–30 of the batch ran with an *empty* overlay and cost the same as save 1. `/api/status` serializes the whole file to report its length. Search serializes + rescans per keystroke under the lock (rayon above 512 KB — the only multi-core op — but still lock-held). Nav rebuilds Sentron + 9 dimension densities over the whole index per click: O(scrolls), proven by the mid dataset (8.5× the bytes, same scroll count → nav stays ~2 ms; large's 320k scrolls → 225 ms). Save/update carry a byte term too: effective slopes ≈2.7 and ≈3.3 CPU-ms/MB (three-point estimates). The editor path shares the MCP disease **in mutated form**: PR #46's cache + TOC paging fixed MCP only; the editor never re-opens its file, but re-derives whole-file artifacts from the one lattice it holds, per request, under the lock. The storage layer itself is healthy — a scroll read is 0.26 ms at 320k scrolls.
+
+### Concurrency + memory
+
+| scale | clients | throughput | mean latency |
+|---|---|---|---|
+| mid | 1 / 5 / 20 | 451 / 525 / 534 ops/s | 2.2 / 9.3 / 36.4 ms |
+| large | 1 / 5 / 20 | 6.25 / 6.20 / 6.15 ops/s | 160 / 790 / **3,194 ms** |
+
+Flat throughput + linearly growing latency = pure lock queueing; the ceiling is 1 ÷ CPU-per-op. **Different files are impossible:** one lattice + one cursor process-wide — demonstrated live (`raw/interference.log`): client B's `/api/open` changed client A's open file; A's `goto` moved B's cursor; dirty state is shared. Memory: ~122 MB RSS idle with the large file open (58 MB mmap + ~28 MB index + overview structures), peak observed 375 MB after search/tree history; RSS doesn't multiply per client — concurrency costs delay, not memory. (One incident, reported honestly in B §4: the first large-concurrency instance vanished mid-run with no panic/OOM/coredump evidence at a 75.8 °C minute; large C=5/C=20 were re-run supervised on a distinct port and completed cleanly, and a sampler pgrep collision in that re-run is flagged in the raw log rather than hidden.)
+
+**Answer to Will's question, verbatim form:** one edit costs **about 5 ms of server CPU at small scale and about 795 ms at large scale** (~0.96 s with the tree in play), **dominated by whole-file re-derivation under the single global lock** — densities per navigation click, full serialization per update/status/search, unconditional re-serialization per save — while the requested read/write itself costs ~0.3 ms.
+
+---
+
+## Part C addendum (2026-11-10) — Will's amendment: the streamed, view-driven cache
+
+Will's direction, verbatim: "the in-page cache can be intelligent — just stream scrolls as you view them into the cache ;)" (task 25.7.10/9.7.12/7.6.10).
+
+This amends Step 1's loading model. The report's Step 1 priced a cold open as a bounded one-time cost — a 58 MB raw payload (xz-seal est. 6–15 MB) plus a one-time in-tab parse (est. 0.5–3 s at 320k scrolls). Will's amendment deletes the cold open entirely:
+
+- **Open with the skeleton only.** The manifest/index comes down first (coordinates + per-scroll hashes — the SyncBook manifest shape). The tree, navigation, and search structure are local immediately, at a tiny fraction of the old 7.1 MB tree payload, because the index is coordinates and hashes, not content.
+- **Stream scrolls as viewed.** A scroll's content is fetched the first time the reader actually lands on it, then held in the in-tab cache. Reading is sequential and local — the working set a session ever touches is a small slice of 320k scrolls, and it is exactly the slice that gets cached. Prefetch can warm the neighbourhood of the current coordinate (adjacent scrolls in the reading order) so navigation still feels instant; that is an optimisation, not a requirement.
+- **The cache is the sync substrate.** Each cached scroll carries the SHA-256 base hash it was fetched at. An edit applies locally against the cached copy and syncs as a per-scroll delta guarded by that base hash — the SyncBook protocol already proven against this server (36/36 E2E, 2026-11-08). Both-moved surfaces as a conflict, never a silent overwrite. On revisit, a cached scroll revalidates by hash: unchanged costs a manifest comparison, not a re-download.
+- **What this changes in the verdict's economics.** The initial-payload problem — the main cost the hybrid design still carried — is gone; time-to-first-scroll is the manifest fetch plus one scroll. Memory stays slice-based (the report's ~90–250 MB estimate was for a fully-resident parse; a view-driven cache holds only the visited slice plus index). The bulk/range read route remains worth having, but its job changes: it serves prefetch ranges and manifest pages, not a whole-file cold pull. Step 2 (file-addressed per-scroll writes with base-hash precondition + server-side SyncBook manifest) is unchanged and becomes the only server work the design truly needs.
+- **Honest limits.** Search over unvisited regions needs the server (or a server-built term index shipped with the manifest) — streaming makes content local, not the unvisited corpus. First visits to very large individual scrolls still pay their own fetch. Neither limit touches the navigation roundtrips Step 1 exists to delete.
+
+Verdict unchanged — ship the hybrid — with Step 1's loading model replaced by: manifest-first, stream-on-view, cache-with-hashes.
+
+## Part C — In-page phext server: verdict
+
+**Question:** "can we ship an in-page phext server to reduce roundtrips?"
+
+### What it means, concretely (three nested options)
+
+1. **In-page read model:** the browser fetches the open phext (whole or in coordinate-range pages), parses it in-tab (JS or WASM libphext), and holds the scroll map locally. Navigation, tree, and search become local computations. Writes keep today's `/api/update` + `/api/save`.
+2. **In-page editing model:** edits also apply locally first; a sync layer pushes per-scroll deltas guarded by SHA-256 base hashes (SyncBook), server authoritative at sync points.
+3. **Full in-page server:** browser is the primary store; server is a dumb persistence endpoint.
+
+### Feasibility is already proven — twice
+
+- **Parsing in the browser is a solved problem at this scale.** The Phext Previewer (2026-11-07) parses real phexts in-page byte-for-byte identical to the reference parser, including a 353,015-slot file; the same parser family already ships on edit.phext.io itself as the public previewer utility (PR #25). Option 1's hardest component exists and is verified.
+- **The sync protocol is already proven against this exact server.** Phext Notepad ↔ edit.phext.io sync (2026-11-08, `~/workspace/phext-notepad-perf/REPORT-SYNC.md`): per-scroll SHA-256 base hashes, both-moved = conflict surfaced (never silent overwrite), deletions = cleared scrolls, 36/36 E2E against the real binary. Its documented pain point is precisely per-scroll HTTP — a 7k-scroll first pull takes
+...[truncated 8702 chars]
+# Neovim + Phext — Design: Phext-Scale Navigation in a Modal Editor
 
 Title: Neovim + Phext — Design: Phext-Scale Navigation in a Modal Editor
 Source: ~/workspace/goals/neovim-phext-support-merge-ready-pr-compiled-with-phcc/files/neovim-phext-design.md
