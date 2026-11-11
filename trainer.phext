@@ -107,6 +107,7 @@ title — source.)
 - 1.1.1/3.3.1/1.1.1 — Revision brief R2 — Will's seven notes — ~/workspace/phext-walkthrough/REVISION-BRIEF-R2.md
 - 1.1.1/3.3.2/1.1.1 — Revision brief R3 — Will's eight steps — ~/workspace/phext-walkthrough/REVISION-BRIEF-R3.md
 - 1.1.1/3.3.3/1.1.1 — Revision brief R4 — human intervals — ~/workspace/phext-walkthrough/REVISION-BRIEF-R4.md
+- 1.1.1/3.3.4/1.1.1 — Revision brief R5 — Tier-5 polish — ~/workspace/phext-walkthrough/REVISION-BRIEF-R5.md
 - 1.1.1/3.4.1/1.1.1 — Production log — original rough cut — ~/workspace/phext-walkthrough/production/ROUGH-CUT-LOG.md
 - 1.1.1/3.4.2/1.1.1 — Production log — round 1 revised cut — ~/workspace/phext-walkthrough/production/ROUGH-CUT-REVISED-LOG.md
 - 1.1.1/3.4.3/1.1.1 — Production log — round 2 cut — ~/workspace/phext-walkthrough/production/ROUGH-CUT-R2-LOG.md
@@ -358,6 +359,16 @@ The worked example's style chain:
   beat in the scale section) — flair as a named list in the
   brief, not as vibes.
 
+- Round 5 (Tier-5 polish, Will, 2026-11-11) moved the register
+  from explanation to performance: Animusic-quality sound
+  design (every effect an instrument event, frame-locked, with a
+  tuned body and a natural decay), a concert-grand piano in the
+  bed, and exactly one fourth-wall break placed at the film's
+  most opportune moment — the spot where the film already hands
+  the viewer something real (in the worked example, the scannable
+  QR river in the scale section). One break, in the established
+  drawn register, then back to the subject.
+
 Rules that generalize:
 - A style note is never passed to a worker raw; it is expanded
   into per-element instructions (which elements are drawn, which
@@ -448,6 +459,38 @@ Rules that generalize:
   A multi-output ffmpeg invocation that silently drops mapped
   outputs is also on record — write stems in separate, asserted
   steps.
+
+## Round 5 — Tier-5 polish: continuity at 60 fps (Will, 2026-11-11)
+
+- **60 fps masters** (supersedes the 30 fps format line above):
+  1920×1080 at 60 fps, H.264 + AAC, faststart. Motion is authored
+  or interpolated to native 60 fps — never frame-doubled 30 fps
+  content. Drawn strokes are timed per stroke so the hand feel
+  survives the higher rate.
+- **No discontinuities.** Zero hard cuts anywhere: picture, audio,
+  level, motion. Every join eases (0.4 s dissolve by default;
+  longer crossfades where smoothness needs them, matched on
+  picture and audio, exceptions logged). Every camera or diagram
+  move eases in and out — nothing starts or stops dead, no level
+  jumps.
+- **A steady bed.** The bed's dynamic range is compressed so its
+  level stays mostly constant: per-section bed loudness spread
+  within ±1.5 dB film-wide, within-section swells capped at
+  +3 dB over the section mean. The narration-gap rule is
+  unchanged (bed ≥10 dB under the voice at every speech moment,
+  measured per section on stems) — steady does not mean louder.
+- **Grand piano.** The bed's piano voice is a concert grand:
+  full-range voicing, pedal resonance, natural damper decay.
+- **Concept ladder.** Before assembly, audit the concept order
+  and log the ladder: one new primitive per section, nothing used
+  before it is introduced, concrete instance before abstraction.
+  Fixes reorder or bridge visually — narration wording is not
+  the adjustment knob.
+- **Attention cadence.** Something on screen changes at least
+  every ~4 s; a micro-payoff lands at least every ~20 s; no
+  static hold over ~5 s outside the deliberate breath before the
+  CTA and the CTA hold. The momentum curve is re-mapped with
+  these beats placed on it.
 # Stage 8 — Verification & delivery
 
 A cut is not delivered because the worker says it is done. The
@@ -3299,6 +3342,110 @@ Will's comments for the next round, verbatim in substance:
 ## Carried constraints (unchanged)
 
 Rounds 1–3 in full: bright white construction paper, hand-drawn in real time, real clicks for interlink, full entries, plain language, original music bed ducked under narration, pro SFX palette, intro slides, agenda + CTA, Emise flair, ranch-only rendering under thermal gates, −14 LUFS master, no purchases, nothing posted, Gate 1 (Will's listen) gates release. Round 3's known narration-coverage gap is closed by rule 1 of this brief, not by trimming Will's/Emi's words silently — if a script must change to fit its slot, the change is a script edit, visible in SCRIPT-R4.md's diff summary.
+# Revision brief R5 — Tier-5 polish
+
+Title: Revision brief R5 — Tier-5 polish
+Source: ~/workspace/phext-walkthrough/REVISION-BRIEF-R5.md
+Inscribed: 2026-11-11
+SHA-256: 8420e09b03d16780d8112f1e8d9defb29900121b69f828a7f28e0a7393f23e17
+
+---
+# Revision brief R5 — Tier-5 polish (Will, 2026-11-11 07:46 CST)
+
+Will's eight notes, verbatim in substance, each translated into
+production instructions with measurable checks. Round 5 supersedes
+round 4's format where they conflict (60 fps is the headline
+change); everything not mentioned here carries over from R4 —
+slot-first slotting at 150 wpm, zero narration boundary crossings,
+trainer.phext updated and republished, Gate 1 still gates any
+public release.
+
+## 1. Background audio: mostly the same volume
+
+Narration stays the loudest element at every moment (the R4
+≥10 dB rule stands unchanged), but the bed stops behaving like
+several tracks at different levels. Compress the bed's dynamic
+range: hold its section-to-section loudness spread to within
+±1.5 dB across the whole film, and cap within-section swells at
++3 dB over the section mean (swells only in drawn-only gaps, as
+before). Verify on the bed stem: per-section loudness table in
+the production log, spread and swell both reported as measured
+numbers.
+
+## 2. Sound effects: Animusic quality
+
+Every SFX is an instrument event, not a noise token.
+- Each visual event gets a pitched, resonant sound whose onset is
+  frame-locked to the event it marks (whoosh = bowed swell, link =
+  mallet strike, draw-on = plucked string or kalimba, page =
+  brushed chime, success = resolved chord).
+- Every sound has a tuned body and a natural decay tail — no
+  clipped envelopes, no raw noise bursts.
+- One timbral family per film so the effects cohere as a single
+  instrument ensemble; each SFX's recipe (frequencies, envelope,
+  decay) is logged, as in R2–R4.
+
+## 3. Piano: grand
+
+The bed's piano becomes a concert grand: full-range voicing,
+sustained-pedal resonance, natural damper decay. No thin synth
+piano, no looped two-bar figure that reads as a placeholder.
+Where a smaller instrument carried a passage in R4, re-voice it
+for the grand or keep the passage sparse enough that the grand
+still reads grand.
+
+## 4. No discontinuities; smooth transitions
+
+Zero hard cuts anywhere — picture, audio, level, or motion. Every
+join is eased: the 0.4 s dissolve remains the default transition
+unless a join needs a longer crossfade to stay smooth, in which
+case the overlap is matched on both picture and audio and the
+exception is logged. Nothing pops: no level jumps, no background
+that changes mid-shot, no motion that starts or stops dead
+(ease-in/ease-out on every move).
+
+## 5. 60 fps
+
+New master format: 1920×1080 at 60 fps, H.264 + AAC, faststart.
+Motion is rendered at 60 — pans, zooms, and draw-ons are authored
+or interpolated to native 60 fps motion, never 30 fps content
+frame-doubled. Hand-drawn strokes keep their hand feel at 60
+(stroke timing authored per stroke, not per duplicated frame).
+
+## 6. Concepts in gradually increasing complexity
+
+Audit the film's concept ladder and publish the ladder in the
+production log: each section introduces at most one new primitive
+on top of concepts already established; nothing is used before it
+is introduced; each new primitive gets a concrete instance before
+any abstraction built on it. Where the current order violates the
+ladder, fix by reordering segments, bridging with a simpler
+instance, or adding a short drawn bridge — never by adding
+narration words (the zero-wording-change discipline holds unless
+Will directs otherwise). §07 (scale reveal) stays the peak because
+it composes only primitives the viewer already owns.
+
+## 7. Hold the viewer's attention
+
+The engagement contract: something changes on screen at least
+every ~4 seconds (a stroke completes, a move lands, a diagram
+grows); a micro-payoff (a link lands, a count resolves, a map
+completes) at least every ~20 seconds; the R4 momentum curve is
+re-mapped at 60 fps with these beats placed on it. No static hold
+longer than ~5 seconds except the deliberate breath before the
+CTA and the CTA hold itself.
+
+## 8. Break the fourth wall at the opportune moment
+
+Exactly one break, placed at the opportune moment. Proposed
+placement (Will may relocate): inside §07, at the QR river — the
+one moment the film already hands the viewer a real artifact. A
+drawn Emise looks out at the viewer; the QR codes are real, and
+the beat invites the viewer to scan one and land inside the map
+the film has been describing. One beat, a few seconds, in the
+established drawn register — the film acknowledges the viewer
+once, then returns to the subject. If Will prefers a different
+moment, his placement wins.
 # Production log — original rough cut
 
 Title: Production log — original rough cut
@@ -4064,12 +4211,14 @@ checks, not assertions:
   real clicks and verified.
 # Filmography — the cuts this process produced
 
-All cuts: 1920×1080, 30 fps, H.264 + AAC, faststart, built
+Cuts 1–5: 1920×1080, 30 fps, H.264 + AAC, faststart, built
 entirely on aletheia-core, narration by Emise (Aria) at 100%.
 Videos live in ~/workspace/phext-walkthrough/production/ and are
 referenced here by name + hash (not embedded — too large for the
-repo). Delivered to Will by expiring Muse file-storage links;
-Gate 1 (his narration listen) gates any release; none is posted.
+repo). Round 4 was delivered 2026-11-11 over the tailnet,
+served from aletheia-core by HTTPS after the file exceeded Muse
+file-storage's size cap. Gate 1 (his narration listen) gates any
+release; none is posted.
 
 1. rough-cut.mp4 — the ORIGINAL 12-beat film (WALKTHROUGH.md
    script; narration 364 s recorded).
@@ -4129,3 +4278,9 @@ Gate 1 (his narration listen) gates any release; none is posted.
    loudness −14.75 LUFS / −1.09 dBTP · completed 2026-11-11.
    Brief: 1.1.1/3.3.3/1.1.1 · script: 1.1.1/3.2.4/1.1.1 ·
    log: 1.1.1/3.4.5/1.1.1.
+
+6. ROUND 5 — Tier-5 polish (briefed 2026-11-11 07:46 CST, not
+   yet built): 60 fps master, steady bed level, Animusic-quality
+   SFX, grand piano, zero discontinuities, concept ladder audited,
+   attention cadence, one fourth-wall break at the opportune
+   moment. Brief: 1.1.1/3.3.4/1.1.1.
