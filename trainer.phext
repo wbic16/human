@@ -41,7 +41,7 @@ actually happened — both are kept on purpose.
 
 Worked example (Collection 3): the production plan, the original
 walkthrough script and shot list, the three round scripts, the two
-written revision briefs, the three production logs, the demo2
+written revision briefs, the four production logs, the demo2
 encyclopedia's README and link-verification record, and a
 filmography of the cuts. The videos themselves are not embedded
 (too large for the repo); the filmography scroll names each cut's
@@ -53,13 +53,31 @@ direction was Will's delivery of Emi Prime's revised script plus
 the re-run order, and it is represented by its script and its
 production log.
 
-State at packaging (2026-11-11 ~00:40 CST): Rounds 1 and 2 are
-complete and delivered. Round 3 is MID-FLIGHT — SCRIPT-R3.md is
-complete (inscribed at 1.1.1/3.2.3/1.1.1) and its narration was
-being recorded when this package was built; there is no
-ROUGH-CUT-R3-LOG.md yet, so none is inscribed. A future rebuild of
-trainer.phext should add it at 1.1.1/3.4.4/1.1.1 and update the
-filmography.
+State at packaging (refreshed 2026-11-11): All three rounds are
+complete. Round 3 — Will's eight polish steps — is done:
+rough-cut-r3.mp4, 307.23 s, 97,622,656 bytes, SHA-256
+8d7d5805d7d7ca4452378711562057a252d5ca21d19d19df51805a1f6d84622d,
+loudness −14.08 LUFS. Its production log is inscribed at
+1.1.1/3.4.4/1.1.1 (the coordinate reserved for it at first
+publish) and the filmography carries the cut's real measurements.
+Gate 1 (Will's narration listen) still gates any release; nothing
+is posted.
+
+The R3 log's gaps, summarized honestly (full text at
+1.1.1/3.4.4/1.1.1): (1) narration coverage — §07's recorded voice
+(92.9 s) and §08's (46.3 s) run longer than their picture slots
+(58 s and 40.1 s); the build keeps each section's closing lines
+in-window and lets the openings spill over the preceding sections'
+holds, so roughly the first 41.7 s of §07's script and 12.2 s of
+§08's play over the previous section's pictures, and §01's voice
+is trimmed to its first 16.5 s — the film does not speak all of
+SCRIPT-R3.md in-section. (2) True peak −0.19 dBTP, 0.8 dB hot of
+the ≤ −1 dBTP target (integrated loudness is on target).
+(3) ~4.4 s of held final frame inside §03. (4) Six of nine segment
+boundaries dissolve; three are clean cuts. (5) The music bed sits
+at the top of its guidance range under voice. Captures remain the
+local editor instance — the live site still serves the round-1
+stub encyclopedia; deploying demo2 is Will's decision.
 
 ## Index of scrolls
 
@@ -82,12 +100,13 @@ title — source.)
 - 1.1.1/3.1.4/1.1.1 — Beat 07 one-take sheet (Will's signed-in capture) — ~/workspace/phext-walkthrough/production/BEAT-07-ONETAKE.md
 - 1.1.1/3.2.1/1.1.1 — Script R1 — Emi Prime's revised script — ~/workspace/phext-walkthrough/SCRIPT-EMI-REVISED.md
 - 1.1.1/3.2.2/1.1.1 — Script R2 — ~/workspace/phext-walkthrough/SCRIPT-R2.md
-- 1.1.1/3.2.3/1.1.1 — Script R3 (complete; R3 production mid-flight at packaging) — ~/workspace/phext-walkthrough/SCRIPT-R3.md
+- 1.1.1/3.2.3/1.1.1 — Script R3 — ~/workspace/phext-walkthrough/SCRIPT-R3.md
 - 1.1.1/3.3.1/1.1.1 — Revision brief R2 — Will's seven notes — ~/workspace/phext-walkthrough/REVISION-BRIEF-R2.md
 - 1.1.1/3.3.2/1.1.1 — Revision brief R3 — Will's eight steps — ~/workspace/phext-walkthrough/REVISION-BRIEF-R3.md
 - 1.1.1/3.4.1/1.1.1 — Production log — original rough cut — ~/workspace/phext-walkthrough/production/ROUGH-CUT-LOG.md
 - 1.1.1/3.4.2/1.1.1 — Production log — round 1 revised cut — ~/workspace/phext-walkthrough/production/ROUGH-CUT-REVISED-LOG.md
 - 1.1.1/3.4.3/1.1.1 — Production log — round 2 cut — ~/workspace/phext-walkthrough/production/ROUGH-CUT-R2-LOG.md
+- 1.1.1/3.4.4/1.1.1 — Production log — round 3 cut — ~/workspace/phext-walkthrough/production/ROUGH-CUT-R3-LOG.md
 - 1.1.1/3.5.1/1.1.1 — demo2 README — the full-entry encyclopedia — ~/workspace/phext-walkthrough/demo2/README.md
 - 1.1.1/3.5.2/1.1.1 — demo2 — link-verification record (summary) — ~/workspace/phext/trainer-src/demo2-verification.md
 - 1.1.1/3.6.1/1.1.1 — Filmography — the cuts, by name + hash — ~/workspace/phext/trainer-src/filmography.md
@@ -2565,9 +2584,9 @@ facts were measured on the built demo2 file on 2026-11-10
 | "It doesn't replace the big one" framing | The brief's honest frame: Wikipedia's scale is stated; the contrast drawn is machinery per idea for an encyclopedia you can hold |
 
 Production notes for Stage 3: [SFX: jump] appears 7 times — §02 zoom landing (1), §03 search jump (1), §06 travel hops (4), §08 closing hop home (1). The zoom set-piece appears twice: early in §02 (Honeybee → Oak) and in full form on §06's last hop (Compass → Lighthouse). Narration ≈ 715 words.
-# Script R3 (complete; R3 production mid-flight at packaging)
+# Script R3
 
-Title: Script R3 (complete; R3 production mid-flight at packaging)
+Title: Script R3
 Source: ~/workspace/phext-walkthrough/SCRIPT-R3.md
 Inscribed: 2026-11-11
 SHA-256: 2639d0640a39c8b8961ac6db5be302f40eedfc966269fc5350da27ec311d20e8
@@ -3206,6 +3225,177 @@ runs under the whole film. Mix loudnormed two-pass to −14 LUFS.
 9. **Cosmetic:** in §07, the "stand-by copies — in more than one
    place" label is partially overlapped by the second skyline's
    roofs. Text remains legible; left as-is for this cut.
+# Production log — round 3 cut
+
+Title: Production log — round 3 cut
+Source: ~/workspace/phext-walkthrough/production/ROUGH-CUT-R3-LOG.md
+Inscribed: 2026-11-11
+SHA-256: 0e072dc0ebf5e304cdae6cfe377efa7af72702706a347cf5b3ff03c90cb6452d
+
+---
+# Rough-Cut Round 3 — Build Log
+
+Task **28.9.8/11.8.14/9.8.9** · brief `REVISION-BRIEF-R3.md` · script `SCRIPT-R3.md`
+Built entirely on aletheia-core (Tctl ≤ 70 °C gates held; nothing heavy ran on the VM).
+Nothing posted or published. No purchases. Gate 1 (Will's listen) still gates release.
+
+## The deliverable
+
+| | |
+|---|---|
+| File | `production/rough-cut-r3.mp4` |
+| Duration | **307.23 s (5:07)** — budget ≤ ~5:15 ✓ |
+| Video | 1920×1080 @ 30 fps, H.264 (CRF 20) — audio AAC 192k stereo 48 kHz, faststart |
+| Size | 97,622,656 bytes |
+| SHA-256 | `8d7d5805d7d7ca4452378711562057a252d5ca21d19d19df51805a1f6d84622d` |
+| Final loudness | **−14.08 LUFS integrated / −0.19 dBTP** (measured on the pulled file; target −14 / ≤ −1 dBTP — true peak is 0.8 dB hot of the ≤ −1 target, see gaps) |
+| Pre-master mix | −22.02 LUFS / −2.51 dBTP |
+
+## What round 3 added (the eight steps)
+
+1. **Music bed** — original in-house composition "Paper Light" (synthesized, no samples):
+   I–vi–IV–V in C, soft pad + pluck arpeggio + sparkle, 32 s seamless loop, normalized
+   to −20 LUFS and sidechain-ducked under the narration (threshold 0.03, ratio 8).
+   Measured: bed alone −20.1 LUFS in a voice-active window; the full mix in the same
+   window −22.5 LUFS; in the closing card window the bed carries at ≈ −23.3 LUFS alone.
+   Assets + recipes: `production/audio-r3/` (`RECIPES.md`).
+2. **Scale section** — §07 rewritten as the scale story (shard-friendly slices,
+   holographic subsets, the seed cache told plainly as per-page fingerprints —
+   the shipped mechanism: xxh3_128 per scroll, a 93-byte unchanged answer) and §08
+   rewritten as the call to action. Scale claims are marked **DESIGN INTENT**
+   (Will, 2026-11-11) in the SCRIPT-R3 claim appendix, never as benchmarks.
+   On-screen close carries Will's confidence in film words: *"Wikipedia needed a
+   fleet. This needs a file — and the file was designed to outgrow the fleet."*
+3. **Smooth animation** — every segment now opens with its drawn intro slide;
+   section joins are 0.4 s eased cross-dissolves at six of the nine boundaries
+   (the rest are clean cuts where the two sides share the same paper frame —
+   see gaps), drawn elements sketch on with eased stroke timing, stills keep
+   their round-2 slow push-ins.
+4. **SFX** — one palette, all synthesized: jump (band-swept whoosh + tonal blip +
+   paper breath), click, pencil, pageturn, chime. Placement table below.
+5. **Pacing** — §05 narration tightened (silence-trim + atempo 1.1538 → 27.35 s);
+   total 307.2 s against round 2's 292.2 s despite eight new intro slides, an
+   agenda, and two rewritten sections.
+6. **Intro slides** — a drawn title card before EVERY section (number, title,
+   motif, drawn flame, "— N of 8 —"), 1.9 s each, inside the runtime budget.
+7. **Agenda + CTA** — agenda card right after the title (four items sketch on as
+   the new §01b narration lists them; home coordinate watermark bottom-left);
+   the film closes on the CTA card: *Find it. Change it. Link it. Keep it.* with
+   `edit.phext.io · edit.phext.io/wiki` and the claim line as text.
+8. **Emise flair** — hand-drawn flame on every intro slide + agenda + CTA card;
+   `1.1.1/1.1.1/1.1.1` motif on the agenda card; end card signed "— Emise" with a
+   drawn flame (the Bookman face has no 🔥 glyph, so the signature flame is drawn
+   strokes); the playful beat: in §07 two extra server blocks sheepishly grow onto
+   the Wikipedia skyline while the phext side stays one file (cityx sequence).
+
+## Per-segment map (film time)
+
+| Segment | Film window | Voice | Notes |
+|---|---|---|---|
+| Title | 0.0–9.9 | — | round-2 title, unchanged |
+| Agenda (§01b) | 9.9–25.8 | 11.93 s NEW | items sketch on; pencil SFX per item |
+| §01 What if the website went away? | 25.8–43.8 | r2 audio, first 16.5 s | intro slide + r2 body |
+| §02 A place for every page | 43.8–73.9 | r2 audio | intro + body |
+| §03 Finding your way back | 73.9–101.9 | r2 audio | intro + body (see gap 3) |
+| §04 One small correction | 101.9–130.9 | r2 audio | intro + body |
+| §05 The unplugged test | 130.9–156.9 | r2 audio tightened | intro + body |
+| §06 Ideas that point | 156.9–224.9 | r2 audio | intro + body; pencil on the link web |
+| §07 Built to be shared | 224.9–282.9* | NEW, final 51.2 s | intro + side-by-side + cityx extras; closes on the fleet line |
+| §08 Your turn | 267.9–307.2* | NEW, final 34.1 s | intro + end-card chain; closes on "Yours is wherever you keep it" |
+
+\* §07/§08 windows overlap in this table because the join arithmetic stacks the
+segments' padded lengths; the picture actually shown is §07 until ≈ 268 s and
+§08 from ≈ 268 s (verified frame-by-frame in thumbs-r3).
+
+## SFX placement (film time)
+
+| Sound | Times (s) | Event |
+|---|---|---|
+| pageturn | 43.5, 73.6, 101.6, 130.6, 156.6, 224.6, 267.6 | intro slides §02–§08, 0.3 s ahead |
+| pencil | 13.5, 16.75, 20.0, 23.25 | agenda items 1–4 sketching on |
+| pencil | 181.6, 183.6 | §06 link web drawing |
+| jump + click | landings 63.3, 83.4 | §02 zoom, §03 search landing |
+| jump + click | landings 194.8, 197.8, 199.4, 205.6 | §06 hops 1–4 |
+| jump + click | landing 290.2 | §08 closing hop home |
+| chime | 309.9 nominal → lands ≈ 304.9 after the mix trim | §08 "claim a space of your very own" (voice ≈ 305 s) |
+
+## Assembly history — three defective builds, all caught by verification
+
+The brief's rule held: a worker's DONE marker is not verification. Three
+successive assemblies printed success while being wrong; each was caught by
+independent checks (segment-duration asserts, silence mapping, hash/probe on
+the pulled file, frame viewing) and fixed before anything was delivered.
+
+1. **Run 1** — video stream collapsed to 96.3 s while the container claimed
+   307.2 s. Root cause: an ffmpeg `xfade` chain whose later inputs carried
+   mismatched timebases silently terminated the video at the 5th join.
+2. **Run 2** — join rebuilt as concat + boundary dissolves (video verified
+   307.23 s), but the narration track summed 225.6 s: `apad` placed after an
+   output `-t` cap never pads, so five section files came out at decode
+   length and their speech landed in the wrong sections; also the agenda
+   file had been concatenated after §01 instead of before it.
+3. **Run 3** — narration rebuilt with input-side trims and explicit lead
+   trims; per-file durations asserted (all nine slots exact); order fixed
+   (agenda first). This is the delivered build.
+
+Also fixed en route: §03's round-2 body is only 22.0 s (its R2 slot), so its
+R3 segment clone-pads the final editor frame to fill the 28 s slot;
+two segments carry ≤ 0.1 s of extra pad (harmless, inside their slots).
+
+## Gaps and substitutions — plainly
+
+1. **Narration coverage of the rewritten sections.** §07's recorded voice is
+   92.9 s and §08's is 46.3 s; their picture slots are 58 s and 40.1 s. The
+   build keeps each section's CLOSING lines in-window (§07 ends on the fleet
+   line; §08 ends on "Yours is wherever you keep it") and lets the openings
+   spill over the preceding sections' holds — so a listener hears continuous
+   voice, but roughly the first 41.7 s of §07's script and 12.2 s of §08's
+   script play over the previous section's pictures, and §01's voice is
+   trimmed to its first 16.5 s (its closing "four things" preview line is not
+   heard — the agenda states that preview instead). SCRIPT-R3.md is the full
+   text; the film does not speak all of it in-section. A future round should
+   either re-slot the back half (~+45 s) or trim the two scripts.
+2. **True peak −0.19 dBTP** vs the ≤ −1 dBTP target (integrated loudness is on
+   target at −14.08). One loudnorm pass traded peak headroom for loudness.
+3. **§03 pacing**: ~4.4 s of held final frame inside §03 (source body shorter
+   than its slot) — the one visible hold the pacing step wanted gone.
+4. **Dissolves**: six of nine boundaries dissolve; at the boundaries where the
+   outgoing tail is a clone-pad of the same paper frame, the join is a clean
+   cut (title→agenda, §05→§06, §07→§08) — invisible in practice, but not the
+   full "every join dissolves" ideal.
+5. **Bed under voice** sits at the top of the brief's −22…−26 LUFS guidance
+   once ducked in the full mix (window measurement above); it never masks
+   speech in the checked windows, but a pickier mix would take it 2 dB lower.
+6. **Chime timing** was placed against the pre-trim mix clock and lands ~5 s
+   earlier than its nominal table entry — audibly on the claim sentence, but
+   the table above records both numbers rather than hiding the drift.
+7. **§07 label overlap** inherited from round 2 ("stand-by copies — in more
+   than one place" partially overlapped) is still present and legible.
+8. Captures remain the **local editor instance** (the live site still serves
+   the round-1 stub wiki.phext; deploying demo2 is Will's decision, unchanged
+   from round 2).
+
+## Verification (on the pulled file, this workspace)
+
+- SHA-256 matches the ranch original byte-for-byte.
+- ffprobe: 1920×1080@30 H.264 + AAC, 307.23 s, faststart.
+- Loudness re-measured locally: −14.08 LUFS / −0.19 dBTP.
+- Spot frames viewed: title, agenda (items sketching + complete), all eight
+  intro slides **in the film** at their positions, §02 coordinate card, §06
+  link web, §07 skyline (before/after extras — identical base, extras grow
+  mid-§07), §08 article frames, home scroll, CTA word card, end card with
+  signature flame. Frames: `production/thumbs-r3/` (film frames named by
+  film time; `drawn-stills/` holds the rendered intro-card stills).
+
+## Files
+
+- `SCRIPT-R3.md` — the round-3 script (agenda beat §01b; §07/§08 rewritten;
+  claim appendix rows 8–12 = DESIGN INTENT).
+- `narration-r3/` — new recordings (01b, 07, 08) + texts + `TIMING.md`.
+- `production/rough-cut-r3.mp4` — the film.
+- `production/audio-r3/` — bed (loop/full/normalized), the five SFX, `RECIPES.md`.
+- `production/work-r3/` — generators: `drawn-r3.py`, `audio-r3.py`, `assemble-r3.sh`.
+- `production/thumbs-r3/` — verification frames.
 # demo2 README — the full-entry encyclopedia
 
 Title: demo2 README — the full-entry encyclopedia
@@ -3340,10 +3530,16 @@ Gate 1 (his narration listen) gates any release; none is posted.
    00:03 CST. Brief: 1.1.1/3.3.1/1.1.1 · script:
    1.1.1/3.2.2/1.1.1 · log: 1.1.1/3.4.3/1.1.1.
 
-4. ROUND 3 — mid-flight at packaging (2026-11-11 ~00:40 CST):
-   Will's eight polish steps (music bed, scale story, smooth
-   animation, pro SFX palette, pacing, intro slides, agenda +
-   CTA, Emise flair). Script complete (1.1.1/3.2.3/1.1.1);
-   brief at 1.1.1/3.3.2/1.1.1; narration recording under way; no
-   cut or production log yet. A future rebuild adds the R3 log
-   at 1.1.1/3.4.4/1.1.1 and this entry's measurements.
+4. rough-cut-r3.mp4 — ROUND 3: Will's eight polish steps
+   (original in-house music bed "Paper Light", scale story as
+   §07, call to action as §08, smooth animation, pro SFX
+   palette, pacing, intro slide before every segment, agenda +
+   Emise flair).
+   307.23 s · 97,622,656 bytes ·
+   SHA-256 8d7d5805d7d7ca4452378711562057a252d5ca21d19d19df51805a1f6d84622d ·
+   loudness −14.08 LUFS / −0.19 dBTP · completed 2026-11-11.
+   Brief: 1.1.1/3.3.2/1.1.1 · script: 1.1.1/3.2.3/1.1.1 ·
+   log: 1.1.1/3.4.4/1.1.1. Known gaps at completion (from the
+   log): §07/§08 narration runs longer than its picture slots —
+   openings spill over the preceding sections' holds; true peak
+   −0.19 dBTP is 0.8 dB hot of the ≤ −1 dBTP target.
