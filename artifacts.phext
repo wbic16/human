@@ -2754,7 +2754,7 @@ edit ≈ half a day. All estimates, not measurements.
 Title: edit.phext.io — Security + Scalability Testing, and the In-Page Phext Server Verdict
 Source: ~/workspace/phext-edit-secscale/REPORT.md
 Inscribed: 2026-11-10
-SHA-256: a0de5c53b218070774869d138f21309f13c5ad6240751f7a284a655277d7eb06
+SHA-256: b5af3a024d58631a7090f488a92a11d6802c0e343a4fa52c95486fd680e0ce82
 
 ---
 # edit.phext.io — security + scalability testing, and the in-page phext server verdict
@@ -2856,6 +2856,20 @@ This amends Step 1's loading model. The report's Step 1 priced a cold open as a 
 - **Honest limits.** Search over unvisited regions needs the server (or a server-built term index shipped with the manifest) — streaming makes content local, not the unvisited corpus. First visits to very large individual scrolls still pay their own fetch. Neither limit touches the navigation roundtrips Step 1 exists to delete.
 
 Verdict unchanged — ship the hybrid — with Step 1's loading model replaced by: manifest-first, stream-on-view, cache-with-hashes.
+
+## Part C addendum 2 (2026-11-10) — Will's seed cache: the hash envelope
+
+Will's direction, verbatim: "the server can provide a seed cache on page load — a phext hash in every populated coordinate — which shrinks the document size to a fixed constant of the number of scrolls — that envelope can be compressed as well" (task 32.5.9/7.6.10/6.5.9).
+
+This names what the first addendum called "the manifest" and makes it precise: **the seed cache is a hash in every populated coordinate — and nothing else.** No content, no tree serialization. Its size is a fixed constant times the number of scrolls: O(N) in scroll count, independent of how large any scroll or the whole document is. That is the property that makes the streamed cache (addendum 1) work at any scale:
+
+- **The envelope, priced** (at the report's large-file scale, 320k scrolls / 57.9 MB of content): each entry is a coordinate plus a hash. Delta-encoded sorted coordinates (~9 B/scroll) with a 128-bit truncated hash: ~8 MB raw. Naive 2 B/axis coordinates with full SHA-256: ~16 MB raw — the worst honest encoding. Content size never enters the formula; a phext of 320k scrolls totalling 500 MB has the same envelope.
+- **The envelope compresses.** Coordinates are sorted and clustered, so their deltas compress hard (~3–4×); hashes are incompressible and set the floor. Compressed estimates: ~6 MB (delta coords + 128-bit hashes) to ~12 MB (naive coords + full hashes) at 320k scrolls. Sending the envelope xz-sealed, like the phext seal itself, is consistent with the existing machinery. (Estimates, labelled: the coordinate compression ratio depends on the corpus's clustering; the hash floor does not.)
+- **The envelope replaces the tree.** Today's 7.1 MB editor tree payload buys navigation structure only. The seed cache buys strictly more for comparable or less: from coordinate + hash alone the client builds the tree, nav densities, and search structure locally — and every entry doubles as a sync precondition.
+- **The seed makes the streamed cache verifiable end to end.** A scroll streamed on view arrives with the envelope's hash as its expected value: the client verifies what it fetched against the seed, so a streamed scroll is never trusted on arrival alone. Edits sync against the seed hash as the base-hash precondition (SyncBook). And on a later page load, a fresh envelope diffed against the persisted cache (IndexedDB) says exactly which cached scrolls are stale — revalidation of the whole document costs one envelope download, not one fetch per scroll.
+- **Server cost.** The server already holds every scroll's content; maintaining the envelope is one hash per scroll, recomputed only for scrolls that change — the same invalidation shape as the nav-density cache in the four cheap fixes. Serving it is a static-shaped response per phext version.
+
+With addendum 1: page load = seed envelope (compressed, O(N)); reading = stream-on-view into a hash-verified cache; editing = local-first against seed hashes. The document's content size has left the page-load equation entirely.
 
 ## Part C — In-page phext server: verdict
 
