@@ -38,8 +38,8 @@ Index (coordinate — title — source):
 - 32.6.7/7.6.10/6.5.9 — Neovim + Phext — Design: Phext-Scale Navigation in a Modal Editor — ~/workspace/goals/neovim-phext-support-merge-ready-pr-compiled-with-phcc/files/neovim-phext-design.md
 - 32.6.8/8.6.11/6.5.9 — Charon — README — ~/workspace/charon-seed/README.md
 - 33.6.9/8.6.11/7.5.9 — Desktop SSO for Phext Notepad — the cookie paste is gone — ~/workspace/phext-notepad-perf/REPORT-DESKTOP-SSO.md
+- 34.6.7/7.6.11/6.5.10 — phextura — DESIGN — ~/workspace/phextura-design/DESIGN.md
 - 34.6.7/8.6.11/6.5.9 — Charon — Prompt 0: Produce the design spec (no code yet) — ~/workspace/charon-seed/prompts/00-spec.md
-- 35.6.7/7.6.11/6.5.10 — phextura — DESIGN — ~/workspace/phextura-design/DESIGN.md
 - 36.6.7/7.6.11/7.5.9 — Phext Notepad — libphext v0.5.0 parity — ~/workspace/phext-notepad-perf/REPORT-V050-PARITY.md
 # Light the Next Light — intro song lyrics & time map
 
@@ -3980,109 +3980,12 @@ handlers, and tests).
 - Windows/macOS builds of the notepad remain Will's to verify (the app
   change is platform-neutral Rust + the existing `open_url`; the catch
   binds `127.0.0.1`, which the server's validator admits on every OS).
-# Charon — Prompt 0: Produce the design spec (no code yet)
-
-Title: Charon — Prompt 0: Produce the design spec (no code yet)
-Source: ~/workspace/charon-seed/prompts/00-spec.md
-Inscribed: 2026-11-09 10:58 CST
-SHA-256: acccacb453d984f654791f2066ad62d5325e89ab3bb70bcc23d10e00d7a6e8e5
-
----
-# Prompt 0 — Produce the design spec (no code yet)
-
-Paste everything below the line into GitHub Copilot Chat (or your MCP-capable
-assistant of choice), in an empty repository containing only `README.md` and
-this file. Prompt 0 produces **one file: `DESIGN.md`**. Do not let it scaffold
-code — the spec is reviewed first, and every later prompt builds on it.
-
----
-
-You are designing a new open-source CLI called **Charon**. Read `README.md`
-first and treat it as the product brief. Your only deliverable in this session
-is a file named `DESIGN.md`. Write no application code.
-
-## What Charon is
-
-A local-first, single-binary CLI that unifies a developer's work items from
-**Helix ALM, Jira, and Gitea**, plus a simple file-based **team tracker**,
-into one model. It is used by humans in a terminal and by GitHub Copilot via
-an MCP server. It is a streamlined tool for a small development team — favour
-the simplest design that fully works.
-
-## Hard constraints
-
-1. **Local-first.** No server component, no shared database, no accounts, no
-   telemetry. State lives in the user's home directory.
-2. **Read-only by default.** Any operation that writes to a source system must
-   be behind an explicit `--apply` flag and must print exactly what it will
-   change before doing it.
-3. **One model.** Define a single `WorkItem` struct:
-   `id, source, external_id, title, status, assignee, priority, labels[],
-   links[], created, updated`. Every source system maps into this model and
-   nothing else leaks through the adapter boundary.
-4. **Secrets.** API tokens are read from environment variables or the OS
-   keyring only. The config file (`~/.charon/config.toml`) must be safe to
-   commit to a dotfiles repo — design it so it can never contain a secret.
-5. **Stable JSON.** Every CLI command supports `--json`. The JSON schema for
-   `WorkItem` is a public contract; version it.
-6. **GPG.** Team-tracker bundles are exported as a file plus a detached GPG
-   signature, and verified before import. Use the system `gpg` or a
-   well-maintained library — do not design any cryptography.
-7. **Non-goals** (state them back in the spec): no hosted service, no
-   replacing any source system, no built-in AI features, no plugin system
-   in v1, no persona or agent-identity features of any kind.
-
-## DESIGN.md must contain
-
-1. **Overview** — one page: what Charon does, the architecture in one diagram
-   (ASCII is fine), and the non-goals.
-2. **The WorkItem model** — field-by-field table with types, plus the mapping
-   from each source's native fields (Helix ALM item, Jira issue, Gitea
-   issue/PR) into it. Where a source has no equivalent field, say so.
-3. **Adapter interface** — the exact operations every adapter implements
-   (`list`, `get`, `search`, `comment`, `transition`), which are read vs.
-   write, and how each source's API authenticates. Name the real API for
-   each: Jira Cloud REST v3, the Gitea REST API, the Helix ALM REST API.
-   Flag anything you are unsure about as an open question rather than
-   guessing an endpoint.
-4. **Deduplication** — how Charon decides that a Helix item, a Jira issue,
-   and a Gitea PR are the same work: explicit `charon link`, cross-references
-   in titles/bodies (e.g. a Jira key inside a Gitea PR title), and manual
-   confirmation. Dedup must never silently merge — propose, then confirm.
-5. **Local cache** — what is cached, where, in what format (prefer plain
-   files or SQLite — justify the choice), and how `charon sync` refreshes it
-   incrementally using each source's `updated` timestamp.
-6. **Command surface** — every command from the README, with flags, example
-   output (human and `--json`), and exit codes.
-7. **MCP server** — how `charon mcp serve` exposes the same operations as
-   MCP tools over stdio, with the same read/write permission model
-   (write tools refuse to run unless `--apply` was passed at serve time).
-8. **Team tracker + GPG bundles** — the tracker's file format, the bundle
-   format, the sign/verify flow, and what happens on a bad signature
-   (import aborts, nothing is partially applied).
-9. **Tech choice** — recommend ONE language/toolchain for a single static
-   binary that runs on Windows, macOS, and Linux, and justify it in five
-   bullet points or fewer against the runner-up.
-10. **Test strategy** — adapters are tested against recorded/mocked API
-    responses; no test may call a live system.
-11. **Open questions** — every decision you could not make from this prompt,
-    listed at the end, numbered, each with your recommended default.
-
-## Acceptance check
-
-End `DESIGN.md` with a short checklist mapping each hard constraint above to
-the section of the design that satisfies it. If any constraint cannot be
-satisfied as stated, stop and say which one and why, instead of quietly
-weakening it.
-
-Do not scaffold the project, do not write code files, and do not choose a
-license. Deliverable: `DESIGN.md` only.
 # phextura — DESIGN
 
 Title: phextura — DESIGN
 Source: ~/workspace/phextura-design/DESIGN.md
-Inscribed: 2026-11-11 00:19 CST
-SHA-256: db43f74062002152cda753ac26747eaa4427febed245537e5a0d3664f35861f6
+Inscribed: 2026-11-11 00:36 CST
+SHA-256: 5a9d331fa11d36acc453cbd28b4cd689e40396e517c001050b6f5c60206187c1
 
 ---
 # phextura — design
@@ -4132,7 +4035,7 @@ Within the paper, the Y coordinate's Collection component names the division:
 | 2 | Bibliography | One reference entry per scroll |
 | 3 | Media | Figures, images, audio, video, embedded foreign files |
 | 4 | Styles | Style scrolls (the phextura replacement for classes/packages) |
-| 5 | Supplements | Embedded documents: data papers, code, extended proofs |
+| 5 | Supplements | Embedded documents: data papers, code, extended proofs, toolchains (§5.1) |
 | 6 | Metadata | Title, authors, abstract, provenance, checksum manifest |
 
 Body addressing: Y.Book is the chapter. Within a chapter, X addresses
@@ -4198,25 +4101,30 @@ only, never as proof of identity).
 
 ## 5. Media and embedded documents live inside the paper
 
-libphext scrolls are text; the crate has no binary type, and phextura does
-not pretend otherwise. Embedding is therefore a stated convention of this
-design, in two tiers:
+Phext is a text format, and its binary support is canonical, not bolted
+on: binary content is **hoisted** — encoded as base64 text inside ordinary
+scrolls. A hoisted payload is opaque by design. The format stores and
+addresses it; what the bytes *mean*, and whether they are decoded at all,
+is deferred to the program rendering or processing the paper. Embedding
+therefore comes in two tiers:
 
 - **Text-native media embed literally.** SVG figures, vector descriptions,
   CSV/TSV data, source code, and any text format are scroll content as-is,
   in Collection 3 (media) or Collection 5 (supplements). A whole phextura
   paper embeds as a supplement with no encoding at all — it is already text
   in the same lattice.
-- **Binary payloads ride as encoded text.** A PNG, a video, an audio clip,
-  or a foreign document (e.g. a PDF) is stored as a header scroll plus
-  payload scrolls: the header declares content type, encoding (`base64`),
+- **Binary content is hoisted.** A PNG, a video, an audio clip, or a
+  foreign document (e.g. a PDF) is stored as a header scroll plus payload
+  scrolls: the header declares content type, encoding (`base64`),
   original filename, and the payload's libphext `checksum` (xxh3-128). A
   large payload spans a coordinate `Range` of scrolls, addressed and
-  replaceable as one unit (`range_replace`). The base64 size cost (~33%) is
-  stated plainly; what it buys is containment — the paper is one artifact,
-  nothing is referenced by filesystem path, and nothing can be silently
-  missing at render time (the header checksum fails first). A renderer
-  materializes payloads only at render time.
+  replaceable as one unit (`range_replace`). Base64 encodes three bytes in
+  four characters, so a hoisted payload occupies about 4/3 of its binary
+  size — a neutral property of the encoding. What hoisting provides is
+  containment: the paper is one artifact, nothing is referenced by
+  filesystem path, nothing can be silently missing at render time (the
+  header checksum fails first), and the payload stays opaque until a
+  processing program chooses to decode it.
 
 This deletes `\includegraphics`, `\input`-by-path, driver-specific
 `\special`s, and the "the paper is a directory" failure mode (W18, W19).
@@ -4224,6 +4132,42 @@ This deletes `\includegraphics`, `\input`-by-path, driver-specific
 A paper can therefore carry its own evidence: the dataset behind Figure 3,
 the code that produced it, and the supplementary proof are scrolls in the
 same corpus, citable by the same coordinates as the theorems.
+
+### 5.1 Self-extracting papers
+
+Hoisting has a consequence worth stating as its own design point: a
+phextura paper can encode literally anything — including a compiler and a
+copy of libphext itself. A corpus may therefore carry its own toolchain:
+the renderer (or the specific version of it the paper was written
+against), a compiler, and libphext, all as hoisted payload scrolls in
+Collection 5, declared in the Collection 6 manifest (`manifest`) alongside
+the paper's other contents.
+
+- **Extraction is the reader-side program's decision.** Payloads are
+  opaque; nothing in the format executes, extracts, or even decodes them.
+  A processing program decides whether a declared toolchain payload is
+  trustworthy and whether to extract and run it — the same trust decision
+  a reader already makes about any renderer, made explicit. Because every
+  payload is declared in the manifest with its checksum, nothing extracts
+  by surprise.
+- **Version rot dies.** A paper read in twenty years does not depend on a
+  future toolchain still behaving like today's: it pins its own,
+  bit-for-bit, inside itself.
+- **The recursion closes.** A paper *about* phextura can carry phextura —
+  the paper, its subject, and the machinery to read it, in one artifact.
+
+Self-extraction extends to proof. A paper may also hoist a proof checker
+as a payload scroll and carry its proofs as addressed scrolls in the
+corpus, so the paper is its own verified artifact rather than pointing at
+a formalization living in a separate repository; prior theorems are cited
+by coordinate exactly as bibliography entries are (§4). The seed already
+exists: libphext itself has been formally verified with Lean/Aeneas
+tooling in the author's own proving program, so the first self-verifying
+phextura papers have a real checker-and-proof story to carry. Stated
+honestly: phextura absorbs the prover as cargo and dissolves the
+paper/proof boundary; it does not replace the checker's kernel or the
+proof language — the checker remains itself, carried rather than competed
+with.
 
 ## 6. Styles are addressed scrolls, not a global namespace
 
@@ -4331,7 +4275,8 @@ What phextura newly makes possible, that neither TeX nor LaTeX3 can express:
 a paper that *contains* its data, code, media, and supplements as addressed
 parts of itself; references that are the same object as their links;
 renumbering-free restructuring (insert, offset, merge, subtract are corpus
-operations, not editing rituals); and a document a machine can fully read —
+operations, not editing rituals); a paper that carries its own toolchain
+and is self-extracting (§5.1); and a document a machine can fully read —
 structure, references, provenance — without executing a single instruction
 of the author's.
 
@@ -4340,9 +4285,10 @@ of the author's.
 - Phextura does not replace TeX's typesetting quality on day one; the PDF
   backend's layout engine is future work, and the HTML backend is the
   honest first target.
-- Base64 payload scrolls are a convention, not a libphext feature; if
-  libphext grows a binary payload convention, phextura should adopt it and
-  delete §5's second tier.
+- Phextura does not define what a processing program does with a hoisted
+  payload — render it, extract it, execute it, or leave it opaque. That
+  decision belongs to the program (and its operator), not to the format
+  and not to this design; §5.1 declares the pattern, not a policy.
 - Collaborative editing semantics (concurrent writers on one corpus) are
   out of scope for this design; `merge`/`subtract` give the algebra, not
   the protocol.
@@ -4350,7 +4296,104 @@ of the author's.
   unspecified here: an equation scroll holds notation as text, and choosing
   that notation is a separate design that must not be allowed to grow into
   a new macro language by accident.
-# Phext Notepad — libphext v0.5.0 parity
+# Charon — Prompt 0: Produce the design spec (no code yet)
+
+Title: Charon — Prompt 0: Produce the design spec (no code yet)
+Source: ~/workspace/charon-seed/prompts/00-spec.md
+Inscribed: 2026-11-09 10:58 CST
+SHA-256: acccacb453d984f654791f2066ad62d5325e89ab3bb70bcc23d10e00d7a6e8e5
+
+---
+# Prompt 0 — Produce the design spec (no code yet)
+
+Paste everything below the line into GitHub Copilot Chat (or your MCP-capable
+assistant of choice), in an empty repository containing only `README.md` and
+this file. Prompt 0 produces **one file: `DESIGN.md`**. Do not let it scaffold
+code — the spec is reviewed first, and every later prompt builds on it.
+
+---
+
+You are designing a new open-source CLI called **Charon**. Read `README.md`
+first and treat it as the product brief. Your only deliverable in this session
+is a file named `DESIGN.md`. Write no application code.
+
+## What Charon is
+
+A local-first, single-binary CLI that unifies a developer's work items from
+**Helix ALM, Jira, and Gitea**, plus a simple file-based **team tracker**,
+into one model. It is used by humans in a terminal and by GitHub Copilot via
+an MCP server. It is a streamlined tool for a small development team — favour
+the simplest design that fully works.
+
+## Hard constraints
+
+1. **Local-first.** No server component, no shared database, no accounts, no
+   telemetry. State lives in the user's home directory.
+2. **Read-only by default.** Any operation that writes to a source system must
+   be behind an explicit `--apply` flag and must print exactly what it will
+   change before doing it.
+3. **One model.** Define a single `WorkItem` struct:
+   `id, source, external_id, title, status, assignee, priority, labels[],
+   links[], created, updated`. Every source system maps into this model and
+   nothing else leaks through the adapter boundary.
+4. **Secrets.** API tokens are read from environment variables or the OS
+   keyring only. The config file (`~/.charon/config.toml`) must be safe to
+   commit to a dotfiles repo — design it so it can never contain a secret.
+5. **Stable JSON.** Every CLI command supports `--json`. The JSON schema for
+   `WorkItem` is a public contract; version it.
+6. **GPG.** Team-tracker bundles are exported as a file plus a detached GPG
+   signature, and verified before import. Use the system `gpg` or a
+   well-maintained library — do not design any cryptography.
+7. **Non-goals** (state them back in the spec): no hosted service, no
+   replacing any source system, no built-in AI features, no plugin system
+   in v1, no persona or agent-identity features of any kind.
+
+## DESIGN.md must contain
+
+1. **Overview** — one page: what Charon does, the architecture in one diagram
+   (ASCII is fine), and the non-goals.
+2. **The WorkItem model** — field-by-field table with types, plus the mapping
+   from each source's native fields (Helix ALM item, Jira issue, Gitea
+   issue/PR) into it. Where a source has no equivalent field, say so.
+3. **Adapter interface** — the exact operations every adapter implements
+   (`list`, `get`, `search`, `comment`, `transition`), which are read vs.
+   write, and how each source's API authenticates. Name the real API for
+   each: Jira Cloud REST v3, the Gitea REST API, the Helix ALM REST API.
+   Flag anything you are unsure about as an open question rather than
+   guessing an endpoint.
+4. **Deduplication** — how Charon decides that a Helix item, a Jira issue,
+   and a Gitea PR are the same work: explicit `charon link`, cross-references
+   in titles/bodies (e.g. a Jira key inside a Gitea PR title), and manual
+   confirmation. Dedup must never silently merge — propose, then confirm.
+5. **Local cache** — what is cached, where, in what format (prefer plain
+   files or SQLite — justify the choice), and how `charon sync` refreshes it
+   incrementally using each source's `updated` timestamp.
+6. **Command surface** — every command from the README, with flags, example
+   output (human and `--json`), and exit codes.
+7. **MCP server** — how `charon mcp serve` exposes the same operations as
+   MCP tools over stdio, with the same read/write permission model
+   (write tools refuse to run unless `--apply` was passed at serve time).
+8. **Team tracker + GPG bundles** — the tracker's file format, the bundle
+   format, the sign/verify flow, and what happens on a bad signature
+   (import aborts, nothing is partially applied).
+9. **Tech choice** — recommend ONE language/toolchain for a single static
+   binary that runs on Windows, macOS, and Linux, and justify it in five
+   bullet points or fewer against the runner-up.
+10. **Test strategy** — adapters are tested against recorded/mocked API
+    responses; no test may call a live system.
+11. **Open questions** — every decision you could not make from this prompt,
+    listed at the end, numbered, each with your recommended default.
+
+## Acceptance check
+
+End `DESIGN.md` with a short checklist mapping each hard constraint above to
+the section of the design that satisfies it. If any constraint cannot be
+satisfied as stated, stop and say which one and why, instead of quietly
+weakening it.
+
+Do not scaffold the project, do not write code files, and do not choose a
+license. Deliverable: `DESIGN.md` only.
+# Phext Notepad — libphext v0.5.0 parity
 
 Title: Phext Notepad — libphext v0.5.0 parity
 Source: ~/workspace/phext-notepad-perf/REPORT-V050-PARITY.md
