@@ -2754,7 +2754,7 @@ edit ≈ half a day. All estimates, not measurements.
 Title: edit.phext.io — Security + Scalability Testing, and the In-Page Phext Server Verdict
 Source: ~/workspace/phext-edit-secscale/REPORT.md
 Inscribed: 2026-11-10
-SHA-256: f6815f99ea48c5986e66cb7581cab4bf1cf405edf9dd969b7e85c5d9f5d567b7
+SHA-256: c11ebebf1125f11fdc942cb74515c285c8b5e5dce23ea7390d437256ec03b1b6
 
 ---
 # edit.phext.io — security + scalability testing, and the in-page phext server verdict
@@ -2888,6 +2888,15 @@ The condition is a conjunction, and each half earns its place: hash-match alone 
 Will's direction, verbatim: "note that we're using xxh3_128 for hashing, not sha256" (build task 41.6.8/9.8.14/7.6.10).
 
 The seed envelope and the cache-aware fetch hash scrolls with **xxh3_128** (xxHash3, 128-bit digest — 16 bytes per scroll). This supersedes the SHA-256 mentions in addenda 1–3 wherever they describe the seed or the fetch: the envelope pricing in addendum 2 was already computed at a 128-bit hash, so its numbers stand unchanged (~8 MB raw / ~6 MB compressed at 320k scrolls, delta-encoded coordinates). The choice fits the job: this hash is a cache address — compared on every fetch, computed over every scroll in the envelope — so it wants xxh3's speed at a 128-bit width, not a cryptographic digest. Scope note: SyncBook's existing per-scroll SHA-256 base hashes (the write-conflict mechanism proven 2026-11-08) are a separate, already-shipped mechanism and are untouched by this correction.
+
+## Part C — build outcome (2026-11-10): addenda 1–4 are implemented
+
+The design above shipped the same evening it was settled, as two PRs (merges are Will's; nothing deployed):
+
+- **SQ — PR #3** (wbic16/SQ, branch emise/seed-cache): `GET /api/v2/seed` returns the xxh3_128 envelope for the hosted phext; `GET`/`POST /api/v2/fetch` implements the addendum-3 protocol — the unchanged return measured 93 bytes with zero content bytes, all three branches verified live. Client: `sq seed` / `sq fetch` with a disk cache; a request-counting end-to-end test proves a second fetch of an unchanged scroll transfers no content. Finding: libphext's `phext::checksum` already is xxh3_128 — the seed exposes the hash the stack already computed. Tests 77 passed / 0 failed (baseline 63).
+- **phext-lattice — PR #61** (branch emise/seed-cache, one file, phext_edit.rs): `GET /api/seed` behind the same editor gate as the tree/scroll routes (demo/wiki variants scoped to their own lattices); the cache-aware fetch rides the existing scroll route as hash + have parameters — unchanged return also exactly 93 bytes; no parameters = legacy behavior untouched. The editor shell loads the seed at boot and streams viewed scrolls into an in-page cache, each verified with a vendored JS xxh3_128 (26 differential vectors against the Rust and C references; two transliteration bugs found and fixed in verification); a second navigation to a cached scroll performs no fetch, and saving evicts the edited coordinate and reloads the seed. Tests: 276 unit passing (baseline 270 measured, +6 new); one end-to-end timing assertion fails identically on untouched exo — a pre-existing flake, not a regression.
+
+Still design-only: Step 2 (file-addressed per-scroll writes with base-hash preconditions) and the four cheap server fixes from the verdict below.
 
 ## Part C — In-page phext server: verdict
 
