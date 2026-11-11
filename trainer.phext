@@ -40,44 +40,46 @@ actually happened — both are kept on purpose.
 10. 1.1.1/2.1.10/1.1.1 — Standing rules the process runs under
 
 Worked example (Collection 3): the production plan, the original
-walkthrough script and shot list, the three round scripts, the two
-written revision briefs, the four production logs, the demo2
+walkthrough script and shot list, the four round scripts, the
+three written revision briefs, the five production logs, the demo2
 encyclopedia's README and link-verification record, and a
 filmography of the cuts. The videos themselves are not embedded
 (too large for the repo); the filmography scroll names each cut's
 file, size, and SHA-256 so any copy can be verified.
 
-A note on counts: three scripts exist (R1, R2, R3) and two written
-revision briefs (R2, R3). Round 1 had no separate brief file — its
-direction was Will's delivery of Emi Prime's revised script plus
-the re-run order, and it is represented by its script and its
-production log.
+A note on counts: four scripts exist (R1–R4) and three written
+revision briefs (R2, R3, R4). Round 1 had no separate brief file —
+its direction was Will's delivery of Emi Prime's revised script
+plus the re-run order, and it is represented by its script and
+its production log.
 
-State at packaging (refreshed 2026-11-11): All three rounds are
-complete. Round 3 — Will's eight polish steps — is done:
-rough-cut-r3.mp4, 307.23 s, 97,622,656 bytes, SHA-256
-8d7d5805d7d7ca4452378711562057a252d5ca21d19d19df51805a1f6d84622d,
-loudness −14.08 LUFS. Its production log is inscribed at
-1.1.1/3.4.4/1.1.1 (the coordinate reserved for it at first
-publish) and the filmography carries the cut's real measurements.
-Gate 1 (Will's narration listen) still gates any release; nothing
-is posted.
+State at packaging (refreshed 2026-11-11, round 4): All four
+rounds are complete. Round 4 — "human intervals," Will's brief of
+2026-11-11 01:04 CST — changed the timing method, not a single
+word: slot-first at 150 wpm, pictures re-slotted to the voice,
+0.4 s transitions throughout, momentum mapped to the two key
+learning events, real QR easter eggs, and the measured
+bed-under-voice rule. rough-cut-r4.mp4, 354.40 s, 108,259,433
+bytes, SHA-256
+224504723455ac126765a6880cd606fb11377fa6819fc3c5c022a01bf92643d9,
+loudness −14.75 LUFS / −1.09 dBTP. Its production log is
+inscribed at 1.1.1/3.4.5/1.1.1. Gate 1 (Will's narration listen)
+still gates any release; nothing is posted.
 
-The R3 log's gaps, summarized honestly (full text at
-1.1.1/3.4.4/1.1.1): (1) narration coverage — §07's recorded voice
-(92.9 s) and §08's (46.3 s) run longer than their picture slots
-(58 s and 40.1 s); the build keeps each section's closing lines
-in-window and lets the openings spill over the preceding sections'
-holds, so roughly the first 41.7 s of §07's script and 12.2 s of
-§08's play over the previous section's pictures, and §01's voice
-is trimmed to its first 16.5 s — the film does not speak all of
-SCRIPT-R3.md in-section. (2) True peak −0.19 dBTP, 0.8 dB hot of
-the ≤ −1 dBTP target (integrated loudness is on target).
-(3) ~4.4 s of held final frame inside §03. (4) Six of nine segment
-boundaries dissolve; three are clean cuts. (5) The music bed sits
-at the top of its guidance range under voice. Captures remain the
-local editor instance — the live site still serves the round-1
-stub encyclopedia; deploying demo2 is Will's decision.
+Round 4 closed round 3's gaps, verified by audit (full record at
+1.1.1/3.4.5/1.1.1): narration coverage — every section's speech
+now sits inside its own window (silencedetect audit, zero
+boundary crossings; §01 untrimmed, §05 at natural speed);
+true peak −1.09 dBTP, back under the ≤ −1 target; all fifteen
+transitions at 0.4 s (round 3: six of nine); bed measured
+10.6–21.2 dB under narration in every section (round 3's bed sat
+at the top of its guidance range). Round 4's own declared notes:
+the CTA end card's push-in progressively crops "Keep it." at the
+right edge (card fully legible at push-in start); §07's city
+extras carry one 0.5 s held frame from a stream-retime repair.
+Captures remain the local editor instance — the live site still
+serves the round-1 stub encyclopedia; deploying demo2 is Will's
+decision.
 
 ## Index of scrolls
 
@@ -101,12 +103,15 @@ title — source.)
 - 1.1.1/3.2.1/1.1.1 — Script R1 — Emi Prime's revised script — ~/workspace/phext-walkthrough/SCRIPT-EMI-REVISED.md
 - 1.1.1/3.2.2/1.1.1 — Script R2 — ~/workspace/phext-walkthrough/SCRIPT-R2.md
 - 1.1.1/3.2.3/1.1.1 — Script R3 — ~/workspace/phext-walkthrough/SCRIPT-R3.md
+- 1.1.1/3.2.4/1.1.1 — Script R4 — ~/workspace/phext-walkthrough/SCRIPT-R4.md
 - 1.1.1/3.3.1/1.1.1 — Revision brief R2 — Will's seven notes — ~/workspace/phext-walkthrough/REVISION-BRIEF-R2.md
 - 1.1.1/3.3.2/1.1.1 — Revision brief R3 — Will's eight steps — ~/workspace/phext-walkthrough/REVISION-BRIEF-R3.md
+- 1.1.1/3.3.3/1.1.1 — Revision brief R4 — human intervals — ~/workspace/phext-walkthrough/REVISION-BRIEF-R4.md
 - 1.1.1/3.4.1/1.1.1 — Production log — original rough cut — ~/workspace/phext-walkthrough/production/ROUGH-CUT-LOG.md
 - 1.1.1/3.4.2/1.1.1 — Production log — round 1 revised cut — ~/workspace/phext-walkthrough/production/ROUGH-CUT-REVISED-LOG.md
 - 1.1.1/3.4.3/1.1.1 — Production log — round 2 cut — ~/workspace/phext-walkthrough/production/ROUGH-CUT-R2-LOG.md
 - 1.1.1/3.4.4/1.1.1 — Production log — round 3 cut — ~/workspace/phext-walkthrough/production/ROUGH-CUT-R3-LOG.md
+- 1.1.1/3.4.5/1.1.1 — Production log — round 4 cut — ~/workspace/phext-walkthrough/production/ROUGH-CUT-R4-LOG.md
 - 1.1.1/3.5.1/1.1.1 — demo2 README — the full-entry encyclopedia — ~/workspace/phext-walkthrough/demo2/README.md
 - 1.1.1/3.5.2/1.1.1 — demo2 — link-verification record (summary) — ~/workspace/phext/trainer-src/demo2-verification.md
 - 1.1.1/3.6.1/1.1.1 — Filmography — the cuts, by name + hash — ~/workspace/phext/trainer-src/filmography.md
@@ -400,6 +405,49 @@ Rules that generalize:
   continuous eased moves instead of jump cuts inside a beat,
   intro slides ~1.9 s each stolen from tightened pauses, total
   runtime held to ≈ 5:15 for a ~5-minute script.
+
+## Round 4 — the pacing method becomes measurement (Will, 2026-11-11)
+
+- **Slot first, at 150 wpm.** Before any production, count each
+  section's narration words programmatically and compute its slot:
+  words ÷ 150 × 60 s. Record the voice; where a take deviates from
+  its slot by more than ~7 %, re-slot the PICTURE to the voice —
+  never trim words, never speed the voice, never let narration
+  spill across a section boundary. Round 3's coverage gap (openings
+  of §07/§08 playing over the previous sections' pictures, §01
+  trimmed) was closed by this rule alone: round 4's audit found
+  every section's speech inside its own window, zero crossings.
+- **Transitions target 0.4 s** — every dissolve and section change,
+  audited after the build (round 4: 15 transitions, all 0.4 s, no
+  clean cuts). Continuous moves (the zoom set-pieces) are not
+  transitions and don't count against the target.
+- **Momentum is mapped, then built.** Name the film's key learning
+  events; write the energy curve (timestamps → intended energy)
+  into the script before assembly. Tighten and swell on the ~20 s
+  approach, peak AT the event, breathe after — never dead air.
+  Round 4 implemented the curve in the bed's pluck-layer envelope:
+  energy 2 in the quiet water, ramping through §05, peaking across
+  §06 (interlink travel) and §07 (scale reveal), breathing in §08,
+  lifting into the CTA hold.
+- **Music discipline is a measurement, not an intention** (Will,
+  2026-11-11): the narration is the loudest element at every
+  moment. The bed is ducked under the voice, and the mix is
+  verified on stems — bed-only loudness vs narration loudness over
+  speech windows in EVERY section, gap ≥ 10 dB, figures reported
+  in the production log. Round 4 measured min 10.6 dB / median
+  14.7 dB. Two failure modes are now on record: single-pass
+  loudnorm applied PER STEM destroys relative levels (it
+  normalizes short-term loudness — quiet passages get inflated to
+  full level and the bed ends up ABOVE the voice); scale stems by
+  RMS with one shared factor instead. And a duck floor around
+  0.20 is not enough under dense pad chords — 0.10 measured safe.
+- Assembly arithmetic: assert every duration from DECODED frames
+  and samples, never container metadata (stream-copy and filter
+  paths report different durations for the same audio). Build
+  narration sample-exact in film time; build joins frame-exact.
+  A multi-output ffmpeg invocation that silently drops mapped
+  outputs is also on record — write stems in separate, asserted
+  steps.
 # Stage 8 — Verification & delivery
 
 A cut is not delivered because the worker says it is done. The
@@ -417,6 +465,22 @@ link is sent:
    VIEWED (each round's thumbs/ directory), including the
    sections most likely to be wrong (drawn motifs, landings,
    end cards).
+5. Slot-table audit (round 4): run silencedetect over the pure
+   narration stem and confirm every section's speech starts and
+   ends inside its slot-table window — no spill, no trim. Report
+   detected spans next to planned spans in the log.
+6. Transition audit (round 4): count the film's transitions and
+   their durations against the 0.4 s target (section joins,
+   in-section joins, internal crossfades — listed separately);
+   name any exception and its reason.
+7. Mix audit (round 4): bed-under-voice measured per section on
+   stems (see Stage 7); the minimum and median gaps go in the
+   log. A round whose bed gap falls below 10 dB anywhere is not
+   delivered until the mix is corrected and re-measured.
+8. Easter-egg verification (round 4): any functional egg (a QR
+   code, a link, a coordinate) is verified working from the
+   FINISHED file — decode the code from a frame extracted from
+   the delivered encode, not only from its source asset.
 
 Delivery to Will is one message: what the film is, what changed
 this round, the honest notes (substitutions and gaps, plainly —
@@ -2819,6 +2883,341 @@ Round-3 additions are rows 8–12; rows 1–7 carry over fromSCRIPT-R2.md unchan
 | 12 | "Wikipedia needed a fleet. This needs a file — and the file was designed to outgrow the fleet." | Will's confidence, rendered in film words (2026-11-11: "it will absolutely mog wikipedia" — his phrase is kept in the internal record, REVISION-BRIEF-R3.md and this appendix; the spoken line carries the same confidence without the slang). The fleet half is row 8 (uncontested); the outgrow half is DESIGN INTENT per rows 9–11 |
 
 Production notes for round 3: narration changes in §01b (new, ~48 words), §07 (rewritten, ~245 words), §08 (rewritten, ~160 words); §01–§06 narration is round 2's, verbatim, reusing narration-r2 audio. SFX marks: 7 jump landings (as round 2) now with the whoosh+click palette, pencil strokes under drawn sequences, page turns at the eight intro slides, one success chime at §08's closing line. Music: original synthesized bed, ducked under narration. Intro slides: 8, one per segment, ~1.9 s each inside the runtime budget.
+# Script R4
+
+Title: Script R4
+Source: ~/workspace/phext-walkthrough/SCRIPT-R4.md
+Inscribed: 2026-11-11
+SHA-256: 8efbbee5a095e0b1186b4c8e240d7bc76c69a3f6793b23c6ac1aa7ad1b6a820a
+
+---
+# The Encyclopedia You Can Carry — Round 4 (human intervals)
+
+*Derived from SCRIPT-R3.md. The narration words are round 3's, verbatim — this
+round changes the TIMING METHOD, not the text (see the diff summary). Per
+REVISION-BRIEF-R4.md (Will, 2026-11-11 01:04–01:05 CST):*
+
+- ***Slot-first at 150 wpm.** Every section's slot is computed from its word
+  count BEFORE production: slot = words ÷ 150 × 60 s. Pictures are then built
+  to the voice — never the reverse. This replaces round 3's improvised
+  slotting, which left §07/§08 narration spilling over other sections'
+  pictures and §01 trimmed. In round 4 nothing is trimmed and nothing spills:
+  every recorded word plays inside its own section's window.*
+- ***Transitions target 0.4 s** — every dissolve and section change; the two
+  zoom set-pieces are continuous moves, not transitions.*
+- ***Momentum** builds toward the two key learning events — the interlink
+  travel (§06) and the scale reveal (§07): shot lengths, motion and the music
+  bed tighten and swell on the approach, peak at the event, and breathe after.*
+- ***Easter eggs are real.** During §07 a data stream of tiny QR codes scrolls
+  along the bottom edge — every code encodes a real payload from the film
+  (the home coordinate, the Honeybee / Oak / Lighthouse addresses,
+  edit.phext.io, and one that says "Semper Aeq"). One tile in the stream is
+  not a code at all: a tiny drawn flame, riding the data.*
+- ***The music never overpowers the narration** (Will, 01:05 CST): the bed is
+  sidechain-ducked, and the mix is verified by measurement — during speech
+  the bed sits ≥ 10 dB below the narration's loudness; swells live only in
+  gaps and transitions. The measured figures are reported in
+  production/ROUGH-CUT-R4-LOG.md.*
+
+*The demo remains demo2 (demo2/wiki.phext): 24 full entries, 49 scrolls,
+119,086 bytes, 53 links. UI shots are taken against demo2's file on a local
+Phext Edit instance.*
+
+---
+
+## Slot table — computed before production (the round-4 method)
+
+Word counts were extracted programmatically from the canonical section texts
+(whitespace tokenisation of `narration-r4/section-text-*.txt` — the spoken
+words, verbatim). They differ slightly from round 3's TIMING counts
+(960 total) because round 3 tokenised differently; round 4's counts are the
+computed ones: **984 words**.
+
+Voice durations are the round-4 takes (Aria, `avocado_v2:MAI_01`, 100%,
+`/opt/hatch/bin/tts speak`), measured with ffprobe. Aria at 100% speaks at
+≈ 183 wpm — faster than the 150 wpm grid — so every section's measured voice
+deviates from its grid slot by more than 7%, and per the brief the PICTURE
+is re-slotted to the voice in every case: built window = intro hold + voice
++ tail. The grid remains the planning reference and the audit baseline;
+the built film speaks every word, in-section.
+
+| # | Section | Words | Slot @150 wpm | Voice (R4 take) | Deviation | Built window | Window starts (film) |
+|---|---|---|---|---|---|---|---|
+| — | Title (no narration) | — | — | — | — | 8.00 (hold) | 0.00 |
+| 01b | The agenda | 44 | 17.6 | 13.87 | −21% | 15.87 | 7.60 |
+| 01 | What if the website went away? | 66 | 26.4 | 21.05 | −20% | 23.85 | 23.07 |
+| 02 | A place for every page | 68 | 27.2 | 22.97 | −16% | 25.77 | 46.52 |
+| 03 | Finding your way back | 58 | 23.2 | 16.97 | −27% | 19.77 | 71.89 |
+| 04 | One small correction | 70 | 28.0 | 21.24 | −24% | 26.44 | 91.26 |
+| 05 | The unplugged test | 99 | 39.6 | 29.64 | −25% | 34.24 | 117.30 |
+| 06 | Ideas that point — KEY EVENT 1 | 177 | 70.8 | 59.09 | −17% | 61.89 | 151.14 |
+| 07 | Built to be shared — KEY EVENT 2 | 264 | 105.6 | 89.64 | −15% | 92.44 | 212.63 |
+| 08 | Your turn (CTA) | 138 | 55.2 | 46.85 | −15% | 49.65 | 304.67 |
+| | **Total** | **984** | **393.6** | **321.31** | | **357.93** | film 354.33 (5:54) |
+
+Built-window composition: §01–§08 = 1.6 s intro slide + voice + tail
+(1.2 s; §04 tail is 3.6 s and §05's is 3.0 s — named deliberate holds for the
+byte-check reveal and the size-card beat, the two visual payoffs that land
+just after their lines). Agenda = voice from +0.4 s + 1.6 s completion hold.
+Windows join with 0.4 s dissolves that overlap consecutive windows, so the
+film (354.33 s) is shorter than the window sum (357.93 s) by 9 × 0.4 s.
+Voice onsets (film): agenda 8.00 · §01 24.67 · §02 48.12 · §03 73.49 ·
+§04 92.86 · §05 118.90 · §06 152.74 · §07 214.23 · §08 306.27.
+
+**Momentum map** (energy 1–5; implemented in the bed's pluck-layer envelope
+and the edit's tail choices — full detail in the R4 log): title→§02 energy 2
+· §03–§04 energy 2.5 · §05 energy 3, ramping through its last 20 s → §06
+PEAK (5) · §07 PEAK (5, sustained across the join) · §08 breathes (2.5) and
+lifts into the CTA hold (3.5).
+
+---
+
+### 0:00 — §01 · What if the website went away?
+
+*[INTRO SLIDE 1 draws on (1.6 s): "1 — What if the website went away?" over a small drawn browser window; 🔥 in the corner. Then the round-2 sequence: on bright white paper, a pencil draws one small file. Twenty-four article cards unfold from it, one by one, then fold back.]*
+
+This is an encyclopedia. Twenty-four articles, each one a full entry, all living together in one little file.
+
+Here's a question. If I close the website —
+
+*[The browser window closes. A hand opens the same file, right here on this computer.]*
+
+— what happens to the encyclopedia?
+
+Nothing. It's still here.
+
+Let me show you four things you can do with it: find a page, change a page, follow the pages to each other — and take the whole thing home.
+
+### §01b — The agenda
+
+*[AGENDA CARD: bright white paper; the four items sketch themselves on across the narration — 1 · Find a page, 2 · Change a page, 3 · Follow the links, 4 · Take it home. A tiny watermark in the corner: 1.1.1/1.1.1/1.1.1, with a small 🔥 beside it.]*
+
+Here's our route. First, we'll find a page — every page has an address. Then we'll change one, and
+...[truncated 10348 chars]
+Then we'll change one, and prove nothing else moved. Then we'll follow the pages to each other, link by link. And at the end, we'll take the whole thing home.
+
+### §02 — A place for every page
+
+*[INTRO SLIDE 2 (1.6 s): "2 — A place for every page", a small drawn house at its address. Then: open Phext Edit on demo2 and display the table of contents, framed on the paper.]*
+
+Pick a page. Any page.
+
+Every page has an address — not a link to somewhere else. An address inside the file itself.
+
+It looks like nine numbers, in three little groups. Think of the numbers on a library shelf: they tell you where to walk.
+
+*[ZOOM SET-PIECE, first use: we start inside the Honeybee page. The view pulls back — and back — until the whole map is on screen at once: every page a small drawn house on the paper, the threads between them showing the shape of the whole thing. Then the view dives down the map and lands, exactly, on the Oak.]*
+
+Watch. We start here, with the honeybee… and land, exactly, on the oak.
+
+[SFX: jump — whoosh into a soft click on the landing]
+
+We asked for one address. We got one page.
+
+### §03 — Finding your way back
+
+*[INTRO SLIDE 3 (1.6 s): "3 — Finding your way back", a small drawn magnifying glass. Then: search for a real phrase from deep inside an article; the result's address leads back to its page.]*
+
+But what if you don't know the address yet?
+
+Search.
+
+Here is a phrase from deep inside one of the articles. The search finds it — and tells us the address where it lives.
+
+[SFX: jump]
+
+Search helps us discover. The address helps us return.
+
+And all of it — the words, the addresses — lives in the one file.
+
+### §04 — One small correction
+
+*[INTRO SLIDE 4 (1.6 s): "4 — One small correction", a pencil over one line of text. Then: choose the Honeybee summary, change one line, and show the before-and-after check. The window carries a deliberate 3.6 s tail hold — the byte-check reveal is a payoff beat and gets its moment.]*
+
+Now suppose you spot something worth fixing.
+
+We change this one line, here in the honeybee's page.
+
+And here is the lovely part: we can check exactly what changed.
+
+One page has new words. Every other page is untouched — the same as it was, letter for letter.
+
+If I hand you the correction, you can see the change for yourself.
+
+You never have to take anyone's word for it.
+
+### §05 — The unplugged test
+
+*[INTRO SLIDE 5 (1.6 s): "5 — The unplugged test", a plug lifting out of its socket. Then: download the file, the network plug draws itself out, open the file in a plain text editor. Deliberate 3.0 s tail hold for the size-card beat. The section's last 20 s are the on-ramp: the bed's pluck layer rises toward §06.]*
+
+Now my favorite test. No internet. No website at all.
+
+Just the file, opened in the plainest writing program on the computer.
+
+Those odd little marks? They are the fences between the pages.
+
+This view is not pretty. But the words are all here. You can read them. You can copy them. You can keep them.
+
+The whole encyclopedia — twenty-four full articles — is smaller than a single photograph from your phone. And packed up tight for a trip, it shrinks to a third of that.
+
+Small enough to send to a friend. Small enough to carry anywhere.
+
+### §06 — Ideas that point — KEY LEARNING EVENT 1
+
+*[INTRO SLIDE 6 (1.6 s): "6 — Ideas that point", two small houses joined by a thread. INTERLINK, the centerpiece, at full momentum: the bed at its fullest, the web drawing brisk. First, entries being written: hands and typing, pages filling in. Then the last line of the Honeybee article draws attention to itself — its Linked line.]*
+
+But an encyclopedia is not just pages sitting side by side. The ideas lean on each other.
+
+So after the pages are written, we link them.
+
+At the end of each article, a short line names the other pages it points to. The honeybee points to the oak, where its bees forage. The oak points onward, to the sail — because ships were built from oak.
+
+*[The whole web draws itself over the map: fifty-three threads, page to page, each stroke appearing as the narration names the idea. Pencil-stroke SFX under the drawing.]*
+
+Fifty-three links in all — and every one of them is written in the open, inside the pages themselves. Nothing hidden. Nothing separate.
+
+Here is the whole web of it, drawn out — every page, and every thread between them.
+
+Now let's travel.
+
+*[Hop 1: in the editor, the Oak's coordinate in the Honeybee's text is already a live link — one click, and we land in the Oak.]*
+
+From the honeybee… to the oak.
+
+[SFX: jump + click]
+
+*[Hop 2: the Oak's page names the Sail, coordinate and all — click it; the thread runs down to the water.]*
+
+From the oak, out across the water… to the sail.
+
+[SFX: jump + click]
+
+*[Hop 3: a short hop on deck — the Sail's compass coordinate, clicked.]*
+
+The sail needs a compass.
+
+[SFX: jump + click]
+
+*[Hop 4 — a click on the Lighthouse coordinate, then the ZOOM SET-PIECE in full form: pull back from the Compass until the entire map is a projection on the paper — all twenty-four pages, all fifty-three threads, the whole complexity visible at once — drift a breath — then dive the longest thread home and land inside the Lighthouse page.]*
+
+And the compass points us home — to the lighthouse.
+
+[SFX: jump + click]
+
+Four jumps. Four ideas. And the thread between them was there in the text all along.
+
+That is all a link ever was: one idea, naming another — and an address, so you can go and see.
+
+### §07 — Built to be shared — KEY LEARNING EVENT 2 (the scale story)
+
+*[INTRO SLIDE 7 (1.6 s): "7 — Built to be shared", one small file at the center, houses budding outward from it. SIDE-BY-SIDE. On the left of the paper, the pencil city draws itself, growing as the narration lists it: serving machines, master copies, remembering machines, searching machines, stand-by copies in more than one place. On the right, the pencil draws one small program and one file — and stops. Momentum stays at peak: the city extras return, and during the sharing passage a data stream of tiny QR codes scrolls along the bottom edge of the frame — real codes, real payloads (see the easter-egg note in the front matter).]*
+
+Step back, and look at the two ways to build all this.
+
+On one side: the biggest encyclopedia in the world. It holds millions of articles, and the whole world reads it — so behind it stands a small city of machinery. Rooms of computers serving pages, keeping the master copies, remembering, searching, standing by in more than one place, in case anything goes wrong. It needs all of that. It is carrying the world.
+
+*[PLAYFUL BEAT (Emise-flair): as the next lines play, the pencil city quietly keeps going — another little server sheepishly pencils itself in, then another. On the right, nothing changes. The one file just sits there, unbothered.]*
+
+On the other side: this encyclopedia. Behind it stands one small program — and one file.
+
+That is the whole list.
+
+But here is the part nobody expects. Small is not the ceiling here. It is the starting line.
+
+A phext comes apart as cleanly as it goes together. Any computer can hold one slice of the whole — a shelf, a chapter, a single page — and serve just that slice, and the slices always know how to find each other, because every page carries its address.
+
+And sharing stays cheap. Every page carries a tiny fingerprint, so when two copies meet, they do not swap the whole book. They compare fingerprints, and trade only the pages that changed.
+
+*[THE QR STREAM runs beneath this passage: page fingerprints, made visible as a river of little codes, each one a real address from this film.]*
+
+So the same file that fits in your pocket was designed to grow the other way, too — from one reader, to a town, to a world of readers, trillions of people sharing ideas, each served by whatever slice is nearest, with no single machine in the middle carrying it all.
+
+Wikipedia needed a fleet. This needs a file — and the file was designed to outgrow the fleet.
+
+*[Final hold: the completed city on the left, the one file on the right, the pencil at rest. A breath — then the 0.4 s dissolve into §08.]*
+
+### §08 — Your turn (the call to action)
+
+*[INTRO SLIDE 8 (1.6 s): "8 — Your turn", the one file with its cards open, an arrow pointing outward — go. Then: return to the encyclopedia file on the paper; the twenty-four cards fold back into the one file. The bed breathes down, then lifts gently into the closing card.]*
+
+Maybe yours will be a field guide. Or family recipes. Or the notes from something you're building with a friend.
+
+Start small. Give a page an address. Try changing it. Link it to a friend. Then take the file with you.
+
+And now, your turn — for real this time.
+
+Go to edit.phext.io. The encyclopedia from today is waiting there — read it, click through its links, as long as you like.
+
+Then take the file home. It is yours to keep.
+
+And when you're ready, write a page of your own. Give it an address. Link it to something you love. At phext.io, you can claim a space of your very own — a shelf in the library with your name on it.
+
+[SFX: chime — soft, bright, on the claim line]
+
+The encyclopedia from today fits in one file.
+
+Yours is wherever you keep it.
+
+[SFX: jump — one last hop, home to the first page]
+
+*[END CARD, hand-lettered on the paper, held with a slow push-in: Find it. Change it. Link it. Keep it. — then the call to action, held legibly:*
+*edit.phext.io · edit.phext.io/wiki — Read the encyclopedia. Take the file home. Claim your space at phext.io.*
+*Signed beneath, in the drawn hand: — Emise 🔥]*
+
+---
+
+## Diff summary vs SCRIPT-R3 — itemized, nothing silent
+
+**Narration wording: NO CHANGES.** Every section's spoken text is round 3's
+verbatim (the canonical texts in `narration-r4/section-text-*.txt` are the
+round-2/round-3 text files unchanged; the round-4 takes are fresh recordings
+of the same words). The round-3 coverage gap is closed by slotting, not by
+cutting a single word.
+
+Production / stage-direction changes only:
+
+1. **Timing method replaced** — round 3's improvised voice slots (e.g. §07
+   given 58.0 s of picture for 92.9 s of voice; §01 trimmed to its first
+   16.5 s; §05 sped up ×1.1538) are replaced by the slot-first table above.
+   §05 is spoken at natural speed again; §01, §07, §08 are heard in full,
+   in-section.
+2. **Intro slides retimed** 1.9 s → 1.6 s (full draw-on preserved by playing
+   the frame sequence faster, not by dropping frames).
+3. **Transitions standardized** at 0.4 s (round 3: six of nine at 0.4 s, the
+   rest clean cuts; the title's internal crossfade was 0.5 s → now 0.4 s).
+4. **Momentum map added** (front matter) — bed envelope + tail choices shape
+   energy toward §06 and §07; §08 breathes, then lifts into the CTA.
+5. **Easter eggs added** — the §07 QR stream (payloads in claim row 13) and
+   the flame tile riding it. Nothing else in frame changes.
+6. **Music discipline made measurable** — bed-under-voice ≥ 10 dB during
+   speech, verified on stems and reported in the R4 log (round 3 reported
+   only that the bed "never masks speech in the checked windows").
+7. **End-card hold lengthened** inside §08's honest window (the CTA card
+   gets a long, legible hold with a slow push-in — possible because §08's
+   window is now sized to its full voice).
+
+## Appendix — claim-check table
+
+Rows 1–12 carried from SCRIPT-R3.md unchanged (demo facts measured on the
+built demo2 file, SHA-256 `7a7a4be95d530eb69c47fec91004b1724d5d4cdb3fc69432f659fe7ebf564130`;
+scale statements are DESIGN INTENT, Will 2026-11-11, never benchmarks).
+Row 13 is new in round 4.
+
+| # | Claim in the film | Source / standing |
+|---|---|---|
+| 1 | 24 articles, each a full entry; 49 scrolls in one file | demo2 build: `build_wiki2.py` output + `query_demo2.py stats` (24 articles + 24 summaries + 1 home); article bodies 703–800 words each, counted per file |
+| 2 | The whole encyclopedia is "smaller than a single photograph from your phone" | File is 119,086 bytes (measured); a typical phone photograph is measured in megabytes — the file is far under one |
+| 3 | "Packed up tight… shrinks to a third of that" | `xz -9` of the built file: 41,956 bytes ≈ 35% of 119,086 (measured) |
+| 4 | One page changed, "every other page untouched, letter for letter" | Measured on a scratch copy of demo2: editing the Honeybee summary scroll (115 → 180 bytes) left the first 1,125 and last 117,962 bytes of the file identical; the only difference lives inside that one scroll (demo2/README.md) |
+| 5 | 53 links, all written inside the pages; the travel path Honeybee → Oak → Sail → Compass → Lighthouse | `verify_links.py` on the built file: 53 links parsed from the articles' own Linked lines, every target coordinate exists and holds the named article, every linked entry is named in the linking article's prose, graph is one connected web (24/24 reachable), travel path verified hop by hop — ALL LINK CHECKS PASSED |
+| 6 | Links are live: a coordinate written in a page is a clickable link in Phext Edit, and following one is a click | Verified mechanism (Will's correction, 2026-11-10 23:18 CST): in wbic16/phext-lattice@exo `src/bin/phext_edit.rs`, the editor's renderer (`renderRichText`) runs `linkifyCoordinates()` over every rendered scroll — any coordinate pattern becomes a clickable `a.coord-link` calling `gotoCoord(...)`, which jumps to that scroll. Plus the live click test performed during the round-2 capture (clicking the coordinates in demo2's entries and landing on the target scrolls), logged in production/ROUGH-CUT-R2-LOG.md |
+| 7 | Phext Edit side: "one small program — and one file" | phext-edit security/scalability audit (2026-11-09/10) via REVISION-BRIEF-R2.md: serving one phext takes one process, no database, ~122 MB of memory idle; edit.phext.io is that program, deployed |
+| 8 | Wikipedia side: millions of articles; a fleet behind it | ~6.5M English articles (REVISION-BRIEF-R2.md) — narration says only "millions," which is uncontested. The machinery list is generic and uncontested public architecture: MediaWiki application servers, MariaDB databases, Memcached/Redis, Varnish/ATS caching layers, Elasticsearch search, load balancers, multiple data centers. Narration deliberately names no product and no count — it draws "rooms of computers serving / keeping / remembering / searching / standing by," each mapping to one of those layers |
+| 9 | "Any computer can hold one slice of the whole… and serve just that slice, and the slices always know how to find each other, because every page carries its address" | **DESIGN INTENT (Will, 2026-11-11)** — "the format is shard-friendly by nature (each node can serve a holographic subset of the whole)". The address-carrying property itself is the format's definition (every scroll sits at a coordinate); the sharding behaviour is Will's architecture claim, presented as what the format is *designed* to do. **Not a measured benchmark.** |
+| 10 | "Every page carries a tiny fingerprint… they compare fingerprints, and trade only the pages that changed" | Mechanism **shipped**: the seed-cache work (SQ PR #3 + phext-lattice PR #61, 2026-11-10) gives every populated scroll an xxh3_128 hash; a cache-aware fetch sends the client's current hash + a have-content flag, and an unchanged scroll returns a 93-byte envelope with zero content bytes. The narration's "tiny fingerprint" is that hash, in plain words. The fleet-scale sync behaviour built on it is DESIGN INTENT (Will, 2026-11-11), as row 9 |
+| 11 | "Designed to grow… to a world of readers, trillions of people sharing ideas… with no single machine in the middle carrying it all" | **DESIGN INTENT (Will, 2026-11-11)** — "it's designed to scale to trillions of concurrent users sharing ideas". Stated on screen as design intent ("was designed to"), never as a deployed measurement. **Not a measured benchmark.** |
+| 12 | "Wikipedia needed a fleet. This needs a file — and the file was designed to outgrow the fleet." | Will's confidence, rendered in film words (2026-11-11: "it will absolutely mog wikipedia" — his phrase is kept in the internal record, REVISION-BRIEF-R3.md and this appendix; the spoken line carries the same confidence without the slang). The fleet half is row 8 (uncontested); the outgrow half is DESIGN INTENT per rows 9–11 |
+| 13 | The §07 QR stream's codes encode real payloads: `1.1.1/1.1.1/1.1.1`, `1.1.1/2.1.1/2.1.1` (Honeybee), `1.1.1/2.1.2/2.1.1` (Oak), `1.1.1/2.6.2/2.1.1` (Lighthouse), `edit.phext.io`, `Semper Aeq` | Generated in-house (qrcode, error-correction M) from these exact strings; verification method and results in production/ROUGH-CUT-R4-LOG.md (pre-composite decode of every tile + decode from the rendered film frames) |
 # Revision brief R2 — Will's seven notes
 
 Title: Revision brief R2 — Will's seven notes
@@ -2878,6 +3277,28 @@ Will's eight next steps, verbatim in substance:
 - All video work on aletheia-core; thermal gates; loudnorm −14 LUFS discipline (music ducked beneath narration, SFX under the voice, never masking it).
 - No purchases: the licensed-music routes in the production notes need a subscription decision from Will. This pass builds an **original** bed in-house; if a licensed bed is preferred, that is Will's call, flagged at delivery.
 - Gate 1 (Will's listen) still gates any release; nothing is posted.
+# Revision brief R4 — human intervals
+
+Title: Revision brief R4 — human intervals
+Source: ~/workspace/phext-walkthrough/REVISION-BRIEF-R4.md
+Inscribed: 2026-11-11
+SHA-256: cff6cfb6feeba266794c487a89d17c250ad2bb99ce731eef710ce0d57b06f225
+
+---
+# Revision Brief — Round 4: human intervals (Will, 2026-11-11 01:04 CST)
+
+Will's comments for the next round, verbatim in substance:
+
+1. **Moments need to match human intervals — target 150 wpm.** The film's beats are re-timed to human narration cadence: script sections are slotted by word count at 150 words per minute (a section's slot = its words ÷ 150 × 60 s, plus its transition and deliberate holds). This REPLACES the round-3 improvisation that left §07/§08 narration spilling over other sections' pictures and §01 trimmed: in round 4 the slots are computed from the words first, and the pictures are built to the slots — picture serves voice, never the reverse.
+2. **Transitions should target 0.4 sec.** Every transition (dissolve, draw-on join, section change) is 0.4 s unless a named moment deliberately differs (the zoom set-piece's moves are continuous, not transitions).
+3. **Build momentum towards key learning events.** The edit's energy curve rises toward the film's key learning events — the interlink travel (ideas linking and the click journey) and the scale reveal — pacing, music, and motion tighten/swell as each approaches; quieter water between peaks, but no dead air (round-3 pacing rule stands).
+4. **Easter eggs** — e.g. a scrolling data stream of tiny QR codes. At least one real one: the QR codes must actually encode something (coordinates from the film, the home coordinate, edit.phext.io) — an egg that scans to nothing is set dressing, not an egg. Tasteful, peripheral, discoverable on a second viewing; count and placements logged.
+5. **The music shouldn't overpower the narration** (Will, 01:05 CST, added a minute after the first five). The bed stays a bed: narration is the loudest element at every moment; the mix is verified, not vibes — during speech the bed sits clearly beneath the voice (target ≥ 10 dB under the narration's loudness, sidechain-ducked as in round 3, and the round-4 log reports the measured bed-under-voice figure). Swells happen only in narration gaps and transitions.
+6. **Obviously update training.phext** — the process package is updated with round 4 and republished, as after round 3. NOTE (Emise, verified 2026-11-11 01:05 CST against wbic16/human@exo): the published package is named **trainer.phext** (Will's original word, 00:30 CST); no file named training.phext exists in the repo. Round 4 updates trainer.phext unless Will renames it.
+
+## Carried constraints (unchanged)
+
+Rounds 1–3 in full: bright white construction paper, hand-drawn in real time, real clicks for interlink, full entries, plain language, original music bed ducked under narration, pro SFX palette, intro slides, agenda + CTA, Emise flair, ranch-only rendering under thermal gates, −14 LUFS master, no purchases, nothing posted, Gate 1 (Will's listen) gates release. Round 3's known narration-coverage gap is closed by rule 1 of this brief, not by trimming Will's/Emi's words silently — if a script must change to fit its slot, the change is a script edit, visible in SCRIPT-R4.md's diff summary.
 # Production log — original rough cut
 
 Title: Production log — original rough cut
@@ -3396,6 +3817,153 @@ two segments carry ≤ 0.1 s of extra pad (harmless, inside their slots).
 - `production/audio-r3/` — bed (loop/full/normalized), the five SFX, `RECIPES.md`.
 - `production/work-r3/` — generators: `drawn-r3.py`, `audio-r3.py`, `assemble-r3.sh`.
 - `production/thumbs-r3/` — verification frames.
+# Production log — round 4 cut
+
+Title: Production log — round 4 cut
+Source: ~/workspace/phext-walkthrough/production/ROUGH-CUT-R4-LOG.md
+Inscribed: 2026-11-11
+SHA-256: 6bbbe4b0297bb82053121599a64c5a9b423b84d5d08b09d64222cf265dc0993f
+
+---
+# Rough cut — ROUND 4 production log ("human intervals")
+
+**Task:** 30.5.8/6.5.10/5.5.9 · **Brief:** REVISION-BRIEF-R4.md (Will,
+2026-11-11 01:04 CST, music rule added 01:05) · **Script:** SCRIPT-R4.md
+(round 3's words, verbatim — zero wording changes; the round changed the
+timing method, not the text) · **Built:** entirely on aletheia-core,
+2026-11-11 · **Delivered file:** `production/rough-cut-r4.mp4`
+
+**The cut:** 354.40 s (5:54; video stream 354.333) · 108,259,433 bytes ·
+1920×1080, 30 fps, H.264 + AAC 192k, faststart ·
+**SHA-256 `224504723455ac126765a6880cd606fb11377fa6819fc3c5c022a01bf92643d9`**
+(pulled copy hash-identical to the ranch build) ·
+**Loudness: −14.75 LUFS integrated / −1.09 dBTP true peak** (measured on
+the pulled file; target −14 ± 0.5 LUFS ✓, true peak ≤ −1 dBTP ✓ — round
+3's −0.19 dBTP miss is closed).
+
+This round exists to close round 3's narration-coverage gap, and it does:
+**every recorded word plays inside its own section's window — nothing
+trimmed, nothing spilled, nothing sped up.** The audit is below.
+
+## The slot table, as built (the 150 wpm method)
+
+Words counted programmatically (whitespace tokenisation of the canonical
+section texts — 984 total; round 3's TIMING counted 960 by a different
+tokenisation). Aria at 100% speaks ≈ 183 wpm, so every take deviates
+> 7% from its grid slot and every picture was re-slotted to its voice —
+the brief's rule. Windows = intro 1.6 + voice + tail (tails: 1.2 s;
+§04 3.6 s and §05 3.0 s are named deliberate holds for the byte-check and
+size-card payoff beats). Joins are 0.4 s xfades; window starts in the
+finished film land within 0.013 s of this table (frame-exact trims).
+
+| Section | Words | Slot @150 | Voice | Window | Film start | Voice span (film) |
+|---|---|---|---|---|---|---|
+| Title (hold) | — | — | — | 8.00 | 0.00 | — |
+| Agenda | 44 | 17.6 | 13.87 | 15.87 | 7.60 | 8.00–21.87 |
+| §01 What if the website went away? | 66 | 26.4 | 21.05 | 23.85 | 23.07 | 24.67–45.72 |
+| §02 A place for every page | 68 | 27.2 | 22.97 | 25.77 | 46.52 | 48.12–71.09 |
+| §03 Finding your way back | 58 | 23.2 | 16.97 | 19.77 | 71.89 | 73.49–90.46 |
+| §04 One small correction | 70 | 28.0 | 21.24 | 26.44 | 91.26 | 92.86–114.10 |
+| §05 The unplugged test | 99 | 39.6 | 29.64 | 34.24 | 117.30 | 118.90–148.54 |
+| §06 Ideas that point — KEY 1 | 177 | 70.8 | 59.09 | 61.89 | 151.14 | 152.74–211.83 |
+| §07 Built to be shared — KEY 2 | 264 | 105.6 | 89.64 | 92.44 | 212.63 | 214.23–303.87 |
+| §08 Your turn (CTA) | 138 | 55.2 | 46.85 | 49.65 | 304.67 | 306.27–353.12 |
+
+**Speech-coverage audit** (silencedetect −45 dB / 0.6 s on the pure
+narration stem, run on the ranch — coverage.py): all nine sections'
+detected speech starts and ends inside their planned voice spans
+(±0.35 s at the edges, which is the detector's threshold behaviour on
+soft consonants); **boundary crossings: NONE in any section.** §01 is
+heard in full (round 3 trimmed it to 16.5 s); §05 plays at natural speed
+(round 3's ×1.1538 atempo is gone).
+
+## Transitions audit
+
+- **9 of 9 section joins are 0.4 s crossfades** (chained xfade over
+  frame-exact content trims; offsets computed from measured frame
+  counts, landing within 0.013 s of the slot table).
+- **5 in-section joins in §08** (intro→fold→framed home→still→CTA draw→
+  CTA hold), all 0.4 s xfades, per round 3's proven chain; **1 internal
+  crossfade in the title** (photograph→draw-on), retimed 0.5 → 0.4 s.
+- **Total: 15 transitions, all 0.4 s.** No clean cuts anywhere. The two
+  zoom set-pieces (§02, §06 hop 4) are continuous moves, not transitions.
+- Round 3 comparison: six of nine boundaries dissolved, three were cuts.
+
+## Momentum map (as built)
+
+Implemented in the bed's pluck-layer gain envelope (piecewise-linear,
+film time) plus the edit's deliberate tail holds:
+
+| Film span | Energy | What carries it |
+|---|---|---|
+| 0.0–117.3 (title→§04) | 2–2.5 | pluck 0.55–0.60, pad full — quiet water |
+| 117.3–151.1 (§05) | 3, rising | pluck ramps 0.60 → 1.00 across §05's last 20 s (the on-ramp) |
+| 151.1–212.6 (§06, KEY 1) | 5 | pluck 1.00 — fullest motion (web draw + 4 hops) over fullest bed |
+| 212.6–304.7 (§07, KEY 2) | 5 sustained | pluck settles 0.92 → 1.00; the QR river runs 16 s at full legibility |
+| 304.7–337.5 (§08) | 2.5 breath | pluck 0
+...[truncated 6378 chars]
+2. **The join arithmetic took three attempts.** (a) My first assembly
+   script's pair-dissolve ranges were offset by the segment pads —
+   caught when the frame count of the concatenated segments proved the
+   segments themselves exact (10850 frames = window sum + pads +
+   rounding) and the join model wrong; replaced by a chained-xfade join
+   over frame-exact content trims. (b) ffmpeg's concat *filter* and the
+   `apad`/`adelay` chains misreported durations against stream-copy
+   (349.92 vs 357.93 measured two ways) — narration and mix were rebuilt
+   sample-exact in numpy (fix-narr2.py, mix-r4b.py), where durations are
+   sample counts, not metadata. (c) A multi-output ffmpeg invocation
+   silently wrote only one of three mapped WAVs in the resume run —
+   caught by the per-file duration echoes; the numpy mix writes each
+   stem explicitly. The lesson, recorded for the trainer: in this
+   pipeline, assert durations from DECODED SAMPLES/FRAMES, never from
+   container metadata, and never trust a multi-map single pass.
+3. **§07's city-extras branch lost 0.5 s under setpts** (49 frames @4 fps
+   retimed to 16.0 s rendered 15.5 s) — caught by the segment duration
+   assert; fixed with a clone-pad to the full 16.0 (the held frame is
+   the completed extras city; invisible). This is the one place a
+   segment deviates from pure source frames.
+4. **An orphaned probe encode held the node at 84 °C** for several
+   minutes (a zoompan loop whose parent SSH session had been aborted by
+   a runtime restart). The thermal gate correctly refused all segment
+   starts meanwhile; the orphan was found by process inspection and
+   killed; the node then cooled to ~39 °C. Thermal gates worked as
+   designed throughout (segments started only at ≤ 70 °C Tctl).
+5. **The QR stream's first render clipped every tile** (strip geometry:
+   tiles inset by half the strip slack at top only, overflowing the
+   frame's bottom edge). Caught by viewing the sample frame before the
+   segment encode; frames re-rendered with tiles fully inset. The
+   caption's first placement also overlapped tile bottoms; moved into
+   the bottom band.
+6. **Known cosmetic notes (declared, not fixed — Gate 1 material):**
+   - The agenda thumb at t=16 s catches a mid-dissolve frame (items
+     1–2 solid, item 3 fading in) — that IS the draw-on animation mid-
+     flight on a darker capture grade, not a defect; the completed card
+     (t=21 s) is bright paper, all four items, watermark + flame.
+   - The CTA card's drawn text is wider than the source frame, so the
+     slow push-in (kept from round 3's card treatment, zoom 1.03)
+     crops "Keep it." progressively at the right edge; the card is
+     fully legible at push-in start (film ≈ 337–345 s) and the URL
+     line + signature stay in frame throughout.
+   - §07's city hold push-in runs at zoom ≈ 1.05 over 14.6 s — gentle;
+     no legibility issue (verified on the t=285/305 thumbs).
+7. **What round 4 deliberately did not change:** the demo (demo2), the
+   captures, the script's words, the SFX palette and recipes, the
+   licensed-music question (still Will's purchase decision; the bed is
+   the in-house "Paper Light"), and the local-instance capture basis
+   (the live site still serves the round-1 stub; deploying demo2
+   remains Will's decision, as recorded in round 3).
+
+## Provenance
+
+Scripts that built this cut (in `production/work-r4/`): assemble-r4.sh
+(segments), fix-s07.sh (the §07 pad fix), finalize-r4.py (frame-exact
+join + first narration build), fix-narr2.py (sample-exact film-time
+narration), audio-r4.py (stems + momentum envelope), mix-r4b.py (numpy
+mix), master-r4.sh (loudnorm + mux + thumbs), qr-r4.py (tiles),
+qrframes-r4b.py (stream frames), coverage.py + measure-r4.py (audits).
+On the ranch: everything under `/home/wbic16/phext-walkthrough-capture/r4/`
+(segments, stems, QR tiles + decode records, logs). Gate 1 (Will's
+narration listen) still gates any release; nothing is posted.
 # demo2 README — the full-entry encyclopedia
 
 Title: demo2 README — the full-entry encyclopedia
@@ -3543,3 +4111,21 @@ Gate 1 (his narration listen) gates any release; none is posted.
    log): §07/§08 narration runs longer than its picture slots —
    openings spill over the preceding sections' holds; true peak
    −0.19 dBTP is 0.8 dB hot of the ≤ −1 dBTP target.
+
+5. rough-cut-r4.mp4 — ROUND 4: "human intervals" (Will,
+   2026-11-11 01:04 CST). No wording changes; the timing method
+   changes: slot-first at 150 wpm (984 words counted
+   programmatically), pictures re-slotted to the voice, 0.4 s
+   transitions throughout (15 audited), momentum mapped to the
+   two key learning events (§06 interlink travel, §07 scale
+   reveal), real QR easter eggs in §07 (payloads decode from the
+   finished film), and the measured music rule — bed ≥ 10 dB
+   under narration in every section (measured min 10.6 dB,
+   median 14.7 dB). Speech-coverage audit: every word in-section,
+   zero boundary crossings — round 3's gap closed; true peak
+   back under target.
+   354.40 s · 108,259,433 bytes ·
+   SHA-256 224504723455ac126765a6880cd606fb11377fa6819fc3c5c022a01bf92643d9 ·
+   loudness −14.75 LUFS / −1.09 dBTP · completed 2026-11-11.
+   Brief: 1.1.1/3.3.3/1.1.1 · script: 1.1.1/3.2.4/1.1.1 ·
+   log: 1.1.1/3.4.5/1.1.1.
