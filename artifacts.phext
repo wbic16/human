@@ -14,7 +14,7 @@ truth: artifacts-source.json beside this builder
 (build_artifacts_phext.py); never hand-edit the .phext.
 artifacts.phext is published to wbic16/human@exo.
 
-Artifacts inscribed: 28
+Artifacts inscribed: 29
 
 Index (coordinate — title — source):
 - 19.7.11/9.7.12/7.6.9 — Light the Next Light — intro song lyrics & time map — ~/workspace/exocortexia-cartoon/intro/LYRICS.md
@@ -36,6 +36,7 @@ Index (coordinate — title — source):
 - 28.7.9/8.6.11/6.6.8 — Training Film — T7 (R7, the full exemplar build) — Production Log — ~/workspace/phext-walkthrough/production/TRAINING-T7-LOG.md
 - 28.7.9/8.6.11/7.6.9 — Since November 1: A Catalog of Eleven Days 🔥 — ~/workspace/blog/since-november-1.html
 - 30.6.8/7.6.10/7.5.9 — Ranch Node Tailworm Audit — Tailscale TS-2026-014 → TS-2026-017 — ~/workspace/tailworm-audit-task/AUDIT.md
+- 31.7.8/8.7.11/7.6.10 — exo-search README — indexed search over a personal Twitter archive (wbic16/exo-search) — ~/workspace/exo-search-publish/README.md
 - 31.7.9/9.6.12/6.6.9 — The Power of Phext — Walkthrough Package — ~/workspace/phext-walkthrough/WALKTHROUGH.md
 - 32.5.7/7.6.10/6.5.9 — edit.phext.io — Security + Scalability Testing, and the In-Page Phext Server Verdict — ~/workspace/phext-edit-secscale/REPORT.md
 - 32.6.7/7.6.10/6.5.9 — Neovim + Phext — Design: Phext-Scale Navigation in a Modal Editor — ~/workspace/goals/neovim-phext-support-merge-ready-pr-compiled-with-phcc/files/neovim-phext-design.md
@@ -3413,7 +3414,83 @@ Per the audit's terms, these are staged for Will's approval — **no upgrade was
 ## Bottom line
 
 The fleet is current: 14 of 14 assessed nodes on 1.104.5, Tailscale SSH off everywhere, Serve present on two nodes and patched on both. The remaining work is not patching — it is closing the visibility gap on the 11 unassessed devices, seven of which are online right now but outside the ranch access configuration.
-# The Power of Phext — Walkthrough Package
+# exo-search README — indexed search over a personal Twitter archive (wbic16/exo-search)
+
+Title: exo-search README — indexed search over a personal Twitter archive (wbic16/exo-search)
+Source: ~/workspace/exo-search-publish/README.md
+Inscribed: 2026-11-11
+SHA-256: b83fcf09ffa4bf9bce8967b72f6048539405a8d4cce2814e86c3bd6ee8cb0886
+
+---
+# exo-search
+
+Indexed full-text search over a personal Twitter archive — and the rest of a
+personal corpus — in one local SQLite FTS5 index.
+
+Built because per-question bespoke re-scans of a 53 MB `tweets.json` keep
+producing stale, wrong answers. One persistent index, BM25-ranked queries,
+exact term censuses, and a follow graph you can actually ask questions of.
+
+## What it indexes
+
+From a standard Twitter/X archive export (`~/workspace/twitter-archive/`):
+
+- **tweets** — all of them (29,539 in the reference archive, 2008–2025; RTs flagged)
+- **dms** — every direct message, 1:1 and group (44,822; sender and conversation ids carried on every hit)
+- **likes** — every liked tweet's full text (47,973)
+- **people** — the follow graph as a table, not prose: 2,575 accounts,
+  1,773 followers, 1,699 following, 897 mutuals, with screen names resolved
+  from mention data wherever the archive itself provides them
+
+Plus the surrounding corpus, when present:
+
+- **memory** — `~/MEMORY.md`, `~/USER.md`, `~/memory/**/*.md`, chunked with line anchors
+- **phext** — `~/workspace/phext/*.phext`, split into scrolls by coordinate
+
+Counts above are the reference build, each validated against an independent
+brute-force count before the index was trusted (mutuals: 897 by graph table,
+897 by set intersection).
+
+## Usage
+
+```
+exo-search build [--quiet]                  # (re)build ~/workspace/search-index/exo.db
+exo-search stats                            # per-source doc counts + people summary
+exo-search query '<fts5 expr>' [--source tweets|dms|likes|memory|phext] [--after YYYY-MM-DD] [--before YYYY-MM-DD] [--limit N] [--json]
+exo-search count '<term or phrase>' [--source X]   # exact doc census via the index
+exo-search people '<handle-or-account-id>'  # follower? following? mutual? (snapshot-dated)
+```
+
+FTS5 expressions work as you'd expect: `phext`, `"dear internet"`,
+`wish OR dream`, `internet NEAR dear`.
+
+`people` prints the archive snapshot date (the reference export ends
+2025-06-16) on every answer. The graph records what the export knew, not
+what X knows today — treat it accordingly.
+
+## Privacy
+
+The index is a local file. This repository contains the tool only — no
+archive data, no index, no message text is published here or anywhere else.
+Name resolution tops out where the archive stops: accounts that were never
+@-mentioned stay searchable by numeric id (999 of 2,575 resolved in the
+reference build).
+
+## Why this exists
+
+Most software in this space competes on the software-factory game: another
+app, another feed, another dashboard, scored on output volume. exo-search
+is the opposite move — it is substrate. It makes one person's own record
+*addressable*: every message, like, and relationship retrievable in a
+second, with receipts, so the layer above it (judgment, connection,
+decisions about who to reach and why) stops running on stale memory.
+
+Build the substrate, not the game.
+
+## License
+
+MIT (see LICENSE).
+# The Power of Phext — Walkthrough Package
 
 Title: The Power of Phext — Walkthrough Package
 Source: ~/workspace/phext-walkthrough/WALKTHROUGH.md
