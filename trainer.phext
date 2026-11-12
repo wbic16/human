@@ -1,7 +1,7 @@
 # trainer.phext — the training-film production process
 
 This phext packages a PROCESS, not a film: the way Will Bickford and
-Emise developed, across three rounds in November 2026, for making a
+Emise developed, across six rounds in November 2026, for making a
 training film about Phext Edit ("The Encyclopedia You Can Carry").
 Another mind — a future Emise, a Choir seat, a new agent — should be
 able to pick this up and run a training film the same way: same
@@ -18,7 +18,7 @@ trainer.phext.
 
 ## How to use it
 
-Read the ten stage scrolls in order (Collection 2) before your
+Read the eleven stage scrolls in order (Collection 2) before your
 first round; they are the process. The worked example (Collection
 3) is the evidence: the actual plan, scripts, briefs, and
 production logs of the film this process produced, inscribed in
@@ -38,23 +38,31 @@ actually happened — both are kept on purpose.
 8. 1.1.1/2.1.8/1.1.1 — Verification & delivery
 9. 1.1.1/2.1.9/1.1.1 — Revision rounds & correction propagation
 10. 1.1.1/2.1.10/1.1.1 — Standing rules the process runs under
+11. 1.1.1/2.1.11/1.1.1 — Exemplar study: when descriptions stop translating (T7)
 
 Worked example (Collection 3): the production plan, the original
 walkthrough script and shot list, the four round scripts, the
-three written revision briefs, the five production logs, the demo2
-encyclopedia's README and link-verification record, and a
-filmography of the cuts. The videos themselves are not embedded
+five written revision briefs plus the draft T7 brief, the seven
+production logs, the demo2 encyclopedia's README and
+link-verification record, the three T7 exemplar-study notes, and
+a filmography of the cuts. The videos themselves are not embedded
 (too large for the repo); the filmography scroll names each cut's
 file, size, and SHA-256 so any copy can be verified.
 
-A note on counts: four scripts exist (R1–R4) and three written
-revision briefs (R2, R3, R4). Round 1 had no separate brief file —
-its direction was Will's delivery of Emi Prime's revised script
-plus the re-run order, and it is represented by its script and
-its production log.
+A note on counts: four scripts exist (R1–R4) and five written
+revision briefs (R2–R6), plus the draft T7 brief. Round 1 had no
+separate brief file — its direction was Will's delivery of Emi
+Prime's revised script plus the re-run order, and it is
+represented by its script and its production log. Two
+inscriptions were completed late, in v5: round 5's production
+log and round 6's brief were folded into stage scrolls and the
+filmography at v4 without being inscribed as their own scrolls;
+v5 inscribes them (1.1.1/3.4.6/1.1.1 and 1.1.1/3.3.5/1.1.1) so
+both collections run unbroken.
 
-State at packaging (refreshed 2026-11-11, round 4): All four
-rounds are complete. Round 4 — "human intervals," Will's brief of
+State at packaging (refreshed 2026-11-11, v5 — round 6
+complete, round 7 in exemplar study): All six rounds are
+complete. Round 4 — "human intervals," Will's brief of
 2026-11-11 01:04 CST — changed the timing method, not a single
 word: slot-first at 150 wpm, pictures re-slotted to the voice,
 0.4 s transitions throughout, momentum mapped to the two key
@@ -81,6 +89,38 @@ Captures remain the local editor instance — the live site still
 serves the round-1 stub encyclopedia; deploying demo2 is Will's
 decision.
 
+Round 5 (Tier-5 polish, Will's eight notes, 2026-11-11 07:46
+CST) rebuilt the picture at 60 fps under a steady-bed
+discipline and a one-family SFX palette, the narration stem
+unchanged from round 4, and delivered compliant on every
+measured note except one: §07's re-ordered back half ran long,
+picture 399.23 s against the stem's 354.33 s. Filmography
+entry 6; log at 1.1.1/3.4.6/1.1.1.
+
+Round 6 (T6, Will's go-ahead 2026-11-11 14:52 CST) fixed
+exactly that, audio untouched: the duplicate §07 push-in ramp
+dropped, the beat trimmed, and — measured on the build — §04,
+§05, and the small sections corrected to the same slot clock.
+Picture 354.283 s against audio 354.330 s, acceptance met,
+zero boundary crossings, no picture-only tail. Filmography
+entry 7; brief at 1.1.1/3.3.5/1.1.1, log at 1.1.1/3.4.7/1.1.1.
+§08's "Keep it." crop remains unfixed, per the brief's
+condition.
+
+Round 7 (T7) is in study, not in build. On the 2026-11-11
+evening commute Will directed that T7 be built from studied
+exemplars — Animusic, TED Talks, Kurzgesagt — because his
+descriptions of what he wants were not translating into the
+builds. The study is Stage 11 (1.1.1/2.1.11/1.1.1); its notes
+sit at 1.1.1/3.7.1/1.1.1 (Animusic), 1.1.1/3.7.2/1.1.1 (TED),
+and 1.1.1/3.7.3/1.1.1 (Kurzgesagt); the draft brief they merge
+into is at 1.1.1/3.3.6/1.1.1 — DRAFT, build not approved. The
+TED exemplar is confirmed by Will: Guy Pearce's Weyland
+"TED 2023" talk, with "Happy Birthday, David" as its
+companion piece (brief decision D4, resolved). Branding canon
+for the Exocortex, Will's statement the same evening: three
+movies define it — Contact, Arrival, and Interstellar.
+
 ## Index of scrolls
 
 (The builder appends the full generated index below: coordinate —
@@ -96,6 +136,7 @@ title — source.)
 - 1.1.1/2.1.8/1.1.1 — Stage 8 — Verification & delivery — ~/workspace/phext/trainer-src/stage-08-delivery.md
 - 1.1.1/2.1.9/1.1.1 — Stage 9 — Revision rounds & correction propagation — ~/workspace/phext/trainer-src/stage-09-rounds.md
 - 1.1.1/2.1.10/1.1.1 — Stage 10 — Standing rules the process runs under — ~/workspace/phext/trainer-src/stage-10-rules.md
+- 1.1.1/2.1.11/1.1.1 — Stage 11 — Exemplar study: when descriptions stop translating (T7) — ~/workspace/phext/trainer-src/stage-11-exemplars.md
 - 1.1.1/3.1.1/1.1.1 — Production plan (incl. §6 polish tier) — ~/workspace/phext-walkthrough/PRODUCTION-PLAN.md
 - 1.1.1/3.1.2/1.1.1 — Walkthrough — original script & shot list — ~/workspace/phext-walkthrough/WALKTHROUGH.md
 - 1.1.1/3.1.3/1.1.1 — Shot list — ~/workspace/phext-walkthrough/production/SHOTLIST.md
@@ -108,14 +149,21 @@ title — source.)
 - 1.1.1/3.3.2/1.1.1 — Revision brief R3 — Will's eight steps — ~/workspace/phext-walkthrough/REVISION-BRIEF-R3.md
 - 1.1.1/3.3.3/1.1.1 — Revision brief R4 — human intervals — ~/workspace/phext-walkthrough/REVISION-BRIEF-R4.md
 - 1.1.1/3.3.4/1.1.1 — Revision brief R5 — Tier-5 polish — ~/workspace/phext-walkthrough/REVISION-BRIEF-R5.md
+- 1.1.1/3.3.5/1.1.1 — Revision brief R6 — the §07 re-time fix — ~/workspace/phext-walkthrough/REVISION-BRIEF-R6.md
+- 1.1.1/3.3.6/1.1.1 — Revision brief T7 — exemplar-built round (DRAFT — build not approved) — ~/workspace/phext-walkthrough/REVISION-BRIEF-T7-DRAFT.md
 - 1.1.1/3.4.1/1.1.1 — Production log — original rough cut — ~/workspace/phext-walkthrough/production/ROUGH-CUT-LOG.md
 - 1.1.1/3.4.2/1.1.1 — Production log — round 1 revised cut — ~/workspace/phext-walkthrough/production/ROUGH-CUT-REVISED-LOG.md
 - 1.1.1/3.4.3/1.1.1 — Production log — round 2 cut — ~/workspace/phext-walkthrough/production/ROUGH-CUT-R2-LOG.md
 - 1.1.1/3.4.4/1.1.1 — Production log — round 3 cut — ~/workspace/phext-walkthrough/production/ROUGH-CUT-R3-LOG.md
 - 1.1.1/3.4.5/1.1.1 — Production log — round 4 cut — ~/workspace/phext-walkthrough/production/ROUGH-CUT-R4-LOG.md
+- 1.1.1/3.4.6/1.1.1 — Production log — round 5 cut — ~/workspace/phext-walkthrough/production/ROUGH-CUT-R5-LOG.md
+- 1.1.1/3.4.7/1.1.1 — Production log — round 6 cut — ~/workspace/phext-walkthrough/production/ROUGH-CUT-R6-LOG.md
 - 1.1.1/3.5.1/1.1.1 — demo2 README — the full-entry encyclopedia — ~/workspace/phext-walkthrough/demo2/README.md
 - 1.1.1/3.5.2/1.1.1 — demo2 — link-verification record (summary) — ~/workspace/phext/trainer-src/demo2-verification.md
 - 1.1.1/3.6.1/1.1.1 — Filmography — the cuts, by name + hash — ~/workspace/phext/trainer-src/filmography.md
+- 1.1.1/3.7.1/1.1.1 — T7 exemplar notes — Animusic — ~/workspace/phext-walkthrough/t7-notes/ANIMUSIC-NOTES.md
+- 1.1.1/3.7.2/1.1.1 — T7 exemplar notes — TED Talks — ~/workspace/phext-walkthrough/t7-notes/TED-NOTES.md
+- 1.1.1/3.7.3/1.1.1 — T7 exemplar notes — Kurzgesagt — ~/workspace/phext-walkthrough/t7-notes/KURZGESAGT-NOTES.md
 # Stage 1 — Brief & grounding
 
 Every round starts from Will's words, not from a plan of ours.
@@ -628,6 +676,69 @@ These bind every round, whatever the brief says:
 - The demo's pristine files are never modified on camera; work
   happens on scratch copies, and the original's hash is
   re-verified at wrap.
+# Stage 11 — Exemplar study: when descriptions stop translating (T7)
+
+Rounds 1–6 ran on description: Will said what he wanted, the
+brief turned his words into checkable instructions, and the
+build was audited against them. That loop fixed everything
+measurable. What it did not fix, Will named on the evening
+commute call of 2026-11-11: something about the way he
+describes what he wants is not being translated into the film —
+the cuts pass their audits and still are not the thing he
+admires. His direction for round 7 (reference coordinate
+23.6.9/8.6.12/6.6.9): Emise is to experience the example videos
+he admires and take production notes from them, so T7 is built
+from studied exemplars, not from his descriptions alone.
+
+The stage, as a repeatable process:
+
+1. The exemplars are Will's, named by him: Animusic (Wayne
+   Lytle's music-driven animation), TED Talks, and recent
+   Kurzgesagt videos. The TED talk he remembered — an actor
+   performing as an android, produced ten-plus years ago — is
+   confirmed (Will, same call, 2026-11-11): Guy Pearce's
+   in-character Peter Weyland "TED 2023" talk from the 2012
+   Prometheus virals is definitely the one; the companion
+   piece is "Happy Birthday, David" (Fassbender playing the
+   android). Decision D4 in the draft T7 brief is resolved
+   accordingly: Weyland is the exemplar.
+   Branding canon, stated by Will on the same call: three
+   movies define the branding for the Exocortex — Contact,
+   Arrival, and Interstellar. They stand as tone references
+   for the film work; recorded here as his stated canon,
+   without analysis.
+   What is taken from each is also his ruling: from Kurzgesagt,
+   narration pacing and concept introduction only — their
+   bright palette and bird mascots are explicitly not ours.
+2. Each exemplar gets a production-notes scroll: what the work
+   does mechanically (how a note causes a hammer strike, how a
+   talk stages one idea, how a concept is introduced before it
+   is named), then a translation section restating every
+   principle as a concrete, checkable rule for this film, in
+   the brief style of the earlier rounds, then an honest-limits
+   section naming what cannot be copied. Notes that cannot be
+   turned into a checkable rule are colour, not instructions.
+3. The notes merge into the round's brief, with each rule
+   credited to its source exemplar, and the conflicts between
+   exemplars stated in the brief rather than averaged away
+   (the T7 draft brief's pacing decision is the worked
+   example: the studies agree the film speaks too fast per
+   concept, and settling the words-per-minute ceiling is a
+   decision reserved for Will before any build).
+4. The study changes what a round is allowed to touch. T6
+   changed timings only. The merged T7 rules are mostly
+   script-level — how concepts are introduced, how causes are
+   shown, where the silences go — so a full T7 likely means a
+   revised script and a new narration recording, ending the
+   R4→R6 stem identity. That consequence is stated in the
+   brief as Will's decision, never taken as a builder's
+   assumption.
+
+The study's inscriptions (worked example, Collection 3):
+Animusic notes at 1.1.1/3.7.1/1.1.1, TED notes at
+1.1.1/3.7.2/1.1.1, Kurzgesagt notes at 1.1.1/3.7.3/1.1.1, and
+the draft T7 brief they merge into at 1.1.1/3.3.6/1.1.1 —
+DRAFT, build not approved. Gate 1 still gates any release.
 # Production plan (incl. §6 polish tier)
 
 Title: Production plan (incl. §6 polish tier)
@@ -3446,6 +3557,477 @@ the film has been describing. One beat, a few seconds, in the
 established drawn register — the film acknowledges the viewer
 once, then returns to the subject. If Will prefers a different
 moment, his placement wins.
+# Revision brief R6 — the §07 re-time fix
+
+Title: Revision brief R6 — the §07 re-time fix
+Source: ~/workspace/phext-walkthrough/REVISION-BRIEF-R6.md
+Inscribed: 2026-11-11
+SHA-256: 9e7efc39c4026861f3016bf5037a624169d896481ff35d6c20427e2c084c72fd
+
+---
+# Revision Brief — Round 6 (T6)
+
+**Film:** Phext Edit training film, Round 6.
+**Reference coordinate:** 29.6.9/7.5.10/5.5.9 (Will's go-ahead, 2026-11-11 14:52 CST: "super busy day, go ahead and schedule your T6 run")
+**Base:** Round 5 master `rough-cut-r5.mp4` (125,132,023 B, SHA-256 7fcf3d4d4dd0e6d9b57e675ca3b8a69580e488d6c71ce5838f4ceebf56582fa9) and its log `production/ROUGH-CUT-R5-LOG.md`.
+**Gate:** Gate 1 (Will's narration listen) still gates any release of any cut. Nothing is posted.
+
+## The one job
+
+R5 is compliant on every measured note except one: locked audio–picture sync. Picture is 399.23 s against 354.33 s of audio. Sync holds through §06 and §07's body; §07's re-ordered back half was rendered at 78.2 s for a 48.2 s slot, so narration finishes over §07's map/river material and the final ~45 s play picture-only in silence.
+
+T6 fixes that, and only that — plus the one inherited cosmetic noted below if it can be fixed without disturbing sync.
+
+## Fix scope (from the R5 log's fix path)
+
+1. Re-time §07's back half to the slot clock:
+   - The re-ordered §07 back half gets **48.2 s**, not 78.2 s.
+   - Long poles: cityx (rendered 16.0 s against a 12.24 s R4 source span) and the push-in ramp (rendered 46.2 s).
+   - Method is the builder's choice — setpts scaling per piece before the join, or re-render those pieces at slot durations — provided the result is native 60 fps motion, never frame-doubled, and the fourth-wall beat and QR river remain in the R5 order closing §07.
+   - Audit per-piece durations *before* the join this time: every piece's muxer duration must match its slot before chaining, so rounding cannot compound through the xfades undetected. State the per-piece table in the log.
+2. Re-run the film join (all 9 joins remain 0.4 s xfades, zero hard cuts).
+3. Re-mux with R5's audio stem unchanged.
+
+## Hard invariants — everything from R5 carries over
+
+- Narration verbatim from R4/R5: stem sample-identical, zero re-records, zero boundary crossings.
+- 1920×1080, constant 60/1 fps throughout.
+- Master loudness −14 LUFS ±0.5, true peak ≤ −1 dBTP (R5 measured −14.34 / −1.52).
+- Bed: section-to-section spread ≤ ±1.5 dB (R5: 0.40 dB), swells ≤ +3 dB, bed-under-voice ≥ 10 dB.
+- SFX: the R5 concert-grand family and its 31 events, frame-locked as in R5 — re-locked to the new §07 timings where §07 events move.
+- Exactly ONE fourth-wall break, closing §07, QR codes under her decoding (R5: 8/8 in that frame).
+- QR river decodes from the final encode (R5 sampled 9/9, 8/8, 8/8).
+- Concept ladder unchanged. Faststart on the master.
+
+## Success measurement (the T6 acceptance test)
+
+- **Total picture duration equals audio duration within one xfade (0.4 s)** — target ≈354.3–354.7 s, not 399 s.
+- Sync check at §07/§08: narration for the river, the fourth-wall beat, the §08 grid and the CTA lands on its own picture; no picture-only tail.
+- All R5 compliance numbers re-measured on the final file and reported in `production/ROUGH-CUT-R6-LOG.md`, including any that regress.
+
+## Optional, only if free
+
+- §08 CTA card: "Keep it." cropped at the right edge under the push-in (inherited from R4 through R5). Fix only if it costs no sync risk; otherwise leave and note it.
+
+## Pipeline discipline
+
+- ALL video work on aletheia-core, never on this VM. Thermal gates: segment starts at Tctl ≤70 °C; pause ≥75 °C, resume ≤70 °C; 80 °C = off-time to ≤65 °C.
+- Work in `~/phext-walkthrough-capture/r6/` on the node; pull the finished master back to `~/workspace/phext-walkthrough/production/rough-cut-r6.mp4` and verify size/SHA-256/dimensions/fps/duration locally.
+- Serve the master the same tailnet way as R5 (new unit/port or reuse pattern; verify HEAD + a byte-range slice hash).
+- Log everything in `production/ROUGH-CUT-R6-LOG.md`, deviations stated first and plainly.
+# Revision brief T7 — exemplar-built round (DRAFT — build not approved)
+
+Title: Revision brief T7 — exemplar-built round (DRAFT — build not approved)
+Source: ~/workspace/phext-walkthrough/REVISION-BRIEF-T7-DRAFT.md
+Inscribed: 2026-11-11
+SHA-256: 0fee9c78ec7dd027d7beea58985ac026a21e00a261db73a65356c1aeb0bcf3f8
+
+---
+# Revision Brief — Round 7 (T7) — DRAFT
+
+**Status: DRAFT FOR WILL'S REVIEW. Will has not yet approved a T7 build.
+Nothing in this brief is authorised to run. Two items in "Decisions for
+Will" (§9) must be settled before a final brief can be written, and the
+pacing decision changes the slot clock, so it comes first.**
+
+**Film:** Phext Edit training film, Round 7.
+**Reference coordinate:** 23.6.9/8.6.12/6.6.9 (Will's direction, evening
+commute call, 2026-11-11: Emise is to study the example videos he admires
+and build T7 from production notes taken from them, because his
+descriptions of what he wants were not translating into the builds).
+**Sources merged by this brief:**
+- `t7-notes/ANIMUSIC-NOTES.md` — Animusic (Wayne Lytle): rules T7-01…T7-14.
+- `t7-notes/TED-NOTES.md` — the Weyland/David *Prometheus* virals and the
+  classic TED form (Harris 2016, Bostrom 2015, Anderson's guide): 10 rules.
+- `t7-notes/KURZGESAGT-NOTES.md` — Kurzgesagt, recent videos, pacing and
+  concept introduction only (palette and bird mascots excluded by Will's
+  ruling): rules K1…K12.
+Source credits below are (A) Animusic, (T) TED, (K) Kurzgesagt.
+**Base:** Round 6 master `rough-cut-r6.mp4` (111,063,467 B, SHA-256
+0b463afa299e5595f26a11645a5195fba53499d8722e64ba4a4f13cfff4d8938) and its
+log `production/ROUGH-CUT-R6-LOG.md`. R6 shipped picture 354.283 s against
+audio 354.330 s (0.047 s apart), narration stem unchanged from R4/R5,
+every R5 compliance number re-measured and passing.
+**Gate:** Gate 1 (Will's narration listen) still gates any release of any
+cut. Nothing is posted.
+
+## 1. The job
+
+R6 is the first cut with nothing mechanically wrong: picture and audio
+agree, every section's narration sits inside its own picture, the measured
+sound rules pass. What R6 does not fix — what no re-time could fix — is
+what Will named on 2026-11-11: the film does not yet teach the way the
+videos he admires teach. T7 is therefore a different kind of round from
+T6. T6 changed timings. T7 changes how concepts are introduced, how
+causes are shown, where the silences go, and how fast the finished film
+speaks.
+
+Consequence, stated plainly: most of the merged rules below are
+script-level rules. They cannot be met by re-cutting picture against the
+R6 stem. A full T7 means a revised script and a new narration recording,
+which ends the R4→R6 stem identity. That is a decision for Will (§9, D2),
+not a builder's assumption. If Will rules picture-only, §3 marks which
+rules survive that ruling and which lapse.
+
+## 2. DECISION-WILL — pacing and length (settle before anything else)
+
+The three studies agree on the diagnosis and disagree with the current
+film on one number:
+
+- Kurzgesagt's measured finished-film rate: ~135–145 wpm, hook excepted
+  (~155 wpm for the opening 30 s). Rule K1 sets the T7 ceiling at
+  **≤145 wpm of finished film**.
+- The current film: 984 words over 354.3 s ≈ **167 wpm**. The gap is not
+  Aria's reading speed; it is words per concept. The script spends 984
+  words on a format, an editor, a wiki, and a scale claim; the sampled
+  Kurzgesagt video spends ~1,340 words on one mechanism and its
+  consequences.
+
+Arithmetic allows exactly two ways to close the gap. There is no third.
+
+| | Option A — cut words, hold length | Option B — keep words, lengthen film |
+|---|---|---|
+| Script | ≈856 words (cut ≈130 of 984, ~13%) | 984 words, unchanged count |
+| Finished rate | ≤145 wpm | ≤145 wpm |
+| Runtime | ≈354 s (5:54), R6 slot clock stands | ≈407 s (6:47), +53 s |
+| Slot clock | Unchanged; picture re-cut to the same slots | Re-derived from the new stem; every section gains time |
+| Picture cost | Re-stage beats to the new script inside known slots | ≈53 s of additional holds and extended captures must be staged and stay interesting |
+| Script cost | The §3 rules also *add* words (two questions, recap beats, limits beat). If those are net-new, the cut from existing text is larger than 130 words — the additions are counted inside the 856 budget, not on top of it | Additions push the count above 984 and the runtime above 407 s by the same arithmetic (≈+7 s per +17 words); the additions must replace existing lines, not append |
+| Risk | Cutting the wrong 130 words thins the teaching; the film must still stand alone as the only training film | A 6:47 training film asks more of a cold viewer's patience; dead air is a real failure mode if the added seconds are holds rather than staged picture |
+
+**Recommendation (not a decision): Option A.** Reasons: (1) the diagnosed
+defect is density — too many words per concept — and Option B treats the
+symptom (rate) while keeping the density; (2) 354 s already sits between
+the two admired TED exemplars in length (Weyland 3 min, the classic form's
+cap 18 min, Harris/Bostrom mid-range), and the TED study's warning is
+that at this length the one-idea discipline must be stricter, not the
+runtime longer; (3) the cuts have a named order of attack under the §3
+rules — lines that name a concept before showing it (rule T7-04), second
+carriers for a concept (T7-06), and summary lines in the close (T7-24)
+are cut or rewritten first, before any teaching step is touched.
+If Will rules Option B, every number in §8 that depends on runtime is
+recomputed from the new stem before the build starts, and the brief is
+re-issued final with the new slot table.
+
+Whichever option is ruled, the hook exception (K2) applies: §01's opening
+30 s may run up to ~155 wpm, provided §01's remainder measures ≤140 wpm.
+
+## 3. The merged rule list
+
+One list. Where the three studies state the same rule in different words,
+it appears once, in its strongest form, credited to all its sources.
+Every rule is checkable: yes/no, a count, or a number with its audit
+method. Rules marked [script] cannot be met without the new script of
+§9 D2; rules marked [picture] can be met in a picture-only round.
+
+**T7-01 — Score first. [picture]** The narration stem is T7's score:
+locked before picture work begins, and every picture piece is audited
+against its slot duration *before* the join, with the per-piece duration
+table printed in the log. Zero pieces off-slot at join time. (A T7-01;
+carries the R6 pre-join audit discipline unchanged.)
+
+**T7-02 — Throughline, ≤15 words. [script]** Before any build, the brief
+for the final round states the film's throughline in ≤15 words. Each
+section's first log entry names which word(s) of the throughline it
+serves. A section that cannot name one is cut or merged, not shortened.
+(T rule 1.)
+
+**T7-03 — One idea per section, one repeatable sentence. [script]**
+Each section carries exactly one new concept (the R4 concept ladder
+already fixes the count and the order — both unchanged). The coverage
+audit gains a column: the single sentence a first-time viewer should be
+able to repeat after that section. A section needing two sentences is
+two sections in one coat and goes back. (T rule 2; ladder per R4–R6.)
+
+**T7-04 — Show, then name; nothing appears without a visible cause.**
+[picture + script] The merged form of Animusic's no-orphan-reveals,
+Kurzgesagt's show-before-name, and TED's image-before-concept:
+- (a) Every scroll appearance, edit, save, search result, or link-follow
+  on screen is caused by a visible on-screen action in the same beat
+  (typed coordinate, search, click, link traversal). Cause→effect list
+  for every visual event in the log; orphans = 0. (A T7-02.)
+- (b) The causing action is fully legible before its effect lands: a
+  typed coordinate is completely typed and readable ≥0.5 s before the
+  scroll opens; a travelling cursor is in motion for its whole path,
+  never teleporting. Lead ≥0.5 s on 100% of (a) pairs. (A T7-03.)
+- (c) Where the effect is remote from the cause, the connecting path is
+  drawn or traversed on screen — no jump from cause to frameless result.
+  Yes/no per beat. (A T7-04.)
+- (d) Every concept on the ladder is demonstrated working on screen
+  before its name is spoken; the first spoken instance of each name
+  comes after its first on-screen demonstration begins. Yes/no per
+  concept. (K3.)
+- (e) In each section's narration, one concrete image or anecdote comes
+  first and the concept is named only after the image has landed.
+  Script audit lists image-first vs concept-first line per section;
+  image first in 9/9 sections. (T rule 4.)
+
+**T7-05 — Countable before abstract. [script]** Every quantity in the
+narration is stated once in countable form before (or instead of) the
+abstract figure: scrolls as pages on the paper, scale as a drawn grid of
+files — the 100-people device, not the rate. Yes/no per quantity in the
+script audit. (K4.)
+
+**T7-06 — One carrier per concept. [picture + script]** Each concept
+gets exactly one visual metaphor, introduced with it, and that same
+drawing is reused and extended — never replaced — at every later mention
+and at the scale zoom. The brief lists each concept's carrier; a second
+carrier for the same concept is a defect. Carriers are extended at cuts,
+not morphed mid-shot (live captures cannot morph). (K5.)
+
+**T7-07 — One new visual system at a time. [picture]** Within a section,
+at most one new visual system (UI region, phext dimension, notation)
+becomes active per narration sentence-block, introduced while previously
+taught systems stay visibly present as ground. Beat-sheet audit:
+simultaneous new systems ≤1 everywhere. (A T7-06.)
+
+**T7-08 — Calibration before ensemble. [picture]** Each section's core
+teaching action is first performed solo, once, end-to-end, at readable
+speed, before the section layers anything on it. Each section's solo
+performance exists as an identifiable span in the cut; sections passing
+= 9/9. (A T7-05.)
+
+**T7-09 — Geography before close-ups. [picture]** Every new space (wiki
+article layout, lattice view, QR river) gets an establishing wide of
+≥2.0 s before the first close work in it. Shot-list audit per new space.
+(A T7-07.)
+
+**T7-10 — Opening: replace a picture, then state the two questions.
+[script]** The film opens by replacing a picture the viewer already has
+— before any instruction, definition, biography of phext, or agenda. A
+cold viewer stopped at 0:30 can say what picture changed. §01 then ends
+by stating, in narration, the two questions the film answers. Both
+checks yes/no against the script and a cold-viewer stop test. (T rule 3;
+K6.)
+
+**T7-11 — Phrase integrity. [picture]** No visual cut, xfade, or
+reframing lands inside a narration sentence — inside sections as well as
+at the 9 joins. Camera moves may run under speech; a change of shot
+occurs only at a sentence or section boundary. Transcript timestamps vs
+shot-change list: mid-sentence shot changes = 0. (A T7-08.)
+
+**T7-12 — Camera arrives early. [picture]** At every hand-off where
+narration moves attention from object A to object B, the move to B starts
+at or after B's verbal cue, and B is framed and settled ≥0.3 s before
+B's causing action (T7-04b) begins. Checkable per hand-off from the
+capture. (A T7-09.)
+
+**T7-13 — Nothing on screen competes with the sentence. [picture]** Any
+frame containing readable text longer than a label (≤5 words) while the
+narration is speaking about something else is a defect. Captures show
+the one thing the voice is pointing at; the shot is the slide. Frame
+audit against the transcript. (T rule 5.)
+
+**T7-14 — Pauses are script, not luck. [script]** The script marks
+`[pause]` at exactly four kinds of point: after the hook question,
+before each section's pivot line, after each section's largest number,
+and at each section turn. In the stem, each marked pause measures
+≥0.4 s of silence — and at the two or three biggest claim lines the
+picture holds and the silence measures ≥1.0 s. Silence-detect audit
+against the marked list: all marks present; no unmarked silence >0.8 s
+inside a section. (K7; T rule 6.)
+
+**T7-15 — Recap beats. [script]** Before any section that extends a
+previous concept rather than introducing a new one, the narration
+carries a recap of ≤2 sentences in plain words. Yes/no per such section;
+recap words count inside the §2 word budget. (K8.)
+
+**T7-16 — One listener, second person. [script]** Every address in the
+script is singular; no sentence addresses a crowd ("you all," "everyone
+watching") — count of crowd addresses = 0. Each section's first
+narration beat addresses the viewer directly or hands them the action
+("watch what happens when you…"). Yes/no per section. The read is
+directed at one named listener, not at an audience. (K9; T rule 8.)
+
+**T7-17 — SFX are strikes. [picture]** Every SFX event in the
+concert-grand family has a visible on-screen contact or state-change
+within ±2 frames at 60 fps — a key completing, a link landing, a scroll
+edge settling. Decorative SFX with no visible cause = 0. The R5 recipe
+book carries over; the event list in the log gains a "visible cause"
+column, and events re-lock to T7 timings where beats move. (A T7-10;
+R5 SFX discipline.)
+
+**T7-18 — Density peaks once. [picture]** The log carries a per-section
+density table: simultaneously active visual systems per sentence-block.
+Required shape: within each section, density peaks in the final third
+and falls before the section ends; across the film the single maximum
+is §07; §08's density is ≤½ of §07's peak. (A T7-11.)
+
+**T7-19 — Return path. [picture]** Every element a section opens
+(scroll, panel, thread, link chain) is visibly closed, returned, or
+present-and-accounted-for in that section's closing wide, which holds
+≥1 s on the settled state. Open loops at a section boundary = 0, except
+a designed carry-over into the next section named in the beat sheet.
+(A T7-12.)
+
+**T7-20 — The scale zoom is one move. [picture]** §07's scale reveal
+keeps the R4–R6 single continuous zoom discipline. During the zoom the
+narration uses short clauses, one per scale step, and no concept is
+named for the first time inside the zoom window (first-mention list
+from T7-04d checked against the window). (K10.)
+
+**T7-21 — One sustained image, no underlining. [picture]** Where the
+film wants the viewer to feel the strangeness of the subject, it uses
+one sustained image held longer than comfort suggests, with no
+explanatory narration over it and no effect underlining it. The beat
+sheet names any such span in advance; unplanned instances = 0, and
+spans invented in the edit = 0. (T rule 10, the David rule.)
+
+**T7-22 — Biggest effect once; the frame breaks once. [picture]** The
+§07 fourth-wall break remains the film's single largest effect, used
+exactly once, closing §07, QR codes under her decoding. Any second
+moment that winks at the audience is cut, however charming, and any
+effect approaching the break's scale elsewhere fails review. (A T7-14;
+T rule 7; R5/R6 invariant.)
+
+**T7-23 — Limits beat before the close. [script]** The section before
+the CTA states plainly what phext does not do, or what the demo does not
+prove, in ≤3 sentences. Yes/no in the script. This replaces uplift-only
+momentum into §08. (K11.)
+
+**T7-24 — Close on consequence, at the slowest pace, on the smallest
+image. [script + picture]** The last narration sentence before the CTA
+is a consequence sentence — what becomes possible if the viewer keeps
+and uses this — not a summary and not a feature list. After the final
+narration sentence: no new concept, no new UI element, no new visual
+system; only previously taught elements in their settled state, plus
+the CTA card (new elements in the final 15 s = 0, CTA excepted). §08's
+final narration beat is the slowest in the film (≤130 wpm across its
+slot) and ends on the smallest concrete image, not the largest claim;
+the CTA follows it. (T rule 9; A T7-13; K12.)
+
+**T7-25 — §08 "Keep it." crop: fixed this round. [picture]** Carried
+forward from R4 through R6, where it was optional-only-if-free and was
+left because re-rendering the CTA portion inside R6's sync fix was not
+free of risk. In T7 the §08 slot is being re-staged anyway, so the
+condition lapses: the CTA card is re-rendered or reframed so that
+"Keep it." — and every other line of the card — sits fully inside the
+frame at every point of the push-in, including maximum zoom. Verified
+on frame grabs from the final encode at push-in start, midpoint, and
+end: cropped characters = 0.
+
+## 4. What does NOT change in T7
+
+The R6-verified machinery. T7 changes teaching, staging, and (if Will so
+rules) the script — it does not reopen anything below.
+
+- **Slot clock discipline.** Slots are derived from the locked stem
+  first; every piece is audited against its slot before the join
+  (T7-01); picture duration equals audio duration within one xfade
+  (0.4 s). If §2 Option B is ruled, the slots are new numbers under the
+  same discipline, not an exception to it.
+- **Thermal gates.** Segment starts at Tctl ≤70 °C; pause ≥75 °C,
+  resume ≤70 °C; 80 °C = off-time to ≤65 °C.
+- **Ranch-only rendering.** All video work on aletheia-core, never on
+  this VM. Work in a round-specific directory on the node; master pulled
+  back and verified locally (size, SHA-256, dimensions, fps, duration).
+- **Format.** 1920×1080, constant 60/1 fps, native 60 fps motion —
+  nothing frame-doubled anywhere in the chain. Faststart on the master.
+- **Loudness and bed.** Master −14 LUFS ±0.5, true peak ≤ −1 dBTP.
+  Bed: section-to-section spread ≤ ±1.5 dB, swells ≤ +3 dB, bed under
+  voice ≥10 dB everywhere. (R6 measured −14.34 / −1.52; spread 0.40 dB;
+  swells ≤ +2.86 dB; bed-under-voice min 10.29 dB.)
+- **Joins.** All 9 section joins are 0.4 s xfades; zero hard cuts.
+- **SFX family.** One concert-grand family, R5 recipe book, events
+  frame-locked (and now cause-checked, T7-17).
+- **Exactly one fourth-wall break**, closing §07 (T7-22), with the QR
+  river and the under-her frame decoding from the final encode as in
+  R5/R6.
+- **Concept ladder.** The nine sections, their order, and the
+  one-primitive-per-section ladder are unchanged. T7 re-stages and
+  re-words; it does not re-sequence the teaching.
+- **Style law.** Bright white construction paper, hand-drawn effects
+  drawing on in real time, live captures crisp and framed on paper.
+  Kurzgesagt's palette and mascots stay excluded.
+- **Gate 1.** Will's narration listen gates any release of any cut.
+  Nothing is posted.
+
+## 5. Acceptance tests (measured on the final file, reported in the log)
+
+Picture, sync, and format — the R6 test, re-run whole:
+
+| Test | Target |
+|---|---|
+| Picture vs audio duration | within 0.4 s |
+| Narration coverage | all 9 sections' voice spans inside their own picture windows; boundary crossings = 0 |
+| Picture-only tail | none (designed CTA hold excepted) |
+| Frame rate / size | 60/1 constant, 1920×1080, nothing frame-doubled |
+| Loudness | −14 LUFS ±0.5; true peak ≤ −1 dBTP |
+| Bed | spread ≤ ±1.5 dB; swells ≤ +3 dB; under-voice ≥ 10 dB |
+| Joins | 9/9 at 0.4 s xfades; hard cuts = 0 |
+| Faststart | moov ahead of mdat, verified on the pulled file |
+
+Exemplar rules — the new audits:
+
+| Test | Target |
+|---|---|
+| Finished-film rate (§2 ruling) | ≤145 wpm overall; §01 hook ≤ ~155 wpm with §01 remainder ≤140 wpm |
+| §08 final beat rate | ≤130 wpm — the slowest beat in the film |
+| Cause→effect audit (T7-04a) | orphan visual events = 0 |
+| Anticipation lead (T7-04b) | ≥0.5 s on 100% of pairs |
+| Show-before-name (T7-04d) | 9/9 ladder concepts demonstrated before named |
+| Image-before-concept (T7-04e) | 9/9 sections |
+| Solo calibration spans (T7-08) | 9/9 sections |
+| Simultaneous new systems (T7-07) | ≤1 everywhere |
+| Establishing wides (T7-09) | ≥2.0 s per new space |
+| Mid-sentence shot changes (T7-11) | 0 |
+| Camera settle before action (T7-12) | ≥0.3 s at 100% of hand-offs |
+| Competing on-screen text (T7-13) | defects = 0 |
+| Marked pauses (T7-14) | all present, ≥0.4 s (≥1.0 s at the named claim lines); unmarked in-section silences >0.8 s = 0 |
+| SFX without visible cause (T7-17) | 0 |
+| Density curve (T7-18) | film peak in §07 only; §08 ≤ ½ of peak |
+| Open loops at section ends (T7-19) | 0 (named carry-overs excepted) |
+| First-mentions inside §07 zoom (T7-20) | 0 |
+| Fourth-wall breaks (T7-22) | exactly 1 |
+| New elements in final 15 s (T7-24) | 0 (CTA excepted) |
+| §08 CTA crop (T7-25) | cropped characters = 0 at start, midpoint, and end of push-in, from the final encode |
+| QR river, final encode | decodes at R6's standard (R6: 10/10 at the river sample) |
+| Fourth-wall frame, final encode | codes under her decode at R6's standard (R6: 8/8) |
+
+Deviations are stated first and plainly in the log, as in R5/R6,
+including any number above that regresses.
+
+## 6. Decisions for Will
+
+- **D1 — DECISION-WILL: pacing and length (§2).** Option A (≈856 words,
+  ≈354 s) or Option B (984 words, ≈407 s). Recommendation: A, for the
+  reasons in §2. Every downstream number waits on this.
+- **D2 — DECISION-WILL: new script and new stem, or picture-only?** The
+  [script] rules (T7-02, 03, 04d/e, 05, 10, 14, 15, 16, 23, 24, and the
+  §2 rate itself) require a revised script and a new narration
+  recording. That ends the R4 stem identity that R5 and R6 preserved,
+  and the new stem needs its own Gate 1 listen. The alternative —
+  picture-only T7 — can honestly deliver T7-01, 04a/b/c, 06, 07, 08, 09,
+  11, 12, 13, 17, 18, 19, 20, 21, 22, 25 and §4 whole, and must drop the
+  rest rather than claim them. This brief does not presume either way.
+- **D3 — Throughline wording.** T7-02 requires a throughline of ≤15
+  words. The builder drafts it; the sentence is Will's to approve or
+  rewrite before the script work starts, because every section is
+  audited against it.
+- **D4 — Which video is in your head — RESOLVED (Weyland).** The TED
+  study found Will's description most likely merges two 2012
+  *Prometheus* virals: Guy Pearce's in-character "TED 2023" talk (the
+  stage, the talk) and "Happy Birthday, David" (the actor actually
+  playing an android). **Resolved 2026-11-11 (evening commute call):
+  Will confirmed — "the one from Guy Pearce is definitely it." The
+  Weyland "TED 2023" talk is the confirmed exemplar; the Fassbender
+  "David" piece stands as its companion. T7-21 keys on Weyland.**
+  Details: `t7-notes/TED-NOTES.md` §1.
+
+## Pipeline discipline (when a final brief is authorised)
+
+- ALL video work on aletheia-core, never on this VM; thermal gates as
+  §4; small units, no monolithic single-node run.
+- Work in `~/phext-walkthrough-capture/r7/` on the node; pull the
+  finished master back to
+  `~/workspace/phext-walkthrough/production/rough-cut-r7.mp4` and verify
+  size/SHA-256/dimensions/fps/duration locally.
+- Serve the master the same tailnet way as R4–R6; verify HEAD + a
+  byte-range slice hash.
+- Log everything in `production/ROUGH-CUT-R7-LOG.md`, deviations first
+  and plainly.
+
+— End of draft. —
 # Production log — original rough cut
 
 Title: Production log — original rough cut
@@ -4111,6 +4693,492 @@ qrframes-r4b.py (stream frames), coverage.py + measure-r4.py (audits).
 On the ranch: everything under `/home/wbic16/phext-walkthrough-capture/r4/`
 (segments, stems, QR tiles + decode records, logs). Gate 1 (Will's
 narration listen) still gates any release; nothing is posted.
+# Production log — round 5 cut
+
+Title: Production log — round 5 cut
+Source: ~/workspace/phext-walkthrough/production/ROUGH-CUT-R5-LOG.md
+Inscribed: 2026-11-11
+SHA-256: e19c341010b0afe8a8446026820535256a8506b4a2cb96bfd70c34b8bed07001
+
+---
+# Rough Cut — Round 5 (Tier-5 polish) — Production Log
+
+**Film:** Phext Edit training film, Round 5. A revision of Round 4, built
+under `REVISION-BRIEF-R5.md` (Will's 8 notes, 2026-11-11 07:46 CST).
+Reference coordinate 27.6.7/7.5.11/6.5.9.
+**Master:** `rough-cut-r5.mp4` — on aletheia-core at
+`~/phext-walkthrough-capture/r5/rough-cut-r5.mp4` and on this VM at
+`~/workspace/phext-walkthrough/production/rough-cut-r5.mp4` (byte-identical,
+SHA-256 verified both sides).
+**Served:** https://100.88.154.1:8444/rough-cut-r5.mp4 (tailnet, self-signed
+cert as R4; unit `serve-r5-tls`; HEAD verified, byte-range slice at offset
+1,000,000 hash-matched to the local copy: 9916eb0a…).
+**Gate:** Gate 1 (Will's narration listen) still gates any release. Nothing
+posted anywhere.
+
+## The file
+
+| | |
+|---|---|
+| Duration | 399.23 s (6:39.2) — video 23,954 frames @ 60; audio stem 354.33 s |
+| Size | 125,132,023 B |
+| SHA-256 | 7fcf3d4d4dd0e6d9b57e675ca3b8a69580e488d6c71ce5838f4ceebf56582fa9 |
+| Video | H.264, 1920×1080, r_frame_rate = avg_frame_rate = 60/1, yuv420p |
+| Audio | AAC 192 kb/s |
+| Faststart | yes (`-movflags +faststart`) |
+| Loudness (final, measured on the pulled file's audio) | **−14.34 LUFS integrated, −1.52 dBTP** — inside the −14 ± 0.5 / TP ≤ −1 spec. Two-pass loudnorm (linear, measured_I −22.04 → target −14, TP ceiling −2.0 at the filter). |
+
+## What R5 is, in one paragraph
+
+R4's narration, script, sections and slot timing are kept. The picture was
+rebuilt at native 60 fps: capture/mixed material motion-interpolated
+(minterpolate mci/aobmc/obmc — never frame-doubled), the intro cards, the
+§07 QR river and the new fourth-wall beat rendered natively at 60. The
+music bed was re-voiced as a concert grand and levelled section-to-section;
+the SFX set was rebuilt as one pitched instrument family; §07 was
+re-ordered so the QR river and the fourth-wall beat close the section.
+
+## Per-note compliance (measured)
+
+### §1 — 60 fps everywhere
+- Probe: 60/1 constant, both rate fields. ✓
+- Method: minterpolate (motion-compensated) for the R4-derived segments;
+  native 60 fps renders for intro cards (from their 12 fps sources at
+  60 fps timing), cityx, the QR river, the fourth-wall beat, and the §07
+  push-in ramp. Nothing frame-doubled. ✓
+- One honest caveat: see "The §07 picture-timing deviation" below — the
+  per-piece muxer durations make §07's back half play slower than
+  designed. The frame rate is a true 60 throughout; the *pacing* of
+  §07's city/river/beat stretches (see deviation).
+
+### §2 — Sound design (Animusic quality)
+- One timbral family: every SFX is synthesized from the same concert-grand
+  physical model as the bed (inharmonicity B = 2.5e-4, frequency-dependent
+  partial decay, natural damper tails). Recipes in `r5/fx/sfx-recipes.json`:
+  link mallets C5/G4/E5 (pitched to the link beats), bowed whoosh pairs
+  (pre-swell + landing mallet, frame-locked to the seven §06/§07 landings
+  at 65.62 / 81.09 / 188.74 / 191.74 / 193.34 / 199.54 / 337.47 in mix
+  time), kalimba draw-on strokes, brushed page chimes at the 8 section
+  boundaries, and a pedal-down resolve chord at the CTA (341.17). 31 SFX
+  events total, all placed on picture beats, none under a narration onset.
+- Narration loudest at every moment: duck law from R4 (floor 0.14, attack
+  25 ms / release 450 ms) over the levelled bed. ✓
+
+### §3 — Music: concert grand + levelled bed
+- Bed re-voiced as a concert grand: full-range physical model (B = 2.5e-4
+  inharmonicity, sympathetic resonance, pedal-held chord blocks, natural
+  damper decay). In-house synthesis only; no purchases. ✓
+- Section levelling (bed_level2.py, BS.1770 gated integrated per section,
+  constant per-section gain to the median, 6 s raised-cosine ramps):
+
+| Section | Pre LUFS | Post LUFS | Within-section swell (max 3 s momentary − integrated) |
+|---|---|---|---|
+| title | −20.67 | −17.18 | +0.56 |
+| agenda | −18.16 | −16.79 | +1.90 |
+| §01 | −18.12 | −16.96 | +2.62 |
+| §02 | −16.26 | −16.89 | +1.53 |
+| §03 | −17.60 | −17.02 | +2.19 |
+| §04 | −16.42 | −16.90 | +1.18 |
+| §05 | −17.37 | −16.98 | +2.86 |
+| §06 | −14.33 | −16.89 | +1.99 |
+| §07 | −16.19 | −16.95 | +2.78 |
+| §08 | −16.52 | −16.95 | +2.16 |
+
+- **Section-to-section spread: 6.34 dB → 0.40 dB** (spec ≤ ±1.5 dB) ✓
+- **All within-section swells ≤ +2.86 dB** (spec ≤ +3 dB) ✓
+- Bed under voice (ducked mix, measured per section on the stems):
+  agenda 17.94, §01 17.58, §02 15.18, §03 14.16, §04 10.38, §05 16.66,
+  §06 12.16, §07 13.90, §08 10.29 dB. **Minimum 10.29 dB ≥ 10 ✓**,
+  median 14.16 dB.
+- Honest method note: the *gap-only* ducked-bed measurement shows a
+  3.43 dB spread, but the gaps are mostly the 1.4 s section intros, so
+  that figure measures intro levels, not section levels. The construction
+  record is the pre-duck levelled stem above: 0.40 dB.
+
+### §4 — Narration untouched
+- R4's recorded narration reused **verbatim**: zero re-records, zero
+  wording changes. The R5 narration stem is sample-identical to R4's
+  `narration-r4-full.wav` over its full common span (max abs sample
+  difference = 1 LSB, i.e. one dither step from the float→int16 pass;
+  the stem carries 480 extra samples = 10 ms of trailing silence).
+- Coverage audit (R4's method, coverage.py): **zero narration boundary
+  crossings** — no sentence is split by a section join. ✓
+- Slot-first at 150 wpm carries over from R4 unchanged.
+
+### §5 — Zero discontinuities
+- All 9 section joins are 0.4 s (24-frame) xfades; section interiors are
+  continuous material; §04's old hard tail-trim is replaced by a 2.5 s
+  ease-out push patch (native render), §05's text view comes to rest in
+  a still patch. No hard cuts anywhere in the join structure. ✓
+- Scene-signal audit on the final file: change activity is present
+  around every join window (dissolves register as ramps, not single-frame
+  jumps). Two joins (agenda→§01 at 23.07, §05→§06 at 148.49) show no
+  ≥0.02 scene events in their window because both sides of those
+  dissolves are near-static paper frames — the dissolve is there; the
+  detector has nothing to measure. Stated plainly rather than smoothed.
+- Motion easing: interpolation and the native renders use eased ramps
+  throughout (the §07 push is one continuous ramp; see deviation).
+
+### §6 — Concept ladder (audit)
+One new primitive per section, unchanged from R4's script, verified
+against SCRIPT-R4 stage directions:
+§01 a file is pages → agenda (the map of what's coming) → §02 an address
+names a page → §03 search finds, the address names → §04 change a page
+and verify the change → §05 plain text travels anywhere → §06 links let
+you travel between pages → §07 many pages compose into one map (scale) →
+§08 do it yourself (the CTA). No section introduces two primitives; no
+primitive is used before it is taught. ✓
+
+### §7 — Attention cadence (measured, final file)
+Scene-change events (threshold 0.02) per section, from audit-r5.py:
+
+| Section | Change events | Payoffs (≥0.25) | Longest quiet span |
+|---|---|---|---|
+| title | 20 | 0 | 5.68 s (the title card settling — held by design) |
+| agenda | 33 | 20 | 3.37 s |
+| §01 | 50 | 5 | 13.87 s (static terminal stretches — R4 inheritance, see gaps) |
+| §02 | 142 | 5 | 4.60 s |
+| §03 | 17 | 6 | 7.68 s |
+| §04 | 19 | 7 | 15.97 s (the read-the-screen beat; the push patch lands inside it) |
+| §05 | 154 | 3 | 10.52 s (the text-rest patch lives here by design) |
+| §06 | 138 | 6 | 10.93 s |
+| §07 | 387 | 9 | 44.15 s / 31.8 s (the stretched zramp holds — see deviation) |
+| §08 | 19 | 1 | 22.4 s (pre-CTA breath + CTA hold — the brief's declared exception) |
+
+Reading: the ~4 s change / ~20 s payoff rhythm holds in the agenda and
+the capture-heavy sections. The long quiet spans are where the picture
+is a screen being read (§01, §04) or a declared hold (§05 rest, §08
+breath/CTA). §07's two long spans are a defect of the timing deviation
+below, not a design choice.
+
+### §8 — Fourth-wall break (exactly one)
+- Placement: §07, closing the section — after the QR river, over the
+  whole-map frame with the QR band low in frame. In the master she rises
+  into frame, lifts her eyes to the viewer, holds the look ≈3 s with one
+  blink, and is gone. One break, nowhere else. ✓
+- Register: the established bright-white hand-drawn style — vector line
+  Emise (ink on construction paper, flame mark on her shoulder), drawn
+  for this beat in fwframes.py. Frame verified visually from the final
+  encode (340 s): the look reads clearly, over real codes.
+- The codes under her stay scannable: from that same final-encode frame,
+  zxingcpp decodes **8 codes, all 8 recognized payloads** (home
+  1.1.1/1.1.1/1.1.1 ×2, 1.1.1/2.1.1/2.1.1, 1.1.1/2.1.2/2.1.1,
+  1.1.1/2.6.2/2.1.1 ×2, edit.phext.io, Semper Aeq).
+
+## QR-from-final check
+Frames extracted from the final 60 fps encode:
+- 330 s (QR river, full strip): **9 codes decoded, 9 recognized** — all
+  seven payloads present (home, honeybee 1.1.1/2.1.1/2.1.1, oak
+  1.1.1/2.1.2/2.1.1, lighthouse 1.1.1/2.6.2/2.1.1, edit.phext.io,
+  Semper Aeq, flame 1.1.1/1.1.1/1.1.1).
+- 340 s (fourth-wall beat): 8 decoded, 8 recognized (above).
+- 300 s (river, early): 8 decoded, 8 recognized.
+The strip scrolls, so any single frame shows a window of the river;
+every sampled window decodes cleanly.
+
+## The §07 picture-timing deviation (the honest gap)
+The film is **399.23 s against the narration's 354.33 s**. The audio
+ends at 354.33; the picture continues ~45 s past it, and inside §07 the
+picture runs progressively behind the narration from the city sequence
+onward (the narration over the river/beat region plays over the cityx /
+push-in material; the river and the beat play in the picture-only tail,
+in order, after the §08 picture has been displaced past the audio end —
+§08's CTA card is in the tail region).
+
+Cause, measured as far as it goes: the join's concat preserves each
+piece's own muxer duration, and the section totals are the sums of
+their pieces' true durations (each verified: intro-07 = 1.5833 s for
+95 frames; w-07body = 44.15 s for 2,649 frames — those are exact 60 fps
+timings, no stretch there). The chained xfades place every later
+section by accumulated durations, so the totals compound: the pieces
+that make §07 sum to 139.93 s against a 92.44 s slot, and the whole
+film to 399.23 s against 354.33 s of audio. Piece-by-piece, the counts
+and durations check out (boundary frames confirmed by pixel comparison:
+frame 95 of the §07 chain *is* the body's first frame, frame 94 the
+intro's last) — the overrun is distributed across the build's many
+small duration roundings and the deliberately longer §07 renders
+(the push-in ramp was rendered at 46.2 s for a slot the re-ordered
+section could not hold), not one locatable bug. I verified the
+mechanism at every joint I could isolate; the residual is stated,
+not explained away.
+
+What this means for a viewer: the first ~3½ minutes are exactly as
+designed. From §07's city onward, picture and narration separate: the
+narration finishes over the map/river material, and the film then plays
+~45 s of picture-only §07 tail + §08 (river, the fourth-wall look, the
+articles grid, the CTA card) in silence. It is watchable and every
+element is present and in order — but it is **not** the locked
+audio-picture sync the brief calls for, and I am not going to call it
+that.
+
+Fix path (not run in this pass): re-time §07's back half to the slot
+clock — the cityx timeline and the push-in ramp are the long poles
+(they were rendered at 16.0 s and 46.2 s against R4 source spans of
+12.24 s and 46.2 s, and the re-ordered section gives the back half
+48.2 s, not 78.2 s) — either by setpts scaling per piece before the
+join or by re-rendering those two pieces at slot durations; then
+re-run the film join. Everything upstream of §07 is already on the
+clock, and everything else in this log stands.
+
+## Other gaps, plainly
+- §08's known R4 cosmetic (the CTA card's "Keep it." cropped at the
+  right edge under the push-in) is inherited unchanged — R5's §08 is
+  R4's §08 interpolated; the crop rides the interpolation.
+- §01/§04 long quiet spans are R4's screen-reading beats; R5's patches
+  (§04 push, §05 rest) soften two of them but the cadence contract is
+  not met inside §01 and §04 as written — flagged, not hidden.
+- The narration stem is 10 ms longer than R4's file (trailing silence
+  only). No content difference.
+- The master was assembled by chained xfade at the sections' measured
+  durations; the join offsets in audit-r5.py's tables are the measured
+  ones, and the log's §07/§08 window times follow them.
+
+## Pipeline (all on aletheia-core)
+- Audio: `audio-r5.py` (grand + SFX synthesis), `bed_level2.py`
+  (levelling), `mix-r5.py` (duck + 31 SFX events), `measure-r5.py`
+  (audits).
+- Picture: `fwframes.py` (river + beat, native 60), `produce-r5.sh`
+  (segments, thermal-gated at Tctl ≤ 70 °C starts), `join-r5.py`
+  (section chains + film xfade chain), `master-r5.sh` (two-pass
+  loudnorm, mux, thumbs), `audit-r5.py` (cadence + joins + QR decode).
+- Thermal discipline held throughout: every encode started at
+  Tctl ≤ 70 °C; the node peaked at 74.2 °C mid-encode and gated back.
+- Serving: `serve-r5.py` + `serve-r5-tls.py` on the node (pattern copied
+  from R4; port 8444; same self-signed cert; won't survive a node
+  reboot, same as R4's).
+# Production log — round 6 cut
+
+Title: Production log — round 6 cut
+Source: ~/workspace/phext-walkthrough/production/ROUGH-CUT-R6-LOG.md
+Inscribed: 2026-11-11
+SHA-256: c381bc1d8bfe47de742c6c78f16da82c3470b084b011830afc1b4d2e02204c33
+
+---
+# Rough Cut — Round 6 (T6, the §07 re-time fix) — Production Log
+
+**Film:** Phext Edit training film, Round 6. A revision of Round 5,
+built under `REVISION-BRIEF-R6.md` (Will's go-ahead 2026-11-11 14:52
+CST: "super busy day, go ahead and schedule your T6 run").
+Reference coordinate 29.6.9/7.5.10/5.5.9.
+**Master:** `rough-cut-r6.mp4` — on aletheia-core at
+`~/phext-walkthrough-capture/r6/rough-cut-r6.mp4` and on this VM at
+`~/workspace/phext-walkthrough/production/rough-cut-r6.mp4`
+(byte-identical, SHA-256 verified both sides).
+**Served:** https://100.88.154.1:8445/rough-cut-r6.mp4 (tailnet,
+self-signed cert as R4/R5; transient user unit `serve-r6-tls`;
+HEAD verified 200 with the right length and a byte-range slice at
+offset 1,000,000 hash-matched to the master: 0bb4f5f2… — both checks
+run from the node against the tailnet address; a fetch from this VM
+through the egress proxy returned an empty reply, a proxy quirk, so
+the node-side verification is the one on record. The unit is
+transient and won't survive a node reboot, same as R4/R5.)
+**Gate:** Gate 1 (Will's narration listen) still gates any release.
+Nothing posted anywhere.
+
+## The acceptance test — met
+
+| Test | Target | Measured |
+|---|---|---|
+| Picture duration vs audio | within 0.4 s of ~354.3 s | **picture 354.283 s, audio content 354.330 s — 0.047 s apart** |
+| Narration on its own picture, §07/§08 | yes | **yes — coverage audit: all 9 sections' voice spans inside their own picture windows (below)** |
+| Picture-only tail | none | **none — last speech ends 352.75 s; what follows is §08's designed CTA hold** |
+| Frames | — | 21,257 @ 60/1 constant = 354.283 s of picture |
+
+(Container format duration reads 354.400 s because the AAC stream
+carries its usual padding — the same profile as R4's master, whose
+format read 354.40 against 354.333 of video.)
+
+## Deviations and corrections, stated first
+
+1. **The fix was not only §07.** The brief, following the R5 log,
+   scoped the job to §07's back half on the statement that everything
+   upstream was already on the clock. Measured piece by piece, it was
+   close but not exact: §04's file was 1535 frames against a 1586
+   slot and §05's was 2003 against 2054 (each 51 frames / 0.85 s
+   short — their internal patch xfades had eaten content), and the
+   R5 concat-built §01/§02/§03/§06 files each decode 4–5 frames short
+   of their nominal counts (1426/1542/1182/3708 against
+   1431/1546/1186/3713). Left alone, those gaps total ~2.5 s: a
+   §07-only fix would have landed the film at ~351.8 s with §08's
+   picture starting 2.5 s before its narration. All of it is the
+   same defect family as §07's — durations asserted from nominal
+   counts instead of decoded frames — so R6 corrected all of it to
+   the slot clock (method below) and the pre-join audit table is in
+   this log. §07 remains the headline fix; the upstream corrections
+   are 150 frames of the 2,850 removed/added.
+2. **The brief's §07 arithmetic (78.2 s rendered for a 48.2 s slot)
+   mixes two groupings.** 78.2 s is the push-in ramp + river + beat
+   (46.2 + 16 + 16); 48.2 s is the whole §07 slot minus the body
+   alone. Built instead to the ground truth: R4's slot table
+   (§07 window 92.44 s = 5546 frames, voice 214.23–303.87) and the
+   brief's own acceptance test. In R6, §07's back half after the
+   body — city + river + beat — runs 46.70 s.
+3. **§08's "Keep it." crop is NOT fixed.** It rides inside the
+   interpolated §08 body; fixing it means re-rendering the CTA
+   portion, which is not free of sync risk, so per the brief's
+   condition it was left, unchanged from R4/R5. The card is fully
+   legible at push-in start (film ≈335–343 s) and the URL line and
+   signature stay in frame.
+4. **Thermal:** every encode started at Tctl ≤ 70 °C under the
+   gate; readings spiked transiently during encodes (one 80.9 °C
+   sample as the film join started, with the node at 43.8 °C
+   immediately after it finished — the two-sensor alternation noted
+   in earlier rounds makes single samples jumpy). No encode was
+   started hot; the master step ran at 64.4 °C peak.
+5. **Attention cadence in §07 reads lower than R5's on the scene
+   detector** (36 events vs R5's 387) because the removed ramp was
+   a constant-motion zoom that tripped the detector every second;
+   the river's scroll and the city's timeline move slower than the
+   0.02 threshold per frame. §07's 44.15 s quiet span is the body
+   capture, present identically in R5's table. Stated, not hidden.
+
+## The file
+
+| | |
+|---|---|
+| Duration | picture 354.283 s (21,257 frames @ 60); audio content 354.330 s; format 354.400 s |
+| Size | 111,063,467 B |
+| SHA-256 | 0b463afa299e5595f26a11645a5195fba53499d8722e64ba4a4f13cfff4d8938 |
+| Video | H.264, 1920×1080, r_frame_rate = avg_frame_rate = 60/1, yuv420p |
+| Audio | AAC 192 kb/s — R5's mix, byte-identical file (mix-r5.wav SHA-256 26274c14…), same two-pass loudnorm |
+| Faststart | yes (moov ahead of mdat, verified on the pulled file) |
+| Loudness (final, measured on the pulled file's audio) | **−14.34 LUFS integrated, −1.52 dBTP** — identical to R5, as it must be: same stem, same loudnorm law. Inside −14 ± 0.5 / TP ≤ −1. |
+
+## What the fix was, piece by piece
+
+**§07 — the ramp was a duplicate.** R5's back half stacked three
+treatments of the same span: the push-in ramp (n-zramp, 46.2 s) is a
+zoom treatment cut from R4's finished film at 258.63–304.83 — the
+very span the QR river (16 s) and the fourth-wall beat (16 s) then
+played again in full. R6 drops the ramp and keeps everything else in
+R5's order. The push-in survives the cut: the city piece is a moving
+timeline, the river zooms 1.00→1.06 across its 16 s, and the beat
+continues 1.06→1.085 — one continuous slow push across the back
+half, as designed, at a third of the length. The beat piece is
+trimmed to 882 frames (14.70 s ≈ R4's 14.64 s city-hold slot): its
+action (rise, the ~3 s look, one blink, leave) completes by ~11 s;
+only map-hold tail was cut.
+
+§07 pieces (decoded frames + muxer duration, audited before the join):
+
+| Piece | Frames | Muxer s | Slot |
+|---|---|---|---|
+| intro-07 | 95 | 1.5833 | 95 |
+| w-07body | 2,649 | 44.1500 | 2,649 |
+| n-cityx | 960 | 16.0000 | 960 |
+| n-river | 960 | 16.0000 | 960 |
+| n-fw-r6 (trimmed) | 882 | 14.7000 | 882 |
+| n-zramp — DROPPED | 2,772 | 46.2000 | 0 |
+| **sec-07 total** | **5,546** | **92.4333** | **5,546** |
+
+§07 internal film timing (R6 vs R4 design): section starts 212.60
+(R4: 212.63); body 214.18–258.33; city 258.33–274.33; river
+274.33–290.33; beat 290.33–305.03; §08 joins at 304.63. Every span
+within 0.1 s of the R4 table the narration was recorded against.
+
+**§04/§05 — content overlap at the patch joins.** Their patch
+pieces are sequential content joined by xfades, so each xfade ate
+24 frames of timeline. R6 rebuilds both chains so neighbouring
+pieces overlap in *content* by one xfade: §04's body-A extended to
+frame 1224 and the push re-rendered covering body 1200..1378 (B
+re-cut at 1352 yields 135 frames — the interpolated body's
+effective end is frame 1487, not its 1490 counted frames, the same
+result R5's build recorded; the longer push absorbs the delta).
+§05 likewise (A to 1104, B re-cut at 1832 → 123); its still patch
+is extended 752 → 779 by clone frames — the patch is the text view
+at rest, so the extension is invisible. §04 lands at 1586, §05 at
+2054, both exact.
+
+**Slot pads.** The R5 sections reused whole (§01/§02/§03/§06) got
+tail clone-pads of 5/4/4/5 frames to their exact slots; the pads
+sit inside the film join's 24-frame dissolves — invisible. §08's
+body got +3 (CTA hold tail), then +1 after its concat landed at
+2978, for 2979 exact.
+
+**Pre-join audit — every section at its slot, zero deltas:**
+
+| Section | Frames | Muxer s | Slot f | Δ |
+|---|---|---|---|---|
+| title | 480 | 8.0000 | 480 | 0 |
+| agenda | 952 | 15.8667 | 952 | 0 |
+| sec-01 | 1,431 | 23.8500 | 1,431 | 0 |
+| sec-02 | 1,546 | 25.7667 | 1,546 | 0 |
+| sec-03 | 1,186 | 19.7667 | 1,186 | 0 |
+| sec-04 | 1,586 | 26.4333 | 1,586 | 0 |
+| sec-05 | 2,054 | 34.2333 | 2,054 | 0 |
+| sec-06 | 3,713 | 61.8833 | 3,713 | 0 |
+| sec-07 | 5,546 | 92.4333 | 5,546 | 0 |
+| sec-08 | 2,979 | 49.6500 | 2,979 | 0 |
+| **film = Σ − 9×24** | **21,257** | **354.2833** | | |
+
+Film section starts (R6 vs R4 targets): agenda 7.60/7.60,
+§01 23.07/23.07, §02 46.52/46.52, §03 71.88/71.89, §04 91.25/91.26,
+§05 117.28/117.30, §06 151.12/151.14, §07 212.60/212.63,
+§08 304.63/304.67 — all within 0.04 s.
+
+## Per-note compliance (re-measured on the final file)
+
+- **Sync / coverage** (silencedetect −45 dB / 0.6 s on the unchanged
+  narration stem, blobs checked against R6's picture windows):
+  agenda OK, §01 OK, §02 OK, §03 OK, §04 OK, §05 OK, §06 OK,
+  §07 OK (voice 214.23–303.87 in window 212.60–304.63),
+  §08 OK (voice 306.27–353.12 in window 304.63–354.28).
+  **Zero boundary crossings.** R5's ~45 s picture-only tail is gone.
+- **Narration verbatim:** the mix file is R5's, byte-identical
+  (SHA-256 above); zero re-records, zero wording changes; the stem
+  remains sample-identical to R4's as established in R5.
+- **60 fps:** 60/1 constant, both rate fields; the film join and all
+  rebuilt pieces are native 60 fps material from R5's pieces —
+  nothing frame-doubled anywhere in the chain.
+- **Loudness:** −14.34 LUFS / −1.52 dBTP (above).
+- **Bed:** the audio is untouched, so R5's measured discipline
+  carries exactly: section spread 0.40 dB (spec ≤ ±1.5), swells
+  ≤ +2.86 dB (spec ≤ +3), bed-under-voice min 10.29 dB / median
+  14.16 dB (spec ≥ 10).
+- **SFX:** R5's 31 concert-grand events, unchanged in the stem —
+  and now landing on their picture beats again: the mix was always
+  timed to the R4 clock (§02 landing 65.62, §03 81.09, §06 hops
+  188.74/191.74/193.34/199.54, §08 final hop 337.47, CTA resolve
+  341.17), and R6's picture is back on that clock (section starts
+  within 0.04 s of it). The §07 boundary page at 212.83 falls in
+  the §07 dissolve (212.60–213.00) as designed.
+- **Joins:** all 9 section joins are 0.4 s xfades by construction
+  (chained xfade, offsets from the audited counts). Scene-signal
+  audit finds dissolve activity at 7 of 9; the two quiet ones
+  (agenda→§01 at 23.07, §05→§06 at 151.12) are the same pair R5
+  reported — near-static paper on both sides gives the detector
+  nothing to measure; the dissolves are in the chain.
+- **Fourth wall — exactly one**, closing §07 as in R5. Frame from
+  the final encode at 297 s, viewed: drawn Emise risen over the
+  whole map, eyes on the viewer, flame on her shoulder, low QR
+  band under her — **8 codes decoded, 8 recognized** in that frame.
+- **QR river from the final encode:** 282 s (river) —
+  **10 decoded, 10 recognized**, all payloads present; 300 s
+  (beat tail) — 6/6 recognized.
+- **Concept ladder:** unchanged from R4/R5 (script untouched).
+- **Attention cadence** (scene events ≥ 0.02 per section, final
+  file): title 20 events / max gap 5.68 s (title settle, by
+  design); agenda 33 / 3.37; §01 50 / 13.87 (screen-reading, R4
+  inheritance); §02 141 / 4.60; §03 17 / 7.67; §04 12 / 16.81
+  (read-the-screen beat, as R5's 15.97); §05 163 / 10.93 (the
+  text-rest patch lives here by design); §06 137 / 10.93;
+  §07 36 / 44.15 (the body capture — see deviation 5); §08 26 /
+  22.45 (pre-CTA breath + CTA hold, the declared exception).
+
+## Pipeline (all on aletheia-core)
+
+- `join-r6.py` (pieces, section rebuilds, pre-join audit, film
+  join — thermal-gated at Tctl ≤ 70 °C starts), `master-r6.sh`
+  (two-pass loudnorm, mux, thumbs), `audit-r6.py` (cadence, joins,
+  QR decode, coverage) — in `~/phext-walkthrough-capture/r6/` on
+  the node, copies in `production/r6-local/` on this VM.
+- Build ran in four passes: two frame-count corrections (the
+  §04 B-piece yield, then the pre-join audit catching §01 and
+  §02/§03/§06 in turn) — each caught by an assertion before the
+  film join, which then ran once, clean, at the exact count.
+- Serving: `serve-r6.py` + `serve-r6-tls.py` in `/home/wbic16/`
+  on the node (pattern copied from R5; port 8445; same self-signed
+  cert; transient unit, won't survive a node reboot, same as R4/R5).
 # demo2 README — the full-entry encyclopedia
 
 Title: demo2 README — the full-entry encyclopedia
@@ -4211,7 +5279,8 @@ checks, not assertions:
   real clicks and verified.
 # Filmography — the cuts this process produced
 
-Cuts 1–5: 1920×1080, 30 fps, H.264 + AAC, faststart, built
+Cuts 1–5: 1920×1080, 30 fps; cuts 6–7 (rounds 5–6):
+1920×1080, 60 fps. All H.264 + AAC, faststart, built
 entirely on aletheia-core, narration by Emise (Aria) at 100%.
 Videos live in ~/workspace/phext-walkthrough/production/ and are
 referenced here by name + hash (not embedded — too large for the
@@ -4279,8 +5348,702 @@ release; none is posted.
    Brief: 1.1.1/3.3.3/1.1.1 · script: 1.1.1/3.2.4/1.1.1 ·
    log: 1.1.1/3.4.5/1.1.1.
 
-6. ROUND 5 — Tier-5 polish (briefed 2026-11-11 07:46 CST, not
-   yet built): 60 fps master, steady bed level, Animusic-quality
-   SFX, grand piano, zero discontinuities, concept ladder audited,
-   attention cadence, one fourth-wall break at the opportune
-   moment. Brief: 1.1.1/3.3.4/1.1.1.
+6. rough-cut-r5.mp4 — ROUND 5: Tier-5 polish (Will's eight
+   notes, 2026-11-11 07:46 CST). R4's narration, script and
+   slots kept — the audio stem stayed sample-identical to
+   R4's — and the picture rebuilt at 60 fps: steady bed
+   (section spread 0.40 dB against the ±1.5 spec, swells
+   ≤ +2.86 dB, bed under voice min 10.29 dB / median
+   14.16 dB), 31 Animusic-grade SFX events from one
+   concert-grand family, the concept ladder audited at one
+   primitive per section, exactly one fourth-wall break
+   closing §07 with 8/8 QR codes decoding under her. One
+   deviation, the round's headline: §07's re-ordered back
+   half rendered 78.2 s for a 48.2 s slot, so the picture ran
+   long against the stem and the last ~45 s played
+   picture-only — the defect round 6 exists to fix.
+   399.23 s picture (stem 354.33 s) · 125,132,023 bytes ·
+   SHA-256 7fcf3d4d4dd0e6d9b57e675ca3b8a69580e488d6c71ce5838f4ceebf56582fa9 ·
+   loudness −14.34 LUFS / −1.52 dBTP · delivered 2026-11-11.
+   Brief: 1.1.1/3.3.4/1.1.1 · log: 1.1.1/3.4.6/1.1.1.
+
+7. rough-cut-r6.mp4 — ROUND 6 (T6): the §07 re-time fix
+   (Will's go-ahead, 2026-11-11 14:52 CST: "go ahead and
+   schedule your T6 run"). Audio untouched — R5's mix
+   byte-identical — and the picture brought back onto the
+   slot clock. The §07 fix: the 46.2 s push-in ramp was a
+   zoom treatment of the same R4 span (258.63–304.83) that
+   the QR river and the fourth-wall beat then replayed in
+   full, so the ramp was dropped — the push-in survives it:
+   the river zooms 1.00→1.06 and the beat continues to
+   1.085 — and the beat trimmed to 882 frames, landing §07
+   at exactly 5,546 frames. Measured piece by piece, the
+   fix was not only §07: §04 and §05 were each 51 frames
+   (0.85 s) short and §01/§02/§03/§06 each 4–5 frames
+   short, all corrected to the slot clock; the pre-join
+   audit shows zero deltas in every section. Acceptance
+   met: picture 354.283 s against audio 354.330 s (0.047 s
+   apart; round 5's picture ran 44.9 s long), all nine
+   sections' narration inside its own picture window, zero
+   boundary crossings, no picture-only tail. Declared, not
+   fixed, per the brief's condition: §08's "Keep it."
+   right-edge crop, which rides inside the interpolated
+   §08 body. Served over the tailnet from aletheia-core
+   (transient unit, as R4/R5).
+   354.283 s picture · 111,063,467 bytes ·
+   SHA-256 0b463afa299e5595f26a11645a5195fba53499d8722e64ba4a4f13cfff4d8938 ·
+   loudness −14.34 LUFS / −1.52 dBTP · delivered 2026-11-11.
+   Brief: 1.1.1/3.3.5/1.1.1 · log: 1.1.1/3.4.7/1.1.1.
+# T7 exemplar notes — Animusic
+
+Title: T7 exemplar notes — Animusic
+Source: ~/workspace/phext-walkthrough/t7-notes/ANIMUSIC-NOTES.md
+Inscribed: 2026-11-11
+SHA-256: a63b31a760885ec48665c137f91cfb95679217cff5d38eb25e88d93fcde9235c
+
+---
+# Production Notes — Animusic as Exemplar for T7
+
+**Film:** Phext Edit training film, version T7 (next after R6).
+**Task reference coordinate:** 23.6.9/8.6.12/6.6.9
+**Purpose:** Will's diagnosis is that his descriptions of what he wants are not translating into the builds. These notes study the work he points at — Wayne Lytle's Animusic — mechanically, then restate each principle as a checkable production rule for T7, in the style of the R5/R6 briefs.
+**Method note:** Process facts are from published sources on Lytle's MIDImotion pipeline (Animusic's own FAQ text, SIGGRAPH/AWN coverage, DVD commentary reporting). Per-piece structure is from the pieces themselves as catalogued in the references at the end. No quotes are used except the one short phrase Animusic itself uses to describe its method ("note-for-note granularity," from its FAQ). Note the piece Will calls "Pipe Dreams" is titled **Pipe Dream** (singular).
+
+---
+
+## 1. What Animusic actually does, mechanically
+
+### 1.1 The music is data first; the picture is generated from it
+
+- A piece starts as a MIDI file: notes with pitch, onset, duration, velocity. That file is the single source for **both** the sound and the motion.
+- Lytle's proprietary engine (MIDImotion, inside ANIMUSIC|studio) analyses the MIDI in a **non-real-time pre-pass**. Per Animusic's FAQ, motion is generated by roughly 12 algorithms (each with 10–50 parameters) combined per instrument, giving **sub-frame accuracy**; if the music changes, the animation is regenerated, not hand-patched.
+- Because the analysis looks forward and backward in time, the animation contains **anticipation and recovery**, not just impact: a ball is launched early enough to *arrive* on its note, a hammer lifts before its strike, a finger repositions before its pluck. Animusic explicitly contrasts this with reactive visualizers: the correlation is at **note-for-note granularity**, not a shape pulsing to a waveform.
+- Instruments and environments are modelled first (3D Studio Max for modelling, lighting, cameras, rendering; textures painted in Corel Painter / Deep Paint 3D / Photoshop), prototyped, and tested against music before the full piece is built. The instrument is a designed machine with defined travel times for every moving part; the composition is then written to what the machine can visibly do.
+
+**The load-bearing consequence:** there are no orphan events. Every sound has a visible cause already in motion before the sound occurs, and every visible strike, pluck, or hit produces exactly its sound. The viewer's trust is built out of that 1:1 accounting, repeated hundreds of times per piece.
+
+### 1.2 The instruments are the performers
+
+- There are no characters, no host, no narration. The machine that makes the sound is the thing on screen, performing in a room built for it.
+- Causality is staged as a visible chain: **launch → travel → contact → sound → return/disposal**. In Pipe Dream the ball leaves a pipe, crosses readable space, strikes, and is caught by a receiving pipe. The travel segment is not decoration — it is how the audience reads the rhythm *before* it lands, the way you can read an incoming phrase.
+- Physical detail sells the machine as real: worn drum heads marked where sticks have hit, dents in Pipe Dream's room that the commentary treats as misfires from "testing" — the finished piece is presented as one good take of a machine that exists.
+
+### 1.3 Camera: a respectful audience member, choreographed, never frantic
+
+- Cameras are **choreographed, moving** shots — pans, swoops, ride-alongs, slow orbits — planned per piece, not fixed coverage. Contemporary reviews single this out (e.g. riding with drumsticks on a conveyor in Drum Machine; swooping over Pipe Dream's circular vibraphone).
+- The camera's behaviour follows three habits:
+  1. **Establish the geography first.** A wide or travelling shot shows the whole room and where each instrument sits before any close work, so the audience carries a map.
+  2. **Arrive before the event.** The camera moves to the instrument that is *about to* play the salient part, and is settled when the phrase starts. It follows the musical hand-off, it does not chase impacts.
+  3. **Stay for the phrase.** Shots last whole musical phrases. Camera changes land on structural boundaries (phrase, section, movement) — never mid-note, never cutting away from a cause before its effect has sounded.
+- The DVDs' "solo cams" are the proof of the discipline: a fixed camera on a single instrument shows it playing its part correctly from beginning to end. The full edit is a selection among complete, self-consistent performances — nothing in the main cut depends on an edit to hide a gap.
+
+### 1.4 Lighting and materials: one coherent world per piece
+
+- Each piece is one room/landscape with one material palette and one lighting logic, dramatically lit (dark chambers, glowing elements) so that the *active* part is readable against a quiet ground.
+- Light is sometimes itself the causal medium: in Cathedral Pictures the organ is played by light beams; in Fiber Bundles light visibly travels through cables to the pads that sound. Cause is lit, effect is lit, the path between them is lit.
+- Nothing in the world changes state without the mechanism changing it. The room at the end is the room at the start, plus the wear of having performed.
+
+### 1.5 Pacing: the phrase is the smallest unit of editing
+
+- Internal rhythm is note density; editorial rhythm is phrase length. The two are never in competition, because the picture was generated from the same data as the sound.
+- There are no cuts that break a musical phrase, no inserts from outside the piece's world, and no visual event scheduled for a reason other than the music (no jokes, no cutaways, no graphics packages). Attention is never spent on anything the piece is not about.
+
+### 1.6 How complexity builds
+
+The standard Animusic build, across pieces:
+
+1. **Calibration.** One mechanism, alone, performs a few unmistakable events. The audience learns the causal rule of this world (balls make notes; fingers pluck strings; light triggers pipes).
+2. **Accretion.** One new instrument family at a time joins, each introduced while the already-known layers keep playing, so the new layer is learned against a stable ground.
+3. **Interlock.** Layers start answering each other — trajectories cross, parts trade phrases, the whole room is in coordinated motion.
+4. **Peak.** Maximum simultaneous density: every introduced family active at once, widest spatial spread, fastest event rate. The peak is a *sum of things already taught*, never a new device.
+5. **Resolution.** Layers thin back out, event rate falls, the piece ends on a final complete causal chain (last ball home, last chord struck) and a settled wide view of the whole machine.
+
+### 1.7 Endings
+
+- The ending is the build run in reverse, not a new section: strip back to few parts, land the final note with its cause fully visible, then hold the wide shot of the complete instrument at rest. Nothing new is introduced after the peak. The last thing the audience sees is the whole machine they now understand.
+
+---
+
+## 2. Per-piece notes
+
+### 2.1 Pipe Dream — Animusic 1 (2001), 3:22, C minor, ~148 BPM
+
+**World:** one room walled with pipes; every instrument is played by ball bearings fired from pipes and caught by receiving pipes. Stage: circular vibraphone "fountain" at centre, two double instruments (bass guitar + bongos; banjo + bongos), a drum kit (bass drum, snare, six toms, two crashes, spinning platform with cowbell/hi-hat/splash/two woodblocks) topped by a slide-bar marimba, tubular bells. Shown in SIGGRAPH 2001's Electronic Theater; later famous enough to be mistaken for a real machine in a 2006 hoax email — the strongest evidence that its causal accounting is convincing.
+
+- **Structure:** calibration → accretion → full ensemble → thin-out. It opens with test firings on the bass/bongo double instrument — single balls, single notes: the world's rule stated plainly. The vibraphone fountain and the double instruments establish the groove; drum kit and marimba enter as new families; tubular bells arrive late as colour.
+- **Build-up pattern:** strictly additive, one family at a time, each new family's first events sparse and exposed before it joins the texture. Ball trajectories make the build *visible in space*: the room fills with flight paths as the arrangement fills with parts.
+- **Camera pattern:** establishing wide of the whole pipe room → travelling shots that follow ball flight from launcher to target → ride-along and overhead swoop over the circular vibraphone → returns to the wide as density peaks, so the full machine is readable exactly when it is busiest. Solo cams (bass/banjo; drum kit; vibraphone + bells) confirm each part plays whole.
+- **Peak and resolution:** peak is maximum simultaneous trajectories plus every family sounding — complexity measured in the air, not in editing. It resolves by density falling away to final strikes and a settled view; the last balls complete their return path. No new instrument appears after the peak.
+
+**Lesson for T7:** anticipation is the pleasure. The ball's flight lets the audience *predict* the note. A teaching film equivalent exists wherever an action has travel time — a typed coordinate, a cursor's path, a link being followed.
+
+### 2.2 Resonant Chamber — Animusic 2 (2005), 4:20
+
+**World:** the opposite geometry to Pipe Dream — instead of a room full of separate instruments, **one composite instrument**: the multi-necked "Guitar Chimeric" (8-string classical guitar, 7-string autoharp, 2-string bass, 4-string tapped guitar, 2-string guitar, ukulele/lute necks — catalogues vary slightly in naming), its string planes crossing over a shared circular resonator, played by jointed mechanical fingers that press, pluck, tap and mute. Purely acoustic, mellow. The chamber sits high in the sky; a different moon is visible from each of its four windows.
+
+- **Structure:** one body, explored neck by neck. Individual necks are introduced in exposed passages; the fingers' vocabulary (pluck, tap, strum, mute) is taught per neck before necks combine.
+- **Build-up pattern:** accretion *inside a single object* — density grows as more necks and finger systems play simultaneously over the same resonator, while tempo and mood stay calm. The peak is density of articulation, not speed or volume.
+- **Camera pattern:** slow, close, reverent. Long passes across the string planes, macro attention to finger–string contact at the exact moment of plucking, alternating with full portraits of the whole instrument. The camera travels *along the instrument* following the melodic hand-off from neck to neck; the multi-view version literally lays all six string instruments out side by side, each playing its part whole.
+- **Peak and resolution:** peak = all necks active, fingers everywhere, still unhurried. Resolution thins back to sparse single plucks and the chamber at rest, moons unchanged — the room returns to stillness rather than triumph.
+
+**Lesson for T7:** complexity does not require a bigger stage. One object, fully understood, can carry a whole film if the camera keeps re-introducing its parts and the parts visibly cause each other. This is the model for any section where a single scroll or a single phext address is the whole subject.
+
+### 2.3 Cathedral Pictures — Animusic 2 (2005), 6:00
+
+**World:** a cathedral that is itself the instrument. Three movements of Mussorgsky's *Pictures at an Exhibition* — "Promenade," "The Hut on Fowl's Legs" (Baba Yaga), "The Great Gate of Kiev" — performed on a light-beam pipe organ with drums, bass and supporting instruments, plus pyrotechnics reserved for the finale. The only Animusic piece built on pre-existing classical music, and the longest of the three studied here.
+
+- **Structure:** escalation by **movement**, not by continuous groove. Where Pipe Dream builds inside one piece of music, Cathedral Pictures builds across three contrasting panels, each with its own register: Promenade states the theme and the light-organ language; Baba Yaga is darker, faster, more aggressive; the Great Gate is the maximal statement.
+- **Build-up pattern:** each movement re-starts from the movement's own establishing material, but the *scale vocabulary* carries over and grows — more of the architecture sounding, light filling more of the building, percussion weight increasing. Pyrotechnics exist in the piece's vocabulary only at the end: the biggest effect is saved, used once, at the structural climax.
+- **Camera pattern:** architectural. The camera uses the building's verticality — reveals up the pipework, wide shots that hold the whole nave as a single instrument, closer passes over the light-beam mechanism while it plays. Shots respect movement boundaries; transitions between movements are the piece's natural chapter breaks.
+- **Peak and resolution:** peak is the Great Gate with the full building sounding and the pyrotechnic accents — the one moment every layer (organ, drums, bass, light, architecture, fire) is active together. It resolves on the movement's own final chords in the wide architectural view: the building at rest, understood.
+
+**Lesson for T7:** a long film can build in chapters, each chapter re-establishing its world quickly because the audience already knows the rules. Save the single biggest effect for the single structural climax and use it once — which is exactly the discipline R5/R6 already apply to the fourth-wall break.
+
+---
+
+## 3. Translation — Animusic principles as checkable T7 rules
+
+House format: each rule is yes/no checkable or carries a number. Rules that restate an R5/R6 invariant say so; the rest are new for T7.
+
+**T7-01 — Score first (restates R6, Animusic form).** The narration stem is T7's MIDI file: locked before picture work begins, and every picture piece is audited against its slot duration *before* the join. Per-piece duration table in the log; zero pieces off-slot at join time.
+
+**T7-02 — No orphan reveals.** Every scroll appearance, edit, save, search result, or link-follow on screen is caused by a visible on-screen action (typed coordinate, search, click, link traversal) belonging to the same beat. Audit: a cause→effect list for every visual event in the film; orphans = 0.
+
+**T7-03 — Anticipation lead.** The causing action must be fully legible before its effect lands: a typed coordinate is completely typed and readable for ≥ 0.5 s before the scroll opens; a cursor travelling to a link is in motion for its whole path, never teleporting. Checkable per beat from the capture: lead time ≥ 0.5 s on 100% of T7-02 pairs.
+
+**T7-04 — Travel is shown.** Where an effect is remote from its cause (coordinate in §x opens a scroll "elsewhere" in the lattice; the §07 river), the connecting path is drawn/traversed on screen, the way a ball's flight connects pipe to string. No jump from cause to a frameless result. Yes/no per beat.
+
+**T7-05 — Calibration before ensemble (extends the concept ladder).** Each section's core teaching action is first performed **solo, once, end-to-end, at readable speed**, before that section layers anything on it — the solo-cam test. Deliverable: each section's solo performance exists as an identifiable span in the cut; count of sections passing = 9/9.
+
+**T7-06 — One new family at a time.** Within a section, at most **one** new visual system (new UI region, new phext dimension, new notation) becomes active per narration sentence-block, and it is introduced while previously taught systems stay visibly present as ground. Audit from the beat sheet: simultaneous new systems ≤ 1 everywhere.
+
+**T7-07 — Geography before close-ups.** Every new space (a wiki article layout, the lattice view, the QR river) gets an establishing wide of ≥ 2 s before the first close work in it. Checkable from the shot list: establishing-wide duration per new space ≥ 2.0 s.
+
+**T7-08 — Phrase integrity (restates R5/R6 join discipline, extended inward).** No visual cut, xfade, or reframing lands inside a narration sentence — inside sections as well as at the 9 joins. Camera moves may run under speech, but a *change of shot* occurs only at a sentence or section boundary. Audit: transcript timestamps vs. shot-change list; mid-sentence shot changes = 0.
+
+**T7-09 — Camera arrives early.** For every beat where narration hands attention from object A to object B, the camera move to B starts at or after B's verbal cue and B is framed and settled ≥ 0.3 s before B's causing action (T7-03) begins. Checkable per hand-off from the capture.
+
+**T7-10 — SFX are strikes.** Every SFX event in the concert-grand family has a visible on-screen contact or state-change within ±2 frames (60 fps) — a key completing, a link landing, a scroll edge settling. Decorative SFX with no visible cause = 0. The R5 recipe book carries over; the event list in the log gains a "visible cause" column.
+
+**T7-11 — Density curve is charted and peaks once.** The log carries a per-section density table: count of simultaneously active visual systems per sentence-block. Required shape: within each section, density peaks in the final third and falls before the section ends; across the film, the single maximum is §07 (river + fourth-wall), and §08's density is ≤ half of §07's peak.
+
+**T7-12 — Return path.** Every element a section opens (scroll, panel, thread, link chain) is visibly closed, returned, or present-and-accounted-for in that section's closing wide, which holds ≥ 1 s on the settled state. Open loops at a section boundary = 0, except the one designed carry-over into the next section, named in the beat sheet.
+
+**T7-13 — Ending is resolution, not trailer (restates R6 §08 discipline).** After the final narration sentence: no new concept, no new UI element, no new visual system. Only previously taught elements in their settled state, plus the CTA card. New elements in the final 15 s = 0 (CTA excepted).
+
+**T7-14 — Biggest effect once.** The film's single largest effect remains the §07 fourth-wall break, used exactly once (R5/R6 invariant). Any effect approaching its scale elsewhere fails review — the Cathedral Pictures rule: pyrotechnics at the Gate, nowhere else.
+
+### Acceptance summary for T7 (Animusic-derived items only)
+
+| Check | Target |
+|---|---|
+| Cause→effect audit (T7-02) | 0 orphan visual events |
+| Anticipation lead (T7-03) | ≥ 0.5 s on 100% of pairs |
+| Solo calibration spans (T7-05) | 9/9 sections |
+| Simultaneous new systems (T7-06) | ≤ 1 everywhere |
+| Establishing wides (T7-07) | ≥ 2.0 s per new space |
+| Mid-sentence shot changes (T7-08) | 0 |
+| SFX without visible cause (T7-10) | 0 |
+| Film density peak (T7-11) | §07 only; §08 ≤ ½ of peak |
+| Open loops at section ends (T7-12) | 0 (named carry-overs excepted) |
+| New elements in final 15 s (T7-13) | 0 (CTA excepted) |
+
+---
+
+## 4. Honest limits — what Animusic does that this film cannot copy
+
+1. **Animusic teaches nothing.** Its audience only has to watch and feel the mechanism is true. Our audience has to *learn phext and be able to do it afterwards*. Legibility of text, dwell time on a coordinate, and the order concepts must be introduced are set by comprehension, not by rhythm. Where a musical phrase and a teaching phrase conflict, the teaching phrase wins — Animusic never faces the conflict.
+2. **Animusic's world is fully synthetic and fully obedient.** Every travel time is designed. Our picture is substantially **live captures of real software**: page loads, rendering, and UI response have their own timing, and text must stay crisp and readable at capture resolution. Causality can be staged honestly (show the typing, the travel, the arrival), but a real load pause cannot be physics-timed like a ball flight — it must be shown as a real wait or cut at a sentence boundary under T7-08, never disguised as designed motion.
+3. **Music is continuous; narration is sequential.** An Animusic layer can enter under ten others and still be perceived. A second simultaneous *idea* in narration is just confusion. T7-06's one-new-system rule is the workable residue of the accretion principle — the film can accrete visual systems, but not concepts.
+4. **Animusic has no host and needs none.** Our film has a presenter presence and exactly one designed fourth-wall break; that human beat is outside Animusic's vocabulary entirely and stays governed by the R5/R6 rules, not by anything here.
+5. **Animusic's timescale is not available.** The albums were years in production, with period reporting of roughly five minutes of render per frame at ~30 fps. T7 is a revision round on an existing, compliant R6 pipeline; these notes deliberately ask for staging and audit changes (cause lists, density tables, solo spans), not for a procedural regeneration engine. Building a true MIDImotion-for-phext — narration data generating picture automatically — is a real idea the notes expose, and it is **not** T7's scope.
+6. **Emotional register differs.** Resonant Chamber's calm works because nothing is at stake. A training film that never varies pressure becomes a screensaver with narration; the density curve (T7-11) borrows Animusic's *shape*, not its uniform serenity.
+
+---
+
+## Sources
+
+- Animusic (company, MIDImotion, releases, piece data): https://en.wikipedia.org/wiki/Animusic
+- Animusic's own FAQ / process text (MIDImotion algorithms, note-for-note granularity, ANIMUSIC|studio), reproduced at: https://www.thekurzweillibrary.com/instrument-of-the-future
+- SIGGRAPH 2001 festival notes on Pipe Dream (procedural technique, build in complexity, MIDImotion): https://www.awn.com/animationworld/siggraph-2001-computer-animation-festival-digital-odyssey
+- Pipe Dream instrument roster, ranges, solo cams, commentary notes: https://animusic.fandom.com/wiki/Pipe_Dream
+- Guitar Chimeric (Resonant Chamber's composite instrument) roster: https://animusic.fandom.com/wiki/Guitar_Chimeric
+- Resonant Chamber description (Animusic 2; acoustic, multi-neck, chamber, four moons): https://www.frostclick.com/wp/index.php/category/video/page/30/
+- Cathedral Pictures description (Mussorgsky movements, light-beam pipe organ, pyrotechnics): https://watch.plex.tv/show/animusic/season/2
+- Contemporary review material on MIDImotion, camera work, solo cams, commentary: https://filmthreat.com/uncategorized/animusic-dvd/
+- Production background (Lytle/Crognale, three-year production of album 1, render time per frame): https://thisistrue.com/animusic/
+# T7 exemplar notes — TED Talks
+
+Title: T7 exemplar notes — TED Talks
+Source: ~/workspace/phext-walkthrough/t7-notes/TED-NOTES.md
+Inscribed: 2026-11-11
+SHA-256: 8a82e209462fbc3d3191f4c99d29f0af49c6894faf919f419a1a9325a402c269
+
+---
+# Production Notes — TED Talks as Exemplars for T7
+
+**Film:** Phext Edit training film, version T7 (not yet briefed — these notes feed the brief).
+**Reference coordinate:** 23.6.9/8.6.12/6.6.9 (Will's direction, evening commute call, 2026-11-11)
+**Will's direction, in substance:** something in how he describes what he wants is not being translated into the builds. Emise is to study the example videos he admires — TED Talks named in this pass — as production notes, so T7 is built from studied exemplars, not from description alone.
+**Method:** web research only. No quotes or figures are used that a source below does not carry.
+
+---
+
+## 1. Identification — the talk Will described
+
+Will's clues, verbatim in substance (2026-11-11): *a TED Talk about AGI, produced probably 10 years ago or more, given by an actor who is pretending to be like an android.*
+
+**No single talk fits all four clues exactly. The strongest match is the Peter Weyland talk — with one clue missed, and the missed clue points at a second video from the same campaign, released seven weeks later. The likely explanation is that the two have merged in memory. Both are named below so Will can confirm which image is in his head.**
+
+### Winner: "TED 2023" — Guy Pearce as Peter Weyland (released 28 February 2012)
+
+A short film made with TED's collaboration and published on TED's own site as a talk from a fictional 2023 conference: actor Guy Pearce, in character as Weyland Corp founder Peter Weyland, addresses a stadium TED audience about humanity's technological ascent and the cybernetic individuals his company is about to build. Conceived by Ridley Scott and Damon Lindelof, directed by Luke Scott, released as the first viral for *Prometheus* (2012). Original cut 3 minutes; extended cut 7 minutes (Blu-ray, October 2012).
+
+**Definitive link (official TED):** https://blog.ted.com/ted2023/ — TED's own page, presented deadpan with a fictional speaker bio. Reference page: https://en.wikipedia.org/wiki/TED_2023
+
+Clue-by-clue:
+
+| Clue | Fit | Evidence |
+|---|---|---|
+| A TED Talk | **Yes — literally.** | Made in collaboration with TED, published through TED; TED community director Tom Rielly helped gain approval for the first-ever promotional use of the TED brand, and helped design the fictional 2023 conference. |
+| About AGI | **Yes, in fictional form.** | The talk's subject is the arc of human technology culminating in creating cybernetic individuals indistinguishable from humans — machine minds as humanity's successor step. It is a vision talk about artificial general intelligence and apotheosis, not a research talk. |
+| 10+ years old | **Yes — best fit of any candidate.** | Released 28 Feb 2012: 14 years before Will's description. |
+| Given by an actor | **Yes.** | Guy Pearce, a film actor, performing a scripted character. Collider called the performance "hypnotic." |
+| Pretending to be an android | **No — this is the missed clue.** | Pearce plays a *human* — the founder who announces he will build the androids. He does not play one. |
+
+### The probable source of the android clue: "Happy Birthday, David" (17 April 2012)
+
+The second *Prometheus* viral, from the same campaign: Michael Fassbender — an actor — plays David 8, an android, in a fictional Weyland Corp product advertisement styled as an interview. A newly manufactured David comes off the line in a plastic bag; the finished unit answers an off-screen interviewer's questions about what he can do, what he thinks about, and what makes him sad, and weeps on cue. Deadpan, unsettling, entirely in character.
+
+- Fits: **actor pretending to be an android (exactly)**, AGI-adjacent subject (a commercial general-purpose android), age (2012, 14 years).
+- Misses: **it is not a TED Talk in any way** — no stage, no audience, no talk structure; it is a 2.5-minute product ad/interview.
+
+If Will's mental image is a face performing android-ness rather than a man on a stage, this is the video he means — and §2 covers its device too, because the device is what T7 can actually use.
+
+### The other candidates, ranked
+
+**Henrik Schärfe with Geminoid-DK, TED2012** — a real TED conference session: Aalborg University professor Henrik Schärfe on stage with Geminoid-DK, a real android built as his doppelgänger (by Kokoro / Hiroshi Ishiguro's lab tradition). Schärfe tells a personal story — waking to police at his door with news his parents had been killed — then the android is brought out, seated, and the two banter; the robot voices findings from their research (context changes tolerance of androids; age and gender affect perception). Schärfe is explicit that it is *not* about replacing the human.
+- Fits: TED (real conference, TED2012), android physically on stage, age (2012).
+- Misses: **actor** (he is a professor playing himself), **pretending** (the android is a real teleoperated research robot, not a performance), **AGI** (the subject is presence and human–robot relations, not general intelligence).
+
+**"Bob," TEDxBristol, 11 November 2015** — billed as a TEDx first: a humanoid robot avatar delivers a talk on stage at Colston Hall. Bob was built by Dr Paul Bremner and team at Bristol Robotics Laboratory as a social avatar: a human operator's movements and voice are relayed through the robot, so the speaker is "embodied" by it. Inc. called it "the TED talk that stunned the world."
+- Fits: a talk delivered *by* a robot-shaped speaker; age roughly (2015, 11 years).
+- Misses: **actor** (no performer — a researcher speaking through his avatar), **TED proper** (TEDx, independently organised), **AGI** (subject is companion/social robots and being loved and understood, not general intelligence), **pretending to be an android** (inverted: a human pretending through a robot).
+
+---
+
+## 2. Production notes — the Weyland talk itself
+
+**Staging.**
+- One man, one stage, nothing else to look at. The fictional 2023 conference is staged in Wembley Stadium — Lindelof's stated reason was the character's ego: a man advancing ideas "nothing short of hubris" would demand a stadium. Scale is used as characterisation, not spectacle for its own sake.
+- The only screen content is atmosphere: a massive projection surface carrying real-time audience reactions, and flying cameras (both suggested by TED itself when imagining its own future format). There is no slide deck. No bullet points, no charts, no logos behind him while he speaks.
+- The extended cut opens backstage — Weyland alone, whiskey, quoting Nietzsche (*Thus Spoke Zarathustra*) — before he walks out. The public cut is the speech alone, ~3 minutes.
+
+**The performance device.**
+- TED published the talk on its own site **deadpan, in-fiction**: the speaker bio describes Weyland's controversies (announcing "the first convincingly humanoid robotic system," feuds with the Vatican over gene therapy) and his motto, "If we can, we must," with no wink at the reader. The frame never breaks. The audience is asked to sit *inside* the fiction for the full runtime.
+- Because the frame never breaks, every claim lands twice: as an idea about the future, and as a character revealing himself. The hubris is the content. A 2023 *Polygon* retrospective noted the talk now reads as a time capsule of the era when tech founders were broadly admired — the talk didn't change; the audience's knowledge did. In-character delivery makes a talk re-readable.
+- Pearce's delivery is stillness and certainty: measured pace, long pauses, no pleading for agreement. Collider: "hypnotic." He never explains or qualifies; he *declares*. The authority comes from the performance, not from evidence — there is no evidence in the talk at all.
+
+**Structure (story → myth → claim → name).**
+1. **Anecdote first.** He opens with T. E. Lawrence and the match — a story about a man who could extinguish a lit match with his fingers because he had learned not to mind the pain. One concrete human image before any concept.
+2. **Deep history as a ladder.** From that image he climbs: fire as humanity's first technology, the Prometheus myth (fire stolen from the gods), then a rapid list of breakthroughs across human history. Each rung is one image, not one argument.
+3. **The claim, stated as conclusion.** The ladder arrives at the present: we can now create "cybernetic individuals who in just a few short years will be completely indistinguishable from us," and therefore — his conclusion — "We are the gods now." The AGI claim is earned by the ladder, not asserted at the top.
+4. **The ending is a name.** The talk closes not with a summary but with self-introduction: "For those of you who do not know me, allow me to introduce myself. My name is Peter Weyland, and if you'll indulge me, I'd like to change the world." The last thing the audience receives is a person and an intention.
+
+**Pacing and single-image discipline.**
+- Total runtime 3 minutes (7 extended) against TED's 18-minute norm: the talk is *only* its throughline. One idea — humanity's toolmaking arc ends with us making minds — carried by one story, one myth, one claim, one name.
+- At every moment there is exactly one thing to attend to: the speaker, or the single image he has just named (a match, a flame). Nothing competes with the sentence being spoken.
+- Pauses are load-bearing. The delivery leaves silence after the big claims so the audience completes them; the talk does not rush to fill its own echoes.
+
+**The David short, as a companion device** (in case the android performance is the half Will means): the entire effect is one face, close up, answering simple questions with slightly-wrong affect — emotion performed correctly in form and off in feeling (he weeps when asked what makes him sad, and the tears read as a feature demonstration). One prop, one setting, no plot. The unease comes from *restraint*: nothing in the frame says "be unsettled"; the performance does it alone.
+
+---
+
+## 3. Production notes — the classic TED form
+
+Evidence talks: Sam Harris, "Can we build AI without losing control over it?" (TEDSummit, June 2016) and Nick Bostrom, "What happens when our computers get smarter than we are?" (TED2015, filmed 18 March 2015) — the two canonical *real* TED talks on this film's neighbouring subject, AGI. Form principles cross-checked against Chris Anderson's *TED Talks: The Official TED Guide to Public Speaking* (2016).
+
+**One idea, stated as a throughline.**
+- Anderson's core discipline: a talk has a throughline — its point, statable in about 15 words — and everything that does not serve it is cut. His warning against the common failure: do not condense by shrinking everything you wanted to say; "overstuffed equals underexplained." Slash the *range* to one connected line instead.
+- Harris's talk is one idea: superintelligence is coming and our intuitions are failing to take it seriously. He reduces his whole case to **three assumptions** (intelligence is information processing in physical systems; we will keep improving our machines; we are nowhere near the peak of intelligence) and spends the talk walking them. A viewer can carry the talk away in one sentence.
+- Bostrom's talk is one distinction: intelligence is an *optimisation process* — capability at steering the future toward a goal — and capability says nothing about whether the goal is one we would choose. Everything else in the talk is that distinction being turned.
+
+**Story/image first, concept second.**
+- Harris opens by naming the audience's own reaction as his subject: he will describe a scenario "both terrifying and likely," and most listeners will find it *fun* to think about — and that mismatch is the problem. The hook is a mirror, delivered in the first 30 seconds, before any argument.
+- Bostrom opens by replacing a picture in the audience's head: the usual scale of intelligence (village idiot at one end, Einstein at the other) redrawn so those two points sit almost on top of each other, with mouse, chimpanzee, and human strung along a long climb. His most remembered line is an image, not a proposition: "The train doesn't stop at Humanville Station. It's likely, rather, to swoosh right by." The concept (fast takeoff) is *carried by* the image; the image is what survives.
+- Both hooks are reframing devices, not throat-clearing: no biography, no agenda, no "today I'm going to talk about."
+
+**Slides as single images, never text.**
+- Anderson's rule, via his guide's reception and TED practice: no slides at all is better than bad slides; at most **one key idea per slide**; the audience cannot read a screen and listen at the same time, so any text on screen is attention stolen from the sentence being spoken.
+- In both evidence talks the screen, when it appears, carries a single diagram or scale — something the voice is *pointing at*, never something the voice is reading out.
+
+**Rehearsed but alive.**
+- TED talks are scripted and heavily rehearsed (Anderson's guide treats rehearsal as non-optional), yet the delivery target is a conversation with one person, not a recitation: Anderson passes on Elizabeth Gilbert's advice to prepare the talk as if delivering it to one actual human being. Harris sounds like a man thinking aloud at measured pace; Bostrom is dry, precise, and allows himself one bleak physical gag (the off-switch bit, where the transcript records a single stage direction) — a rehearsed talk with room left for a live moment.
+- Harris also models the TED close: he does not summarise. He raises the stakes one final time — if his assumptions hold, "we are in the process of building some sort of god. Now would be a good time to make sure it's a god we can live with" (as reported by the Future of Life Institute) — and stops. The last line is the idea with its full weight on it.
+
+**Openings hook by reframe; closings land by consequence.**
+- Opening pattern across all three talks studied (Weyland, Harris, Bostrom): within the first minute, the audience's existing picture is replaced — a man who doesn't mind pain / your own amusement is the danger / the intelligence scale is drawn wrong. No talk opens with context-setting.
+- Closing pattern: no "thank you for coming on this journey," no recap list. Weyland closes on a name and an intention; Harris on the size of what is being built; Bostrom on the values question the whole talk has been loading. The final sentence is the throughline at maximum consequence, and then the talk ends.
+
+---
+
+## 4. Translation — TED principles as checkable T7 production rules
+
+In the style of the R6 brief: each rule is stated so the T7 log can measure it and report pass/fail.
+
+1. **Throughline test.** Before any build, the T7 brief states the film's throughline in **≤15 words**. Every section's first log entry names which word(s) of the throughline it serves. Any section that cannot name one is cut or merged — not shortened. (Anderson's rule; the failure mode he names is shrinking everything instead of slashing range.)
+2. **One idea per section, audited.** Each section carries exactly one new concept (the existing concept ladder already enforces the count — keep it). The T7 log's coverage audit adds a column: the single sentence a first-time viewer should be able to repeat after that section. If a section needs two sentences, it is two sections wearing one coat.
+3. **Reframe in the first 30 seconds.** The film opens by replacing a picture the viewer already has — before any instruction, definition, or feature. No biography of phext, no agenda, no "in this video." Acceptance: a cold viewer, stopped at 0:30, can say what picture changed.
+4. **Story/image before concept, in every section.** Each section's narration order is: one concrete image or anecdote first, the concept named only after the image has landed (Weyland's match before fire; Bostrom's scale before takeoff). The script audit lists, per section, image-first line number vs. concept-first line number; image must come first in 9/9 sections.
+5. **Nothing on screen competes with the sentence.** Any frame containing readable text longer than a label (≤5 words) while narration is speaking about something else is a defect. Screens and captures show the one thing the voice is pointing at — the Harris/Bostrom slide rule applied to live capture: one idea per shot, the shot *is* the slide.
+6. **Pauses are in the budget.** After each section's claim line, the picture holds and the narration leaves a beat of silence (target ≥1.0 s at the two or three biggest claims, measured in the log) instead of the next sentence filling the echo. Silence is a line item, not an accident of editing.
+7. **The frame does not break — except once.** T7 keeps the film's existing law of exactly one fourth-wall break. The Weyland lesson is why it works: an unbroken frame (there, in-character; here, the paper world and its rules) is what gives the single break its force. Any second moment that winks at the audience is cut, however charming.
+8. **Delivery: rehearsed script, one listener.** The narration script is final and rehearsed before recording (it already is — R4 stem discipline), and the read is directed at one named listener, not at "the audience." Checkable proxy: no sentence in the T7 script addresses a crowd ("you all," "everyone watching"); every address is singular.
+9. **Close on consequence, not recap.** The final section ends with the throughline restated at maximum consequence — what becomes possible if the viewer keeps and uses this — followed by the single call to action. No summary of sections, no feature list in the close. Acceptance: the last narration sentence before the CTA is a consequence sentence, verified in the script audit.
+10. **The David rule — one face, restraint.** Where T7 wants the viewer to *feel* the strangeness of machine minds (the film's subject, ultimately), do it with one sustained image held longer than comfort suggests and no explanatory narration over it, rather than with effects or emphasis. Unease and wonder both come from restraint; the moment the film underlines them, they deflate.
+
+---
+
+## 5. Honest limits — what a stage talk does that this film cannot copy
+
+- **A body in a room.** Weyland, Harris, and Bostrom all spend the audience's trust in a visible person thinking in real time. T7's narrator is a voice over captured screens and drawn paper; there is no presence to borrow authority from. The film must earn the same trust differently — by *showing the thing working* (live capture, decodable QR codes, receipts) where a talk can simply assert. This is a genuine advantage, but it is a different mechanism, and rules 5 and 10 above are compensations, not equivalents.
+- **A live audience as an instrument.** TED speakers tune pace to laughter, silence, and restlessness in the room; the recorded talks carry that feedback in their timing. A narrated film is timed blind. T7's pause budget (rule 6) is a fixed guess at what a live speaker would feel.
+- **The social proof of the room.** Weyland's stadium and TED's red circle tell the viewer "people who matter are listening" before a word lands. A screen film has no room. The film's substitutes — production polish, measured loudness, verified claims — are weaker signals and slower to register.
+- **A talk can be all claim; a training film cannot.** Weyland's talk contains zero evidence and zero instruction, and succeeds. T7 is a *training* film: at some point a viewer must be able to do something they could not do before. The TED discipline governs the film's rhetoric — throughline, image-first, single-image screen, consequence close — but the how-to spine is the film's own obligation, and no amount of TED form removes it. Where the two conflict (a necessary step that breaks image-first order), the step wins and the log should say so.
+- **Length asymmetry.** The most admired exemplar here is 3 minutes; the classic form caps at 18. T7 at ~354 s sits between them, closer to Weyland than to Harris — which means the throughline discipline has to be *stricter* than a full TED talk's, not looser: there is no room for a second idea to hide in.
+
+---
+
+## Sources
+
+- TED Blog, "Peter Weyland at TED2023: I will change the world" (official TED page, deadpan in-fiction speaker bio) — https://blog.ted.com/ted2023/
+- Wikipedia, "TED 2023" (credits, release dates, runtimes, production, reception incl. Collider and Polygon quotes) — https://en.wikipedia.org/wiki/TED_2023
+- Wikipedia, "Prometheus (2012 film)" — viral campaign (TED 2023 release 28 Feb 2012; "Happy Birthday, David" released 17 Apr 2012 as a David 8 advertisement) — https://en.wikipedia.org/wiki/Prometheus_(2012_film)
+- Frank Rose, "Peter Weyland of 'Prometheus' makes a surprise appearance at TED" (2012; quotes from the talk's close and its cybernetic-individuals claim) — https://www.frankrose.com/blog/peter-weyland-of-prometheus-makes-a-surprise-appearance-at-ted-1/
+- TED Blog, "Well, wouldn't you bring your doppelgänger robot to TED? Henrik Schärfe at TED2012" — https://blog.ted.com/well-wouldnt-you-bring-your-doppelganger-robot-to-ted-henrik-scharfe-at-ted2012/
+- IEEE Spectrum, Video Friday (Jan 2016; TEDxBristol description of Bob as humanoid robot avatar built by Dr Paul Bremner's Bristol Robotics Laboratory team) — https://spectrum.ieee.org/video-sarcos-robot-kicked-drone-crash-mit-supernumerary-robot-limbs
+- Inc., "The TED Talk That Stunned The World" (12 Nov 2015; Bob at TEDxBristol, human-operated) — https://www.inc.com/chris-matyszczyk/this-ted-talk-is-unlike-any-youve-ever-seen-in-your-life.html
+- Future of Life Institute, "Sam Harris TED Talk: Can We Build AI Without Losing Control Over It?" (Oct 2016; the three assumptions; ants analogy; closing line as reported) — https://futureoflife.org/recent-news/sam-harris-ted-talk/
+- Future of Life Institute, "What happens when our computers get smarter than we are?" (May 2015; Bostrom talk summary and intelligence-scale passage) — https://futureoflife.org/ai/what-happens-when-our-computers-get-smarter-than-we-are/
+- Chris Anderson, *TED Talks: The Official TED Guide to Public Speaking* (2016), as summarised in reviews: throughline in ~15 words; one key idea per slide; no slides better than bad slides; "overstuffed equals underexplained"; Gilbert's one-listener advice — https://formomentum.com/business-book-review-ted-talks/ and https://insnerds.com/insights/ted-talks-the-official-guide-review-by-tony
+# T7 exemplar notes — Kurzgesagt
+
+Title: T7 exemplar notes — Kurzgesagt
+Source: ~/workspace/phext-walkthrough/t7-notes/KURZGESAGT-NOTES.md
+Inscribed: 2026-11-11
+SHA-256: dad4fccda8673c46cd024f1f2b75a40dca43f9d99ae86884e898fefd52e7c5e7
+
+---
+# Production Notes — Kurzgesagt – In a Nutshell (for T7)
+
+**Film:** Phext Edit training film, version T7 (in preparation).
+**Reference coordinate:** 23.6.9/8.6.12/6.6.9.
+**What Will asked for (2026-11-11):** study recent Kurzgesagt videos for (1) their
+**narration pacing** and (2) **the way they introduce concepts**. Explicitly NOT
+wanted: their bright color palette and their bird mascots / branding. Our look
+stays bright white construction paper, hand-drawn, live captures framed on paper.
+**Status:** study notes only. Nothing here is a T7 brief yet; the rules in §4 are
+proposed in house style so Will can strike or amend them line by line.
+
+---
+
+## 1. Sample — and what each claim rests on
+
+| # | Video | Date | Topic | Basis for these notes |
+|---|-------|------|-------|------------------------|
+| A | *Why Your Brain Blinds You For 2 Hours Every Day* | Mar 2025 | Perception: saccades, predictive processing | Full timestamped transcript (30-second chunks, opentools.ai mirror of the captions), read end to end; word counts per chunk are my own counts from that transcript |
+| B | *SOUTH KOREA IS OVER* | Apr 2025 | Demographic collapse | Timestamped transcript, opening ~15 minutes of chunks + full chapter outline (opentools.ai); runtime 13:42 per the channel's podcast feed listing |
+| C | *We Found a Loophole to Survive the End of the Universe* | Sep 2025 | Heat death, Dyson's "cold thoughts" | Full transcript (youtubetotranscript.com) + contemporaneous quotation of its script in kottke.org's write-up |
+
+Method note: every pacing number below is either (a) counted by me from a
+timestamped transcript, stated with its chunk size so it can be re-counted, or
+(b) attributed to a named third-party measurement. No view counts are cited;
+none were needed.
+
+---
+
+## 2. Narration pacing — measured
+
+### 2.1 Words per minute (finished video, pauses included)
+
+Video A, counted per 30-second transcript chunk:
+
+| Span | Words / 30 s | ≈ wpm |
+|------|--------------|-------|
+| 0:00–0:30 (hook) | ~79 | ~155 |
+| 0:30–1:00 | ~70 | ~140 |
+| 1:00–1:30 | ~72 | ~144 |
+| 1:30–2:00 | ~66 | ~132 |
+| Mid-video chunks (2:00–9:30) | 64–74 | ~128–148 |
+| **Whole narration (~1,340 words over ~9.7 min, before the sponsor segment)** | — | **~138** |
+
+So the shape is: **the hook runs hot (~150 wpm, claims stacked fast), then the
+explanation settles to roughly 130–145 wpm and stays there.** The voice itself
+never races; the density difference comes from the script — the opening packs
+more claims per sentence, the body gives each claim its own sentence.
+
+Context, third-party: a 2026 measurement of 12 narrated explainer/documentary
+videos across six channels (Kurzgesagt among them), counting caption words over
+full runtime, found a pooled median of ~165 wpm (range 141–189) — that pool
+includes faster channels, so treat it as an upper-bound context, not a
+Kurzgesagt figure. My own count on Video A is the number to design against:
+**~135–145 wpm of finished video.**
+
+**Comparison with our film, stated plainly:** R4–R6 narration is 984 words over
+354.3 s of audio ≈ **167 wpm of finished film**, and Aria's raw read is ~183 wpm
+against a 150 wpm planning grid. We currently speak *faster* than Kurzgesagt
+while teaching *denser* material (phext's coordinate system is less familiar to
+a new viewer than "your eyes move"). The gap T7 should close is not voice
+speed — it is words-per-concept. Kurzgesagt spend ~1,340 words on essentially
+one mechanism (prediction) plus its consequences; we spend 984 words on a whole
+format, an editor, a wiki, and a scale claim.
+
+### 2.2 Sentence pattern
+
+From Video A's transcript:
+
+- Sentences run short: typically 8–22 words, one claim each. Long sentences
+  appear almost only as *lists* of three parallel items ("it edits your
+  memories as they happen, it lives in totally different time spheres and tells
+  you a story…"), where the rhythm carries the length.
+- Numbers are never left abstract in the sentence that introduces them — see §3.
+- The narration constantly speaks in second person. In Video A the viewer is
+  the experimental subject throughout: your eyes, your walk home, your party.
+  Direct address is the attention reset — it recurs every 20–40 seconds,
+  usually at the start of a new beat ("Imagine for a second that you are a
+  table tennis pro").
+
+### 2.3 Where the pauses land
+
+Reading the chunk boundaries and sentence structure of Videos A–C, pauses do
+four repeatable jobs:
+
+1. **After the hook question, before the answer starts.** Video A opens with
+   stacked claims, then: "What's going on and who is really in control of your
+   life?" — and the chapter title lands before any answering begins. The
+   question is left hanging on purpose.
+2. **Before the reversal word.** All three videos pivot on a "But…": "But there
+   might be a loophole…" (C); "Except this is also not really true" (A). The
+   beat before the pivot is where the previous idea is allowed to finish
+   settling.
+3. **After a big number lands.** Korea (B): "100 South Koreans will turn into
+   5." Full stop. The next chunk starts a new subject (the population pyramid)
+   — the number gets its own silence instead of a trailing explanation.
+4. **At chapter turns.** Each video is segmented into named chapters
+   ("Walking is Time Travel", "Thoughts Cold as Ice", "The (Real) Population
+   Bomb"). The title is spoken or shown at the turn and functions as a breath
+   and a re-hook: a fresh small question replaces the one just answered.
+
+### 2.4 How pace changes between setup and payoff
+
+- **Setup** (first mechanism): slowest, most concrete, ~130–140 wpm, everyday
+  scene first (stirring milk into coffee, A 1:30; a single fertility number, B
+  0:30).
+- **Build** (mechanism extended): pace steady, but *scope* accelerates instead
+  of words — each beat reuses the same visual idea at a larger scale (§3.3).
+- **Payoff / consequences**: sentences shorten further and land one per beat
+  (B's sector-by-sector collapse; C's dated deep-time beats: "Trillions of
+  trillions of years later: … Decillions of decillions of years later: …").
+- **Close**: the slowest passage in each video, and the warmest — the frame
+  zooms back out to the viewer (A ends on the conscious self as storyteller,
+  then a deliberately small joke: being happy about ice cream, "thinking deeply
+  about pokemon types"). The last idea is a reframe, not a summary list.
+
+---
+
+## 3. The concept-introduction pattern
+
+The repeatable move, in order. Every step is visible in at least two of the
+three sampled videos.
+
+1. **Hook: a paradox or an alarming claim, stated as fact, unexplained.**
+   "The world you see is not real" (A). "South Korea is over" (B). "Can we
+   survive the heat death of the universe?" (C). No definitions yet.
+2. **The two questions.** Immediately after the hook, the video states the
+   questions it will answer (B, verbatim structure: what will it look like, and
+   why is it almost impossible to stop?). The audience now knows the shape of
+   the next ten minutes.
+3. **A concrete, countable version of the abstraction.** Before any technical
+   term: a thumbnail-sized patch of sharp vision (A); 100 people instead of a
+   fertility rate (B); five hours of sunlight instead of joules (C: "With five
+   hours of the full energy emitted by the Sun, we could power present day
+   humanity for about 10 billion years").
+4. **Watch it work in an everyday scene.** The mechanism is demonstrated on
+   something the viewer has done — stirring coffee, playing table tennis,
+   walking home (A) — or on an invented but concrete protagonist who carries
+   it (the Noxans, C).
+5. **Only now, the name.** The technical term is attached *after* the audience
+   has seen the thing operate, and it is attached to the plain description:
+   "3 to 4 sudden jerky movements, **saccades**, of 50 milliseconds" (A).
+   Where the real term is heavy, they coin a friendly label and say so:
+   "an idea from a famous paper we'll mercilessly simplify and call **Dyson's
+   Cold Thoughts**" (C). In B, "replacement level" appears only after 2.1 and
+   0.72 have already done the work in plain numbers.
+6. **The named thing stays on screen and gets reused.** The visual metaphor
+   introduced with the concept is not discarded: A's "ghost versions of you"
+   (introduced at the table-tennis beat) are deleted one by one at the payoff
+   of the same beat; B's population pyramid is redrawn at each time step; C's
+   Noxans and their batteries persist through every escalation.
+7. **Zoom the scale, keep the mechanism.** Same idea, bigger frame: coffee
+   spoon → ball game → your whole life story (A); one woman → 100 people →
+   four generations → a country in 2060 → the rest of the world (B); your brain
+   at 310 degrees above absolute zero → a civilization → 100 trillion years →
+   decillions of years (C). The zoom is where the "wow" comes from; the words
+   stay simple while the frame grows.
+8. **Recap beat, spoken plainly, before the next level.** A at ~6:30: "Ok, so
+   we've learned that your brain is constantly predicting reality around you…"
+   — one or two sentences, then the next question opens ("Are YOU just a
+   prediction of your brain?").
+9. **Honest-limits close.** C ends with a chapter literally structured as
+   "Can the Noxans actually live forever? … There are a few problems – …".
+   The speculation is labelled as speculation after it has been enjoyed.
+
+### 3.1 Step-by-step — Video A (Brain Blinds You)
+
+| Time | Move |
+|------|------|
+| 0:00 | Paradox hook: your world is not real; your brain edits reality and lives in different time spheres (steps 1) |
+| 0:25 | The question: who is really in control of your life? (step 2) |
+| 0:30 | Concrete version: only a thumbnail-sized area of your vision is sharp (step 3) |
+| 0:45 | Mechanism shown, then named: jerky eye movements → "saccades" (steps 4–5) |
+| 1:05 | First payoff number, given its own beat: blind ~2 hours a day |
+| 1:30 | Everyday scene #2: stirring milk into coffee; three signal speeds (step 4 again, deeper) |
+| 2:20 | Escalation with a spoken chapter turn: "You are living in the past! No — future! No — a made-up future!" |
+| 2:30–4:30 | Table-tennis pro scenario: prediction demonstrated at sport speed; "ghost versions of you" metaphor introduced and resolved inside the same beat (steps 4, 6) |
+| 4:40 | Same mechanism, ordinary scale: walking home; then banana-peel slip for reflexes (step 7, zooming *down* to the mundane — the zoom runs both ways) |
+| 6:30 | Spoken recap, then new question: are *you* a prediction? (step 8) |
+| 7:00–8:30 | Mechanism extended to emotions (party anxiety as prediction) |
+| 8:30–end | Reframe close: conscious self as storyteller, not driver; slows down; ends small and warm (step 9 in spirit — limits of the "you're not in control" claim, corrected) |
+
+### 3.2 Step-by-step — Video C (Loophole / End of the Universe)
+
+| Beat | Move |
+|------|------|
+| Open | Question hook: can we survive the heat death of the universe? Doom stated in three short sentences, ending on the single word "Forever." |
+| Pivot | "But there might be a loophole…" — the reversal gets its own beat (§2.3.2) |
+| Contract | "To explain how this works we need to go through a few steps, so strap in" — the audience is told the journey has steps (step 2) |
+| Carrier | An invented civilization, the Noxans, is introduced to *want* the outcome; every later abstraction happens to them (step 4) |
+| Decomposition | "The first issue is energy" — one problem at a time, in order (step 3: five hours of sunlight = 10 billion years of humanity) |
+| Naming | The hard idea arrives as a story first, then gets its coined label: "Dyson's Cold Thoughts — in a nutshell, the lower your temperature, the less energy it takes to do something" (step 5) |
+| Escalation | Dated deep-time beats, each one reusing the same setup (batteries, cooling, hibernation) at a larger exponent (steps 6–7) |
+| Limits | Final chapter asks whether it can actually work and lists the problems (step 9) |
+
+Video B compresses the same pattern into numbers: hook claim → two questions →
+2.1 vs 0.72 in plain words → the 100 → 36 → 13 → 5 people device (the single
+most copyable move in the sample for us: **an abstract rate re-stated as a
+countable crowd, shrinking on screen**) → consequences sector by sector →
+causes → the one kernel of hope (2024 births up 3%) → zoom out to the world.
+
+---
+
+## 4. Translation — proposed T7 production rules (Kurzgesagt-derived)
+
+House style: each rule is measurable or yes/no checkable on the finished stem
+and cut, the way R5/R6 rules were audited. "Section" = one of the film's
+numbered sections. These sit *on top of* the carried-over R6 invariants
+(narration in-section, bed ≥10 dB under voice, 0.4 s xfades, one fourth-wall
+break) unless a rule here amends one, which is flagged.
+
+- **K1 — Finished-film narration rate.** Total spoken words ÷ total audio
+  duration ≤ **145 wpm** (R6: ~167). Achieved by cutting words and/or adding
+  hold time, never by slowing Aria below her natural read. Audit: word count
+  of the locked script ÷ ffprobe duration of the stem.
+- **K2 — Hook rate exception.** §01's opening 30 s may run up to ~155 wpm
+  (claim-stacking), provided §01's remainder is ≤140 wpm. Audit per section
+  from the section stems, as in §2.1's chunk method.
+- **K3 — Show before name.** Every phext concept on the concept ladder
+  (scroll, coordinate, shelf/series dimension, link, address-as-hyperlink) is
+  *demonstrated working on screen before its name is spoken*. Yes/no per
+  concept, checked against the script + cut: the first spoken instance of the
+  name comes after the first on-screen demonstration begins.
+- **K4 — Countable before abstract.** Every quantity in the narration is
+  stated once in countable form before (or instead of) the abstract figure:
+  scrolls as pages on the paper, scale as a drawn crowd/grid of files, the
+  way B turns a rate into 100 people. Yes/no per quantity in the script.
+- **K5 — One carrier per concept.** Each concept gets exactly one visual
+  metaphor, introduced with it, and that same drawing is reused — extended,
+  not replaced — at every later mention and at the scale zoom. Audit: list
+  each concept's carrier in the brief; any second carrier for the same
+  concept is a defect.
+- **K6 — The two questions.** §01 ends by stating, in narration, the two
+  questions the film answers. Yes/no in the script.
+- **K7 — Pause marks are script, not luck.** The script marks `[pause]`
+  at exactly four kinds of points: after the hook question, before each
+  section's pivot line, after each section's largest number, and at each
+  section turn. In the stem, each marked pause measures ≥0.4 s of silence.
+  Audit: silence-detect on the stem against the marked list — all marks
+  present, no unmarked silence >0.8 s inside a section.
+- **K8 — Recap beats.** Before any section that *extends* a previous concept
+  (rather than introducing a new one), the narration carries a recap of
+  ≤2 sentences in plain words ("Ok, so we've learned…"). Yes/no per such
+  section; recap words count toward K1.
+- **K9 — Second person at every turn.** Each section's first narration beat
+  addresses the viewer directly or hands them the action ("watch what
+  happens when you…"). Yes/no per section in the script. (Our demo already
+  performs the actions; this makes the narration say so.)
+- **K10 — Scale zoom is one move, drawn once.** The §07 scale reveal keeps
+  the R4–R6 single continuous zoom discipline, and the narration during the
+  zoom uses the dated-beat pattern: short clauses, one per scale step, no
+  new concept named mid-zoom. Audit: concept-name first-mentions (K3 list)
+  must not fall inside the zoom window.
+- **K11 — Limits beat before the close.** The section before the CTA states
+  plainly what phext does not do / what the demo does not prove, in ≤3
+  sentences (C's "there are a few problems" chapter, shrunk to our scale).
+  Yes/no in the script. This replaces uplift-only momentum into §08.
+- **K12 — Close slow and small.** §08's final narration beat is the slowest
+  in the film (≤130 wpm across its slot) and ends on the smallest concrete
+  image, not the largest claim — the CTA follows it. Audit: per-section wpm
+  table in the production log, §08 last beat lowest.
+
+Explicitly **not** proposed: chapters-on-screen as printed titles (their
+chapter cards are a platform feature; our section turns already ride the
+0.4 s xfades and the paper), and any change to the music-bed rules — Kurzgesagt's
+bed sits under a human narrator recorded in a studio; our measured bed rules
+(≥10 dB under voice, swells ≤ +3 dB) are already stricter and stay.
+
+---
+
+## 5. Honest limits — what does not transfer
+
+- **Palette and mascots: excluded by Will's ruling, full stop.** Their deep
+  navy backgrounds, saturated flat color and bird characters are their
+  recognizability, not their teaching method. Nothing in §§2–3 depends on
+  them: the pacing and the concept pattern are in the script and the edit.
+- **Runtime.** They get 10–14 minutes to spend ~1,300 words on one mechanism.
+  We get ~6 minutes (354 s) for a whole format. K1 therefore *requires*
+  cutting script words or accepting a longer film — there is no third option,
+  and pretending the current 984 words can hit 145 wpm inside 354 s is
+  arithmetic denial (984 words at 145 wpm needs ~407 s). Will's call at
+  brief time: fewer words, or a ~7-minute film.
+- **Morphing animation.** Their visual metaphors can melt, multiply and
+  re-form continuously (a pyramid reshaping itself, ghosts splitting). Our
+  carriers are hand-drawn on paper and live captures of a real editor: a
+  drawing can be extended between beats, but a live Phext Edit capture cannot
+  morph. K5 is written for that: reuse and *extend at cuts*, not transform
+  mid-shot.
+- **A human narrator's micro-pauses.** Steve Taylor's pauses are performed,
+  not marked. Aria (TTS) has no breath to catch; unmarked, she reads through
+  the exact spots where Kurzgesagt's narrator stops. That is why K7 moves
+  pauses into the script as data instead of hoping the read produces them.
+- **Invented protagonists.** C can invent the Noxans to carry an abstraction.
+  Our film's claims are about a real, checkable tool; an invented carrier
+  character would blur the film's receipt discipline (Gate 1, claim
+  verification). The viewer is our carrier instead — hence K9.
+- **Sponsor-shaped pacing.** Each sampled video bends around a mid/late
+  sponsor segment; some of their "breathe" beats are commercial, not
+  pedagogical. We copy the pedagogical ones only.
+- **Their one-question-per-video discipline vs our syllabus.** They teach
+  one mechanism per video and let a back catalogue carry the rest. We are
+  making a single training film that must stand alone. The transferable part
+  is the *per-concept* pattern (§3), applied once per concept on our ladder —
+  not the one-concept-per-film scope.
+
+---
+
+## Sources
+
+- Video A transcript (timestamped chunks) — opentools.ai/youtube-summary/why-your-brain-blinds-you-for-2-hours-every-day; corroborating write-ups: uniladtech.com (26 Mar 2025), 10almonds.com, thekidshouldseethis.com.
+- Video B transcript + chapters — opentools.ai/youtube-summary/south-korea-is-over; full transcript also at youtubetotranscript.com (video Ufmu1WD2TSk); runtime per the channel's Spotify podcast listing (13:42); episode date per episodate.com / episode.ninja season listings (2 Apr 2025).
+- Video C transcript — youtubetotranscript.com (video VMm-U2pHrXE); script quotations corroborated by kottke.org, "A Loophole to Survive the End of the Universe?" (Oct 2025); episode date 30 Sep 2025 per episodate.com.
+- Third-party pacing context — Umbrella Creators, "YouTube Script Length Calculator" (updated Oct 2026), citing its 2026 loudness/cut-pacing measurements (pooled explainer median ~165 wpm of finished video).
+- Our film's figures — ~/workspace/phext-walkthrough/SCRIPT-R4.md (984 words, Aria ≈183 wpm, 150 wpm slot grid) and the R5/R6 briefs and logs (354.33 s audio stem).
