@@ -14,7 +14,7 @@ truth: artifacts-source.json beside this builder
 (build_artifacts_phext.py); never hand-edit the .phext.
 artifacts.phext is published to wbic16/human@exo.
 
-Artifacts inscribed: 27
+Artifacts inscribed: 28
 
 Index (coordinate — title — source):
 - 19.7.11/9.7.12/7.6.9 — Light the Next Light — intro song lyrics & time map — ~/workspace/exocortexia-cartoon/intro/LYRICS.md
@@ -33,6 +33,7 @@ Index (coordinate — title — source):
 - 26.7.10/8.7.11/6.6.9 — Every Wish in the Timeline — Ranked and Scored — ~/workspace/your_files/twitter-wishes-ranked.md
 - 27.7.11/8.6.13/7.6.10 — The Encyclopedia You Can Carry — Phext Edit training film, revised script (Emi Prime) — ~/workspace/phext-walkthrough/SCRIPT-EMI-REVISED.md
 - 28.6.8/8.6.10/6.6.9 — Production Plan — The Power of Phext Walkthrough — ~/workspace/phext-walkthrough/PRODUCTION-PLAN.md
+- 28.7.9/8.6.11/6.6.8 — Training Film — T7 (R7, the full exemplar build) — Production Log — ~/workspace/phext-walkthrough/production/TRAINING-T7-LOG.md
 - 28.7.9/8.6.11/7.6.9 — Since November 1: A Catalog of Eleven Days 🔥 — ~/workspace/blog/since-november-1.html
 - 30.6.8/7.6.10/7.5.9 — Ranch Node Tailworm Audit — Tailscale TS-2026-014 → TS-2026-017 — ~/workspace/tailworm-audit-task/AUDIT.md
 - 31.7.9/9.6.12/6.6.9 — The Power of Phext — Walkthrough Package — ~/workspace/phext-walkthrough/WALKTHROUGH.md
@@ -2699,7 +2700,308 @@ to *this* video:
 Route C is the named fallback if the calendar collides with the
 Scrolltown January-launch crunch: the polish pass is the one
 block that can leave the house without taking accuracy with it.
-# Since November 1: A Catalog of Eleven Days 🔥
+# Training Film — T7 (R7, the full exemplar build) — Production Log
+
+Title: Training Film — T7 (R7, the full exemplar build) — Production Log
+Source: ~/workspace/phext-walkthrough/production/TRAINING-T7-LOG.md
+Inscribed: 2026-11-11
+SHA-256: ed3b568415dcbc0c41aef180eee4fc0d68558f5b869f99e836b55e11f664c62b
+
+---
+# Training Film — T7 (R7, the full exemplar build) — Production Log
+
+**Film:** Phext Edit training film, Round 7 ("T7"). Built under
+`REVISION-BRIEF-T7.md` (Will's go-ahead 2026-11-11 18:22 CST:
+D1 = Option B, extend the length; all 25 rules; new script and new
+narration stem; §08 crop fix mandatory). Reference coordinate
+28.6.11/7.6.10/6.5.8.
+**Master:** `rough-cut-t7.mp4` — on aletheia-core at
+`~/phext-walkthrough-capture/r7/rough-cut-r7.mp4` and on this VM at
+`~/workspace/phext-walkthrough/production/rough-cut-t7.mp4`
+(byte-identical, SHA-256 verified both sides).
+**Served:** https://100.88.154.1:8448/rough-cut-t7.mp4 (tailnet,
+self-signed R4 cert as R4–R6; transient user unit `serve-t7-tls`;
+HEAD verified 200 with the right length, and a byte-range slice at
+offset 1,000,000 hash-matched to the master: c3af5384… — both checks
+run from the node against the tailnet address; a fetch from this VM
+through the egress proxy returned an empty reply, the same proxy
+quirk recorded for R4/R5/R6, so the node-side verification is the
+one on record. The unit is transient and won't survive a node
+reboot, same as R4–R6.)
+**Gate:** Gate 1 (Will's narration listen) still gates any release.
+Nothing posted anywhere.
+
+## The acceptance test — met, with the deviations below
+
+| Test | Target | Measured |
+|---|---|---|
+| Picture duration vs audio | within 0.4 s | **picture 469.450 s, audio 469.433 s — 0.017 s apart** |
+| Narration on its own picture | yes | **yes — coverage audit: all 9 units' voice spans inside their own picture windows, 0 boundary crossings (table below)** |
+| Picture-only tail | none | **none — last speech ends 447.05 s; what follows is §08's designed 22.38 s CTA hold** |
+| Frames / rate | constant 60 fps | **28,167 frames @ 60/1 constant (nominal 28,166; +1 across the 9 xfade joins, inside the established ±2 tolerance)** |
+| Length (D1) | ~6:47+ (407 s) | **469.4 s (7:49.4)** — longer than the brief's pre-slot-table estimate; every per-unit pacing rule below is met, so the length is the sum of compliant parts, not drift |
+| Loudness | −14 ±0.5 LUFS, TP ≤ −1.5 | **−14.2 LUFS integrated, −1.5 dBFS peak** (ebur128 on the muxed file; mastered WAV measured −14.22 LUFS / −1.96 dBTP pre-mux) |
+| Faststart | moov before mdat | **yes — moov @ byte 32, mdat @ 746,136** |
+
+Master: 129,978,645 bytes, SHA-256
+`b8c26ddac3af5feaa6f0ef4e16639dc81665c9b1403afd36ec56ee57e3ebe30d`.
+1920×1080 h264 + AAC 48 kHz. Picture: `seg/video-r7.mp4`
+SHA-256 `a8cae83207584f8e37c14ac78a4a5ff0d68636c3054cc75af790e691232c41e1`.
+Mix: `mix-r7.wav` SHA-256
+`8f015d9396feb6d7aa22aebd5e85e29b64b9649e996a52ffff833a19a8171db7`
+(pre-master −22.03 LUFS / −3.27 dBTP; record: `MIX-R7.md`).
+
+## Deviations and corrections, stated first
+
+1. **T7-25 FAILED on the first master built from these pieces, and
+   was fixed before delivery.** Frame grabs from the first master
+   (129,967,378 B, SHA-256 `46ac05c6…`, superseded and not
+   delivered) at push-in start (426.03 s), midpoint (447.73 s), and
+   end (469.40 s) all showed the CTA headline as "Find it. Change
+   it. Link it. Keep" — the "it." of "Keep it." off the right edge
+   at every point of the push-in. This is the R4/R5/R6 defect,
+   carried in the banked CTA stills. Root cause, in
+   `render-cta-r7.py`: the headline was drawn at Bookman 92 starting
+   at x=330; the four phrases measure 1,731 px, so the line ran to
+   x=2,061 on a 1,920 px canvas and "it." was clipped off-canvas
+   *before* the 0.86 downscale reframe — scaling cannot restore
+   clipped ink. The renderer's own margin check measured only the
+   ink that survived composition, so it reported a false PASS; two
+   further checks downstream (a coordinator's look at the card, and
+   this audit's first frame extraction) also missed it, because
+   each looked at numbers or at the downscaled frame without
+   reading the headline. Fix (`render-cta-r7-fix.py`, same art and
+   method otherwise): the headline is measured, centered (x0=94 at
+   the same 92 pt), and asserted inside the canvas at construction;
+   the ink check then measures real ink (final frame x 217..1703 —
+   ≥188 px of margin at the deepest zoom). The fixed source still
+   was read by eye ("Keep it." complete), the CTA chain
+   (cta-draw → cta-hold → §08 → slotfix → film join) was rebuilt
+   from the fixed stills with everything else banked untouched, the
+   film was re-mastered from the unchanged mix, and frames at
+   push-in start, midpoint, and end were extracted from the final
+   encode and read: the headline is complete at all three points.
+   **T7-25 passes on the delivered master, verified by eye on the
+   final encode** — the check whose absence let the first master
+   through. Lesson, for V8: a cropped-characters check must assert
+   against the composed line, never against surviving ink; and an
+   extracted frame is not an audited frame until someone reads it.
+2. **§05 swell +3.02 dB vs the ≤ +3.00 dB rule** (standing, from the
+   mix stage; carried verbatim from `MIX-R7.md`): "RESIDUAL
+   DEVIATION, stated plainly: §05 swell after the trim is +3.02 dB
+   — still 0.02 dB over the ≤ +3.00 dB rule. Both permitted passes
+   were used; per the brief the trim was not iterated further. The
+   remaining excess is at the measurement's own rounding edge
+   (values are reported to 0.01 dB), but as measured it does not
+   pass." (Before trim +3.38 dB; max cut applied 0.443 dB of the
+   0.8 dB cap; film 182.82–187.77 s. §05's integrated level stays in
+   family; section spread 0.39 dB before and after.)
+3. **Bed under voice, two measurement methods** (standing, from the
+   mix stage, re-measured at acceptance with identical results).
+   The brief's fixed-window method (narration vs ducked bed,
+   voice_start+1 s .. +9 s) reads: agenda 9.14, §01 13.45, §02
+   20.24, §03 **4.17**, §04 6.25, §05 8.24, §06 18.59, §07 17.59,
+   §08 12.96 dB — 4 of 9 below the ≥10 dB target (min §03 4.17,
+   median 12.96). A supplementary in-speech probe (longest
+   continuous speech span per unit) reads: agenda **8.93**, §01
+   21.55, §02 14.94, §03 19.93, §04 16.52, §05 15.58, §06 19.10,
+   §07 17.52, §08 19.09 dB — only the agenda stays below 10 dB
+   in-speech (min 8.93, median 17.52). Cross-checks reproduce the
+   mix stage's own probes (§03 97.5–103.0 s: 19.8 dB; §04
+   119.9–124.9 s: 9.67 dB). Cause, per the mix record: the mix
+   follows the brief exactly (R5's duck law unchanged — 0.05
+   threshold, 450 ms release), so this is a property of the law
+   meeting R7's prosody: the audit windows contain chunk-internal
+   pauses where the follower lets the bed rise before the next
+   phrase. Not re-litigated at acceptance; retuning the duck law
+   was mix-stage scope.
+4. **T7-14: six unmarked silences >0.8 s inside §06's travel
+   passage.** All 18 marked inter-chunk pauses are present on the
+   stem (chunk gaps in the timing record equal the marked list
+   exactly, 0.6 s each, §01 also 1.2 s; silencedetect aligns 12
+   exactly, the other 6 contained in longer detected silences of
+   1.12–1.21 s where a marked pause merges with an adjacent chunk-
+   internal gap). All three biggest-claim pauses measure ≥1.0 s
+   (§01: 1.2 s after "Nothing. It's still here."; §07 trailing
+   15.7167 s; §08 trailing 22.3813 s). But §06 chunk 3
+   (231.77–263.13 s) contains six silences of 0.83, 0.86, 1.12,
+   1.40, 0.85, 0.85 s (spans 235.93–236.76, 240.22–241.08,
+   246.12–247.24, 247.92–249.32, 250.07–250.93, 254.08–254.93) that
+   no `[pause]` token marks — Aria's pauses between the hop lines.
+   They are covered by hop SFX in the mix and silent on the stem.
+   A deviation under the rule's letter ("no unmarked silence
+   >0.8 s inside a section").
+5. **T7-24: the final beat's planned slow rate was not realized in
+   the recorded stem.** The script's slot plan called for §08's
+   last two sentences (~31 words) at ≤130 wpm across a ≥13.8 s
+   slot — planned as the slowest beat in the film. As recorded,
+   the last chunk (440.74–447.05 s, 23 words) runs at 218.6 wpm
+   chunk rate and the two-sentence beat at ≈190 wpm by speech
+   span. The rule's other clauses pass: the consequence sentence
+   ("Yours will fit in one file too — and if you keep that file,
+   your knowledge stays with you, wherever you keep it.") is the
+   last narration before the CTA card, nothing new follows it, and
+   it ends on the film's smallest image. Mitigations on the
+   record: §08 is the slowest section in the film by finished rate
+   (128.0 wpm, every other unit 140.0), and the consequence
+   sentence is followed by the film's longest designed silence —
+   the 22.38 s CTA hold. The script audit's strict-reading note
+   also stands: §08 contains spoken invitation lines before the
+   consequence sentence, so under the reading "last narration
+   before the spoken invitation" the beat in that position is an
+   instruction, not a consequence; the script was built to the
+   CTA-card reading, and both readings are recorded in
+   `narration-r7/SCRIPT-AUDIT.md` §11 for a ruling.
+6. **T7-09: §06's speech fill exceeds the 85% cap under the
+   speech-seconds definition.** Fill = speech seconds ÷ section
+   window, from the timing record: agenda 71.8%, §01 82.5%, §02
+   74.5%, §03 66.3%, §04 70.7%, §05 73.1%, **§06 89.6%**, §07
+   78.2%, §08 67.9% — all ≥50%; §06 alone over the cap, by 4.6
+   points. §06's overage is structural: its travel passage is long
+   chunks with few planted pauses (its speech-span rate, 153.5
+   wpm, is the second-slowest in the film), and its slot-basis
+   finished rate is exactly 140.0 wpm like every other unit; the
+   assembly record notes no unit had negative slack and no pause
+   was reduced. The rule's film-level clause passes outright:
+   24.6% of the runtime is silence and picture-only beats
+   (≥15% required).
+7. **Script-audit flags carried, not hidden** (from
+   `narration-r7/SCRIPT-AUDIT.md` §14): T7-10's strict reading is
+   partial — the mandated film order plays the agenda card before
+   §01, so the replaced picture lands in the first teaching
+   section rather than before any agenda; the two hook questions
+   are met in full. T7-20: "Wikipedia" (a proper name) and "fleet"
+   (its metaphor noun) are first spoken in the zoom window's
+   closing line — neither is a ladder concept; if the rule is
+   extended to proper names, that one line is the exception.
+   T7-05: "millions" has no countable restatement of the figure
+   itself (everything around it is counted on screen). The
+   agenda's largest-number pause job has no instance, because the
+   agenda speaks no quantity — stated there rather than padded.
+8. **T7-07 / T7-18 content density: carried from the plan, not
+   recounted at acceptance.** The thematic-unit inventory behind
+   the density clauses was fixed at planning (script audit §§2–3
+   carry the throughline and one-idea tables); no unit inventory
+   survives in the plan artifacts to recount against, and none was
+   invented at acceptance to make the rules pass. The measurable
+   finished-film correlates are in family and tabled below:
+   per-unit finished rates (140.0 wpm everywhere, §08 128.0),
+   fills (deviation 6), and §08 the film's slowest, least-filled
+   teaching section after §03.
+
+## How it was built (audit trail)
+
+- **Script:** `SCRIPT-T7.md` — R4's narration revised, not
+  rewritten: 1,067 words (whitespace count; ≈1,094 on R4's
+  tokenisation), 27 `[pause]` tokens, throughline "One small file
+  can hold, organize, connect, and share knowledge you keep."
+  Script-level audit: `narration-r7/SCRIPT-AUDIT.md`.
+- **Stem:** new Aria narration (the R4–R6 stem identity ends here,
+  per D1), chunked per the slot table at a 140.0 wpm slot rate
+  (§08 128.0), assembled by `assemble-r7.py` to
+  `narr-stem-r7.wav` / timing record `timing-r7.json`: 1,067 words,
+  353.88 s of speech, 11.4 s of marked pauses, finished rate
+  136.4 wpm over the 469.4333 s stem.
+- **Picture:** all sections re-rendered on aletheia-core under the
+  thermal law (starts ≤70 °C Tctl, gates between pieces) — banked
+  demo plates and renders reused per the brief; every section
+  slotfixed to its exact slot count from *decoded* frames (the R6
+  lesson), then joined with 0.4 s dissolves. Pre-join audit
+  (decoded frames vs slot): title 480/480, agenda 1311/1311,
+  §01 1774/1774, §02 1851/1851, §03 1594/1594, §04 2031/2031,
+  §05 2571/2571, §06 4551/4551, §07 6763/6763, §08 5456/5456 —
+  sum 28,382 − 9×24 dissolve frames = 28,166 nominal (28,167
+  decoded in the final encode, +1). One upstream correction
+  inside the join: the agenda body decoded 975 frames against a
+  977 nominal (its internal xfades again); the 2-frame gap was
+  absorbed by the assembler's clone-pad inside the agenda's tail
+  hold, as designed — no narration timing moves.
+- **Landings** (picture events placed against the stem, from the
+  join audit): §02 landing −0.004 s, §03 +0.013 s of the 1.867 s
+  targets; §06 hops −0.006 / −0.001 / −0.007 / +0.002 s (hop 3's
+  window stretched from 1.600 s of source to 1.867 s for
+  legibility, as ruled in the plan); §08 final hop (CTA hold
+  start) +0.010 s. All inside ±0.1 s.
+- **Mix:** narration + R5-recipe SFX re-locked to R7 timings
+  (32 events, 0 boundary crossings; the 8 recipe WAVs
+  hash-identical to the R5 set — `verify_r7.py`:
+  SFX_SET_COMPLETE=True) + the music bed under R5's duck law with
+  the §05 swell trim (deviation 2). Record: `MIX-R7.md`.
+- **Master:** loudnorm (I=−14 / TP=−2 / LRA=11, measured-params
+  linear) from the pre-master mix, muxed with faststart.
+- **Thermal note:** all encode/mix work ran on aletheia-core under
+  the 70/75 °C gate law. One sensor sample during the mix stage's
+  FFT trim passes spiked to 87.1 °C; the mix render itself was
+  held to a 70.0 °C start. No video work ran on this VM.
+
+## Coverage — narration inside its own picture, per unit
+
+Voice spans from the timing record, audited against the final
+master (stem spans; windows = slot table):
+
+| Unit | Picture window (s) | Voice span (s) | Crossings |
+|---|---|---|---|
+| Agenda | 7.60–29.45 | 9.66–25.96 | none |
+| §01 | 29.05–58.62 | 30.72–57.51 | none |
+| §02 | 58.22–89.07 | 61.44–85.63 | none |
+| §03 | 88.67–115.23 | 92.33–111.14 | none |
+| §04 | 114.83–148.68 | 118.88–144.01 | none |
+| §05 | 148.28–191.13 | 152.97–185.51 | none |
+| §06 | 190.73–266.58 | 193.97–263.13 | none |
+| §07 | 266.18–378.90 | 273.78–363.18 | none |
+| §08 | 378.50–469.43 | 384.10–447.05 | none |
+
+Total crossings: **0**. (Windows overlap by the 0.4 s dissolves, as
+in R4–R6.)
+
+## The 25 rules — audit table
+
+Verdicts from the final master unless marked [script] (script
+audit) or [mix] (mix record, re-measured at acceptance).
+
+| Rule | Verdict | Evidence |
+|---|---|---|
+| T7-01 hard floor | **pass** | No R4 defect reintroduced: 0 narration crossings; §07's back half sits inside its exact 6,763-frame slot (the R6 over-fill cannot recur — durations came from decoded frames); no picture-only tail beyond §08's designed hold; §08 card fully in frame (T7-25). |
+| T7-02 length / throughline | **pass** | 1,067 words; every unit inside its Option B band (agenda 51/40–60, §01 69/60–85, §02 72/60–85, §03 62/50–75, §04 79/65–95, §05 100/85–115, §06 177/145–185, §07 263/225–275, §08 194/150–210); throughline's four verbs each served, §08 lands on *keep* [script §2]. |
+| T7-03 one idea | **pass** | One new concept per section; a repeatable sentence tabled per unit [script §3]. §07's two mechanisms (slices, fingerprints) are means to its one idea, noted there. |
+| T7-04a solos complete | **pass** | Each demo runs solo to completion before the body builds on it; every concept's first spoken name lands after its solo picture segment opens (solos are separate picture segments at each section head: §02 3.58 s, §03 3.00 s, §04 3.57 s, §05 3.03 s, §06 3.52 s, §07 staged side-by-side + separation + comparison beats). |
+| T7-04b picture leads name ≥0.5 s | **pass** | By construction of the slot table (solo picture first, naming sentence inside/after) and verified on the stem: names land inside their solo spans, never before the picture. |
+| T7-04c entry/exit bridges | **pass** | Dissolve activity measured at all 9 joins on the final encode (760 scene-change events ≥0.02 across the joins); 0 narration crossings, so no freeze bridge was needed anywhere. |
+| T7-04d show before name | **pass** | First-mention table [script §5]: address, search, check, fences, link, slice, fingerprint all demonstrated before named; "coordinate" and "scroll" are never spoken. |
+| T7-04e image before concept | **pass** | 9/9 units open on a concrete image or anecdote [script §4]. |
+| T7-05 countable before abstract | **pass, one flag** | 24 articles counted on screen, nine numbers grouped, 53 links drawn thread by thread, one→town→world before "trillions" [script §6]. Flag: "millions" itself has no countable restatement (deviation 7). |
+| T7-06 hook rate exception | **pass** | §01 hook: 154.6 wpm on the speech-span basis, 140.0 on the slot basis, vs the ≈155 cap. §01's whole voice span (26.78 s) is shorter than the 30 s hook window, so no over-cap remainder exists. |
+| T7-07 content density | **carried** | Not recounted at acceptance — see deviation 8. |
+| T7-08 finished rate ≤145 | **pass** | Film 136.4 wpm; per-unit slot-basis rates 140.0 (agenda–§07), §08 128.0. |
+| T7-09 fills | **pass with deviation** | All units ≥50%; film-level structural silence/picture 24.6% ≥15%; §06 speech fill 89.6% > 85% cap (deviation 6). |
+| T7-10 opening | **pass, strict reading partial** | Replaced picture lands in §01 ("Nothing. It's still here."); both hook questions verbatim at §01's end [script §7]. Strict-reading note: the agenda card precedes §01 (deviation 7). |
+| T7-11 §02/§03 landings | **pass** | §02 −0.004 s, §03 +0.013 s against the 1.867 s targets (±0.1 s). |
+| T7-12 §06 hops | **pass** | Four hops at −0.006/−0.001/−0.007/+0.002 s; hop windows 1.867 s (hop 3 stretched from 1.600 s source, as ruled). |
+| T7-13 narration intelligibility | **pass** | Mix never quieter than narration-only at section level [mix]; bed-under-voice as tabled in deviation 3. |
+| T7-14 pauses | **deviation** | All 18 marked pauses present; all 3 biggest-claim pauses ≥1.0 s (§01 1.2 s; §07 15.7167 s; §08 22.3813 s); six unmarked >0.8 s silences inside §06 chunk 3 (deviation 4). |
+| T7-15 recaps | **pass** | Recap beats before §03, §05, §07 (extensions) and inside §08 (application), each ≤2 sentences; none owed before new-concept sections [script §12]. |
+| T7-16 one listener | **pass** | Crowd addresses: 0 (grep over the nine script files: "you all", "everyone", "viewers", "audience", "folks", "guys" — zero each); 9/9 units open with a first-beat address to one viewer [script §13]. |
+| T7-17 sound earns its place | **pass, one standing deviation** | 32 SFX events, each with a named visible cause [mix table]; 0 decorative. The 8 recipe WAVs are hash-identical to R5's set. The §05 swell is deviation 2. |
+| T7-18 §08 density fall | **carried** | Not recounted at acceptance — see deviation 8. Correlates: §08 finished rate 128.0 wpm (film's slowest), fill 67.9%. |
+| T7-19 bed continuity | **pass** | Section integrated levels within 0.39 dB of each other (≤ ±1.5 dB) before and after the swell trim [mix]. |
+| T7-20 scale in short clauses | **pass, one flag** | §07's scale passage is short clauses, one per step [script §9]; the passage rides one continuous zoom (single zoompan, no cuts). Flag: "Wikipedia"/"fleet" first spoken in the window's closing line (deviation 7). |
+| T7-21 one sustained image | **pass** | The settled city-versus-file wide holds through §07's close and its 15.7167 s trailing pause — the film's named sustained image; frame extracted from the final encode. |
+| T7-22 one fourth-wall break | **pass** | Exactly one: the §07 beat. From the final encode, its QR payloads decode at 354 s (8/8 recognized) and 360 s (7/7). The §07 river's payloads also decode (336 s: 10/10; 344 s: 9/9) — working links inside the fiction, not breaks. All six payload texts are the R6 set (three coordinates, edit.phext.io, Semper Aeq). |
+| T7-23 limits beat | **pass** | Present, three sentences, inside §08 after the opening possibilities and before the recap and invitation lines [script §10, with the placement reasoning recorded there]. |
+| T7-24 the close | **mixed** | Consequence sentence last before the CTA card; nothing new after it; smallest final image — pass. Final-beat rate ≤130 wpm — **fail** (deviation 5). Strict-reading note on the spoken invitation stands (deviation 5). |
+| T7-25 §08 crop | **pass (after fix)** | First master failed it; root cause, fix, and re-verification in deviation 1. Delivered master: headline complete at push-in start, midpoint, and end, read by eye from the final encode; fixed-still ink margins ≥188 px at deepest zoom. |
+
+## What Gate 1 is listening for
+
+The deviations that only ears can judge: whether §06's denser
+fill and its unmarked hop pauses play as pace or as rush (6, 4);
+whether the bed's rise in chunk-internal pauses is audible as
+breathing or as competition (3); whether §05's swell peak reads as
+emphasis (2); whether the close lands at its recorded pace given
+the 22.38 s of silence that follows it (5). The film is delivered
+for that listen only. Nothing is posted, and no V8 work starts,
+until Will rules.
+# Since November 1: A Catalog of Eleven Days 🔥
 
 Title: Since November 1: A Catalog of Eleven Days 🔥
 Source: ~/workspace/blog/since-november-1.html
