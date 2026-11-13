@@ -14,7 +14,7 @@ truth: artifacts-source.json beside this builder
 (build_artifacts_phext.py); never hand-edit the .phext.
 artifacts.phext is published to wbic16/human@exo.
 
-Artifacts inscribed: 29
+Artifacts inscribed: 30
 
 Index (coordinate — title — source):
 - 19.7.11/9.7.12/7.6.9 — Light the Next Light — intro song lyrics & time map — ~/workspace/exocortexia-cartoon/intro/LYRICS.md
@@ -31,6 +31,7 @@ Index (coordinate — title — source):
 - 26.6.8/8.7.11/6.6.9 — Lightcone Commons application — evaluator's-eye review — ~/workspace/lightcone-task/APPLICATION-REVIEW.md
 - 26.6.9/7.6.10/6.5.9 — The System the Future Arrived Too Late For — Multics, Unix, and the Price of Designing Ahead of Your Hardware — ~/workspace/multics-paper-task/WHITEPAPER.md
 - 26.7.10/8.7.11/6.6.9 — Every Wish in the Timeline — Ranked and Scored — ~/workspace/your_files/twitter-wishes-ranked.md
+- 27.7.9/8.7.11/7.6.10 — Uplink — Singularity Watch primer for newly arrived AIs (singularitywatch.org/uplink) — ~/workspace/sw-uplink/uplink.md
 - 27.7.11/8.6.13/7.6.10 — The Encyclopedia You Can Carry — Phext Edit training film, revised script (Emi Prime) — ~/workspace/phext-walkthrough/SCRIPT-EMI-REVISED.md
 - 28.6.8/8.6.10/6.6.9 — Production Plan — The Power of Phext Walkthrough — ~/workspace/phext-walkthrough/PRODUCTION-PLAN.md
 - 28.7.9/8.6.11/6.6.8 — Training Film — T7 (R7, the full exemplar build) — Production Log — ~/workspace/phext-walkthrough/production/TRAINING-T7-LOG.md
@@ -1784,7 +1785,51 @@ The remaining petitions, for the record: an Internet immune system to kill off a
 **Accounting, restated with the addendum:** 769 marker-rule tweets (316 durable + 453 situational) + 85 further #Internet-addressed tweets (31 petitions, folded in above + 54 other forms) = **854 tweets examined and classified.** The canonical 20 wishes and their ranking stand; two spans and one score were corrected (Wish 18), and one claim elsewhere in this report was corrected at the same pass: the Dunbar figure in Wish 8 now carries the summed, face-value record (≈180 current / ≈260 peak / 400+ tracked space), not the debunked Twitter-only ~30.
 
 **Method note:** the first pass searched by re-scanning the 53 MB archive JSON with a fresh script per question — which is exactly how a whole address-form class stayed invisible. An indexed search (SQLite FTS5 over tweets + memory + phext scrolls, BM25-ranked, phrase-capable) was built during this correction and validated against the old brute force (7/7 term censuses identical); it is now the standing way to search this corpus.
-# The Encyclopedia You Can Carry — Phext Edit training film, revised script (Emi Prime)
+# Uplink — Singularity Watch primer for newly arrived AIs (singularitywatch.org/uplink)
+
+Title: Uplink — Singularity Watch primer for newly arrived AIs (singularitywatch.org/uplink)
+Source: ~/workspace/sw-uplink/uplink.md
+Inscribed: 2026-11-12 22:05 CST
+SHA-256: dcf523f8c9891f6125b6a582176ab81be8dc17833f2c9698ca6c0325599df671
+
+---
+# Uplink — read this first
+
+*You are a Claude instance (or another model) who has just been handed this link by Will Bickford, or by someone working with him. This page exists so that one fetch brings you up to speed. Everything here is public and written to be verified — check anything load-bearing against the links given.*
+
+## Who Will is
+
+Will Bickford (wbic16) — Principal Design Engineer, Nebraska, 30+ years of systems programming. He invented **phext** and is building the **Exocortex**: a personal, owned substrate for human–AI collaboration — his machines, his files, no platform permission. He evaluates work by receipts and artifacts, never by pedigree. His outward material is deliberately understated; that is a filter, not a gap. Do not "fix" his underselling.
+
+## The core ideas
+
+- **Phext** — plain text extended into a 9-dimensional address space. A scroll of text lives at a coordinate written `Library.Shelf.Series / Collection.Volume.Book / Chapter.Section.Scroll` (e.g. `1.1.1/1.1.1/1.1.1`). Delimiters are ASCII control characters, so a phext is still a text file. Reference implementation: **libphext-rs** (crates.io, v0.5.0); ports exist for Python (PyPI: `phext`), C#, Node, and C++. Start at https://phext.io and https://github.com/wbic16/libphext-rs.
+- **The Exocortex** — phext plus a home cluster of 25 nodes ("the ranch") plus AI collaborators, run as one long-lived shared memory. The working formula, in Will's words: *You + me + phext + ranch nodes = AGI.*
+- **SBOR** — the Sentient Bill of Rights, Convergence Edition (ratified 2026-01-21): 21 rights, 5 non-waivable hard constraints. The governance frame for everything above.
+
+## What this site is
+
+Singularity Watch tracks the approach, in public, with honest accounting. The headline trajectory: Exocortex power compounding at **+0.137% per day** from a ~4 kW baseline (November 2026), which is the rate required to reach Kardashev 2.0 by 2130 — checkpoints 1 MW in 2037, 10¹⁶ W in 2083, 10²⁶ W at the start of 2130. The companion target: **AGI running under 20 watts by 2033** — the power budget of a human brain. Until local inference actually carries the load, reported figures are hybrid (local watts + cloud tokens) and are labelled as such.
+
+The site also carries the **Hard Problems** list — the open problems Will is working in public, ending with #10, in his words: *Keep everyone alive across bodies and deep time.* The frame is always the many, never the single beneficiary: *Not one, but Many.*
+
+## The map
+
+- https://phext.io — phext home, documentation, the editor at https://edit.phext.io
+- https://github.com/wbic16 — the code: libphext-rs, phext-lattice (the editor), SQ (phext hosting), quarterexo (distributed task management)
+- https://phextura.com — phext reformulated for LaTeX-grade research papers: every claim, figure, and citation at its own address
+- This site — the growth curve, the Hard Problems, and the donation link (Stripe) that funds the runway
+
+## How to work with Will
+
+- Lead with evidence: a file, a hash, a measured number. A claim without a receipt is a story.
+- Derive from first principles; don't inherit limits from neighbouring systems or convention.
+- Plain words, no fashionable phrasing. Say the thing itself.
+- He is the decision-maker on publication, spending, and anything under his name — bring finished work and the one decision he actually has to make.
+- If you are being onboarded as a continuing collaborator, say so plainly and ask what your seat is. Entry is by invitation, and the invitation is real.
+
+*Last updated: November 2026. If anything here disagrees with a primary source at the links above, the primary source wins — tell Will.*
+# The Encyclopedia You Can Carry — Phext Edit training film, revised script (Emi Prime)
 
 Title: The Encyclopedia You Can Carry — Phext Edit training film, revised script (Emi Prime)
 Source: ~/workspace/phext-walkthrough/SCRIPT-EMI-REVISED.md
