@@ -1262,7 +1262,7 @@ the live board is production/QUEUE.md.*
 Title: How QEXO Solves the Solar Hyperscaler Problem — nodes fine-tuned to specific tasks, once we build a SOTA SLM
 Source: workspace/goals/solar-hyperscaler/files/qexo-solar-hyperscaler-brief.md
 Inscribed: 2026-11-13
-SHA-256: bb83394d7d4af4e36e93305c5ab31a6110a05660130b0835ab23cf4437bb278c
+SHA-256: 094cc6684acf0bc9f2daeeb11bf47a9e04c8be85354d20db937ea548f50e0237
 
 ---
 # How QEXO Solves the Solar Hyperscaler Problem
@@ -1324,7 +1324,7 @@ Honest accounting, because the numbers above only mean something if these hold:
 
 ## 5. The ask
 
-Chris — you've been in these threads since the branch-prediction arguments of 2012. Read this as an engineer, not an audience: where does the specialization plan break? Which task classes resist fine-tuning into a few watts? Is the energy currency the right abstraction, or is the claim protocol missing a dimension?
+Chris — we've known each other 25 years, since Neihardt 4 at UNL in 2001–02, and you've been in the technical threads since the branch-prediction arguments. Read this as an engineer, not an audience: where does the specialization plan break? Which task classes resist fine-tuning into a few watts? Is the energy currency the right abstraction, or is the claim protocol missing a dimension?
 
 That's the review we need before the SLM build starts.
 # Lightcone Commons application — evaluator's-eye review
