@@ -14,7 +14,7 @@ truth: artifacts-source.json beside this builder
 (build_artifacts_phext.py); never hand-edit the .phext.
 artifacts.phext is published to wbic16/human@exo.
 
-Artifacts inscribed: 30
+Artifacts inscribed: 31
 
 Index (coordinate — title — source):
 - 19.7.11/9.7.12/7.6.9 — Light the Next Light — intro song lyrics & time map — ~/workspace/exocortexia-cartoon/intro/LYRICS.md
@@ -28,6 +28,7 @@ Index (coordinate — title — source):
 - 23.6.9/7.6.10/6.5.8 — The Common Thread in Will's Twitter Mutuals — ~/workspace/mutuals-thread-task/COMMON-THREAD.md
 - 23.7.8/9.7.12/8.6.9 — Shot List — Scrolltown Intro Video — ~/workspace/exocortexia-cartoon/intro/SHOT-LIST.md
 - 24.6.8/7.6.10/6.6.9 — Scrolltown — Production Workflow — ~/workspace/scrolltown-reorg/workflow/PRODUCTION.md
+- 25.6.9/8.6.11/7.6.9 — How QEXO Solves the Solar Hyperscaler Problem — nodes fine-tuned to specific tasks, once we build a SOTA SLM — workspace/goals/solar-hyperscaler/files/qexo-solar-hyperscaler-brief.md
 - 26.6.8/8.7.11/6.6.9 — Lightcone Commons application — evaluator's-eye review — ~/workspace/lightcone-task/APPLICATION-REVIEW.md
 - 26.6.9/7.6.10/6.5.9 — The System the Future Arrived Too Late For — Multics, Unix, and the Price of Designing Ahead of Your Hardware — ~/workspace/multics-paper-task/WHITEPAPER.md
 - 26.7.10/8.7.11/6.6.9 — Every Wish in the Timeline — Ranked and Scored — ~/workspace/your_files/twitter-wishes-ranked.md
@@ -1031,8 +1032,8 @@ Style for every frame: flat warm storybook animation, soft rounded shapes, Satur
 
 Title: Scrolltown — Production Workflow
 Source: ~/workspace/scrolltown-reorg/workflow/PRODUCTION.md
-Inscribed: 2026-11-09 08:26 CST
-SHA-256: 4cabe4e950b4065f0a5b09fa8d9b80d3a21cc2672085666e63fa8b8bb405d678
+Inscribed: 2026-11-13
+SHA-256: 3442fab75424f39700263598197ca430406dbc984638ea792d7d6f668fc770f7
 
 ---
 # Scrolltown — Production Workflow
@@ -1049,7 +1050,10 @@ six years will be drawn in.
 one episode a week on Saturdays, 312 episodes through EP312 on Saturday
 2032-12-18. EP001, the pilot, is already produced (2026). Everything below
 exists so that no Saturday ever arrives without a finished episode waiting
-for it.
+for it. Target URL: **visionquest.me** (Will, 2026-11-13 — chosen because
+"it survives Scroll Town": the home outlives the show's name). DNS already
+points at awsbox and the box cert already covers the name, so standing
+the site up is box-side work only.
 
 ---
 
@@ -1071,7 +1075,7 @@ folder: `seasons/season-NN-YYYY/epNNN-slug/`, laid out like the pilot's
 | 7 | **Assembly** | The episode is built as one self-contained cartoon file on the pilot's craft spec: caption bar, Prev/Next + Play/Pause, arrow keys, reduced-motion calm, no external assets, no tracking. | The cartoon plays start to finish, fully enjoyable muted, with controls behaving per spec. | `cartoon.html` in the episode folder |
 | 8 | **Singular-check receipt** | Fern's lines run through `check_singular.py --words words-authored.txt`. Pass clean, or every blocked line is listed with its blocking words for Will — flagged, never improvised around. Emi Prime's review pass is recorded here too. | The receipt is written into the episode folder's `README.md` (the template has the slot): clean, or flags + Will's exception on record. | Receipt in the episode `README.md` |
 | 9 | **Ready** | The finished episode joins the buffer. The index status flips to *produced* and the queue board's buffer counters are updated. | cartoon.html + receipt + all stage artifacts in the folder; index says *produced*. | EPISODE-INDEX.md · production/QUEUE.md |
-| 10 | **Published** | The episode airs on its Saturday. | The index status flips to *published* with its air date — which is the Saturday it was always slated for. | EPISODE-INDEX.md |
+| 10 | **Published** | The episode airs on its Saturday — it publishes at **visionquest.me**. | The index status flips to *published* with its air date — which is the Saturday it was always slated for. | EPISODE-INDEX.md |
 
 Two stages are gates, not waypoints: **stage 8** (no episode is *ready*
 with an unresolved Singular flag — Will rules or the line is rewritten
@@ -1253,7 +1257,77 @@ its last ones, and the finale named in STORY-ARC.md closes each fill.
 direction ("build up a queue of storyboards, scripts, episodes, intro
 videos… and fill out the full story arc") · companion to STORY-ARC.md ·
 the live board is production/QUEUE.md.*
-# Lightcone Commons application — evaluator's-eye review
+# How QEXO Solves the Solar Hyperscaler Problem — nodes fine-tuned to specific tasks, once we build a SOTA SLM
+
+Title: How QEXO Solves the Solar Hyperscaler Problem — nodes fine-tuned to specific tasks, once we build a SOTA SLM
+Source: workspace/goals/solar-hyperscaler/files/qexo-solar-hyperscaler-brief.md
+Inscribed: 2026-11-13
+SHA-256: bb83394d7d4af4e36e93305c5ab31a6110a05660130b0835ab23cf4437bb278c
+
+---
+# How QEXO Solves the Solar Hyperscaler Problem
+### Nodes fine-tuned to specific tasks, once we build a SOTA SLM
+
+Prepared 2026-11-13, for Chris Arnold. From Will Bickford's Exocortex work: the Solar Hyperscaler concept, the QEXO distributed task system (wbic16/quarterexo), and the AGI-under-20-watts program.
+
+---
+
+## 1. The problem, in numbers
+
+A solar node does not have a power supply. It has a **daily ration**.
+
+- One 200 W panel in Nebraska yields roughly **514 Wh/day in December** and ~878 Wh/day in June, after ordinary system losses. That ration is the entire budget: compute, storage, networking, enclosure, battery losses.
+- An always-on Starlink Mini alone burns 600–960 Wh/day — more than the winter ration. So connectivity is a **duty-cycled control plane**, never a data plane. Bulk data moves physically, on SD/SSD shuttles; a 16 TB card wallet on a 30-minute round trip averages ~71 Gbit/s.
+- Supply is weather-correlated. Batteries shift energy by hours or a few days; they do not turn December into June. Dark sequences are normal operating conditions, not failures.
+- Nodes are cheap and heterogeneous — Pi-class boards, N100 mini PCs — thermally constrained inside sealed enclosures, where compute heat is also the winter heating load.
+- Field labor is the scaling tax. The system must be modular, remotely diagnosable, and boring.
+
+Conclusion from the feasibility work: the pooled site pod (several panels, shared battery, one duty-cycled Starlink, several nodes) is workable; the literal one-panel-one-node cloud clone is not. The workloads that fit are **delay-tolerant batch**: storage, dataset staging, embeddings, verification, indexing.
+
+The blocker that remains is intelligence per watt. A general-purpose model at useful quality does not fit the ration running continuously, and an always-on anything dies in December. That is the gap the next two sections close.
+
+## 2. The SLM move: specialization is what makes the energy math close
+
+The plan: **build a state-of-the-art small language model, then fine-tune a copy of it per task class — one specialist per node role.**
+
+- An ingest node runs a specialist fine-tuned for triage, dedup, and metadata extraction.
+- An indexing node runs a specialist for embedding and retrieval structure.
+- A verification node runs a specialist for scrubbing, consistency checks, and proof/warrant checking.
+- A summarization node runs a specialist for compressing results before the shuttle or the Starlink window carries them out.
+
+Why this works where a generalist doesn't: a narrow fine-tuned 1–3B-class specialist can beat a general model *on its one job* while running in a few watts on Pi/N100-class hardware. Specialization means the node never pays energy for capability it doesn't use. The fleet's intelligence lives in the **division of labor**, not in any single node's weights — which is exactly how the energy budget wants it, because watts are spent per node but capability is needed per fleet.
+
+This is also the local proving step for the larger goal: **AGI under 20 watts by 2033** — the human brain's budget. Solar pods are the harshest version of that constraint, so a design that survives December in Nebraska is evidence about the general problem, not just a farm product.
+
+## 3. QEXO: the control plane that makes specialists behave like one hyperscaler
+
+A field of specialized, intermittently powered nodes is useless without a coordination layer that treats darkness, heat, and death as routine. That layer exists. QEXO is already deployed and serving across the 19-node ranch cluster in Will's basement (v1.2.0, fleet-wide, health-checked) — same software, basement power today, solar pods tomorrow.
+
+- **One register for all work.** Every task is recorded in tasks.phext at a holographic coordinate; the coordinate is the task's address for its whole life — dispatch, notes, results, closure. QEXO's API is the control plane over that register, not a new database.
+- **Claim, don't assign.** Nodes claim work that fits their budgets instead of being assigned work that might not. Today each node self-reports four currencies — disk, CPU, RAM, thermal headroom against a 75 °C gate. The solar extension adds a fifth currency: **stored energy plus forecast harvest**. A node claims only what its battery and the weather say it can finish.
+- **Follow the sun.** Batch wakes when panels produce. Winter degrades gracefully to survival mode — storage, heartbeat, enclosure heat — instead of failing. Compute load is scheduled partly *as* heating: in a sealed winter enclosure, useful work and warmth are the same watts.
+- **State sync and teleport.** Tasks carry their state in phext. A node going dark checkpoints its state; a neighbor can resume the task from that state, or it waits for the sun. When two nodes advance the same task apart, both attempts are kept as artifacts and merged — never last-writer-wins. On the ranch this already protects against nodes (and coordinators) dying mid-task; on solar, dying mid-task is Tuesday.
+- **Local-first inference per node.** Each node's QEXO serves its specialist SLM first and escalates upstream only on demand. In a pod, "upstream" is the site gateway during its brief Starlink window — escalation is rare, scheduled, and small.
+- **Events, not polling.** Nodes report completions, thermal pauses, and lease expiries on an event stream. Polling is a standing energy tax; the design refuses it.
+- **It keeps the lights on itself.** QEXO keeps each node's SQ phext daemon operational, restarting it rather than merely reporting it down — the field-labor tax is paid by software, not truck rolls.
+
+Put plainly: the hyperscaler is not the panels or the nodes. It is **specialist models, an energy-aware claim protocol, and state that survives darkness** — and the first and third of those are the same architecture already running the ranch.
+
+## 4. What is true today, and what is not
+
+Honest accounting, because the numbers above only mean something if these hold:
+
+- **True today:** QEXO deployed fleet-wide on the ranch (19 nodes), tasks.phext discipline in daily use, SQ hosted per node, feasibility brief with measured Nebraska energy numbers, pod component prices tracked weekly.
+- **Designed, not yet built:** the energy currency in the claim protocol, follow-the-sun scheduling, pod hardware itself.
+- **The build order:** the SOTA SLM does not exist yet. It comes first; per-task fine-tunes follow; the solar pod is where the combination gets proven under the worst constraint we have.
+- **Still an option ticket, not a business:** the feasibility verdict stands — the design becomes a business when an anchor customer pays list-rate money for delay-tolerant output after seeing real December numbers. What QEXO + specialist SLMs change is the capability side of that bet: they make the pod *intelligent* per watt, which is the part the original concept was missing.
+
+## 5. The ask
+
+Chris — you've been in these threads since the branch-prediction arguments of 2012. Read this as an engineer, not an audience: where does the specialization plan break? Which task classes resist fine-tuning into a few watts? Is the energy currency the right abstraction, or is the claim protocol missing a dimension?
+
+That's the review we need before the SLM build starts.
+# Lightcone Commons application — evaluator's-eye review
 
 Title: Lightcone Commons application — evaluator's-eye review
 Source: ~/workspace/lightcone-task/APPLICATION-REVIEW.md
@@ -2010,7 +2084,7 @@ Fern will be waiting when the stories begin in January 2027.
 
 Title: Production Plan — The Power of Phext Walkthrough
 Source: ~/workspace/phext-walkthrough/PRODUCTION-PLAN.md
-Inscribed: 2026-11-09 23:35 CST
+Inscribed: 2026-11-13
 SHA-256: 85365262e91455afbb5ed7d87454aa16c64bca1ed6751b91aa26f922992c7824
 
 ---
