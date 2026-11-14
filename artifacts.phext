@@ -14,7 +14,7 @@ truth: artifacts-source.json beside this builder
 (build_artifacts_phext.py); never hand-edit the .phext.
 artifacts.phext is published to wbic16/human@exo.
 
-Artifacts inscribed: 34
+Artifacts inscribed: 35
 
 Index (coordinate — title — source):
 - 19.7.11/9.7.12/7.6.9 — Light the Next Light — intro song lyrics & time map — ~/workspace/exocortexia-cartoon/intro/LYRICS.md
@@ -49,6 +49,7 @@ Index (coordinate — title — source):
 - 33.6.9/8.6.11/7.5.9 — Desktop SSO for Phext Notepad — the cookie paste is gone — ~/workspace/phext-notepad-perf/REPORT-DESKTOP-SSO.md
 - 34.6.7/7.6.11/6.5.10 — phextura — DESIGN — ~/workspace/phextura-design/DESIGN.md
 - 34.6.7/8.6.11/6.5.9 — Charon — Prompt 0: Produce the design spec (no code yet) — ~/workspace/charon-seed/prompts/00-spec.md
+- 36.6.7/7.6.11/6.6.9 — Depth Behind Every Cell — single-file HTML demo (3D phext for ASCII game maps, for @paleoludic) — workspace/paleoludic-demo/phext-map-demo.html
 - 36.6.7/7.6.11/7.5.9 — Phext Notepad — libphext v0.5.0 parity — ~/workspace/phext-notepad-perf/REPORT-V050-PARITY.md
 - 37.6.8/8.6.11/5.6.9 — phextura.com — landing page (index.html) — ~/workspace/phextura-landing/site/index.html
 # Light the Next Light — intro song lyrics & time map
@@ -6312,7 +6313,197 @@ weakening it.
 
 Do not scaffold the project, do not write code files, and do not choose a
 license. Deliverable: `DESIGN.md` only.
-# Phext Notepad — libphext v0.5.0 parity
+# Depth Behind Every Cell — single-file HTML demo (3D phext for ASCII game maps, for @paleoludic)
+
+Title: Depth Behind Every Cell — single-file HTML demo (3D phext for ASCII game maps, for @paleoludic)
+Source: workspace/paleoludic-demo/phext-map-demo.html
+Inscribed: 2026-11-14
+SHA-256: 789191978cc9a692f3180c917296318bb9678d6360954ca30b0c539a165da473
+
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Depth Behind Every Cell — a 3D phext demo</title>
+<style>
+  :root{
+    --ink:#1c1917; --paper:#faf7f1; --blue:#1d4ed8; --blue-soft:#dbeafe;
+    --line:#d6d0c4; --cell:#fffdf8; --cell-hi:#eff6ff; --dim:#6b655c;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);
+       font:16px/1.55 -apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;}
+  main{max-width:880px;margin:0 auto;padding:32px 20px 56px}
+  h1{font-size:28px;margin:0 0 6px}
+  h2{font-size:19px;margin:28px 0 8px}
+  .sub{color:var(--dim);margin:0 0 20px}
+  .quote{border-left:3px solid var(--blue);padding:6px 14px;margin:18px 0;
+         font-style:italic;background:#fff}
+  .layout{display:flex;gap:22px;flex-wrap:wrap;align-items:flex-start}
+  .mapwrap{background:#0b1220;border-radius:10px;padding:18px;display:inline-block}
+  .map{display:grid;grid-template-columns:repeat(12,34px);gap:3px}
+  .cell{width:34px;height:34px;display:flex;align-items:center;justify-content:center;
+        background:#16233c;color:#e8eefc;border-radius:5px;cursor:pointer;
+        font-family:ui-monospace,Menlo,Consolas,monospace;font-size:19px;
+        border:1px solid transparent;user-select:none}
+  .cell:hover{background:#1e3a5f}
+  .cell.sel{border-color:#7dd3fc;background:#1e40af}
+  .cell.deep{background:#27354f}
+  .panel{flex:1;min-width:280px;background:var(--cell);border:1px solid var(--line);
+         border-radius:10px;padding:16px 18px}
+  .panel h3{margin:0 0 4px;font-size:17px}
+  .addr{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:13px;color:var(--blue)}
+  .layer{margin:10px 0 0;padding:8px 10px;background:#f6f2e9;border-radius:6px}
+  .layer b{display:block;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--dim)}
+  .itemscroll{background:var(--blue-soft)}
+  code,pre{font-family:ui-monospace,Menlo,Consolas,monospace}
+  pre{background:#0b1220;color:#e8eefc;border-radius:10px;padding:16px;overflow-x:auto;font-size:14px}
+  button{background:var(--blue);color:#fff;border:0;border-radius:8px;
+         padding:10px 16px;font-size:15px;cursor:pointer}
+  button:disabled{background:#94a3b8;cursor:default}
+  .stat{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:14px}
+  .ok{color:#15803d;font-weight:600}
+  ul{padding-left:20px}
+  footer{margin-top:36px;color:var(--dim);font-size:14px}
+</style>
+</head>
+<body>
+<main>
+  <h1>Depth behind every cell</h1>
+  <p class="sub">A 3D phext demo for ASCII game maps — built for @paleoludic.</p>
+
+  <div class="quote">“I have maps in this game that are neat little ascii deals and now I need
+  to add more info to each cell and I'm annoyed by my options.”</div>
+
+  <p>The map does not change. It stays plain ASCII, one glyph per cell. Behind each cell sits an
+  address in a 3D phext:</p>
+
+  <pre>coordinate = 1.1.1 / 1.1.1 / X . Y . LAYER
+
+X, Y   — the cell's column and row (1-indexed, like the map)
+LAYER  — 1 terrain · 2 items · 3 state/history · 4+ whatever you
+         think of next year</pre>
+
+  <h2>Click a cell</h2>
+  <div class="layout">
+    <div class="mapwrap"><div class="map" id="map"></div></div>
+    <div class="panel" id="panel">
+      <h3>Cell inspector</h3>
+      <p class="sub">Cells with a lighter tile carry depth. Try the water at (4,3),
+      the oak at (4,6), or the chest at (10,3).</p>
+    </div>
+  </div>
+
+  <h2>The streamline, proven live</h2>
+  <p>Adding info to a cell is one write at one coordinate — no cell struct grows, no save
+  format changes, no other cell is touched. Invent a brand-new layer
+  (<i>sound</i>) for one cell, right now:</p>
+  <p><button id="growBtn">Add layer 4 (sound) to cell (5,5)</button></p>
+  <p class="stat" id="growStat">scrolls: 108 · the map renders from layer 1 only, so it cannot change.</p>
+
+  <h2>Why this works</h2>
+  <ul>
+    <li><b>Sparse by default.</b> Most cells carry only terrain. Depth exists only where a cell has something to say — this whole map, with all its depth, is about 1 KB of phext.</li>
+    <li><b>Items can have depth too.</b> When one item outgrows a line of text, open the next dimension: the chest at (10,3) holds its contents as their own scrolls one dimension deeper. No schema change — the address just gets longer.</li>
+    <li><b>It is all still text.</b> Every scroll is plain text at a coordinate. The map you render is layer 1 and nothing else.</li>
+  </ul>
+
+  <footer>Demo data is the real demo: the same map and layers as the runnable
+  <i>demo.py + map.phext</i> package (reference phext implementation, round-trip verified —
+  the phext renders back to this exact ASCII map). Built 2026-11-14 by Emise for
+  Will Bickford's Operation Salvage.</footer>
+</main>
+<script>
+const MAP = [
+  "############",
+  "#..........#",
+  "#..~~......#",
+  "#..~~..^...#",
+  "#......^^..#",
+  "#..T.......#",
+  "#..........#",
+  "############",
+];
+const GLYPH_NAMES = {"#":"wall",".":"floor","~":"water","^":"hills","T":"tree"};
+const DEPTH = {
+  "4,3": {1:"water — deep; a cold current runs north",
+          2:"a corked bottle, label long gone",
+          3:"froze solid last winter; thawed by the bell"},
+  "8,4": {1:"hills — wind-scoured ridge",
+          2:"a sentron, dormant",
+          3:"hums faintly when touched"},
+  "4,6": {1:"tree — an old oak, wider than the path",
+          2:"carved initials: A + L",
+          3:"someone has been here. recently."},
+  "9,6": {2:"a trapdoor, rusted shut",
+          3:"scratched — from below"},
+  "10,3":{2:"a chest, iron-bound",
+          3:"locked. the key is somewhere in this map."},
+};
+const CHEST = {1:"a brass key, teeth like a skyline",
+               2:"half a map. the other half is the prize."};
+const LAYER_NAMES = {1:"terrain",2:"items",3:"state / history",4:"sound"};
+let scrolls = 108, grown = false, selected = null;
+
+const mapEl = document.getElementById("map");
+const panel = document.getElementById("panel");
+
+function cellLayers(x,y){
+  const base = {"1": GLYPH_NAMES[MAP[y-1][x-1]]};
+  const extra = DEPTH[x+","+y] || {};
+  const merged = Object.assign({}, base, extra);
+  if (grown && x===5 && y===5) merged["4"] = "sound: dripping water, far off";
+  return merged;
+}
+function hasDepth(x,y){
+  const l = cellLayers(x,y);
+  return Object.keys(l).length > 1 || (x===10 && y===3);
+}
+function draw(){
+  mapEl.innerHTML = "";
+  for (let y=1; y<=MAP.length; y++){
+    for (let x=1; x<=MAP[0].length; x++){
+      const d = document.createElement("div");
+      d.className = "cell" + (hasDepth(x,y) ? " deep" : "") + (selected===x+","+y ? " sel" : "");
+      d.textContent = MAP[y-1][x-1];
+      d.title = "("+x+","+y+")";
+      d.onclick = () => { selected = x+","+y; draw(); inspect(x,y); };
+      mapEl.appendChild(d);
+    }
+  }
+}
+function inspect(x,y){
+  const layers = cellLayers(x,y);
+  let html = "<h3>Cell ("+x+","+y+")</h3>";
+  html += '<div class="addr">1.1.1 / 1.1.1 / '+x+"."+y+".LAYER</div>";
+  for (const k of Object.keys(layers).sort()){
+    html += '<div class="layer"><b>Layer '+k+" · "+(LAYER_NAMES[k]||"layer "+k)+"</b>"+layers[k]+"</div>";
+  }
+  if (x===10 && y===3){
+    for (const k of Object.keys(CHEST).sort()){
+      html += '<div class="layer itemscroll"><b>Item scroll '+k+' · one dimension deeper (Book 2)</b>'+CHEST[k]+"</div>";
+    }
+    html += '<p class="sub">The chest outgrew a line of text, so its contents opened the next dimension. Same map, longer address.</p>';
+  }
+  panel.innerHTML = html;
+}
+document.getElementById("growBtn").onclick = function(){
+  if (grown) return;
+  grown = true; scrolls = 109;
+  this.disabled = true; this.textContent = "Layer added";
+  document.getElementById("growStat").innerHTML =
+    'scrolls: 108 → <b>109</b> · scrolls changed: <b>1</b> · scrolls removed: <b>0</b> · ' +
+    'map render: <span class="ok">identical</span>. Click cell (5,5) to hear it.';
+  draw(); inspect(5,5); selected = "5,5"; draw(); inspect(5,5);
+};
+draw();
+inspect(10,3); selected = "10,3"; draw(); inspect(10,3);
+</script>
+</body>
+</html>
+# Phext Notepad — libphext v0.5.0 parity
 
 Title: Phext Notepad — libphext v0.5.0 parity
 Source: ~/workspace/phext-notepad-perf/REPORT-V050-PARITY.md
