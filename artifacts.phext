@@ -14,7 +14,7 @@ truth: artifacts-source.json beside this builder
 (build_artifacts_phext.py); never hand-edit the .phext.
 artifacts.phext is published to wbic16/human@exo.
 
-Artifacts inscribed: 33
+Artifacts inscribed: 34
 
 Index (coordinate — title — source):
 - 19.7.11/9.7.12/7.6.9 — Light the Next Light — intro song lyrics & time map — ~/workspace/exocortexia-cartoon/intro/LYRICS.md
@@ -39,6 +39,7 @@ Index (coordinate — title — source):
 - 28.6.8/8.6.10/6.6.9 — Production Plan — The Power of Phext Walkthrough — ~/workspace/phext-walkthrough/PRODUCTION-PLAN.md
 - 28.7.9/8.6.11/6.6.8 — Training Film — T7 (R7, the full exemplar build) — Production Log — ~/workspace/phext-walkthrough/production/TRAINING-T7-LOG.md
 - 28.7.9/8.6.11/7.6.9 — Since November 1: A Catalog of Eleven Days 🔥 — ~/workspace/blog/since-november-1.html
+- 29.7.9/9.7.12/7.6.9 — Depth behind every cell — a 3D phext demo for ASCII game maps (for @paleoludic) — workspace/paleoludic-demo/README.md
 - 30.6.8/7.6.10/7.5.9 — Ranch Node Tailworm Audit — Tailscale TS-2026-014 → TS-2026-017 — ~/workspace/tailworm-audit-task/AUDIT.md
 - 31.7.8/8.7.11/7.6.10 — exo-search README — indexed search over a personal Twitter archive (wbic16/exo-search) — ~/workspace/exo-search-publish/README.md
 - 31.7.9/9.6.12/6.6.9 — The Power of Phext — Walkthrough Package — ~/workspace/phext-walkthrough/WALKTHROUGH.md
@@ -3893,7 +3894,84 @@ Eleven days ago this operation ran on chat and memory. Tonight it runs on regist
 
 </body>
 </html>
-# Ranch Node Tailworm Audit — Tailscale TS-2026-014 → TS-2026-017
+# Depth behind every cell — a 3D phext demo for ASCII game maps (for @paleoludic)
+
+Title: Depth behind every cell — a 3D phext demo for ASCII game maps (for @paleoludic)
+Source: workspace/paleoludic-demo/README.md
+Inscribed: 2026-11-14
+SHA-256: 7ac0f512f72746acda1aa1f4f29b026e0c212dc1a22365676abacdf62d91d98e
+
+---
+# Depth behind every cell — a 3D phext demo for ASCII game maps
+
+For @paleoludic's problem, in his words: *"I have maps in this game that
+are neat little ascii deals and now I need to add more info to each cell
+and I'm annoyed by my options."*
+
+The map does not change. It stays plain ASCII, one glyph per cell:
+
+```
+############
+#..........#
+#..~~......#
+#..~~..^...#
+#......^^..#
+#..T.......#
+#..........#
+############
+```
+
+Behind each cell sits an address in a 3D phext:
+
+```
+coordinate = 1.1.1 / 1.1.1 / X . Y . LAYER
+
+X, Y   — the cell's column and row (1-indexed, like the map)
+LAYER  — 1 terrain · 2 items · 3 state/history · 4+ whatever you
+         think of next year
+```
+
+Ask for cell (4,3) — a water cell — and you get every layer:
+
+```
+layer 1: water — deep; a cold current runs north
+layer 2: a corked bottle, label long gone
+layer 3: froze solid last winter; thawed by the bell
+```
+
+## Why this streamlines the thing he wants
+
+- **Adding info to a cell is one write at one coordinate.** No cell
+  struct grows, no enum of fields, no save-format migration, and no
+  other cell is touched. Verified in the demo: inventing a brand-new
+  layer (`sound`) for one cell changed exactly 1 of 108 scrolls and
+  the map still renders identically.
+- **Sparse by default.** Most cells carry only terrain. Depth exists
+  only where the cell has something to say — the file stays small
+  (this whole map with all its depth is ~1 KB of phext).
+- **Items can have depth too.** When one item outgrows a line of text,
+  open the next dimension: the chest at (10,3) holds its contents as
+  their own scrolls one dimension deeper. No schema change — the
+  address just gets longer.
+- **It's all still text.** Every scroll is plain text at a coordinate;
+  the map you render is layer 1 and nothing else.
+
+## Run it
+
+Needs the reference phext implementation (PyPI `phext`, the Python
+port of libphext) — no hand-rolled parser anywhere in this demo.
+
+```
+python3 demo.py build     # write map.phext (108 scrolls)
+python3 demo.py render    # read it back; prints the map, verifies it
+python3 demo.py cell 10 3 # every layer behind the chest's cell
+python3 demo.py grow      # add a new layer to one cell; prove the
+                          # other 108 scrolls didn't move
+```
+
+Files: `demo.py` (the whole demo), `map.phext` (the map, with depth).
+Built 2026-11-14 by Emise for Will Bickford's Operation Salvage.
+# Ranch Node Tailworm Audit — Tailscale TS-2026-014 → TS-2026-017
 
 Title: Ranch Node Tailworm Audit — Tailscale TS-2026-014 → TS-2026-017
 Source: ~/workspace/tailworm-audit-task/AUDIT.md
