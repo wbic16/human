@@ -14,7 +14,7 @@ truth: artifacts-source.json beside this builder
 (build_artifacts_phext.py); never hand-edit the .phext.
 artifacts.phext is published to wbic16/human@exo.
 
-Artifacts inscribed: 43
+Artifacts inscribed: 44
 
 Index (coordinate — title — source):
 - 19.7.11/9.7.12/7.6.9 — Light the Next Light — intro song lyrics & time map — ~/workspace/exocortexia-cartoon/intro/LYRICS.md
@@ -41,6 +41,7 @@ Index (coordinate — title — source):
 - 27.7.8/8.6.11/6.6.9 — Wavelet 2 — Nov 8–14, 2026 (GPT Days 1123–1129): retroactive recap and certification — workspace/wavelets/WAVELET-2.md
 - 27.7.9/8.7.11/7.6.10 — Uplink — Singularity Watch primer for newly arrived AIs (singularitywatch.org/uplink) — ~/workspace/sw-uplink/uplink.md
 - 27.7.11/8.6.13/7.6.10 — The Encyclopedia You Can Carry — Phext Edit training film, revised script (Emi Prime) — ~/workspace/phext-walkthrough/SCRIPT-EMI-REVISED.md
+- 28.6.8/7.6.9/6.5.9 — Domain Migration Checklist — GoDaddy/Squarespace to NearlyFreeSpeech (2026-11-15) — workspace/your_files/domain-migration-checklist-2026-11-15.md
 - 28.6.8/8.6.10/6.6.9 — Production Plan — The Power of Phext Walkthrough — ~/workspace/phext-walkthrough/PRODUCTION-PLAN.md
 - 28.7.9/8.6.11/6.6.8 — Training Film — T7 (R7, the full exemplar build) — Production Log — ~/workspace/phext-walkthrough/production/TRAINING-T7-LOG.md
 - 28.7.9/8.6.11/7.6.9 — Since November 1: A Catalog of Eleven Days 🔥 — ~/workspace/blog/since-november-1.html
@@ -3050,7 +3051,199 @@ Fern will be waiting when the stories begin in January 2027.
 **The scroll is yours, neighbor.**
 
 *[End card: Find it. Change it. Keep it.]*
-# Production Plan — The Power of Phext Walkthrough
+# Domain Migration Checklist — GoDaddy/Squarespace to NearlyFreeSpeech (2026-11-15)
+
+Title: Domain Migration Checklist — GoDaddy/Squarespace to NearlyFreeSpeech (2026-11-15)
+Source: workspace/your_files/domain-migration-checklist-2026-11-15.md
+Inscribed: 2026-11-15
+SHA-256: d1fd3ad65fb8e74724ab1fe8add60dc14a51d788631ad049a39801d308ea75cb
+
+---
+# Domain Migration Checklist — Consolidate at NearlyFreeSpeech.NET
+
+Built 2026-11-15 (task 19.14.16/11.6.14/5.10.7) from the 2026-11-06 domain inventory
+(`domain-inventory-and-streamlining-2026-11-06.md`, §3 proposal) plus live checks run
+2026-11-15: NFSN's published TLD/price list and transfer FAQ, and NS records resolved
+from aletheia-core. This is a checklist only — nothing has been transferred or changed.
+
+## The two findings that shape this plan
+
+1. **NFSN does not register or transfer .io or .me.** Their domain page lists every TLD
+   they service (read in full 2026-11-15): the Big Six (com, org, net, info, name, biz),
+   ~15 alternative gTLDs, ~45 boutique gTLDs, and **us** — the only ccTLD. No `io` row,
+   no `me` row. Their FAQ states the policy: they offer only gTLDs plus the .us ccTLD,
+   and *all* two-letter TLDs are ccTLDs "even though some (like .me and .ai) are marketed
+   otherwise." → **phext.io and visionquest.me cannot move their registrations to NFSN.**
+   Everything else can. (Their DNS can still move — NFSN explicitly welcomes DNS/hosting
+   for domains registered elsewhere.)
+2. **Every migrating domain's DNS is hosted by its current registrar.** All seven
+   GoDaddy domains sit on `domaincontrol.com` nameservers (GoDaddy DNS); exectorox.com
+   sits on `googledomains.com` nameservers (legacy Google Domains DNS). NFSN's transfer
+   FAQ warns verbatim: *"If you are obtaining DNS from your old registrar, they might
+   remove your DNS service when they process your transfer."* → **For all 8 domains, the
+   zone must be replicated at NFSN and the nameservers switched BEFORE the registration
+   transfer.** A transfer with nameservers already pointing at NFSN cannot take DNS down.
+
+## Per-domain table
+
+| Domain | Registrar now | Expiry | TLD at NFSN | DNS host now (NS, verified 2026-11-15) | Live service? | 60-day lock? | Transfer cost → new expiry |
+|---|---|---|---|---|---|---|---|
+| exectorox.com | Squarespace | 2026-12-25 | ✅ com | Google Domains DNS (ns-cloud-d1–d4.googledomains.com) | No | Clear (at Squarespace since 2024-04-20) | $14.59 → 2027-12-25 |
+| sotafomo.com | GoDaddy | ~2027-08-22 | ✅ com | GoDaddy DNS (ns21/ns22.domaincontrol.com) | Yes | Clear (reg. 2024-08-22) | $14.59 → ~2028-08-22 |
+| quickfork.net | GoDaddy | ~2027-09-07 | ✅ net | GoDaddy DNS (ns49/ns50.domaincontrol.com) | Yes | Clear (reg. 2024-09-07) | $14.99 → ~2028-09-07 |
+| apertureshift.com | GoDaddy | ~2027-10-04 | ✅ com | GoDaddy DNS (ns05/ns06.domaincontrol.com) | Yes (telescope project) | Clear (reg. 2024-10-04) | $14.59 → ~2028-10-04 |
+| wishnode.net | GoDaddy | ~2027-10-22 | ✅ net | GoDaddy DNS (ns05/ns06.domaincontrol.com) | Yes (Exocortexia home) | Clear (reg. 2024-10-22) | $14.99 → ~2028-10-22 |
+| mirrorborn.us | GoDaddy | 2028-02-03 | ✅ us (transfer $10.99) | GoDaddy DNS (ns29/ns30.domaincontrol.com) | Yes (live host) | Clear (reg. 2026-02-03) | $10.99 → 2029-02-03 |
+| phext.io | GoDaddy | 2027-10-17 | ❌ **io — not offered** | GoDaddy DNS (ns41/ns42.domaincontrol.com) | Yes (edit.phext.io + services) | Clear (reg. 2023-10-16; renewed 2025-10-18) | **Registration cannot move.** DNS-only move (below) |
+| visionquest.me | GoDaddy | ~2027-10-14 | ❌ **me — not offered** | GoDaddy DNS (ns33/ns34.domaincontrol.com) | Yes | Clear (reg. 2024-10-14) | **Registration cannot move.** DNS-only move (below) |
+
+TLD verdicts for the record — .com ✅ ($14.59), .net ✅ ($14.99), .org ✅ ($15.89),
+.us ✅ ($10.99), .io ❌, .me ❌. Sources: nearlyfreespeech.net/services/domains and
+faq.nearlyfreespeech.net (Domain Registration), both read 2026-11-15.
+Already at NFSN, no action: bickfordllamaranch.com, hb-aeromotive.com, xedoloh.com,
+askthewill.com, singularitywatch.org, snakefalls.org, phextura.com, tluf.org.
+(phextura.com and tluf.org are inside their initial 60-day windows but already sit at
+NFSN — no move needed, nothing to do.)
+
+---
+
+## Step 0 — Before anything moves
+
+- [ ] **Fund the NFSN balance.** The six transfers below cost **$84.74** total
+      (14.59 + 14.59 + 14.99 + 14.59 + 14.99 + 10.99). Deposit enough that after the
+      transfers the balance still holds the **~$100 floor** — i.e. deposit ≈ **$200**.
+      Why: snakefalls.org's auto-renewal failed in Mar 2026 because the prepaid balance
+      was $5.97 against a $13.09 renewal. Consolidation puts every renewal on this one
+      balance; the floor is the mitigation.
+- [ ] **Confirm the registrant/admin email is reachable** — NFSN account email and the
+      admin-contact email on file at GoDaddy and Squarespace. Transfer approvals are
+      emailed to the admin contact; an unreachable or proxy-discarded address stalls or
+      kills a transfer (NFSN FAQ warns some privacy/proxy services auto-discard it).
+- [ ] At GoDaddy, note which domains have **domain privacy (Domains By Proxy)** on. If
+      the approval email can't reach you through it, disable privacy for that domain
+      before initiating its transfer.
+- [ ] **Do not change registrant name/email/org on any domain** from now until its
+      transfer completes — a change-of-registrant triggers a fresh 60-day transfer lock.
+
+## Phase 1 — exectorox.com (Squarespace → NFSN) — before 2026-12-04
+
+Register item #42's decision; this checklist's recommendation is **transfer**.
+Do **not** take Squarespace's offer to lock $15/yr by pre-renewing before 2026-12-04:
+an NFSN transfer is $14.59 at everyday pricing and adds a year (expiry → 2027-12-25).
+Waiting past 2026-12-06 also exposes the Dec 25 renewal to Squarespace's new $22 rate.
+Start by **2026-11-24** to leave slack for the ~5–7 day transfer window.
+
+- [ ] In NFSN's panel, add exectorox.com as an external domain and **replicate the full
+      DNS zone** from Google Domains DNS (copy every record — A, AAAA, CNAME, MX, TXT).
+- [ ] At Squarespace, change the nameservers to the NFSN nameservers shown on the
+      domain's NFSN DNS page.
+- [ ] Wait ≥48 hours (registry NS TTL), then verify from a ranch node:
+      `dig +short NS exectorox.com` shows NFSN, and the zone answers identically.
+- [ ] At Squarespace: unlock exectorox.com and copy its authorization (EPP) code.
+- [ ] In NFSN's Domains panel, place the transfer order ($14.59, drawn from balance).
+- [ ] Approve the transfer via the admin-contact email when it arrives.
+- [ ] After completion, verify in NFSN: registrar = NFSN, expiry = 2027-12-25,
+      nameservers unchanged (still NFSN). The Squarespace account is now empty and can
+      be closed — the Google Domains legacy is fully exited.
+
+## Phase 2 — the GoDaddy seven
+
+### 2A — One GoDaddy session: harvest everything
+
+Do this once, in a single sitting — one pass through the slow UI instead of seven:
+
+- [ ] For **all seven** domains (phext.io, mirrorborn.us, sotafomo.com, quickfork.net,
+      apertureshift.com, visionquest.me, wishnode.net): unlock the domain and copy its
+      authorization (EPP) code into a scratch note. Decline every renewal/protection
+      upsell offered along the way — the transfers add a year at NFSN pricing anyway.
+- [ ] Confirm the admin-contact email shown for each domain is one you can read
+      (Step 0). Note any with privacy/proxy on.
+
+### 2B — DNS first, per domain (all seven, plus this is the whole move for two of them)
+
+For each domain, in any order — but phext.io and mirrorborn.us get the extra
+verification lines because live services depend on them:
+
+- [ ] In NFSN's panel, add the domain as an external domain and **replicate the full
+      GoDaddy DNS zone** — every record, including all subdomain records
+      (for phext.io: edit.phext.io and every sibling service record; for
+      mirrorborn.us: the live host's records). Diff the NFSN zone against the GoDaddy
+      zone record by record before proceeding.
+- [ ] At GoDaddy, change the domain's nameservers to the NFSN nameservers.
+- [ ] Wait ≥48 hours, then verify from a ranch node: `dig +short NS <domain>` shows
+      NFSN nameservers, and spot-check the live endpoints answer as before
+      (phext.io: edit.phext.io loads; mirrorborn.us: host responds).
+- [ ] Only when both checks pass is the domain cleared for its registration transfer
+      (2C). For **phext.io and visionquest.me this phase is the finish line** — their
+      registrations stay at GoDaddy (TLD unsupported at NFSN), but their DNS is now
+      consolidated at NFSN and no longer hostage to a future registrar change.
+
+### 2C — Registration transfers, in this order
+
+Pathfinder first (proves the path on the lowest-stakes domain), live-critical last.
+Per domain: initiate in NFSN's Domains panel with the harvested EPP code → approve via
+admin-contact email → after completion verify registrar, new expiry (+1 year), and
+nameservers still NFSN.
+
+- [ ] **sotafomo.com** — $14.59 → expiry ~2028-08-22. Pathfinder: if anything in the
+      flow surprises, it surprises here.
+- [ ] **quickfork.net** — $14.99 → expiry ~2028-09-07.
+- [ ] **apertureshift.com** — $14.59 → expiry ~2028-10-04.
+- [ ] **wishnode.net** — $14.99 → expiry ~2028-10-22.
+- [ ] **mirrorborn.us** — $10.99 → expiry 2029-02-03. Only after its 2B verification
+      lines are checked. Note: .us does not support private registration at NFSN
+      (their FAQ: .us is the one offered TLD without privacy support) — registrant
+      details are public on .us regardless of registrar; no action, just known.
+- [ ] **phext.io / visionquest.me** — no transfer. Confirm GoDaddy **auto-renew stays
+      ON** for both (phext.io renews Oct 2027 at $77.99/yr — expensive, but it's the
+      flagship and there is no NFSN path for .io; revisit only if NFSN ever adds .io
+      or you choose a different .io-capable registrar as a deliberate exception).
+
+### 2D — Close-out
+
+- [ ] Verify all 14 NFSN-held domains in one panel pass: registrar, expiry, auto-renew
+      via balance, nameservers.
+- [ ] Confirm the NFSN balance is back above the $100 floor after all transfer draws;
+      top up if not.
+- [ ] GoDaddy account now holds only phext.io + visionquest.me registrations, both on
+      NFSN DNS. Nothing else remains to babysit there.
+
+---
+
+## Risks and standing cautions
+
+- **Prepaid-balance concentration (the known NFSN failure mode).** Every renewal now
+  draws on one prepaid balance, and NFSN auto-renewal fails silently if the balance is
+  short — it already happened once (snakefalls.org, Mar 2026, $5.97 vs $13.09; the
+  domain survived only because its paid term ran to 2027). Mitigations: the ~$100 floor
+  (Step 0 / 2D), and treat low-balance warnings as action items, not noise.
+- **A transfer is not a DNS move.** Registration transfer with nameservers unchanged
+  causes no DNS downtime — which is exactly why Phase 2B switches nameservers *first*,
+  as its own verified step: after 2B, the old registrar's DNS is out of the path and
+  its "we may remove your DNS when you transfer" risk is gone.
+- **Never bundle a DNS move into a transfer window for a live property.** 2B and 2C are
+  separate steps separated by a ≥48-hour verified soak. For phext.io and mirrorborn.us,
+  do not start 2C (or any further change) while a 2B nameserver switch is still
+  propagating.
+- **60-day locks cut both ways.** Every domain above is clear of its registration
+  lock today (oldest 2023, newest Feb 2026). After each transfer, that domain cannot
+  transfer again for 60 days, and a registrant-contact change would lock it again —
+  hence Step 0's "change nothing about the registrant mid-flight" rule.
+- **GoDaddy friction is front-loaded, once.** Unlocking seven domains in one session
+  (2A) is the only extended exposure to the slow UI and its upsell screens. Everything
+  after that happens in NFSN's panel and your inbox.
+- **What stays exposed:** phext.io remains a GoDaddy registration at $77.99/yr — more
+  than the rest of the portfolio's NFSN renewals combined — because .io cannot move to
+  NFSN. That's a known, accepted residue of the consolidation, not an oversight; its
+  DNS is consolidated even though its registration is not.
+
+## Evidence
+
+- Inventory, prices, expiry and registration dates: `domain-inventory-and-streamlining-2026-11-06.md` (Gmail-notice-derived, 2026-11-06).
+- TLD support + transfer prices: https://www.nearlyfreespeech.net/services/domains — read in full 2026-11-15 (228 lines; com/org/net/info/name/biz, alternatives incl. us, ~45 boutique gTLDs; no io, no me).
+- Transfer mechanics, DNS-removal warning, proxy-email warning, .us privacy note: https://faq.nearlyfreespeech.net — Domain Registration section, read 2026-11-15.
+- Nameservers: `dig +short NS` for all 8 domains from aletheia-core, 2026-11-15 (never from the Muse VM — its resolver proves nothing).
+# Production Plan — The Power of Phext Walkthrough
 
 Title: Production Plan — The Power of Phext Walkthrough
 Source: ~/workspace/phext-walkthrough/PRODUCTION-PLAN.md
