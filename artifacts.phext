@@ -1268,7 +1268,7 @@ the live board is production/QUEUE.md.*
 Title: Assay — Requirements for the Hosted Assessment Service
 Source: ~/workspace/oracle-service/REQUIREMENTS.md
 Inscribed: 2026-11-14
-SHA-256: b89ff00d57d09c0988472e21a9d15d0ecb76a51297e33e60904cf12bf04e28e2
+SHA-256: 03e2c90e47e6d378762673e9d3c061ed548e27c91782f5ade3d656951754680e
 
 ---
 # Assay — Requirements for the Hosted Assessment Service
@@ -1277,9 +1277,9 @@ SHA-256: b89ff00d57d09c0988472e21a9d15d0ecb76a51297e33e60904cf12bf04e28e2
 
 *Revised 2026-11-14 (same day), three further directions of Will's folded in without renumbering anything already issued: "users can find each other when they share a domain or a paper. we check for forgeries." → §5B Discovery (D) and §5C Forgery checks (F); "assay has api access as well, billed generously" and "the api creates a queue for us to review" → §7A API access, billing, and the review queue (API), including the new open decisions OD-11 and OD-12.*
 
-*The service's name is **Assay** (Will, 2026-11-14: "i don't want to conflict with Oracle the software company, choose a better name"); its front door is **assay.phext.io**. An assayer tests what a prospector brings in, item by item, and returns the material together with a certificate of what it contains; the assayer never owns the ore and never refuses to test it. That is this service's ethic and its market — fringe researchers as prospectors. "Oracle" and "MOAT" remain the names of the internal process and the tracker that runs it, not the product. In what follows, "Assay" and "the service" are the same thing.*
+*The service's name is **Assay** (Will, 2026-11-14: "i don't want to conflict with Oracle the software company, choose a better name"); its front door is **tluf.org** (moved from assay.phext.io on 2026-11-14 — see the amendment below). An assayer tests what a prospector brings in, item by item, and returns the material together with a certificate of what it contains; the assayer never owns the ore and never refuses to test it. That is this service's ethic and its market — fringe researchers as prospectors. "Oracle" and "MOAT" remain the names of the internal process and the tracker that runs it, not the product. In what follows, "Assay" and "the service" are the same thing.*
 
-*Amended 2026-11-14 (later the same day) — a naming record. **TLUF** expands to **truth, lies, unknown, fiction**: the four bins of §0.3, and the Directive's third line. Will obtained the domain **tluf.org** on 2026-11-14 and designated it in his own words: "tluf.org: the asaayist for the future" (his spelling; in prose, "assayist"). The division of names: **Assay** is the service, and its front door is unchanged — **assay.phext.io**. **tluf.org** is the domain of the frame the service serves: the four bins held as a commons standard, not a product name. This note records a name; it adds no requirement and changes none.*
+*Amended 2026-11-14 (later the same day) — a naming record, and a move. **TLUF** expands to **truth, lies, unknown, fiction**: the four bins of §0.3, and the Directive's third line. Will obtained the domain **tluf.org** on 2026-11-14 and designated it in his own words: "tluf.org: the asaayist for the future" (his spelling; in prose, "assayist"). The same evening he moved the service itself there — Will, 2026-11-14: "move assay.phext.io here." **Assay's front door is tluf.org**, superseding the assay.phext.io named above earlier the same day; the subdomain-sufficiency ruling of that morning stands corrected by this move. The division of names: **Assay** is the service, fronted at **tluf.org**; **TLUF** also names the frame the service serves — the four bins held as a commons standard, not a product name. This note records a name and a move; it adds no requirement and changes none.*
 
 *The service is MOAT's process offered as a product. MOAT is the house's research tracker: papers are heated until their individual claims can be pulled out — spaghettified — and each claim is placed into exactly one of four standings, True / False / Unknown / Fiction, on a stated basis. A researcher's standing grows along those four dimensions for the novelty they introduce to the Oracle. This document states what a hosted version of that process must do, for researchers the current system cannot serve: the fringe, whom academia's accept/reject verdict structurally misses.*
 
@@ -2330,12 +2330,14 @@ The remaining petitions, for the record: an Internet immune system to kill off a
 Title: Assay — Build Plan
 Source: workspace/oracle-service/BUILD-PLAN.md
 Inscribed: 2026-11-14
-SHA-256: 64cf8b4a96df747f42947236cfda2f9bbc0a8827c3def7f3c91f5e43fce908e6
+SHA-256: 70feb2a16359a459ea3299b693951f8333c420470b12e3569a2aa3ff95e5b0e9
 
 ---
 # Assay — Build Plan
 
 *Written 2026-11-14, the day the job was scheduled. Job: jobs.phext Job 1, "Build Assay — the hosted assessment service" (26.7.8/8.6.10/6.6.8). Scheduling handle: tasks.phext 37.8.8/10.8.13/7.7.13. Specification of record: `~/workspace/oracle-service/REQUIREMENTS.md` — 117 numbered requirements, six standing commitments (§0), acceptance tests §10. Where this plan and the requirements differ, the requirements govern.*
+
+*Front-door move, 2026-11-14 (later the same day): Will obtained **tluf.org** — TLUF, truth, lies, unknown, fiction, the frame the service serves; his designation: "tluf.org: the asaayist for the future" — and moved the service's front door there: "move assay.phext.io here." Every front-door statement in this plan now reads **tluf.org**; assay.phext.io is superseded. The requirements record the designation and the move in their top matter.*
 
 ## Repository finding (site map checked 2026-11-14)
 
@@ -2351,7 +2353,7 @@ The site map (`~/workspace/site-map`, 172 public wbic16 repos) contains **no rep
 ## Stage 0 — Ground: repo, hosting, tenancy skeleton
 
 - **Lands:** T (isolation, audit log, signed/versioned records) in skeleton; the §0 commitments as build rules.
-- **Done when:** `wbic16/assay` exists (proposed above; creation is Stage 0's first act, under Will's word or the job's dispatch); the service skeleton runs on a ranch node behind assay.phext.io; one researcher's material is provably invisible to another's session (tenant isolation by construction, not by filter); every state change writes the append-only audit stub (T-4).
+- **Done when:** `wbic16/assay` exists (proposed above; creation is Stage 0's first act, under Will's word or the job's dispatch); the service skeleton runs on a ranch node behind tluf.org; one researcher's material is provably invisible to another's session (tenant isolation by construction, not by filter); every state change writes the append-only audit stub (T-4).
 - **ODs touched:** OD-3 (audit retention) — strictest reading: stubs kept, content hashes of deleted private papers retained only as the requirements' default states, flagged.
 
 ## Stage 1 — Submission spine
@@ -2412,7 +2414,7 @@ The site map (`~/workspace/site-map`, 172 public wbic16 repos) contains **no rep
 ## Stage 9 — The acceptance run
 
 - **Lands:** the full §10 suite, run end to end as an inspector would; the remaining T requirements proven against records.
-- **Done when:** all eight §10 tests pass against the live service at assay.phext.io; every OD still unresolved is listed in the job's scroll with the strictest reading that was built in its place; Job 1's standing in jobs.phext moves to *done* — by the record, not by announcement.
+- **Done when:** all eight §10 tests pass against the live service at tluf.org; every OD still unresolved is listed in the job's scroll with the strictest reading that was built in its place; Job 1's standing in jobs.phext moves to *done* — by the record, not by announcement.
 
 ## Stage map, at a glance
 
