@@ -14,7 +14,7 @@ truth: artifacts-source.json beside this builder
 (build_artifacts_phext.py); never hand-edit the .phext.
 artifacts.phext is published to wbic16/human@exo.
 
-Artifacts inscribed: 39
+Artifacts inscribed: 40
 
 Index (coordinate — title — source):
 - 19.7.11/9.7.12/7.6.9 — Light the Next Light — intro song lyrics & time map — ~/workspace/exocortexia-cartoon/intro/LYRICS.md
@@ -28,6 +28,7 @@ Index (coordinate — title — source):
 - 23.6.9/7.6.10/6.5.8 — The Common Thread in Will's Twitter Mutuals — ~/workspace/mutuals-thread-task/COMMON-THREAD.md
 - 23.7.8/9.7.12/8.6.9 — Shot List — Scrolltown Intro Video — ~/workspace/exocortexia-cartoon/intro/SHOT-LIST.md
 - 24.6.8/7.6.10/6.6.9 — Scrolltown — Production Workflow — ~/workspace/scrolltown-reorg/workflow/PRODUCTION.md
+- 24.6.10/7.6.10/6.5.9 — Tick/Tock Ratcheting Cadence — PROPOSAL (DRAFT) — workspace/wavelets/TICK-TOCK-CADENCE-PROPOSAL.md
 - 25.6.8/7.6.10/6.5.9 — Assay — Requirements for the Hosted Assessment Service — ~/workspace/oracle-service/REQUIREMENTS.md
 - 25.6.8/8.6.10/6.6.9 — The Research Oracle: a reading process that measures its own foresight, and the audit that found its headline was an artifact — workspace/moat-paper/the-research-oracle.md
 - 25.6.9/8.6.11/7.6.9 — How QEXO Solves the Solar Hyperscaler Problem — nodes fine-tuned to specific tasks, once we build a SOTA SLM — workspace/goals/solar-hyperscaler/files/qexo-solar-hyperscaler-brief.md
@@ -1265,6 +1266,88 @@ its last ones, and the finale named in STORY-ARC.md closes each fill.
 direction ("build up a queue of storyboards, scripts, episodes, intro
 videos… and fill out the full story arc") · companion to STORY-ARC.md ·
 the live board is production/QUEUE.md.*
+# Tick/Tock Ratcheting Cadence — PROPOSAL (DRAFT)
+
+Title: Tick/Tock Ratcheting Cadence — PROPOSAL (DRAFT)
+Source: workspace/wavelets/TICK-TOCK-CADENCE-PROPOSAL.md
+Inscribed: 2026-11-15
+SHA-256: aef771666f1668613f1213b36c47d09a7e9d60b03c929e979f7945f40cb7dd91
+
+---
+# Tick/Tock Ratcheting Cadence — PROPOSAL (DRAFT)
+
+**Status: DRAFT — proposed 2026-11-15 (Wavelet 3, GPT Day 1130), at Will's direction: "let's focus almost entirely on planning and streamlining this week — we need to establish a tick/tock ratcheting cadence to keep our ramp running for 100 years." Nothing in this document is decided. Will ratifies or amends; until he does, this is a proposal, not a rule.**
+
+## 1. The ramp this cadence has to keep running
+
+The cadence exists to serve a measured ramp, not to decorate one. The numbers it must sustain, all from the record:
+
+- **The doubling floor:** throughput doubles every 6 months — +0.3805%/day, 4×/year, no days off (Will, 2026-11-15). The daily gain is bought by tending the software garden; an untended day compounds negatively — drift is the default, the ramp is the exception that has to be re-earned daily.
+- **The measured base:** Wavelets 1–2 (Nov 1–14) produced 269,022 net lines of code in 84 of Will's steering hours — ≈3,202 net lines per steering hour, 256× the pre-AGI industry rate of 100 well-tested lines/day like-for-like. The industry is assumed to run the same acceleration curve, time-shifted behind us; the lead is a time shift, not a permanent gap.
+- **The steering goal:** ≈270K net lines/week demonstrated at full ~84-hour steering; the goal is that number on **20 hours/week** — 13,500 net lines per steering hour, ≈4.2× the current rate — with every gain coming from the machinery (latency, parallelism, orchestration), never from more Will-hours. Then re-evaluate.
+- **The horizon:** 100 years, 2026–2126 — ≈5,200 wavelets, ≈2,600 tick/tock pairs, GPT Day ≈37,600 at the far end. The century sits inside Will's larger frames: Kardashev 2.0 by 2130 (+0.137%/day from the ranch baseline), Phext, Inc. planned at 2,500 people by 2033 generating 32B lines/hour at the same 4×/year growth, and the 6-billion-year staying horizon behind all of it.
+
+A cadence that has to run for a century cannot depend on any participant's memory, stamina, or lifetime — including Will's and including Emise's. It has to live in the record and be executable by whoever or whatever picks the record up. That is why the continuity medium is the phext corpus (tasks, skills, artifacts, the self-selections), why Phext, Inc. is designed 0-degree and meta-human from the start, and why this proposal is written to be inscribed, not remembered.
+
+## 2. The proposed cycle
+
+The unit is the existing wavelet: one week, Sunday–Saturday, counted in GPT Days, closed by the weekly recap. The proposal alternates the wavelets' *kind*:
+
+**TICK — advance.** A tick wavelet builds against a target set before it opens. It is measured in the four standing series (lines of phext, lines of code, Will's active hours, tokens spent). Its recap re-levels the singularity-time unit from what the machinery actually did. Wavelets 1 and 2 were ticks in everything but name: set loose, run hot (41 and 43 steering hours), shipped, and measured after the fact.
+
+**TOCK — streamline.** A tock wavelet produces little new surface and locks in what the ticks produced:
+
+- certify the previous pair — write the tick's (and its own predecessor's) wavelet documents from the durable record and inscribe them;
+- reconcile every register — the Waiting-on-Will register, tasks.phext, the tracking store — against live surfaces, closing what is done and correcting what is stale;
+- prune — run the repo-pruning check (untouched >1 year), clear task-specific temp, retire what the record shows is dead;
+- repair process drift — the lessons review, sticking checks on recent process changes, skills index verified CURRENT;
+- inspect the failure-mode gauges (Section 4);
+- plan the next pair — set the next tick's target and the next tock's repair list, from the durable list, oldest first.
+
+**Wavelet 3 (Nov 15–21) is the first tock under this proposal** — which is exactly the shape Will gave it tonight: focus almost entirely on planning and streamlining. Its first tock acts already happened in its opening hours: Wavelets 1 and 2 were documented and retroactively certified, the repo-pruning check was set up, and this proposal was drafted. (Wavelet 3 also carries a previously set 70K net-line target from before the tick/tock distinction existed; whether that target stands in a tock is Open Question 2.)
+
+The pair, not the week, is the cadence's heartbeat: tick spends, tock locks. A tick without its tock leaves gains unrecorded and drift unrepaired; a tock without a preceding tick has nothing to lock.
+
+## 3. The ratchet — what physically locks each cycle
+
+A ratchet tooth is a place where a gain is written into a durable, verifiable form that later work is checked against — so slipping back requires visibly breaking the record, not just forgetting. The teeth below all exist in current practice; the proposal is to make the tock verify each of them, every pair:
+
+1. **Certified wavelet documents, inscribed.** Each wavelet's record is written from the durable sources (gaps named, estimates labeled), certified, and inscribed in artifacts.phext at its own holographic coordinate, pushed to wbic16/human@exo and hash-verified. Done for Wavelets 1–2 at 27.6.8/7.6.10/6.5.9 and 27.7.8/8.6.11/6.6.9.
+2. **The skills index.** Every taught process becomes a skill under ~/workspace/custom-skills/, placed in skills.phext (rebuilt and --check CURRENT in the same session), synced to wbic16/emise-tools@exo, with an hourly guard cron that rebuilds and corrects drift. A process that lives only in chat is a defect.
+3. **Standing rules, etched.** Durable rulings land in AGENTS.md; the anchor-class lines of SOUL.md (line 12 the watchdog floor, line 13 the commandment, line 14 the no-idle meta-rule) are regenerated first and exactly by every dream pass, never dropped or reordered.
+4. **The durable task list.** Every task sits in tasks.phext at its Singular coordinate with notes and results appended at that coordinate; work is selected from the list, never from conversation recency; a task closes only when its own record is re-read and every leg is done or converted into a tracked entry of its own.
+5. **Registers reconciled.** The Waiting-on-Will register (permanent, monotonic numbers) and the tracking store are swept nightly; the todo.phext mirror is rebuilt and verified; stale flags are defects, not paperwork.
+6. **Log + calculate, never summarize.** Registers log atoms; every rollup is calculated from the atoms by the builder (accounting.phext for productivity, costs.phext for Will-Time at 2130 rates, ticks annotated at delivery). No hand-written aggregate can drift from its log because none is permitted to exist.
+7. **Baselines re-measured, unit re-leveled.** The git-telemetry baseline is re-extracted from the repos themselves, and each recap restates the singularity-time unit and the industry multiplier from the measured series — never carried forward by habit. (The first re-calibration caught an 8× unit error the same night it was made; that is the tooth working.)
+8. **Release discipline.** Every branch gets a PR against exo in its session; merges into Rust tooling queue a release task in the same session; crates publish only from a tagged tree merged to exo. Shipped work cannot quietly un-ship.
+9. **Sticking checks.** Every process change is verified the session it is made — presence, machinery, first occasion — so a rule that failed to land is caught while its author still remembers intending it.
+10. **Redundant state.** The phext corpus is pushed to wbic16/human@exo and backed up on ranch machines; continuity does not depend on GitHub, on this VM, or on any single node.
+
+## 4. Failure modes the cadence must survive — and where the tock inspects them
+
+A century is long enough for every component to be replaced several times. The tock is where each known failure mode gets a scheduled inspection instead of an eventual surprise:
+
+- **Substrate churn.** This VM is replaced roughly every 2 hours and kills everything on it (124 boot changes in the deploy-study ledger); SQ daemons died with it until SQ moved to ranch nodes; providers and models turn over on their own clocks (the substrate reset cliffs: Claude Wed 22:00, Grok Thu 20:23, Muse Fri 16:10); Theia has been offline since Nov 9 on a billing condition, her seat held. *Tock inspection:* substrate inventory and cliff calendar re-verified; nothing load-bearing lives only on a mortal substrate; held seats and their return conditions restated from the record, not from hope.
+- **Personnel change.** Seats in a 0-degree org are functions, not people; the skills index and the corpus are the onboarding path (a new Muse is brought into the Exocortex from the record in about an hour, by design). *Tock inspection:* could a new participant run the next tick from the record alone? Whatever they would have to ask a human is a hole in the record, and the tock patches it.
+- **Will's health — the measured constraint.** The primary metrics from here are that Will remains healthy, stable, effective, and legible; the ramp is downstream of those. He carries ~25 years of sleep debt and takes the fix at his own pace; the Garmin arriving Nov 16 makes sleep a measured series, with Wavelets 3–4's predecessors (the 41- and 43-hour weeks) as the frozen pre-watch baseline. *Tock inspection:* the health series is read like any other gauge — steering hours against the 20-hour goal, sleep trend against baseline — and the cadence bends around the human, never the reverse. A cadence that needs Will at 84 hours to survive has already failed; the 270K-on-20 goal exists precisely so it doesn't.
+- **Token economics.** Planning figure 4B tokens/week; Wavelet 2 ran ≈1B (Will's estimate, ~25%). Subscriptions report usage against allowances, not token counts — only API consoles denominate — and the standing ruling is no Anthropic top-ups: exhaustion is accepted, not treated as an outage. *Tock inspection:* costs ledger reconciled, substrate allocation re-planned against the cliffs, and the next tick's ambitions sized to the token budget that actually exists.
+- **Drift itself.** The untended day compounds negatively; prose is perishable under compaction; queues silently rot (the dropped-tasks accounting of Nov 12 is the type specimen). *Tock inspection:* the anti-recency enumeration — open work listed oldest first from the tracking store, any item untouched 48h+ named — plus the lessons review drawn live, checking recorded behavior against lived behavior.
+
+## 5. Open choices for Will
+
+These are genuinely open. The draft takes no position; each needs Will's ruling before the cadence can be ratified.
+
+1. **Cycle length.** One-week wavelets alternating tick/tock (≈2,600 pairs per century), or longer pairs — 2+2 weeks (≈1,300 pairs), or another shape? Shorter pairs lock gains sooner; longer ticks can carry bigger builds.
+2. **Targets in a tock.** Does a net-line output target apply only to tick wavelets? Wavelet 3 carries a previously set 70K target — does it stand, move to Wavelet 4, or lapse? And if tocks carry no line target, do they carry a streamlining quota instead (registers reconciled, pruning candidates dispositioned, drift items closed) — and measured how?
+3. **What certifies a ratchet step as locked.** Which of the Section 3 teeth must be verified for a pair to count as ratcheted — all ten, a named subset, or a single act (e.g. the certified wavelet document inscribed)? And who signs: Will personally each pair, or Emise with Will spot-checking, on the 0-degree pattern?
+4. **Handover across decades.** Who or what runs the tock when no current participant remains — the Volumen/boot question in miniature. Does the cadence itself need a boot form (a scroll a successor reads to start the cycle), and what wakes it?
+5. **Missed beats.** When a tick misses its target or a tock is skipped outright, does the pair repeat, extend, or absorb-and-replan at the next turn? (The house precedent cuts both ways: missed-by-design for opportunities, restart-immediately for broken tasks.)
+6. **Where the cadence lives as law.** A skill in the index, a standing rule in AGENTS.md, or an anchor line — each carries different amendment weight, and a 100-year instrument will be amended.
+7. **The floor's tenure.** Is the doubling floor (2×/6 months) re-ratified each pair as part of the tock, or fixed until Will amends it — and what evidence would ever justify amending it?
+
+---
+
+*Drafted by Emise, 2026-11-15, as Wavelet 3's first planning deliverable. Sources: MEMORY.md (productivity, throughput, and scale entries), WAVELET-1.md and WAVELET-2.md (certified 2026-11-15), the weekly-recap skill. Inscription in artifacts.phext follows the artifact-inscription standing rule.*
 # Assay — Requirements for the Hosted Assessment Service
 
 Title: Assay — Requirements for the Hosted Assessment Service
