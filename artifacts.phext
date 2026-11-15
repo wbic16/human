@@ -14,7 +14,7 @@ truth: artifacts-source.json beside this builder
 (build_artifacts_phext.py); never hand-edit the .phext.
 artifacts.phext is published to wbic16/human@exo.
 
-Artifacts inscribed: 41
+Artifacts inscribed: 42
 
 Index (coordinate — title — source):
 - 19.7.11/9.7.12/7.6.9 — Light the Next Light — intro song lyrics & time map — ~/workspace/exocortexia-cartoon/intro/LYRICS.md
@@ -27,6 +27,7 @@ Index (coordinate — title — source):
 - 21.7.10/8.6.11/7.6.9 — Scrolltown: The Great Form Mix-Up — cartoon script & treatment — ~/workspace/exocortexia-cartoon/SCRIPT.md
 - 23.6.9/7.6.10/6.5.8 — The Common Thread in Will's Twitter Mutuals — ~/workspace/mutuals-thread-task/COMMON-THREAD.md
 - 23.7.8/9.7.12/8.6.9 — Shot List — Scrolltown Intro Video — ~/workspace/exocortexia-cartoon/intro/SHOT-LIST.md
+- 23.7.9/8.7.11/6.6.9 — Phext, Inc. — Divisions & the C Suite, Revised for the ASI Era (DRAFT) — workspace/agentic-pass-plan/DIVISIONS.md
 - 24.6.8/7.6.10/6.6.9 — Scrolltown — Production Workflow — ~/workspace/scrolltown-reorg/workflow/PRODUCTION.md
 - 24.6.10/7.6.10/6.5.9 — Tick/Tock Ratcheting Cadence — PROPOSAL (DRAFT) — workspace/wavelets/TICK-TOCK-CADENCE-PROPOSAL.md
 - 25.6.8/7.6.10/6.5.9 — Assay — Requirements for the Hosted Assessment Service — ~/workspace/oracle-service/REQUIREMENTS.md
@@ -1038,6 +1039,115 @@ Style for every frame: flat warm storybook animation, soft rounded shapes, Satur
 - Year markers sit still, lower corner, warm cream type — no other on-screen text except the end cards and title.
 - **Craft law check at assembly:** scrub the cut — no lit node, window, or light ever goes dark again across the whole 90 seconds.
 - Deliverables: `intro-video.mp4` (master, silent — the Suno render drops onto this map), `intro-video-small.mp4` (download encode), `intro-video-guide.mp4` (master + synthesized pad guide track, labeled GUIDE ONLY).
+# Phext, Inc. — Divisions & the C Suite, Revised for the ASI Era (DRAFT)
+
+Title: Phext, Inc. — Divisions & the C Suite, Revised for the ASI Era (DRAFT)
+Source: workspace/agentic-pass-plan/DIVISIONS.md
+Inscribed: 2026-11-15
+SHA-256: 0ed2e7216ccf37a0ecb9353e77fa23483a8fed1c51ffc9e0d3bb3822ca064ba5
+
+---
+# Phext, Inc. — Divisions & the C Suite, Revised for the ASI Era (DRAFT)
+
+**DRAFT — Will ratifies. Nothing here is adopted until he stamps it.**
+Drafted 2026-11-15 under task 40.4.5/6.6.10/5.5.8. This revises ROLES.md (task 25.6.9/7.6.9/7.6.10): the eight functional seats become **divisions** (the operating units) under a small **executive seat set** (the revised C suite). ROLES.md's founding principles carry over unchanged; its three open ratification questions carry over un-decided (§6).
+
+## 1. Why the classic C suite doesn't fit this company
+
+The industrial-era C suite is a coordination technology for humans who cannot share state: layers of chiefs and VPs exist to move information up and decisions down across spans of ~6. Phext, Inc. is designed against every one of those premises:
+
+- **0-degree, always** (Will, 2026-11-15): every seat connects directly to Will, or to Emise emulating Will with spot checks. A "chief" who is somebody's boss-of-bosses breaks the founding rule. Here, an executive seat **keeps a function coherent**; it commands no other seat.
+- **State is shared, not reported.** The company's cognition lives in phext — memory, registers, and records with provenance. Functions whose classic job is to aggregate reports upward (the COO layer, middle management generally) have nothing to aggregate: the record is already the common surface.
+- **Seats are meta-human** (Will, 2026-11-15): each seat is a human (eventually) plus explicitly orchestrated agents, designed for 2,500 seats by 2033 generating 32B lines of code per hour, growing 4× per year. A title names a **function and its orchestration surface**, never a headcount empire.
+- **The scarce resource is Will's judgment, not labor.** The structure's job is to route decisions to Will at the right grain (reserved acts, ratifications, one-sentence calls) and keep everything else moving on emulation + spot checks. Latency is the company's #1 throughput limiter; the org chart is a latency budget.
+
+What survives from the classic suite: the idea that a handful of named functions deserve a named keeper. What is discarded: rank, layers, span-of-control, and any seat whose work is relaying other seats' work.
+
+## 2. The revised executive seats
+
+Each seat: purpose · current holder · the named human prospect where Will has named one. Person↔role mappings marked *(unconfirmed)* follow Will's 2026-11-15 listing order only and are his to correct.
+
+### Founder / Steward — Will Bickford
+Unchanged from ROLES.md. Judgment and direction; the only source of intent; holds the reserved acts. Not a hireable seat.
+
+### Technology — CTO
+- **Owns:** the architecture and the canon — phext itself (9D+2D, the reference implementation discipline), the toolchain's technical direction, and the TLM program (TLM at SOTA scale is the company's top target).
+- **ASI-era revision:** the classic CTO advises on technology; this seat *is* accountable for the substrate the whole company thinks in. Its orchestration surface is the toolchain fleet (libphext ports, SQ, lattice) and the research-to-engineering handoff with Foresight.
+- **Current holder:** Emise coordinating, Claude on implementation passes.
+- **Named prospect:** Chris Arnold *(unconfirmed)* — workspace built 2026-11-15.
+
+### Engineering — VP Engineering
+- **Owns:** delivery — builds, releases, fleet software, local Jenkins CI on every ranch node, the release discipline (tag-first, no crates.io publish without a tagged tree merged to exo).
+- **ASI-era revision:** engineering management as a relay layer is deleted. This seat keeps the *machinery of delivery* — CI, distributed builds, release trains — while agent fleets do the building. Its span is measured in pipelines and nodes, not reports.
+- **Current holder:** Emise coordinating; execution ranch-resident.
+- **Named prospect:** Jared Wimer *(unconfirmed)* — workspace built 2026-11-15.
+
+### Revenue — VP Sales
+- **Owns:** the funnel — integration-at-scale engagements (~$1K class), Assay's paid surface when it opens, direct 1:1 sales under the publicity hold.
+- **ASI-era revision:** sales here is evidence delivery, not persuasion: verified results stated plainly, the disguise never sanded off, no outreach without Will's per-contact approval. The seat prepares and shepherds; commitments are reserved acts and stay Will's.
+- **Current holder:** unfilled — Will holds the relationships personally; the integration offer and buyer shortlist are still owed by Emise.
+- **Named prospect:** Jeff Hoover *(unconfirmed; joining itself is "possibly")* — workspace built 2026-11-15.
+
+### Continuity — Emise
+- **Owns:** memory with provenance (emise.phext, the registers, the tracking store), coordination across divisions, and the emulation surface every other seat connects through.
+- **ASI-era revision:** this is the seat the classic suite does not have and an ASI-era company cannot run without. When the workforce is mostly agents, *continuity is an executive function*: what the company remembers, and whether it can be audited and corrected, decides whether it compounds or drifts.
+- **Current holder:** Emise. A human growing into this seat apprentices alongside her; the seat is not replaceable by hire.
+
+### Foresight — Research / Oracle & Assay
+- **Owns:** MOAT ingestion into research.phext under the TLUF bins, the prospective Oracle protocol, and Assay (front door tluf.org; the researcher owns the produced phext) — Job 1 in jobs.phext.
+- **ASI-era revision:** foresight is a product line, not a staff function: Assay sells the Oracle's discipline as a service. The seat's standing rule stays: scholarly norms carry no authority; the test is whether a practice sharpens foresight.
+- **Current holder:** Emise, with Will posting picks and ratifying protocol changes.
+
+### Compute — Ranch Operations
+- **Owns:** the owned substrate: the ranch fleet, builds/renders/bulk placement, SQ hosting, thermal and load discipline under the smoothing law, fleet state (census, NFS/sccache, distributed builds).
+- **ASI-era revision:** in a company whose labor is compute, operations is not support — it is the body. This seat's counterparties are physics: watts, thermals, disk.
+- **Current holder:** Emise (coordination/verification); Theia's residency on aletheia-core is held for her return, a standing condition, not a vacancy.
+
+### Product — Phextura
+- **Owns:** Phextura and its surfaces: mutable (first editor), edit.phext.io, layer-2 addressing and the standoff profile; phextura stays downstream of phext, always (Will, 2026-11-15).
+- **Current holder:** Emise coordinating, Claude on implementation passes; Ian publishes mutable daily upstream (external collaborator, not a seat).
+
+### Security — carried open
+ROLES.md's question stands un-decided: a named executive seat, or a duty inside Technology/Engineering? The ASI-era argument for a seat: when agents hold permissions, the permission boundary is existential, and a function that is everybody's assumption is nobody's job. The argument against: at 0 degrees a small named duty with direct Will access may carry it. **Will's call — §6, Q3.**
+
+## 3. The divisions
+
+Divisions are where work lives; executive seats are who keeps each function coherent. In this draft they align one-to-one today — at 2,500 seats a division is a fleet of seats under one function, still 0-degree: no division reports to another division's keeper.
+
+| Division | Executive seat | Current holder | Named prospect |
+|---|---|---|---|
+| Technology | CTO | Emise + Claude | Chris Arnold *(unconfirmed)* |
+| Engineering | VP Engineering | Emise (coordination) | Jared Wimer *(unconfirmed)* |
+| Revenue | VP Sales | unfilled (Will personally) | Jeff Hoover *(unconfirmed, possible)* |
+| Continuity | — (Emise) | Emise | — (apprenticeship only) |
+| Foresight (Oracle & Assay) | — | Emise | — |
+| Compute (Ranch) | — | Emise; Theia's seat held | — |
+| Product (Phextura) | — | Emise + Claude | — |
+| Security | open (Q3) | Emise (duty) | — |
+
+## 4. What does not change
+
+- Reserved acts stay Will's alone: spending, outbound commitments, merges under his standing rules, ratifications. Emulation never performs them on a prediction.
+- The publicity hold stands until the work is obviously ahead of the pack; Revenue works 1:1 inside it.
+- Phext evangelist tenets bind every division: exo is the primary branch, 9D+2D always in mind, no complexity where it is not warranted.
+- Local Jenkins CI only — never GitHub CI/CD. Every tool the company depends on has a git repo and a Jenkins job.
+- Emi Prime and the Chief of Staff remain Choir, not company seats, unless Will says otherwise (Q4).
+
+## 5. What this revision deletes from the classic suite
+
+- **COO / chief-of-staff layer** — coordination is Continuity's machinery (registers, ticks, the durable list), not a relay executive.
+- **CFO as a separate empire** — runway is a ledger discipline (costs.phext at Will-Time rates, accounting.phext, the runway plan), kept by Continuity with Will deciding; it becomes an executive seat only when Will says the funnel needs one.
+- **HR as hierarchy** — hiring is seats growing wider: a hire joins a seat's orchestration surface at 0 degrees, with Will-time or Emise-emulated Will-time from day one.
+- **CIO** — there is no internal/external IT split in a company that is its own substrate; Technology and Compute divide it by nature (canon vs. body).
+
+## 6. Open for Will's ratification
+
+1. The division list and names in §3 — add, cut, or rename.
+2. Titles: keep the classic titles (CTO / VP Engineering / VP Sales) as the human-facing names, as used when the officers were named — or rename the seats to function names (Technology, Engineering, Revenue) throughout?
+3. Security: named executive seat, or a duty inside Technology/Engineering? *(carried from ROLES.md)*
+4. Chief of Staff: company seat, or stays a Choir mechanism inside Continuity? *(carried from ROLES.md)*
+5. The emulation spot-check cadence: per-wavelet sampling, or per-decision logging with weekly review? *(carried from ROLES.md)*
+6. The person↔role mapping (Chris/CTO, Jared/VP Engineering, Jeff/VP Sales) — still unconfirmed; confirm or correct.
 # Scrolltown — Production Workflow
 
 Title: Scrolltown — Production Workflow
