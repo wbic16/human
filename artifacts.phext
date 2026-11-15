@@ -1268,7 +1268,7 @@ the live board is production/QUEUE.md.*
 Title: Assay — Requirements for the Hosted Assessment Service
 Source: ~/workspace/oracle-service/REQUIREMENTS.md
 Inscribed: 2026-11-14
-SHA-256: e5afbe807c80c10a058e1f63e6533f4f1384544e8feded37a05a2a8a1d94f8ac
+SHA-256: b89ff00d57d09c0988472e21a9d15d0ecb76a51297e33e60904cf12bf04e28e2
 
 ---
 # Assay — Requirements for the Hosted Assessment Service
@@ -1278,6 +1278,8 @@ SHA-256: e5afbe807c80c10a058e1f63e6533f4f1384544e8feded37a05a2a8a1d94f8ac
 *Revised 2026-11-14 (same day), three further directions of Will's folded in without renumbering anything already issued: "users can find each other when they share a domain or a paper. we check for forgeries." → §5B Discovery (D) and §5C Forgery checks (F); "assay has api access as well, billed generously" and "the api creates a queue for us to review" → §7A API access, billing, and the review queue (API), including the new open decisions OD-11 and OD-12.*
 
 *The service's name is **Assay** (Will, 2026-11-14: "i don't want to conflict with Oracle the software company, choose a better name"); its front door is **assay.phext.io**. An assayer tests what a prospector brings in, item by item, and returns the material together with a certificate of what it contains; the assayer never owns the ore and never refuses to test it. That is this service's ethic and its market — fringe researchers as prospectors. "Oracle" and "MOAT" remain the names of the internal process and the tracker that runs it, not the product. In what follows, "Assay" and "the service" are the same thing.*
+
+*Amended 2026-11-14 (later the same day) — a naming record. **TLUF** expands to **truth, lies, unknown, fiction**: the four bins of §0.3, and the Directive's third line. Will obtained the domain **tluf.org** on 2026-11-14 and designated it in his own words: "tluf.org: the asaayist for the future" (his spelling; in prose, "assayist"). The division of names: **Assay** is the service, and its front door is unchanged — **assay.phext.io**. **tluf.org** is the domain of the frame the service serves: the four bins held as a commons standard, not a product name. This note records a name; it adds no requirement and changes none.*
 
 *The service is MOAT's process offered as a product. MOAT is the house's research tracker: papers are heated until their individual claims can be pulled out — spaghettified — and each claim is placed into exactly one of four standings, True / False / Unknown / Fiction, on a stated basis. A researcher's standing grows along those four dimensions for the novelty they introduce to the Oracle. This document states what a hosted version of that process must do, for researchers the current system cannot serve: the fringe, whom academia's accept/reject verdict structurally misses.*
 
