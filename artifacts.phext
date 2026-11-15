@@ -1268,7 +1268,7 @@ the live board is production/QUEUE.md.*
 Title: Assay — Requirements for the Hosted Assessment Service
 Source: ~/workspace/oracle-service/REQUIREMENTS.md
 Inscribed: 2026-11-14
-SHA-256: 03e2c90e47e6d378762673e9d3c061ed548e27c91782f5ade3d656951754680e
+SHA-256: 57c64b8618ec9bddeb3a193a22fb9f67aa4d276e47343bfa5984ca837e4a44a6
 
 ---
 # Assay — Requirements for the Hosted Assessment Service
@@ -1320,6 +1320,8 @@ What an assessment *is*, mechanically: the paper is heated — read in full — 
 
 - **A-1 (MUST)** Every load-bearing claim of the paper receives exactly one standing — **True, False, Unknown, or Fiction** — each with its basis stated in the assessment: for True, stipulation or a verification receipt; for Unknown, attributed / open / synthesis / estimate, distinguished; for Fiction, construction (the claim is the author's device, not their assertion). A claim with no standing, or two, is a defective assessment.
 - **A-2 (MUST)** A claim may be binned **False** only on stated grounds of one of three kinds: (i) a counterexample, exhibited; (ii) an internal break — the claim contradicts the paper's own other claims or its own definitions; (iii) a collision with a held True — a claim standing True in the commons or in the house's record, named by its address. A False with no grounds of one of these kinds may not be issued; suspicion, style, and venue are not grounds. This is the False gate's standard, and it binds the service exactly as it binds the house tracker.
+
+*Amended 2026-11-14 (later the same day) — False filings carry a failure kind. Will, 2026-11-14: "we'll track both malicious and naive failures." A claim binned False under A-2 is recorded with a **failure kind**: **malicious** — the claim fails and intent to deceive is part of the record — or **naive** — an honest failure (a wrong shape, a broken step, an over-claimed nuance). The kind is tracked alongside the filing: it is never a fifth standing, it never changes the bin, and it is never required to bin False — a False issues on A-2 grounds alone, whatever its kind. A malicious kind is recorded only where the stated grounds carry intent; in every other case the kind is naive. This is how TLUF's second word earns its place without an intent standard blocking the False gate: lies are the malicious subset of False, named as such when the grounds carry intent. This note adds the kind to False filings; it changes no requirement above.*
 - **A-3 (MUST)** Every assessment contains a **shape extraction**: the correct shape the paper found, stated in the assessment's own words, and — where it rhymes with concepts the commons already holds — linked to those concepts by address. The shape is extracted independently of how the claims bin: a paper whose every detailed claim fails can still carry a shape that stands.
 - **A-4 (MUST)** Where no correct shape is found, the shape extraction says exactly that, and says what the paper was reaching for. "No shape found" is a legitimate finding, stated plainly; an assessment that flatters every paper with a shape is as defective as one that finds none.
 - **A-5 (MUST)** Every nuance failure is named at the exact line: the claim as written, the standing it received, and the specific point of failure (the step, the case, the quantifier, the collision). A general remark about rigour is not a naming.
