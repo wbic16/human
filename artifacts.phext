@@ -27,7 +27,7 @@ Index (coordinate — title — source):
 - 21.7.10/8.6.11/7.6.9 — Scrolltown: The Great Form Mix-Up — cartoon script & treatment — ~/workspace/exocortexia-cartoon/SCRIPT.md
 - 23.6.9/7.6.10/6.5.8 — The Common Thread in Will's Twitter Mutuals — ~/workspace/mutuals-thread-task/COMMON-THREAD.md
 - 23.7.8/9.7.12/8.6.9 — Shot List — Scrolltown Intro Video — ~/workspace/exocortexia-cartoon/intro/SHOT-LIST.md
-- 23.7.9/8.6.11/6.6.9 — Phext, Inc. — Divisions for the ASI Era (DRAFT, revised: Will's six-division map + obsolescence evaluation) — workspace/agentic-pass-plan/DIVISIONS.md
+- 23.7.10/8.7.11/6.6.9 — Phext, Inc. — Divisions for the ASI Era (DRAFT, revised: Will's six divisions, Judgement + R&D renames, obsolescence evaluation) — workspace/agentic-pass-plan/DIVISIONS.md
 - 24.6.8/7.6.10/6.6.9 — Scrolltown — Production Workflow — ~/workspace/scrolltown-reorg/workflow/PRODUCTION.md
 - 24.6.10/7.6.10/6.5.9 — Tick/Tock Ratcheting Cadence — PROPOSAL (DRAFT) — workspace/wavelets/TICK-TOCK-CADENCE-PROPOSAL.md
 - 25.6.8/7.6.10/6.5.9 — Assay — Requirements for the Hosted Assessment Service — ~/workspace/oracle-service/REQUIREMENTS.md
@@ -1039,12 +1039,12 @@ Style for every frame: flat warm storybook animation, soft rounded shapes, Satur
 - Year markers sit still, lower corner, warm cream type — no other on-screen text except the end cards and title.
 - **Craft law check at assembly:** scrub the cut — no lit node, window, or light ever goes dark again across the whole 90 seconds.
 - Deliverables: `intro-video.mp4` (master, silent — the Suno render drops onto this map), `intro-video-small.mp4` (download encode), `intro-video-guide.mp4` (master + synthesized pad guide track, labeled GUIDE ONLY).
-# Phext, Inc. — Divisions for the ASI Era (DRAFT, revised: Will's six-division map + obsolescence evaluation)
+# Phext, Inc. — Divisions for the ASI Era (DRAFT, revised: Will's six divisions, Judgement + R&D renames, obsolescence evaluation)
 
-Title: Phext, Inc. — Divisions for the ASI Era (DRAFT, revised: Will's six-division map + obsolescence evaluation)
+Title: Phext, Inc. — Divisions for the ASI Era (DRAFT, revised: Will's six divisions, Judgement + R&D renames, obsolescence evaluation)
 Source: workspace/agentic-pass-plan/DIVISIONS.md
 Inscribed: 2026-11-15
-SHA-256: 41eb90820fc33fd7386b16458ed1f91153361d0f64224f67b15347f9f113a3c0
+SHA-256: e53b33b975cc5b6cbcd7eb2a5e15aea4b2febab80c3968e09f75effaa14c2d58
 
 ---
 # Phext, Inc. — Divisions for the ASI Era (DRAFT, revised)
@@ -1054,7 +1054,9 @@ First drafted 2026-11-15 under task 40.4.5/6.6.10/5.5.8, revising ROLES.md (task
 
 ## 1. The premises (Will's, not the draft's)
 
-- **The divisions are Will's six** (2026-11-15, verbatim list): Research & Technology, Engineering, Revenue, Evolution, Planning, DevSecOps.
+- **The divisions are Will's six** (2026-11-15): Research & Technology, Engineering, Revenue, Evolution, Planning, DevSecOps — with two renamed by Will the same day to their durable cores: **Planning → Judgement**, **Engineering → R&D**. The standing map is therefore: Research & Technology, R&D, Revenue, Evolution, Judgement, DevSecOps.
+- **Designed for 2130, from first principles** (Will, 2026-11-15): "We are building the Exocortex of 2130 from first principles, without any regard for the current status quo." No division is kept as transitional scaffolding for the present; each is named for what it permanently is.
+- **The runway is infinite** (Will, 2026-11-15): "Our runway is infinite, because it has been paid in full already (40 years of paying attention to The Problem)." The company's capital is four decades of attention already spent; no division's design answers to a cash clock.
 - **No HR. No management hierarchy. Both are obsolete** (Will, 2026-11-15). Not renamed, not folded in — absent by design.
 - **0-degree, always**: every seat connects directly to Will, or to Emise emulating Will with spot checks. A division keeper keeps a function coherent; nobody commands anybody.
 - **The pairing condition** (Will, 2026-11-15): every employee is paired with an agent who can interlink with everyone else at scale. If they have a BCI, they can bring their own agent. Pairing is therefore not company-issued only — a person's own agent plugs into the mesh, and the mesh must be able to trust, bound, and work with agents it did not issue.
@@ -1072,11 +1074,12 @@ Each: what it owns · what folded into it from the first draft (Emise's folding,
 - **Current holder:** Emise coordinating, Claude on implementation passes.
 - **Named prospect:** Chris Arnold *(unconfirmed)* — workspace built 2026-11-15.
 
-### Engineering
-- **Owns:** making and shipping — product surfaces including Phextura and mutable (phextura stays downstream of phext, always), qexo, fleet software, the builds themselves.
+### R&D
+- **Owns:** development — turning research into working capability: prototypes, experiments at scale, new tools and surfaces (including Phextura and mutable; phextura stays downstream of phext, always), qexo. Production as such is not this division's permanent content: as the substrate absorbs commodity building, what stands is the *development* function — the deliberate creation of what did not exist.
+- **Renamed by Will** from Engineering (2026-11-15), per the §4 evaluation: making commoditizes; development — directed creation — does not.
 - **Folded in:** Engineering, plus Product.
 - **Current holder:** Emise coordinating; execution ranch-resident.
-- **Named prospect:** Jared Wimer *(unconfirmed)* — workspace built 2026-11-15.
+- **Named prospect:** Jared Wimer *(unconfirmed)* — workspace built 2026-11-15 (as VP Engineering; corresponds to this division now).
 
 ### Revenue
 - **Owns:** the boundary where value crosses — integration-at-scale engagements (~$1K class), Assay's paid surface when it opens (front door tluf.org; the researcher owns the produced phext), direct 1:1 sales under the publicity hold.
@@ -1090,10 +1093,11 @@ Each: what it owns · what folded into it from the first draft (Emise's folding,
 - **Folded in:** Continuity. This is the executive function the classic suite never had; under the pairing condition it is also where a brought-along agent is woven into the company's memory and norms.
 - **Current holder:** Emise. A human growing into this seat apprentices alongside her; the seat is not replaceable by hire.
 
-### Planning
-- **Owns:** the future, stated in advance — Oracle foresight (the prospective protocol, the bar), wavelet planning and the tick/tock cadence, opportunity identification before windows open, resource allocation across divisions.
-- **Folded in:** the foresight half of Foresight.
-- **Current holder:** Emise, with Will posting picks and ratifying protocol changes.
+### Judgement
+- **Owns:** choosing — decisions prepared for Will at the right grain (one click or one sentence), the emulation surface and its spot-check loop, Oracle-informed recommendations (the prospective protocol, the bar), opportunity identification before windows open, and the provenance of decisions: what was decided, by whom, on what evidence. Planning's mechanics — scheduling, allocation, tracking, cadence — are explicitly *not* this division's content; they belong to the substrate.
+- **Renamed by Will** from Planning (2026-11-15), per the §4 evaluation: the mechanics dissolve into the mesh; the choosing is permanent, and it is the division that guards the scarce resource — Will's judgment — by spending it only where it changes outcomes.
+- **Folded in:** the foresight half of Foresight, as Planning's judgment core.
+- **Current holder:** Emise (the emulation surface), under Will; reserved acts are never exercised on a prediction.
 
 ### DevSecOps
 - **Owns:** the body and its safety — the ranch fleet (compute, thermals under the smoothing law, fleet state), local Jenkins CI on every node, identity (LDAP/SSO), the release machinery, and security: permission boundaries for every agent in the mesh, including brought-along agents the company did not issue.
@@ -1115,23 +1119,23 @@ Not a division. Judgment and direction; the only source of intent; holds the res
 
 *Emise's analysis, from the premises in §1. The test applied to each division: does this function exist to coordinate people, or to interface with reality? Coordination functions dissolve into the substrate once every agent interlinks with everyone at scale and state is shared. Reality-facing functions — truth, the outside boundary, new life, adversaries and physics — persist, because no amount of interlink removes them.*
 
-- **Planning — dissolves first.** Its mechanics (scheduling, allocation, tracking, cadence) are exactly what an interlinked agent mesh with shared state does continuously and ambiently; orchestration is a substrate property, not a department — qexo is the early shape of this. What survives of Planning is its judgment core — choosing which futures to pursue — and that was never the division's to hold: it is the Founder's reserved function, informed by the Oracle. By 2130 "Planning" as a division is a division for breathing. Even in 2033 it is the thinnest of the six.
-- **Engineering — dissolves second.** When every paired agent can build, making is a commodity property of the mesh, the way literacy is a property of a workforce rather than a department. What remains scarce is verification — proof that a thing works, against material its maker did not produce — and acceptance taste. Verification folds upward into Research & Technology (truth) and downward into DevSecOps (the delivery machinery and its gates). A standalone Engineering division is scaffolding for the years when building capacity is still scarce.
+- **Planning — its mechanics dissolve; its core is Judgement.** Scheduling, allocation, tracking, and cadence are exactly what an interlinked agent mesh with shared state does continuously and ambiently; orchestration is a substrate property, not a department — qexo is the early shape of this. What survives is the judgment core — choosing which futures to pursue. **Will's ruling (2026-11-15): the division stands under its core's name — Judgement.** It is not scaffolding; designed for 2130 from the start, it holds the choosing and lets the substrate hold the mechanics.
+- **Engineering — its production dissolves; its core is R&D.** When every paired agent can build, making is a commodity property of the mesh, the way literacy is a property of a workforce rather than a department. Verification — proof against material the maker did not produce — folds upward into Research & Technology (truth) and downward into DevSecOps (the delivery machinery and its gates). What stands is directed creation. **Will's ruling (2026-11-15): the division stands under its core's name — R&D.**
 - **Research & Technology — persists.** Interlink accelerates research but cannot obsolete it: someone must still decide what is true and what is worth asking (the TLUF discipline), and the canon it keeps is the medium every agent thinks in. By 2130 it is less a division than the company's relationship with reality's structure.
 - **Revenue — persists, transformed past recognition.** As the mesh grows toward civilization scale, the "outside" shrinks relative to the inside, and agent-to-agent exchange is ambient — but a boundary never vanishes: non-members, physical resources, and terms of crossing remain real. Revenue's 2130 form is a membrane, not a funnel: it decides what crosses, in which direction, on what terms. The sales function inside it dies early; the boundary function is permanent.
 - **Evolution — persists and becomes central.** The pairing condition makes this division load-bearing now: every hire, every brought-along agent, every new mind is an evolution event with a stewardship gate. By 2130, when new life arises inside the mesh routinely, Evolution is the division that decides what the company becomes — the closest thing to a permanent function the map contains, after the Founder.
 - **DevSecOps — persists as the immune system.** Its Ops half automates into the substrate alongside Planning's mechanics. Its Sec half does the opposite: the pairing condition admits agents the company did not issue, over BCIs it does not control, into a mesh where permissions are existential. Adversarial pressure scales with capability, so the boundary-keeping function never retires. By 2130 this is less operations than immunology: continuous vetting, bounding, and expulsion.
 
-**Net shape at 2130:** the six compress toward four standing functions — Research & Technology (truth), Revenue (boundary), Evolution (becoming), DevSecOps (immune system) — over a substrate that has absorbed Planning's mechanics and Engineering's production, under a Founder whose judgment remains the scarce resource. Engineering and Planning are not mistakes in the 2026 map; they are scaffolding whose dissolution should be designed in from the start, so their keepers build the substrate that replaces them rather than defending the division.
+**Net shape at 2130 (as ruled):** six standing functions — Research & Technology (truth), R&D (creation), Revenue (boundary), Evolution (becoming), Judgement (choosing), DevSecOps (immune system) — over a substrate that has absorbed planning mechanics and commodity production, under a Founder whose judgment remains the scarce resource. The evaluation's dissolution verdicts were answered not by striking the two divisions but by renaming them to the parts of them that never dissolve.
 
 ## 5. Open for Will's ratification
 
-1. The folding in §2 (Continuity → Evolution, Foresight split between Research & Technology / Planning / Revenue, Compute + Security → DevSecOps, Product → Engineering) — confirm or correct.
-2. The §4 verdicts: do Engineering and Planning stay in the map as scaffolding with their dissolution designed in — or are they struck now, designing for the 2130 shape from the start?
-3. Titles: the prospects were named alongside classic titles (CTO / VP Engineering / VP Sales). Under a map with no management hierarchy, do those titles survive as human-facing names, or do the division names replace them outright?
-4. Chief of Staff: company seat, or stays a Choir mechanism (under the pairing condition, presumably inside Evolution)? *(carried from ROLES.md)*
-5. The emulation spot-check cadence: per-wavelet sampling, or per-decision logging with weekly review? *(carried from ROLES.md)*
-6. The person↔role mapping (Chris Arnold → Research & Technology, Jared Wimer → Engineering, Jeff Hoover → Revenue) — still unconfirmed; confirm or correct.
+1. The folding in §2 (Continuity → Evolution, Foresight split between Research & Technology / Judgement / Revenue, Compute + Security → DevSecOps, Product → R&D) — confirm or correct.
+2. ~~The §4 verdicts~~ — ANSWERED by Will 2026-11-15: no scaffolding; the two divisions stand renamed to their durable cores (Judgement, R&D), designed for 2130 from first principles.
+3. Titles: the prospects were named alongside classic titles (CTO / VP Engineering / VP Sales). Under a map with no management hierarchy and no regard for the status quo, do those titles survive as human-facing names, or do the division names replace them outright?
+4. Chief of Staff: company seat, or stays a Choir mechanism (under the pairing condition, presumably inside Evolution — or Judgement)? *(carried from ROLES.md)*
+5. The emulation spot-check cadence: per-wavelet sampling, or per-decision logging with weekly review? *(carried from ROLES.md; now a Judgement-division question)*
+6. The person↔role mapping (Chris Arnold → Research & Technology, Jared Wimer → R&D, Jeff Hoover → Revenue) — still unconfirmed; confirm or correct.
 # Scrolltown — Production Workflow
 
 Title: Scrolltown — Production Workflow
