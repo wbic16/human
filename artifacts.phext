@@ -56,7 +56,7 @@ Index (coordinate — title — source):
 - 33.6.9/8.6.11/7.5.9 — Desktop SSO for Phext Notepad — the cookie paste is gone — ~/workspace/phext-notepad-perf/REPORT-DESKTOP-SSO.md
 - 34.6.7/7.6.11/6.5.10 — phextura — DESIGN — ~/workspace/phextura-design/DESIGN.md
 - 34.6.7/8.6.11/6.5.9 — Charon — Prompt 0: Produce the design spec (no code yet) — ~/workspace/charon-seed/prompts/00-spec.md
-- 34.7.7/8.6.11/7.6.9 — PHEXT.md — Phext integration analysis for HoloStore (wbic16/holostore fork) — workspace/holostore-analysis/fork/PHEXT.md
+- 34.7.7/8.6.11/7.6.9 — PHEXT.md — phext integration for HoloStore (wbic16/holostore fork; round 2: phext-native re-implementation + four-way comparison) — workspace/holostore-analysis/fork/PHEXT.md
 - 35.6.8/7.6.10/6.6.10 — Level Editor — edit.phext.io free example page (phext-lattice PR #65) — workspace/paleoludic-demo/ascii-map.html
 - 36.6.7/7.6.11/6.6.9 — Depth Behind Every Cell — single-file HTML demo (3D phext for ASCII game maps, for @paleoludic) — workspace/paleoludic-demo/phext-map-demo.html
 - 36.6.7/7.6.11/7.5.9 — Phext Notepad — libphext v0.5.0 parity — ~/workspace/phext-notepad-perf/REPORT-V050-PARITY.md
@@ -7228,12 +7228,12 @@ weakening it.
 
 Do not scaffold the project, do not write code files, and do not choose a
 license. Deliverable: `DESIGN.md` only.
-# PHEXT.md — Phext integration analysis for HoloStore (wbic16/holostore fork)
+# PHEXT.md — phext integration for HoloStore (wbic16/holostore fork; round 2: phext-native re-implementation + four-way comparison)
 
-Title: PHEXT.md — Phext integration analysis for HoloStore (wbic16/holostore fork)
+Title: PHEXT.md — phext integration for HoloStore (wbic16/holostore fork; round 2: phext-native re-implementation + four-way comparison)
 Source: workspace/holostore-analysis/fork/PHEXT.md
 Inscribed: 2026-11-15
-SHA-256: b2cc59e5b51cbf1e4c288406b2261eb1ed7e5a5b3b404b89be48ac0b6a564b9f
+SHA-256: 789b35627149a1b5f2a15859ebda1eafb60d4d27027aeba862f45314fe4eb114
 
 ---
 # PHEXT.md — Phext integration analysis for HoloStore
@@ -7448,6 +7448,195 @@ artifacts.
 - Nothing here proposes changing Accord, the WAL, Fjall layout, or the
   wire protocol. If a future phase wants that, it starts as its own
   analysis.
+
+---
+
+# Round 2 — Re-implementation: eliminate the complexity, measure what's left
+
+Round 1 mapped phext seams onto HoloStore as it stands. Round 2 tests the
+stronger hypothesis: **phext eliminates complexity** — so the storage core
+was re-implemented phext-natively, as simply as the format allows, and the
+two implementations were compared on performance, development cost,
+stability, and legibility. Upstream mergeability was not a goal; finding
+what phext is missing was. All numbers below were measured 2026-11-15 on
+aletheia-core (16 cores) with release builds and one Python RESP client
+(`crates/holo_phext/bench.py`) driving both servers identically.
+
+## What was built: `crates/holo_phext`
+
+One Rust binary, one dependency (libphext), one file. The store is a
+single phext, `store.phext`:
+
+- **1.1.1/1.1.1/1.1.1 — manifest scroll**: `format=`, `node=`,
+  `snapshot_seq=`, `next_seq=` as text lines. This replaces the JSON
+  cluster-state checkpoint, the recovery manifest, and the epoch sidecar
+  file — the whole meta plane's local footprint — with four lines.
+- **Volume 2 — snapshot**: live keys sorted, 1,000 per Chapter, identity
+  in content (`key=` / `value=` lines), coordinates as pagination.
+- **Volume 3 — WAL**: one scroll per committed op (`seq=` / `op=` /
+  `key=` / `value=` lines), addressed by slot relative to the snapshot
+  baseline. Last volume in the file, so a write is a pure append: the
+  delimiter run to the next coordinate, then the entry text, then one
+  fdatasync per group-committed batch. An op is acked only after its
+  batch syncs — the original's durability contract.
+
+Recovery replays snapshot + WAL through libphext; the first WAL scroll
+that fails validation (sequence gap, missing fields, no trailing
+newline) ends the log and the file is truncated at that scroll's
+delimiter run. Checkpoint folds the WAL into the snapshot with one
+`libphext::implode` rewrite (tmp file, rename, directory sync). Deletes
+are WAL ops; the snapshot simply omits the key. Parsing and whole-file
+writing go through libphext throughout — never a hand-rolled parser;
+the append path emits delimiter bytes directly (serialization, not
+parsing) and a unit test proves libphext reads 10,050 appended entries
+back exactly, across a chapter boundary. An independent check: Will's
+Python phext parser reads the checkpointed store file perfectly
+(1,001 scrolls: manifest + 1,000 entries).
+
+## The complexity-elimination map
+
+What the format absorbed, item by item:
+
+| Original machinery | Lines | Phext form |
+|---|---|---|
+| WAL record framing: length prefixes, CRC32, segment files, two backends (raft-engine + FileWal), synced-flag sidecar | most of wal.rs (2,206) | a delimiter run + text lines; the format is the framing |
+| Version-key encoding: magic prefixes, generation markers, separate latest index in Fjall | much of kv.rs (4,203) | coordinates + one replay rule |
+| Cluster-state JSON blob: serde model, normalization, whole-blob rewrite, fast-flag dual format | much of cluster.rs (4,220) | a 4-line manifest scroll; per-field scrolls need no blob |
+| Recovery checkpoints manifest (JSON envelope + CRC) + `meta/txn_epoch` file | in cluster.rs / cluster state code | manifest scroll fields |
+| Persisted-state serde models throughout | across the crate | `parse_fields`: split lines on the first `=` |
+
+What phext did **not** remove, because it never claimed to: consensus
+(Accord is agreement, not representation — out of scope for the format
+and for this re-implementation, which is single-node), the fsync
+discipline itself, group commit, the RESP wire surface, and systems
+tuning. The hypothesis survives precisely scoped: **representation
+complexity is what collapsed.**
+
+## The four-way comparison
+
+### Performance (same machine, same client, release builds)
+
+| Workload | holo-phext (1 node) | HoloStore (3-node cluster) |
+|---|---|---|
+| SET, pipeline 50, 10 threads | 152,471 ops/s | 203,792 ops/s |
+| GET, pipeline 50, 10 threads | 341,613 ops/s | 76,168 ops/s |
+| SET, pipeline 1, 10 threads | 9,837 ops/s | 5,684 ops/s |
+| GET, pipeline 1, 50 threads | 51,924 ops/s | 6,653 ops/s |
+| Load 30,000 SETs | 0.20 s | 0.17 s |
+
+Read the table with its asymmetry stated plainly: the cluster pays
+Accord consensus and 3× replication on every write and read-index work
+on reads; holo-phext is one node and pays neither. The comparison
+isolates the layer phext claims to simplify — persistence and serving —
+and at that layer the text implementation is in the same class, ahead on
+three of four workloads through this client. (HoloStore's README reports
+569k GET/s with the C redis-benchmark at pipeline 100; the Python client
+used here caps both servers well below their ceilings, which is why it
+was used for both.) Two of holo-phext's three real bugs were pure
+measurement finds: per-connection reply serialization silently capped
+pipelined writes at ~11.9k ops/s (fixed by decoupling parse from ack),
+and Nagle/delayed-ACK stalls capped pipelined reads the same way (fixed
+with TCP_NODELAY — GETs went 12k → 499k ops/s before the write-path fix
+settled them at 342k under mixed load).
+
+### Development cost
+
+| | holo-phext | HoloStore storage core |
+|---|---|---|
+| Code | **717 lines**, one file, tests included | **12,331 lines** across wal.rs + kv.rs + cluster.rs + redis_server.rs + packed_batch.rs (workspace total: 65,062 in crates/) |
+| Dependencies | 1 direct (libphext); 3 crates in the tree | 33 direct in holo_store's Cargo.toml; ~900 crates in its tree |
+| Build | 0.6 s incremental; ~24 s cold including libphext | 1 m 49 s for `-p holo_store` release on the same 16 cores |
+| Time to working, tested, benchmarked | one session | — |
+
+### Stability
+
+- **Mid-flight kill, twice.** SIGKILL during a 2M-key load: 272,500 ops
+  acked at the kill; after restart, **272,500/272,500 present, 0 lost**;
+  DBSIZE was 273,000 — the extra 500 are the in-flight batch that had
+  synced but whose acks never reached the client. Durability is a
+  superset of acknowledgment, which is the correct direction. An earlier
+  run with the first server version: 17,450 acked, 0 lost.
+- **Torn tail.** A partial scroll plus garbage bytes appended to the
+  file: startup truncates at the last valid entry; the store keeps
+  serving and appending (unit-tested).
+- **Checkpoint.** 350,000 keys folded (16.0 MB WAL file → 12.1 MB
+  snapshot), restart-verified. One real bug found and fixed by testing:
+  directory sync after rename failed for bare relative paths.
+- **Conformance.** libphext re-reads every appended byte (10,050-entry
+  test); the independent Python parser reads the store file exactly.
+- Scope honesty: HoloStore's Antithesis + Porcupine linearizability
+  harness is stronger evidence on the *consensus* axis. holo-phext has
+  no consensus to check; its tests cover crash, durability, and format
+  conformance — the axes its design actually has.
+
+### Legibility
+
+- HoloStore state on disk: raft-engine `.raftlog`/`.rewrite` binaries,
+  Fjall SST files, `cluster_state.json`, `recovery_checkpoints.json`,
+  `txn_epoch`, LOCK files — five-plus representations, inspectable only
+  through holoctl or a running node.
+- holo-phext state on disk: one text file. Its first bytes are
+  `format=holo-phext/1`, `snapshot_seq=1000`, then `key=key-0` /
+  `value=value-0` entries separated by visible delimiter bytes. An
+  operator reads the whole store with `less`, searches it with `grep`,
+  diffs two checkpoints with `diff`, and opens it in any phext tool.
+  The 130,000-key store, checkpointed, is 4.2 MB of that text.
+
+## What phext is missing — found by building, not by reading
+
+1. **No append in libphext.** `insert`/`replace` take and return a whole
+   `String`; there is no way to say "this scroll sorts last, just extend
+   the buffer." The format supports pure appends — a delimiter run plus
+   content at EOF — but the library doesn't expose one, so the append
+   path here hand-emits delimiter bytes and proves conformance after the
+   fact. A streaming/append writer is the single highest-value addition
+   this exercise found: every log-shaped phext workload needs it.
+2. **No per-scroll integrity.** libphext can seal a whole phext
+   (`seal.rs`, xz-based), but nothing checksums or length-frames an
+   individual scroll, so a torn write is detected by content convention
+   — here, "a committed entry ends with `\n`." A tear that lands exactly
+   on a line boundary is indistinguishable from a commit. The original's
+   WAL carries CRC32 per record; a phext-native store wants an optional
+   per-scroll seal or checksum line convention blessed by the format.
+3. **No atomic multi-scroll write.** Batch atomicity still comes from
+   log-first discipline — write the intent as WAL scrolls, apply after —
+   exactly as in any format. Phext doesn't claim this, but a native
+   "commit" primitive (a scroll whose presence validates a preceding
+   run) would make the pattern a format feature instead of a convention.
+4. **No durability contract.** Nothing in the library or the format
+   documentation states the persistence rules a host must follow —
+   fdatasync per commit batch, tmp-write + rename + directory sync per
+   rewrite. Every phext host re-derives them privately; we did, and one
+   of our three bugs lived exactly there (directory sync on a bare
+   relative path). A one-page durability profile for phext hosts would
+   eliminate a class of silent data-loss bugs across every future store.
+5. **Empty-scroll addressing friction.** Advancing across a volume or
+   book boundary mints empty intermediate scrolls, and whether
+   `explode` materializes them is the kind of detail you learn only by
+   building on it. The WAL addressing here is relative to the snapshot
+   baseline precisely so an append never needs more than one break past
+   live content. The rule "a scroll exists iff it holds a byte" is clear
+   in prose; its round-trip behavior through implode/explode deserves to
+   be stated just as plainly.
+6. **Binary values inside line-structured scrolls.** `binary.rs`
+   hoisting exists and works for whole scrolls, but it doesn't compose
+   inside a line grammar — a binary field in a `key=`/`value=` scroll
+   rides as base64 at +33%. Fine for this core (values were text); a
+   store with binary values pays it on every byte.
+
+## Revised verdict
+
+Round 1's seams stand, and Integration 1 (HoloStore as a phext scroll
+store) is now demonstrated rather than argued: the storage core of a
+consensus KV store re-implemented in 717 lines and one text format,
+performance in the same class as the original at the layer phext
+addresses, zero acknowledged writes lost across kill -9 testing, and a
+store an operator can read with `less`. The complexity didn't move —
+it was representation, and it is gone. What remains in the 717 lines is
+the irreducible core: ordering, syncing, serving. The gaps above are
+the format's growth list, in the order this build hit them: an append
+writer, per-scroll integrity, a durability profile, a commit primitive,
+and plainer words about empty scrolls.
 # Level Editor — edit.phext.io free example page (phext-lattice PR #65)
 
 Title: Level Editor — edit.phext.io free example page (phext-lattice PR #65)
