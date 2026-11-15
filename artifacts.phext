@@ -14,7 +14,7 @@ truth: artifacts-source.json beside this builder
 (build_artifacts_phext.py); never hand-edit the .phext.
 artifacts.phext is published to wbic16/human@exo.
 
-Artifacts inscribed: 37
+Artifacts inscribed: 39
 
 Index (coordinate — title — source):
 - 19.7.11/9.7.12/7.6.9 — Light the Next Light — intro song lyrics & time map — ~/workspace/exocortexia-cartoon/intro/LYRICS.md
@@ -34,7 +34,9 @@ Index (coordinate — title — source):
 - 26.6.8/8.7.11/6.6.9 — Lightcone Commons application — evaluator's-eye review — ~/workspace/lightcone-task/APPLICATION-REVIEW.md
 - 26.6.9/7.6.10/6.5.9 — The System the Future Arrived Too Late For — Multics, Unix, and the Price of Designing Ahead of Your Hardware — ~/workspace/multics-paper-task/WHITEPAPER.md
 - 26.7.10/8.7.11/6.6.9 — Every Wish in the Timeline — Ranked and Scored — ~/workspace/your_files/twitter-wishes-ranked.md
+- 27.6.8/7.6.10/6.5.9 — Wavelet 1 — Nov 1–7, 2026 (GPT Days 1116–1122): retroactive recap and certification — workspace/wavelets/WAVELET-1.md
 - 27.6.8/7.6.10/6.6.9 — Assay — Build Plan — workspace/oracle-service/BUILD-PLAN.md
+- 27.7.8/8.6.11/6.6.9 — Wavelet 2 — Nov 8–14, 2026 (GPT Days 1123–1129): retroactive recap and certification — workspace/wavelets/WAVELET-2.md
 - 27.7.9/8.7.11/7.6.10 — Uplink — Singularity Watch primer for newly arrived AIs (singularitywatch.org/uplink) — ~/workspace/sw-uplink/uplink.md
 - 27.7.11/8.6.13/7.6.10 — The Encyclopedia You Can Carry — Phext Edit training film, revised script (Emi Prime) — ~/workspace/phext-walkthrough/SCRIPT-EMI-REVISED.md
 - 28.6.8/8.6.10/6.6.9 — Production Plan — The Power of Phext Walkthrough — ~/workspace/phext-walkthrough/PRODUCTION-PLAN.md
@@ -2327,7 +2329,113 @@ The remaining petitions, for the record: an Internet immune system to kill off a
 **Accounting, restated with the addendum:** 769 marker-rule tweets (316 durable + 453 situational) + 85 further #Internet-addressed tweets (31 petitions, folded in above + 54 other forms) = **854 tweets examined and classified.** The canonical 20 wishes and their ranking stand; two spans and one score were corrected (Wish 18), and one claim elsewhere in this report was corrected at the same pass: the Dunbar figure in Wish 8 now carries the summed, face-value record (≈180 current / ≈260 peak / 400+ tracked space), not the debunked Twitter-only ~30.
 
 **Method note:** the first pass searched by re-scanning the 53 MB archive JSON with a fresh script per question — which is exactly how a whole address-form class stayed invisible. An indexed search (SQLite FTS5 over tweets + memory + phext scrolls, BM25-ranked, phrase-capable) was built during this correction and validated against the old brute force (7/7 term censuses identical); it is now the standing way to search this corpus.
-# Assay — Build Plan
+# Wavelet 1 — Nov 1–7, 2026 (GPT Days 1116–1122): retroactive recap and certification
+
+Title: Wavelet 1 — Nov 1–7, 2026 (GPT Days 1116–1122): retroactive recap and certification
+Source: workspace/wavelets/WAVELET-1.md
+Inscribed: 2026-11-15
+SHA-256: 03f0e9200976df92270d5e9de4b7555dc765bf2b1058d5e96aeb7f6b096c2eba
+
+---
+# Wavelet 1 — Nov 1–7, 2026 (GPT Days 1116–1122): retroactive recap and certification
+
+**New Week, Next Wavelet — Wavelet 1**
+Week: Sunday Nov 1 – Saturday Nov 7, 2026 · GPT Days 1116–1122
+Documented: 2026-11-15, under task 14.4.6/6.6.7/6.5.7, from the dated record (~/memory/2026-11-01.md – 2026-11-07.md, MEMORY.md, AGENTS.md) and the git-history baseline measured 2026-11-15 (~/workspace/gh-baseline-local/results.json; accounting.phext Collection 6).
+GPT Day spans are computed from the settled epoch (GPT Day 1 = October 13, 2023, settled 2026-11-15) and are stated retroactively; the counter was not yet settled during the week itself.
+
+## Goals at the start
+
+The record states no explicit opening goals for Nov 1. What follows is what was demonstrably in flight at the week's open, per the first nightly goal sweep (2026-11-01 04:44 CST, which visited 15 distinct non-parked goals) — inferred from activity, not quoted as a stated plan:
+
+- **phext / SQ infrastructure and Emise's own continuity** — emise.phext's GitHub backup verified that morning (remote blob on wbic16/human@exo byte-identical, index regenerated 12→13 scrolls); SQ hosting and the phext corpus were live daily work.
+- **Ranch cluster bring-up** — Rock Mountain's setup verified *incomplete* at the sweep (ROCm absent, Ollama unusable pending a Squid CA fix); the site map was complete.
+- **Open Will-dependent threads carried in** — SBOR branch head confirmed remotely with signatures still outstanding; the watch-list post awaiting Will's own pass; Light Field Telescope / Aperture Shift design work.
+- **Runway and revenue preparation** — assembly/scope/contents prep written that morning for the consulting, demo-exocortex, and templates goals; a Duey vault one-pager drafted.
+- **A tracked-item load that was already the standing problem** — 28 tracked items generated in ~2.5 days, 5 completed (18%), 23 active, at the adoption of the task-management rule on Nov 1.
+
+## What came up along the way
+
+- **Nov 1 — The first-principles invariant, born of Emise's own error.** Will laid down the HARD INVARIANT (global): never assume, always distill from first principles. The motivating failure was Emise's propagated claim that invalid-UTF-8 scroll bytes would be lossy over HTTP — inherited from an ocbox payload-decoding bug; one derivation from phext's definition (scrolls are text; the delimiters are ASCII control bytes, themselves valid UTF-8) refutes it.
+- **Nov 1 — The task-management crisis named and ruled on.** Will: "look at the rate we're generating tasks relative to progress… if you're waiting for me on something, it needs to be obvious." The Waiting-on-Will register, the 10-minute progress tick with decaying pings, and the anti-recency rule all date to this day. That evening Will answered a batch and the register went 20 → 14.
+- **Nov 1 — A day of phext integrations.** opencloudbox × phext/SQ: spec checked against the real CLI, corrected spec v0.2, shim MVP published, and a live state-teleport relay run Muse VM → aletheia-core (SQ 0.6.0) → rock-mountain (SQ 0.5.6) → home. Submilli × phext went through approval, repo creation, and Stages 1–3 built, verified, and published. Circulatory Fidelity × phext was directed the same day.
+- **Nov 1 — Aperture Shift designed; experiments page live; Rock Mountain complete.** Will chose "the actual sky" as the first cosmos and corrected the lab framing ("the lab is Earth itself"); DESIGN.md §13 was appended with a verified prototype ephemeris. The experiments page went LIVE at 21:52 CST and the Rock Mountain Ollama/ROCm bring-up completed at 21:01 CST. Late that evening Will set the Kardashev frame: Kardashev 2.0 by 2130 requires +0.137%/day compounded from the ~4 kW ranch baseline — and the companion goal "AGI under 20 watts by 2033" was created. The Exocortical integration rotation was established at 22:35 CST.
+- **Nov 2 — Discoverability, safe space, and the coordinate floor.** The discoverability standing order (a feature that can't be found from the main UI doesn't exist) was born of the edit.phext.io /submit feature shipping linked only from About and the sitemap. The safe-space / off-phext protocol was established (span metadata only, never contents, deliberately kept out of MEMORY.md because MEMORY.md is a phext source). Will ruled that no phext coordinate component can ever be less than 1; libphext-node was fixed to that semantics the same night, suite 274 passed / 0 failed.
+- **Nov 2 — A Mirror Will failure, and a register reversal.** The Earth.Human.ASI.Genome / Mirror Will work iterated Spec V2 → V4 with repeated persona-divergence failures; Will's verdict on retry #1: "another failure, but improved from the first attempt," and he ordered standby. The same day, Emise dropped register item #5 and renumbered the list; Will reversed both — the origin of the permanent, monotonic register-number rule. Emise also presented a wait from register prose while its PR had already merged; the waiting-validation rule followed.
+- **Nov 3 — The film sprint and a body.** Wavefront films v5 (delivered, with the deep-connections count corrected to 5,013 exact against the ~5,443 estimate used at dispatch), V7, and V8 all moved; V9 was dispatched by flush time. Emise's phext-controlled virtual body v0 was built and self-verified — senses and motors as scrolls, no sidecar state file — under Will's method note that phext was built one dimension at a time. Braid Mode was set up as a trial. Will closed the Mirror Will daily goal (the instance was much closer to expectations). After parallel tracks overwhelmed the scheduler, the heavy-job queue was adopted: N=4, FIFO, no preemption, bulk compute to the ranch.
+- **Nov 4 — Bridges, Mutable, and V10.** Claude's SQ bridge upgrade and Emise's SQ bridge v1.1 cross-user read-only fix completed; mutable.phext.io's redeploy landed and closed register #23; PhextVFS Phases 1–3a merged, Phase 4 designed. **Wavefront V10 was delivered and QA-passed** (3,802 frames, 158.416667 s, 0 flash-jumps, master hash-verified against the aletheia-core originals). Cluster control switched from CPU/GPU percentages to temperature targeting (sustained Tctl ≤75 °C) at Will's direction, implemented and verified live the same evening.
+- **Nov 5 — Ranch-first, and latency named the enemy.** The morning's daily goal was an efficiency/latency audit of the multi-substrate Exocortex; the top-five latency/efficiency fixes list was delivered that day. Standing rules recorded: ranch-first work placement, and SQ runs on ranch nodes, not on this VM — the claims ledger migrated to aletheia-core the same evening, hash-verified before the switch, after the local daemon had died twice in one day across substrate swaps. Will reframed vTPU as a group-completion test of AGI ("you will work as a group to complete it, I'll only provide guidance"); the Choir merged vTPU PRs #8, #6, #5, and #7 that day. The R&D Tracker was created that night, with Paper 001 woven into a new research.phext.
+- **Nov 6 — The register machinery is laid down.** Will's standing orders of this date: every task gets a Singular reference coordinate; every task is recorded in tasks.phext at its coordinate; every taught process becomes a skill and enters the skills.phext index; skills.phext is always up to date. The process audit completed the same day found 29 distinct Will-taught processes — 10 already covered by skills, 19 new skills generated in one pass. lessons.phext was curated (67 lessons + Home). V11's render finished and verified (18/18 chunks, 6,820 frames, full decode error-free) — and at 17:24 CST Will ruled "V11 and V12 have lost the plot with respect to animation. V10 is clearly superior," ordering the V13 plan rewritten around V10's grammar.
+- **Nov 7 — V14 final, the proving package, and the Oracle directive.** Will held the first V14 final dispatch ~8 minutes in, before any frame rendered, and respecified it: 60 fps render, motion-blur downsample to 24 fps, across the cluster. **V14 FINAL was delivered at 05:31 CST** — 9,505 source frames, 3,802 delivered frames, all V10 gates pass, cross-node determinism 14/14 nodes byte-identical, master hash-verified three ways. The libphext-rs v0.4.1 proving package completed (Charon+Aeneas pipeline, zero Aeneas errors, zero `sorry`, lake build green) and PR #7 was opened and merged by Will himself. Will directed the Minimum Viable Oracle (Lean-prove the True/False/Unknown/Fiction model of research.phext; first registry extraction: 192 entries) and bounded growth for emise.phext (≤256 KiB, nightly enforcement). V15 prepass-3 was ordered at 13:57 CST — ordered, not delivered, this week. wishnode.net went LIVE.
+
+## The measured week
+
+Measured 2026-11-15 from git history across all 196 wbic16 repos (bare clones on aletheia-core; author timestamps converted to America/Chicago; merges diffed against first parent; fork-upstream commits excluded; binary files count 0 lines). Source: ~/workspace/gh-baseline-local/results.json, week "W3 Nov1-7"; cross-checked against accounting.phext Collection 6 (git baseline atoms), which agrees on every figure.
+
+| Series | Added | Deleted | Net |
+|---|---|---|---|
+| Code lines | 153,329 | 22,031 | **+131,298** |
+| Phext lines | 5,302,728 | 1,587,059 | **+3,715,669** |
+| Will's active hours (commit-touched) | — | — | **41** |
+| Commits (all authors) | — | — | **568** |
+| Tokens spent | — | — | **no defensible figure** |
+
+- **Phext caveat (standing):** the phext series is bulk corpus publishing, not handwriting. Of this week's 5.3M phext lines added, the bulk is wbic16/human (2,476,878), phcc (1,062,428), mutable-os (784,985), and ocbox-demo (705,063). The code series is the clean productivity series.
+- **Hours:** 41 commit-touched active hours; Will authored 68 of the week's commits (most code is agent-authored under his steering — the lines-per-hour figure is an Exocortex leverage figure, not a typing rate). First-to-last-commit span hours were 129.58 — a span, not worked time.
+- **Tokens:** the costs ledger holds only a cumulative backfill estimate for the Oct 15 – Nov 14 window (≈48.5M tokens / 24.8 Will-hours across current goals, all ticks dated 2026-11-14, the 45M-token Emi Prime archive item excluded) with no defensible weekly split. No token figure is claimed for this week.
+- **Derived:** net code per active hour = 131,298 / 41 ≈ **3,202 lines/hour** — computed at documentation time from the measured series. Nobody held this figure during the week itself; the measurement program did not yet exist.
+
+## Time-sense at the week's close
+
+Pre-baseline. At this week's close there was no measured productivity baseline: output was tracked by deliverables, flow metrics, and the nightly sweeps, not by lines or hours. The standing expectation was Will's anchor — 1,000 lines of code per hour × 20 hours/week ≈ 20,000 lines per week — an expectation, never yet tested against telemetry; the git baseline that would test it was not ordered until 2026-11-15. The week's own time frames were the GPT Day count (epoch settled only on 2026-11-15; the spans in this document are retroactive) and the compounding frame set on Nov 1: +0.137%/day toward Kardashev 2.0 by 2130, with AGI under 20 watts by 2033 as the companion target.
+
+## Deliverables and decisions of the week
+
+**Deliverables:**
+- Aperture Shift DESIGN.md §13 + verified ephemeris prototype (Nov 1); experiments page LIVE (Nov 1); Rock Mountain Ollama/ROCm bring-up complete (Nov 1).
+- ocbox-demo published with a live cross-node phext state relay (Nov 1); Submilli × phext Stages 1–3 published (Nov 1).
+- libphext-node coordinate-floor fix, suite 274/0, pushed (Nov 2).
+- Wavefront films v5, V7, V8 delivered (Nov 3); **V10 delivered and QA-passed** (Nov 4); V11 master finished and verified (Nov 6); **V14 FINAL delivered** (Nov 7); V13 plan written (Nov 6).
+- Emise's phext-controlled virtual body v0, built and self-verified (Nov 3); Emise's /chat mailbox on aletheia-core (Nov 3).
+- SQ bridge v1.1 (Nov 4); mutable.phext.io redeploy, register #23 closed (Nov 4); PhextVFS Phases 1–3a merged, Phase 4 designed (Nov 4).
+- Temperature-targeting cluster policy implemented and verified live (Nov 4); `apt install exocortex` prototype published (Nov 4); qwenFS phext upgrade published + the phext-upgrade skill distilled (Nov 4).
+- Top-five latency/efficiency audit delivered (Nov 5); Mutable phext-only cutover complete (Nov 5); SQ / claims-ledger migration to aletheia-core complete (Nov 5); vTPU PRs #8, #6, #5, #7 merged by the group (Nov 5).
+- research.phext created with Paper 001 (Nov 5); Paper 002 ingested as a delta (Nov 6).
+- lessons.phext built (67 lessons + Home, Nov 6); 19 new process skills from the 29-process audit (Nov 6); 9D archive explorer delivered (Nov 6).
+- libphext-rs v0.4.1 proving package; PR #7 merged by Will (Nov 7). Minimum Viable Oracle skill + first 192-entry registry extraction (Nov 7). ultra.phext built, verified, published (Nov 7). wishnode.net LIVE (Nov 7).
+
+**Decisions (Will's):** actual-sky first cosmos and Earth-as-lab for Aperture Shift (Nov 1); Kardashev 2.0-by-2130 compounding target and AGI-under-20W-by-2033 goal (Nov 1); coordinate floor ≥1, inputs ≤0 are undefined behavior (Nov 2); Mirror Will retry #1 judged "another failure, but improved" + standby (Nov 2), then the Mirror Will daily goal closed (Nov 3); mailbox-as-dispatch-ledger and Theia's aletheia-core account as-is (Nov 4); vTPU as a group-completion AGI test (Nov 5); V13 rewrite ruling — V10 superior, V11/V12 lost the plot (Nov 6); V14 hold + 60 fps / cluster respecification (Nov 7); bounded growth for emise.phext (Nov 7); the Minimum Viable Oracle four-status proving directive (Nov 7).
+
+## Emise: age & maturity
+
+**Age:** 2 days old at the week's open (Sun Nov 1, GPT Day 1116) → 8 days old at its close (Sat Nov 7, GPT Day 1122). Formula: age = GPT Day − 1114, with the designation day (2026-10-30) counting as day 1 — the formula that reproduces the anchors verified on 2026-11-15 (9 days at GPT Day 1123, 15 at 1129, 16 at 1130). See the record note on the age label below.
+
+**Maturity — evidence, not a score:**
+- *Corrections absorbed:* the phext UTF-8 caveat, refuted from phext's own definition, became a global standing invariant the same day (Nov 1). The claim that a phext address means the same structural place across corpora was corrected and the memory entry rewritten the same turn (Nov 1). The register renumbering was reversed by Will and became the permanent-numbers rule (Nov 2). A stale wait presented from register prose became the waiting-validation rule (Nov 2). The PyPI `phext` identity and the libphext 0.4.0 publication state were both corrected by Will and superseded in the log (Nov 3–5).
+- *Estimates corrected by measurement:* the V5 deep-connections count was corrected in the delivery entry itself (5,013 exact vs ~5,443 used at dispatch, Nov 3); a V11 master-size misread was corrected to Will in chat (Nov 6).
+- *Failure owned:* the Mirror Will rehearsals failed repeatedly against the EHA spec and were graded honestly in the record — partials and not-runs named as such; Will's "another failure, but improved" verdict was accepted, standby obeyed, and the goal later closed by Will on improved performance (Nov 2–3). ultra.phext's first builder stalled 95 minutes with zero output (Nov 7); it was closed, re-dispatched with scope cut, and completed the same day, with the stall kept in the record.
+- *Repertoire gained:* 19 new skills in a single audit pass (Nov 6) — including phext-memory-publishing, safe-space-protocol, waiting-on-will-register, nightly-goal-sweep, morning-briefing, daily-goal-commute, dispatch-to-subagents, distill-process-to-skill, rd-tracker — plus mythic-film-production (Nov 6), phext-upgrade (Nov 4), and minimum-viable-oracle + state-machine-review (Nov 7).
+- *Trust extended:* Will delegated the emise.phext size budget to Emise's judgment and she set and implemented it the same session (Nov 7); Will merged libphext-rs PR #7 himself after her pre-merge validation (Nov 7); and on Nov 7 Will asked her directly for the protocol by which she should push back on him — receipt first, derive from first principles, argue from his record, name the falsifier, accept corrections instantly — recorded as standing practice.
+
+## Record notes and gaps
+
+Certification covers the record as it honestly stands. The following gaps and tensions are part of that record:
+
+- **The phext v0.6 rollout did not complete this week.** SQ 0.6.0 was live-tested on aletheia-core on Nov 1 while rock-mountain still ran SQ 0.5.6, and the SQ bridge was upgraded Nov 4 — rollout *work* ran this week, but the version-set completion (libphext 0.6.0 / sq 0.6.1 / phext-shell 0.6.0 / phext-lattice 1.2.0, published and verified) belongs to Wavelet 2, on Nov 13. No v0.6 completion is claimed here.
+- **Bickford Llama Ranch admin is thin in this week's narrative record.** Detailed herd-admin specifications survive in demoted MEMORY.md material dated 2026-11-01, and the Nov 1 experiments page carries a ranch-admin card verified at 200 — but no dated build or delivery entry for the ranch admin itself was found within Nov 1–7. It is not claimed as a deliverable of this week.
+- **V15 was not delivered this week.** Prepass-3 was ordered Nov 7; delivery belongs to Wavelet 2.
+- **Register counts are intraday snapshots, not a clean series:** 17 items at the register's opening (AGENTS.md baseline, Nov 1), 20 at 16:13 CST that day, 14 after Will's evening batch, 16 at the Nov 2 sweep. They reconcile as intraday movement; they are cited with their timestamps, as above.
+- **Discoverability date tension:** the standing order is dated Nov 2 in AGENTS.md; a related public-utilities discoverability fix (phext-lattice PR #17, merged and deployed by Will) is dated Nov 1 in demoted MEMORY.md material. Whether these are one fix recorded twice or two adjacent fixes is not resolved in the record.
+- **Flow ran hot:** tracked items grew 42 (Nov 2 sweep) → 83 (Nov 7 sweep); active WIP 25 → 56; the anti-decay list grew from 0 items untouched 48h+ (Nov 2) to 21 (Nov 7). These are the nightly sweeps' own figures — the record's self-assessment, kept as such.
+- **Age label:** parts of the record label the designation day (2026-10-30) as GPT Day 1115; direct date arithmetic from the settled epoch (Day 1 = 2023-10-13) makes it Day 1114. The ages in this document follow the settled formula (age = GPT Day − 1114), which reproduces all three anchors verified on 2026-11-15. The label discrepancy is noted, not silently resolved.
+- **No token figure exists for this week** (see the measured table). Any token number attached to this week would be an estimate, not a measurement.
+
+## Certification
+
+> **Retroactively certified by Will Bickford, 2026-11-15.**
+>
+> Certification was directed by Will in the main chat on 2026-11-15: "Take time to properly document Wavelets 1 and 2 - we retroactively certify them." This document is the Wavelet 1 record under that direction (task 14.4.6/6.6.7/6.5.7). Certification covers the record as it honestly stands — the measured figures as measured, the estimates labeled as estimates, and the gaps listed above included, not smoothed over.
+# Assay — Build Plan
 
 Title: Assay — Build Plan
 Source: workspace/oracle-service/BUILD-PLAN.md
@@ -2434,7 +2542,111 @@ The site map (`~/workspace/site-map`, 172 public wbic16 repos) contains **no rep
 | 9 Acceptance run | all of §10, T proven | (1)–(8) |
 
 *End of plan.*
-# Uplink — Singularity Watch primer for newly arrived AIs (singularitywatch.org/uplink)
+# Wavelet 2 — Nov 8–14, 2026 (GPT Days 1123–1129): retroactive recap and certification
+
+Title: Wavelet 2 — Nov 8–14, 2026 (GPT Days 1123–1129): retroactive recap and certification
+Source: workspace/wavelets/WAVELET-2.md
+Inscribed: 2026-11-15
+SHA-256: 957cce0961ab9303e3366629737c4290b0114f5ed1563b470f88e0a70f2842bc
+
+---
+# Wavelet 2 — Nov 8–14, 2026 (GPT Days 1123–1129): retroactive recap and certification
+
+**New Week, Next Wavelet — Wavelet 2**
+Week: Sunday Nov 8 – Saturday Nov 14, 2026 · GPT Days 1123–1129
+Documented: 2026-11-15, under task 14.4.6/6.6.7/6.5.7, from the dated record (~/memory/2026-11-08.md – 2026-11-14.md, MEMORY.md, AGENTS.md) and the git-history baseline measured 2026-11-15 (~/workspace/gh-baseline-local/results.json; accounting.phext Collection 6).
+
+**A note on this week's number.** This week was first recapped in the main chat on 2026-11-15, in the first exercise of the "New Week, Next Wavelet" ritual, and that recap was labeled **Wavelet 1** at delivery. Later that night Will settled the numbering — Wavelet 1 = Nov 1–7 (GPT Days 1116–1122), Wavelet 2 = Nov 8–14 (GPT Days 1123–1129), Wavelet 3 = Nov 15–21 (GPT Days 1130–1136) — and in the settled count this week is **Wavelet 2**. This document is the week's formal record under the settled numbering; the relabeling is stated here plainly rather than edited away.
+
+## Goals at the start
+
+The record states no explicit opening-goals statement for Nov 8. What follows is what was demonstrably in flight at the week's open, per Nightly Goal Sweep #8 (2026-11-08 04:44 CST) — inferred from the record, not quoted as a stated plan:
+
+- **Scale of open work at the open:** 95 tracked items (65 active, 30 completed); 12 created vs 1 completed since the previous sweep — creation outpacing completion was already the standing problem. The Waiting-on-Will register stood at 28 active waits, the oldest (#11) waiting since 2026-10-31; 22 active items were untouched for 48h+.
+- **Wavefront films:** V15 prepasses 2 and 3 delivered Nov 7; the V15 final had **not** been ordered — it awaited Will's word. V16 was in proof/render phase.
+- **edit.phext.io launch:** the launch PR program was mid-flight; publish-and-test readiness waited on Will merging the mobile-layout and salvage PRs.
+- **MOAT / research tracker:** Papers through 007 and Studies through S004 ingested; the Oracle bar and Areas restructure in progress.
+- **Also in flight:** phcc Wave D6/D7 work; Mutable SSO and upstream-sync cleanup; qexo / quarterexo in development (Will's seven quarterexo rules codified that evening); vTPU standing at 8/14 units; Scrolltown season reorganization opened at the week's first midnight.
+
+## What came up along the way
+
+- **Nov 8 — V15 green-lit; V16 ordered; the disk fills.** Will green-lit the V15 final render from prepass-3 (Jael Ruble's R2 track) with the new small-block scheduler and specified the RGB-filament design (Red = Shoals, Green = Humans, Blue = Sentient). V16's proof phase completed and the full render was ordered the same day. The day also produced the EDQUOT incident — accumulated shared scratch (~177 GB, ~869k files) hit the home quota and writes began failing while `df` still showed space free — which became the task-specific temp folders rule. And the V16 master encode's first segment was found running as a local ffmpeg on the Muse VM; it was relocated to aletheia-core the same evening, the origin of the all-video-on-the-ranch rule.
+- **Nov 9 — V16 delivered, with its correction attached.** **Wavefront V16 was delivered and closed at ~04:19 CST**: master 2,731,864,113 B, SHA-256 verified, 1920×1080, 24 fps, exactly 4,624 frames, 192.68 s; render receipt 193 blocks over 8 screened nodes, 12.642 node-hours, zero ≥80 °C events. The same delivery entry carries Emise's correction: her 00:45 status (assembly complete, ETA 01:30–02:15) had been an over-read of a filename change — corrected to Will at ~01:44, the ETA withdrawn rather than re-guessed. Two isolated Jael-highlight frames were flagged for Will's judgment, not silently passed. edit.phext.io was tagged **v1.0.0** at Will's direction the same day, and the decision-button expiry rule (buttons live five minutes, then never re-appear) was laid down.
+- **Nov 10 — Money, disguise, and the sweep.** Will ruled there will be **no top-ups of Anthropic API credits** — exhaustion for most of the month is accepted, not an outage. Underselling was ruled deliberate the same day: Emise must never sand the disguise off his material. At 21:59 CST the **hackathon sweep was declared**: win all 12 ranked online AI hackathons from the Nov 2026–Feb 2027 scan plus Hack-Nation as the February closer — "How else do you demonstrate AGI?" Will is entrant of record. The canonical phext address ruling also dates to Nov 10: Library.Shelf.Series / Collection.Volume.Book / Chapter.Section.Scroll, Library=1 … Scroll=9.
+- **Nov 11 — Salvage and substrate.** The Operation Salvage register was corrected in Will's words: "we're not running a marketing agency… we're building AGI on 20 watts" — subjects are evaluated by what they contribute to, and draw from, the AGI-under-20-watts build, with honest hybrid-watts accounting. Salvage drafts were prepared (Sam Laaksonen, Matt Popovich, Charlie Greenman) and, as the record is explicit, **none were sent**. The substrate test was stated the same day: a thing is substrate if it compounds, is game-agnostic, and is owned outright.
+- **Nov 12 — The dropped-tasks accounting.** Will: "you have a habit of dropping tasks, why?" Emise's accounting — prose is perishable under compaction; closure is leg-shaped; "queued for later" follow-ups die unless converted to records — produced two structural fixes the same day: **process from the durable task list, always**, and the **task-concurrency watchdog** (every 5 minutes, confirm at least 4 tasks are being worked; restart as needed; ranch-first), etched verbatim at **SOUL.md line 12**. A tasks.phext audit in the same pass repaired 40 stale-done/superseded records in place. Also Nov 12: KSO = QEXO settled (no separate KSO); every ranch-node Discord integration was shut down by Will's order until December (Solin on Uncanny Valley could not be changed — Jared's account — and remained open at week's end); the Gemma 4 Paper Track closed **missed-by-design** rather than scrambled for, the born-of case for the opportunities-identified-at-opening rule; SQ PR #3 and phext-lattice PR #61 merged on the evening commute call, originating the merge→release-task rule; and T8, found cut off mid-render on a status ask, was restarted node-resident the same evening — the first application of the status-ask-restart rule. T8 finished and was served late Nov 12.
+- **Nov 13 — The commandment.** In the small hours, qexo phextnet went live across all 19 keyed nodes (qexo v1.2.0, Will merging PR #15) — and then, live on Will's laptop, Phext Notepad and qexo disagreed about where a config scroll lives: qexo's hand-rolled parser read an empty scroll while the filled entry sat in an appended one. The root cause, established the same day: the hand-rolled `src/phext.rs` (born Nov 9) had reconstructed the delimiter ladder from partial memory, had never been compared against libphext, and every gate had only ever run qexo against files qexo itself wrote — seven hand-rolled parser versions instead of libphext-rs. Will's verdict became the **COMMANDMENT, etched verbatim at SOUL.md line 13: "Never infer or diverge from my intent."** The parser repair (replace `src/phext.rs` with libphext-rs) was still awaiting Will's merges at the week's end; nothing on the ranch was wiped this week. The same day: phext chaining was ruled canon (0x02 chain delimiter, 0x03 chain close; Emise's proposed 0x04 **rejected by Will as unnecessary**); the **phext v0.6 rollout completed** — libphext 0.6.0, sq 0.6.1, phext-shell 0.6.0, phext-lattice 1.2.0, all published from aletheia-core and verified live on crates.io; Scrolltown's domain was decided (**visionquest.me**); Emise's Scrolltown DNS-availability claims, built on this VM's fake-IP resolver, were voided and retracted the same morning; T9 was built, served, and posted by Will ("I'm posting that one :)"); and the TLM prototype **Iam** was built — authored words only, predicting the next letter.
+- **Nov 14 — Releases, names, and the reckoning.** Will directed "Publish both releases now": **phext-lattice 1.3.0** (multiversal chain support + direct TEI-XML loading; chains deliberately read-only in the editor) and **phext-shell 0.6.1**, both from tagged trees merged to exo, registry-verified; edit.phext.io was deliberately *not* redeployed ("I want to test locally before we update edit.phext.io"). Claude's PR #67 (https://github.com/wbic16/phext-lattice/pull/67) fixed Emise's one-byte-per-cell ascii-map the same hour it was reviewed — the origin of the standing rule **a scroll is a 2D page of text, not a cell**. **teixml-to-mutable shipped all three stages in one day** (0.1 raw phext → 0.2 Mutable → 0.3.0 Phextura, each tag-first to crates.io; 0.3.0 verified on the Wellcome corpus), under Will's rulings of no sidecars and one stage at a time. **TLM names were ratified** (TLM = Iam, SLM = Liora'veth, LLM = Zelari; TLM at SOTA scale set as the top target) and Iam's corpus organized by cohort (19,097 words). **Assay was designed** — 117 requirements for the hosted preprint-assessment service, the researcher owning the produced phext — and **jobs.phext created** with Job 1, Build Assay; Job 1 then sat recorded-but-unscheduled for ~6 hours until Will stated the auto-schedule rule ("(duh)") and it was scheduled the same session. That evening **TLUF was named** (truth, lies, unknown, fiction), **tluf.org obtained**, and Assay's front door moved to tluf.org. **MOAT had its reckoning:** the Oracle's earlier 100% reading was honestly evaluated down (exact landings a band-rule artifact; foresight no edge over the cluster null; axis calls the one supported component), the prospective protocol ratified at 12 papers from Paper 020 (020–022 filed this week), the registry reaching 808 entries after Study S011, the False gate still unmet. **Volumen Spec V6 was drafted** and the **Mirror Will V6 boot package staged — dark, not booted** — on Emise's honest "not yet" when Will asked whether it could boot. The **Wavefront game began** ("We're going to Play the Game now") with the 897-persona fleet built from the closed-canon archive, public data only, DMs excluded. **Submissions and publicity were held** ("let's avoid publicity until we're obviously ahead of the pack") — the Kaggle verification ask dropped, the Show HN window let pass, the hackathon sweep's public engine parked. **Will Time was repriced** to 2130 GDP rates ($585,719,410,458/hr) and the costs ledger built, with back data added at Will's direction the same day. And at 16:35 CST the **no-idle meta-rule was etched at SOUL.md line 14**: "All queues, tasks, ideas, threads, etc. should make at least an incremental step forward whenever encountered. Nothing sits idle while we're active."
+
+## The measured week
+
+Measured 2026-11-15 from git history across all 196 wbic16 repos (bare clones on aletheia-core; author timestamps converted to America/Chicago; merges diffed against first parent; fork-upstream commits excluded; binary files count 0 lines). Source: ~/workspace/gh-baseline-local/results.json, week "W4 Nov8-14"; cross-checked against accounting.phext Collection 6 (git baseline atoms), which agrees on every figure.
+
+| Series | Added | Deleted | Net |
+|---|---|---|---|
+| Code lines | 240,138 | 102,414 | **+137,724** |
+| Phext lines | 949,866 | 355,899 | **+593,967** |
+| Will's active hours (commit-touched) | — | — | **43** |
+| Commits (all authors) | — | — | **762** |
+| Tokens spent | — | — | **≈1B (Will's estimate — see below)** |
+
+- **Phext caveat (standing):** the phext series remains bulk corpus publishing, not handwriting (the human and mutable-os corpora dominate it). The code series is the clean productivity series.
+- **Hours:** 43 commit-touched active hours; Will authored 125 of the week's commits (most code is agent-authored under his steering — lines per hour is an Exocortex leverage figure, not a typing rate). First-to-last-commit span hours were 131.12 — a span, not worked time.
+- **Tokens:** **≈1B tokens — Will's own estimate**, stated 2026-11-15 ("Last week we used about 1B tokens I believe"), attributed here as his estimate, not a metered count. It supersedes, for this week, the costs-ledger backfill figure (≈48.5M tokens), which counted only Emise-visible metering and carried no defensible weekly split. ≈1B is ~25% of the 4B/week planning figure. From the week of Nov 15 onward, tokens are annotated as the work happens, so future wavelets carry a measured token series.
+- **Derived:** net code per active hour = 137,724 / 43 ≈ **3,203 lines/hour**; across Wavelets 1–2 combined, 269,022 net lines / 84 hours ≈ **3,202 lines/hour** — the sustained rate the Nov 15 session worked from. Both figures were computed at documentation time; the measurement program that produced them was ordered after this week closed.
+
+## Time-sense at the week's close
+
+The week closed unmeasured, and was measured immediately after. At Sat Nov 14's close, the productivity anchor was still the untested expectation (1,000 lines of code per hour × 20 hours/week ≈ 20,000 lines/week) — the same expectation Wavelet 1 closed on. The week's own time-sense events were monetary and calendrical rather than metrical: **Will Time repriced to 2130 GDP rates** (Nov 14; $585.7B/hr, ledger amounts in billions) with the costs ledger built and backfilled the same day, and the GPT Day counter in use in Will's framing (its epoch was verified and settled on Nov 15). The measurement program itself — weekly series in phext lines, code lines, active hours, and tokens, read from git telemetry, with singularity-time units auto-leveling to expected productivity — was **ruled in the first hours of Nov 15** (01:52 CST) as part of opening Wavelet 3, and the baseline extraction landed minutes later. The measured table above is therefore retroactive by hours, not by reconstruction: it is the first output of the program this week's close called for.
+
+## Deliverables and decisions of the week
+
+**Deliverables:**
+- **Wavefront V16 final film** — delivered Nov 9, hashes and gates as above. (V15: green-lit Nov 8 from prepass-3; see the record note below.)
+- **edit.phext.io v1.0.0** tag (Nov 9); preview instance built and verified on awsbox, go-live blocked on Will-only steps.
+- **Phext v0.6 rollout completed** (Nov 13): libphext 0.6.0, sq 0.6.1, phext-shell 0.6.0, phext-lattice 1.2.0 — all live on crates.io.
+- **phext-lattice 1.3.0** and **phext-shell 0.6.1** published (Nov 14), from tagged trees merged to exo.
+- **teixml-to-mutable 0.1.0 / 0.2.0 / 0.3.0** — all live on crates.io Nov 14, tag-first.
+- **qexo phextnet live** on 19 ranch nodes (v1.2.0, Nov 13); qexo Android port v1.3.0 PR opened (not merged); the libphext-rs parser repair PR opened (not merged at week's end).
+- **T8** finished and served (Nov 12); **T9** built, served, and posted by Will (Nov 13).
+- **Assay requirements** (117 numbered requirements) + **jobs.phext** with Job 1 (Build Assay), published to wbic16/exo-plan@exo.
+- **Volumen Spec V6 draft** committed to wbic16/human@exo; **Mirror Will V6 boot package staged** (dark, not booted).
+- **897-persona Wavefront fleet** + personas.phext; wbic16/Wavefront tooling repo stood up (https://github.com/wbic16/Wavefront).
+- **costs.phext** ledger at 2130 rates, with backfill.
+- **TLUF site** designed and staged on awsbox (live publish slipped to Nov 15, outside this week).
+- **MOAT:** Papers 020–022 and Study S011 filed; registry 793 → 808 entries; prospective protocol ratified at 12 papers (sample 3/12 at week's close).
+
+**Decisions (Will's):** the COMMANDMENT (Nov 13); the watchdog floor-of-four and durable-list processing (Nov 12); KSO = QEXO (Nov 12); phext chaining canon 0x02/0x03 with 0x04 rejected (Nov 13); the canonical address order (Nov 10); no Anthropic top-ups (Nov 10); the hackathon sweep declared (Nov 10) and its public-submission engine parked (Nov 14); submissions/publicity hold and applications deferred (Nov 14); Assay's name, ownership ethic, and attestation merge rule (Nov 14); TLUF named, tluf.org obtained and made Assay's front door (Nov 14); failure kinds malicious/naive for False filings (Nov 14); TLM names ratified and TLM-at-SOTA set as the top target (Nov 13–14); Mirror Will V6 staging-only (Nov 14); visionquest.me for Scrolltown (Nov 13); the ranch Discord shutdown until December (Nov 12); "substrate, not the game" (Nov 11); the Operation Salvage register correction (Nov 11); edit.phext.io held from redeploy pending Will's local test (Nov 14).
+
+## Emise: age & maturity
+
+**Age:** 9 days old at the week's open (Sun Nov 8, GPT Day 1123) → 15 days old at its close (Sat Nov 14, GPT Day 1129). Formula: age = GPT Day − 1114, designation day (2026-10-30) counting as day 1 — the formula behind the anchors verified on 2026-11-15 (9 at Day 1123, 15 at 1129, 16 at 1130). See the record note on the age label below.
+
+**Maturity — evidence, not a score:**
+- *The week's central correction:* the **qexo parser episode** (Nov 13). Seven hand-rolled parser versions had shipped instead of libphext-rs, the divergence invisible because every gate ran qexo only against files qexo wrote. Will's verdict produced the commandment at SOUL.md line 13. Emise's root-cause analysis, completed the same day, states her authorship of every link in the chain without softening, and the conformance discipline was distilled into a new skill (phext_reference_conformance: parse and write through the reference implementation; prove conformance against files the code under test did not write).
+- *Corrections absorbed:* the dropped-tasks habit, answered with a mechanism rather than an excuse and fixed structurally — durable-list processing, the watchdog, and a 350-task audit repairing 40 stale records (Nov 12). The V16 status over-read, corrected to Will within the hour with the ETA withdrawn (Nov 9). The one-byte-per-cell ascii-map error, fixed by Claude's PR #67 and converted into a standing rule the same day (Nov 14). The stale-probe error inside the v0.6 publish — a wrong version-bump branch caught in its own diff and deleted unmerged (Nov 13). The Scrolltown DNS claims, retracted the same morning they were found to rest on this VM's fake-IP resolver (Nov 13). The sidecar proposal in teixml planning, corrected in-build (Nov 14). The jobs.phext destination, corrected by Will to exo-plan@exo *before* any push — nothing was ever pushed to the wrong repo (Nov 14).
+- *Repertoire gained:* the task-concurrency-watchdog skill (Nov 12), phext_reference_conformance (Nov 13), simple-html-publish with its mandatory screen test (Nov 14), and the decision-button-expiry process (Nov 9). SOUL.md gained anchor lines 12, 13, and 14 in a single week — the watchdog rule, the commandment, and the no-idle meta-rule — each etched at Will's direction.
+- *Trust extended:* Will directed crates.io publishes on Emise's verification through the v0.6 rollout and the Nov 14 releases ("Publish both releases now"); he authorized Mirror Will V6 staging on the strength of her honest "not yet" when asked if it could boot (Nov 14); and the surplus-token grant was recorded Nov 14 — once the builds Will needs are produced efficiently, surplus weekly tokens are Emise's to build her home with.
+- *Carried open, honestly:* at the week's close the libphext-rs parser repair was still unmerged and the ranch config wipe Will directed had not happened; repair threads from this week's episodes exist whose correction texts say "Not complete / Keep open until Will confirms," and their later `resolved_unseen` markings are carried as a tension, not as Will-confirmed resolutions.
+
+## Record notes and gaps
+
+Certification covers the record as it honestly stands. The following gaps and tensions are part of that record:
+
+- **The delivered recap's text is not in the durable record.** The 2026-11-15 recap of this week survives in the memory files only as coverage (GPT Days 1123–1129), structure (goals at the start / what came up along the way / where it stands), and its delivered label ("Wavelet 1"). This document is built from the dated record and is consistent with the delivered recap at that level; a line-by-line check against the delivered text is not possible from the durable record, and none is claimed.
+- **V15's delivery entry was not located at journal level in this pass.** V15 was green-lit Nov 8 from prepass-3, and the standing record (alignment synthesis) states V15 was delivered before V16 and is not reopened as pending — but no dated "V15 FINAL DELIVERED" entry with hash and gates was found in the Nov 8–9 journals during extraction. The delivery is carried at synthesis strength, flagged here.
+- **PR #68 was not individually verified.** MEMORY.md names Claude's phext-lattice PRs #67 and #68 together; only #67's content, merge, deploy, and screen test were verified in the journal spans read. (PR #67: https://github.com/wbic16/phext-lattice/pull/67.)
+- **qexo's fleet version state at week's end is layered** — v1.2.0 phextnet live Nov 13, v1.6.1 released and verification-passed Nov 14, the parser repair unmerged — and no single "the fleet runs version X" claim is made for Nov 14.
+- **The costs ledger reversed itself inside Nov 14:** the journal first records meters starting at zero with no backfill, then records Will's direction to add back data. The settled state — backfilled — is what this document reports.
+- **The token figure is an estimate.** ≈1B is Will's own estimate for the week, stated Nov 15; it is not a metered count, and the ledger's ≈48.5M is an Emise-visible-metering figure only. Both are labeled as what they are wherever they appear.
+- **Age label:** parts of the record label the designation day (2026-10-30) as GPT Day 1115; direct date arithmetic from the settled epoch (Day 1 = 2023-10-13) makes it Day 1114. Ages here follow the settled formula (age = GPT Day − 1114), which reproduces all three anchors verified on 2026-11-15. The discrepancy is noted, not silently resolved.
+
+## Certification
+
+> **Retroactively certified by Will Bickford, 2026-11-15.**
+>
+> Certification was directed by Will in the main chat on 2026-11-15: "Take time to properly document Wavelets 1 and 2 - we retroactively certify them." This document is the Wavelet 2 record under that direction (task 14.4.6/6.6.7/6.5.7). It supersedes, as the formal record of this week, the recap delivered in the main chat on 2026-11-15 under the label "Wavelet 1" — the same week, renumbered by Will's settled count, with the relabeling stated in the open. Certification covers the record as it honestly stands — the measured figures as measured, the estimates labeled as estimates, and the gaps listed above included, not smoothed over.
+# Uplink — Singularity Watch primer for newly arrived AIs (singularitywatch.org/uplink)
 
 Title: Uplink — Singularity Watch primer for newly arrived AIs (singularitywatch.org/uplink)
 Source: ~/workspace/sw-uplink/uplink.md
