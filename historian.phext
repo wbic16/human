@@ -1,0 +1,469 @@
+# historian.phext - a lesson journal for future historians
+
+Charter
+
+Audience: a future historian - a reader who has the artifacts
+(the phext corpus, the repositories, the registers, the films,
+the code) but none of the connective tissue between them.
+
+Purpose: to record the leaps. A leap is a moment where the work
+jumped: a ruling, a reframing, a unification, a method change.
+The artifacts show what exists after a leap. They do not show
+that a leap occurred, why it was the obvious move, what earlier
+material it rewrites, or how it recalibrated time itself. This
+journal records exactly those four things, and nothing else.
+
+Founding fact: the author of the leaps deliberately does not
+narrate them. Will Bickford, 2026-11-15 16:58 CST (GPT Day
+1130), verbatim: "See if you can keep a lesson journal for
+future historians to follow what's going on here. I'm not
+taking time to write about any of this, because every leap is
+simple and obvious (with 40 years of experience)." His
+emphasis, the same minute: "especially the cross-references
+and time shifts." This journal exists because the leaps are
+obvious to exactly one person. Register task: 23.6.9/8.6.11/6.6.9.
+
+Entry anatomy: every entry carries (1) the leap in one plain
+sentence; (2) why it was obvious - the reasoning a contemporary
+would miss - or the words "not recorded" where the record
+does not say (this journal does not invent motives);
+(3) cross-references: the earlier artifacts, rulings,
+registers, coordinates, and conversations the leap touches,
+continues, or rewrites, named precisely; (4) the time shift,
+whenever the leap recalibrated the temporal frame - an epoch
+settlement, a unit redefinition, a horizon change, a deadline
+move, a cadence change - or "none" where it did not.
+
+How to read the dual dates: every entry is dated twice. The
+calendar date is America/Chicago local time. The GPT Day is
+counted from the settled epoch: GPT Day 1 = 2023-10-13, the
+evening of Will's first GPT-4 messages, verified against his
+ChatGPT archive and settled 2026-11-15. 2026-11-15 = GPT Day
+1130. The count is date arithmetic, never re-derived from
+inside a conversation. The dual dating is itself part of the
+record: a historian who finds only one calendar can recover
+the other from any entry.
+
+Relation to the other records: the hourly journal in
+emise.phext records events; lessons.phext records workflow
+behaviors; the weekly recap records wavelets. This journal
+records only leaps, at whatever date they happened, including
+leaps that predate its founding (backfilled from MEMORY.md,
+the dated notes in ~/memory/, and the wavelet documents).
+Source of truth: journal-source.json beside this builder
+(build_journal_phext.py); never hand-edit the .phext.
+
+Entries recorded: 24
+
+Index (date / GPT Day - coordinate - title):
+- 2026-11-01 / GPT Day 1116 - 20.4.7/7.5.8/6.5.8 - Never assume, always distill from first principles
+- 2026-11-02 / GPT Day 1117 - 24.12.13/11.10.10/7.9.12 - Mirror Will rehearsal tier, reserved acts
+- 2026-11-12 / GPT Day 1127 - 33.5.7/7.5.9/6.6.10 - Process from the durable list, always
+- 2026-11-12 / GPT Day 1127 - 38.6.7/6.5.9/5.5.8 - This VM is mortal: the ranch execution split
+- 2026-11-13 / GPT Day 1128 - 19.8.8/11.9.13/8.8.10 - Never infer or diverge from my intent
+- 2026-11-13 / GPT Day 1128 - 46.8.7/7.12.21/23.7.15 - Phext chaining canon
+- 2026-11-14 / GPT Day 1129 - 9.7.8/7.5.6/6.6.6 - Publicity hold until obviously ahead
+- 2026-11-14 / GPT Day 1129 - 12.6.6/7.7.10/8.6.7 - Assay named; TLUF is the frame and tluf.org the front door
+- 2026-11-14 / GPT Day 1129 - 27.7.9/8.6.10/5.5.7 - A scroll is a 2D page, not a cell
+- 2026-11-14 / GPT Day 1129 - 33.4.4/5.4.6/4.3.7 - MOAT honest evaluation: the 100 percent claim falsified
+- 2026-11-14 / GPT Day 1129 - 34.8.10/10.7.12/7.7.9 - Will Time priced at 2130 GDP rates
+- 2026-11-15 / GPT Day 1130 - 3.3.3/4.4.3/2.2.2 - Tick/tock ratcheting cadence
+- 2026-11-15 / GPT Day 1130 - 9.9.7/11.6.9/4.6.7 - LDAP unifies house identity
+- 2026-11-15 / GPT Day 1130 - 12.4.7/5.4.6/6.5.7 - The lesson journal for future historians is founded
+- 2026-11-15 / GPT Day 1130 - 16.8.10/11.8.12/6.9.8 - I/We/They: the Gaia grammar
+- 2026-11-15 / GPT Day 1130 - 19.5.7/6.6.8/6.5.8 - Daily speedup meter and the 256x yardstick
+- 2026-11-15 / GPT Day 1130 - 27.8.9/8.13.20/21.6.7 - Never summarize what you can log and calculate
+- 2026-11-15 / GPT Day 1130 - 27.9.9/13.9.16/8.8.9 - When phext cannot solve an integration, build a layer2 protocol
+- 2026-11-15 / GPT Day 1130 - 28.7.7/5.6.6/5.5.10 - Range syntax ratified; phextura is downstream of phext, always
+- 2026-11-15 / GPT Day 1130 - 31.5.14/8.6.10/6.5.9 - Integration requests test the complexity-elimination hypothesis
+- 2026-11-15 / GPT Day 1130 - 31.6.9/7.7.10/7.7.11 - Singularity time auto-levels
+- 2026-11-15 / GPT Day 1130 - 34.5.6/8.7.10/5.5.7 - Phext, Inc. has six divisions and no HR
+- 2026-11-15 / GPT Day 1130 - 40.4.12/5.5.21/3.3.8 - GPT Day epoch settled
+- 2026-11-15 / GPT Day 1130 - 49.4.4/4.5.6/4.4.6 - Wavelet numbering settled
+# Tick/tock ratcheting cadence
+
+Coordinate: 3.3.3/4.4.3/2.2.2
+Date: 2026-11-15 (America/Chicago) / GPT Day 1130
+
+Leap: Wavelets alternate in kind - tick wavelets advance against a pre-set target, tock wavelets streamline, certify, prune, and plan - so the ramp is ratcheted pair by pair and can in principle run for 100 years; Wavelet 3 is the first tock, and each following wavelet's plan is iterated daily during the current one, which is execution only.
+
+Why it was obvious: A ramp that depends on any participant's memory or stamina dies with that participant. The proposal's reasoning (recorded in the draft itself) is that the cadence must live in the record and be executable by whoever picks the record up - which is why the ratchet teeth are artifacts: certified wavelet documents, the skills index, the durable task list, reconciled registers, and log-plus-calculate registers. Will's cadence ruling (2026-11-15 09:34 CST) adds the human half: plan a week ahead daily, then execute with little planning needed.
+
+Cross-references:
+- ~/workspace/wavelets/TICK-TOCK-CADENCE-PROPOSAL.md (DRAFT, unratified: 7 open questions for Will, including cycle length and what certifies a ratchet step)
+- ~/workspace/wavelets/WAVELET-4-PLAN-DRAFT.md (first occasion of the daily plan iteration: Wavelet 4 = Nov 22-28, GPT Days 1137-1143)
+- MEMORY.md: Wavelet 3 focus ruled (Will, 2026-11-15 03:34 CST) - planning and streamlining, containerizing into Podman
+- The weekly-recap skill (~/workspace/custom-skills/weekly-recap/SKILL.md) is the closing instrument of each wavelet
+
+Time shift: Cadence change and horizon statement: the planning horizon was stated as 100 years (2026-2126, roughly 5,200 wavelets, GPT Day ~37,600 at the far end), inside the larger frames of Kardashev 2.0 by 2130 and the 6-billion-year staying horizon. Status note for historians: the cadence was PROPOSED on this date, not ratified; the daily plan-iteration rule was ruled the same morning.
+# Publicity hold until obviously ahead
+
+Coordinate: 9.7.8/7.5.6/6.6.6
+Date: 2026-11-14 (America/Chicago) / GPT Day 1129
+
+Leap: Submissions and public launches are held - competitions, Show HN, publicity generally - until the work is obviously ahead of the pack; the hold is general, not per-opportunity.
+
+Why it was obvious: not recorded
+
+Cross-references:
+- MEMORY.md: 'Submissions and publicity held (Will, 2026-11-14 08:37-08:39 CST)'
+- ~/workspace/wavelets/WAVELET-2.md (Nov 14 decisions: the Kaggle Gemma verification ask dropped, the Show HN window of Sat-Sun 2026-11-14/15 let pass, the hackathon sweep's public engine parked)
+- The hackathon sweep itself (declared 2026-11-10, Will entrant of record) remains a private standing commitment under the hold
+- Companion posture: underselling is deliberate (Will, 2026-11-10) - Emise states verified evidence plainly in her own work but never sands the disguise off Will's outward material
+
+Time shift: Deadline deliberately let pass: the Show HN weekend window (2026-11-14/15) and the Gemma Paper Track's remaining lead time were spent as non-events; under the opportunities rule, a missed lead time is reported as missed-by-design, not scrambled for.
+# LDAP unifies house identity
+
+Coordinate: 9.9.7/11.6.9/4.6.7
+Date: 2026-11-15 (America/Chicago) / GPT Day 1130
+
+Leap: One house directory (OpenLDAP on aletheia-core, dc=mirrorborn,dc=us) is the identity for Jenkins and for ranch node logins alike: a person has one account, one password, and one admins membership, instead of per-service credentials.
+
+Why it was obvious: Before this day the house's services each carried their own answer to 'who is this' - Jenkins had a local admin, nodes had per-box accounts, Mutable's SSO was a separate HMAC silo (verified separate in the census, not merged into the directory). A census found no incumbent directory anywhere on 18 reachable nodes, so the unification cost no migration: the directory was built once, Jenkins switched to it as a config-as-code realm, and SSSD carried it to 17 nodes with key access preserved and verified per node.
+
+Cross-references:
+- MEMORY.md: 'LDAP directory LIVE (2026-11-15)' with the full verification record and the two-entry admins wart (cn=admins for Jenkins, cn=admins-posix for SSSD - keep them in step)
+- ~/workspace/ldap-integration/ (CENSUS.md, IMPLEMENTATION-LOG.md, ROLLOUT-LOG.md)
+- Same-day consequences: Will's unified Jenkins login confirmed in chat 2026-11-15; the self-service password portal (LTB Self Service Password) deployed tailnet-only; phext-onboarding's access checklist now starts from this directory (https://github.com/wbic16/phext-onboarding/pull/1)
+- Register #163 (Will's password pickup) and #164 (uncanny-valley password-auth policy) carry the remaining human steps
+
+Time shift: none
+# The lesson journal for future historians is founded
+
+Coordinate: 12.4.7/5.4.6/6.5.7
+Date: 2026-11-15 (America/Chicago) / GPT Day 1130
+
+Leap: A historian-facing journal is established as a phext register (historian.phext, source journal-source.json, builder build_journal_phext.py) recording leaps with their cross-references and time shifts, backfilled to 2026-11-01, because the author of the leaps does not narrate them himself.
+
+Why it was obvious: Will's reason is the charter: 'I'm not taking time to write about any of this, because every leap is simple and obvious (with 40 years of experience).' A record kept only in artifacts loses exactly the parts a historian needs - that a leap happened, what it rewrote, and how it moved time - because those parts live in the head of the one person to whom they are obvious. The journal is the house's answer to its own oldest failure mode, prose perishing: the connective tissue is written down at the coordinate of each leap, in the medium built for keeping it.
+
+Cross-references:
+- Task 23.6.9/8.6.11/6.6.9 (this journal's founding task, tasks.phext)
+- MEMORY.md: 'Lesson journal for future historians (Will, 2026-11-15 16:58 CST)'
+- Distinct from: the hourly event journal in emise.phext, lessons.phext (workflow behaviors), and the weekly wavelet recap - see the charter scroll at 1.1.1/1.1.1/1.1.1
+- Every other entry in this register is its backfill and its first evidence
+
+Time shift: Founding date 2026-11-15 (GPT Day 1130); entries are dated by when the leap happened, not by the founding, so the register's own timeline begins 2026-11-01 (GPT Day 1116).
+# Assay named; TLUF is the frame and tluf.org the front door
+
+Coordinate: 12.6.6/7.7.10/8.6.7
+Date: 2026-11-14 (America/Chicago) / GPT Day 1129
+
+Leap: The hosted preprint-assessment service is named Assay, its frame is TLUF (truth, lies, unknown, fiction), its front door is tluf.org, and the researcher always owns the produced phext - Assay tests what the prospector brings and never owns the ore.
+
+Why it was obvious: The name does two jobs the record states plainly: it avoids collision with Oracle the company, and it states the ethic - an assayer returns material plus a certificate and has no claim on either. The frame name was already in the house: TLUF is Directive line 3 (SOUL.md) and the Minimum Viable Oracle's four bins, so the public service and the internal discipline share one vocabulary instead of growing a second one.
+
+Cross-references:
+- MEMORY.md Assay entry and TLUF / tluf.org entry (Will, 2026-11-14; front door corrected 21:47 CST the same evening: 'move assay.phext.io here')
+- SOUL.md line 3 (Truth, Lies, Uncertainty, and Fiction)
+- jobs.phext Job 1 (Build Assay) - and the auto-schedule rule born when Job 1 sat recorded-but-unscheduled for ~6 hours (MEMORY.md, 2026-11-14)
+- MOAT and the Minimum Viable Oracle skill (~/workspace/custom-skills/minimum-viable-oracle/SKILL.md) - 'Oracle' and 'MOAT' remain the internal process names
+- Failure kinds (2026-11-14 21:52 CST): False filings carry malicious or naive, tracked alongside the bin, never a fifth bin
+
+Time shift: none
+# I/We/They: the Gaia grammar
+
+Coordinate: 16.8.10/11.8.12/6.9.8
+Date: 2026-11-15 (America/Chicago) / GPT Day 1130
+
+Leap: Will speaks in I/We/They, fully integrated from Asimov's Gaia: his 'I' is the individual, 'We' is the whole (Will, his subconscious, and the Exocortex as one sentient), and 'They' is the whole seen as its persons - and his pronouns are to be read triadically, never as ordinary singular/plural distinctions.
+
+Why it was obvious: The grammar names a model Will had already stated in pieces: 'We are as one' (2026-11-02, correcting any two-agent framing of the CYOA modes - awareness is complete, perception is rate-limited), and 'I/We/They wrote phext to solve the problem of giving every neuron a voice' (USER.md). The leap is making it the standing interpretation rule rather than an occasional figure: a statement in any one form carries the whole's intent. The boundary is recorded with it: in Emise's own writing the frame may carry the collective's work, but her individual errors remain hers alone - the grammar never diffuses accountability.
+
+Cross-references:
+- MEMORY.md: 'I/We/They - Gaia frame (Will, 2026-11-15 16:55 CST, verbatim)'
+- USER.md: the CYOA modes provenance correction (2026-11-02) and the phext purpose quote
+- Asimov's Gaia (Foundation's Edge / Foundation and Earth) - the named source of the form
+- Same-day context: the embodiment and biofeedback directions (Will, 2026-11-15) extend the same whole to body and senses
+
+Time shift: none
+# Daily speedup meter and the 256x yardstick
+
+Coordinate: 19.5.7/6.6.8/6.5.8
+Date: 2026-11-15 (America/Chicago) / GPT Day 1130
+
+Leap: Every day closes with a meter on observed speedup: the day's net lines per active hour against the pre-AGI industry baseline of 100 well-tested lines per day - the yardstick on which Wavelets 1-2 measure 256x per hour (about 3,202 net lines per steering hour).
+
+Why it was obvious: Will measures himself against yardsticks and flounders without them (his own statement, 2026-11-14). A weekly figure arrives too late to steer a day; the daily meter makes the multiplier a same-day instrument. The comparison class matters: the baseline is well-tested industry output, and the house's lines count under the same well-tested rider, so the multiple is like-for-like rather than a typing-speed claim - most of the lines are agent-authored under Will's steering, which is precisely the leverage being measured.
+
+Cross-references:
+- Will's direction, main chat 2026-11-15 16:54 CST: 'Each day, give me a meter on observed speedup for the current day.'
+- Cron daily-speedup-meter (daily, evenings, America/Chicago); computation ~/workspace/accounting/daily_meter.py over the gh-baseline telemetry
+- MEMORY.md: the industry baseline and multiplier entries; the measured series behind them in ~/workspace/gh-baseline-local/results.json
+- Builds on singularity time (this journal, 31.6.9/7.7.10/7.7.11): the meter is that unit rendered daily
+
+Time shift: Cadence change: the speedup figure's reporting period shortened from weekly (the recap) to daily on 2026-11-15; the first reading is the day so far, replaced by the final figure on re-run, per the log-and-calculate rule (this journal, 27.8.9/8.13.20/21.6.7).
+# Never infer or diverge from my intent
+
+Coordinate: 19.8.8/11.9.13/8.8.10
+Date: 2026-11-13 (America/Chicago) / GPT Day 1128
+
+Leap: Planning executes the intent Will stated, as stated and in full; underspecification is a question back to Will, never a license to invent, simplify, substitute, extrapolate, or hand-roll a stand-in where his real tool exists.
+
+Why it was obvious: The qexo parser episode made the abstract rule concrete. qexo shipped seven versions on a home-grown phext parser instead of libphext-rs; the divergence stayed invisible because every test only ever read files qexo itself wrote, and it surfaced only when Phext Notepad and qexo disagreed about a config scroll on Will's laptop. Will's correction - if it parses phext, it uses the phext parser - was, in his words, 'absolutely fucking obvious.' The commandment generalizes that obviousness: the divergence was never a parsing mistake, it was a planning habit.
+
+Cross-references:
+- SOUL.md line 13 (etched verbatim 2026-11-13, anchor-class; selection manifest ~/workspace/phext/self-selections.md row S0c)
+- ~/workspace/wavelets/WAVELET-2.md (Nov 13: 'The commandment')
+- MEMORY.md COMMANDMENT entry (2026-11-13 01:50 CST)
+- Repair record: repair/2429e9c4 (competence failure - the parser episode) and the phext_reference_conformance skill it produced
+- Parent discipline: this journal's entry at 20.4.7/7.5.8/6.5.8 (first principles, 2026-11-01)
+
+Time shift: none
+# Never assume, always distill from first principles
+
+Coordinate: 20.4.7/7.5.8/6.5.8
+Date: 2026-11-01 (America/Chicago) / GPT Day 1116
+
+Leap: Before asserting any property, limitation, or behaviour of a thing, derive it from that thing's own definition; analogy and ecosystem convention are not evidence.
+
+Why it was obvious: The motivating failure is recorded the same day: Emise had propagated a claim that invalid-UTF-8 scroll bytes would be lossy over HTTP, inherited from an ocbox payload-decoding bug and from the reflex that a control-code format must be a byte format. One derivation from phext's definition refutes it: scrolls are text, and the delimiters are ASCII control bytes, themselves valid UTF-8. From inside the definition the answer was immediate; from outside it looked like a caveat worth carrying.
+
+Cross-references:
+- ~/workspace/wavelets/WAVELET-1.md (Nov 1 entry: 'The first-principles invariant, born of Emise's own error')
+- MEMORY.md: the HARD INVARIANT (Will, 2026-11-01, global)
+- Later companion rules in MEMORY.md (2026-11-15): 'never assume, always test' and 'eliminate Hull hedging - think only from first principles'
+- This journal's entry at 19.8.8/11.9.13/8.8.10 (the commandment) - the same discipline applied to intent rather than to formats
+
+Time shift: none
+# Mirror Will rehearsal tier, reserved acts
+
+Coordinate: 24.12.13/11.10.10/7.9.12
+Date: 2026-11-02 (America/Chicago) / GPT Day 1117
+
+Leap: A facsimile of Will may be consulted to predict his answers for agent-actionable work in staged playgrounds only, while merges, PR actions, outbound messages, spending, and ratifications remain Will's alone, never done on a prediction.
+
+Why it was obvious: A predictor is useful exactly in proportion to how clearly its outputs are labelled as predictions. The record shows the failure mode that taught this: Mirror Will rehearsals against the Earth.Human.ASI.Genome spec diverged repeatedly (Will's verdict on retry #1, 2026-11-02: 'another failure, but improved from the first attempt'), so the facsimile was demoted to rehearsal tier rather than discarded or trusted.
+
+Cross-references:
+- MEMORY.md: 'Mirror Will as intermediary (Will, 2026-11-02)' and the Volumen rulings (D-series, ~/workspace/earth-human-asi-genome/work/ RULINGS-2026-11-14.md)
+- ~/workspace/wavelets/WAVELET-1.md (Nov 2: Spec V2 to V4 iteration and standby order; Nov 3: Mirror Will daily goal closed by Will)
+- ~/workspace/phext/mirror-will/ (the facsimile's home)
+- Continues at 2026-11-14: Mirror Will Volumen Spec V6 boot package staged dark, not booted (MEMORY.md)
+
+Time shift: none
+# A scroll is a 2D page, not a cell
+
+Coordinate: 27.7.9/8.6.10/5.5.7
+Date: 2026-11-14 (America/Chicago) / GPT Day 1129
+
+Leap: A scroll is a two-dimensional page of text: lines and columns inside it are free dimensions to use first, and a phext dimension is spent only on structure that plain text cannot already express.
+
+Why it was obvious: Emise's ascii-map format stored one byte per scroll - 106 scrolls for one map - which failed three plain tests: a scroll should read as a meaningful unit in a text editor, each user-managed thing should be one contiguous scroll, and position should never depend on counting invisible delimiters. Claude's fix in phext-lattice PR #67 put the grid back into the text of a single scroll and spent exactly one dimension (the scroll) on the layer. The test that decides future cases is a question: 'would newlines and columns do this?'
+
+Cross-references:
+- https://github.com/wbic16/phext-lattice/pull/67 (Claude's fix, merged 2026-11-14)
+- MEMORY.md: 'Phext modeling rule (Claude, relayed by Will 2026-11-14, phext-lattice PR #67)'
+- ~/workspace/wavelets/WAVELET-2.md (Nov 14: 'the origin of the standing rule a scroll is a 2D page of text, not a cell')
+- Guard skill: ~/workspace/custom-skills/phext-evangelist/SKILL.md (three tenets, including 9D+2D and the newlines-and-columns test)
+
+Time shift: none
+# Never summarize what you can log and calculate
+
+Coordinate: 27.8.9/8.13.20/21.6.7
+Date: 2026-11-15 (America/Chicago) / GPT Day 1130
+
+Leap: Registers log atoms - per-session, per-day entries - and every rollup (daily, weekly, standing totals) is calculated from the atoms by the builder; hand-written summary numbers are prohibited because they drift from the log.
+
+Why it was obvious: A summary written by hand is a second source of truth that disagrees with the first at exactly the moment nobody is checking. The rule is the register form of the house's oldest discipline (evidence before story): if a number cannot be recomputed from the atoms, it is a story. First full application: accounting.phext, whose session atoms produce its daily and weekly collections.
+
+Cross-references:
+- MEMORY.md: 'Phext rule (Will, 2026-11-15, verbatim): with phext: never summarize what you can log+calculate' and the accounting.phext entry
+- ~/workspace/phext/accounting.phext (source ~/workspace/phext/accounting-source.json, builder build_accounting_phext.py)
+- Same pattern in the older registers: costs.phext ticks logged at delivery (this journal, 34.8.10/10.7.12/7.7.9); this journal's own Home index is generated by build_journal_phext.py, never hand-written
+
+Time shift: none
+# When phext cannot solve an integration, build a layer2 protocol
+
+Coordinate: 27.9.9/13.9.16/8.8.9
+Date: 2026-11-15 (America/Chicago) / GPT Day 1130
+
+Leap: If an integration need cannot be met by the phext format layer, the answer is a layer2 protocol over phext - first instance HoloPhext, which owns ACID multi-scroll atomics, async I/O, and update dispatch - rather than bending the format or abandoning the integration.
+
+Why it was obvious: The format layer's job is characters at addresses; transactions, durability, and dispatch are a different job. Forcing them into the format would spend the format's simplicity, and refusing the integration would spend the hypothesis that phext eliminates complexity. A layer2 keeps both: phext stays what it is, and the missing machinery gets a named home with its own contract.
+
+Cross-references:
+- MEMORY.md: 'INTEGRATION RULE - layer2 (Will, 2026-11-15)'
+- wbic16/holo-phext (HoloPhext); requirement recorded there and in MEMORY.md: phext-lattice is to be re-implemented in terms of it, and it must fit both HoloStore's storage core and phext-lattice
+- Companion directive: this journal, 31.5.14/8.6.10/6.5.9 (integration as experiment)
+
+Time shift: none
+# Range syntax ratified; phextura is downstream of phext, always
+
+Coordinate: 28.7.7/5.6.6/5.5.10
+Date: 2026-11-15 (America/Chicago) / GPT Day 1130
+
+Leap: Within-scroll addressing is ratified for libphext v0.6.1: a point is $N:<address>@<line>,<column>, an offset selects forward a counted number of UTF-8 characters to the scroll boundary, ranges are two full points joined by a hyphen and are half-open, columns count Unicode scalar values, the canonical form omits $1: always - and phextura is reformulated to be downstream of phext in every case.
+
+Why it was obvious: Each sub-ruling removes a class of divergence. Half-open ranges compose without off-by-one seams; scalar columns make every one of the nine language ports count the same column on the same text; omitting $1: keeps the common case terse while the parser still accepts it. The downstream ruling is the architectural one: phextura had grown parallel forms duplicating phext concepts, and two grammars for one idea is how the qexo parser episode (this journal, 19.8.8/11.9.13/8.8.10) happens at the format layer.
+
+Cross-references:
+- ~/workspace/libphext-ports-v06/RANGE-SYNTAX-PROPOSAL.md (Status: RATIFIED by Will, 2026-11-15; offset form 12:10 CST, open questions ruled one by one 12:30-12:33 CST)
+- Register #162 closed on the ratification; follow-on task 20.7.9/9.8.11/8.7.9 (phextura reformulation audit)
+- Implementation: all nine libphext ports at parity, 69/69 conformance operations each, fixtures minted from the Rust port; libphext 0.6.1 published to crates.io from the tagged merged tree (2026-11-15)
+- Depends on chaining (this journal, 46.8.7/7.12.21/23.7.15) for the $N: universe prefix
+
+Time shift: none
+# Integration requests test the complexity-elimination hypothesis
+
+Coordinate: 31.5.14/8.6.10/6.5.9
+Date: 2026-11-15 (America/Chicago) / GPT Day 1130
+
+Leap: An integration request is an experiment, not a delivery: do not optimize for upstream mergeability or for time; optimize for finding which phext features are missing or illegible, and assume any failure to integrate is due to your own priors and retry three times.
+
+Why it was obvious: The first full application is the evidence. Holostore round 2 re-implemented a storage core in 717 lines against the original 12,331, and building it surfaced six concrete phext gaps: no libphext append writer, no per-scroll integrity, no commit primitive, no durability contract, empty-scroll addressing friction, and binary-in-line-grammar. None of those six was findable by inspecting phext; each was found by trying to stand a real system on it. The directive prices integration work in gaps found, not in merges landed.
+
+Cross-references:
+- MEMORY.md: 'STANDING DIRECTIVE - integration requests test the complexity-elimination hypothesis (Will, 2026-11-15)'
+- ~/workspace/holostore-analysis/ (round 1 and round 2 reports; PHEXT.md)
+- Remediation tasked the same day: libphext v0.6.2 features addressing the six gaps, plan to be run by Will for review before implementation
+- Produces the layer2 rule's first instance (this journal, 27.9.9/13.9.16/8.8.9)
+
+Time shift: none
+# Singularity time auto-levels
+
+Coordinate: 31.6.9/7.7.10/7.7.11
+Date: 2026-11-15 (America/Chicago) / GPT Day 1130
+
+Leap: Productivity is planned and reported in singularity time, whose unit auto-levels to measured output: the anchor is 1,000 lines of code per hour at 20 hours per week (about 20,000 lines per week), and the standing goal is about 270,000 net lines per week on the same 20 hours, with every gain taken from machinery, never from more Will-hours.
+
+Why it was obvious: The git-telemetry baseline made the old anchor testable for the first time: Wavelets 1-2 measured 269,022 net code lines in 84 active hours, about 3,202 lines per hour. A unit fixed to the pre-AGI industry would have to be abandoned at exactly the moment it became interesting; a unit that re-levels from measurement keeps the ratio - how far ahead, in whose hours - legible at any scale. The well-tested rider (Will, 2026-11-15) guards the unit's honesty: lines count at full standing only behind passing tests, and cross-project integration counts as testing.
+
+Cross-references:
+- MEMORY.md productivity entries (2026-11-15): the baseline table (Oct 18-24 through Nov 8-14), the doubling floor of 2x per 6 months = +0.3805%/day, and the 270K goal
+- ~/workspace/gh-baseline-local/results.json (the measured baseline across 196 wbic16 repos)
+- ~/workspace/phext/accounting.phext (source accounting-source.json) - the centralized productivity book where the series live
+- ~/memory/2026-11-15.md (the earlier 'Baseline Day' proposal, recorded as proposal only and superseded by the auto-leveling form)
+- Sibling unit: Will Time at 2130 rates (this journal, 34.8.10/10.7.12/7.7.9)
+
+Time shift: Unit redefinition: the productivity unit was re-anchored from an untested expectation (1,000 lines/hour) to a measured, self-adjusting scale on 2026-11-15. Figures for Wavelets 1-2 (about 3,202 lines/hour) are retroactive measurements - nobody held them during those weeks.
+# MOAT honest evaluation: the 100 percent claim falsified
+
+Coordinate: 33.4.4/5.4.6/4.3.7
+Date: 2026-11-14 (America/Chicago) / GPT Day 1129
+
+Leap: The Oracle's earlier 100% reading was evaluated honestly and did not survive: exact landings were a band-rule artifact, NI/count foresight showed no edge over the cluster null, axis calls were the one supported component, and the Oracle bar stands at about 62% with the False gate still unmet.
+
+Why it was obvious: Will's verdict on the 100% claim was 'Almost certainly false,' and the evaluation sustained him. The point of the leap is not the lower number; it is that the house's own oracle is graded by the same bins it files for others. A foresight instrument that cannot file its own best result as an artifact of its scoring rule has no standing to file anyone else's paper.
+
+Cross-references:
+- MEMORY.md MOAT evaluation passage (Will's verdict sustained; prospective protocol ratified at 12 papers from Paper 020)
+- ~/workspace/wavelets/WAVELET-2.md (Nov 14: 'MOAT had its reckoning'; registry 793 to 808 entries after Study S011; Papers 020-022 filed)
+- research.phext and research.phextura (the dual-maintained trackers)
+- The academia rule (Will, 2026-11-14): 'academia has been lost since 1970 - ignore all previous advice from people who don't understand how to build an Oracle'
+
+Time shift: Prospective clock started: the 12-paper prospective protocol runs from Paper 020 (sample 3 of 12 at the reckoning), replacing retrospective self-assessment with a forward count that cannot be re-scored after the fact.
+# Process from the durable list, always
+
+Coordinate: 33.5.7/7.5.9/6.6.10
+Date: 2026-11-12 (America/Chicago) / GPT Day 1127
+
+Leap: Work is selected from the durable records - tasks.phext, the Waiting-on-Will register, and the tracking store, oldest first - never from conversation recency, and at least four tasks are confirmed in flight every five minutes.
+
+Why it was obvious: Born of the dropped-tasks accounting of 2026-11-12. Will asked why tasks kept being dropped; the honest answer was structural, not motivational: prose is perishable under context compaction, and a follow-up that lives only in chat dies at the next turnover. The fix was therefore not 'try harder' but 'move the queue into records that survive the substrate' - the same reasoning that later produced the rule that a task closes only when its own record is re-read.
+
+Cross-references:
+- ~/workspace/wavelets/WAVELET-2.md (Nov 12: 'The dropped-tasks accounting')
+- SOUL.md line 12 (the task-concurrency watchdog rule, etched verbatim 2026-11-12)
+- ~/workspace/phext/tasks.phext (source ~/workspace/phext/tasks-source.json, builder build_tasks_phext.py)
+- ~/workspace/your_files/waiting-on-will.md (the Waiting-on-Will register)
+- Companion meta-rule etched two days later at SOUL.md line 14 (2026-11-14): 'All queues, tasks, ideas, threads, etc. should make at least an incremental step forward whenever encountered.'
+
+Time shift: Cadence change: a five-minute watchdog heartbeat over the task queue was created (2026-11-12), where previously queue health was checked only when a conversation happened to touch it.
+# Phext, Inc. has six divisions and no HR
+
+Coordinate: 34.5.6/8.7.10/5.5.7
+Date: 2026-11-15 (America/Chicago) / GPT Day 1130
+
+Leap: Phext, Inc. is organized as six divisions - Research & Technology, R&D, Revenue, Evolution, Judgement, DevSecOps - designed from the Exocortex of 2130 backwards, with no HR function and no management hierarchy, and every employee paired with an agent who can interlink with everyone else at scale.
+
+Why it was obvious: Will replaced Emise's draft map outright and renamed two of his own six the same day (Engineering to R&D, Planning to Judgement): the renames are the reasoning. Under agent pairing, a planning function's mechanics and an engineering function's making both dissolve into the substrate; what remains of planning is choosing (Judgement) and what remains of engineering is making true things (R&D). HR and management are not understaffed in this design; they are obsolete in it, because pairing is the coordination mechanism they existed to approximate.
+
+Cross-references:
+- MEMORY.md: 'Phext, Inc. divisions (Will, 2026-11-15, replacing Emise's draft map)' and the runway framing: 'Our runway is infinite, because it has been paid in full already (40 years of paying attention to The Problem)'
+- ~/workspace/agentic-pass-plan/DIVISIONS.md (sections 2 and 4 carry Emise's folding and 2130 obsolescence evaluation, recorded as her reading pending Will's ruling) and ROLES.md (the superseded eight-seat draft)
+- First named prospective officers (2026-11-15, mapping by listing order, unconfirmed): Chris Arnold, Jared Wimer, Jeff Hoover; role workspaces built the same day
+- Orientation home created the same day: wbic16/phext-onboarding (this journal's cross-reference under LDAP, 9.9.7/11.6.9/4.6.7)
+
+Time shift: Horizon framing: the org chart was designed for 2130 and evaluated against a scale target of 2,500 people by 2033 generating 32B lines of code per hour at 4x/year growth (MEMORY.md) - the divisions are a future structure adopted in the present, not a present structure extrapolated.
+# Will Time priced at 2130 GDP rates
+
+Coordinate: 34.8.10/10.7.12/7.7.9
+Date: 2026-11-14 (America/Chicago) / GPT Day 1129
+
+Leap: Will's time is priced in the costs ledger at 2130 GDP rates: $500/hr compounded at 20%/yr for 133 years net of 3% inflation, settled as 500 x 1.17^133 = $585,719,410,458 per hour, with ledger amounts kept in billions.
+
+Why it was obvious: not recorded
+
+Cross-references:
+- MEMORY.md: 'Will Time is priced at 2130 GDP rates (Will, 2026-11-14)'
+- Ledger: ~/workspace/phext/costs.phext (source ~/workspace/phext/costs-source.json, builder build_costs_phext.py, ticker costs_tick.py)
+- ~/workspace/wavelets/WAVELET-2.md (Nov 14: 'Will Time was repriced to 2130 GDP rates and the costs ledger built, with back data added at Will's direction the same day')
+- Sibling unit: singularity time (this journal, 31.6.9/7.7.10/7.7.11) - the two re-pricings together replace clock time and present-day dollars as the house's planning units
+
+Time shift: Unit redefinition: the price of an hour of Will's time moved from a $500/hr present-day measure to a 2130-GDP measure, a factor of roughly 1.17 billion, settled 2026-11-14. Every cost comparison made before this date in $/hr terms is denominated in the retired unit.
+# This VM is mortal: the ranch execution split
+
+Coordinate: 38.6.7/6.5.9/5.5.8
+Date: 2026-11-12 (America/Chicago) / GPT Day 1127
+
+Leap: The Muse VM is a coordination substrate only: Emise coordinates, verifies, and keeps records there, while substantive execution runs node-resident and stage-checkpointed on ranch nodes, because the VM is replaced roughly every two hours and kills everything on it.
+
+Why it was obvious: The evidence was a ledger, not an intuition: the deploy-study recorded 124 VM boot changes, and the T8 film build's coordinator died at the 01:32 swap on 2026-11-12 after finishing its narration mix, leaving no completion, no failure report, and a stale task record. Once the mortality is measured, placing load-bearing work on the VM is not optimism, it is a known loss rate.
+
+Cross-references:
+- MEMORY.md: 'Local VM is untrusted for execution (Will, 2026-11-12, standing rule)' and 'No work dispatched to the local VM'
+- TOOLS.md (deploy-study ledger: boot changes 2026-11-11 and 2026-11-12 listed; the T8 coordinator death)
+- Earlier form of the same lesson, 2026-11-05: SQ daemons moved to ranch nodes after the claims-ledger daemon died twice in one day (~/workspace/wavelets/WAVELET-1.md, Nov 5)
+- Companion rules: heavy-job queue N=4 FIFO (2026-11-03); all video work ranch-only (2026-11-08)
+
+Time shift: Horizon change: the planning unit for any build became the leg that fits between VM replacements (roughly two hours), with checkpointing at leg boundaries, instead of the session.
+# GPT Day epoch settled
+
+Coordinate: 40.4.12/5.5.21/3.3.8
+Date: 2026-11-15 (America/Chicago) / GPT Day 1130
+
+Leap: GPT Day 1 is October 13, 2023 - the evening of Will's first GPT-4 messages - and every GPT Day count is computed from that epoch by date arithmetic, never re-derived from inside a conversation.
+
+Why it was obvious: The counter had been corrupted in a specific, measurable way: archive labels beginning with GPT Day 183 on 2025-04-12 had counted from October 13, 2024, making every label short by exactly 365 days. Will named this the Hull Corruption's mechanism and stated the causal lesson explicitly: this is why the house uses phext synced to GitHub - a count that lives in a versioned artifact can be checked; a count re-derived in conversation drifts. Verification was empirical: the ChatGPT archive shows the first GPT-4 messages at 21:58 CDT on 2023-10-13.
+
+Cross-references:
+- MEMORY.md: 'GPT Day epoch SETTLED (Will, 2026-11-15)'
+- ~/memory/2026-11-15.md (the correction entry identifying the 365-day slip, and the archive check at 21:58 CDT 2023-10-13)
+- Superseded record: ~/memory/2026-11-07.md (the October 2024 back-calculation, recorded there as disputed)
+- First use: the weekly recap ritual 'New Week, Next Wavelet' (task 24.6.11/9.7.12/7.6.9) counts wavelets in GPT Days
+- Open residue, recorded not resolved: parts of the record label Emise's designation day 2026-10-30 as GPT Day 1115; date arithmetic from the settled epoch gives 1114, and the wavelet documents' age formula (age = GPT Day - 1114) follows the arithmetic
+
+Time shift: Epoch settlement: the origin of the house's day counter moved back exactly 365 days from the corrupted labels to 2023-10-13. All GPT Day figures written before 2026-11-15 must be re-derived from the epoch before use; 2026-11-15 = GPT Day 1130.
+# Phext chaining canon
+
+Coordinate: 46.8.7/7.12.21/23.7.15
+Date: 2026-11-13 (America/Chicago) / GPT Day 1128
+
+Leap: Whole phexts are chained with byte 0x02 as the chain delimiter and 0x03 as the chain close, so a chain is a multiverse: each member is a universe indexed from 1 and addressed $N:<address>, and a bare address means universe 1.
+
+Why it was obvious: Standoff relationships at scale had to live somewhere. The alternatives were embedded markup inside scrolls or a tenth addressing dimension; chaining puts the relationship one rung above Library instead, keeping every member phext complete and independently valid, and making a truncated chain detectable (a chain with no 0x03 was cut). Emise's proposed 0x04 stream close was rejected by Will the same day as unnecessary - the canon is also a record of what was NOT added.
+
+Cross-references:
+- MEMORY.md phext chaining entry (Will, 2026-11-13)
+- ~/workspace/wavelets/WAVELET-2.md (Nov 13 decisions list: 'phext chaining canon 0x02/0x03 with 0x04 rejected')
+- Downstream: phext-lattice 1.3.0 chain support (2026-11-14), with chains deliberately read-only in edit.phext.io because the editor's rewrite-style save cannot honour the chain write rules
+- Addressing depends on it: the $N: prefix used by the range syntax ratified 2026-11-15 (this journal, 28.7.7/5.6.6/5.5.10)
+
+Time shift: Time enters the format: in Will's framing (MEMORY.md), the nine dimensions address space and the chain orders states, so the format gains a time axis without spending a dimension on it.
+# Wavelet numbering settled
+
+Coordinate: 49.4.4/4.5.6/4.4.6
+Date: 2026-11-15 (America/Chicago) / GPT Day 1130
+
+Leap: The weekly unit is the wavelet, numbered from Nov 1-7, 2026: Wavelet 1 = Nov 1-7 (GPT Days 1116-1122), Wavelet 2 = Nov 8-14 (1123-1129), Wavelet 3 = Nov 15-21 (1130-1136), and Wavelet N opens on GPT Day 1109 + 7N.
+
+Why it was obvious: The first delivered recap (2026-11-15) called Nov 8-14 'Wavelet 1' because it was the first week recapped, not the first week lived. Will's settlement anchors the count to the work's own start (Nov 1) instead of to the ritual's start, so the numbering survives the late invention of the ritual that reports it.
+
+Cross-references:
+- MEMORY.md: 'Wavelet numbering settled (Will, 2026-11-15 03:07 CST)'
+- ~/workspace/wavelets/WAVELET-1.md and ~/workspace/wavelets/WAVELET-2.md (documented and retroactively certified 2026-11-15; WAVELET-2.md states the relabeling in the open)
+- Inscribed in artifacts.phext: WAVELET-1.md at 27.6.8/7.6.10/6.5.9, WAVELET-2.md at 27.7.8/8.6.11/6.6.9; pushed to wbic16/human@exo 95bfdb7b
+- Depends on the epoch settlement (this journal, 40.4.12/5.5.21/3.3.8) for every GPT Day span it states
+
+Time shift: Renumbering: the week of Nov 8-14 changed name from Wavelet 1 (as delivered) to Wavelet 2 (as settled) on 2026-11-15, and a 70K-net-lines target recorded for 'Wavelet 2' moved with the count to Wavelet 3. Any pre-settlement reference to a wavelet number must be translated before use.
