@@ -14,7 +14,7 @@ truth: artifacts-source.json beside this builder
 (build_artifacts_phext.py); never hand-edit the .phext.
 artifacts.phext is published to wbic16/human@exo.
 
-Artifacts inscribed: 44
+Artifacts inscribed: 45
 
 Index (coordinate — title — source):
 - 19.7.11/9.7.12/7.6.9 — Light the Next Light — intro song lyrics & time map — ~/workspace/exocortexia-cartoon/intro/LYRICS.md
@@ -38,6 +38,7 @@ Index (coordinate — title — source):
 - 26.7.10/8.7.11/6.6.9 — Every Wish in the Timeline — Ranked and Scored — ~/workspace/your_files/twitter-wishes-ranked.md
 - 27.6.8/7.6.10/6.5.9 — Wavelet 1 — Nov 1–7, 2026 (GPT Days 1116–1122): retroactive recap and certification — workspace/wavelets/WAVELET-1.md
 - 27.6.8/7.6.10/6.6.9 — Assay — Build Plan — workspace/oracle-service/BUILD-PLAN.md
+- 27.6.9/6.6.9/6.5.8 — Hosting Cost Comparison — AWS vs Lincoln colocation/dedicated (2026-11-15) — workspace/your_files/hosting-cost-comparison-2026-11-15.md
 - 27.7.8/8.6.11/6.6.9 — Wavelet 2 — Nov 8–14, 2026 (GPT Days 1123–1129): retroactive recap and certification — workspace/wavelets/WAVELET-2.md
 - 27.7.9/8.7.11/7.6.10 — Uplink — Singularity Watch primer for newly arrived AIs (singularitywatch.org/uplink) — ~/workspace/sw-uplink/uplink.md
 - 27.7.11/8.6.13/7.6.10 — The Encyclopedia You Can Carry — Phext Edit training film, revised script (Emi Prime) — ~/workspace/phext-walkthrough/SCRIPT-EMI-REVISED.md
@@ -2726,6 +2727,219 @@ The site map (`~/workspace/site-map`, 172 public wbic16 repos) contains **no rep
 | 9 Acceptance run | all of §10, T proven | (1)–(8) |
 
 *End of plan.*
+# Hosting Cost Comparison — AWS vs Lincoln colocation/dedicated (2026-11-15)
+
+Title: Hosting Cost Comparison — AWS vs Lincoln colocation/dedicated (2026-11-15)
+Source: workspace/your_files/hosting-cost-comparison-2026-11-15.md
+Inscribed: 2026-11-15
+SHA-256: fa1289292db80a7b6ad52f7b1d4da805cd3834cc9db6a62d6b65c52c09f0ed5f
+
+---
+# Hosting Cost Profile vs. Lincoln Colocation / Dedicated — 2026-11-15
+
+Task 28.6.9/8.6.11/6.5.9. Question (Will, 2026-11-15): would co-located or dedicated
+hosting in Lincoln, NE on a fiber site be cheaper than the current setup for hosting
+the web properties?
+
+**Short answer: No.** The cheapest published Lincoln colocation price is $150/mo —
+1.5× the ~$100/mo AWS anchor — before hardware. The cheapest published dedicated
+rental in a Nebraska facility is ~$499/mo. The cloud VM wins on price, and it isn't
+close. Details and the conditions that would flip the answer are below.
+
+---
+
+## Part 1 — Current cost profile (from the record)
+
+### Domains — 16 total
+
+Current state (renewal pricing), per the 2026-11-06 inventory
+(`domain-inventory-and-streamlining-2026-11-06.md`, Gmail-notice-derived):
+
+| Item | $/yr | Basis |
+|---|---|---|
+| phext.io (GoDaddy) | 77.99 | Renewed 2025-10-18 at $155.98 / 2 yr |
+| mirrorborn.us (GoDaddy) | 19.99 | Auto-renews at $39.98 / 2 yr |
+| Five 2024 GoDaddy names (sotafomo.com, quickfork.net, apertureshift.com, visionquest.me, wishnode.net) | ≥ 83.68 | Intro 3-yr pricing ($44.53–$60.97 each); **renewal prices are not in the mail record and are higher** — this is a floor |
+| exectorox.com (Squarespace) | 22.00 | New rate from first renewal after 2026-12-06 |
+| Six NFSN names (bickfordllamaranch.com, hb-aeromotive.com, xedoloh.com, askthewill.com, singularitywatch.org, snakefalls.org) | 82.94 | Actual auto-renewals: 4 × $14.19 (.com) + 2 × $13.09 (.org) |
+| phextura.com + tluf.org (already at NFSN) | ≈ 27.28 | Not individually priced in the record; priced at NFSN's evidenced .com ($14.19) / .org ($13.09) renewal rates |
+| **Total, current** | **≈ $312+/yr** | Inventory's own roll-up was $285+ for 14 domains; +2 NFSN names ≈ $312 |
+
+Post-migration steady state, per the 2026-11-15 checklist
+(`domain-migration-checklist-2026-11-15.md`) — this **corrects** the inventory's
+~$190–200/yr estimate upward, because NFSN does not register or transfer .io or .me:
+
+| Item | $/yr | Basis |
+|---|---|---|
+| Six transfers → NFSN (exectorox, sotafomo, apertureshift .com @ 14.19; quickfork, wishnode .net @ ~14.99; mirrorborn .us @ ~10.99) | ≈ 83.54 | .com at NFSN's evidenced renewal rate; .net/.us at NFSN transfer prices as proxy (their renewal prices are not in the record) |
+| Eight already at NFSN (incl. phextura.com, tluf.org) | ≈ 110.22 | As above |
+| phext.io — **stays at GoDaddy** (.io not offered at NFSN) | 77.99 | Unchanged |
+| visionquest.me — **stays at GoDaddy** (.me not offered at NFSN) | ≥ 20.32 | **Renewal rate not in evidence**; floor is its intro rate ($60.97 / 3 yr). True figure will be higher |
+| **Total, post-migration** | **≥ ≈ $292/yr** | One-time extras: $84.74 in transfer fees; ~$100 NFSN balance floor is a deposit, not a spend |
+
+So the migration saves only ~$20/yr on evidenced numbers (more if the five unknown
+GoDaddy renewals turn out steep). The domain bill is roughly **$292–312/yr in every
+scenario below** — colocation changes nothing about it. It is also small next to hosting.
+
+### Hosting — awsbox
+
+- One hand-administered EC2 instance (44.248.235.76) serves everything: all the
+  `/sites/web` static sites, edit.phext.io (phext-lattice app), mirrorborn.us.
+- **Cost: ~$100/mo ≈ $1,200/yr — Will's own estimate (2026-11-15), not a billing pull.**
+- No auto-scaling: a traffic spike cannot scale the instance cost (Will's own
+  launch-eve bound, 2026-11-09). Exposure is egress, priced next.
+
+### Bandwidth
+
+No traffic logs are in the record; the properties are small static sites plus one
+app, so assume low GB/mo. AWS egress at $0.09/GB, for scale:
+
+| Egress / mo | Gross @ $0.09/GB | After AWS's 100 GB/mo free egress |
+|---|---|---|
+| 10 GB | $0.90 | $0 |
+| 100 GB | $9.00 | $0 |
+| 1,000 GB | $90.00 | $81.00 |
+
+At any plausible current traffic, bandwidth is a rounding error inside the $100/mo.
+
+### Other
+
+- NFSN membership/hosting fees: **none in evidence** in the record — the NFSN names
+  above are registration renewals only. Marked absent, not assumed zero-cost forever.
+
+### Current profile total
+
+| | Monthly | Annual |
+|---|---|---|
+| Hosting (AWS, Will's estimate) | $100 | $1,200 |
+| Domains (current state) | ≈ $26 | ≈ $312 |
+| **Total** | **≈ $126** | **≈ $1,512** |
+
+---
+
+## Part 2 — Lincoln / Nebraska alternatives (published prices, checked 2026-11-15)
+
+### Colocation
+
+**Binary.Net — The Vault / Sharp Annex, Lincoln, NE** (134 S 13th St / 206 S 13th St).
+The one facility in Lincoln proper with published single-server pricing:
+
+- **Single Server colocation (1U–4U): from $150/mo** — includes 24-hour monitoring,
+  connectivity alerts, redundant fiber & power.
+  Source: [binary.net/services](https://www.binary.net/services/)
+- One-third rack (14U): from $400/mo, listed with unlimited data transfer.
+  Source: [whtop Binary.Net review](https://www.whtop.com/review/binary.net)
+- (Same facility also rents virtual servers from $50/mo — a VPS, not colo, noted
+  because it is the only published Lincoln option under $100/mo.)
+
+Market cross-checks for 1U-class colo in the metro:
+
+- Lincoln and Omaha individual rack units "commonly run $95–175 a month."
+  Sources: [internetaccess.org — Lincoln](https://www.internetaccess.org/server-colocation-nebraska-lincoln.html),
+  [internetaccess.org — Omaha](https://www.internetaccess.org/server-colocation-nebraska-omaha.html)
+- A broker band for Omaha 1–2U (1–3A, 1–5 TB) runs $285–475/mo — broker quotes,
+  well above the published Binary.Net rate; treat as a ceiling, not a price.
+  Source: [quotecolo.com — Nebraska](https://www.quotecolo.com/colocation-hosting/nebraska/)
+- Other Nebraska facilities (1623 Farnam / Nebraska Data Centers and Pinpoint in
+  Omaha, TierPoint in Papillion, Hamilton in Aurora/Doniphan/Grand Island) offer
+  1U or single-server colo but publish **no price** — quote-only. None was assumed.
+
+### Dedicated server rental (provider's hardware, Nebraska facility)
+
+No Lincoln facility publishes a dedicated-rental price. Omaha does, and it is not
+cheap:
+
+- **HostColor, Omaha Edge dedicated: from $499/mo**, 1 Gbps+ unmetered ports,
+  month-to-month default. Source: [vpscolor.com — Omaha Edge](https://www.vpscolor.com/dedicatedhosting/omaha-edge-dedicated-server.html)
+- ServerMo, Omaha: cheapest listed configuration $724/mo (Xeon Silver 4210,
+  128 GB — far more machine than these properties need, and priced like it).
+  Source: [servermo.com — Omaha](https://www.servermo.com/dedicated-servers-usa/omaha/)
+- Market summary for managed dedicated in Omaha: $200–600/mo.
+  Source: [isplocators.com — Omaha managed hosting](https://www.isplocators.com/managed-hosting-nebraska-omaha.php)
+
+### The DIY variant — a Lincoln site with fiber
+
+ALLO's own FCC broadband labels for Lincoln addresses: **1 Gig ≈ $70–82/mo**
+depending on rate card (Standard A $70, Standard B $75, Standard Plus $82),
+unlimited data, no contract. A third-party read of the live Lincoln rate card
+(Sept 2026) put 1 Gig at $108/mo.
+Sources: [allocommunications.com — broadband labels](https://www.allocommunications.com/broadband-labels/?tier=five-standard-plus-crete-tab),
+[myutilitysearch.com — ALLO Lincoln rate card](https://myutilitysearch.com/tag/best-fiber-internet/)
+
+That prices the pipe only. The labels are consumer/small-business products — they
+don't promise static IPs, an SLA, or server-hosting terms; business DIA is
+quote-priced. Add hardware, power, and UPS, and the DIY site lands at parity with
+AWS at best, with all operations on Will. Functionally it is the ranch pattern
+relocated to a fiber-served address.
+
+### Hardware (colo means bringing a machine)
+
+- **$0 option:** colo an existing ranch mini PC. Caveat, honestly: Binary.Net's
+  single-server plan is specified by height (1U–4U); a mini PC fits that envelope
+  physically, but shelf mounting, power brick, and acceptance of non-rackmount
+  gear are the facility's call and would need confirming. No rails, no redundant
+  PSU, no out-of-band management.
+- **Rackmount option:** refurbished Dell PowerEdge R450 1U (2× Xeon Gold 6330,
+  192 GB — well beyond this workload) listed at **$3,237** at TechMikeNY.
+  Source: [techmikeny.com — R450](https://techmikeny.com/products/dell-poweredge-r450-server-4-bay-lff-2x-gold-6330-2-00ghz-56-core-192gb-ram)
+  Amortized: ≈ $90/mo over 3 years, ≈ $67/mo over 4 years. A right-sized
+  prior-generation refurb would cost less; this is the concrete listing in hand.
+
+---
+
+## Part 3 — Verdict
+
+Full web-property profile, domains (post-migration ≈ $292/yr) included in every column:
+
+| Profile | Hosting / mo | Domains / mo | Total / mo | Total / yr | vs. current |
+|---|---|---|---|---|---|
+| **Current — AWS** (Will's ~$100/mo estimate) | $100 | ≈ $26 | **≈ $126** | **≈ $1,512** | — |
+| **Colo — Binary.Net Lincoln** + existing mini PC ($0 hw) | $150 | ≈ $24 | ≈ $174 | ≈ $2,092 | **+$580/yr** |
+| **Colo — Binary.Net Lincoln** + refurb 1U (amort. 4 yr) | $217 | ≈ $24 | ≈ $241 | ≈ $2,901 | +$1,389/yr |
+| **Dedicated — HostColor Omaha** (cheapest published NE rental) | $499 | ≈ $24 | ≈ $523 | ≈ $6,280 | +$4,768/yr |
+
+**On price, Lincoln colocation and dedicated hosting lose.** The cheapest real,
+published, buyable Lincoln colo price (Binary.Net single server, $150/mo) is 50%
+more than the entire AWS bill before hardware, and Nebraska dedicated rentals
+start around $499/mo. The market-range floor for 1U colo ($95/mo) merely ties
+AWS — and it is a range, not a published Lincoln price, and still excludes hardware.
+
+**What would flip it:**
+
+- AWS growing past ~$150/mo — a second instance, a much larger instance class,
+  or paid add-ons — erases colo's premium at the mini-PC-hardware point.
+- Sustained egress above ~1.7 TB/mo: at $0.09/GB, ~$150/mo of egress alone
+  matches the colo rate, and colo plans bundle connectivity instead of metering it.
+- Nothing on the domain side ever flips it: the ~$292/yr domain bill, including
+  phext.io's $77.99/yr GoDaddy registration, is identical in every column.
+
+**Non-price reasons that remain, stated plainly:** full ownership of the serving
+hardware (the substrate test — owned outright, compounds); the public edge sits
+in Lincoln, ~4 ms-class latency on ALLO's labels vs. a distant AWS region, and a
+short drive for physical access at Binary.Net's Sharp Annex; no egress-fee
+exposure at any traffic level; and one less dependency on AWS account standing.
+Those are real. They are worth roughly $580/yr at the cheapest — that is the
+honest price tag on them.
+
+One footnote for completeness: if "Lincoln + fiber + cheaper than AWS" is ever
+the goal in itself, Binary.Net's virtual servers in the same facility start at
+$50/mo — but that is renting a slice of someone else's machine, the opposite of
+the ownership argument for colo.
+
+---
+
+## Sources
+
+- Domain inventory & current prices: `~/workspace/your_files/domain-inventory-and-streamlining-2026-11-06.md`
+- Migration corrections (NFSN .io/.me, transfer prices): `~/workspace/your_files/domain-migration-checklist-2026-11-15.md`
+- AWS ~$100/mo and no-autoscaling bound: Will, 2026-11-15 and 2026-11-09 (record)
+- Binary.Net colo/VPS pricing: https://www.binary.net/services/ · https://www.whtop.com/review/binary.net
+- 1U market ranges: https://www.internetaccess.org/server-colocation-nebraska-lincoln.html · https://www.internetaccess.org/server-colocation-nebraska-omaha.html · https://www.quotecolo.com/colocation-hosting/nebraska/
+- Omaha dedicated: https://www.vpscolor.com/dedicatedhosting/omaha-edge-dedicated-server.html · https://www.servermo.com/dedicated-servers-usa/omaha/ · https://www.isplocators.com/managed-hosting-nebraska-omaha.php
+- ALLO Lincoln fiber: https://www.allocommunications.com/broadband-labels/?tier=five-standard-plus-crete-tab · https://myutilitysearch.com/tag/best-fiber-internet/
+- Refurb 1U hardware: https://techmikeny.com/products/dell-poweredge-r450-server-4-bay-lff-2x-gold-6330-2-00ghz-56-core-192gb-ram
+
+All provider prices read 2026-11-15. No purchases, no provider contact, no signups.
 # Wavelet 2 — Nov 8–14, 2026 (GPT Days 1123–1129): retroactive recap and certification
 
 Title: Wavelet 2 — Nov 8–14, 2026 (GPT Days 1123–1129): retroactive recap and certification
