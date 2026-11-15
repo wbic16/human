@@ -14,7 +14,7 @@ truth: artifacts-source.json beside this builder
 (build_artifacts_phext.py); never hand-edit the .phext.
 artifacts.phext is published to wbic16/human@exo.
 
-Artifacts inscribed: 40
+Artifacts inscribed: 41
 
 Index (coordinate — title — source):
 - 19.7.11/9.7.12/7.6.9 — Light the Next Light — intro song lyrics & time map — ~/workspace/exocortexia-cartoon/intro/LYRICS.md
@@ -57,6 +57,7 @@ Index (coordinate — title — source):
 - 36.6.7/7.6.11/6.6.9 — Depth Behind Every Cell — single-file HTML demo (3D phext for ASCII game maps, for @paleoludic) — workspace/paleoludic-demo/phext-map-demo.html
 - 36.6.7/7.6.11/7.5.9 — Phext Notepad — libphext v0.5.0 parity — ~/workspace/phext-notepad-perf/REPORT-V050-PARITY.md
 - 37.6.8/8.6.11/5.6.9 — phextura.com — landing page (index.html) — ~/workspace/phextura-landing/site/index.html
+- 40.6.8/6.5.9/5.5.9 — Scrolltown — coming-soon landing page (visionquest.me) — workspace/scrolltown-landing/site/index.html
 # Light the Next Light — intro song lyrics & time map
 
 Title: Light the Next Light — intro song lyrics & time map
@@ -8195,5 +8196,93 @@ SHA-256: abc0e6a97234aa5753ba1f066b6aac70c090c7058504bb4aa2e22ac14d7c6924
     <span>phextura.com · 2026</span>
   </footer>
 </div>
+</body>
+</html>
+# Scrolltown — coming-soon landing page (visionquest.me)
+
+Title: Scrolltown — coming-soon landing page (visionquest.me)
+Source: workspace/scrolltown-landing/site/index.html
+Inscribed: 2026-11-15
+SHA-256: 7b2278b70ce11eaa02189fce42c52750fdd0910e0fd8a21802bc9df24661e286
+
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Scrolltown</title>
+<meta name="description" content="We're building a town inside the Great Scroll. Coming soon — a new episode every Saturday, starting January 2, 2027.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://visionquest.me/">
+<meta property="og:title" content="Scrolltown">
+<meta property="og:description" content="We're building a town inside the Great Scroll. Coming soon — a new episode every Saturday, starting January 2, 2027.">
+<meta property="og:image" content="https://visionquest.me/fern-tools.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+  :root {
+    --cream: #FFFBF0;
+    --cream-deep: #FFEFCE;
+    --ink: #2C2019;
+    --coral: #D9552C;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 1.25rem 2rem;
+    background: linear-gradient(180deg, var(--cream) 0%, var(--cream-deep) 100%);
+    color: var(--ink);
+    font-family: ui-rounded, "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+    text-align: center;
+    line-height: 1.6;
+  }
+  main { max-width: 34rem; }
+  h1 {
+    margin: 0 0 1.75rem;
+    font-size: clamp(2.4rem, 9vw, 3.6rem);
+    letter-spacing: 0.14em;
+    font-weight: 800;
+  }
+  figure { margin: 0 0 1.75rem; }
+  figure img {
+    width: min(100%, 26rem);
+    height: auto;
+    border-radius: 1.25rem;
+    box-shadow: 0 1.2rem 2.5rem rgba(44, 32, 25, 0.22);
+  }
+  .building { font-size: 1.25rem; margin: 0 0 0.75rem; }
+  .soon { font-size: 1.05rem; margin: 0 0 2.25rem; }
+  .soon strong { color: var(--coral); font-weight: 700; }
+  .signoff {
+    font-size: 1.15rem;
+    font-style: italic;
+    margin: 0;
+  }
+  footer {
+    margin-top: 3rem;
+    font-size: 0.85rem;
+    opacity: 0.75;
+  }
+  footer a { color: var(--ink); }
+</style>
+</head>
+<body>
+<main>
+  <h1>SCROLLTOWN</h1>
+  <figure>
+    <img src="fern-tools.jpg" width="1000" height="1247" alt="Fern, a young Keeper of Scrolltown, holding a wrench and a hammer, with her toolbox and a rolled scroll">
+  </figure>
+  <p class="building">We're building a town inside the Great Scroll.</p>
+  <p class="soon"><strong>Coming soon</strong> — a new episode every Saturday, starting January 2, 2027.</p>
+  <p class="signoff">The scroll is yours, neighbor. See you tomorrow.</p>
+</main>
+<footer>
+  <p>© 2026 Will Bickford · <a href="https://github.com/wbic16/scrolltown">github.com/wbic16/scrolltown</a></p>
+</footer>
 </body>
 </html>
