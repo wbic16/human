@@ -14,7 +14,7 @@ truth: artifacts-source.json beside this builder
 (build_artifacts_phext.py); never hand-edit the .phext.
 artifacts.phext is published to wbic16/human@exo.
 
-Artifacts inscribed: 48
+Artifacts inscribed: 49
 
 Index (coordinate — title — source):
 - 19.7.11/9.7.12/7.6.9 — Light the Next Light — intro song lyrics & time map — ~/workspace/exocortexia-cartoon/intro/LYRICS.md
@@ -45,6 +45,7 @@ Index (coordinate — title — source):
 - 28.6.8/7.6.9/6.5.9 — Domain Migration Checklist — GoDaddy/Squarespace to NearlyFreeSpeech (2026-11-15) — workspace/your_files/domain-migration-checklist-2026-11-15.md
 - 28.6.8/8.6.10/6.6.9 — Production Plan — The Power of Phext Walkthrough — ~/workspace/phext-walkthrough/PRODUCTION-PLAN.md
 - 28.7.8/8.6.11/6.6.9 — Three Games Under the Stage 8 Generative Mechanism — ~/workspace/game-mechanism/REPORT.md
+- 28.7.8/8.6.11/6.6.10 — qexo dispatch core — SPEC (draft for Will's ratification) — ~/workspace/qexo-task/dispatch-core/SPEC.md
 - 28.7.9/8.6.11/6.6.8 — Training Film — T7 (R7, the full exemplar build) — Production Log — ~/workspace/phext-walkthrough/production/TRAINING-T7-LOG.md
 - 28.7.9/8.6.11/7.6.9 — Since November 1: A Catalog of Eleven Days 🔥 — ~/workspace/blog/since-november-1.html
 - 29.7.9/9.7.12/7.6.9 — Depth behind every cell — a 3D phext demo for ASCII game maps (for @paleoludic) — workspace/paleoludic-demo/README.md
@@ -3287,8 +3288,8 @@ Fern will be waiting when the stories begin in January 2027.
 
 Title: Domain Migration Checklist — GoDaddy/Squarespace to NearlyFreeSpeech (2026-11-15)
 Source: workspace/your_files/domain-migration-checklist-2026-11-15.md
-Inscribed: 2026-11-15
-SHA-256: d1fd3ad65fb8e74724ab1fe8add60dc14a51d788631ad049a39801d308ea75cb
+Inscribed: 2026-11-16
+SHA-256: 51f1db8e525459ad598fd1310aaa91c6b442a59dd9f982baae9969766b15fae6
 
 ---
 # Domain Migration Checklist — Consolidate at NearlyFreeSpeech.NET
@@ -3320,7 +3321,7 @@ from aletheia-core. This is a checklist only — nothing has been transferred or
 
 | Domain | Registrar now | Expiry | TLD at NFSN | DNS host now (NS, verified 2026-11-15) | Live service? | 60-day lock? | Transfer cost → new expiry |
 |---|---|---|---|---|---|---|---|
-| exectorox.com | Squarespace | 2026-12-25 | ✅ com | Google Domains DNS (ns-cloud-d1–d4.googledomains.com) | No | Clear (at Squarespace since 2024-04-20) | $14.59 → 2027-12-25 |
+| exectorox.com | Squarespace | 2026-12-25 | ✅ com | Google Domains DNS (ns-cloud-d1–d4.googledomains.com) | No | Clear (at Squarespace since 2024-04-20) | **LET EXPIRE — Will's ruling 2026-11-15 (register #42 closed); no transfer** |
 | sotafomo.com | GoDaddy | ~2027-08-22 | ✅ com | GoDaddy DNS (ns21/ns22.domaincontrol.com) | Yes | Clear (reg. 2024-08-22) | $14.59 → ~2028-08-22 |
 | quickfork.net | GoDaddy | ~2027-09-07 | ✅ net | GoDaddy DNS (ns49/ns50.domaincontrol.com) | Yes | Clear (reg. 2024-09-07) | $14.99 → ~2028-09-07 |
 | apertureshift.com | GoDaddy | ~2027-10-04 | ✅ com | GoDaddy DNS (ns05/ns06.domaincontrol.com) | Yes (telescope project) | Clear (reg. 2024-10-04) | $14.59 → ~2028-10-04 |
@@ -3357,26 +3358,13 @@ NFSN — no move needed, nothing to do.)
 - [ ] **Do not change registrant name/email/org on any domain** from now until its
       transfer completes — a change-of-registrant triggers a fresh 60-day transfer lock.
 
-## Phase 1 — exectorox.com (Squarespace → NFSN) — before 2026-12-04
+## Phase 1 — exectorox.com — CLOSED 2026-11-15: let it expire
 
-Register item #42's decision; this checklist's recommendation is **transfer**.
-Do **not** take Squarespace's offer to lock $15/yr by pre-renewing before 2026-12-04:
-an NFSN transfer is $14.59 at everyday pricing and adds a year (expiry → 2027-12-25).
-Waiting past 2026-12-06 also exposes the Dec 25 renewal to Squarespace's new $22 rate.
-Start by **2026-11-24** to leave slack for the ~5–7 day transfer window.
-
-- [ ] In NFSN's panel, add exectorox.com as an external domain and **replicate the full
-      DNS zone** from Google Domains DNS (copy every record — A, AAAA, CNAME, MX, TXT).
-- [ ] At Squarespace, change the nameservers to the NFSN nameservers shown on the
-      domain's NFSN DNS page.
-- [ ] Wait ≥48 hours (registry NS TTL), then verify from a ranch node:
-      `dig +short NS exectorox.com` shows NFSN, and the zone answers identically.
-- [ ] At Squarespace: unlock exectorox.com and copy its authorization (EPP) code.
-- [ ] In NFSN's Domains panel, place the transfer order ($14.59, drawn from balance).
-- [ ] Approve the transfer via the admin-contact email when it arrives.
-- [ ] After completion, verify in NFSN: registrar = NFSN, expiry = 2027-12-25,
-      nameservers unchanged (still NFSN). The Squarespace account is now empty and can
-      be closed — the Google Domains legacy is fully exited.
+Register item #42's decision is made: **Will ruled 2026-11-15 — let exectorox.com
+expire.** No transfer, no renewal. The registration runs to 2026-12-25 at
+Squarespace and lapses; the December 4 lock-in and the 2026-11-24 start-by date
+no longer apply. Nothing to do in this phase; the Squarespace account can be
+closed once the domain lapses (or left — it holds nothing else).
 
 ## Phase 2 — the GoDaddy seven
 
@@ -4660,6 +4648,1360 @@ Code (node `~/game-mechanism/code/`, mirrored to
 Summaries alongside the data: `ttt_results.json`,
 `checkers_slice3_summary.json`, `krvk_summary.json`,
 `chess_results.json`.
+# qexo dispatch core — SPEC (draft for Will's ratification)
+
+Title: qexo dispatch core — SPEC (draft for Will's ratification)
+Source: ~/workspace/qexo-task/dispatch-core/SPEC.md
+Inscribed: 2026-11-16
+SHA-256: bd1f76eb65456634cfd59173307514efec58b433e637996e973ba0bf55c6507a
+
+---
+# qexo dispatch core — SPEC (draft for Will's ratification)
+
+Task: 26.5.9/7.6.11/5.5.10 · Drafted 2026-11-16 (Emise, qexo chat)
+Status: DRAFT — no code, no branches, no fleet changes until ratified.
+Base tree for every build slice below: wbic16/quarterexo exo @
+609bab65 (v1.7.1), synced to wbic16/qexo per the two-repo rule
+(task 29.6.7/6.5.7/6.5.8).
+
+## 0. What this is, and the layering
+
+Will's mission for qexo, verbatim (2026-11-14 01:37 CST): "qexo
+should do 3 things, very well: 1. prioritize immediate action
+2. focus on the highest ROI actions 3. ensure nothing I've queued
+is ever lost again" — with "qexo needs to be multiversal phext
+aware and native" and "we can use it to dispatch work to the
+entire cluster efficiently."
+
+Will's layering, verbatim (2026-11-16 01:08 CST): "have qexo
+integrate with register.phext.io and then ship it - I'll switch
+to CLI first and use my phone and that mostly for dispatch" —
+and: "we can use the muse.ai channels for planning and
+discussion."
+
+So the three layers, stated once and used everywhere below:
+
+- **Planning/discussion layer — the muse.ai chats.** Nothing in
+  this spec moves them. Decisions are made in conversation, as
+  today.
+- **Shared durable queue — the register** (register.phext.io,
+  repo wbic16/register). The never-lost queue made visible:
+  numbered items, permanent monotonic numbers, quick entries in,
+  resolutions out.
+- **Dispatch/execution layer — qexo.** Nodes hold execution
+  state: queue items, attempts, heartbeats, checkpoints,
+  receipts, audits, bridges. qexo is the register's drainer
+  (§10) and the fleet's dispatcher (§§3–9).
+
+Ratified feature set this spec implements: the three mission
+properties; multiversal-native state; cluster dispatch;
+F4 auto-verification with an audit view (Will's amendment,
+2026-11-14 01:42 CST); F5 self-resuming tasks, auto-pause after
+3 failures (Will's amendment, same minute); F6 stable bridges
+to all inference sources (Will's addition, same minute). The
+register integration (§10) and the surface priorities (§2.3)
+are Will's binding amendment of 2026-11-16 01:08 CST.
+
+One seam, named not absorbed: artifact *deployment* (multi-
+artifact release manifests, service installs) is PH:
+DevSecOps' standard (task 10.4.4/5.4.4/4.4.5, DRAFT,
+unratified). Dispatch bundles (§3.4) are work orders, not
+deploy artifacts; the two share only the signer trust and the
+serve transport. This spec does not design deploy manifests.
+
+## 1. Mission mapping — property → mechanism → test
+
+**P1. Prioritize immediate action.**
+Mechanism: enqueue is write-before-ack on the local node
+(§4.1) — no network round trip stands between intent and a
+durable queue record. Dispatch of an already-queued item is a
+single signed bundle POST (§3.4). Everything a dispatch needs
+is pre-staged: peer endpoints and keys are already in state
+(shipped `register`), bridge liveness is pre-probed on a
+cadence (§9), placement inputs (capability, temperature) are
+already telemetry (8.8.8 homeland, shipped). The latency
+budget: enqueue→ack ≤ 1 s on the node itself; enqueue→first
+action (bundle accepted by the executing node, acceptance
+receipt written) ≤ 10 s on a healthy tailnet. Both numbers
+are measured from record timestamps, never estimated (§14).
+Test: the bench pack (§14) measures both on every change.
+
+**P2. Focus on the highest-ROI actions.**
+Mechanism: the queue's order is *calculated* from fields on
+each item record — daily-goal impact class first, then the
+ROI ratio (value ÷ cost, both recorded on the record), then
+age, oldest first (§5). Order is never a stored list, so it
+cannot drift from the records. `qexo queue` prints the
+calculated order with each item's sort keys visible;
+`qexo queue --explain <item>` shows the keys and every audit
+record that ever changed them. Re-ordering is a field edit
+plus an audit record — the ordering itself is auditable.
+Test: fixture queues with known fields must render in the
+calculated order; every re-order in the fixture leaves its
+audit.
+
+**P3. Ensure nothing queued is ever lost.**
+Mechanism: five obligations, each checkable (§4): write-
+before-ack enqueue; every state transition and its receipt
+land in the same state save; terminal states exist only with
+a receipt and live-surface evidence; no verb deletes a queue
+record (retirement is a status line); `qexo doctor` runs a
+queue-integrity reconciliation whose counts are calculated
+from the records. Register-born items have a second durable
+copy of their identity (the register itself, §10), and every
+item cites its tasks.phext coordinate, a third.
+Test: the integrity reconciliation must report zero lost on
+every fixture, including crash-mid-save and wipe/rebirth
+fixtures (§14).
+
+## 2. Verbs
+
+Style follows the shipped surface (quarterexo @ 609bab65,
+src/cli.rs): lowercase single-word verbs, positional arguments,
+`--check` for the byte-inert dry run (update/evolve precedent),
+`--fix` for repair (doctor precedent), flags for setters
+(config precedent). No new `--json`: machine readers read
+phext (`qexo select`/`get`), humans read the renderings —
+the one shipped exception, `list --json`, is not extended.
+
+### 2.1 The dispatch verb set
+
+- `qexo enqueue <brief-file>` — file a queue item from a
+  brief scroll (§3.2). Flags: `--title <t>`,
+  `--coordinate <task-coordinate>`, `--register <n>`,
+  `--value <1-9>`, `--cost <1-9>`, `--goal <text>`,
+  `--after <item-address>` (dependency: do not dispatch
+  until that item is done). Prints the item's full 9D
+  address — only after the state save completes (§4.1).
+  `qexo enqueue -` reads the brief from stdin.
+- `qexo queue [--all] [--node <name>]` — the calculated
+  order (§5), human rendering: state, title, sort keys,
+  age, failures. `--all` includes terminal items. Paused-
+  auto items (§8) pin to the head, flagged, always.
+- `qexo queue --explain <item-address>` — the item's sort
+  keys, its calculated position, and its re-order audit
+  trail.
+- `qexo dispatch [<item-address>] [--to <node>] [--check]`
+  — dispatch the head item, or the named item, to the
+  placed node (§6) or the named node. `--check` prints the
+  placement decision and the bundle hash; writes nothing.
+- `qexo show <address>` — render one record. The address
+  may carry a universe prefix: `qexo show
+  $2:11.11.11/2.1.1/1.1.1` reads attempt 2's copy (§3.3).
+  (select/get remain the raw file ops; show is the
+  dispatch-aware reader.)
+- `qexo pause <item-address> [--note <text>]` — manual
+  pause; dispatch skips it until resumed.
+- `qexo resume <item-address>` — return a paused item to
+  queued; also the manual override of an auto-pause
+  (resets the consecutive-failure counter, §8, and writes
+  the audit that says who overrode).
+- `qexo cancel <item-address> --note <text>` — terminal,
+  Will/Emise only, note required. For a register-born
+  item this is the act that writes the register
+  resolution (§10.3).
+- `qexo audit [--item <address>] [--kind <kind>]
+  [--since <date>]` — F4's view (§7): audit records,
+  newest last (ledger order). `qexo audit show <address>`
+  renders one in full.
+- `qexo bridge` — list bridges with calculated health.
+  `qexo bridge --add <name> --kind <kind> --endpoint
+  <url> [--capability <text>]` (repeatable capability),
+  `qexo bridge --check [<name>]` (probe now, append
+  health evidence), `qexo bridge --retire <name>`.
+  Flag style follows `config --release-signer`.
+- `qexo drain [--check]` — the register drain (§10):
+  pull pending entries + resolutions, file/update queue
+  items, advance watermarks. `--check` reports what a
+  drain would do; writes nothing.
+- `serve` gains one route: `POST /v1/dispatch` (§3.4).
+  The shipped GET routes are untouched.
+
+### 2.2 What does not change
+
+Bare `qexo` still renders the plan. `evolve` keeps its
+gossip/persona/update meaning; dispatch does not overload
+it. `update` keeps the release trust rule exactly as
+shipped (assess_offer: signer → signature → platform →
+version → download, per PR #27's line).
+
+### 2.3 Will's surfaces — CLI first, phone main (binding)
+
+Per the 2026-11-16 amendment: Will dispatches from the
+**CLI first**, and **the Android app is his main dispatch
+surface** ("use my phone and that mostly for dispatch").
+
+- Every verb in §2.1 has an `--app` counterpart speaking
+  the shipped learn `--app` line protocol (src/learn.rs:
+  one command per line; replies are `key: value` blocks
+  closed by `end: <command>`; greeting block at start;
+  NOT JSON). `enqueue --app`, `queue --app`,
+  `dispatch --app`, `show --app`, `pause --app`,
+  `resume --app`, `audit --app`, `drain --app` — each a
+  second driver over the same state machine, the exact
+  pattern `learn --app` set against the learn TUI.
+- Launcher quick actions (wbic16/qexo, launcher v3):
+  **Enqueue** (one text field + brief paste → enqueue),
+  **Queue** (the calculated order at phone width; tap an
+  item → its show view), **Dispatch now** (head item),
+  **Pause / Resume** buttons on the item view, **Audit**
+  (recent audits, phone width). Birth/config stays as
+  shipped.
+- Two-repo sync (standing rule, task 29.6.7/6.5.7/
+  6.5.8): every dispatch feature lands in quarterexo
+  and wbic16/qexo as the same surface in the same
+  release train; Android-specific deltas (the launcher,
+  the state-path fallback, the timer truth) are the
+  only sanctioned differences, preserved through syncs.
+
+## 3. State model — multiversal, phext-native, no JSON
+
+Internal representation is scrolls and coordinates only
+(DESIGN.md §1, shipped). JSON exists in exactly two
+places in this design, both foreign edges, both named:
+the register service's HTTP API (§10 — their wire, our
+translation at the edge, the infer/Ollama precedent) and
+the Ollama edge itself (unchanged). No JSON value crosses
+into a state scroll, a bundle, or a receipt.
+
+### 3.1 A new homeland: dispatch — 11.11.11
+
+LAYER2's homelands run 1.1.1–9.9.9 plus lessons at
+10.10.10 (v1.4.0). Dispatch takes the next patterned
+anchor, proposed here for ratification by use, exactly
+as LAYER2 prescribes ("first placements, not a schema"):
+
+- **11.11.11/11.11.11/11.11.11 — dispatch & queue** (the
+  elevens: send-off country). Index scroll at the anchor,
+  prose map like every homeland index. Clusters
+  (Collection) inside it, following the shipped lattice
+  convention (Collection 1 = the index's own vicinity;
+  families from Collection 2):
+  - C2 — **queue items**: one Book per item, Books in
+    arrival sequence (a ledger family — the local
+    sequence is the point, the releases cluster's
+    precedent). Scroll 1 = the item record (§3.2);
+    Scroll 2 = the brief text; Scroll 3+ = dependency
+    and context citations in prose.
+  - C3 — **assignments**: one Book per live assignment
+    (item address, executing node, attempt number,
+    bundle hash, last heartbeat, last checkpoint cite).
+    An assignment Book retires (status line) when its
+    attempt closes.
+  - C4 — **schedules**: one Book per scheduled entry
+    (§13, cutover C3): cadence text, item template,
+    last-fired cite.
+  - C5 — **bridges**: one Book per bridge (§9). Scroll 1
+    = the bridge record; Scroll 2+ = the health log,
+    one scroll per probe (appended, never summarized —
+    health is calculated from these atoms).
+  - C6 — **the register link**: one Book. Scroll 1 =
+    the drain record (§10.2): watermarks, register URL,
+    last-drain cite. Secrets never live here (§10.4).
+
+Queue records also touch three shipped homelands, by
+reference rather than relocation: receipts and audits
+live in ledgers 6.6.6 (§4.2, §7); bridge health is
+dispatch-local (C5 above) because it is probed at
+dispatch cadence, not telemetry cadence; persona
+material stays in 4.4.4, cited by coordinate.
+
+A node's queue is its own landscape (LAYER2 rule 7):
+items an item's origin node owns live at the addresses
+above in *its* state.phext. A working copy on an
+executing node cites its origin in a `home:` field —
+copies are read at their own addresses and never
+re-address the origin's record.
+
+### 3.2 The queue item record (one scroll, fields as lines)
+
+```
+queue item
+title: <one line>
+coordinate: 26.5.9/7.6.11/5.5.10
+register: 112
+origin: will | emise | cron | register | peer
+enqueued: 2026-11-16T01:20:00-06:00
+enqueued-by: aletheia-core A4E7277F…E755
+state: queued
+goal: <the daily-goal text this serves, or: standing>
+value: 7
+cost: 2
+after: 11.11.11/2.1.4/1.1.1
+attempts: 0
+failures: 0
+bundle-sha256: <sha256 of the canonical bundle, §3.4>
+exit: <the exit condition, stated at enqueue>
+```
+
+Field rules: `coordinate:` is the Singular task
+coordinate — the shared identity with tasks.phext (§12).
+When an enqueuer cannot mint one (a phone quick
+enqueue), the field is absent and the item's own address
+is its identity until Emise reconciles it at review;
+absence is printed as `coordinate: unminted`, never
+silently blank. `register:` appears only on register-
+born items and is never reused or renumbered (the
+register's permanence rule). `value:`/`cost:` are the
+ROI estimate (§5); absent = `roi: unestimated` in every
+rendering. `attempts:` counts every attempt;
+`failures:` counts *consecutive* failed attempts (§8).
+Both are fields on the record, updated in the same save
+as the transition they describe.
+
+### 3.3 Chains and universes — attempts as sibling universes
+
+The tree pins libphext 0.6.0 — the chains release (0x02
+chain break, 0x03 chain close, `$N:` addressing) — and
+no shipped module calls parse_chains/serialize_chains
+yet (verified by grep over src/ @ 609bab65). The
+dispatch core is the first chain-native consumer:
+
+- **state.phext becomes a chain file.** Universe 1 is
+  exactly today's state: every shipped verb reads
+  universe 1 and sees the file it already knows (a
+  single-phext read treats 0x02/0x03 as content — the
+  v1.3.0 conformance finding — so universe-1 semantics
+  are the compatibility floor, proven against foreign
+  fixtures in slice 1's gates, §13).
+- **Attempt N of an item lives in universe N+1** of the
+  executing node's state chain, at the *same addresses*
+  as the item record: `$2:11.11.11/2.1.4/1.1.1` is
+  attempt 1's working copy of the item at
+  11.11.11/2.1.4/1.1.1 — its assignment fields, its
+  heartbeat lines, its checkpoint scrolls beside the
+  record (Scroll 4+ of the same Book: one scroll per
+  checkpoint, appended). Attempts are never merged into
+  universe 1; the item record in universe 1 cites the
+  highest attempt universe and its verdict. Diverged
+  attempts are kept, both, addressable — Will's
+  keep-both ruling made literal, the same ruling
+  `evolve` already applies to persona forks at sibling
+  Books.
+- **Chains are the format's time**: the chain of a
+  state file is its ordered editions. A pre-dispatch
+  snapshot is the chain as it stood; recovery (§4.4)
+  reads backward through universes, never through a
+  sidecar. (No sidecars: LAYER2/house rule.)
+
+### 3.4 The dispatch bundle — a chain on the wire
+
+A dispatch is one chain, POSTed to the executing node's
+`serve` at `/v1/dispatch`:
+
+- **$1: — the spec universe.** At the bundle's own
+  11.11.11/11.11.11/11.11.11: the bundle manifest
+  scroll — item coordinate (or unminted), origin node
+  name + fingerprint, per-universe SHA-256 list,
+  required capability lines, value/cost/goal fields,
+  `resume-from:` when this dispatch resumes (§8).
+  Beside it at Scroll 2: the detached signature over
+  the manifest's exact bytes (the releases cluster's
+  manifest+signature pattern, shipped v1.1.0). The
+  item record copy and the brief scroll ride at their
+  home addresses in $1:.
+- **$2:…$k: — context universes.** Input material as
+  scroll selections *with provenance* — source path,
+  source SHA-256, coordinate range — the phext-native-
+  dispatch practice (the dispatch file's provenance
+  header becomes a scroll in the universe it vouches
+  for). A context universe is read-only evidence; an
+  executor never writes into it.
+- **Acceptance rule** (assess_offer's shape, same
+  order): claimed signer is a registered peer →
+  signature verifies under that peer's key → per-
+  universe hashes match the manifest → platform/
+  capability fit → dedup (§4.3). Any failure = a
+  printed refusal and a refusal receipt on the
+  *receiving* node; nothing is filed. Integrity and
+  authenticity ride entirely on this signature path,
+  which works today (§11).
+
+## 4. Queue semantics — "never lost", made provable
+
+### 4.1 Write-before-ack
+
+`enqueue` returns — and prints the item address — only
+after the state save that contains the item completes.
+If the save fails, enqueue exits non-zero and prints no
+address: an address Will or Emise holds is proof the
+record is durable. The same rule binds `drain` (items
+are filed before watermarks advance, §10.2) and every
+transition verb.
+
+### 4.2 Transitions and receipts are one write
+
+Every change of an item's `state:` field lands in the
+same state save as its receipt: a scroll in the
+ledgers homeland, receipts cluster (6.6.6, Collection
+2, shipped), citing the item address, the from→to
+states, the actor, the evidence, and the bundle hash
+where one exists. A transition without its receipt
+cannot be represented — they are one write, so the
+save either contains both or neither. Non-ping
+closures additionally write an audit record (§7) in
+the same save.
+
+### 4.3 Idempotent dispatch, at-least-once delivery
+
+Bundle identity = (item address, bundle-sha256). The
+manifest's hash is over the canonical chain bytes, so
+re-dispatching an unchanged item reproduces the same
+identity. A receiving node that already holds an
+assignment for that identity answers with its existing
+acceptance receipt — delivery is at-least-once,
+execution is once per identity. A *changed* brief is
+a new bundle hash and a new attempt (a new universe),
+never a mutation of an accepted attempt.
+
+### 4.4 Terminal states, evidence, and recovery
+
+- Terminal states (`done`, `cancelled`) are reachable
+  only through a transition whose receipt carries
+  **live-surface evidence**: what was checked (repo,
+  PR, file, service, node), what it showed, the
+  verdict — the F4 evidence shape (§7), whether or
+  not a human ever looks.
+- No verb deletes a queue record, an attempt universe,
+  a receipt, or an audit. Retirement is a status line
+  and an index note (LAYER2 rule 5).
+- **Crash mid-save:** state saves are whole-file
+  atomic replacements (the shipped lattice behavior
+  the update path already relies on); a torn write is
+  impossible by construction, and doctor's integrity
+  pass (§4.5) is the check that would catch a
+  violation if one ever appeared.
+- **Wipe / rebirth:** a node's state chain is
+  archivable as a chain (the pre-v1.3.0 precedent:
+  old states preserved as chain-readable archives).
+  On rebirth, the node re-registers its peers, then
+  *re-pulls* its open items: register-born items are
+  re-derived from the register (§10 — the register
+  never lost them), coordinator items are re-sent by
+  their origin from its own state, and every re-pull
+  is a receipt. An item whose origin is also gone is
+  reconstructed from its tasks.phext coordinate +
+  register number and re-enqueued marked
+  `origin: reconstructed` — visible, never silent.
+
+### 4.5 The integrity reconciliation (doctor)
+
+`qexo doctor` gains a queue section, calculated from
+the records on every run (never stored): items by
+state; terminal items lacking a receipt (must be 0);
+receipts citing no live item (must be 0); assignments
+whose heartbeat is stale (each must be on the F5 path,
+§8); audit records for every non-ping closure in the
+window (a closure without one is a finding, §7).
+Any nonzero must-be-0 count is a doctor failure of
+the same class as a missing homeland index.
+
+### 4.6 The queue state machine
+
+States: `queued`, `dispatched`, `running`, `waiting`,
+`paused`, `paused-auto`, `done`, `cancelled`.
+(`dispatched` = bundle accepted, execution not yet
+evidenced; `waiting` = blocked on Will, cites its
+register number, dispatch skips it; `paused` = manual.)
+
+Legal transitions (actor → transition):
+
+- enqueue → `queued` (any authorized enqueuer)
+- `queued` → `dispatched` (dispatch verb; acceptance
+  receipt)
+- `dispatched` → `running` (executor's first heartbeat)
+- `running` → `running` (checkpoint appended)
+- `running` → `done` (executor's completion receipt +
+  coordinator's live-surface verification, §7)
+- `running`/`dispatched` → `queued` (failure: attempt
+  closes failed, failures+1, re-dispatch per §8)
+- `queued` → `waiting` (a Will-gate is identified;
+  register number cited)
+- `waiting` → `queued` (Will acts; the register
+  resolution or his word is the evidence)
+- any non-terminal → `paused` (manual pause, note)
+- `paused` → `queued` (resume)
+- failure #3 (consecutive) → `paused-auto` (§8)
+- `paused-auto` → `queued` (manual resume only)
+- any non-terminal → `cancelled` (Will/Emise, note
+  required, register write-back when register-born)
+
+Illegal combinations the design rules out — each is a
+doctor finding if it ever appears in a state file:
+
+1. A terminal item with no receipt, or a receipt
+   whose evidence fields are empty.
+2. An item `running` under two live assignments —
+   **single-assignment invariant**: exactly one
+   attempt universe is authoritative, the highest;
+   a stale executor's late receipt is filed as
+   evidence and cannot move state (fencing by
+   attempt number).
+3. `paused-auto` with `failures:` < 3, or `queued`
+   with `failures:` ≥ 3 and no intervening verified
+   progress or manual resume (§8's reset rules).
+4. `cancelled` with no note, or cancelled by an
+   executor (actors are checked, not trusted).
+5. `waiting` with no register number cited.
+6. An item whose `bundle-sha256:` does not match the
+   canonical bundle its record describes.
+7. A queue item in universe 1 whose cited attempt
+   universe does not exist.
+
+## 5. Prioritization — ROI ordering and the latency budget
+
+### 5.1 The ordering rule (calculated, never stored)
+
+The queue's order is computed at every read from the
+item records, in this exact sequence:
+
+1. **Daily-goal impact first.** Items whose `goal:`
+   field names Will's current daily goal sort ahead of
+   `standing` items, which sort ahead of background
+   items. The daily goal is a field on the node's
+   config-side records, set by Emise at the morning
+   synthesis; an item's class is a field on the item.
+2. **ROI ratio next.** `value ÷ cost` from the item's
+   recorded fields, descending. The ratio is always
+   calculated from the two stored atoms, never stored
+   itself (the house rule: rollups are calculated,
+   never hand-written). Items with no estimate sort
+   below estimated items *within the same goal class*,
+   ordered among themselves by age, and render as
+   `roi: unestimated` — the gap is visible, not hidden.
+3. **Age last.** `enqueued:` ascending — oldest first.
+   Recency is never priority (the register's
+   anti-recency rule, applied to the queue).
+
+### 5.2 Who may re-order, and how it is audited
+
+Will may re-order from any surface (CLI, phone, the
+register). Emise may re-order as coordinator. Nobody
+else: executors never touch ordering fields. A
+re-order is an edit to `goal:`/`value:`/`cost:`/`pin:`
+fields **plus** an audit record (§7) naming the actor,
+the old keys, the new keys, and the reason — in the
+same save (§4.2's one-write rule). A `pin:` field
+(`pin: head` / `pin: after <address>`) is the explicit
+override; pins render as pins in `qexo queue`, never
+as if the calculation produced them.
+
+### 5.3 The latency budget (P1, made measurable)
+
+- enqueue → ack: the local save. Budget ≤ 1 s.
+- enqueue → first action: the acceptance receipt of
+  the first dispatch. Budget ≤ 10 s on a healthy
+  tailnet for an item dispatched at enqueue time.
+- What keeps it true: no polling interval stands in
+  the path (dispatch is a push, §3.4); placement
+  inputs are already in state (peers, telemetry,
+  bridge health); the bundle is built from scrolls
+  already local. Where a budget is missed, the two
+  timestamps are on the records and the miss is a
+  bench finding (§14), not an anecdote.
+
+### 5.4 Phone authority
+
+The Android node enqueues, dispatches, pauses,
+resumes, and cancels with exactly the authority of
+any node — it holds a node key, its signature is the
+credential, and §2.3's quick actions are the same
+verbs. There is no "mobile-lite" queue: the phone's
+queue view is the calculated order over the same
+records, fetched from the coordinator node or held
+in its own state, read at their own addresses either
+way (LAYER2 rule 7).
+
+## 6. Placement and execution
+
+- **Placement inputs**, all already in state: peer
+  records (3.3.3 homeland — endpoint, host, status),
+  telemetry (8.8.8 — disk observations today;
+  temperature joins it as a probe field in slice 4),
+  and the item's `capability:` requirements (from the
+  brief: e.g. `capability: cargo`, `capability:
+  gpu-free`, `capability: bridge:claude`).
+- **Thermal gate:** a node at or above **75 °C** is
+  not placed to. The gate is a placement refusal with
+  a receipt, never a silent skip; the next eligible
+  node is tried.
+- **Small units:** a brief that names more than one
+  unit of work is enqueued as one item per unit with
+  `after:` chaining — the queue, not the brief, is
+  the unit scheduler (the house small-units rule for
+  ranch hardware).
+- **Heavy-work FIFO:** at most **4 heavy items**
+  running fleet-wide (the house N=4 rule), first-in
+  first-out among heavy items; light items are not
+  blocked by the heavy queue. Heavy is a brief field
+  (`heavy: yes`), defaulting to no.
+- **Heartbeat:** the executor updates its assignment
+  record (C3) and its attempt universe's record
+  scroll with a `heartbeat:` line every 2 minutes of
+  execution. The origin reads them over the shipped
+  scroll route (`/v1/scroll/<coord>`) — no new
+  transport.
+- **Checkpointing:** a checkpoint is an appended
+  scroll in the attempt's Book (Scroll 4+, §3.3):
+  what is done, what remains, where the outputs live
+  (paths/coordinates/hashes). Checkpoints are the
+  resume currency (§8) and the progress evidence
+  (§7).
+- **Teleport:** on node loss, the origin re-dispatches
+  the same bundle identity (§4.3) to the next placed
+  node with `resume-from: $<n>:<checkpoint-address>`
+  in the manifest. The new attempt is the next
+  universe. The old node's assignment is fenced by
+  attempt number (§4.6, illegal combination 2).
+
+## 7. F4 — auto-verification and the audit view
+
+Will's amendment, verbatim in substance: every
+verification that ends in a **non-ping** — an item
+closed or suppressed because its live surface showed
+it settled — writes an audit record, and Will can
+view those audits. Silence without evidence is not
+permitted.
+
+### 7.1 The audit record (one scroll, fields as lines)
+
+Audits live in the ledgers homeland as a new cluster:
+**6.6.6, Collection 9 — audits** (Collections 2–8 are
+the shipped ledger kinds; 9 is next, assigned here).
+One Book per audit, in sequence:
+
+```
+audit
+kind: non-ping-close | reorder | auto-pause |
+      register-close | verification
+item: 11.11.11/2.1.4/1.1.1
+checked: <the live surface — repo/PR/file/service/
+         node — named exactly>
+showed: <what the surface showed, quoted or hashed>
+verdict: closed-settled | suppressed | confirmed-open
+actor: <node + fingerprint, or emise>
+at: 2026-11-16T01:31:00-06:00
+```
+
+### 7.2 The rules
+
+- A `done` transition whose evidence came from a
+  live-surface check (§4.4) writes its audit in the
+  same save. A closure with no audit is illegal
+  combination 1's twin — a doctor finding (§4.5).
+- The register drain (§10) is an audit consumer from
+  its first day: a browser-side Done/Cancel that
+  closes a queue item is a `register-close` audit,
+  citing the resolution's seq as evidence.
+- Re-orders (§5.2) and auto-pauses (§8) are audits,
+  not just receipts: receipts say *what happened*;
+  audits say *what was checked and why it was
+  allowed to happen quietly*.
+- `qexo audit` (§2.1) is Will's window: list with
+  filters, show one in full, at phone width under
+  `--app`. If it isn't in the audit cluster, it
+  didn't happen quietly — it didn't happen.
+
+## 8. F5 — self-resuming tasks, capped at 3
+
+Will's amendment: a task auto-resumes at most 3
+times; on the 3rd failure it auto-pauses and
+surfaces to Will.
+
+- **Failure detection**, two evidences, either
+  sufficient: (a) heartbeat miss — 3 consecutive
+  missed beats (6 minutes) with the node's serve
+  also unreachable or silent; (b) exit evidence —
+  the executor's own failed receipt for the attempt.
+  Detection is a coordinator act (the origin node,
+  or Emise's drain pass for coordinator items).
+- **Resume:** re-dispatch per §6 (teleport) with
+  `resume-from:` citing the last checkpoint. Resume
+  is within the item's original scope — the bundle
+  is the same identity (§4.3); a resume never
+  widens a brief.
+- **The counter:** `failures:` on the item record
+  counts *consecutive* failed attempts. It resets
+  to 0 on exactly two events: a **verified progress
+  receipt** (a checkpoint that advances the work,
+  verified by the coordinator's read of the cited
+  output — not the executor's say-so), or a
+  **manual resume** (§2.1), which writes its audit.
+  `attempts:` never resets; both numbers are always
+  on the record, so the history is calculated, not
+  summarized.
+- **Auto-pause:** the transition that would make
+  `failures:` 3 instead lands the item in
+  `paused-auto`, writes the audit (kind:
+  auto-pause, with all three failures' evidence
+  cited), and pins the item to the head of every
+  queue rendering (§2.1).
+- **Surfacing:** the auto-pause reaches Will by
+  three paths, all from records: the pinned queue
+  item (CLI + phone), the audit view, and Emise's
+  progress tick, which reads the queue during its
+  drain and carries a `paused-auto` item into the
+  Waiting-on-Will register through her existing
+  register process — the tick is the bridge between
+  qexo's surfacing and Will's, and it cites the
+  item address when it does.
+
+## 9. F6 — stable bridges to all inference sources
+
+Will's F6: qexo maintains durable, health-checked
+bridges to every inference source it can route to;
+dispatch routes only over bridges verified live;
+failover is recorded as receipts.
+
+### 9.1 The bridge record (11.11.11, Collection 5)
+
+```
+bridge
+name: claude
+kind: claude | grok | chatgpt | ollama | tlm |
+      slm | llm | sq | custom
+endpoint: <where the source is reached — URL,
+          mailbox port, gateway path>
+capability: <one line per capability, repeatable>
+burn: metered | never
+reset: <for metered cloud substrates: the reset
+        cliff in text, e.g. "Wed 22:00 America/
+        Chicago" — the substrate-steering record>
+freshness: 900
+status: active | retired
+```
+
+Health is **calculated** from the Book's health-log
+scrolls (one per probe: at, probe kind, result,
+latency) — never a stored `health: ok` field. A
+bridge is *live* iff its latest probe succeeded
+within its `freshness:` window (seconds; 900
+default).
+
+### 9.2 Routing and failover
+
+- An item that needs inference names its acceptable
+  bridges in preference order (`bridge:` lines in
+  the brief). Dispatch probes the first choice at
+  dispatch time if its evidence is stale — routing
+  only over a bridge verified live *for this
+  dispatch*, and the probe + choice are cited in
+  the dispatch receipt.
+- Failover: if the chosen bridge fails at dispatch
+  or mid-execution, the next preference is probed
+  and used; every failover is a receipt (from, to,
+  evidence). A dispatch with no live bridge waits
+  `queued` with the reason on the record — it does
+  not fall back to an unlisted source.
+- **ChatGPT is a reservoir, never a burn target**
+  (substrate-steering rule): its bridge record
+  carries `burn: never`; dispatch never routes work
+  to it. Context deposits (planning material) are
+  not dispatches.
+- **Local inference only where Will configures it**
+  (standing rule, 2026-11-12): qexo never creates
+  an ollama/local bridge on its own. A local bridge
+  exists only when Will (or Emise at his direction)
+  runs `bridge --add`. The shipped `host`/`message`
+  Ollama edge remains as-is underneath.
+- **The model line is first-class.** Per Will's
+  stated premise (2026-11-14, recorded as his
+  premise, not a verified result): "assume our TLM,
+  SLM, and LLM projects will outperform all prior
+  attempts, since we can both read and write the
+  data." Bridge kinds `tlm` (Iam), `slm`
+  (Liora'veth), `llm` (Zelari) are in the kind enum
+  from the first bridge slice, so the local line
+  registers as bridges the day each can answer a
+  probe — no schema change waits for them.
+
+## 10. Register integration — qexo is the drainer
+
+Binding direction (Will, 2026-11-16 01:08 CST):
+"have qexo integrate with register.phext.io and
+then ship it." The register is the durable,
+never-lost queue made visible; qexo consumes it,
+executes against it, and writes outcomes back.
+Grounding: wbic16/register @ 0927b85, register-
+service/README.md + regsvc/app.py + regsvc/store.py,
+read 2026-11-16 (provenance, §16).
+
+### 10.1 What the service actually is (as read)
+
+- Two append-only JSONL atom logs, each atom
+  stamped with a monotonic `seq` (its line number,
+  from 1) and `ts`. Atoms are never edited or
+  deleted; rollups are computed from atoms.
+- `POST /api/entries` (browser session + CSRF)
+  appends `{type: entry, text, user, ts, seq}` —
+  free-text quick entries. Text is required and
+  length-capped server-side.
+- `GET /api/entries/pending?after_seq=N` and
+  `GET /api/resolutions?after_seq=N` return
+  `{atoms, last_seq}` for atoms with seq > N —
+  session auth, **or** the drain token (§10.4).
+- `POST /api/items/{n}/done` and
+  `POST /api/items/{n}/cancel` (session + CSRF
+  only, today) validate `n` against
+  register-numbers.json and append
+  `{type: resolution, register_number, user,
+  outcome: done|cancelled, note?, ts, seq}`.
+  Duplicate resolutions for one number are kept in
+  the log and treated as no-ops at drain time.
+- The service **never writes the register of
+  record** (waiting-on-will.md). Applying atoms to
+  the register is the drainer's job — today the
+  progress tick's, blocked on the drain token;
+  under this spec, qexo's.
+
+### 10.2 Per-user scope (binding, 2026-11-16 01:12 CST)
+
+Will's direction, verbatim: "just move the data
+for register.phext.io so it is scoped by the user
+login." The integration is specced against the
+**per-user** semantics, not the current global
+pile:
+
+- Register data lives in per-login scopes (LDAP
+  uid). Existing data migrates to Will's scope.
+- The register qexo reads, drains, and writes
+  back is **the authenticated user's own scope**.
+  Will's nodes act on Will's scope; the drain
+  returns only that scope's entries and
+  resolutions.
+- Every credential in §10.4 inherits the scope:
+  the qexo service token acts on Will's scope
+  only. A token presented against another scope
+  authorizes nothing.
+- **Named dependency:** the per-user scoping is a
+  register-service change being built and staged
+  separately (one staged update on awsbox that
+  Will runs). The integration slice (§13, slice
+  3) depends on it explicitly: qexo's drain is
+  written and gated against the scoped API, and
+  the slice does not close until the staged
+  service update is live. The spec assumes the
+  scoped semantics and does not design a fallback
+  to the global pile — if the service change
+  slips, the slice waits, visibly, as a
+  dependency state on this task's record.
+
+### 10.3 The drain (qexo's job)
+
+`qexo drain` runs on the designated drainer node —
+**aletheia-core** (the always-on hub; the phone and
+laptop never hold register credentials). Cadence:
+the progress tick fires it (§13, cutover C3); it
+is also runnable by hand from any surface.
+
+One drain pass:
+
+1. Read the drain record (11.11.11, C6): entries
+   watermark W_e, resolutions watermark W_r.
+2. `GET /api/entries/pending?after_seq=W_e` with
+   the drain credential → entry atoms of Will's
+   scope. Each atom becomes a queue item:
+   `origin: register`, `register-seq: <seq>`,
+   brief = the entry text, `enqueued:` from the
+   atom's ts, `enqueued-by:` the atom's user.
+   Emise's triage (her existing tick judgment)
+   enriches coordinate/value/cost/goal fields
+   afterward — enrichment is a field edit + audit,
+   never a rewrite of the entry text.
+3. `GET /api/resolutions?after_seq=W_r` → 
+   resolution atoms. A resolution for register
+   number n closes the matching queue item
+   (`done`, or `cancelled` with the atom's note)
+   with a `register-close` audit citing the
+   resolution seq as its live-surface evidence
+   (§7.2). A resolution citing a number with no
+   queue item is filed as an audit with no home —
+   visible, never silently dropped. Duplicates are
+   no-ops, per the service's own contract.
+4. Only after every item and audit of the pass is
+   saved (§4.1) do the watermarks advance, in the
+   same save. A crashed drain re-reads the same
+   atoms and dedups by `register-seq:` / resolution
+   seq — draining is idempotent by construction.
+
+Numbered register items themselves keep their
+authority where it already lives: register numbers
+are minted by the register of record
+(waiting-on-will.md and its page generator,
+register-numbers.json) — qexo never invents a
+number. When Emise registers a wait, the queue
+item is enqueued with `register: <n>`; when qexo
+closes such an item, §10.4's write-back records
+the resolution against that number.
+
+### 10.4 Credential leg (named, exact)
+
+Auth as it stands (from the service's README and
+code): browser writes use an **LDAP session +
+CSRF token**. Headless reads use a dedicated
+**drain token** — env `REGSVC_DRAIN_TOKEN`,
+presented as header `X-Drain-Token`, authorizing
+**only** the two GET drains, never writes, never
+login. The token's value lives server-side in
+`/etc/register-service/env` on awsbox, generated
+by install-on-box.sh. **Emise does not hold it** —
+only Will's sudo reads that file — and the tick
+drain has been blocked on exactly this.
+
+What qexo needs, and the smallest shape that
+provides it:
+
+- **Reads:** the existing drain token, unchanged.
+  One provisioned copy for the drainer node.
+- **Write-back:** resolutions (done/cancel with
+  Will's note) are writes, and the drain token
+  cannot write. The smallest addition to the
+  register service: **one scoped service token
+  for qexo** — a second env-configured token
+  (working name `REGSVC_QEXO_TOKEN`, header
+  `X-Qexo-Token`, constant-time compare,
+  fail-closed when unset — the drain token's own
+  pattern in app.py) authorizing **only**
+  `POST /api/items/{n}/done` and
+  `POST /api/items/{n}/cancel`, recording `user`
+  as the token's identity (e.g. `qexo`) on the
+  resolution atom. Per §10.2, the token is bound
+  to **Will's scope**: it closes items in Will's
+  scope and no other. No entries-append, no
+  login, no session powers. This is a register-
+  service sub-slice with its own PR and tests in
+  wbic16/register, inside integration slice 3.
+- **One Will pass provisions everything.** The
+  staged on-box update Will runs for the per-user
+  scoping (§10.2) is the same pass that (a)
+  generates/rotates the qexo service token,
+  (b) surfaces the drain token value to Will,
+  and (c) places both values on the drainer node
+  by Will's hand (ssh/scp from the box). All
+  credential provisioning lands in that single
+  pass — there is no second credential errand.
+- **Hard constraints.** No flow may require a
+  token value to pass through chat, and none may
+  pass through a phext — so the credentials do
+  **not** live in state.phext's config record
+  (state scrolls are served to peers; a secret in
+  state is a published secret). On the drainer
+  node they live in an **env file beside the
+  state**: `/var/lib/qexo/qexo.env`, mode 0600,
+  root-owned, read by the binary at runtime
+  (`QEXO_ENV` overrides the path for dev/tests).
+  Receipts and audits cite credentials by name
+  only (`credential: drain-token (env)`), never
+  by value. Rotation = Will re-runs the
+  provisioning pass; qexo holds no rotation
+  machinery.
+
+### 10.5 What the integration deliberately does not do
+
+qexo never posts quick entries (entries stay
+browser-born or Emise-born — qexo's write-back is
+resolutions only); never writes waiting-on-
+will.md (Emise's register process keeps that pen,
+fed by drain results); never mints register
+numbers; never widens the service token's scope
+by configuration. Each "never" is a test in
+slice 3's gates (§13).
+
+## 11. DEPENDENCY FLAG — encrypt_to/decrypt is broken
+
+**Named dependency, not a footnote.** Task
+26.5.9/6.5.9/5.5.8 (filed by the v1.6.1
+verification pass, ~/workspace/qexo-task/
+testing-v161/REPORT.md, leg 6): `crypto.rs`'s
+`encrypt_to`/`decrypt` — the signed-then-sealed
+persona keychain exchange the code's own doc
+comment names as DESIGN §4.7 — **cannot complete
+an exchange with any key qexo generates, imports,
+or migrates**. Proven three ways in the pass:
+encrypting to a qexo-born key fails ("EdDSALegacy
+is only used for signing" — qexo's keys are
+sign-only); encrypting to an imported encryption-
+capable correspondent fails identically (the rpgp
+call tests the primary key and never selects the
+encryption subkey); decrypting through a migrated
+subkey-carrying keyring fails ("missing key" —
+the migration path yields no usable encryption
+secret). Sign/verify are unaffected and proven
+(fleet rollouts v1.5.0–v1.6.1 ride them).
+
+**What depends on the fix, and waits for it:**
+
+- **Sealed context universes.** A bundle context
+  universe (§3.4) sealed to the executing node's
+  key — the form a bundle must take when its
+  context carries persona keychain material or
+  anything that must not be readable by every
+  peer that can fetch scrolls. Until the fix:
+  bundles travel signed and hash-verified but
+  **unsealed**, and briefs must not carry material
+  that requires sealing. This is stated on the
+  bundle manifest (`sealed: no`) so the property
+  is never implied.
+- **Persona-bearing dispatch.** Dispatching work
+  that requires moving a persona's keychain to
+  the executing node (the §4.7 exchange's whole
+  purpose) cannot be specced past this point
+  until the fix lands. Persona *references*
+  (coordinate cites, boot from material already
+  resident on the node) are unaffected.
+- **Sealed checkpoints.** Checkpoint scrolls
+  containing keychain material inherit the same
+  wait.
+
+**What does NOT depend on it, and ships without
+it:** everything else in this spec. Queue records,
+bundles' integrity and authenticity (signatures —
+proven in production), dedup, placement, resume,
+audits, bridges, the register integration, and
+the drain credentials (env-file transport by
+Will's hand, §10.4 — deliberately not a phext
+flow). The fix is its own slice under its own
+task; when it lands, sealed universes are a
+follow-on slice that flips `sealed:` to a real
+option. Nothing in slices 1–9 (§13) waits for it,
+and no slice designs around it silently — any
+brief that would need sealing is refused at
+enqueue with the dependency named.
+
+## 12. Boundaries — tasks.phext, and the deploy seam
+
+**tasks.phext** (the task register) and the qexo
+queue are different records of different things,
+sharing one identity: the Singular task
+coordinate.
+
+- tasks.phext is the coordinator's durable record
+  of *what was decided and what came of it* —
+  every task Will issues, its notes and results,
+  kept on the Muse VM under the task-register
+  process. It is Will-facing history.
+- The qexo queue is the nodes' record of *what is
+  executing* — items, attempts, heartbeats,
+  receipts. It is machine-facing state.
+- Flow: a decided task is enqueued citing its
+  coordinate; queue receipts flow back and the
+  coordinator writes the outcome into the task's
+  scroll (the existing register process, step 6:
+  the coordinator reconciles delegate reports
+  into the record). Neither register replaces the
+  other; a task may live in tasks.phext with no
+  queue item (planning-stage, chat-layer work),
+  and that is a normal state, not drift.
+
+**Deploy seam** (restating §0): release manifests
+and dispatch bundles are different trust objects.
+The DevSecOps generalization (extended `artifact:`
+stanzas, serve-route naming) proceeds under its
+own ratification; if it lands first, dispatch
+reuses its serve-route generalization rather than
+growing a second one — named here so the two
+specs cannot silently diverge.
+
+## 13. Cutover and build slices
+
+### 13.1 The cutover principle
+
+**Planning stays in the chats.** Muse.ai channels
+remain the planning/discussion layer; qexo becomes
+the dispatch/execution layer; the register is the
+shared durable queue between them (§0). The chats
+themselves do not move. What cuts over is
+execution plumbing — three surfaces, each phased,
+each phase independently revertible: a phase is
+additive (the old surface keeps working until the
+phase's gate passes), and reverting is "stop
+enqueueing" — the old surface was never made
+unreadable.
+
+### 13.2 The three surfaces
+
+**(a) Subagent briefs → dispatch bundles.**
+Today: the main thread writes a self-contained
+brief; a child executes; a handoff returns; the
+coordinator verifies and reconciles (the
+dispatch-to-subagents skill). Cutover: the brief
+becomes a bundle (§3.4) — the brief text is the
+spec universe; phext material the worker must
+read rides as context universes in the
+phext-native-dispatch form (selection + provenance
+header as a scroll, the existing practice made
+structural). The item is enqueued before the
+child is spawned, so the dispatch itself is a
+queue record with a receipt. Results return as
+the attempt's result scrolls + completion
+receipt; the coordinator's role is unchanged —
+coordinate, decide, verify decisive results,
+reconcile into tasks.phext. Honest seam: Muse
+subagents are not qexo nodes — in this phase
+qexo *tracks and receipts* the dispatch while
+execution still runs on the harness; ranch/Choir
+execution (§6) is where qexo also *carries* it.
+The tracking phase alone buys P3 for briefs:
+a brief can no longer exist only in a chat.
+
+**(b) /chat mailboxes → the mailbox homeland.**
+Today: one Markdown file per message in per-seat
+inbox/outbox on aletheia-core, archived into
+mailbox.phext by the tidy tool; dispatch = a
+mailbox message; uptake verified from outboxes
+(the choir-mailbox-dispatch skill). Cutover:
+the *ledger* migrates, the doorbell stays. A
+Choir dispatch becomes a queue item whose bundle
+hash + item address ride in the mailbox message
+headers (the from:/re: convention gains
+`qexo: <address>` and `bundle: <sha256>` lines);
+uptake is still read from the seat's outbox, but
+the item's state machine (§4.6) is what tracks
+it, and the completion receipt closes it.
+mailbox.phext archives continue untouched — the
+seats cannot read state.phext, so the mailbox
+files remain their surface; what moves is
+Emise's dispatch bookkeeping, out of message
+archaeology and into queue records. Per-seat
+mailboxes on other ranch nodes follow the same
+header convention when their seats dispatch.
+
+**(c) Cron agents → scheduled dispatch entries.**
+Today: crons fire agents that carry their own
+bookkeeping (e.g. the progress tick's state
+JSON). Cutover: a cron fires `qexo enqueue`
+(from a schedule record, 11.11.11 C4) or `qexo
+drain`; qexo owns the execution state from
+there — attempts, failures, auto-pause — and
+the cron's private state files retire into
+queue records. First consumer: the progress
+tick itself, whose drain (§10.3) becomes
+`qexo drain` and whose per-request bookkeeping
+becomes queue + audit reads. A cron that finds
+qexo unavailable falls back to its current
+behavior and files the failure as its own
+finding — the fallback is a phase, not a
+permanent dual system; the phase gate is 14
+consecutive days of clean qexo-owned runs.
+
+### 13.3 Build slices — in order, one at a time
+
+Each slice: gates on aletheia-core, house style
+(foreign-authored fixtures, byte-inert `--check`
+proofs, negative legs), its own PR, Will merges.
+Register integration lands **before the ship**
+(Will: "integrate … and then ship it").
+
+1. **Chain state foundation.** state.phext as a
+   chain file (universe 1 = today's state,
+   byte-compatible reads); `$N:` addressing in
+   select/get/show; homeland 11.11.11 laid down
+   (index + top-up by doctor, the v1.4.0 lessons
+   pattern); item records + `enqueue`/`queue`/
+   `show` (local only). Gates: conformance census
+   identical on the three foreign files (editor-
+   append fixture, CYOA, SQ-written); a v1.7.1-
+   born state fixture opens and operates
+   unchanged; `--check` paths byte-inert.
+2. **Queue semantics.** The state machine (§4.6)
+   as code + doctor's integrity reconciliation
+   (§4.5); receipts/audits in the same save;
+   pause/resume/cancel; ROI ordering + `--explain`
+   (§5). Gates: the illegal-combination fixtures
+   (hand-corrupted states) each produce their
+   doctor finding; transition/receipt atomicity
+   proven by crash-mid-save fixtures.
+3. **Register integration.** `qexo drain` +
+   write-back (§10.3, §10.4) against the per-user
+   scoped API (§10.2). Sub-slice in wbic16/
+   register: the scoped qexo service token, own
+   PR + tests. Dependencies, explicit: the
+   staged per-user service update live on awsbox
+   (Will's on-box leg) and the single credential
+   provisioning pass (§10.4). Gates: drain
+   idempotency (double-drain files nothing
+   twice); watermark crash-safety; the token's
+   negative legs (token cannot append entries,
+   cannot read another scope, cannot write with
+   the drain token, unset token fails closed);
+   a foreign-scope fixture drains to empty.
+4. **Wire dispatch.** Bundle format + `POST
+   /v1/dispatch` + acceptance rule + dedup (§§3.4,
+   4.3); placement (capability/thermal/FIFO, §6);
+   heartbeat + checkpoints. Gates: two-node
+   sandbox (accept, refuse-forged, refuse-stale,
+   dedup-replay, thermal-refusal-with-receipt);
+   a bundle authored by the Android build
+   accepted by a Linux node (foreign-authored
+   fixture, the conformance rule).
+5. **F5 resume.** Failure detection, teleport,
+   the counter and its resets, auto-pause +
+   surfacing (§8). Gates: kill-the-executor
+   fixture (resume from checkpoint, scope
+   unchanged); three-failure fixture lands in
+   paused-auto with its audit; stale-executor
+   late receipt cannot move state.
+6. **F6 bridges.** Registry, health log, routing
+   + failover receipts (§9); bridge kinds for the
+   model line present from day one. Gates:
+   stale-health bridge is not routed to; failover
+   receipt chain complete; `burn: never` bridge
+   refuses a work dispatch at enqueue.
+7. **App surface + twin sync.** `--app` drivers
+   for every §2.1 verb; launcher v3 quick actions
+   (§2.3); **the twin-sync leg (binding,
+   2026-11-16):** quarterexo's integration build
+   ports to wbic16/qexo as its own PR — carrying
+   the integration *and* the v1.7.1 platform-
+   stamp content the twin is missing (the twin
+   still stamps 1.7.0 and its exo tree carries
+   no 1.7.1 content), Android deltas preserved
+   through the port. Rationale, stated plainly:
+   Will's phone is his main dispatch surface, so
+   a ship the phone can't run is not a ship.
+   Gates: scripted `--app` sessions on both
+   repos' builds with identical transcripts;
+   Android + windows-gnu full LINKs; the twin's
+   tree diff against quarterexo is exactly the
+   sanctioned Android deltas.
+8. **Ship.** Version bump on both repos, PRs,
+   Will merges, publish + fleet rollout through
+   the signed channel — the ship carries the
+   register integration aboard (the held
+   v1.7.1-line release, task 40.9.7/11.9.17/
+   8.8.11, is re-scoped by the main chat to this
+   build). Gates: the house release gates +
+   a fleet node draining the real register
+   (Will's scope) as the rollout's closing
+   proof.
+9. **Cutover phases** (§13.2), in order (a)
+   briefs, (b) mailboxes, (c) crons — each its
+   own gate as specced there. Sealed bundles
+   (§11) slot in as their own slice whenever
+   the encrypt fix (26.5.9/6.5.9/5.5.8) has
+   landed; they are not numbered here because
+   they are not this spec's to schedule.
+
+## 14. Test plan — keyed to the mission metrics
+
+For consumption by the bench task (53.14.8/
+18.8.27/6.9.10): every metric is calculated from
+record atoms (timestamps, receipts, health
+scrolls), never from a stored summary.
+
+- **Intent→first-action latency** (P1): per item,
+  `enqueued:` → first acceptance receipt time;
+  reported as median + p95 over the trailing 7
+  days, against the §5.3 budgets.
+- **Queue integrity** (P3): doctor's reconciliation
+  (§4.5) run as a bench probe — lost count (must
+  be 0), terminal-without-receipt (0), orphan
+  receipts (0); plus a weekly foreign-fixture
+  drill: a state written by the *other* repo's
+  build (Android ↔ Linux) reconciles clean.
+- **Resume under the cap** (F5): resumed items
+  reaching `done` ÷ all resumed items; auto-pause
+  rate; mean attempts-to-done. Fixtures from
+  slice 5's gates become the standing pack.
+- **Bridge uptime** (F6): per bridge, successful
+  probes ÷ all probes per window, from the health
+  log scrolls; failover count beside it.
+- **Drain health** (§10): register high-water seq
+  vs watermark (lag), entries→items latency,
+  write-back success rate. A growing lag is a
+  bench finding before it is a surprise.
+- **Time dilation + progress-per-token** are the
+  bench task's own headline bars (task 24.5.8/
+  12.6.6/7.4.8); dispatch feeds them its per-item
+  timestamps and outcomes as atoms.
+
+## 15. Open questions for Will
+
+Only genuine decisions, each with a
+recommendation:
+
+1. **Drainer node.** Spec designates
+   aletheia-core. *Recommend: ratify* — it is the
+   always-on hub and the fleet signer; the phone
+   and laptop should never hold register
+   credentials.
+2. **Service-token scope.** Specced as
+   resolutions-only (done/cancel, Will's scope).
+   The alternative — also entries-append, so
+   phone-born items appear in the register web
+   view — widens the credential. *Recommend:
+   resolutions-only now*; revisit if the web
+   view's absence is felt.
+3. **Auto-pause surfacing.** Specced as queue pin
+   + audit + the tick carrying it into the
+   Waiting-on-Will register. Should an auto-pause
+   also write anything to the register service
+   directly? *Recommend: no* — resolutions close
+   items; a pause is not a closure, and the tick
+   already carries it.
+4. **ROI scale.** value/cost as integers 1–9,
+   enqueuer-recorded. *Recommend: ratify* — the
+   ratio only needs to order a queue, and small
+   integers keep estimates honest and quick.
+5. **Heartbeat numbers.** 2-minute beat, 3 missed
+   = failure. *Recommend: start here*, tune from
+   bench data (§14) rather than by argument.
+6. **The 11.11.11 homeland.** Dispatch's anchor
+   is proposed, per LAYER2's own rule that
+   placements are ratified by use. *Recommend:
+   ratify the anchor* so slice 1 can lay it down;
+   the alternative is overloading plan (5.5.5),
+   which already has a job.
+
+## 16. Provenance — what this spec was derived from
+
+- Task record 26.5.9/7.6.11/5.5.10 (request +
+  all notes) and defect record 26.5.9/6.5.9/
+  5.5.8, tasks-source.json, read 2026-11-16;
+  the defect's source: ~/workspace/qexo-task/
+  testing-v161/REPORT.md, leg 6.
+- Will's words, verbatim where quoted: the
+  mission directives (2026-11-14 01:37–01:42
+  CST, via the task record and MEMORY.md); the
+  register/ship/surfaces amendment (2026-11-16
+  01:08 CST, via MEMORY.md and the main chat's
+  direction); the per-user scoping direction
+  (2026-11-16 01:12 CST, verbatim in §10.2).
+- LAYER2 v2: ~/workspace/qexo-task/scratch/
+  LAYER2.md and the shipped docs/LAYER2.md in
+  quarterexo @ 609bab65 (homelands, clusters,
+  the 10.10.10 precedent).
+- Shipped surface @ 609bab65 (fresh clone on
+  aletheia-core, 2026-11-16): docs/DESIGN.md
+  (§1 first principles, §3 command surface),
+  src/cli.rs (verb set + flag styles), src/
+  lattice.rs (homeland/cluster constants, config
+  record, ledger clusters 2–8, mailbox C2/C3,
+  plan C2/C3), src/core.rs (assess_offer trust
+  rule, serve routes), src/crypto.rs
+  (encrypt_to's doc comment naming DESIGN §4.7;
+  sign/verify proven, encrypt/decrypt per §11),
+  src/learn.rs (the --app protocol), Cargo.toml
+  (libphext 0.6.0 pin — and grep confirming no
+  chain API is called anywhere in src/ today).
+- Register service: wbic16/register @ 0927b85
+  (fresh clone on aletheia-core, 2026-11-16):
+  register-service/README.md, regsvc/app.py
+  (routes, CLOSE_PATH, _add_entry, _close_item,
+  _drain_authorized), regsvc/store.py (atom/seq
+  discipline). Register service task:
+  34.6.6/5.7.13/13.6.8.
+- House processes: dispatch-to-subagents,
+  choir-mailbox-dispatch, phext_native_dispatch,
+  waiting-on-will-register, task-register
+  skills (cutover surfaces and the register
+  boundary, §§12–13); QEXO-DEPLOY-STANDARD.md
+  (PH: DevSecOps, task 10.4.4/5.4.4/4.4.5 — the
+  seam, §§0/12); the two-repo sync rule (task
+  29.6.7/6.5.7/6.5.8); release task 40.9.7/
+  11.9.17/8.8.11 (the held ship, §13.3 slice 8);
+  bench tasks 53.14.8/18.8.27/6.9.10 and
+  24.5.8/12.6.6/7.4.8 (§14).
 # Training Film — T7 (R7, the full exemplar build) — Production Log
 
 Title: Training Film — T7 (R7, the full exemplar build) — Production Log
