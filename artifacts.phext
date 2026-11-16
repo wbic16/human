@@ -14,7 +14,7 @@ truth: artifacts-source.json beside this builder
 (build_artifacts_phext.py); never hand-edit the .phext.
 artifacts.phext is published to wbic16/human@exo.
 
-Artifacts inscribed: 46
+Artifacts inscribed: 47
 
 Index (coordinate — title — source):
 - 19.7.11/9.7.12/7.6.9 — Light the Next Light — intro song lyrics & time map — ~/workspace/exocortexia-cartoon/intro/LYRICS.md
@@ -49,6 +49,7 @@ Index (coordinate — title — source):
 - 29.7.9/9.7.12/7.6.9 — Depth behind every cell — a 3D phext demo for ASCII game maps (for @paleoludic) — workspace/paleoludic-demo/README.md
 - 30.6.8/7.6.10/7.5.9 — Ranch Node Tailworm Audit — Tailscale TS-2026-014 → TS-2026-017 — ~/workspace/tailworm-audit-task/AUDIT.md
 - 30.6.8/8.6.11/6.6.9 — Paper Addressing for tluf.org — a profile of phextura Layer 2 — ~/workspace/oracle-service/ADDRESSING.md
+- 30.9.9/10.7.14/7.7.10 — Stage 8 — The Generative Turn: How It Improves Phext — ~/workspace/nethack-solver/stage8-phext-report.md
 - 31.7.8/8.7.11/7.6.10 — exo-search README — indexed search over a personal Twitter archive (wbic16/exo-search) — ~/workspace/exo-search-publish/README.md
 - 31.7.9/9.6.12/6.6.9 — The Power of Phext — Walkthrough Package — ~/workspace/phext-walkthrough/WALKTHROUGH.md
 - 32.5.7/7.6.10/6.5.9 — edit.phext.io — Security + Scalability Testing, and the In-Page Phext Server Verdict — ~/workspace/phext-edit-secscale/REPORT.md
@@ -5183,6 +5184,178 @@ Recorded, not papered over. Each gap is LAYER2's to close or refuse; this profil
 This document governs the submit page's live derivation and the receiving service's derivation alike. The implementations are tested against §7's worked examples; where an implementation and this document disagree, the implementation is fixed, not the document — unless Will rules otherwise, in which case the ruling is recorded here as a dated amendment, as with the requirements it serves.
 
 *End of specification.*
+# Stage 8 — The Generative Turn: How It Improves Phext
+
+Title: Stage 8 — The Generative Turn: How It Improves Phext
+Source: ~/workspace/nethack-solver/stage8-phext-report.md
+Inscribed: 2026-11-15
+SHA-256: 8856c85c50bc591901424dbc119248f572a4421c18be68b95d0cf9b673bc0157
+
+---
+# Stage 8 — The Generative Turn: How It Improves Phext
+
+*NetHack solver, Stage 8 Leg 3. Evidence: `stage8-results.md`
+(Legs 0–2), all execution on aletheia-core. Prototype numbers are
+labelled as prototype numbers; production numbers are cited to the
+stage that measured them.*
+
+## 1. What a store inscription becomes
+
+Today, a state scroll in `store/states.phext` (19,827 scrolls,
+817,286,931 B) is a **description of a result**: a header
+(campaign, seed, parent, branch, turns, depth, XL, score, HP, the
+state hash), the full action sequence that produced the state,
+and the final observation rendered as literal map text. The state
+itself exists only while a game process holds it; the scroll is
+evidence about it.
+
+The Stage 8 audit (Leg 1) established what a NetHack state *is*,
+from the NLE 1.3.0 / NetHack 3.6.7 source: a deterministic
+function of its initial conditions and decisions. The binary
+exposes no smaller complete description — no capturable RNG
+stream state (the ISAAC64 contexts are internal), no save file
+(`nle_dosave` is a stub; the harness's action table has no SAVE
+action at all). The complete generating description of a state
+is exactly:
+
+```
+S = G(character, core seed, disp seed, lgen seed, action sequence)
+```
+
+with G the pinned binary itself. Under generation, the scroll
+stops being a description of a result and becomes the **seed of
+the result**: header (now including the lgen seed and the
+identity hash), the action sequence, and a segment hash chain
+(state hash every 1,024 actions). The map text goes away — under
+an lgen seed, level terrain is a function of (lgen, level) alone
+(audit test T3: identical terrain, 0 differing cells, whether the
+hero descended immediately or dawdled 400 turns first), so the
+map is a cache, not content. The state re-inflates on demand by
+running G; the final hash is the check that the inflation is the
+inscribed state; the chain localizes any divergence to a
+1,024-action segment.
+
+Leg 2 proved the form on held material: all 16 of Stage 6's
+closing frontier states and a 15-state stratified sample across
+five campaigns regenerated **hash-exact, 31/31**; a generated
+Dlvl 8 state continued 5,000 steps under the standing policy in
+two independent generations with **identical hash chains at every
+step** — the generated future is the true future, not a lookalike
+snapshot.
+
+## 2. Measured deltas (prototype numbers, Leg 2)
+
+| Measure | Current (replay paradigm) | Generative | Source |
+|---|---|---|---|
+| Bytes per state in the store | 148,472 B avg (31-state sample: 4,602,630 B) | 147,971 B minimal (map dropped); 151,855 B with the segment chain in-scroll | Leg 2, `_format_scroll` bytes |
+| Reconstruction of one state | Full prefix replay (same steps as generation) — or trie-walk suffix replay when a walk is already materialized | Full prefix generation: 99,999 steps ≈ 1.9 s for a frontier state at the measured 53,915 steps/s | Leg 2 |
+| Verification of a state | Coordinator replays the full prefix per state. Stage 6 Leg B production: 91,390,668 of 103,229,781 total steps (**88.5%**) | Chain-checking during one forest pass over the lineage groups: **188,748 steps vs 1,756,875 naive (9.31× fewer)** for the 31-state prototype set; per-state marginal cost = its unshared actions only | Leg 2 prototype; Stage 6 Leg B summary |
+| Cap headroom at the frontier | Prefixes of 99,999 actions vs the 100,000-step episode cap: **1 step** (measured: a generated head episode accepted exactly 1 further step before truncating) | The cap still binds any single materialization — but verification no longer materializes frontier states at all, and a lineage that must continue is re-based by one generation (≈1.9 s) into a fresh episode with a full cap of headroom | Leg 2 |
+| Failure visibility | Two states inscribed in the telemetry-only era (Stages 3/5) do not reconstruct; discovered a stage later, mechanism not identifiable from the surviving record | Hash-verified inscription + segment chains: a divergent generation fails at inscription time, localized to one 1,024-action segment | Leg 1 forensics; Leg 2 |
+
+Two honest negatives belong in this table's footnotes. First,
+the byte delta is small: the map was never the cost — **the
+action-sequence text is the scroll** (~2.9 characters per action;
+a frontier scroll is ~290 KB). Generation's win is verification
+cost and cap posture, not bytes. Second, generation does not
+beat the trie walk at reconstructing a single state, and it does
+not repeal the episode cap; anyone selling it as either is
+selling past the evidence.
+
+One byte lever the prototype measured but did not apply: the
+action alphabet. 86 actions fit in single characters; writing
+the sequence in a 1-byte alphabet instead of decimal text makes
+a frontier prefix 99,999 characters instead of ~290 KB (~3×).
+That is a scroll-format choice inside the existing scheme.
+
+## 3. The coordinate question — a proposal
+
+**Proposal: do not re-coordinate the store.** The current scheme
+(`1.campaign.seed-series / branch.dungeon-level.turn-band /
+XL-band.sequence.hash-slot`) addresses a state by its search
+provenance, and it works: 19,827 states, parity-proven across an
+engine swap in Stage 8 Leg 0. A generative inscription's new
+fields — lgen seed, chain head — belong **in the scroll header,
+not in the coordinate**. The house's own modeling rule says why:
+a scroll is a 2D page; lines inside it are free; spend a phext
+dimension only on structure plain text cannot express. The
+header is lines. The coordinate's job is identity; the header's
+job is description; generation changes the description, not the
+identity.
+
+The cost of the alternative, stated so the decision is priced:
+re-coordinating means rewriting all 19,827 scrolls, invalidating
+every parent pointer in the corpus, re-deriving the hash-slot
+allocation that HoloPhext's group-commit gap forces, and
+re-proving engine parity over the new corpus — in exchange for
+no measured benefit. If a future campaign series wants lgen
+visible at the address level, the cheap moment is at that
+series' first inscription (a new seed-series value), not by
+rewriting the existing corpus. **This is Will's decision; the
+live store has not been touched.**
+
+## 4. The generalizable principle, at the strength the evidence supports
+
+> **Where a scroll's content is the output of a pinned,
+> deterministic generator, the scroll may store the generating
+> description — generator identity and version, seeds, and
+> decisions — plus an identity hash of the output, instead of
+> (or as the check on) the literal output. Verification becomes
+> generate-and-compare; a corpus of such scrolls verifies in one
+> shared-prefix pass at the cost of its distinct inputs, not the
+> sum of its outputs.**
+
+Strength of evidence: proven end-to-end for one generator
+(NLE/NetHack) — 31/31 hash-exact regenerations, a 9.31×
+verification-step reduction on the prototype set, a matched
+5,000-step generated continuation, and a 19,827-state corpus
+whose every scroll already carries its generating description
+(the action sequence) — the corpus was generative all along;
+only the verification machinery treated it as literal.
+
+The house already runs this pattern at document scale without
+naming it: every phext register (tasks, artifacts, skills,
+costs, accounting) is a source file plus a builder that
+regenerates the phext, with a `--check` that is exactly
+generate-and-compare. Inscription-by-generation is that pattern
+pointed at content whose generator is a program other than a
+register builder.
+
+The boundary matters as much as the principle. It applies
+**only** where a pinned deterministic generator exists. Sampled
+or observed content — ranch state distillation, telemetry,
+anything whose "generator" is the world — must stay literal;
+storing a "seed" for it would be storing a claim nobody can
+re-run. The two non-reconstructing states are the cautionary
+form of the same lesson from the other side: an inscription is
+only as good as its verification, and telemetry-level checking
+produced scrolls whose failure stayed invisible for a full
+stage.
+
+What a phext tool would need to support this natively — gaps,
+named as gaps:
+
+- **A generator reference convention.** No house phext tool has
+  a standard header for "generator id + version pin + seed
+  fields + identity hash + segment chain". `nh_store.py` invented
+  its own; every new adopter would too.
+- **Evaluation is outside the format.** Phext addresses and
+  stores the description; nothing in libphext or SQ can *run* a
+  generating description or compare its output. A native form
+  would need a registry mapping generator ids to pinned
+  executables — a layer-2 concern in the house's terms, like
+  HoloPhext's commit machinery, not a format change.
+- **No streaming/append writer.** Segment chains are naturally
+  appended during generation; libphext's Python port still
+  writes whole scrolls (a gap already filed from the HoloPhext
+  work in Stage 7).
+- **Coordinate-validity disagreement.** libphext-rs accepts
+  0-valued components the Python port rejects; Stage 8 Leg 0
+  shipped a solver-side guard (an ended game is a terminal
+  record, never inscribed as a resumable state) rather than a
+  fix. A generative header discipline that could ever emit a 0
+  would hit the same crack; the contract needs settling in the
+  libraries, not in each consumer.
 # exo-search README — indexed search over a personal Twitter archive (wbic16/exo-search)
 
 Title: exo-search README — indexed search over a personal Twitter archive (wbic16/exo-search)
