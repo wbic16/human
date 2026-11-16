@@ -14,7 +14,7 @@ truth: artifacts-source.json beside this builder
 (build_artifacts_phext.py); never hand-edit the .phext.
 artifacts.phext is published to wbic16/human@exo.
 
-Artifacts inscribed: 47
+Artifacts inscribed: 48
 
 Index (coordinate — title — source):
 - 19.7.11/9.7.12/7.6.9 — Light the Next Light — intro song lyrics & time map — ~/workspace/exocortexia-cartoon/intro/LYRICS.md
@@ -44,6 +44,7 @@ Index (coordinate — title — source):
 - 27.7.11/8.6.13/7.6.10 — The Encyclopedia You Can Carry — Phext Edit training film, revised script (Emi Prime) — ~/workspace/phext-walkthrough/SCRIPT-EMI-REVISED.md
 - 28.6.8/7.6.9/6.5.9 — Domain Migration Checklist — GoDaddy/Squarespace to NearlyFreeSpeech (2026-11-15) — workspace/your_files/domain-migration-checklist-2026-11-15.md
 - 28.6.8/8.6.10/6.6.9 — Production Plan — The Power of Phext Walkthrough — ~/workspace/phext-walkthrough/PRODUCTION-PLAN.md
+- 28.7.8/8.6.11/6.6.9 — Three Games Under the Stage 8 Generative Mechanism — ~/workspace/game-mechanism/REPORT.md
 - 28.7.9/8.6.11/6.6.8 — Training Film — T7 (R7, the full exemplar build) — Production Log — ~/workspace/phext-walkthrough/production/TRAINING-T7-LOG.md
 - 28.7.9/8.6.11/7.6.9 — Since November 1: A Catalog of Eleven Days 🔥 — ~/workspace/blog/since-november-1.html
 - 29.7.9/9.7.12/7.6.9 — Depth behind every cell — a 3D phext demo for ASCII game maps (for @paleoludic) — workspace/paleoludic-demo/README.md
@@ -4214,7 +4215,452 @@ to *this* video:
 Route C is the named fallback if the calendar collides with the
 Scrolltown January-launch crunch: the polish pass is the one
 block that can leave the house without taking accuracy with it.
-# Training Film — T7 (R7, the full exemplar build) — Production Log
+# Three Games Under the Stage 8 Generative Mechanism
+
+Title: Three Games Under the Stage 8 Generative Mechanism
+Source: ~/workspace/game-mechanism/REPORT.md
+Inscribed: 2026-11-15
+SHA-256: 18dbb92d9be56b3977380596235ccc092377f87169617cacddb148c42d1a4bd9
+
+---
+# Three Games Under the Stage 8 Generative Mechanism
+
+Task 18.5.7/5.5.6/4.4.7. Computed on aletheia-core (workdir
+`~/game-mechanism/`), 2026-11-15. Code: `~/game-mechanism/code/` on the
+node, mirrored to `~/workspace/game-mechanism/code/` on the VM. All
+deliverables mirrored to `~/workspace/game-mechanism/`.
+
+## The mechanism under test
+
+From the NetHack Stage 8 record (`stage8-results.md`,
+`stage8-phext-report.md`): a domain admits the generative mechanism
+when it has
+
+1. a **pinned deterministic generator** — given generative
+   coordinates, the state/trajectory is produced exactly, every time;
+2. **generative coordinates small relative to the state**;
+3. **reconstruction by generation, verified** by generate-and-compare
+   against ground truth;
+4. **inscription-by-generation** — the scroll holds the coordinates
+   (the seed); the state is re-inflated on demand rather than stored
+   expanded.
+
+NetHack admitted the mechanism in the form S = G(character, core,
+disp, lgen, actions): no capturable RNG state, no save, the mechanism
+held and was bounded by total distinct actions. The three classical
+games below run the same four tests with working code and checked
+numbers.
+
+---
+
+## Game 1 — Tic-tac-toe: the complete case
+
+Code: `code/ttt.py` (enumerate + solve), `code/build_ttt_phext.py`
+(inscribe + verify), `code/phextlib.py` (phext writer/parser).
+
+The ruleset alone is the generator. There is no RNG; all variation is
+player choice, which is why the space is exhaustible. The enumerator
+plays out every game (stopping at a win or a full board), collects
+every reachable state, and solves by minimax with best-move sets.
+
+### Verification against published ground truth
+
+| figure | published | computed | verdict |
+|---|---|---|---|
+| total games | 255,168 | 255,168 | agree |
+| X wins | 131,184 | 131,184 | agree |
+| O wins | 77,904 | 77,904 | agree |
+| draws | 46,080 | 46,080 | agree |
+| reachable states | 5,478 | 5,478 | agree |
+| essentially distinct (rotation/reflection) | 765 | 765 | agree |
+
+Source for the published column: Wikipedia, "Game complexity" and
+"Tic-tac-toe" (the standard enumeration figures). Agreement is exact
+on all six. Games by final ply (computed): 5: 1,440; 6: 5,328; 7:
+47,952; 8: 72,576; 9: 127,872. States by ply (computed): 1, 9, 72,
+252, 756, 1,260, 1,520, 1,140, 390, 78.
+
+### The solution
+
+Value distribution over the 5,478 states (computed): X-win 2,936,
+draw 1,068, O-win 1,474. The initial position is a draw under perfect
+play. First-move texture (computed, and matching the known theory):
+every opening move draws with best play, but the replies differ
+sharply —
+
+- **corner opening**: O has exactly **1** drawing reply (the centre);
+  the other 7 replies lose.
+- **centre opening**: O has 4 drawing replies (the corners); the 4
+  edge replies lose.
+- **edge opening**: O has 4 drawing replies (the centre, the two
+  adjacent corners, the opposite edge); 4 lose.
+
+### The inscription: tictactoe.phext
+
+**Coordinate scheme.** The nine components of the phext coordinate
+ARE the nine cells of the board, row-major (Library…Scroll = cells
+1–9). Each component is the cell's content + 2: **2 = empty, 3 = X,
+4 = O**. Component value 1 never occurs in a state address, so
+1.1.1/1.1.1/1.1.1 remains free for the Home scroll. This is the
+state's generative address, not an arbitrary index: the board is the
+state, the coordinate decodes to the board with no lookup table, and
+any of the 3^9 = 19,683 conceivable boards has a well-defined address
+in the scheme — reachable states carry content scrolls, unreachable
+or illegal boards sit at their addresses empty. Each state scroll
+carries, in its header lines, the state's second generative
+coordinate — a shortest move sequence that produces it — then the
+board drawn as three lines of text, its value, and its best moves.
+
+**Verification.** Content scrolls: 5,479 = 5,478 states + Home. Every
+state scroll was byte-compared against a fresh render from the solver
+data, keyed by the board decoded from its coordinate alone (5,478/5,478
+exact), and an explicit random sample of 25 states was regenerated
+from coordinates alone and matched. SHA-256 of the file:
+`dda83af4edecc075abbbac0c9e319fdf297940d4661a69a053806de772893fa0`.
+
+**Sizes.** `tictactoe.phext` = **852,942 bytes**; the expanded state
+dump (`ttt_states_dump.txt`, one terse line per state, coordinates
+implicit in line order) = **180,005 bytes**. The phext is ~4.7× the
+terse dump, honestly: each scroll is a legible page (drawn board,
+labels, best moves), not a packed record. At this scale inscription
+buys addressability and legibility, not compression.
+
+### Four tests — tic-tac-toe
+
+1. **Generator**: PASS — the rules alone generate the entire tree;
+   determinism is definitional (no RNG to pin).
+2. **Coordinates**: PASS, degenerately — the state is 9 ternary cells,
+   smaller than any seed machinery; the address is the state in
+   generative form, and the move-sequence coordinate (≤9 moves)
+   re-inflates it independently.
+3. **Verification**: PASS — exhaustive generate-and-compare, plus
+   exact agreement with published ground truth on six figures.
+4. **Inscription-by-generation**: PASS, totally — the phext is the
+   complete solved game; nothing about tic-tac-toe exists outside it
+   except the rules.
+
+---
+
+## Game 2 — Checkers: the bounded case
+
+Code: `code/checkers.py` (slice solver), `code/kvk_check.py`,
+`code/count4.py`.
+
+### The space, from sources
+
+- Total positions ≈ **5×10^20** (Schaeffer et al., "Checkers Is
+  Solved," *Science* 317(5844):1518–1522, 2007, DOI
+  10.1126/science.1144079).
+- The built endgame frontier: all positions with **at most 10
+  pieces** = **39,271,258,813,439 positions**, stored in **237 GB**
+  (≈166 positions/byte) — Schaeffer et al. 2007 and the University of
+  Alberta Chinook project pages. The proof effort was ~10^14
+  calculations over 18 years (1989–2007).
+- **Weak solution (ATTRIBUTED, never recomputed here): the initial
+  position is a draw under perfect play** (Schaeffer et al. 2007).
+
+### Ruleset implemented (named, sourced)
+
+American/English checkers (American Checker Federation rules):
+8×8 board, 32 dark squares; **men move and jump FORWARD ONLY** —
+every jump in a chain is forward (this is the American rule; backward
+jumps by men are International rules); kings move and jump exactly
+one square diagonally in any direction (no flying kings); captures
+are compulsory, but any capture may be chosen (**no maximum-capture
+rule**); a jump chain once begun must be completed; a man reaching
+the far rank is crowned and the move ends immediately; a side with
+no legal move loses. Draws in the slice are retrograde-unresolved
+positions — no move-count or repetition rule is modelled, which is
+the tablebase convention, stated so the numbers mean what they say.
+
+### The slice: all positions with at most 3 pieces
+
+Kings and men, both colours, either side to move, generated from the
+rules and solved by retrograde analysis with distances in plies.
+
+- placements: 268,316 → **positions: 536,632**; move-graph edges:
+  1,736,654.
+- values (side-to-move perspective): **win 270,728 / loss 244,210 /
+  draw 21,694**. By piece count — 2 pieces: W 4,916 / L 4,288 /
+  D 4,740; 3 pieces: W 265,692 / L 239,802 / D 16,954.
+- longest forced distance: **62 plies** (94 positions).
+- **internal verification: every position's value and distance
+  checked against its generated successors — consistency violations:
+  0.**
+- compute: under 7 s on aletheia-core (pure Python).
+- data file: `checkers_slice3.bin`, 2,683,666 bytes, SHA-256
+  `ae728b4467ec41f832687240a8625350df0e7b9c09e9edaf967727088c2188e6`.
+  Its header defines the deterministic enumeration order, so the file
+  is itself a generative inscription of the slice: regeneration is
+  re-running `checkers.py`, which reproduces it byte for byte. Its
+  density (~0.2 positions/byte, values + 32-bit distances,
+  uncompressed) vs Schaeffer's ~166/byte is an engineering gap, not a
+  principled one.
+
+### External checks: the named endgames, exactly
+
+**King vs king** (992 positions per side to move): side to move wins
+230, draws 654, loses 108. The standard result — a lone king draws
+against one king, sheltering in the double corner (WCDF-based endgame
+guides) — is the generic verdict and the majority here. The slice
+prices the exceptions exactly: of the 230 wins, 72 are immediate
+captures and the rest are forced capture sequences of up to 11 plies;
+all 108 losses are positional traps — in **no** losing position are
+the kings adjacent at the start (verified by interrogating the data
+file, `code/kvk_check.py`).
+
+**Two kings vs one king** (14,880 positions per side to move): the
+pair, to move, **wins 14,846, draws 34, never loses**. The lone king,
+to move, loses 13,018, draws 1,450, and still wins 412 — by capturing
+into a king-vs-king trap of the kind above. The standard result (two
+kings beat one) is confirmed as the generic verdict, with its exact
+exception counts now on record.
+
+### The slice not taken, priced
+
+The 4-piece slice is **14,185,548 positions** by exact count
+(`code/count4.py`) — 26.4× the 3-piece slice. At the measured
+end-to-end rate that is minutes of compute, but this implementation's
+list-based graph would need ~2.5 GB; as a guest next to NetHack
+Stage 9 on the same node, it was declined on budget, not on
+principle. Schaeffer's database is the existence proof that the line
+moves with money and time, not with theory.
+
+### Inscription
+
+`checkers.phext` (3,512 bytes, 5 scrolls, parse-back verified,
+SHA-256 `ff81aad4563e7acb5fdef792dffb970b1f654fbd6d3169844e7e476be0e1bab5`):
+Home (ruleset + why a summary), the slice summary, king-vs-king
+exactly, two-kings-vs-one exactly, and the boundary priced. The full
+slice stays a data file — inscribing 536,632 positions as scrolls
+would demonstrate nothing the data file doesn't, and the scroll that
+matters is the one that shows where inscription stops.
+
+### Four tests — checkers
+
+1. **Generator**: PASS — the rules generate the slice graph exactly;
+   the graph is closed under legal moves.
+2. **Coordinates**: PASS — a position's generative coordinate is its
+   placement in the deterministic enumeration (defined in the data
+   file's header); small, exact, reproducible.
+3. **Verification**: PASS — internal consistency 0 violations over
+   536,632 positions; externally, both named endgames match the
+   sourced standard results as generic verdicts, with exceptions
+   counted rather than smoothed over.
+4. **Inscription-by-generation**: **FAILS at the scale of the game**,
+   and the failure is priced: the whole space at Schaeffer's achieved
+   density (≈166 positions/byte) would take ~3×10^18 bytes; even the
+   built ≤10-piece frontier is 237 GB. Inside the slice, inscription
+   holds completely. The frontier is an economic line.
+
+---
+
+## Game 3 — Chess: the representational case
+
+Code: `code/chess.py` (full legal move generator, Opera re-inflation,
+KRvK retrograde), `code/krvk_count_check.py`.
+
+### The numbers, from sources
+
+- State-space complexity ≈ **10^47** and game-tree complexity ≈
+  **10^123** (Allis 1994 estimates, via Wikipedia, "Game
+  complexity"). The modern count of legal positions is ≈
+  **4.82×10^44** (Tromp & Österlund 2022). Shannon's original
+  estimates: ~10^43 positions, game tree ≥10^120 (Shannon,
+  "Programming a Computer for Playing Chess," *Philosophical
+  Magazine*, 1950).
+- The built inscription frontier: **Syzygy 7-piece tablebases**
+  (Ronald de Man, completed August 2018) — **18.4 TB** covering
+  **423,836,835,667,331 positions** (≈23 positions/byte). The longest
+  7-piece forced mate is 549 moves (Lomonosov tablebases).
+
+### The score as seed: the Opera Game
+
+Paul Morphy vs Duke Karl of Brunswick and Count Isouard, Paris,
+1858 — the Opera Game. Score (identical across Wikipedia,
+ChessMingle, ChessDNA and chess.com):
+
+1. e4 e5 2. Nf3 d6 3. d4 Bg4 4. dxe5 Bxf3 5. Qxf3 dxe5 6. Bc4 Nf6
+7. Qb3 Qe7 8. Nc3 c6 9. Bg5 b5 10. Nxb5 cxb5 11. Bxb5+ Nbd7
+12. O-O-O Rd8 13. Rxd7 Rxd7 14. Rd1 Qe6 15. Bxd7+ Nxd7 16. Qb8+ Nxb8
+17. Rd8# 1-0
+
+Re-inflated with the project's own full legal move generator
+(castling legality, en passant, promotion, SAN disambiguation): all
+33 plies resolved — every SAN matched exactly one legal move at its
+position — every intermediate position legal, and the final position
+is checkmate, with FEN
+`1n1Rkb1r/p4ppp/4q3/4p1B1/4P3/8/PPP2PPP/2K5 b k - 1 17`,
+**matching the published final FEN exactly**.
+
+Compression, stated plainly: the movetext is **144 bytes** (full PGN
+with tags 356 bytes); all 34 positions expanded as FENs are 2,098
+bytes, as raw 64-character boards 2,176 bytes — a ~15× ratio. The
+ratio is modest; the form is the point. The score is a complete
+generative inscription of the trajectory: coordinates (moves from
+the standard initial position under pinned rules) from which every
+position re-inflates exactly and can be verified at every step. Chess
+culture has run inscription-by-generation as its native notation for
+over a century.
+
+### One micro-endgame solved exactly: KR vs K
+
+All legal positions (legality convention: distinct squares, kings
+non-adjacent, and with White to move the black king is not in rook
+check), retrograde with distance to mate:
+
+- **legal positions: 399,112** (White to move 175,168; Black to move
+  223,944); move-graph edges 4,469,208; **consistency violations: 0**
+  (every position's value and DTM checked against its successors).
+- **White to move: all 175,168 positions are wins; draws 0.**
+  Maximum DTM = **16 moves** (31 plies), achieved by 916 positions.
+- **Black to move: White wins 201,700; draws 22,244.** Maximum DTM =
+  16 moves (32 plies), 3,056 positions.
+- Every draw has Black to move and is exactly one of two named
+  classes: **the rook is capturable at once (22,176)** or
+  **stalemate (68)** — no residual class.
+- The known maximum DTM for KR vs K is **16 moves** (Ströhlein 1970)
+  — matched exactly. The classic exemplar, WK a1 / WR b2 / BK c3,
+  White to move, computes to **mate in 16** (31 plies) — matching the
+  sourced figure (Tidcott's KRK page).
+- Data file: `krvk.bin`, 1,996,052 bytes, SHA-256
+  `c379f28a3f0b8f7656bab2f35247a95262f1464b30d0f2adb15756f194077da8`
+  (values + DTM over the full position-id space; regeneration is
+  re-running `chess.py`).
+
+**One honest disagreement.** A TalkChess forum post cites 187,328
+KRK positions with White to move; my count under the convention
+stated above is 175,168. The difference, 12,160, is **not** the
+in-check exclusion class (that class is 48,776, computed in
+`code/krvk_count_check.py`), and the post states no legality
+convention, so the figure is carried as unreconciled and low-weight.
+Every load-bearing figure (maximum DTM, the exemplar, the draw
+decomposition) agrees with the strong sources, and the computation is
+internally verified over all 399,112 positions.
+
+### Inscription
+
+`chess.phext` (27,078 bytes, 4 scrolls, parse-back verified, SHA-256
+`af087d993b19abad396fcab92f6ff6c25bfe8b318a92143ad70f01ba0417e857`):
+Home, the Opera Game scroll, the KRvK summary scroll, and the
+maximal-mate scroll (all 916 White-to-move DTM-16 positions as FENs,
+plus the exemplar).
+
+### Four tests — chess
+
+1. **Generator**: PASS — a full legal move generator re-inflates any
+   score exactly.
+2. **Coordinates**: PASS — the score is a trajectory coordinate of
+   ~4.4 bytes per ply; a FEN or piece triple is a state coordinate;
+   both tiny against the state.
+3. **Verification**: PASS — generate-and-compare against independent
+   ground truth at every ply (Opera) and against sourced tablebase
+   facts (KRvK).
+4. **Inscription-by-generation**: **FAILS exhaustively by ~40 orders
+   of magnitude** — 4.82×10^44 legal positions against tic-tac-toe's
+   5,478; at Syzygy density the full space prices at ~2×10^43 bytes.
+   Its working form is **selective generation**: scores and analysis
+   lines — inscribe the trajectories that matter, re-inflate on
+   demand, verify as you go.
+
+---
+
+## Synthesis — the three regimes, and NetHack among them
+
+**EXHAUSTIBLE — tic-tac-toe.** The whole space is inscribed and
+solved: 852,942 bytes hold the complete game, addressed by the board
+itself. The scroll IS the game; nothing is left outside but the
+rules.
+
+**BOUNDED — checkers.** Generation is exact everywhere it is
+attempted; totality is priced out, not ruled out. The frontier as
+built by the field is 237 GB for ≤10 pieces of a 5×10^20 space; my
+≤3-piece slice cost 2.68 MB and 7 seconds, and the next slice is a
+26.4× step declined on a guest budget. The line is economic: it moves
+when someone pays to move it.
+
+**REPRESENTATIONAL — chess.** No solution exists and none is coming;
+the mechanism's seed-form is the culture's native notation, older
+than computing. What the mechanism does in chess is serve analysis:
+any inscribed line re-inflates exactly, and micro-endgames at the
+edge (KRvK here; 7-piece Syzygy at the field's frontier) are solved
+exactly and priced.
+
+**NetHack stands in the chess regime.** From the Stage 8 record: its
+only complete generating description is S = G(character, core, disp,
+lgen, actions) — a score, in chess's sense: seeds plus an action
+list, with no state capture anywhere in the engine. Per-state
+generation costs ~1.9 s (re-basing at 53,915 steps/s), verification
+by shared-prefix forest pass runs 9.31× cheaper than naive replay,
+and the built store holds 19,827 scrolls / 817 MB of generated
+states — while the totality (branching action sequences inside
+100k-step episodes) is unenumerable in exactly the way chess's game
+tree is. Two differences cut in opposite directions. Its notation
+problem is worse than chess's: there is no compact standard action
+notation, and action text at ~2.9 characters per action is the scroll
+cost driver (Stage 8 noted a 1-byte action alphabet at ~3×, unapplied).
+Its verification story is better: a chess score is trusted, a NetHack
+state is *proven* — hash-verified inscription means every stored
+state regenerates bit-exact or is known not to. What follows for the
+solver: in this regime, progress is measured in verified generated
+states and in depth held (the ladder), never in fraction of space
+covered — coverage is not a meaningful metric where totality is
+unenumerable, and the ascension target is a trajectory problem: find
+one inscribed line that terminates in ascension, which is precisely
+the form selective generation takes.
+
+### Where the mechanism strained, and what the games taught
+
+- **Symmetry is the missing quotient.** Tic-tac-toe's rotation/
+  reflection quotient cuts the space 5,478 → 765 (7.16×) for free.
+  NetHack already exploits the trajectory-space analogue — the
+  shared-prefix verification forest is a quotient of trajectory space
+  by common prefixes, worth 9.31×. A *state-space* quotient is the
+  open question: dungeons are seed-generated, so distinct seeds
+  rarely yield isomorphic levels, but Stage 8's lgen result (levels
+  as pure seed-functions, arrival-turn-invariant) is exactly where
+  one would look — e.g., whether distinct (seed, action) pairs can
+  be shown to land on identical states and merged in the store. Not
+  claimed; named as the place to test.
+- **The coordinate test degenerates gracefully.** In tic-tac-toe the
+  address is the state — no compression at all — yet the mechanism
+  still pays, in addressability and in the emptiness of illegal
+  addresses. Small coordinates are sufficient for the mechanism, not
+  necessary; exact addressability is the deeper property.
+- **Name your draw classes.** The checkers slice's "draw" is
+  unresolved-by-retrograde (a convention, stated); KRvK's draws
+  decomposed into exactly two named classes with zero residual. A
+  solved domain owes that decomposition; an unexplained residual
+  class is where errors hide.
+- **Internal consistency is necessary and insufficient.** Both
+  solvers report 0 internal violations — and an early form of the
+  KRvK seeding (stalemates seeded as losses) would also have passed
+  internal checks, because a stalemate's loss is vacuously consistent
+  with its (empty) successor set. What binds a computation to reality
+  is the external anchors: published counts, a sourced final FEN, a
+  sourced maximum DTM. This is the Stage 8 phext-report principle —
+  test against material you did not write — confirmed from the other
+  side: the anchors caught what the proof could not.
+
+### Deliverables and hashes
+
+| file | bytes | SHA-256 |
+|---|---|---|
+| tictactoe.phext | 852,942 | dda83af4edecc075abbbac0c9e319fdf297940d4661a69a053806de772893fa0 |
+| ttt_states_dump.txt | 180,005 | (expanded dump; regenerable by code/ttt.py) |
+| checkers.phext | 3,512 | ff81aad4563e7acb5fdef792dffb970b1f654fbd6d3169844e7e476be0e1bab5 |
+| checkers_slice3.bin | 2,683,666 | ae728b4467ec41f832687240a8625350df0e7b9c09e9edaf967727088c2188e6 |
+| chess.phext | 27,078 | af087d993b19abad396fcab92f6ff6c25bfe8b318a92143ad70f01ba0417e857 |
+| krvk.bin | 1,996,052 | c379f28a3f0b8f7656bab2f35247a95262f1464b30d0f2adb15756f194077da8 |
+
+Code (node `~/game-mechanism/code/`, mirrored to
+`~/workspace/game-mechanism/code/`): `ttt.py`, `build_ttt_phext.py`,
+`checkers.py`, `kvk_check.py`, `count4.py`, `chess.py`,
+`krvk_count_check.py`, `build_companions.py`, `phextlib.py`.
+Summaries alongside the data: `ttt_results.json`,
+`checkers_slice3_summary.json`, `krvk_summary.json`,
+`chess_results.json`.
+# Training Film — T7 (R7, the full exemplar build) — Production Log
 
 Title: Training Film — T7 (R7, the full exemplar build) — Production Log
 Source: ~/workspace/phext-walkthrough/production/TRAINING-T7-LOG.md
