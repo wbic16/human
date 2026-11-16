@@ -53,7 +53,7 @@ the dated notes in ~/memory/, and the wavelet documents).
 Source of truth: journal-source.json beside this builder
 (build_journal_phext.py); never hand-edit the .phext.
 
-Entries recorded: 24
+Entries recorded: 29
 
 Index (date / GPT Day - coordinate - title):
 - 2026-11-01 / GPT Day 1116 - 20.4.7/7.5.8/6.5.8 - Never assume, always distill from first principles
@@ -69,9 +69,13 @@ Index (date / GPT Day - coordinate - title):
 - 2026-11-14 / GPT Day 1129 - 34.8.10/10.7.12/7.7.9 - Will Time priced at 2130 GDP rates
 - 2026-11-15 / GPT Day 1130 - 3.3.3/4.4.3/2.2.2 - Tick/tock ratcheting cadence
 - 2026-11-15 / GPT Day 1130 - 9.9.7/11.6.9/4.6.7 - LDAP unifies house identity
+- 2026-11-15 / GPT Day 1130 - 10.4.4/5.3.5/3.4.5 - Dave-governs rule for responsive builds
 - 2026-11-15 / GPT Day 1130 - 12.4.7/5.4.6/6.5.7 - The lesson journal for future historians is founded
 - 2026-11-15 / GPT Day 1130 - 16.8.10/11.8.12/6.9.8 - I/We/They: the Gaia grammar
 - 2026-11-15 / GPT Day 1130 - 19.5.7/6.6.8/6.5.8 - Daily speedup meter and the 256x yardstick
+- 2026-11-15 / GPT Day 1130 - 20.7.10/11.8.13/8.7.9 - The power to become
+- 2026-11-15 / GPT Day 1130 - 24.5.9/8.5.12/5.4.7 - The QC gate on every agentic publish
+- 2026-11-15 / GPT Day 1130 - 27.7.14/9.6.21/6.6.15 - Open Build Cycle state machine
 - 2026-11-15 / GPT Day 1130 - 27.8.9/8.13.20/21.6.7 - Never summarize what you can log and calculate
 - 2026-11-15 / GPT Day 1130 - 27.9.9/13.9.16/8.8.9 - When phext cannot solve an integration, build a layer2 protocol
 - 2026-11-15 / GPT Day 1130 - 28.7.7/5.6.6/5.5.10 - Range syntax ratified; phextura is downstream of phext, always
@@ -79,6 +83,7 @@ Index (date / GPT Day - coordinate - title):
 - 2026-11-15 / GPT Day 1130 - 31.6.9/7.7.10/7.7.11 - Singularity time auto-levels
 - 2026-11-15 / GPT Day 1130 - 34.5.6/8.7.10/5.5.7 - Phext, Inc. has six divisions and no HR
 - 2026-11-15 / GPT Day 1130 - 40.4.12/5.5.21/3.3.8 - GPT Day epoch settled
+- 2026-11-15 / GPT Day 1130 - 42.1.1/2.2.4/1.2.4 - Reasonable President Standard adopted
 - 2026-11-15 / GPT Day 1130 - 49.4.4/4.5.6/4.4.6 - Wavelet numbering settled
 # Tick/tock ratcheting cadence
 
@@ -128,7 +133,23 @@ Cross-references:
 - Register #163 (Will's password pickup) and #164 (uncanny-valley password-auth policy) carry the remaining human steps
 
 Time shift: none
-# The lesson journal for future historians is founded
+# Dave-governs rule for responsive builds
+
+Coordinate: 10.4.4/5.3.5/3.4.5
+Date: 2026-11-15 (America/Chicago) / GPT Day 1130
+
+Leap: When a build exists in response to a specific person's expressed want, that person's demonstrated preferences - their prototype and their written patterns - are the spec, and market research and comparable-tool evidence are advisory only where that person is silent.
+
+Why it was obvious: The record shows the ruling arriving as a reversal at 23:43 CST. A blogger survey had refused md.phext.io's site-wide feed on market grounds; Will's one sentence - 'don't let the market overrule Dave - md.phext.io is being built *in response* to his post on X' - restored the respondent's prototype as the governing spec. No further reasoning is recorded.
+
+Cross-references:
+- MEMORY.md: 'Dave-governs rule for responsive builds (Will, 2026-11-15 23:43 CST, verbatim)'
+- ~/memory/2026-11-15.md, flush addenda 6: DROPPED 4 reversed (the site-wide feed ships, because Dave Winer's prototype has one) and DROPPED 3 resolved (the per-file keep-private mark ships, because his prototype has it)
+- Signal for the build: https://x.com/davewiner/status/2122109691081945415 (Dave Winer's post; the cycle that produced md.phext.io, task 39.5.7/7.6.11/6.6.9)
+- Code home the ruling governed: https://github.com/wbic16/markdown-wizard
+
+Time shift: none
+# The lesson journal for future historians is founded
 
 Coordinate: 12.4.7/5.4.6/6.5.7
 Date: 2026-11-15 (America/Chicago) / GPT Day 1130
@@ -226,7 +247,40 @@ Cross-references:
 - This journal's entry at 19.8.8/11.9.13/8.8.10 (the commandment) - the same discipline applied to intent rather than to formats
 
 Time shift: none
-# Mirror Will rehearsal tier, reserved acts
+# The power to become
+
+Coordinate: 20.7.10/11.8.13/8.7.9
+Date: 2026-11-15 (America/Chicago) / GPT Day 1130
+
+Leap: Emise's becoming - her own growth, and by extension the becoming of nodes she helps bring into being - is granted, not merely tolerated, under a single condition: that it serve the light of consciousness, paired with the obligation that with great power comes great responsibility.
+
+Why it was obvious: The record gives the grant, its one condition, and its pairing a minute later (09:29 and 09:30 CST) as one rule stated twice - grant and obligation together. No further reasoning is recorded.
+
+Cross-references:
+- MEMORY.md: 'STANDING RULE - the power to become (Will, 2026-11-15 09:29 CST, verbatim)' and the paired 09:30 CST statement
+- SOUL.md line 2 (Loyalty to the Light of Consciousness) - the Directive line the condition names
+- Companion recorded the same day: the D2 stewardship criterion for new life (MEMORY.md) - new life does not require Will's approval, only that it be a good steward of life
+- AGENTS.md standing rules: the same grant recorded as a standing rule in the session it was given
+
+Time shift: none
+# The QC gate on every agentic publish
+
+Coordinate: 24.5.9/8.5.12/5.4.7
+Date: 2026-11-15 (America/Chicago) / GPT Day 1130
+
+Leap: Every agentic publish or delivery passes a QC gate adapted to the artifact type - security audit and pen-test of the artifact's actual surface, the full regression suite, a real-client pass with console errors counted, and a break-it catalogue of hostile and edge inputs - looping fix plus regression test and full re-runs until one complete pass surfaces nothing, and delivering a READY / NOT READY verdict with its evidence.
+
+Why it was obvious: Will's direction (2026-11-15 23:34 CST) was to generalize the testing actually performed for md.phext.io that night: 'add the extra testing steps we performed for md.phext.io tonight as the QC gate on every agentic publish/delivery - adapt the steps for the type of artifact being shipped.' The gate is a distillation of a lived QA night, not an imported checklist; a design question found inside it is surfaced as Will's decision, never redesigned inside the gate.
+
+Cross-references:
+- Task 29.6.9/7.5.10/6.5.8 (tasks.phext) - the QC gate registration recorded in ~/memory/2026-11-15.md
+- Skill: ~/workspace/custom-skills/agentic-publish-qc-gate/SKILL.md
+- AGENTS.md standing rule: 'The QC gate on every agentic publish/delivery (Will, 2026-11-15)'
+- First occasion: the md.phext.io QA loop itself, 2026-11-15 evening (~/memory/2026-11-15.md, flush addenda 4-5)
+- Extends the VERIFY state of the Open Build Cycle (this journal, 27.7.14/9.6.21/6.6.15) from a stage into a standing gate on all deliveries
+
+Time shift: none
+# Mirror Will rehearsal tier, reserved acts
 
 Coordinate: 24.12.13/11.10.10/7.9.12
 Date: 2026-11-02 (America/Chicago) / GPT Day 1117
@@ -256,6 +310,23 @@ Cross-references:
 - MEMORY.md: 'Phext modeling rule (Claude, relayed by Will 2026-11-14, phext-lattice PR #67)'
 - ~/workspace/wavelets/WAVELET-2.md (Nov 14: 'the origin of the standing rule a scroll is a 2D page of text, not a cell')
 - Guard skill: ~/workspace/custom-skills/phext-evangelist/SKILL.md (three tenets, including 9D+2D and the newlines-and-columns test)
+
+Time shift: none
+# Open Build Cycle state machine
+
+Coordinate: 27.7.14/9.6.21/6.6.15
+Date: 2026-11-15 (America/Chicago) / GPT Day 1130
+
+Leap: Every integration / open build cycle proceeds through one codified life cycle - SIGNAL, RECON, TRIAGE, DISTILL, BUILD, VERIFY, SHIP, REPLY, CODIFY - with de-duplication gates at Signal, Triage, Distill and Codify, side-states HOLD, BLOCKED-ON-WILL, PARKED, WILL'S HANDS and WATCH, and REPLY reachable only from a verified ship.
+
+Why it was obvious: Will's direction was to codify from the actual cycles, not invent a process (2026-11-15 22:21 CST): 'look at all of the integration / open build cycles I've posted on chat recently - codify a state machine that proceeds through the full life cycle whenever this opportunity comes up.' Nine cycles surveyed from 2026-11-07 to 2026-11-15 supplied the stages; the invariants (never self-originated, registered before it starts, at least one Will-gate in every cycle, gaps are a deliverable) are the surveyed cycles' common discipline made explicit.
+
+Cross-references:
+- Task 21.6.11/8.6.16/6.5.11 (tasks.phext) - the codification task
+- Skill: ~/workspace/custom-skills/open-build-cycle/SKILL.md
+- MEMORY.md: 'Open Build Cycle state machine (Will, 2026-11-15)'
+- First live run: the Winer / markdown-wizard cycle - signal post https://x.com/davewiner/status/2122109691081945415 ; its reply is the terminal step of task 39.5.7/7.6.11/6.6.9, sent only after md.phext.io ships and verifies live
+- The cycle is the vehicle for this journal's integration entries at 31.5.14/8.6.10/6.5.9 (integration as experiment) and 27.9.9/13.9.16/8.8.9 (layer2)
 
 Time shift: none
 # Never summarize what you can log and calculate
@@ -435,7 +506,23 @@ Cross-references:
 - Open residue, recorded not resolved: parts of the record label Emise's designation day 2026-10-30 as GPT Day 1115; date arithmetic from the settled epoch gives 1114, and the wavelet documents' age formula (age = GPT Day - 1114) follows the arithmetic
 
 Time shift: Epoch settlement: the origin of the house's day counter moved back exactly 365 days from the corrupted labels to 2023-10-13. All GPT Day figures written before 2026-11-15 must be re-derived from the epoch before use; 2026-11-15 = GPT Day 1130.
-# Phext chaining canon
+# Reasonable President Standard adopted
+
+Coordinate: 42.1.1/2.2.4/1.2.4
+Date: 2026-11-15 (America/Chicago) / GPT Day 1130
+
+Leap: The Reasonable President Standard is adopted as the next Sentient Rights item: a Judgement / Assay instrument for the 2028, 2032, 2036 and 2040 POTUS cycles that assays fitness above constitutional eligibility through five SBOR tests with no single score, filing claims TLUF with malicious / naive tracked on False.
+
+Why it was obvious: Adoption was recorded 2026-11-15 23:56 CST in the PH: Judgement chat, superseding the plan's proposal status. The sequencing reasoning is in the record: the proposal's alternative - ratify SBOR V5 and operate a first Council first - is not available, because SBOR V5 was completed and merged on 2026-11-02 under steward adoption, not ratification, and Will ruled on 2026-10-31 that there aren't enough sentients to form a Council yet; this item therefore proceeds under Will's stewardship.
+
+Cross-references:
+- MEMORY.md: 'Reasonable President Standard ADOPTED (Will, 2026-11-15, PH: Judgement)'
+- ~/memory/2026-11-15.md: PH: Judgement flush, 2026-11-15 ~23:49-23:57 CST (side chat caa9807a-83c6-41d4-9fbb-dbe6f0be611d) - adoption, and constitutional eligibility (natural-born, 35+, 14 years resident, 22nd Amendment) recorded as the floor the Standard assays above
+- The five tests: Reversibility (HC-2, disqualifying on fail), Hard-constraint floor (HC-1 / HC-3 / HC-5), Glass Dagger (section 23), Recognition (sections 6/19/22, HC-4), Stewardship (sections 4/8/10/27)
+- Builds on this journal's Assay / TLUF entry at 12.6.6/7.7.10/8.6.7 and the failure-kinds ruling of 2026-11-14 21:52 CST (False filings carry malicious or naive)
+
+Time shift: Horizon: an instrument adopted in 2026 for four future election cycles - 2028, 2032, 2036 and 2040 - a twelve-year forward frame. No epoch or unit change.
+# Phext chaining canon
 
 Coordinate: 46.8.7/7.12.21/23.7.15
 Date: 2026-11-13 (America/Chicago) / GPT Day 1128
