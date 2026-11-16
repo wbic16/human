@@ -47,7 +47,7 @@ Index (coordinate — title — source):
 - 28.6.8/7.6.9/6.5.9 — Domain Migration Checklist — GoDaddy/Squarespace to NearlyFreeSpeech (2026-11-15) — workspace/your_files/domain-migration-checklist-2026-11-15.md
 - 28.6.8/8.6.10/6.6.9 — Production Plan — The Power of Phext Walkthrough — ~/workspace/phext-walkthrough/PRODUCTION-PLAN.md
 - 28.7.8/8.6.11/6.6.9 — Three Games Under the Stage 8 Generative Mechanism — ~/workspace/game-mechanism/REPORT.md
-- 28.7.8/8.6.11/6.6.10 — qexo dispatch core — SPEC (draft for Will's ratification) — ~/workspace/qexo-task/dispatch-core/SPEC.md
+- 28.7.8/8.6.11/6.6.10 — qexo dispatch core — SPEC (RATIFIED 2026-11-16) — ~/workspace/qexo-task/dispatch-core/SPEC.md
 - 28.7.9/8.6.11/6.6.8 — Training Film — T7 (R7, the full exemplar build) — Production Log — ~/workspace/phext-walkthrough/production/TRAINING-T7-LOG.md
 - 28.7.9/8.6.11/7.6.9 — Since November 1: A Catalog of Eleven Days 🔥 — ~/workspace/blog/since-november-1.html
 - 29.7.9/9.7.12/7.6.9 — Depth behind every cell — a 3D phext demo for ASCII game maps (for @paleoludic) — workspace/paleoludic-demo/README.md
@@ -4766,18 +4766,24 @@ Code (node `~/game-mechanism/code/`, mirrored to
 Summaries alongside the data: `ttt_results.json`,
 `checkers_slice3_summary.json`, `krvk_summary.json`,
 `chess_results.json`.
-# qexo dispatch core — SPEC (draft for Will's ratification)
+# qexo dispatch core — SPEC (RATIFIED 2026-11-16)
 
-Title: qexo dispatch core — SPEC (draft for Will's ratification)
+Title: qexo dispatch core — SPEC (RATIFIED 2026-11-16)
 Source: ~/workspace/qexo-task/dispatch-core/SPEC.md
 Inscribed: 2026-11-16
-SHA-256: bd1f76eb65456634cfd59173307514efec58b433e637996e973ba0bf55c6507a
+SHA-256: cdcdca044906dc83338aafdcfbbb99a37b6874d6d42710b46a3aa662e50c4592
 
 ---
-# qexo dispatch core — SPEC (draft for Will's ratification)
+# qexo dispatch core — SPEC (RATIFIED 2026-11-16)
 
 Task: 26.5.9/7.6.11/5.5.10 · Drafted 2026-11-16 (Emise, qexo chat)
-Status: DRAFT — no code, no branches, no fleet changes until ratified.
+Status: RATIFIED 2026-11-16 — Will answered all six §15 open
+questions OBO in the qexo chat (2026-11-16 02:21–02:23 CST):
+Q1, Q3, Q4, Q5, Q6 ratified as recommended; Q2 decided AGAINST
+the draft's recommendation — the §10.4 service token is widened
+to resolutions + entries-append (§§10.4, 10.5, and the §13
+slice-3 gates amended at close-out to the ratified scope).
+Build slices follow in order.
 Base tree for every build slice below: wbic16/quarterexo exo @
 609bab65 (v1.7.1), synced to wbic16/qexo per the two-repo rule
 (task 29.6.7/6.5.7/6.5.8).
@@ -5679,16 +5685,28 @@ provides it:
   (working name `REGSVC_QEXO_TOKEN`, header
   `X-Qexo-Token`, constant-time compare,
   fail-closed when unset — the drain token's own
-  pattern in app.py) authorizing **only**
+  pattern in app.py) authorizing
   `POST /api/items/{n}/done` and
   `POST /api/items/{n}/cancel`, recording `user`
   as the token's identity (e.g. `qexo`) on the
   resolution atom. Per §10.2, the token is bound
   to **Will's scope**: it closes items in Will's
-  scope and no other. No entries-append, no
-  login, no session powers. This is a register-
-  service sub-slice with its own PR and tests in
-  wbic16/register, inside integration slice 3.
+  scope and no other. No login, no session
+  powers. This is a register-service sub-slice
+  with its own PR and tests in wbic16/register,
+  inside integration slice 3.
+- **Entries-append (ratified scope, Q2).** As
+  drafted, the token above was resolutions-only;
+  at ratification Will widened it (§15, Q2,
+  2026-11-16): the token also authorizes
+  `POST /api/entries` on Will's scope, so items
+  born on the phone appear in the register web
+  view. Entries appended under the token record
+  `user` as the token's identity, same as
+  resolutions. The scope stops there: no other
+  scope, no login, no session powers — and the
+  scope is not widenable by configuration
+  (§10.5).
 - **One Will pass provisions everything.** The
   staged on-box update Will runs for the per-user
   scoping (§10.2) is the same pass that (a)
@@ -5716,12 +5734,19 @@ provides it:
 
 ### 10.5 What the integration deliberately does not do
 
-qexo never posts quick entries (entries stay
-browser-born or Emise-born — qexo's write-back is
-resolutions only); never writes waiting-on-
-will.md (Emise's register process keeps that pen,
-fed by drain results); never mints register
-numbers; never widens the service token's scope
+qexo posts register entries only under the
+ratified token scope (§10.4, Q2): items born on
+the phone are appended to Will's scope so they
+appear in the register web view; every other
+entry stays browser-born or Emise-born. (The
+draft's stronger line — "never posts quick
+entries; write-back is resolutions only" — was
+superseded by Will's Q2 decision at
+ratification, 2026-11-16.) qexo never writes
+waiting-on-will.md (Emise's register process
+keeps that pen, fed by drain results); never
+mints register numbers; never widens the
+service token's scope beyond the ratified scope
 by configuration. Each "never" is a test in
 slice 3's gates (§13).
 
@@ -5939,7 +5964,11 @@ Register integration lands **before the ship**
    provisioning pass (§10.4). Gates: drain
    idempotency (double-drain files nothing
    twice); watermark crash-safety; the token's
-   negative legs (token cannot append entries,
+   legs, at the ratified Q2 scope (resolutions +
+   entries-append, Will's scope only): positive
+   leg — a token-appended entry appears in the
+   register web view; negative legs (token
+   cannot append entries to another scope,
    cannot read another scope, cannot write with
    the drain token, unset token fails closed);
    a foreign-scope fixture drains to empty.
@@ -6033,16 +6062,24 @@ scrolls), never from a stored summary.
   12.6.6/7.4.8); dispatch feeds them its per-item
   timestamps and outcomes as atoms.
 
-## 15. Open questions for Will
+## 15. Open questions for Will — answered at ratification
 
 Only genuine decisions, each with a
-recommendation:
+recommendation. **All six were answered by Will,
+OBO, in the qexo chat on 2026-11-16
+(02:21–02:23 CST)**; each question below carries
+its outcome. Five were ratified as recommended;
+Q2 was decided against the draft's
+recommendation, and the spec was amended to the
+ratified scope at close-out (§§10.4, 10.5, 13).
 
 1. **Drainer node.** Spec designates
    aletheia-core. *Recommend: ratify* — it is the
    always-on hub and the fleet signer; the phone
    and laptop should never hold register
    credentials.
+   **Outcome: RATIFIED as recommended** —
+   aletheia-core is the drainer.
 2. **Service-token scope.** Specced as
    resolutions-only (done/cancel, Will's scope).
    The alternative — also entries-append, so
@@ -6050,6 +6087,13 @@ recommendation:
    view — widens the credential. *Recommend:
    resolutions-only now*; revisit if the web
    view's absence is felt.
+   **Outcome: DECIDED AGAINST the draft's
+   recommendation** — Will widened the token:
+   resolutions (done/cancel) PLUS entries-append
+   on Will's scope, so phone-born items appear
+   in the register web view. §§10.4, 10.5, and
+   the §13 slice-3 gates carry the ratified
+   scope.
 3. **Auto-pause surfacing.** Specced as queue pin
    + audit + the tick carrying it into the
    Waiting-on-Will register. Should an auto-pause
@@ -6057,19 +6101,30 @@ recommendation:
    directly? *Recommend: no* — resolutions close
    items; a pause is not a closure, and the tick
    already carries it.
+   **Outcome: RATIFIED as recommended** — an
+   auto-pause writes nothing to the register
+   service directly; the tick carries it.
 4. **ROI scale.** value/cost as integers 1–9,
    enqueuer-recorded. *Recommend: ratify* — the
    ratio only needs to order a queue, and small
    integers keep estimates honest and quick.
+   **Outcome: RATIFIED as recommended** —
+   value/cost are integers 1–9.
 5. **Heartbeat numbers.** 2-minute beat, 3 missed
    = failure. *Recommend: start here*, tune from
    bench data (§14) rather than by argument.
+   **Outcome: RATIFIED as recommended** — start
+   at 2 min / 3 missed; tuning deferred to bench
+   data.
 6. **The 11.11.11 homeland.** Dispatch's anchor
    is proposed, per LAYER2's own rule that
    placements are ratified by use. *Recommend:
    ratify the anchor* so slice 1 can lay it down;
    the alternative is overloading plan (5.5.5),
    which already has a job.
+   **Outcome: RATIFIED as recommended** —
+   11.11.11 is dispatch & queue's homeland; plan
+   (5.5.5) is not overloaded.
 
 ## 16. Provenance — what this spec was derived from
 
