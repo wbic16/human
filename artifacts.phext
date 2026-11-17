@@ -7060,7 +7060,7 @@ The fleet is current: 14 of 14 assessed nodes on 1.104.5, Tailscale SSH off ever
 Title: The Landing Kit — Specification (phcc / phccbox)
 Source: workspace/phcc-landing-kit/SPEC.md
 Inscribed: 2026-11-17
-SHA-256: 89450ecc7c9939083a9d875cee3ae5aa941b3f3c620070e54d4b80390014c05b
+SHA-256: 32e77835202ee8ab8934f3bf5308e8f20fa7b15b1a90b0ff0cfbd62570457191
 
 ---
 # The Landing Kit — Specification
@@ -7163,6 +7163,15 @@ resolution works across whatever nodes a kit can reach. This is what makes
 "find your way home" literal — home is any node, not one company's server.
 A landed kit that can reach any node can reach the whole library world;
 a landed kit that can reach none still builds everything it carries (§2).
+
+**Cryptographic guarantees (ruled).** wpm includes cryptographic guarantees
+that you are getting the library you asked for. Nodes are **untrusted
+carriers**: package identity is **hash-pinned (SHA-256, the house checksum
+standard)** and **publisher-signed**, so the bytes received are verifiably
+the library published under that name, regardless of which node served
+them. This is the load-bearing property of the distributed design — trust
+lives in the cryptography, never in the node. A node can be slow, stale, or
+silent; it cannot substitute a different library under a known name.
 
 **Evaluation (2026-11-17).** The incumbents were considered under Will's
 conditional — *"if there's not a great one, build it too"*:
