@@ -9312,7 +9312,7 @@ handlers, and tests).
 Title: pybot.phext — PyBot, rebuilt on phext with MOAT
 Source: workspace/pybot-census/PYBOT-PHEXT.md
 Inscribed: 2026-11-17
-SHA-256: dea1b6f74f02addf378921fc5d7f1326952e7073689cc85438e05d803ee9dc25
+SHA-256: 1cefa8cfa2bcb891cadf2a387738225dbf0e2e1743b543bfdbe0275bc551bb00
 
 ---
 # pybot.phext — PyBot, rebuilt on phext with MOAT
@@ -9473,10 +9473,78 @@ The full grouping is inscribed in the phext as the claim identity
 index at 1.1.1/1.4.1/1.1.1. Iteration 2, when directed: collapse each
 identity to one canonical entry scroll and re-point its claims.
 
+## Stage 4 — the TLUF split, and the False prune
+
+Will (2026-11-17): "split the claims into tful and prune the false
+ones to save space." Executed on the Muse VM (the ranch cluster was
+on phccbox work that day). Task 32.6.7/7.6.9/5.5.9. Build script
+build4.py, stats in stage4.json.
+
+The split — four networks as four collections:
+
+- Unknown — Collection 10: 80,453 claims, coordinates unchanged,
+  status Unknown, basis extracted-unadjudicated.
+- True — Collection 12, home at 1.1.1/12.1.1/1.1.1: 0 claims. Entry
+  requires positive verification against a primary source independent
+  of the knowledge base; no offline pass could promote any claim on
+  those grounds, so the network stands empty rather than filled by
+  confidence.
+- Fiction — Collection 13, home at 1.1.1/13.1.1/1.1.1: 0 claims. No
+  entry carries authored-as-fiction provenance.
+- False — Collection 14: pruned to a single tombstone scroll at
+  1.1.1/14.1.1/1.1.1 (29,537 bytes): method, counts, and for every
+  pruned claim its old coordinate, provenance, and segment SHA-256.
+  The knowledge itself is untouched — segments live on in their
+  source scrolls; only refuted assertions were pruned, and any can be
+  re-filed from the tombstone.
+
+False was decided mechanically, on stated grounds — entries refuted
+by the bot's own Python semantics. S1, shadowed dict pairs (14): a
+constant key set again later in the same dict literal; every
+occurrence but the last is dead (the PANTRY keys in cooking_tables.py
+are the type specimen — "halloumi" written twice, the first value
+never served). S2, shadowed assignments (185 entries): the same plain
+name rebound later in the same scope with no intervening read; the
+earlier assignment's entries are all dead. Total False: 199 claims
+(0.25%), failure kind naive — the grounds carry no intent, and per
+Will's 2026-11-14 rule malicious is recorded only where the stated
+grounds carry intent. The AST traversal reconciles exactly with the
+stage-2 extraction (159 files, 7,976 assignments, 80,652 entries).
+
+Verification: zero errors. Every surviving claim and source scroll is
+byte-identical to v3 except the manifest, claims home, and identity
+index; all 80,453 surviving refs were re-resolved against both the
+phext and the restored original .py files (restored byte-exact from
+the phext itself, SHA-256 verified) and matched; round-trip gate
+holds. The identity index was regenerated over the surviving claims:
+46,359 unique segments, 8,538 duplicate identities, 34,094 redundant
+copies (314,149 bytes of repeated segment text).
+
+The space accounting, plainly: the prune removed 33,255 bytes of
+claim scrolls, but the tombstone and the two bin homes cost nearly
+the same — v4 is 91,495,309 bytes raw (SHA-256 e79e7597…), just
+2,354 bytes smaller than v3, and its xz is 10,490,120 bytes
+(SHA-256 a749c804…) — 11,140 bytes LARGER than v3's 10,478,980. The
+tombstone's per-claim SHA-256 hex strings are near-random text and
+compress badly. So the prune bought structure, not space: 199
+refuted assertions no longer sit filed as Unknown, and the False
+network exists as an auditable record. If space is the goal, the
+lever is tombstone verbosity, not the claims.
+
+Build note: the first two build runs reported 36 phantom "pruned
+claim still present" errors — a naive presence check in the verifier
+(parse returns empty slots for interior deletions) compounded by an
+edit/exec race; the third run's corrected verifier and an independent
+standalone pass both confirm the prune is exact.
+
+Node state: orchid-flow's copy still holds v3 (cluster was Will's
+that day); local pybot-v3.phext preserves v3 here. Sync on a later
+pass.
+
 ## Open frontier
 
-- Adjudication: 80,652 Unknown claims await a MOAT/Oracle pass.
-- Identity dedup (iteration 2 above): canonical entries for the 8,573
+- Adjudication: 80,453 Unknown claims await a MOAT/Oracle pass.
+- Identity dedup (iteration 2 above): canonical entries for the 8,538
   duplicate identities.
 - Claims for the memory and compose data (stage 2 covered bot/knowledge,
   the knowledge base proper).
