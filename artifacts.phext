@@ -7060,7 +7060,7 @@ The fleet is current: 14 of 14 assessed nodes on 1.104.5, Tailscale SSH off ever
 Title: The Landing Kit — Specification (phcc / phccbox)
 Source: workspace/phcc-landing-kit/SPEC.md
 Inscribed: 2026-11-17
-SHA-256: 5f1147ec94e27ae942e8ee1963cda05cfb4a65fd6ee039a47ede03f7f0020cd3
+SHA-256: 89450ecc7c9939083a9d875cee3ae5aa941b3f3c620070e54d4b80390014c05b
 
 ---
 # The Landing Kit — Specification
@@ -7146,15 +7146,23 @@ phcc build that fully replaces BusyBox). Ruled contents:
 - **POSIX utilities** — the working shell userland: the commands a landed
   environment is operated with.
 
-## 6. The package manager (ruled: built, not adopted)
+## 6. wpm — Will's Package Manager (ruled: built, not adopted)
 
-C has never had a standard package manager. The kit fills that hole.
+C has never had a standard package manager. The kit fills that hole with
+**wpm**.
 
 **What it is.** One tool that makes phcc's holdings operable: packages are
 carried in phext — source, headers, and pre-built dynamics in one artifact —
-and the manager fetches, builds, and installs them. It is the same move the
+and wpm fetches, builds, and installs them. It is the same move the
 Computronium programme ruled for Chromium's dependencies: all dependencies
 live in one phext, one canonical copy each.
+
+**Distribution (ruled).** wpm is distributed. There is no central registry:
+packages are served by **wpm nodes**, hosting a node is open to anyone, and
+resolution works across whatever nodes a kit can reach. This is what makes
+"find your way home" literal — home is any node, not one company's server.
+A landed kit that can reach any node can reach the whole library world;
+a landed kit that can reach none still builds everything it carries (§2).
 
 **Evaluation (2026-11-17).** The incumbents were considered under Will's
 conditional — *"if there's not a great one, build it too"*:
@@ -7170,12 +7178,12 @@ conditional — *"if there's not a great one, build it too"*:
 
 Neither meets the kit's terms: **phext-carried, self-extracting with the
 kit, source + headers + pre-built dynamics in one artifact, native across
-the five platform builds.** Decision: the package manager is **built
-in-programme**, not adopted.
+the five platform builds.** Decision: wpm is **built in-programme**, not
+adopted.
 
-**DRAFT placement:** a minimal resolver ships in the MVP edition (§8) —
-enough to install the kit's own bundled packages offline; the full manager
-arrives with the Lite edition.
+**DRAFT placement:** a minimal wpm resolver ships in the MVP edition (§8) —
+enough to install the kit's own bundled packages offline; the full wpm,
+including node hosting, arrives with the Lite edition.
 
 ## 7. Platforms (ruled)
 
@@ -7211,8 +7219,8 @@ adds the working comforts; Full is everything ruled in.
 | Bootstrap: TLS | ● | ● | ● |
 | Bootstrap: SQLite | ● | ● | ● |
 | Bootstrap: phext support | ● | ● | ● |
-| Package manager — minimal resolver | ● | ● | ● |
-| Package manager — full | | ● | ● |
+| wpm — minimal resolver | ● | ● | ● |
+| wpm — full (incl. node hosting) | | ● | ● |
 | Major-library headers + pre-built dynamics | | ● | ● |
 | phccbox: POSIX utilities (core) | ● | ● | ● |
 | phccbox: tar + xz | ● | ● | ● |
