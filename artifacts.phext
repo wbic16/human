@@ -14,7 +14,7 @@ truth: artifacts-source.json beside this builder
 (build_artifacts_phext.py); never hand-edit the .phext.
 artifacts.phext is published to wbic16/human@exo.
 
-Artifacts inscribed: 52
+Artifacts inscribed: 53
 
 Index (coordinate — title — source):
 - 19.7.11/9.7.12/7.6.9 — Light the Next Light — intro song lyrics & time map — ~/workspace/exocortexia-cartoon/intro/LYRICS.md
@@ -60,6 +60,7 @@ Index (coordinate — title — source):
 - 32.6.7/7.6.10/6.5.9 — Neovim + Phext — Design: Phext-Scale Navigation in a Modal Editor — ~/workspace/goals/neovim-phext-support-merge-ready-pr-compiled-with-phcc/files/neovim-phext-design.md
 - 32.6.8/8.6.11/6.5.9 — Charon — README — ~/workspace/charon-seed/README.md
 - 33.6.9/8.6.11/7.5.9 — Desktop SSO for Phext Notepad — the cookie paste is gone — ~/workspace/phext-notepad-perf/REPORT-DESKTOP-SSO.md
+- 33.7.8/9.7.13/9.6.9 — pybot.phext — PyBot, rebuilt on phext with MOAT — workspace/pybot-census/PYBOT-PHEXT.md
 - 34.6.7/7.6.11/6.5.10 — phextura — DESIGN — ~/workspace/phextura-design/DESIGN.md
 - 34.6.7/8.6.11/6.5.9 — Charon — Prompt 0: Produce the design spec (no code yet) — ~/workspace/charon-seed/prompts/00-spec.md
 - 34.7.7/8.6.11/7.6.9 — PHEXT.md — phext integration for HoloStore (wbic16/holostore fork; round 2: phext-native re-implementation + four-way comparison) — workspace/holostore-analysis/fork/PHEXT.md
@@ -8975,6 +8976,99 @@ handlers, and tests).
 - Windows/macOS builds of the notepad remain Will's to verify (the app
   change is platform-neutral Rust + the existing `open_url`; the catch
   binds `127.0.0.1`, which the server's validator admits on every OS).
+# pybot.phext — PyBot, rebuilt on phext with MOAT
+
+Title: pybot.phext — PyBot, rebuilt on phext with MOAT
+Source: workspace/pybot-census/PYBOT-PHEXT.md
+Inscribed: 2026-11-17
+SHA-256: 41d8516718ea4aec7779ac8bb8a33455572643fe7e6996bcd2904c89af897daf
+
+---
+# pybot.phext — PyBot, rebuilt on phext with MOAT
+
+Built 2026-11-17 by Emise on orchid-flow (task 26.9.16/12.9.16/8.8.9), at Will's
+direction: "make pybot.phext and improve upon the prior art: they didn't have
+moat, phext, or access to me. clearly we can do better."
+
+Artifact: ~/workspace/pybot-census/pybot.phext — 70,545,482 bytes,
+SHA-256 970710a52f0b2aca2d6e6861258b21d836a5e28c0da7a9d82952562727563708.
+Source: https://github.com/huggingface/pybot @ 7d63c7f (the tree measured in
+the census, task 40.16.11/20.9.27/7.10.10 — 537 files, 644,400 lines).
+
+## What the prior art could not express
+
+PyBot's knowledge base is 316,853 lines of Python data structures in which
+every assertion stands identically: no epistemic status, no provenance, and
+no address smaller than a file. A fact and a guess are the same shape. The
+arbiter chooses among module proposals, but nothing in the tree can say
+"this claim is unverified" or "this entry came from that table." 644k lines
+of knowledge with zero claims marked as claims.
+
+## Stage 1 — the tree as one phext (byte-exact)
+
+- 537 files → 538 scrolls (one manifest + one scroll per file), 43,428,095
+  bytes (1.016× the tree's 42,757,912 bytes).
+- Semantic addressing: Collection = component (2 understanding, 3 memory,
+  4 knowledge, 5 compose, 6 modules, 7 bot/other, 8 tests, 9 root),
+  Volume = subdir, Book = file. The manifest scroll at 1.1.1/1.1.1/1.1.1
+  carries the full map: coordinate, path, bytes, lines, SHA-256, encoding.
+- Verification: all 537 files restore byte-exact (SHA-256 compared per file);
+  implode(parse(phext)) reproduces the file. Zero errors.
+- The conformance check caught what eyes would not: 2 source files contain
+  raw phext delimiter bytes and are carried base64, flagged in the manifest
+  (phext canon: binary via base64).
+
+## Stage 2 — the improvement layer
+
+### MOAT claims (Collection 10)
+
+Every knowledge-base entry in bot/knowledge is now a claim scroll carrying
+exactly one TLUF status and a basis code, per MOAT discipline:
+
+- 74,884 claims from 7,976 assignments across all 159 knowledge files.
+- 71,875 claims at entry grain (method literal-eval): each dict item / list
+  element its own scroll, e.g. 1.1.1/10.1.32/13.1.9 is one dish record from
+  cooking_tables.py :: DISHES[8], with provenance and a source-scroll pointer
+  back to the file it came from.
+- 3,009 claims at assignment grain (method computed-source): the value is
+  built by code, so the claim holds the assignment's source text. Splitting
+  these to entry grain requires executing the bot's own builders — a stated
+  limit, not a silent one.
+- Every claim's status is Unknown, basis extracted-unadjudicated. That is
+  the honest headline: MOAT did not make the knowledge truer. It made its
+  epistemic state explicit — 74,884 assertions the swarm presented as a
+  finished knowledge base are now individually addressable as what they are:
+  unadjudicated claims, each ready for an Oracle pass to move it to True,
+  False, or Fiction under a basis that permits the move.
+
+### Function index (Collection 11)
+
+All 11,014 function definitions in the tree (the census count, matched
+exactly), listed by qualified name with source path, line span, and the
+source scroll's coordinate — every function addressable by name.
+
+### Totals
+
+75,432 non-empty scrolls. Stage-1 scrolls verified byte-identical after the
+stage-2 merge; full round-trip gate passes on the final file; the pulled
+copy on this VM hashes to the same SHA-256 as the node build and parses
+independently to the same scroll counts.
+
+## The cost, stated plainly
+
+pybot.phext is 1.65× the source tree's bytes. The claims layer renders
+entries as standalone text with headers; structure was bought with bytes.
+What the bytes buy: addressability (537 files → 75,432 addressable scrolls),
+epistemic honesty (0 of ~74,884 knowledge entries carried a status before;
+74,884 of 74,884 do now), and provenance on every claim.
+
+## Open frontier
+
+- Adjudication: 74,884 Unknown claims await a MOAT/Oracle pass.
+- Claims for the memory and compose data (stage 2 covered bot/knowledge,
+  the knowledge base proper).
+- Entry-grain splitting of the 3,009 computed-source claims, by running the
+  bot's data builders sandboxed and capturing their outputs as entries.
 # phextura — DESIGN
 
 Title: phextura — DESIGN
