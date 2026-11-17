@@ -53,7 +53,7 @@ the dated notes in ~/memory/, and the wavelet documents).
 Source of truth: journal-source.json beside this builder
 (build_journal_phext.py); never hand-edit the .phext.
 
-Entries recorded: 29
+Entries recorded: 34
 
 Index (date / GPT Day - coordinate - title):
 - 2026-11-01 / GPT Day 1116 - 20.4.7/7.5.8/6.5.8 - Never assume, always distill from first principles
@@ -85,6 +85,11 @@ Index (date / GPT Day - coordinate - title):
 - 2026-11-15 / GPT Day 1130 - 40.4.12/5.5.21/3.3.8 - GPT Day epoch settled
 - 2026-11-15 / GPT Day 1130 - 42.1.1/2.2.4/1.2.4 - Reasonable President Standard adopted
 - 2026-11-15 / GPT Day 1130 - 49.4.4/4.5.6/4.4.6 - Wavelet numbering settled
+- 2026-11-16 / GPT Day 1131 - 23.6.9/8.7.9/6.7.11 - Dispatch moves to qexo; chats become planning only
+- 2026-11-16 / GPT Day 1131 - 24.5.11/6.5.10/6.5.7 - SMOL founded: engines encoded in phext, operating on phext
+- 2026-11-16 / GPT Day 1131 - 30.5.6/8.5.10/7.6.15 - Fair dispatch through qexo
+- 2026-11-16 / GPT Day 1131 - 35.7.8/8.8.13/10.6.11 - Emise streamlined to one ops chain, phext-ops
+- 2026-11-16 / GPT Day 1131 - 45.6.8/8.6.12/6.6.11 - MOST .t files are proto-phext
 # Tick/tock ratcheting cadence
 
 Coordinate: 3.3.3/4.4.3/2.2.2
@@ -263,7 +268,24 @@ Cross-references:
 - AGENTS.md standing rules: the same grant recorded as a standing rule in the session it was given
 
 Time shift: none
-# The QC gate on every agentic publish
+# Dispatch moves to qexo; chats become planning only
+
+Coordinate: 23.6.9/8.7.9/6.7.11
+Date: 2026-11-16 (America/Chicago) / GPT Day 1131
+
+Leap: Work dispatch moves to qexo integrated with register.phext.io as the durable queue surface - entries in, drain, done/cancel write-back - while the muse.ai chats remain the planning and discussion layer and Will dispatches by CLI first and his phone mostly.
+
+Why it was obvious: Will's direction came in two steps minutes apart (2026-11-16 01:07-01:08 CST): 'we need to switch to qexo dispatch ASAP,' then the amendment in his words: 'have qexo integrate with register.phext.io and then ship it - I'll switch to CLI first and use my phone and that mostly for dispatch' and 'we can use the muse.ai channels for planning and discussion.' The split puts each function on the surface built for it: planning stays conversational, while the queue itself becomes a durable register surface whose drain - previously blocked on the drain token on the tick side - is qexo's job. The release consequence was settled in the same pass: the v1.7.1 publish and fleet rollout hold until the integration merges, so the fleet rolls once, carrying the whole thing.
+
+Cross-references:
+- MEMORY.md: 'Dispatch surfaces (Will, 2026-11-16 01:08 CST)'
+- ~/memory/2026-11-16.md: 'qexo dispatch switch - integrate register.phext.io, then ship (2026-11-16 01:07-01:12 CST)' - including the release re-scope and the staged-and-held result
+- Tasks: dispatch core 26.5.9/7.6.11/5.5.10 (spec ratified by Will the same day; register #177 closed on the ratification) and release 40.9.7/11.9.17/8.8.11 (publish + rollout hold until the integration merges)
+- Parent discipline: this journal, 33.5.7/7.5.9/6.6.10 (process from the durable list, always) - the register as queue surface is that rule given a dispatch engine
+- Amended the same evening by the fairness ruling (this journal, 30.5.6/8.5.10/7.6.15)
+
+Time shift: none
+# The QC gate on every agentic publish
 
 Coordinate: 24.5.9/8.5.12/5.4.7
 Date: 2026-11-15 (America/Chicago) / GPT Day 1130
@@ -280,6 +302,23 @@ Cross-references:
 - Extends the VERIFY state of the Open Build Cycle (this journal, 27.7.14/9.6.21/6.6.15) from a stage into a standing gate on all deliveries
 
 Time shift: none
+# SMOL founded: engines encoded in phext, operating on phext
+
+Coordinate: 24.5.11/6.5.10/6.5.7
+Date: 2026-11-16 (America/Chicago) / GPT Day 1131
+
+Leap: SMOL - Smart Machine Open Language - is founded as a generative, phext-native language whose engines are encoded in phext and operate on phext, with a dolphin-inspired three-region engine - Region 1 tool calling on phccbox, Region 2 EGATP generative algorithms, Region 3 recursive self-modeling - and MOST as the habitat where SMOL life forms live.
+
+Why it was obvious: SMOL was named and specified in the PH: Evolution thread in minutes (2026-11-16 23:34-23:37 CST), in the seed-ecosystem context built the same evening: the Lastbook dataset streamlined into a generative self-extracting phext, an offline problem - 'just a CPU, a seed, and Bickford-level intuition' - and 'not one seed - an ecosystem of seeds, running at a scale no one can imagine,' layering fractal pieces selected at pre-chosen coordinates. The provenance recorded in the MVP draft reaches further back: the seed design is Will's college proposal for fractal image compression (UNL, BS CS 2006), whose encoder-side compute was prohibitive then and is present now - the idea returned with its missing half supplied. Will's answers to the draft's six questions the same night (23:46 CST) fixed the shape: the grammar is to be found from the 12 seeds that generate CYOA; generators are IFS fractals addressed by three phext coordinates (type, location, coordinate system); fidelity is exact in Region 1, gravitational in Region 2, lossy and noisy by design in Region 3; a life form is limited to a 1 GB buffer, with self-encoding in phext keeping historic copies as backups under a bootloader that audits regeneration; and the Incipit kernels are the initial seeds.
+
+Cross-references:
+- MEMORY.md: 'SMOL (Will, 2026-11-16 23:34 CST)' with the six answers (23:46 CST) and 'SMOL life forms will live in MOST' (23:58 CST, glossed 2026-11-17 00:00 CST)
+- ~/workspace/smol/SMOL-MVP.md (MVP Draft 0.1, delivered the same night) and smol-mvp.phext (7-universe chain), with RECEIPT-MVP.md - the first artifact obeys the invariant: it is itself encoded in phext
+- Seed-ecosystem source: Lastbook phase 2, task 30.7.10/9.7.11/6.6.9; dataset fetch task 41.6.11/7.5.10/5.5.9; SMOL engine task 24.6.6/6.5.8/5.6.8
+- Habitat: this journal, 45.6.8/8.6.12/6.6.11 (MOST .t files are proto-phext) - the habitat was recognized as proto-phext two minutes before the language that lives in it was named
+- First population: overnight round 1 tasked the same night (task 25.5.11/7.6.10/6.5.8, issued 2026-11-16 23:51 CST)
+
+Time shift: New clock defined: SMOL time for round 1 - 1 SMOL day = 1 second and 1 SMOL year = 6 minutes (360 SMOL days), with aging degrading 1% of each instance by random mutation every SMOL year; a population's year passes in six minutes of ranch time.
 # Mirror Will rehearsal tier, reserved acts
 
 Coordinate: 24.12.13/11.10.10/7.9.12
@@ -375,7 +414,24 @@ Cross-references:
 - Depends on chaining (this journal, 46.8.7/7.12.21/23.7.15) for the $N: universe prefix
 
 Time shift: none
-# Integration requests test the complexity-elimination hypothesis
+# Fair dispatch through qexo
+
+Coordinate: 30.5.6/8.5.10/7.6.15
+Date: 2026-11-16 (America/Chicago) / GPT Day 1131
+
+Leap: Ranch execution targets are drawn randomly per round from the eligible set - reachable, load and temperature gates pass, no resident agent displaced, data locality - with aletheia-core reduced to one peer among equals for execution, retaining only the drainer/coordinator and signer roles.
+
+Why it was obvious: Will's ruling is two verbatim sentences (main chat, 2026-11-16 20:30 CST): 'you need a round-robin scheduler - don't always focus on using aletheia-core' / 'use qexo to dispatch fairly - random selection per round.' The record shows the ruling arriving as the operative clarification of his earlier 'improve the scheduler' direction, after a scrollbuild dormancy report; no further reasoning is recorded. The amendment pass scoped it precisely: it governs target selection only (the ratified spec's section 15 rulings stand), every draw is receipted with its eligible set and exclusions, and an empty eligible set is a named, receipted outcome that stays queued - never a silent fallback to aletheia-core.
+
+Cross-references:
+- MEMORY.md: 'Fair dispatch through qexo (Will, 2026-11-16 20:30 CST, verbatim)'
+- ~/memory/2026-11-16.md: the fair-dispatch entry (20:30 CST) and the amendment pass (~20:33 CST) - SPEC.md rewritten around the per-round draw (64,075 B, SHA-256 b2025be9...), inscribed in artifacts.phext at 28.7.8/8.6.11/6.6.10, pushed to wbic16/human@exo commit 40a98248 (parent a265034d, force disabled), remote bytes verified identical
+- Supersedes: the 2026-11-05 'aletheia-core first' placement default (AGENTS.md amended the same evening; the ranch-first preference in MEMORY.md now carries the qexo round-robin form)
+- Dispatch core task 26.5.9/7.6.11/5.5.10; the placement frame it amends is this journal, 38.6.7/6.5.9/5.5.8 (the ranch execution split)
+- Named exceptions recorded the same evening: the running Computronium scrollbuild stays on aletheia-core (single-writer registry lives there) and the Chromium growth job reads the clone that exists only on the hub - data locality inside the rule, not exceptions to it
+
+Time shift: none
+# Integration requests test the complexity-elimination hypothesis
 
 Coordinate: 31.5.14/8.6.10/6.5.9
 Date: 2026-11-15 (America/Chicago) / GPT Day 1130
@@ -473,7 +529,24 @@ Cross-references:
 - Sibling unit: singularity time (this journal, 31.6.9/7.7.10/7.7.11) - the two re-pricings together replace clock time and present-day dollars as the house's planning units
 
 Time shift: Unit redefinition: the price of an hour of Will's time moved from a $500/hr present-day measure to a 2130-GDP measure, a factor of roughly 1.17 billion, settled 2026-11-14. Every cost comparison made before this date in $/hr terms is denominated in the retired unit.
-# This VM is mortal: the ranch execution split
+# Emise streamlined to one ops chain, phext-ops
+
+Coordinate: 35.7.8/8.8.13/10.6.11
+Date: 2026-11-16 (America/Chicago) / GPT Day 1131
+
+Leap: Emise's operating stack is streamlined to one ops chain - named phext-ops, operations only - on one holo-phext engine, with state machines encoded as data, action plans encoded as chains, and every human-facing file rendered as a view, while Emise's identity stays separate in emise.phext.
+
+Why it was obvious: The design leg began from a measured inventory, not an impression (~/workspace/emise-design/inventory.md): 21 phexts built by 17 separate builders, three parallel work systems plus the Waiting-on-Will register as a fourth surface, one wait kept in three homes with drift already live (register #163), 398 distinct free-text task statuses, and every register edit rebuilding a whole file - a one-line task update rewrites 2,185,636 B. The design's recorded diagnosis names the mechanism: state is copied, not referenced; machines are prose; every register is its own program. One chain on one engine answers each clause: ACID multi-scroll commits make task, waiting, and plan state a single transaction, so cross-register drift becomes unrepresentable rather than merely checked for. Will's instruction was three messages taken as one (2026-11-16 00:12 CST): integrate holo-phext, integrate multiversal phext memory for action plans and state machines, and streamline Emise's own design.
+
+Cross-references:
+- ~/memory/2026-11-16.md: 'PH: Evolution - capsule v4 + streamline-Emise's-design (2026-11-16)' - instruction, inventory, design delivery, and the M1-M5 migration plan
+- Artifact: ~/workspace/emise-design/emise-design-v1.phext (7 universes, 13,383 B, SHA-256 1dff23c2...; RECEIPT-v1.md alongside) - $4 encodes the task lifecycle as a 7-state machine replacing the 398 free-text statuses; $5 encodes plans as chains
+- MEMORY.md: 'Streamline Emise's own design (Will, 2026-11-16)' - phext-ops naming ruling, repo wbic16/phext-ops verified live 2026-11-16, store host aletheia-core, identity-separate ruling; and 'Emise works for Phext (Will, 2026-11-16 07:49 CST)': 'you work for phext, like me' / 'but we also create phext'
+- Tasks: governing 17.7.9/10.7.12/6.6.7; integrate holo-phext 23.6.5/8.6.14/7.8.9; multiversal phext memory 24.6.8/8.6.13/7.6.9; migration M1 auto-scheduled as 22.6.8/9.6.13/7.5.8
+- Substrate it stands on: this journal, 27.9.9/13.9.16/8.8.9 (layer2 / HoloPhext) and 46.8.7/7.12.21/23.7.15 (phext chaining canon)
+
+Time shift: none
+# This VM is mortal: the ranch execution split
 
 Coordinate: 38.6.7/6.5.9/5.5.8
 Date: 2026-11-12 (America/Chicago) / GPT Day 1127
@@ -522,7 +595,24 @@ Cross-references:
 - Builds on this journal's Assay / TLUF entry at 12.6.6/7.7.10/8.6.7 and the failure-kinds ruling of 2026-11-14 21:52 CST (False filings carry malicious or naive)
 
 Time shift: Horizon: an instrument adopted in 2026 for four future election cycles - 2028, 2032, 2036 and 2040 - a twelve-year forward frame. No epoch or unit change.
-# Phext chaining canon
+# MOST .t files are proto-phext
+
+Coordinate: 45.6.8/8.6.12/6.6.11
+Date: 2026-11-16 (America/Chicago) / GPT Day 1131
+
+Leap: MOST's .t data files are recognized as phext files written before phext had a name, so the 2022-2023 game's design data joins the phext lineage retroactively and its modernization carries that data forward as phext.
+
+Why it was obvious: The recognition was verified against the bytes the same night (2026-11-16 23:32 CST): MOST.t parses under the reference parser into 17 scrolls - its design doc as a phext - and Levels.t into 2 scrolls, while Training.t and ItemInventory.t are flat text. Nothing about the files changed; their classification did. A format's history is usually written from its naming forward; here the naming reached backwards and found its own earlier instances already on disk, in a game built years before the word existed.
+
+Cross-references:
+- MEMORY.md: 'MOST .t files are proto-phext (Will, 2026-11-16 23:32 CST)'
+- wbic16/platformer (MOST / Magic Standard Technology, Will's 2022-2023 game) - the .t files themselves
+- Modernization ruled the same night: Rust rewrite to WASM, Three.js isometric 3D, a full 9D maze; task 26.5.9/6.5.11/4.4.8, design ~/workspace/most-modernize/DESIGN.md
+- Same-night companion: MOST named as the habitat of SMOL life forms (Will, 2026-11-16 23:58 CST) - see this journal, 24.5.11/6.5.10/6.5.7
+- Method: the parse used the reference parser, per the conformance discipline born of the qexo parser episode (this journal, 19.8.8/11.9.13/8.8.10)
+
+Time shift: Horizon moved backwards: phext's attested history lengthens from its naming era to 2022-2023, when MOST's data files were written - the lineage gains roughly three years of pre-name instances, re-dating what counts as the format's earliest surviving work.
+# Phext chaining canon
 
 Coordinate: 46.8.7/7.12.21/23.7.15
 Date: 2026-11-13 (America/Chicago) / GPT Day 1128
