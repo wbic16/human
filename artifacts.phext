@@ -7060,7 +7060,7 @@ The fleet is current: 14 of 14 assessed nodes on 1.104.5, Tailscale SSH off ever
 Title: The Landing Kit — Specification (phcc / phccbox)
 Source: workspace/phcc-landing-kit/SPEC.md
 Inscribed: 2026-11-17
-SHA-256: aa5f0709a215d471a9e38333364d5ae86b7779a6e614152e92e2e7f403acdb3c
+SHA-256: 01442eacacbc3c4b6f6fd6327a6ce5ac390f6e1a8a151f1d76be87f458d28189
 
 ---
 # The Landing Kit — Specification
@@ -7145,6 +7145,11 @@ phcc build that fully replaces BusyBox). Ruled contents:
 - **tar, gzip, xz** — the archivers; the kit's own sealing format family.
 - **POSIX utilities** — the working shell userland: the commands a landed
   environment is operated with.
+
+**Design principle (ruled):** *phccbox feels natural everywhere we have a
+build.* On every platform with a kit build, phccbox is the native-feeling
+userland — not a foreign layer carried onto the platform, but the way the
+machine is operated there.
 
 ## 6. wpm — Will's Package Manager (ruled: built, not adopted)
 
@@ -7254,6 +7259,10 @@ adds the working comforts; Full is everything ruled in.
 | emise-say | | | ● |
 | emissary | | | ● |
 | willbot | | | ● |
+| qexo | | | ● |
+| phext-sso (identity substrate) | | | ● |
+| ntp (time sync) | ● | ● | ● |
+| ssh-keygen (key minting) | ● | ● | ● |
 
 Full source for every embedded item ships in **all** editions (§2) — the
 editions divide capability, never auditability.
@@ -7278,6 +7287,24 @@ The Full edition carries the phext stack whole, plus the house's own pieces:
 - **emissary** — the kit carries an agent: what lands is inhabited, not
   empty.
 - **willbot** — Will's handwriting, carried as the kit's hand.
+
+**Second wave (ruled 2026-11-17):**
+
+- **qexo** — the house dispatch tool: the kit can be operated, and operate
+  other machines, in the house's own terms.
+- **phext-sso** — the shared identity substrate: one key/identity layer
+  under phext-ssh, phext-mail, phext-wiki accounts, and wpm publishers
+  (answers Gap 5 by ruling; implementation open).
+- **ntp** — time sync: TLS and signature validation get a trustworthy
+  clock (answers Gap 6 by ruling; implementation open).
+- **ssh-keygen** — key minting, in the kit: identities are born where
+  they are used.
+
+**Service architectures (ruled):** the kit's services — sq, phext-lattice,
+phext-wiki, a wpm node — ship service definitions for **init.d, systemd,
+and the other major OS service architectures**, so a landed service starts
+and stays up in the platform's native terms (answers Gap 8 by ruling as an
+integration requirement; implementation open).
 
 ## 10. Open items
 
@@ -7312,13 +7339,20 @@ nothing here is settled by this spec.
 5. **One identity substrate.** phext-ssh, phext-mail, phext-wiki accounts,
    and wpm publishers each imply keys; a single shared identity/key
    substrate across all four is desirable and currently unspecified —
-   on paper they are four silos.
+   on paper they are four silos. **Answered by ruling (2026-11-17):
+   phext-sso is that substrate (§9). Implementation still open.**
 6. **Time.** TLS and signature validation need a trustworthy clock. No
-   time-sync component is named in the kit.
+   time-sync component is named in the kit. **Answered by ruling
+   (2026-11-17): ntp is a kit component (§9). Implementation still open.**
 7. **Entropy.** Key generation on bare machines needs a CSPRNG story in
-   the embedded stdlib; unnamed so far.
+   the embedded stdlib; unnamed so far. (Key *minting* is covered:
+   ssh-keygen is a kit component, §9. The entropy source beneath it
+   remains this gap.)
 8. **Service supervision.** How sq, phext-lattice, phext-wiki, and a wpm
-   node start and stay up — init/supervisor unnamed.
+   node start and stay up — init/supervisor unnamed. **Answered by ruling
+   (2026-11-17): kit services ship definitions for init.d, systemd, and
+   the other major OS service architectures (§9). Implementation still
+   open.**
 9. **License register.** The full-source rule (§2) satisfies most bundling
    obligations, but a license register for the bundled libraries does not
    exist yet.
