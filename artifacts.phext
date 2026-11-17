@@ -61,7 +61,7 @@ Index (coordinate — title — source):
 - 32.6.7/7.6.10/6.5.9 — Neovim + Phext — Design: Phext-Scale Navigation in a Modal Editor — ~/workspace/goals/neovim-phext-support-merge-ready-pr-compiled-with-phcc/files/neovim-phext-design.md
 - 32.6.8/8.6.11/6.5.9 — Charon — README — ~/workspace/charon-seed/README.md
 - 33.6.9/8.6.11/7.5.9 — Desktop SSO for Phext Notepad — the cookie paste is gone — ~/workspace/phext-notepad-perf/REPORT-DESKTOP-SSO.md
-- 33.7.8/9.7.13/9.6.9 — pybot.phext — PyBot, rebuilt on phext with MOAT — workspace/pybot-census/PYBOT-PHEXT.md
+- 33.7.8/9.7.13/9.6.9 — phbot — PyBot, rebuilt on phext with MOAT — workspace/pybot-census/PHBOT-PHEXT.md
 - 34.6.7/7.6.11/6.5.10 — phextura — DESIGN — ~/workspace/phextura-design/DESIGN.md
 - 34.6.7/8.6.11/6.5.9 — Charon — Prompt 0: Produce the design spec (no code yet) — ~/workspace/charon-seed/prompts/00-spec.md
 - 34.7.7/8.6.11/7.6.9 — PHEXT.md — phext integration for HoloStore (wbic16/holostore fork; round 2: phext-native re-implementation + four-way comparison) — workspace/holostore-analysis/fork/PHEXT.md
@@ -9307,15 +9307,15 @@ handlers, and tests).
 - Windows/macOS builds of the notepad remain Will's to verify (the app
   change is platform-neutral Rust + the existing `open_url`; the catch
   binds `127.0.0.1`, which the server's validator admits on every OS).
-# pybot.phext — PyBot, rebuilt on phext with MOAT
+# phbot — PyBot, rebuilt on phext with MOAT
 
-Title: pybot.phext — PyBot, rebuilt on phext with MOAT
-Source: workspace/pybot-census/PYBOT-PHEXT.md
+Title: phbot — PyBot, rebuilt on phext with MOAT
+Source: workspace/pybot-census/PHBOT-PHEXT.md
 Inscribed: 2026-11-17
-SHA-256: 1cefa8cfa2bcb891cadf2a387738225dbf0e2e1743b543bfdbe0275bc551bb00
+SHA-256: a6f4d28b2378d0198bab0a914efd5dcdb8f726ef67dd8fefd3d7bc3e2e1e3ee0
 
 ---
-# pybot.phext — PyBot, rebuilt on phext with MOAT
+# phbot — PyBot, rebuilt on phext with MOAT
 
 Built 2026-11-17 by Emise on orchid-flow (task 26.9.16/12.9.16/8.8.9), at Will's
 direction: "make pybot.phext and improve upon the prior art: they didn't have
@@ -9550,6 +9550,24 @@ pass.
   the knowledge base proper).
 - Executing the bot's data builders sandboxed, if value-level (rather than
   source-level) claims for computed leaves are ever wanted.
+
+## The lineage is phbot
+
+Will (2026-11-17): "rename our lineage to phbot" — repo
+https://github.com/wbic16/phbot, "a fork of pybot, from first
+principles." And: "phbot will be the SMOLv2 baseline" — when SMOL v2
+is built, phbot is its starting substrate: a knowledge base that has
+been through MOAT extraction, a TLUF split, and a False prune is the
+stock the next generation evolves from.
+
+The artifact is now phbot.phext (this doc travels with it in the
+repo). The rename is inscribed in the phext's own manifest; the only
+scroll changed is the manifest. Current build: 91,495,468 bytes,
+SHA-256 41c7ad5b821b8389eff2492378d162659aac9fd8c117d0243d9680316655f966,
+83,047 scrolls, 80,453 Unknown claims. Earlier builds are preserved
+locally as phbot-v3.phext and phbot-v2-local.phext; the upstream
+project keeps its own name — pybot is the ancestor, phbot is the
+lineage.
 # phextura — DESIGN
 
 Title: phextura — DESIGN
