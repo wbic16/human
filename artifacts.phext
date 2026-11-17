@@ -8981,7 +8981,7 @@ handlers, and tests).
 Title: pybot.phext — PyBot, rebuilt on phext with MOAT
 Source: workspace/pybot-census/PYBOT-PHEXT.md
 Inscribed: 2026-11-17
-SHA-256: 41d8516718ea4aec7779ac8bb8a33455572643fe7e6996bcd2904c89af897daf
+SHA-256: 5c7f64b52e8173e9ba45761e40b797ea8675be923e9b5f336d7fa2b4d25c8558
 
 ---
 # pybot.phext — PyBot, rebuilt on phext with MOAT
@@ -8990,8 +8990,8 @@ Built 2026-11-17 by Emise on orchid-flow (task 26.9.16/12.9.16/8.8.9), at Will's
 direction: "make pybot.phext and improve upon the prior art: they didn't have
 moat, phext, or access to me. clearly we can do better."
 
-Artifact: ~/workspace/pybot-census/pybot.phext — 70,545,482 bytes,
-SHA-256 970710a52f0b2aca2d6e6861258b21d836a5e28c0da7a9d82952562727563708.
+Artifact: ~/workspace/pybot-census/pybot.phext — 57,480,883 bytes,
+SHA-256 dc757f31c31f39c2c1667b2241761b8f8864ed902a8ad60e9a4ba4a7260d86f7.
 Source: https://github.com/huggingface/pybot @ 7d63c7f (the tree measured in
 the census, task 40.16.11/20.9.27/7.10.10 — 537 files, 644,400 lines).
 
@@ -9014,61 +9014,81 @@ of knowledge with zero claims marked as claims.
   carries the full map: coordinate, path, bytes, lines, SHA-256, encoding.
 - Verification: all 537 files restore byte-exact (SHA-256 compared per file);
   implode(parse(phext)) reproduces the file. Zero errors.
-- The conformance check caught what eyes would not: 2 source files contain
-  raw phext delimiter bytes and are carried base64, flagged in the manifest
-  (phext canon: binary via base64).
+- The tree's entire binary content is two PNGs (assets/banner.png and
+  assets/progress.png, 1,806,440 bytes, 4.2% of the tree). They contain
+  phext delimiter byte values, so per phext canon they ride base64 — a
+  +602,148-byte cost, and ~90% of stage 1's small overhead. Base64 is not
+  where the size story lives; see the correction below.
 
-## Stage 2 — the improvement layer
+## Stage 2 — the improvement layer, by indirect addressing
 
 ### MOAT claims (Collection 10)
 
-Every knowledge-base entry in bot/knowledge is now a claim scroll carrying
-exactly one TLUF status and a basis code, per MOAT discipline:
+Every knowledge-base entry in bot/knowledge is a claim scroll carrying
+exactly one TLUF status and a basis code, per MOAT discipline — and nothing
+else. The entry's text is stored ONCE, in its source scroll; the claim
+points at it with a standoff reference in the phext v0.6.1 within-scroll
+syntax, `ref: <scroll>@<line>,<column>+<chars>` (line and column 1-based,
+column a caret boundary counting Unicode scalars, per libphext-rs
+src/phext.rs; +chars a forward selection in characters, half-open).
 
-- 74,884 claims from 7,976 assignments across all 159 knowledge files.
-- 71,875 claims at entry grain (method literal-eval): each dict item / list
-  element its own scroll, e.g. 1.1.1/10.1.32/13.1.9 is one dish record from
-  cooking_tables.py :: DISHES[8], with provenance and a source-scroll pointer
-  back to the file it came from.
-- 3,009 claims at assignment grain (method computed-source): the value is
-  built by code, so the claim holds the assignment's source text. Splitting
-  these to entry grain requires executing the bot's own builders — a stated
-  limit, not a silent one.
-- Every claim's status is Unknown, basis extracted-unadjudicated. That is
-  the honest headline: MOAT did not make the knowledge truer. It made its
-  epistemic state explicit — 74,884 assertions the swarm presented as a
-  finished knowledge base are now individually addressable as what they are:
-  unadjudicated claims, each ready for an Oracle pass to move it to True,
-  False, or Fiction under a basis that permits the move.
+- 80,652 claims from 7,976 assignments across all 159 knowledge files:
+  71,891 literal-ref and 8,761 computed-ref. Entry grain comes from the
+  AST's container structure, so even assignments whose leaf values are
+  computed yield per-entry claims wherever the container shape is static.
+- Every claim's status is Unknown, basis extracted-unadjudicated. MOAT did
+  not make the knowledge truer; it made its epistemic state explicit —
+  80,652 assertions the swarm presented as a finished knowledge base are
+  now individually addressable as what they are: unadjudicated claims, each
+  ready for an Oracle pass.
+- Verification: after the build, all 80,652 refs were parsed back out of
+  the written phext, resolved against their source scrolls, and SHA-256
+  compared with the segments extracted from the original .py files —
+  80,652 of 80,652 resolve exactly. A claim scroll is ~173 bytes of text:
+  status, basis, ref, provenance, method. That is the whole per-claim cost;
+  the knowledge itself is never copied.
 
 ### Function index (Collection 11)
 
 All 11,014 function definitions in the tree (the census count, matched
 exactly), listed by qualified name with source path, line span, and the
-source scroll's coordinate — every function addressable by name.
+source scroll's coordinate — every function addressable by name. This layer
+was always a pure pointer table.
 
 ### Totals
 
-75,432 non-empty scrolls. Stage-1 scrolls verified byte-identical after the
+81,200 non-empty scrolls. Stage-1 scrolls verified byte-identical after the
 stage-2 merge; full round-trip gate passes on the final file; the pulled
 copy on this VM hashes to the same SHA-256 as the node build and parses
-independently to the same scroll counts.
+independently to the same counts, with a sampled ref resolving by hand to
+the exact source entry.
 
 ## The cost, stated plainly
 
-pybot.phext is 1.65× the source tree's bytes. The claims layer renders
-entries as standalone text with headers; structure was bought with bytes.
-What the bytes buy: addressability (537 files → 75,432 addressable scrolls),
-epistemic honesty (0 of ~74,884 knowledge entries carried a status before;
-74,884 of 74,884 do now), and provenance on every claim.
+pybot.phext is 1.34× the source tree's bytes. Decomposition: stage 1 adds
++670,183 bytes (delimiters, the manifest, and base64 for the two PNGs);
+the claims + index layer adds ~14.0 MB of text across 80,662 scrolls —
+the addressing tax for 80,652 individually addressable claims and 11,014
+indexed functions, at ~173 bytes per claim. Content duplication: zero.
+
+## Correction — the first stage-2 build (same day)
+
+The first stage-2 build copied every entry's text into its claim scroll
+(JSON re-rendered, with a repeated header): 70,545,482 bytes total, 1.65×
+the tree, ~27.1 MB of it duplicated content. Will's correction — "you can
+use indirect addressing you know" — produced this build: the claims layer
+halved, the claim count rose (assignment-grain blobs dissolved into their
+entries), and the duplication went to zero. The v1 file is preserved on
+orchid-flow as pybot-v1-copied.phext. The error was Emise's: a derived view
+materialized as copies, against the house's own de-duplication discipline.
 
 ## Open frontier
 
-- Adjudication: 74,884 Unknown claims await a MOAT/Oracle pass.
+- Adjudication: 80,652 Unknown claims await a MOAT/Oracle pass.
 - Claims for the memory and compose data (stage 2 covered bot/knowledge,
   the knowledge base proper).
-- Entry-grain splitting of the 3,009 computed-source claims, by running the
-  bot's data builders sandboxed and capturing their outputs as entries.
+- Executing the bot's data builders sandboxed, if value-level (rather than
+  source-level) claims for computed leaves are ever wanted.
 # phextura — DESIGN
 
 Title: phextura — DESIGN
