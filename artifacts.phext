@@ -7060,7 +7060,7 @@ The fleet is current: 14 of 14 assessed nodes on 1.104.5, Tailscale SSH off ever
 Title: The Landing Kit — Specification (phcc / phccbox)
 Source: workspace/phcc-landing-kit/SPEC.md
 Inscribed: 2026-11-17
-SHA-256: 32e77835202ee8ab8934f3bf5308e8f20fa7b15b1a90b0ff0cfbd62570457191
+SHA-256: c561dfb9deee2fcb412ad0380b26588a5aa4cd19178c1d42a741c93d140b5754
 
 ---
 # The Landing Kit — Specification
@@ -7172,6 +7172,13 @@ the library published under that name, regardless of which node served
 them. This is the load-bearing property of the distributed design — trust
 lives in the cryptography, never in the node. A node can be slow, stale, or
 silent; it cannot substitute a different library under a known name.
+
+**Source origins (ruled).** A wpm node can host packages sourced from **any
+GitHub repo at a tag**, and can mirror the **popular C sites** — the
+canonical project homes and tarball sources where C libraries are actually
+published. Upstream tags are mutable, so wpm pins the SHA-256 at
+resolution: **the name asks, the hash decides.** A re-pointed tag surfaces
+as a new identity, never a silent change under an old one.
 
 **Evaluation (2026-11-17).** The incumbents were considered under Will's
 conditional — *"if there's not a great one, build it too"*:
