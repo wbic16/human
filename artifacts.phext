@@ -8981,7 +8981,7 @@ handlers, and tests).
 Title: pybot.phext — PyBot, rebuilt on phext with MOAT
 Source: workspace/pybot-census/PYBOT-PHEXT.md
 Inscribed: 2026-11-17
-SHA-256: 5c7f64b52e8173e9ba45761e40b797ea8675be923e9b5f336d7fa2b4d25c8558
+SHA-256: dea1b6f74f02addf378921fc5d7f1326952e7073689cc85438e05d803ee9dc25
 
 ---
 # pybot.phext — PyBot, rebuilt on phext with MOAT
@@ -8990,8 +8990,12 @@ Built 2026-11-17 by Emise on orchid-flow (task 26.9.16/12.9.16/8.8.9), at Will's
 direction: "make pybot.phext and improve upon the prior art: they didn't have
 moat, phext, or access to me. clearly we can do better."
 
-Artifact: ~/workspace/pybot-census/pybot.phext — 57,480,883 bytes,
-SHA-256 dc757f31c31f39c2c1667b2241761b8f8864ed902a8ad60e9a4ba4a7260d86f7.
+Artifact: ~/workspace/pybot-census/pybot.phext — current build is v3
+(stage 3 below): 91,497,663 bytes, SHA-256
+a8773e5d40e0e978e7df33136a39daa253ccba26427dd7291e19d081f7744a77.
+The v2 build described in stage 2 was 57,480,883 bytes, SHA-256
+dc757f31c31f39c2c1667b2241761b8f8864ed902a8ad60e9a4ba4a7260d86f7,
+preserved on orchid-flow as pybot-v2.phext.
 Source: https://github.com/huggingface/pybot @ 7d63c7f (the tree measured in
 the census, task 40.16.11/20.9.27/7.10.10 — 537 files, 644,400 lines).
 
@@ -9082,9 +9086,67 @@ entries), and the duplication went to zero. The v1 file is preserved on
 orchid-flow as pybot-v1-copied.phext. The error was Emise's: a derived view
 materialized as copies, against the house's own de-duplication discipline.
 
+## Stage 3 — no base64 anywhere (task 32.7.19/9.7.13/6.6.9)
+
+Will's direction: "decode the binary payloads back into plain text and
+replace the base64 scrolls with as much structured phext as is required."
+The tree's only binary payloads were the two PNGs. Both are simple files —
+IHDR, a run of IDAT chunks, IEND; no ancillary chunks, no interlace, 8-bit:
+
+- assets/banner.png — 2400×800 RGB, 5,760,000 pixel bytes; row filters
+  795 Paeth, 5 Sub.
+- assets/progress.png — 2400×1240 RGBA, 11,904,000 pixel bytes; all
+  1,240 rows Up-filtered.
+
+Each PNG is now a structured family under its file address: the header
+scroll (format facts, original byte count + SHA-256 as provenance, the
+decoded pixels' SHA-256, the reconstruction recipe), one scroll per
+scanline under Chapter 2 (Section = row) holding the unfiltered pixel
+bytes as hex, and the per-row filter types as a digit string at
+Chapter 3. Container bytes are not preserved, by design; image content
+is lossless — verification rebuilds a PNG from the scrolls alone and
+re-decodes it to a pixel stream whose SHA-256 equals the original
+decode's, for both images. 2,040 row scrolls + 2 headers + 2 filter
+scrolls replace the 2 base64 scrolls; 83,243 non-empty scrolls total.
+All 80,696 stage-2 scrolls carried over byte-identical; the round-trip
+gate passes; zero errors.
+
+### The xz comparison Will asked for
+
+Raw, v3 is 91,497,663 bytes — 2.14× the tree — because 17,664,000 pixel
+bytes are spelled out as 35,328,000 hex characters. Compressed
+(xz -9e, measured on orchid-flow):
+
+- v3 phext (no base64): 10,478,980 bytes
+- v2 phext (base64 PNGs): 10,901,296 bytes
+- original tree (tar of the clone): 10,290,100 bytes (tar raw 43,182,080)
+
+The no-base64 phext compresses 422,316 bytes SMALLER than the base64
+build (−3.9%): base64 of zlib-compressed IDAT is near-noise to xz, while
+decoded pixels carry structure it can exploit. And it lands within
+1.8% of the pristine original tree's compressed size — while also
+carrying the 80,652-claim MOAT layer and the function index, which the
+tree does not have at all.
+
+## Iteration 1 past the swarm — claim identity
+
+Will: "once we have a streamlined phext, iterate on what the swarm
+couldn't model yet." The swarm kept no identity for its knowledge: the
+same entry could be written into many files and nothing in the tree
+could tell. First iteration: hash every claim's resolved segment and
+group by content. Of 80,652 claims, only 46,489 segments are unique —
+8,573 identities live at more than one coordinate, holding 34,163
+redundant copies: 42.4% of all claims are re-statements of an entry
+that exists elsewhere (315,085 characters of repeated segment text).
+The full grouping is inscribed in the phext as the claim identity
+index at 1.1.1/1.4.1/1.1.1. Iteration 2, when directed: collapse each
+identity to one canonical entry scroll and re-point its claims.
+
 ## Open frontier
 
 - Adjudication: 80,652 Unknown claims await a MOAT/Oracle pass.
+- Identity dedup (iteration 2 above): canonical entries for the 8,573
+  duplicate identities.
 - Claims for the memory and compose data (stage 2 covered bot/knowledge,
   the knowledge base proper).
 - Executing the bot's data builders sandboxed, if value-level (rather than
