@@ -4772,7 +4772,7 @@ Summaries alongside the data: `ttt_results.json`,
 Title: qexo dispatch core — SPEC (RATIFIED 2026-11-16)
 Source: ~/workspace/qexo-task/dispatch-core/SPEC.md
 Inscribed: 2026-11-16
-SHA-256: cdcdca044906dc83338aafdcfbbb99a37b6874d6d42710b46a3aa662e50c4592
+SHA-256: b2025be90de1cd3e668a1e36dfdd15527d853a5a7ab14283d6a5e78dc7e912da
 
 ---
 # qexo dispatch core — SPEC (RATIFIED 2026-11-16)
@@ -4788,6 +4788,27 @@ Build slices follow in order.
 Base tree for every build slice below: wbic16/quarterexo exo @
 609bab65 (v1.7.1), synced to wbic16/qexo per the two-repo rule
 (task 29.6.7/6.5.7/6.5.8).
+
+Amendments after ratification:
+- 2026-11-16 (Will, main chat, 20:30 CST) — FAIR DISPATCH:
+  "you need a round-robin scheduler - don't always focus on
+  using aletheia-core" / "use qexo to dispatch fairly - random
+  selection per round". Scope: execution target selection
+  ONLY — §6 amended (random draw per round from the eligible
+  set, receipted), slice-4 gates added in §13.3, fairness
+  hooks added in §14. The §15 ratifications stand untouched:
+  aletheia-core keeps its drainer/coordinator and signer
+  roles; it loses only an execution preference it should
+  never have had. Conflict check against slice 1 as built
+  (quarterexo PR #29, branch emise/dispatch-slice1-chain-state
+  @ bcaa304f): NO CONFLICT — slice 1 contains no placement,
+  target-selection, or default-node logic. Its dispatch.rs is
+  local-only enqueue/queue/show with no network or execution
+  primitives; the only node name in it is the `enqueued-by`
+  provenance recorded on an item (and its test fixture), and
+  `queue --node` filters by that provenance — who enqueued an
+  item, never where it runs. Placement is slice 4's to build,
+  now under this ruling.
 
 ## 0. What this is, and the layering
 
@@ -5346,10 +5367,52 @@ way (LAYER2 rule 7).
   and the item's `capability:` requirements (from the
   brief: e.g. `capability: cargo`, `capability:
   gpu-free`, `capability: bridge:claude`).
-- **Thermal gate:** a node at or above **75 °C** is
-  not placed to. The gate is a placement refusal with
-  a receipt, never a silent skip; the next eligible
-  node is tried.
+- **Target selection — the fair draw (Will,
+  2026-11-16 20:30 CST, verbatim):** "you need a
+  round-robin scheduler - don't always focus on
+  using aletheia-core" / "use qexo to dispatch
+  fairly - random selection per round". The node
+  that runs an item is chosen by a **random draw
+  per round** from the eligible set. Eligibility —
+  all four required:
+  (a) the node is **reachable**;
+  (b) its **load/temperature gates pass** (the
+  ≤75 °C gate below; load measured from telemetry,
+  never assumed);
+  (c) **no resident agent is displaced** — a node
+  whose resident agent is at work is ineligible
+  for work that would displace it;
+  (d) **data locality** — the item's inputs are on
+  the node, or cheap to stage; the staging cost is
+  recorded on the placement receipt, never
+  guessed.
+  An item's `capability:` requirements filter the
+  set the same way, before the draw.
+  **aletheia-core is one peer among equals in the
+  draw.** Its ratified roles (drainer/coordinator
+  host, §15 Q1; fleet signer) give it **no**
+  execution preference.
+- **Composition:** §5's ordering and the heavy
+  FIFO below decide **which job goes next**; the
+  draw decides **which node runs it**; the N=4
+  heavy cap still binds. The draw never reorders
+  the queue, and the queue never names a node.
+- **The draw is receipted:** the placement receipt
+  (the assignment record, C3) records the eligible
+  set as drawn from, every excluded node with its
+  exclusion reason (which of (a)–(d), or
+  capability), and the node drawn. Fairness is
+  auditable after the fact; §7's audit surface
+  reads these receipts.
+- **Empty eligible set:** a round with no eligible
+  node is a named outcome — the item stays queued,
+  the round is receipted, placement retries next
+  round. There is **no** silent fall back to
+  aletheia-core, or to any default node, ever.
+- **Thermal gate:** a node at or above **75 °C**
+  fails eligibility (b) and is excluded from the
+  round's draw, its exclusion named in the
+  placement receipt — never a silent skip.
 - **Small units:** a brief that names more than one
   unit of work is enqueued as one item per unit with
   `after:` chaining — the queue, not the brief, is
@@ -5373,9 +5436,11 @@ way (LAYER2 rule 7).
   resume currency (§8) and the progress evidence
   (§7).
 - **Teleport:** on node loss, the origin re-dispatches
-  the same bundle identity (§4.3) to the next placed
-  node with `resume-from: $<n>:<checkpoint-address>`
-  in the manifest. The new attempt is the next
+  the same bundle identity (§4.3) to a node drawn in
+  a fresh fair-draw round (eligibility + draw, above)
+  with `resume-from: $<n>:<checkpoint-address>`
+  in the manifest. Teleport changes the attempt,
+  never the fairness rule. The new attempt is the next
   universe. The old node's assignment is fenced by
   attempt number (§4.6, illegal combination 2).
 
@@ -5975,13 +6040,27 @@ Register integration lands **before the ship**
    a foreign-scope fixture drains to empty.
 4. **Wire dispatch.** Bundle format + `POST
    /v1/dispatch` + acceptance rule + dedup (§§3.4,
-   4.3); placement (capability/thermal/FIFO, §6);
+   4.3); placement (the fair draw over the
+   eligible set, capability/thermal/FIFO, §6);
    heartbeat + checkpoints. Gates: two-node
    sandbox (accept, refuse-forged, refuse-stale,
    dedup-replay, thermal-refusal-with-receipt);
    a bundle authored by the Android build
    accepted by a Linux node (foreign-authored
-   fixture, the conformance rule).
+   fixture, the conformance rule); **fairness
+   legs (§6, Will 2026-11-16):** (i) repeated
+   placements in the sandbox distribute across
+   all eligible nodes — no node starved, none
+   taking all rounds, within the tolerance the
+   gate script states; (ii) exclusion legs — a
+   node failing each eligibility criterion in
+   turn (unreachable; at/above 75 °C; resident
+   agent at work; inputs not stageable) is never
+   drawn, and its exclusion reason appears in
+   the placement receipt; (iii) empty-eligible-
+   set leg — with every node excluded, dispatch
+   queues with its receipt and places nothing,
+   least of all on the coordinator by default.
 5. **F5 resume.** Failure detection, teleport,
    the counter and its resets, auto-pause +
    surfacing (§8). Gates: kill-the-executor
@@ -6054,6 +6133,14 @@ scrolls), never from a stored summary.
 - **Bridge uptime** (F6): per bridge, successful
   probes ÷ all probes per window, from the health
   log scrolls; failover count beside it.
+- **Dispatch fairness** (§6): per-node draw
+  distribution over the window, counted from
+  placement receipts (never sampled); exclusion-
+  reason counts by criterion — (a) unreachable,
+  (b) load/temperature, (c) resident agent,
+  (d) data locality, plus capability; empty-round
+  count beside them. A distribution drifting onto
+  one node is a bench finding, not an anecdote.
 - **Drain health** (§10): register high-water seq
   vs watermark (lag), entries→items latency,
   write-back success rate. A growing lag is a
