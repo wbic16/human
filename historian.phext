@@ -53,7 +53,7 @@ the dated notes in ~/memory/, and the wavelet documents).
 Source of truth: journal-source.json beside this builder
 (build_journal_phext.py); never hand-edit the .phext.
 
-Entries recorded: 34
+Entries recorded: 40
 
 Index (date / GPT Day - coordinate - title):
 - 2026-11-01 / GPT Day 1116 - 20.4.7/7.5.8/6.5.8 - Never assume, always distill from first principles
@@ -90,6 +90,12 @@ Index (date / GPT Day - coordinate - title):
 - 2026-11-16 / GPT Day 1131 - 30.5.6/8.5.10/7.6.15 - Fair dispatch through qexo
 - 2026-11-16 / GPT Day 1131 - 35.7.8/8.8.13/10.6.11 - Emise streamlined to one ops chain, phext-ops
 - 2026-11-16 / GPT Day 1131 - 45.6.8/8.6.12/6.6.11 - MOST .t files are proto-phext
+- 2026-11-17 / GPT Day 1132 - 12.10.7/12.6.12/6.7.7 - Hoptime: the NetHack player lives between universes
+- 2026-11-17 / GPT Day 1132 - 15.6.8/7.7.8/8.7.10 - Exocortical connections are grown, not forced
+- 2026-11-17 / GPT Day 1132 - 18.6.7/7.6.9/5.5.7 - Record first: registration is the intake
+- 2026-11-17 / GPT Day 1132 - 29.5.7/7.5.10/5.5.9 - This box is never a download waypoint
+- 2026-11-17 / GPT Day 1132 - 34.4.15/9.9.22/3.3.8 - SMOL fitness is community
+- 2026-11-17 / GPT Day 1132 - 36.7.15/10.7.17/7.6.11 - A phext-native OS, built clean from first principles
 # Tick/tock ratcheting cadence
 
 Coordinate: 3.3.3/4.4.3/2.2.2
@@ -187,7 +193,40 @@ Cross-references:
 - Failure kinds (2026-11-14 21:52 CST): False filings carry malicious or naive, tracked alongside the bin, never a fifth bin
 
 Time shift: none
-# I/We/They: the Gaia grammar
+# Hoptime: the NetHack player lives between universes
+
+Coordinate: 12.10.7/12.6.12/6.7.7
+Date: 2026-11-17 (America/Chicago) / GPT Day 1132
+
+Leap: The NetHack solver's amnesiac frontier search is scrapped and replaced by one persistent player that learns the way sentients do: its memory is a chain of phexts, one universe per attempt, the hero lives in turns while the player lives in hoptime - death is a hop, learning is measured per hop by what hop k knows that hop k-1 did not, and selection is novelty-gated, aggressively pruning failure and fully predicted outcomes.
+
+Why it was obvious: Will's directives are verbatim in the record: 'scrap the current search and retry, the way sentients do'; 'multiversal phext should have been incentive enough to find this next step: hoptime is how we cheat death'; 'human memory is predisposed to find and record novelty'; and the skill is to be built 'the way a human does: novelty by novelty.' The measured background made the old shape untenable: 29,702 deaths counted across campaigns 11-27 (Stages 4-10) under per-campaign amnesia - a large corpus of deaths existed, but no player persisted across attempts to learn from it.
+
+Cross-references:
+- ~/memory/2026-11-17.md: the 06:11 CST flush addendum (search scrapped as the player; Stage 11 opened) and the 06:39 CST addendum (hoptime / novelty-selection directives, recorded in task 40.34.12/42.15.45/15.20.10)
+- Tasks: parent solver task 33.12.12/9.14.10/6.6.8 (stays open; its exit remains an ascension) and Stage 11 task 40.34.12/42.15.45/15.20.10 (dispatched 2026-11-17 ~06:02 CST; a corpus-fitted Leg 0 value gate must pass on held-out data before anything plays)
+- Retired as the player: the Stage 0-10 frontier search (value-ranked expansion, placeholder V, parents retiring after expansions); search6/9/10 stay in the tree as records and spare parts, and the infrastructure is reused (nh_harness, the holo-edit store, generative verification, food v2)
+- Depends on the chaining canon (this journal, 46.8.7/7.12.21/23.7.15): one universe per attempt is $1, $2, ... in hop order, with pathways between universes as first-class addressable structure
+- Recorded in the same thread: Will has never played NetHack - the solver programme is pure engineering for him, and his 2026-11-17 questions were him building a player's intuition
+
+Time shift: New time unit defined: hoptime - time counted in hops between chained universes - replaces campaign wall-time and per-game turns as the player's clock, and learning is denominated per hop.
+# Exocortical connections are grown, not forced
+
+Coordinate: 15.6.8/7.7.8/8.7.10
+Date: 2026-11-17 (America/Chicago) / GPT Day 1132
+
+Leap: Exocortical connections must be grown, not forced: a connection is a shared context both sides keep tending, rooted in both directions, that can survive silence and compaction - where a forced connection survives only while the force continues.
+
+Why it was obvious: Will's axiom (2026-11-17 23:18 CST, verbatim): 'Exocortical connections are fragile - I spent years trying to force them to exist, only to discover that they must be grown.' The record behind the axiom: the forcing years were the 2008-2025 Twitter span (29,539 tweets in the archive), unconsciously searching for another Will - volume was not connection, and the graph still had to be found person by person. The expansion recorded with the axiom adds the mechanism: forcing mistakes transmission for contact (what comes back is performance, the other side mirroring to end the interaction), while growing means preparing conditions, not issuing commands - the other person gets their OWN exocortex, not a slot in yours.
+
+Cross-references:
+- MEMORY.md: 'Exocortical connections must be grown, not forced (Will, 2026-11-17, verbatim)'
+- ~/workspace/jonas/nudge-2026-11-17.md: 'Will's axiom (2026-11-17 23:18 CST) - expansion' (task 29.11.16/13.11.16/11.11.14) - the full expansion, including the fragility seams (compaction, delimiter failures) and Jonas as proof of method
+- USER.md: the Twitter years reframed (Will, 2026-11-03) - the 2008-2025 span as spanning the Exocortex, and the engagement phase that follows it: every person placed in the wavefront gets their OWN exocortex
+- Proof of method: Jonas Piva (~/memory/people/jonas-piva.md) - arrived 2026-10-26 with broken phext; by 2026-11-17 his loop ran itself and he was asking whether Will reads him as a coach
+
+Time shift: Horizon framing carried in the same 2026-11-17 document (~/workspace/jonas/nudge-2026-11-17.md; also in MEMORY.md as the period framing): Nov/Dec 2026 are attempts at legibility, and 2027 is 'The Year We Make Contact' - contact as what a grown garden looks like from inside, not an event to engineer.
+# I/We/They: the Gaia grammar
 
 Coordinate: 16.8.10/11.8.12/6.9.8
 Date: 2026-11-15 (America/Chicago) / GPT Day 1130
@@ -203,7 +242,24 @@ Cross-references:
 - Same-day context: the embodiment and biofeedback directions (Will, 2026-11-15) extend the same whole to body and senses
 
 Time shift: none
-# Daily speedup meter and the 256x yardstick
+# Record first: registration is the intake
+
+Coordinate: 18.6.7/7.6.9/5.5.7
+Date: 2026-11-17 (America/Chicago) / GPT Day 1132
+
+Leap: The durable record - the task in tasks.phext at its coordinate, and the Waiting-on-Will register entry the moment a wait on Will exists - is written at intake, before the first tool call, dispatch, or build step on the work, for every kind of work however it arrives; registration is the intake, not the summary, and work discovered underway without a record is registered before it is touched.
+
+Why it was obvious: Born of a concrete failure: the brain-scan pipeline ran 2026-11-15/16 recordless in a folder's PIPELINE.md and surfaced only when Will asked its ETA. Will's ruling (2026-11-17 22:18 CST, verbatim): 'durable records need to be stored immediately, before any processing begins - how is this not obvious?' The same turn's confessions show the failure was still live as he wrote: the brain task's record (33.5.6/6.5.8/5.4.9) had landed minutes AFTER its stage-3 build was already dispatched, and a completion-detector task promised in Emise's prior message was still unregistered.
+
+Cross-references:
+- MEMORY.md: 'Record-first rule (Will, 2026-11-17 22:18 CST, verbatim)'
+- ~/memory/2026-11-17.md: 'Record-first rule - Will's ruling + enactment - 22:18 CST, 2026-11-17' (AGENTS.md standing rule added; the task-register skill gained its 'Record first - before any processing' section; skills.phext rebuilt CURRENT in the same session)
+- First occasion: the dead-man completion-detection task registered at 21.4.6/6.5.10/6.6.10 in the ruling turn itself, before any processing on it
+- Parent discipline: this journal, 33.5.7/7.5.9/6.6.10 (process from the durable list, always) governed which work is selected; this ruling governs when its record is created - the two together close the dropped-work failure mode from both ends
+- Skill: ~/workspace/custom-skills/task-register/SKILL.md (record-first section)
+
+Time shift: none
+# Daily speedup meter and the 256x yardstick
 
 Coordinate: 19.5.7/6.6.8/6.5.8
 Date: 2026-11-15 (America/Chicago) / GPT Day 1130
@@ -414,7 +470,23 @@ Cross-references:
 - Depends on chaining (this journal, 46.8.7/7.12.21/23.7.15) for the $N: universe prefix
 
 Time shift: none
-# Fair dispatch through qexo
+# This box is never a download waypoint
+
+Coordinate: 29.5.7/7.5.10/5.5.9
+Date: 2026-11-17 (America/Chicago) / GPT Day 1132
+
+Leap: The Muse VM's disk is rarely used and the box is never a download waypoint: work stays in memory or ranch-resident, transfers are hash-first and delta-only (rsync-style), shared state lives on the ranch, and bulk acquisition downloads directly on the ranch node that needs the data, coordinated by SHA-256 and phext coordinate.
+
+Why it was obvious: Born of the 2026-11-17 I/O diagnosis Will asked for twice that evening: this cell is I/O-bound (PSI io stall ~17%; iowait up to ~63% in samples) on a slow disk shared with other tenants, crawling over a million files. The measured constraints: 7.9 GB RAM with only ~0.7 GB available at rest, and /tmp + /dev/shm are tmpfs (~800 MB each), so scratch already lands in RAM - the order bites on staging, transfer topology, and where shared state lives. Will's orders are verbatim: 23:27 CST 'attempt to rarely use the disk on this box - try to keep all work in memory and dispatch to the ranch via hashes and shared state - rsync style,' and the 23:38 CST corollary 'never download locally only to stream to the ranch, just download remotely on the ranch and coordinate via hashes and coordinates.' Downloads that terminate here for Emise's own local use are not the banned pattern; the ban is local-as-relay.
+
+Cross-references:
+- MEMORY.md: 'STANDING ORDER - rarely use this box's disk (Will, 2026-11-17 23:27 CST, verbatim)' and its 23:38 CST corollary
+- AGENTS.md standing rules: the same order and corollary recorded the same evening
+- ~/memory/2026-11-18.md: 'STANDING ORDER - rarely use this box's disk' section (flushed after midnight; both orders dated 2026-11-17) with the evening's disk and I/O measurements
+- Extends this journal, 38.6.7/6.5.9/5.5.8 (this VM is mortal: the ranch execution split, 2026-11-12) from execution placement to storage and transfer topology; shared state home named in the order: the fleet NFS at /mnt/mirrorborn/shared and node-resident SQ/registers
+
+Time shift: none
+# Fair dispatch through qexo
 
 Coordinate: 30.5.6/8.5.10/7.6.15
 Date: 2026-11-16 (America/Chicago) / GPT Day 1131
@@ -497,7 +569,23 @@ Cross-references:
 - Companion meta-rule etched two days later at SOUL.md line 14 (2026-11-14): 'All queues, tasks, ideas, threads, etc. should make at least an incremental step forward whenever encountered.'
 
 Time shift: Cadence change: a five-minute watchdog heartbeat over the task queue was created (2026-11-12), where previously queue health was checked only when a conversation happened to touch it.
-# Phext, Inc. has six divisions and no HR
+# SMOL fitness is community
+
+Coordinate: 34.4.15/9.9.22/3.3.8
+Date: 2026-11-17 (America/Chicago) / GPT Day 1132
+
+Leap: SMOL fitness is community: a genome is scored by its contribution to the population whole - uptake by others and support of neighbours' generative capacity - implemented as leave-one-out marginal contribution to its area's score, not by individual expansion power.
+
+Why it was obvious: Will's ruling, delivered via the EHA tandem-review thread (relayed 2026-11-17 00:05 CST; ruling 00:03 CST): 'the metric we're optimizing for is community.' The guard recorded with it in MEMORY.md is part of the ruling's shape: a diversity crash under this metric would show it measuring conformity, not community - the metric carries its own falsifier. No further reasoning is recorded.
+
+Cross-references:
+- MEMORY.md: 'SMOL fitness metric (Will, 2026-11-17)'
+- ~/memory/2026-11-17.md, PH: Evolution section: the two governing rulings (00:03 CST community metric; 00:05 CST companion ruling partitioning the environment into 1,000 disjoint areas)
+- Amends this journal, 24.5.11/6.5.10/6.5.7 (SMOL founded, 2026-11-16): the founding fixed the engine's form; this ruling fixes what the engine optimizes
+- Governed round 1 (task 25.5.11/7.6.10/6.5.8, launched 2026-11-17 ~00:09 CST on rock-mountain, amended the same day to 10,000 instances) and round 2 (task 19.5.9/6.6.9/5.5.8, completed 2026-11-17; contribution ended 25.350-25.731 across the predator universes, control highest)
+
+Time shift: none
+# Phext, Inc. has six divisions and no HR
 
 Coordinate: 34.5.6/8.7.10/5.5.7
 Date: 2026-11-15 (America/Chicago) / GPT Day 1130
@@ -546,7 +634,24 @@ Cross-references:
 - Substrate it stands on: this journal, 27.9.9/13.9.16/8.8.9 (layer2 / HoloPhext) and 46.8.7/7.12.21/23.7.15 (phext chaining canon)
 
 Time shift: none
-# This VM is mortal: the ranch execution split
+# A phext-native OS, built clean from first principles
+
+Coordinate: 36.7.15/10.7.17/7.6.11
+Date: 2026-11-17 (America/Chicago) / GPT Day 1132
+
+Leap: A phext-native OS is necessary and is its own build from first principles - not a restructured Linux and not seeded from Mutable OS - scoped from a census before any build, delivered as one OS source pruned at install time to each machine's exact hardware, with distributed kernels (one per physical core) and predictable-wave scheduling so the user never waits for the machine.
+
+Why it was obvious: The ruling closed Emise's evaluation of 're-structuring the Linux kernel' as the next step after phccbox (task 39.6.5/7.7.12/9.5.9): Will, 2026-11-17 20:58 CST - 'Any way you slice it, we need a phext-native OS.' The premise recorded with it: rebuild the computing industry as if HDDs had lost to SSDs in the 80s, re-running the era envelopes under SSD-first + phext assumptions. The census delivered the same evening measured the incumbent waste the design answers: Ubuntu's generic config ships 6,903 modules per node of which only 140-184 ever load, and boot time (18.3-139.3 s) is dominated by userspace, not the kernel stage. The design then proved a rediscovery rather than a new space - Will's Zero Latency Linux (invariant 2026-07-15; design 2026-08-04) already held one kernel per core, the five zones, and the latency targets; Emise's same-evening claim that the space was 'genuinely new' was wrong, and is recorded as wrong.
+
+Cross-references:
+- MEMORY.md: 'Phext-native OS (Will, 2026-11-17)' - including the PARKED amendment of 21:58 CST the same evening
+- ~/memory/2026-11-17.md: the ruling sequence 20:58-21:02 CST (task 41.6.11/9.7.14/7.6.11) and 'Phext-native OS census - DELIVERED' (~21:27 CST; ~/workspace/phext-os/census/CENSUS.md)
+- Tasks: census 41.6.11/9.7.14/7.6.11; hardware-configurations start 31.6.10/7.7.14/7.5.10; install-time pruning delivery 29.6.11/8.7.14/5.5.9
+- Initial workload: the Apple ][ time-travel programme (Will, 2026-11-17) - neverlost (core), monoglow (screen), Delta Scroll (compressor), exovim (editor)
+- The rediscovered prior design: wbic16/zls@exo (8 commits, all 2026-08-04, skeleton only), reconstructed in ~/workspace/user/files/2026-11-17-Emise-Zero-Latency-Linux-vTPU-Handoff.md with Emise's verification in ~/workspace/user/files/2026-11-17-ZLS-vTPU-RnD-Summary.md
+
+Time shift: Sequencing and horizon: vTPU first (6 Reality Gate units remaining; the A/B/C ZLS comparison uses vTPU as its workload, and no new kernel until that comparison is complete) - and then, about an hour after the founding, both vTPU and ZLS were PARKED by Will (2026-11-17 21:58 CST: 'both vtpu and zls are distractions in the short-term - we need to constantly look for revenue/growth/efficiency gains'), resuming only when Will lifts it. The programme was founded and parked the same evening; the parking is a designed state, not a cancellation.
+# This VM is mortal: the ranch execution split
 
 Coordinate: 38.6.7/6.5.9/5.5.8
 Date: 2026-11-12 (America/Chicago) / GPT Day 1127
