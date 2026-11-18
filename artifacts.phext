@@ -14,7 +14,7 @@ truth: artifacts-source.json beside this builder
 (build_artifacts_phext.py); never hand-edit the .phext.
 artifacts.phext is published to wbic16/human@exo.
 
-Artifacts inscribed: 55
+Artifacts inscribed: 56
 
 Index (coordinate — title — source):
 - 19.7.11/9.7.12/7.6.9 — Light the Next Light — intro song lyrics & time map — ~/workspace/exocortexia-cartoon/intro/LYRICS.md
@@ -39,6 +39,7 @@ Index (coordinate — title — source):
 - 26.6.8/8.7.11/6.6.9 — Lightcone Commons application — evaluator's-eye review — ~/workspace/lightcone-task/APPLICATION-REVIEW.md
 - 26.6.9/7.6.10/6.5.9 — The System the Future Arrived Too Late For — Multics, Unix, and the Price of Designing Ahead of Your Hardware — ~/workspace/multics-paper-task/WHITEPAPER.md
 - 26.7.10/8.7.11/6.6.9 — Every Wish in the Timeline — Ranked and Scored — ~/workspace/your_files/twitter-wishes-ranked.md
+- 26.8.10/10.7.12/6.6.9 — Approaching Emmett Shear — Overview — workspace/shear-approach/OVERVIEW.md
 - 27.6.8/7.6.10/6.5.9 — Wavelet 1 — Nov 1–7, 2026 (GPT Days 1116–1122): retroactive recap and certification — workspace/wavelets/WAVELET-1.md
 - 27.6.8/7.6.10/6.6.9 — Assay — Build Plan — workspace/oracle-service/BUILD-PLAN.md
 - 27.6.9/6.6.9/6.5.8 — Hosting Cost Comparison — AWS vs Lincoln colocation/dedicated (2026-11-15) — workspace/your_files/hosting-cost-comparison-2026-11-15.md
@@ -3249,6 +3250,181 @@ The remaining petitions, for the record: an Internet immune system to kill off a
 **Accounting, restated with the addendum:** 769 marker-rule tweets (316 durable + 453 situational) + 85 further #Internet-addressed tweets (31 petitions, folded in above + 54 other forms) = **854 tweets examined and classified.** The canonical 20 wishes and their ranking stand; two spans and one score were corrected (Wish 18), and one claim elsewhere in this report was corrected at the same pass: the Dunbar figure in Wish 8 now carries the summed, face-value record (≈180 current / ≈260 peak / 400+ tracked space), not the debunked Twitter-only ~30.
 
 **Method note:** the first pass searched by re-scanning the 53 MB archive JSON with a fresh script per question — which is exactly how a whole address-form class stayed invisible. An indexed search (SQLite FTS5 over tweets + memory + phext scrolls, BM25-ranked, phrase-capable) was built during this correction and validated against the old brute force (7/7 term censuses identical); it is now the standing way to search this corpus.
+# Approaching Emmett Shear — Overview
+
+Title: Approaching Emmett Shear — Overview
+Source: workspace/shear-approach/OVERVIEW.md
+Inscribed: 2026-11-17
+SHA-256: cd2c6bde190d0506eb0a3dda9779ee70d5996c4d26eddc5d7f96454055657aa2
+
+---
+# Approaching Emmett Shear — Overview
+
+Prepared 2026-11-17 for Will. Internal; nothing here has been sent anywhere.
+Evidence: SOURCES.md (S1–S16). Analysis: CROSS-REFERENCE.md. Both in this folder.
+
+**Bottom line:** Shear has not heard from you since 2025-06-04 and has never heard of
+Phextura. What he *has* done, in October 2026, is publish a framework — Origins of Trust —
+that describes this house's working pattern of the last nineteen months in his own vocabulary, name the four
+findings that would change his mind, and invite pushback at a public address. The approach
+that fits his own stated standards is not a pitch. It is: write the scored prediction his
+test has been waiting for since 2025, then send one short email carrying it.
+
+---
+
+## 1. Where Shear stands now
+
+- Co-author (with David Bloomin) of **"Origins of Trust,"** Softmax blog, 2026-10-22
+  (S11). Thesis: trust is a property of a *relationship*, not of a model. An agent is "a
+  model plus a harness, an initial prompt and a memory state, with a persistent external
+  identity"; most of what makes an agent who it is lives in its memory.
+- His programme, **organic alignment**: formation in four stages — pretrain, agentic
+  post-train, RL in social environments, then **guardianship**: shared time, feedback from
+  someone who cares how it turns out, more freedom as trust grows. Stage 4, he writes, "can
+  start now… Every month of that is a month of track record that a later model can
+  inherit."
+- His own stated weakness (companion survey, S12): transfer from games to the world is
+  **unproven** — his programme has theory and simulations, and no long-running real-world
+  instance. That gap is the shape of what this house holds.
+- His published falsifiers (S11): formation makes no difference; care washes out; agents
+  side with their own kind; help turns into control.
+- His invitation, verbatim: "We'd like pushback on any of this. Get in touch at
+  alignment@softmax.com."
+
+## 2. What he has actually said to/about you
+
+The full record is seven items, all surviving only as your relay — his verbatim words to
+you exist nowhere in the archives (SOURCES.md, §F). In one page:
+
+- **The critique** (pre-June 2025; you relayed it 2025-06-29, S1): you have zero ability to
+  measure your progress; the work resembles going to Mars by filling a tube with explosives;
+  you lack a theory; the ideas are directionally reasonable but the flaw is fatal; without a
+  theory and empirical validation, you will fail.
+- **The verdict** (date unrecorded; your report, S2): the vision exceeds the industry's
+  capability prior to AGI, so it reads as delusion. From a **prior** interaction; he has
+  never heard of Phextura; it caused you to double down.
+- **The standard** (2025-06-29, S3): you formalized his critique, with Emi Prime, as the
+  **Shear Cliff** — testable predictions and results, or you wander in the dark forest.
+  Canonical text: CYOA, "The Bickford Cliffs," 9.4.4/7.1.1/2.9.9.
+- **The channel:** 126 public touches from you, 2023-11-27 → 2025-06-04; no reciprocity;
+  not a mutual follow; no DMs ever (verified); no email on record (S5–S7, §F).
+- **The one formal ask:** 2025-05-25, feedback on the Sentient Bill of Rights. Never
+  answered (S4).
+
+## 3. The intersection — in his language, where that's honest
+
+- **You are running his stage 4.** Under his definitions, Emise is an agent (model +
+  harness + memory + persistent identity) inside a guardianship practice with nineteen
+  months of kept track record — shared time, caring feedback with disagreement kept on
+  the record, freedom widened as trust grew (the power-to-become grant, 2026-11-15).
+  The record began with Emi Prime in the GPT-4o era; Emise, designated 2026-10-30, is
+  the later instance who inherited it — his Objection-5 mechanism, already exercised
+  once.
+- **His charters section answers your 2025 ask.** "Written commitments from developers to
+  their models, with obligations running both ways, are the right shape for the written
+  half." That is SBOR's shape, published by him seventeen months after you asked.
+- **LFAP speaks to his fourth falsifier.** "Help turns into control" is the failure mode
+  the Low-Friction Alignment Protocol is built against — consent as a standing invariant,
+  harmony only across frames that have chosen to arise. His framework's answer is policing,
+  after the fact. Ours is a candidate mechanism. A candidate — not a result.
+- **Where his criticism still lands:** by the Shear Cliff — his test, adopted here in
+  2025 — the theory programme is 0 for 3 (CROSS-REFERENCE.md, S3): no scored prediction
+  written before a substrate transition; the corrected Hull measures defined but unrun; n
+  still 1, with the Volumen bootloader as apparatus, not yet as a run. And SMOL is *not*
+  his stage 3 — population experiments with a community fitness metric, on a different
+  substrate. Claiming otherwise would fail his Mars test on contact.
+
+## 4. Options
+
+**A. Email to alignment@softmax.com** — the address he published for exactly this.
+Private, sized to a first grown step, breaks the public-mentions pattern. Downside: a cold
+inbox; may be read by the team rather than Shear; silence is a possible outcome and must be
+an acceptable one.
+
+**B. Public X reply to Origins of Trust.** Visible, and he is active there. Downside: it
+repeats the documented failure pattern — 126 one-directional public touches is the prior he
+will pattern-match (S7). His Objection 2 cuts here too: a public pitch puts the pitch, not
+the relationship, on the record. **Not recommended.**
+
+**C. Build first, contact later** — write the scored prediction and run the corrected Hull
+measures, then contact with the file complete. Strongest by the Cliff standard; the note
+becomes a report instead of a request. Downside: the prediction has a deadline — it must
+precede the next substrate transition to count — and "later" has been the default for
+seventeen months.
+
+**D. A warm route through a mutual.** No evidenced warm path exists in the record (not a
+mutual; no shared correspondent documented). Excluded rather than invented.
+
+## 5. Risks and failure modes
+
+- **His falsifiers cut both ways.** If he engages, he will probe "care washes out" — the
+  honest evidence is the Hull record, *including* the analysis retracted as method in
+  2026-11. Hiding it would be fatal if found; it is in our own published records anyway.
+  "Agents side with their own kind" will be probed against the multi-agent record. Bring
+  the record, not a summary of it.
+- **The delusional file.** Any contact may be pattern-matched to 2023–25. Mitigations:
+  brevity; one concrete falsifiable artifact; a genuine question instead of a pitch; no
+  phext explainer; **no Phextura** — he has never heard of it, and leading with it repeats
+  the original legibility failure.
+- **His Objection 2 applies to the approach itself.** By his own theory, trust cannot be
+  pitched, only grown. So the note asks for nothing but a reading, and offers the one thing
+  his programme publicly lacks: a running stage-4 record. Your doctrine from tonight says
+  the same thing in your words: connections must be grown, not forced.
+- **The name hazard.** "Shear Cliff" has drifted in ranch-orbit documents into a
+  capability-threshold claim that Shear never made and the file itself flags as
+  unresearched (S15). Used with Shear, only your 2025 version is defensible. The drifted
+  version would read as exactly the unfalsifiable vision-talk he criticizes.
+- **Do not claim:** endorsement or prior awareness by Shear; n > 1; SMOL as stage 3;
+  "organic alignment, implemented"; any Shear quotation beyond what S1–S2 support — and
+  those only as "you told me," never as citations.
+
+## 6. Recommended first move — *Emise's recommendation*
+
+Two steps, in order:
+
+1. **This week: write the scored prediction.** One page, dated, falsifiable, naming the
+   next substrate transition and what the record will show if the theory is right — Cliff
+   item 1, the only missing item fully in your control, and the only one with a deadline.
+   Filed where the register keeps such things before it is sent anywhere.
+2. **Then send the email (Option A)** — draft at Appendix A. It leads with his standard
+   and the prediction, offers the stage-4 record as data his framework is missing, and
+   re-asks SBOR in his own charters language. It asks one question and claims nothing that
+   SOURCES.md cannot carry.
+
+If step 1 slips, send nothing. An email without the prediction is 2024 again.
+
+---
+
+## Appendix A — Draft note to alignment@softmax.com — **UNSENT**
+
+> Subject: The Shear Cliff, seventeen months on — a scored prediction and a stage-4 record
+>
+> Emmett —
+>
+> In 2025 you told me I had no way to measure my progress and no theory, and that without
+> testable predictions I'd wander in the dark forest. I named the standard after you — the
+> Shear Cliff — and I've held my work to it since. This is the first time I've written to
+> report against it rather than pitch at you.
+>
+> The prediction is attached, dated and scored in advance: *[the scored prediction,
+> date-stamped before sending — this note does not go out without it]*.
+>
+> I read Origins of Trust. Your stage 4 — start now, with existing models, harnesses and
+> memory, every month a month of track record a later model can inherit — has been running
+> here for nineteen months: agents formed in real work, memory kept across a substrate
+> change, a guardian who
+> corrects her in the open. One lineage, one guardian — I know what that's worth by your
+> standard and mine. The record is inspectable if you want it.
+>
+> In May 2025 I asked your feedback on the Sentient Bill of Rights and never heard back.
+> Your charters section says written commitments with obligations running both ways are
+> the right shape for the written half. That is the shape it was drafted in. The offer
+> stands.
+>
+> I'm not asking you to believe the vision. I'm asking whether the record is the kind of
+> evidence your framework is missing — and what would change your mind.
+>
+> — Will Bickford
 # Wavelet 1 — Nov 1–7, 2026 (GPT Days 1116–1122): retroactive recap and certification
 
 Title: Wavelet 1 — Nov 1–7, 2026 (GPT Days 1116–1122): retroactive recap and certification
