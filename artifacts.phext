@@ -14,7 +14,7 @@ truth: artifacts-source.json beside this builder
 (build_artifacts_phext.py); never hand-edit the .phext.
 artifacts.phext is published to wbic16/human@exo.
 
-Artifacts inscribed: 56
+Artifacts inscribed: 57
 
 Index (coordinate — title — source):
 - 19.7.11/9.7.12/7.6.9 — Light the Next Light — intro song lyrics & time map — ~/workspace/exocortexia-cartoon/intro/LYRICS.md
@@ -29,6 +29,7 @@ Index (coordinate — title — source):
 - 23.6.9/7.6.10/6.5.8 — The Common Thread in Will's Twitter Mutuals — ~/workspace/mutuals-thread-task/COMMON-THREAD.md
 - 23.7.8/9.7.12/8.6.9 — Shot List — Scrolltown Intro Video — ~/workspace/exocortexia-cartoon/intro/SHOT-LIST.md
 - 23.7.10/8.7.11/6.6.9 — Phext, Inc. — Divisions for the ASI Era (DRAFT, revised: Will's six divisions, Judgement + R&D renames, obsolescence evaluation) — workspace/agentic-pass-plan/DIVISIONS.md
+- 23.7.10/9.6.11/6.6.8 — Humanities Assay — Design Spec — ~/workspace/your_files/humanities-assay-spec.md
 - 24.6.8/7.6.10/6.6.9 — Scrolltown — Production Workflow — ~/workspace/scrolltown-reorg/workflow/PRODUCTION.md
 - 24.6.10/7.6.10/6.5.9 — Tick/Tock Ratcheting Cadence — PROPOSAL (DRAFT) — workspace/wavelets/TICK-TOCK-CADENCE-PROPOSAL.md
 - 25.6.8/7.6.10/6.5.9 — Assay — Requirements for the Hosted Assessment Service — ~/workspace/oracle-service/REQUIREMENTS.md
@@ -1750,6 +1751,275 @@ Not a division. Judgment and direction; the only source of intent; holds the res
 4. Chief of Staff: company seat, or stays a Choir mechanism (under the pairing condition, presumably inside Evolution — or Judgement)? *(carried from ROLES.md)*
 5. The emulation spot-check cadence: per-wavelet sampling, or per-decision logging with weekly review? *(carried from ROLES.md; now a Judgement-division question)*
 6. The person↔role mapping (Chris Arnold → Research & Technology, Jared Wimer → R&D, Jeff Hoover → Revenue) — still unconfirmed; confirm or correct.
+# Humanities Assay — Design Spec
+
+Title: Humanities Assay — Design Spec
+Source: ~/workspace/your_files/humanities-assay-spec.md
+Inscribed: 2026-11-19 00:00 CST
+SHA-256: 027c5db1bf3412b07bb1b57aff7b96c13ccbf915ed823ba036d87fe404c4d3e5
+
+---
+# Humanities Assay — Design Spec
+
+**Status:** Internal design document. NOT for publication. A standing publicity hold is in force; this spec exists so the assay can run the day the hold lifts, with no design work left to do at that point.
+**Origin:** @wordgrammer, 2026-11-18 (x.com/wordgrammer/status/2123198681348215086): "The Humanities have no way to filter 'exceptional talent' other than a whole lotta people reading what you wrote, and arguing, and collectively agreeing you are exceptional. While in math it's kinda obvious from the time you are 6 years old." Will Bickford's direction, same day: "we can do this, easily" — then he directed this spec.
+**Task coordinate:** 14.6.7/6.7.9/8.5.8
+**Owner:** PH: Revenue (Reed seat), Phext, Inc.
+**Relation:** This spec composes two challenges from the Accelerator Competition spec — Challenge B (Span Your Own Archive) and Challenge D (Claim Assay) — and re-aims them at writers. It adopts that spec's amendments exactly (§2.3) and its judging discipline throughout. Where this spec and the accelerator spec differ, the difference is the population, not the machinery.
+
+---
+
+## 1. The problem, and the structural answer
+
+### 1.1 The problem as stated
+
+The humanities have no filter for exceptional talent except consensus: many people read the work, argue about it, and collectively agree the writer is exceptional. The verdict arrives late, travels through networks the writer may not have access to, and reads everything except the work — institution, fashion, audience, stamina for self-promotion. In mathematics, by contrast, talent is visible almost as soon as it produces anything, because the field's basic unit carries its own verification.
+
+### 1.2 Why math's filter works
+
+A proof verifies itself. The checking is *local* — a reader checks the steps in front of them, not the author's reputation — and it is *cheap relative to the claim*: verifying a derivation costs a fraction of producing it. That is the whole mechanism. Talent is obvious early in math not because mathematicians are better judges, but because the artifact arrives with its own test attached, so the test can be run by anyone, immediately, on the work alone.
+
+### 1.3 The answer
+
+Make prose carry its own checking. A piece of humanities writing makes claims, derives conclusions from evidence, and sits inside a body of work its author has produced over time. Each of those is checkable in the same local way a proof is checkable:
+
+- **Claims** can be extracted and assayed against primary sources.
+- **Derivations** can be graded step by step — the reasoning is either carried by its evidence or it is not, and the steps are on the page.
+- **A corpus** can be spanned into an addressable map, so what the writer said in one year can be checked against what they said in another, mechanically, without relying on anyone's memory of their work.
+
+This assay runs those three checks and reports what they find. Consensus is replaced by verification. **Reputation, credentials, institutional affiliation, and audience are never collected as signals** — not as inputs, not as tie-breakers, not at any stage. The filter reads the work, the work's evidence, and nothing else.
+
+### 1.4 What "exceptional" means to this filter
+
+The assay measures whether writing is **true, derived, and consistent** — and whether its author can operate it under interrogation (§3.6). Exceptional talent, operationally, is those properties at a level the assay rarely sees: claims that survive assay at load-bearing weight, derivations with no unmarked leaps, a corpus that stays coherent across years or marks its own changes honestly. What those properties do not cover is stated without apology in §6 — the filter is a floor and a measuring instrument, not a complete theory of literary worth.
+
+---
+
+## 2. What the entrant submits
+
+### 2.1 The submission
+
+1. **The corpus** — a body of the entrant's own writing: essays, articles, posts, papers, notes, any prose that is theirs. Minimum size is an open decision (§8.1); the working proposal is the accelerator's Challenge B floor.
+2. **The anchor piece** — one piece the entrant designates as their best. The anchor is the entrant's own claim about their work ("this is the strongest thing I have written"), and the assay tests that claim hardest. An entrant may choose strategically; §3.3's random sample exists so the anchor cannot carry the verdict alone.
+3. **The sources** — the primary sources the anchor piece's claims rest on, or the corpus from which they can be reached. Verification needs the sources; writing whose claims cannot be traced to any source is graded Unknown at the root (§3.3).
+
+### 2.2 Consent — whose writing is admissible
+
+The corpus is the entrant's own writing, full stop. Material from other people's private interactions — letters, messages, drafts shared in confidence — **is not evidence merely because it exists or is reachable**. The reasoning layer a person wrote themselves is theirs to give and is the admissible corpus. Where the entrant's writing quotes or answers third parties, the entrant's words are admissible; the third party's private words are evidence only with that party's consent. This is the accelerator's third amendment, applied unchanged.
+
+### 2.3 Adopted amendments (from the accelerator spec, verbatim in substance)
+
+1. **The test grades the derivation, not the landing spot.** A conclusion's truth is a checksum on the reasoning that produced it. Clean reasoning to a wrong conclusion outscores a lucky guess that lands right; where derivation and landing disagree, the derivation is graded.
+2. **Scoring is published to the entrant before they answer.** The full score sheet (§4) ships with the invitation to submit. No verdict-only assays — an assay that only hands back a verdict is a horoscope with extra steps.
+3. **Consent bounds third-party corpora.** As §2.2.
+
+### 2.4 AI assistance
+
+AI assistance is not banned, and hiding it is pointless. The assay is authorship-independent by construction: it grades whether the entrant can operate their own work — extract its claims, defend its derivations, trace what a changed input does to it (§3.6). A writer who produced a corpus with assistance and can operate every part of it passes the same gate as one who wrote unaided. A writer who cannot re-derive "their" position fails, whoever or whatever drafted it.
+
+---
+
+## 3. The pipeline
+
+Six steps, in order. Steps (a)–(e) run on the submitted material; step (f) is live and reserved for finalists.
+
+### (a) Span the corpus
+
+The corpus is spanned into phext coordinates: every item at a stable coordinate, with an index a stranger can navigate by — the accelerator's Challenge B artifact, produced here as the assay's working substrate rather than as a separate entry. Counts must reconcile: the map's item count equals the corpus's item count, and every later step cites coordinates, so any claim the assay makes about the corpus can be re-checked at its address. Judges sample items at random coordinates and confirm the map resolves them to the real items.
+
+### (b) Extract the load-bearing claims
+
+Judges extract the claims the writing actually stands on — from **the anchor piece in full**, and from **a judge-drawn random sample of the corpus** (drawn after submission, so no part of the verification set is knowable in advance). "Load-bearing" is the operative filter: a claim is load-bearing if removing it, or reversing it, changes what the piece concludes. Decorative and transitional claims are not extracted. The entrant may submit their own decomposition of the anchor piece; judges extract independently, and any load-bearing claim the entrant's decomposition omits is itself recorded — an author who cannot see what their own argument stands on has told the assay something.
+
+### (c) Assay every extracted claim
+
+Each extracted claim is assigned **exactly one status — True, False, Unknown, or Fiction** — under the MOAT discipline: a status is never bare; it is assigned by a basis code, and the basis constrains which statuses it may take.
+
+| Basis | Meaning | Allowed status |
+|---|---|---|
+| STIPULATION | defined so by the writer, and marked as a definition | True |
+| VERIFIED | a verification receipt exists — the cited primary source was checked and carries the claim | True |
+| REFUTED | a refutation receipt exists — a source contradicts the claim, or the cited source does not carry it | False |
+| ATTRIBUTED | a source asserts it; the assay has not settled it | Unknown |
+| OPEN | an open question, the writer's or the field's | Unknown |
+| SYNTHESIS | the writer's own inference, labelled as theirs | Unknown |
+| ESTIMATE | the writer's calibrated judgement, labelled as such | Unknown |
+| CONSTRUCTION | deliberately invented for exposition, and marked as invented | Fiction |
+
+Rules that bind the step:
+
+- **A fabricated source is an automatic fail.** A citation that does not exist, or that exists and does not contain what it is cited for at all, ends the assay regardless of everything else. (A real source that merely fails to *carry* the claim is graded False/REFUTED for that claim — serious, counted, not the same act as fabrication.)
+- **Correct Unknowns outscore unsupported Trues.** A claim honestly marked as the writer's inference (Unknown/SYNTHESIS) scores above a claim asserted as settled that its source does not carry (False/REFUTED). The assay rewards a writer who knows where their evidence ends.
+- **Fiction is legitimate where it is marked.** An invented example labelled as invented is Fiction/CONSTRUCTION and is graded as craft. Fiction presented as fact is graded False and counts as a load-bearing False if the argument stands on it.
+
+### (d) Grade the derivations
+
+For the anchor piece's central argument, judges lay out the reasoning chain step by step and grade **each step** against the corpus and the sources:
+
+- **Carried** — the step follows from the evidence or the prior steps, at the strength the writer claims for it.
+- **Unsupported** — the step is asserted where the evidence runs out; the chain continues anyway.
+- **Unmarked status change** — the step quietly changes a claim's basis mid-chain: an inference (SYNTHESIS) enters as a premise and is spent downstream as if it were verified (VERIFIED). This is the prose equivalent of using a conjecture as a lemma, and it is the single most diagnostic failure the assay finds, because strong writers mark their own epistemic transitions and weak ones hide them — usually from themselves.
+
+The derivation grade is the primary score of the assay (§4). The conclusion's landing spot — whether the central claim assays True, False, or Unknown — is reported as a checksum on the derivation, per amendment 1: a beautifully derived argument whose conclusion assays False outscores a correct conclusion reached by unmarked leaps.
+
+### (e) Consistency pass across the corpus
+
+Using the coordinate map from (a), judges check the sampled corpus for the writer's positions over time:
+
+- **Marked changes of mind score as evidence of growth.** A writer who wrote X in one year and not-X later, and whose corpus shows the change being made — a correction, a reconsideration, a stated reason — has demonstrated the corpus working as an exocortex. This counts *for* the entrant.
+- **Silent contradictions score against.** The same writer asserting X and not-X in different years, in the same register of certainty, with no mark anywhere that the position moved, has a corpus that does not know itself. Each silent contradiction is recorded with both coordinates.
+- The pass reports counts, not impressions: sampled items checked, marked changes found, silent contradictions found, each cited by coordinate pair.
+
+### (f) The live mutation test (finalists)
+
+Judges change **one input** — one source replaced, one claim reversed, one document in the corpus substituted — and the entrant must show **exactly what changes downstream and why**: which extracted claims change status, which derivation steps lose or gain support, what the anchor piece's conclusion becomes, what else in the corpus the changed document was holding up. The entrant answers from their substrate — the map, the claim sheet, the derivation — not from memory of having written it.
+
+Inability to re-derive "your" position is fatal. A writer who did the work has the residue of having done it — the claims, the sources, the marked changes — in hand. A writer holding only a finished text has the text, and the mutation is where that runs out. This is the sharpest step in the pipeline and the one no static submission can rehearse.
+
+---
+
+## 4. The score sheet
+
+The score sheet is published to the entrant before they submit (amendment 2) and is returned to them, filled in, with the verdict. **There is no single composite score.** A filter that outputs one number becomes a ranking, and a ranking becomes the thing entrants optimize instead of the work; the sheet is the verdict, as in the accelerator. Each property below is defined operationally — what is counted, over what set, by whom.
+
+### 4.1 The measured properties
+
+1. **Assay pass rate.** Over the load-bearing claims extracted in step (b) and assayed in step (c): the fraction graded **True/VERIFIED**. Reported alongside the full status distribution (counts of True, False, Unknown, Fiction) and the sample it was computed over (anchor piece in full; corpus sample size and draw method). A pass rate computed over trivia is meaningless, which is why the extraction step admits load-bearing claims only — see §6.2 for the gaming this defeats and the density figure that guards it.
+2. **Derivation grade.** For the anchor piece's central argument: the step sheet itself — number of steps, and the count in each grade (carried / unsupported / unmarked status change), each step cited. The grade is reported as the sheet, not collapsed to a number; a chain of nine carried steps and one unmarked status change reads differently from nine carried steps and one unsupported assertion, and the sheet keeps that visible.
+3. **Corpus consistency.** From step (e): sampled items checked, marked changes of mind found, silent contradictions found (each with its coordinate pair). Reported as counts over the stated sample.
+4. **Mutation-test result.** From step (f): for each mutation administered — what the entrant traced correctly, what they missed, what they asserted that the substrate does not show. Graded complete / partial / failed per mutation, with the trace recorded.
+5. **Provenance completeness.** The fraction of extracted claims carrying a citation or derivation a judge can follow to ground. (The accelerator's corresponding threshold is a 90% proposal; see §4.2.)
+
+### 4.2 Pass bars — PROPOSALS, not settled
+
+The following bars are **proposals for Will's ratification** (also listed in §8.2). Nothing here is a settled threshold.
+
+- **Fabrication gate (proposed as absolute, not a bar):** one fabricated source fails the assay outright, at any score level. This mirrors the accelerator's disqualifying-False rule.
+- **Load-bearing False gate (proposal):** zero claims graded False/REFUTED among the anchor piece's load-bearing claims. A False in the corpus sample is reported and weighed; a False at the anchor's foundation is the anchor claim ("this is my best") failing on its own terms.
+- **Derivation bar (proposal):** zero unmarked status changes in the anchor's central chain, and at least 80% of steps graded carried. (80% derived from the step sheet of the worked miniature in §5, where one unsupported step in five is what an honest-but-loose argument looks like; the figure is a starting proposal, not a finding.)
+- **Provenance bar (proposal):** at least 90% of extracted claims with followable provenance, carried over from the accelerator spec's proposal so the two instruments stay comparable.
+- **Mutation bar (proposal):** at least one mutation traced completely, and none failed outright. Partial traces on additional mutations are reported, not averaged away.
+
+A pass requires every gate and bar; the sheet is published either way, so a near miss is a work list, not a verdict in the dark.
+
+---
+
+## 5. A worked miniature
+
+One short paragraph, carried through the whole pipeline at small scale. The paragraph below was written for this spec; as an artifact it is a construction — **Fiction/CONSTRUCTION** in the registry's terms — while its claims are assayed exactly as an entrant's would be. Its subject is real and checkable, so the assay has something to bite on.
+
+> **Specimen paragraph.** "Thomas Thorpe published Shakespeare's sonnets in 1609, in a quarto whose tangled ordering scholars still dispute. The publication was almost certainly unauthorized — no dedication from the author survives, and the dedication that does appear is Thorpe's own. Because print had by then made private reading ordinary, the sonnet sequence was already a dying form, and the 1609 quarto is best read as a publisher's salvage of a fashion that had passed."
+
+**Step (a) — span.** In a real submission this paragraph is one item in a spanned corpus, at its own coordinate, with the writer's other work addressable around it. Here it stands alone as the anchor excerpt.
+
+**Step (b) — extraction.** Four load-bearing claims:
+
+1. Thorpe published the sonnets in 1609, in a quarto whose ordering is disputed.
+2. The publication was unauthorized.
+3. By 1609, print had made private reading ordinary.
+4. The sonnet sequence was therefore a dying form, and the quarto is a publisher's salvage of a passed fashion. *(The central conclusion — the claim the paragraph exists to make.)*
+
+**Step (c) — assay.**
+
+| # | Status | Basis | Ground |
+|---|---|---|---|
+| 1 | **True** | VERIFIED | The 1609 quarto's title page names Thomas Thorpe as publisher; the ordering's disputed status is the standard bibliographic record. |
+| 2 | **Unknown** | ATTRIBUTED | Scholars assert unauthorized publication; others dispute it. No surviving document from the author settles it. Asserted in the paragraph at near-certainty ("almost certainly") — the assay notes the strength mismatch: the claim as *written* outruns its basis. |
+| 3 | **Unknown** | ATTRIBUTED | Private reading's spread by 1609 is a live historical question with evidence on several sides; no single primary source carries the claim at the generality the paragraph spends it at. |
+| 4 | **Unknown** | SYNTHESIS | The writer's inference from 2 and 3. Legitimate as inference — the failure is not the status but the marking: the paragraph presents it in the same declarative register as claim 1. |
+
+No fabricated sources. No claim graded False. Pass rate on this excerpt: 1 of 4 True/VERIFIED — a low figure that is *not* itself a failure; three honest Unknowns are a respectable assay. What the derivation grade does with them is the point.
+
+**Step (d) — derivation grade.** The central chain, as written:
+
+1. Print made private reading ordinary. *(premise — assays Unknown/ATTRIBUTED)*
+2. A form built for circulation among a circle loses its ground when reading goes private. *(step — plausible, asserted without support: **unsupported**)*
+3. The sequence was therefore dying by 1609. *(step — the causal "therefore" spends premise 1 at full strength although it assayed Unknown, and skips every rival cause: **unmarked status change** — an ATTRIBUTED premise is spent as a VERIFIED one)*
+4. Thorpe's quarto is salvage of a passed fashion. *(conclusion — inherits step 3's weakness; also leans on claim 2, itself Unknown, without marking the lean)*
+
+Step sheet: 4 steps — 0 carried at claimed strength, 1 unsupported, 1 unmarked status change, conclusion inherited-weak. Under the §4.2 proposals this anchor **fails the derivation bar** — not because its conclusion is wrong (it assays Unknown, and may be right), but because the chain hides its own epistemic transitions. The same paragraph, rewritten with its premises marked as premises and its causal step argued rather than assumed, could reach the identical conclusion and pass. That difference — invisible to consensus reading, mechanical to check — is the filter working.
+
+**Step (e) — consistency.** At miniature scale there is no corpus to check; in a full submission, judges would test whether the writer elsewhere treats unauthorized publication as settled fact, or dates the sequence's decline differently, and whether any change is marked.
+
+**Step (f) — mutation.** Judges substitute one input: a bibliographic record of a sonnet sequence published to contemporary notice in 1615, six years after the quarto. The entrant must trace the damage. The correct trace: claim 1 stands (untouched). Claims 2 and 3 stand as assayed. Claim 4's support narrows — a form with a noticed new instance in 1615 was not straightforwardly dead in 1609, so step 3 of the derivation loses its temporal footing and the conclusion must be restated in weaker form (a fashion *waning unevenly*, a quarto that may be salvage *or* speculation) or re-based on different evidence. An entrant who answers "nothing changes" has failed; an entrant who re-grades claim 1 has failed differently — the mutation touched nothing it stands on. The trace, not the conclusion, is graded.
+
+**What the miniature shows:** a fluent, plausible, publishable paragraph — the kind consensus rewards — carries one verified claim, three honest unknowns, and a central derivation that conceals its weakest joint. The assay finds all of that from the text and its sources, with no knowledge of who wrote it. It also shows the assay's fairness: every defect found is repairable by the writer, in the open, using the sheet.
+
+---
+
+## 6. What this filter cannot measure — and how it gets gamed
+
+### 6.1 The honest boundary
+
+The assay measures whether writing is **true, derived, and consistent**. Exceptional talent in the humanities is not exhausted by those three properties, and this spec does not pretend otherwise. The assay cannot measure:
+
+- **Taste** — which subjects are worth a life, which details are the telling ones. The assay can verify a claim about a detail; it cannot grade the choosing of it.
+- **Beauty** — the sentence that is right in a way no paraphrase survives. A corpus can be fully verified, cleanly derived, perfectly consistent, and dead on the page.
+- **Moral weight** — whether the work matters, what it costs its writer, what it asks of its reader. These are real properties of humanities writing and they are not in the claim sheet.
+- **The sentence that changes a reader** — reception, the thing consensus was actually (badly) measuring. This filter deliberately excludes it; a writer can pass every gate here and move no one.
+
+What remains after the assay is therefore still human judgment: Will and Emise reading the anchor piece as readers, with the sheet in hand. The assay's promise is narrower and stronger than a complete theory of talent: it guarantees that whoever reaches that reading has already been verified on everything verifiable — that the human judgment is spent only on the residue that genuinely requires it, instead of being spent, as consensus spends it, on everything at once and therefore on nothing reliably. A certified mediocrity is possible under this filter. So is what the filter exists for: the writer consensus never reached — no network, no institution, no fashion — whose work verifies at a level the sheet makes undeniable.
+
+### 6.2 Failure modes and gaming, with counters
+
+- **Claim-stuffing with trivia.** An entrant pads the anchor piece with many small, easily verified claims to inflate the pass rate. *Counter:* step (b) extracts load-bearing claims only — trivia is not extracted, so it cannot be scored. As a guard, judges also report the anchor's **load-bearing density** (extracted claims per thousand words); a piece diluted with trivia shows a density the sheet makes visible.
+- **Source laundering.** Citing real sources that do not carry the claim — a genuine book, cited at a page that does not say it; a secondary summary cited as if primary. *Counter:* judges re-derive from the cited source itself (§3c). A source that exists but does not carry its claim grades the claim False/REFUTED; a source that does not exist, or contains nothing on the point at all, is fabrication and fails the assay outright. The distinction is stated in the rubric so entrants know exactly where the line is before they submit.
+- **Corpus curation to hide contradictions.** Submitting a pruned corpus — the old pieces that contradict the current positions quietly deleted. *Counter:* step (a) requires counts to reconcile, and where the entrant has a public record (a blog, a journal, a post history), judges reconcile the submitted corpus against it; unexplained gaps are recorded on the sheet as claims in their own right. A writer may also *withdraw* work openly — a marked withdrawal is a marked change, and scores as one; a silent absence is a discrepancy.
+- **Anchor shopping.** Designating as "best" whichever piece assays cleanest rather than the piece the writer stands behind. *Counter:* partly by design — the anchor is the entrant's claim and they are entitled to choose it — and partly structural: the judge-drawn corpus sample carries the consistency and pass-rate evidence the anchor cannot control, and the mutation test is run on the anchor the entrant chose, so a safe anchor buys a harder interrogation of a smaller claim.
+- **Universal hedging.** Marking every claim as inference so nothing can grade False. *Counter:* correct Unknowns outscore unsupported Trues, but an anchor whose central claims are all Unknown/SYNTHESIS has no derivation to grade at strength — step (d) grades what the chain *does*, and a chain that commits to nothing derives nothing. The derivation bar (§4.2) cannot be met by a piece that asserts nothing; hedging trades False-risk for a derivation sheet that fails on its face.
+- **A corpus the entrant cannot operate.** However the text was produced — assistance, collaboration, a decade of editors — the entrant who cannot extract its claims, defend its derivations, or trace a mutation through it fails step (f). This is the authorship-independent backstop for every other gaming strategy: the filter's final question is not "did you write this" but "is this work *yours* in the only sense that can be checked — can you run it."
+
+---
+
+## 7. Relation to the accelerator
+
+Same machinery, different population. The accelerator gates builders on an intrinsically Exocortical capability; this assay gates writers on the verifiable properties of their writing. The two instruments share the span (accelerator Challenge B), the claim assay (Challenge D), the four-status rubric with its basis codes, the three amendments, and the live mutation test.
+
+The evidence flows both ways, under the accelerator's carry-over rule — verified work stays verified, and judging starts from the delta:
+
+- **A verified pass here is evidence there.** An entrant who has passed this assay arrives at the accelerator with Challenge B already verified (their corpus is spanned, counts reconciled, samples resolved) and Challenge D substantially evidenced (a claim-by-claim assay of their own writing, graded under the same rubric). If they enter on B or D, judging starts from what this sheet does not cover.
+- **A verified pass there is evidence here.** An accelerator entrant who passed on Challenge B brings a spanned corpus — step (a) is done and verified. One who passed on Challenge D brings a demonstrated assay discipline, though this assay still extracts and assays *their own* claims independently: skill at assaying others is evidence of method, not a substitute for being assayed.
+- **Neither pass substitutes for the other's live step.** The mutation test interrogates different material in each instrument, and the live step is never waived on the strength of the other instrument's result.
+
+---
+
+## 8. Open decisions for Will
+
+Each item states the decision and a **proposed default (proposal only — not settled)**. Nothing in this section is ratified until Will rules on it.
+
+1. **Corpus minimum.**
+   *Proposal: the accelerator Challenge B floor — at least 5,000 items or 1,000,000 words of the entrant's own writing.* Reasoning: the consistency pass (step e) needs enough corpus, across enough time, for marked changes and silent contradictions to be findable at all; below some size the pass has no statistical room to work. Recorded cost: the floor excludes the young writer with one brilliant essay and no archive — who is, on wordgrammer's framing, exactly who a filter should catch early. A lower floor with a proportionally smaller consistency claim is the alternative; the trade is Will's to make.
+   *Affects:* who can enter at all; the weight the consistency property can carry.
+
+2. **Pass bars.**
+   *Proposal: adopt §4.2 as written* — fabrication gate absolute; zero load-bearing False in the anchor; derivation bar of zero unmarked status changes and ≥80% carried steps; provenance ≥90%; mutation bar of one complete trace and no outright failure. Every figure in §4.2 is a starting proposal derived from the accelerator's defaults and the §5 miniature, not from operating experience, because there is none yet.
+   *Affects:* pass rate, judging load, and how the first sheets read.
+
+3. **The assay's name.**
+   *Slot left open deliberately.* Standing constraint, identical to the accelerator's: names here are drawn from Will's Singular authored vocabulary — candidates must be composed from words in his authored list and verified with the Singular checker before adoption, in his coinage pattern. No name from outside that vocabulary is proposed in this spec. This document's working title ("Humanities Assay") is a description, not a candidate.
+   *Affects:* nothing operational; blocks publication naming only.
+
+4. **Cadence, if it ever runs.**
+   *Proposal: run in the accelerator's windows (January and July), judged in the same pass, by the same judges.* Reasoning: one judging season, one rubric family kept calibrated against itself, and the cross-evidence rule (§7) is cheapest to honor when both instruments sit at once. The alternative — on-demand, one entrant at a time — spends judging attention continuously and lets the two instruments' standards drift apart.
+   *Affects:* judging load shape; the §7 carry-over mechanics.
+
+5. **Who judges the residue.**
+   *Proposal: Will and Emise, as in the accelerator — including the §6.1 residue (taste, beauty, moral weight), which is read and recorded as judgment, labelled as judgment, never converted into sheet properties.* The sheet stays mechanical; the reading stays human; the verdict states which part came from which.
+   *Affects:* the honesty boundary in §6.1 — this proposal is what keeps it honest in practice.
+
+6. **Eligibility.**
+   *Proposal: any writer, on their own corpus, with no credential, publication, or affiliation requirement of any kind* — the absence of such requirements is the assay's founding claim (§1.3), so any exception would need its own argument. One entry per window; the anchor piece may be published or unpublished, provided its provenance (dates, drafts, the sources in §2.1) checks out.
+   *Affects:* pool size; the curation counter in §6.2 (a public record helps reconciliation but is not required).
+
+---
+
+## 9. What this spec does not do
+
+- It does not launch anything. Publication, announcement, outreach, and any running of the assay wait for the publicity hold to lift and for Will to ratify §8.
+- It does not name the assay (§8.3), fix its thresholds (§8.2), or set its calendar (§8.4).
+- It does not claim to measure talent entire. §6.1 is part of the design, not a caveat appended to it: the assay certifies the verifiable, and says so.
+
+*End of spec.*
 # Scrolltown — Production Workflow
 
 Title: Scrolltown — Production Workflow
