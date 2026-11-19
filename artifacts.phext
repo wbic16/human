@@ -65,7 +65,7 @@ Index (coordinate — title — source):
 - 32.6.8/8.6.11/6.5.9 — Charon — README — ~/workspace/charon-seed/README.md
 - 33.6.9/8.6.11/7.5.9 — Desktop SSO for Phext Notepad — the cookie paste is gone — ~/workspace/phext-notepad-perf/REPORT-DESKTOP-SSO.md
 - 33.7.8/9.7.13/9.6.9 — phbot — PyBot, rebuilt on phext with MOAT — workspace/pybot-census/PHBOT-PHEXT.md
-- 34.6.7/7.6.10/6.6.10 — Scrollspace — Exocortical Vision (ultra-center build, phext-lattice PR #75) — ~/workspace/scrollspace/progressive/scrollspace_progressive.html
+- 34.6.7/7.6.10/6.6.10 — Scrollspace — Exocortical Vision (plane readability build, phext-lattice PR #76) — ~/workspace/scrollspace/progressive/scrollspace_progressive.html
 - 34.6.7/7.6.11/6.5.10 — phextura — DESIGN — ~/workspace/phextura-design/DESIGN.md
 - 34.6.7/8.6.11/6.5.9 — Charon — Prompt 0: Produce the design spec (no code yet) — ~/workspace/charon-seed/prompts/00-spec.md
 - 34.7.7/8.6.11/7.6.9 — PHEXT.md — phext integration for HoloStore (wbic16/holostore fork; round 2: phext-native re-implementation + four-way comparison) — workspace/holostore-analysis/fork/PHEXT.md
@@ -10677,12 +10677,12 @@ phbot.phext.xz, 11,000,268 bytes, SHA-256
 8d470e2c1b81d4feada2a5aa60b6b0be78bea5f7f41b9dcb82bb97ec4cf3b03e —
 and setup.sh extracts and verifies the phext on setup. The raw
 91 MB form no longer sits in git history past the first commit.
-# Scrollspace — Exocortical Vision (ultra-center build, phext-lattice PR #75)
+# Scrollspace — Exocortical Vision (plane readability build, phext-lattice PR #76)
 
-Title: Scrollspace — Exocortical Vision (ultra-center build, phext-lattice PR #75)
+Title: Scrollspace — Exocortical Vision (plane readability build, phext-lattice PR #76)
 Source: ~/workspace/scrollspace/progressive/scrollspace_progressive.html
 Inscribed: 2026-11-19 00:12 CST
-SHA-256: 5640003072916284fbe4d364b921cd10539199ff448afe2288b13e097ea21b29
+SHA-256: 41bfa3158fbac3ace111117a6c6aeaf5e208bd83cc7f0cdd9793ca91b19560f0
 
 ---
 <!DOCTYPE html>
@@ -11347,22 +11347,40 @@ function draw3D(now){
   ctx.beginPath(); ctx.moveTo(cx-11,cy2); ctx.lineTo(cx-4,cy2); ctx.moveTo(cx+4,cy2); ctx.lineTo(cx+11,cy2);
   ctx.moveTo(cx,cy2-11); ctx.lineTo(cx,cy2-4); ctx.moveTo(cx,cy2+4); ctx.lineTo(cx,cy2+11); ctx.stroke();
 }
+const GLYPH_FONTS="ui-monospace,'Cascadia Mono','DejaVu Sans Mono',Menlo,Consolas,'Noto Sans Mono','Segoe UI Symbol','Segoe UI Historic','Noto Sans Symbols 2','Noto Sans Symbols','Noto Sans Cuneiform','Noto Sans Egyptian Hieroglyphs','Apple Symbols','Segoe UI Emoji','Apple Color Emoji','Noto Color Emoji',monospace";
 function drawPlane(){
   ctx.fillStyle="#070b18"; ctx.fillRect(0,0,cv.width,cv.height);
   const lines=S.plane, cw=13, ch=22, ox=Math.max(16,Math.min(70,cv.width*0.06)), oy=120;
-  ctx.font="15px ui-monospace,monospace";
+  ctx.font="15px "+GLYPH_FONTS;
   const maxr=Math.min(lines.length, Math.floor((cv.height-oy-170)/ch));
+  /* ONE uniform background for the whole text field (task 23.6.7/7.6.10):
+     the old rendering filled a mid-blue tile (rgba(30,48,92,.85)) behind
+     EVERY glyph — a ransom-note checkerboard that fought the reading.
+     Text now sits on a single panel in near-white (#eaf3ff on #0d1526,
+     ~16:1); only the cursor cell keeps a highlight fill. */
+  let maxc=0;
+  for(let r=0;r<maxr;r++){ const L=lines[r]||""; let n=0; while(n<L.length&&ox+n*cw<=cv.width-20) n++; if(n>maxc) maxc=n; }
+  if(maxr>0&&maxc>0){
+    ctx.fillStyle="#0d1526"; ctx.fillRect(ox-12,oy-30,maxc*cw+16,maxr*ch+22);
+    ctx.strokeStyle="rgba(120,160,255,.22)"; ctx.lineWidth=1; ctx.strokeRect(ox-12,oy-30,maxc*cw+16,maxr*ch+22);
+  }
   for(let r=0;r<maxr;r++){
     const line=lines[r]||"";
-    for(let c=0;c<line.length;c++){
+    let c=0;
+    for(const glyph of line){ /* code points, not code units: an astral glyph
+       drawn as two lone surrogates renders as �� whatever font is present.
+       (Loop var must NOT be named ch — ch is the row height; shadowing it
+       made y=oy+r*ch coerce the glyph to a number: digits drew staircased,
+       everything else NaN. Caught by the walk4 screenshot, 2026-11-19.) */
       const x=ox+c*cw, y=oy+r*ch; if(x>cv.width-20) break;
-      ctx.fillStyle=(c===S.px&&r===S.py)?"#ffd479":"rgba(30,48,92,.85)";
-      ctx.fillRect(x-1,y-13,cw-2,ch-3);
-      ctx.fillStyle=(c===S.px&&r===S.py)?"#0a0f22":"#b9d2ff";
-      ctx.fillText(line[c],x,y);
+      const cur=(c===S.px&&r===S.py);
+      if(cur){ ctx.fillStyle="#ffd479"; ctx.fillRect(x-1,y-13,cw-2,ch-3); }
+      ctx.fillStyle=cur?"#0a0f22":"#eaf3ff";
+      ctx.fillText(glyph,x,y);
+      c+=glyph.length;
     }
   }
-  ctx.fillStyle="#8fb7ff"; ctx.font="13px ui-monospace,monospace";
+  ctx.fillStyle="#8fb7ff"; ctx.font="13px "+GLYPH_FONTS;
   ctx.fillText("the line under your feet:  "+(lines[S.py]||""), ox, cv.height-140);
   const ax=ox+S.px*cw-1, ay=oy+S.py*ch-13;
   ctx.strokeStyle="#ffd479"; ctx.lineWidth=2; ctx.strokeRect(ax-3,ay-3,cw+3,ch+2);
