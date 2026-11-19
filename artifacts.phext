@@ -65,7 +65,7 @@ Index (coordinate — title — source):
 - 32.6.8/8.6.11/6.5.9 — Charon — README — ~/workspace/charon-seed/README.md
 - 33.6.9/8.6.11/7.5.9 — Desktop SSO for Phext Notepad — the cookie paste is gone — ~/workspace/phext-notepad-perf/REPORT-DESKTOP-SSO.md
 - 33.7.8/9.7.13/9.6.9 — phbot — PyBot, rebuilt on phext with MOAT — workspace/pybot-census/PHBOT-PHEXT.md
-- 34.6.7/7.6.10/6.6.10 — Scrollspace — Exocortical Vision (progress-bar polish build, phext-lattice PR #85) — /home/hatch/workspace/scrollspace/progressive/scrollspace_progressive.html
+- 34.6.7/7.6.10/6.6.10 — Scrollspace — Exocortical Vision (mouse-capture release build, phext-lattice PR #86) — /home/hatch/workspace/scrollspace/progressive/scrollspace_progressive.html
 - 34.6.7/7.6.11/6.5.10 — phextura — DESIGN — ~/workspace/phextura-design/DESIGN.md
 - 34.6.7/8.6.11/6.5.9 — Charon — Prompt 0: Produce the design spec (no code yet) — ~/workspace/charon-seed/prompts/00-spec.md
 - 34.7.7/8.6.11/7.6.9 — PHEXT.md — phext integration for HoloStore (wbic16/holostore fork; round 2: phext-native re-implementation + four-way comparison) — workspace/holostore-analysis/fork/PHEXT.md
@@ -10677,12 +10677,12 @@ phbot.phext.xz, 11,000,268 bytes, SHA-256
 8d470e2c1b81d4feada2a5aa60b6b0be78bea5f7f41b9dcb82bb97ec4cf3b03e —
 and setup.sh extracts and verifies the phext on setup. The raw
 91 MB form no longer sits in git history past the first commit.
-# Scrollspace — Exocortical Vision (progress-bar polish build, phext-lattice PR #85)
+# Scrollspace — Exocortical Vision (mouse-capture release build, phext-lattice PR #86)
 
-Title: Scrollspace — Exocortical Vision (progress-bar polish build, phext-lattice PR #85)
+Title: Scrollspace — Exocortical Vision (mouse-capture release build, phext-lattice PR #86)
 Source: /home/hatch/workspace/scrollspace/progressive/scrollspace_progressive.html
 Inscribed: 2026-11-19
-SHA-256: b9b62511e082efde9d5548eea31beb9bf0390ec1388982a04f21ec0cb6f87293
+SHA-256: 5c2f42f9ed6dc486e8ce0c09d0076914fa286b61569c6cbf077c7292e55500f1
 
 ---
 <!DOCTYPE html>
@@ -11482,7 +11482,14 @@ function enterLevel(dist){ S.vel=[0,0,0]; S.throttle=0; S.wheelAcc=0; S.yaw=0;S.
     if(F){ S.trailStep=Math.max(30,Math.min(500,F.R*0.06)); dropCrumb(true); }
     else S.trailPending=true;
   } }
+/* Opening a scroll frees the mouse (Will, 2026-11-19): stepping onto
+   a plane or opening the Read panel drops pointer lock, so the plane
+   footer's editor link, the panel's controls and plane cell clicks
+   are reachable with a real cursor. Re-capture is unchanged — the
+   existing gesture: click the canvas at a flight level. */
+function releaseCapture(){ if(document.pointerLockElement&&document.exitPointerLock) document.exitPointerLock(); }
 async function enterPlane(){
+  releaseCapture();
   const ref=S.planet, g=S.gal;
   S.plane=["fetching the scroll from "+g.name+" …"]; S.px=2; S.py=2;
   if(!S.trailMute) dropCrumb(true); /* the plane's entry crumb, at the entry cell */
@@ -11555,6 +11562,7 @@ function openPanel(title, meta, body, links){
   readEl.style.display="flex";
 }
 async function openRead(ref){
+  releaseCapture();
   const g=S.gal;
   document.getElementById("readtitle").textContent=ref.title||ref.coord;
   document.getElementById("readmeta").textContent=g.name+" · "+ref.coord;
