@@ -65,7 +65,7 @@ Index (coordinate — title — source):
 - 32.6.8/8.6.11/6.5.9 — Charon — README — ~/workspace/charon-seed/README.md
 - 33.6.9/8.6.11/7.5.9 — Desktop SSO for Phext Notepad — the cookie paste is gone — ~/workspace/phext-notepad-perf/REPORT-DESKTOP-SSO.md
 - 33.7.8/9.7.13/9.6.9 — phbot — PyBot, rebuilt on phext with MOAT — workspace/pybot-census/PHBOT-PHEXT.md
-- 34.6.7/7.6.10/6.6.10 — Scrollspace — Exocortical Vision (plane footer + editor deep-link build, phext-lattice PR #78) — ~/workspace/scrollspace/progressive/scrollspace_progressive.html
+- 34.6.7/7.6.10/6.6.10 — Scrollspace — Exocortical Vision (willbot-mono text build, phext-lattice PR #80) — /home/hatch/workspace/scrollspace/progressive/scrollspace_progressive.html
 - 34.6.7/7.6.11/6.5.10 — phextura — DESIGN — ~/workspace/phextura-design/DESIGN.md
 - 34.6.7/8.6.11/6.5.9 — Charon — Prompt 0: Produce the design spec (no code yet) — ~/workspace/charon-seed/prompts/00-spec.md
 - 34.7.7/8.6.11/7.6.9 — PHEXT.md — phext integration for HoloStore (wbic16/holostore fork; round 2: phext-native re-implementation + four-way comparison) — workspace/holostore-analysis/fork/PHEXT.md
@@ -10677,12 +10677,12 @@ phbot.phext.xz, 11,000,268 bytes, SHA-256
 8d470e2c1b81d4feada2a5aa60b6b0be78bea5f7f41b9dcb82bb97ec4cf3b03e —
 and setup.sh extracts and verifies the phext on setup. The raw
 91 MB form no longer sits in git history past the first commit.
-# Scrollspace — Exocortical Vision (plane footer + editor deep-link build, phext-lattice PR #78)
+# Scrollspace — Exocortical Vision (willbot-mono text build, phext-lattice PR #80)
 
-Title: Scrollspace — Exocortical Vision (plane footer + editor deep-link build, phext-lattice PR #78)
-Source: ~/workspace/scrollspace/progressive/scrollspace_progressive.html
+Title: Scrollspace — Exocortical Vision (willbot-mono text build, phext-lattice PR #80)
+Source: /home/hatch/workspace/scrollspace/progressive/scrollspace_progressive.html
 Inscribed: 2026-11-19 00:12 CST
-SHA-256: 0a9c1883c698bb9efecdb5847e49a53eb4aa1689e6d4cb82d0a2951cbedcee85
+SHA-256: 2a8f930c927532029b07f45a17b8e518f63d016f2190ccbaa286dbeb16951245
 
 ---
 <!DOCTYPE html>
@@ -10692,6 +10692,7 @@ SHA-256: 0a9c1883c698bb9efecdb5847e49a53eb4aa1689e6d4cb82d0a2951cbedcee85
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <title>Scrollspace — Exocortical Vision</title>
 <style>
+  @font-face{font-family:'Willbot Mono';src:url("/willbot-mono.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
   *{box-sizing:border-box}
   html,body{margin:0;padding:0;height:100%;background:#04060e;overflow:hidden;font-family:ui-monospace,Menlo,Consolas,monospace;color:#cfe3ff}
   #view{position:absolute;inset:0;display:block;cursor:crosshair;touch-action:none}
@@ -10736,7 +10737,7 @@ SHA-256: 0a9c1883c698bb9efecdb5847e49a53eb4aa1689e6d4cb82d0a2951cbedcee85
   #read{position:absolute;top:0;right:0;height:100%;width:min(560px,94vw);background:#070d1f;border-left:1px solid #3c5a8f;z-index:9;display:none;flex-direction:column;padding:18px 20px;overflow:auto}
   #read h2{font-size:16px;color:#ffe9a8;margin:0 0 4px;line-height:1.4;user-select:text}
   #read .meta{font-size:12px;color:#8fb7ff;margin-bottom:12px;user-select:text}
-  #read .body{font-size:14px;line-height:1.65;color:#dbe9ff;white-space:pre-wrap;user-select:text;word-break:break-word}
+  #read .body{font-family:'Willbot Mono',ui-monospace,Menlo,Consolas,monospace;font-size:14px;line-height:1.65;color:#dbe9ff;white-space:pre-wrap;user-select:text;word-break:break-word}
   #read .row{display:flex;gap:8px;margin:14px 0;flex-wrap:wrap}
   #read .row button,#read .row a{background:rgba(10,20,44,.92);border:1px solid #3c5a8f;border-radius:8px;color:#cfe3ff;font-family:inherit;font-size:13px;padding:8px 12px;cursor:pointer;text-decoration:none}
   #read .row button:hover,#read .row a:hover{border-color:#ffd479}
