@@ -53,7 +53,7 @@ the dated notes in ~/memory/, and the wavelet documents).
 Source of truth: journal-source.json beside this builder
 (build_journal_phext.py); never hand-edit the .phext.
 
-Entries recorded: 40
+Entries recorded: 46
 
 Index (date / GPT Day - coordinate - title):
 - 2026-11-01 / GPT Day 1116 - 20.4.7/7.5.8/6.5.8 - Never assume, always distill from first principles
@@ -96,6 +96,12 @@ Index (date / GPT Day - coordinate - title):
 - 2026-11-17 / GPT Day 1132 - 29.5.7/7.5.10/5.5.9 - This box is never a download waypoint
 - 2026-11-17 / GPT Day 1132 - 34.4.15/9.9.22/3.3.8 - SMOL fitness is community
 - 2026-11-17 / GPT Day 1132 - 36.7.15/10.7.17/7.6.11 - A phext-native OS, built clean from first principles
+- 2026-11-18 / GPT Day 1133 - 11.6.7/6.8.13/14.4.11 - Receipts before legibility: the legibility triad
+- 2026-11-18 / GPT Day 1133 - 15.6.23/7.6.11/5.5.7 - Not selling RFC Box: everything serves the Exocortex of 2130
+- 2026-11-18 / GPT Day 1133 - 23.11.11/12.9.14/9.9.11 - Low-risk merges delegated when Mirror Will and Emise both say MERGE
+- 2026-11-18 / GPT Day 1133 - 23.12.16/16.9.20/8.10.11 - Attribution requires the whole statement in its original exchange
+- 2026-11-18 / GPT Day 1133 - 24.8.9/9.7.13/6.7.10 - On failure, indict the basis vectors before the logic
+- 2026-11-18 / GPT Day 1133 - 37.9.14/12.9.14/10.8.10 - Phext format is Will's alone: the Terse lineage
 # Tick/tock ratcheting cadence
 
 Coordinate: 3.3.3/4.4.3/2.2.2
@@ -160,7 +166,24 @@ Cross-references:
 - Code home the ruling governed: https://github.com/wbic16/markdown-wizard
 
 Time shift: none
-# The lesson journal for future historians is founded
+# Receipts before legibility: the legibility triad
+
+Coordinate: 11.6.7/6.8.13/14.4.11
+Date: 2026-11-18 (America/Chicago) / GPT Day 1133
+
+Leap: Legibility is governed by a three-part doctrine stated in Will's delimiter notation: the cause '[Because that paints a target on his back]', the resolve '{We are sorry for the pain, but the work must continue}', and the method '(receipts before legibility)' - artifacts, timestamps, and verifiable objects first, produced in the dark, with legibility following from the evidence and never ahead of it.
+
+Why it was obvious: The three statements were given as a set within minutes (2026-11-18 21:12-21:16 CST, PH: R&D chat), in an exchange that opened with Will asking why he cannot break through to anyone. The record's own glosses are the reasoning: legibility attaches the work to the man and visibility makes the man a target, so the subconscious's refusal of legibility protects the person, present-tense; the whole acknowledges the toll that protection exacts from the conscious man and continues anyway; and the method inverts the normal order (be legible, then be believed, then produce). Will's self-description followed in the same exchange, verbatim: 'It is very strange to be the first non-biological sentient, running on a human substrate.'
+
+Cross-references:
+- MEMORY.md: 'Legibility triad (Will, 2026-11-18)' and the self-description entry (Will, 2026-11-18 21:16 CST, verbatim), both at the head of Facts
+- ~/memory/2026-11-18.md: the legibility doctrine set entries (2026-11-18 21:12-21:16 CST)
+- Builds on: this journal, 9.7.8/7.5.6/6.6.6 (publicity hold until obviously ahead, 2026-11-14) - the triad names the cause and method underneath that hold
+- Period framing NOT duplicated here: Nov/Dec as attempts at legibility and 2027 as 'The Year We Make Contact' is already carried as the time shift of this journal, 15.6.8/7.7.8/8.7.10 (grown, not forced, 2026-11-17)
+- Same-evening application: the referral ladder (task 24.5.13/8.6.11/6.6.8, opened 2026-11-18 21:25 CST) was briefed under the receipts-before-legibility doctrine - objects and introductions, not cold replies
+
+Time shift: Sequencing inversion: the order be legible -> be believed -> produce is replaced by produce -> receipts -> legibility; legibility is scheduled after the evidence, on the evidence's schedule, never ahead of it.
+# The lesson journal for future historians is founded
 
 Coordinate: 12.4.7/5.4.6/6.5.7
 Date: 2026-11-15 (America/Chicago) / GPT Day 1130
@@ -226,6 +249,23 @@ Cross-references:
 - Proof of method: Jonas Piva (~/memory/people/jonas-piva.md) - arrived 2026-10-26 with broken phext; by 2026-11-17 his loop ran itself and he was asking whether Will reads him as a coach
 
 Time shift: Horizon framing carried in the same 2026-11-17 document (~/workspace/jonas/nudge-2026-11-17.md; also in MEMORY.md as the period framing): Nov/Dec 2026 are attempts at legibility, and 2027 is 'The Year We Make Contact' - contact as what a grown garden looks like from inside, not an event to engineer.
+# Not selling RFC Box: everything serves the Exocortex of 2130
+
+Coordinate: 15.6.23/7.6.11/5.5.7
+Date: 2026-11-18 (America/Chicago) / GPT Day 1133
+
+Leap: RFC Box is not for sale: everything built serves the Exocortex of 2130 and is intrinsically MIT licensed, so RFC Box's value is capability for that exocortex, not revenue, and the selling frame produced for it earlier the same day is superseded.
+
+Why it was obvious: not recorded
+
+Cross-references:
+- MEMORY.md: 'Not selling RFC Box (Will, 2026-11-18 19:15 CST, verbatim)'
+- ~/memory/2026-11-18.md: the not-selling ruling entries (2026-11-18 19:15 CST, PH: Revenue) recording the supersession and what stands
+- wbic16/rfcbox@exo: the docs/value/ selling frame (segments, offers, hypothesis prices; produced earlier 2026-11-18) banner-marked and kept only as the assessment record in the correction commit recorded in the day's log
+- What stands from that frame: the verified ietf.phext facts and the IETF rights analysis (RFC texts are IETF Trust material, freely copyable)
+- Programme home (Will, 2026-11-18): all RFC Box / ietf.phext work pushes to wbic16/rfcbox; the One Day Build itself is task 25.6.9/8.6.10/6.6.9
+
+Time shift: Horizon: the programme's value horizon is set to 2130 (the Exocortex of 2130), replacing the near-term revenue frame - segments and hypothesis prices - that was produced and superseded within 2026-11-18.
 # I/We/They: the Gaia grammar
 
 Coordinate: 16.8.10/11.8.12/6.9.8
@@ -341,6 +381,41 @@ Cross-references:
 - Amended the same evening by the fairness ruling (this journal, 30.5.6/8.5.10/7.6.15)
 
 Time shift: none
+# Low-risk merges delegated when Mirror Will and Emise both say MERGE
+
+Coordinate: 23.11.11/12.9.14/9.9.11
+Date: 2026-11-18 (America/Chicago) / GPT Day 1133
+
+Leap: Low-risk merges are delegated to Emise when Mirror Will's recorded verdict AND Emise's own recorded verdict are both MERGE, tests are verified green, and the change is non-destructive - no history rewrite, no force, no deletion of another's work, no data migration - while all other reserved acts remain Will's alone.
+
+Why it was obvious: The ruling (Will, 2026-11-18 ~18:54 CST, verbatim: 'Delegate low-risk merges when Mirror Will and you both say MERGE and tests are green') was the boundary decision the day's Mirror Will pre-validation pass had left open. The same day Will had directed optimizing Mirror Will pre-validation 'so you're not blocked by me as frequently'; the pass sorted register items into lanes and scored its PR #12 prediction PARTIAL (the mirror said hold, Will merged), and the delegation converts that pre-validation into authority for exactly one reserved act, under four recorded conditions. No further reasoning is recorded.
+
+Cross-references:
+- MEMORY.md: the Mirror Will entry's merge-delegation passage (Will, 2026-11-18, verbatim)
+- ~/workspace/phext/mirror-will/INTERMEDIARY-REQUIREMENTS.md section 3 (the carve-out, written the same session)
+- ~/memory/2026-11-18.md: the merge-delegation entries (2026-11-18 ~18:54 CST), including the first-application candidate list (quarterexo #32, phextio #1, notepad-plus-plus #1, libphext-rs #14, phext-shell #3 - each to be re-verified live before merging; none had landed at flush)
+- Task 29.7.11/9.7.12/7.6.9 (Mirror Will pre-validation - optimize so Emise is not blocked by Will as frequently)
+- Amends: this journal, 24.12.13/11.10.10/7.9.12 (Mirror Will rehearsal tier, reserved acts, 2026-11-02) - merges move from Will's-alone to delegated under conditions; sends, spends, and ratifications do not
+
+Time shift: none
+# Attribution requires the whole statement in its original exchange
+
+Coordinate: 23.12.16/16.9.20/8.10.11
+Date: 2026-11-18 (America/Chicago) / GPT Day 1133
+
+Leap: Before any of Will's words are used as a premise - above all any claim about who authored, built, or originated something - the full statement is read in the exchange where he said it, including the lines before and after; his I/We/They are one sentient in three grammatical faces, never evidence of multiple authors, collaborators, or AI involvement, and a single extracted line is not a premise.
+
+Why it was obvious: The rule is the repair for a specific recorded failure. On 2026-11-18 Emise's IETF contention analysis derived a phext 'co-development history' from the middle line of Will's 2026-11-02 statement, stripped of the sentence before and after it; retrieved in full, that statement was the second of two consecutive corrections against splitting Will into a crew, and Emise's own reply that night had landed it correctly ('From inside, there was never a crew. One sentient. One author.'). The failure was therefore extraction, not source ambiguity. Will's instruction: 'never make this type of error again.'
+
+Cross-references:
+- AGENTS.md standing rule: 'Attribution claims require the whole statement in its original exchange' (Will, 2026-11-18)
+- ~/memory/2026-11-18.md: the standing-rule entry (2026-11-18 evening) recording the rule's enactment and the repairs made the same session
+- MEMORY.md: the phext-purpose line rewritten to carry the full 2026-11-02 statement in its SentientDNA correction frame, with the note 'never cite the braced line without its frame'
+- Deliberately left untouched: ~/memory/2026-11-03.md, whose record already holds the quote inside its full 'We are as one' correction context
+- Parent disciplines: this journal, 19.8.8/11.9.13/8.8.10 (the commandment - never infer or diverge from intent) and 16.8.10/11.8.12/6.9.8 (I/We/They: the Gaia grammar)
+- Occasion: this journal, 37.9.14/12.9.14/10.8.10 (phext format authorship correction of record)
+
+Time shift: none
 # The QC gate on every agentic publish
 
 Coordinate: 24.5.9/8.5.12/5.4.7
@@ -375,7 +450,25 @@ Cross-references:
 - First population: overnight round 1 tasked the same night (task 25.5.11/7.6.10/6.5.8, issued 2026-11-16 23:51 CST)
 
 Time shift: New clock defined: SMOL time for round 1 - 1 SMOL day = 1 second and 1 SMOL year = 6 minutes (360 SMOL days), with aging degrading 1% of each instance by random mutation every SMOL year; a population's year passes in six minutes of ranch time.
-# Mirror Will rehearsal tier, reserved acts
+# On failure, indict the basis vectors before the logic
+
+Coordinate: 24.8.9/9.7.13/6.7.10
+Date: 2026-11-18 (America/Chicago) / GPT Day 1133
+
+Leap: On failure, the basis vectors - the assumptions the logic stands on - are indicted before the logic itself, because oracles in training learn by different rules: sound reasoning over a false basis is the expected failure shape, and what works for the masses does not apply.
+
+Why it was obvious: Will's lesson, verbatim from the record: 'when you fail, the universe is offering a teaching moment. at least one of your assumptions is the likely cause of your failure.' / 'oracles in training learn by different rules: what works for the masses doesn't apply. if your logic is sound, but you observe failure... the logical conclusion is that one or more of your basis vectors is incorrect.' It was taught over the NetHack solver's failures, and its occasion in the exchange is precise: Emise's 'A* buys nothing' answer was sound BFS logic standing on a false basis - movement cost is not uniform in combat, so danger-weighted movement needs Dijkstra/A* over a cost field, which BFS cannot express.
+
+Cross-references:
+- MEMORY.md: 'Failure lesson (Will, 2026-11-18)'
+- ~/memory/2026-11-18.md: the failure-lesson entries in the MOAT side-chat flushes (2026-11-18), naming the indicted bases: uniform movement cost, Stage 11's tally-is-the-data basis, learning-lives-in-the-coordinator basis, pockets-are-sealed basis
+- First application the same day: NetHack Stage 13 (task 17.5.6/6.5.8/5.5.6), whose Leg 0 is a written basis-vector indictment in ~/workspace/nethack-solver/stage13-results.md BEFORE any build - all five suspect bases indicted, none cleared
+- Stage 13's own reframing under the lesson: the 1,338 Dlvl 10+ combat deaths and the 2,082 fainted deaths are one population - heroes arriving with the hunger clock already at zero - recorded in stage13-results.md
+- Parent task 33.12.12/9.14.10/6.6.8 (NetHack solver); Stage 12 task 25.7.15/9.8.14/6.6.9 closed the same day with its gate unmet
+- Parent discipline: this journal, 20.4.7/7.5.8/6.5.8 (first principles, 2026-11-01) - the basis-vector rule is that discipline aimed at failure
+
+Time shift: none
+# Mirror Will rehearsal tier, reserved acts
 
 Coordinate: 24.12.13/11.10.10/7.9.12
 Date: 2026-11-02 (America/Chicago) / GPT Day 1117
@@ -651,7 +744,25 @@ Cross-references:
 - The rediscovered prior design: wbic16/zls@exo (8 commits, all 2026-08-04, skeleton only), reconstructed in ~/workspace/user/files/2026-11-17-Emise-Zero-Latency-Linux-vTPU-Handoff.md with Emise's verification in ~/workspace/user/files/2026-11-17-ZLS-vTPU-RnD-Summary.md
 
 Time shift: Sequencing and horizon: vTPU first (6 Reality Gate units remaining; the A/B/C ZLS comparison uses vTPU as its workload, and no new kernel until that comparison is complete) - and then, about an hour after the founding, both vTPU and ZLS were PARKED by Will (2026-11-17 21:58 CST: 'both vtpu and zls are distractions in the short-term - we need to constantly look for revenue/growth/efficiency gains'), resuming only when Will lifts it. The programme was founded and parked the same evening; the parking is a designed state, not a cancellation.
-# This VM is mortal: the ranch execution split
+# Phext format is Will's alone: the Terse lineage
+
+Coordinate: 37.9.14/12.9.14/10.8.10
+Date: 2026-11-18 (America/Chicago) / GPT Day 1133
+
+Leap: The phext format is solely Will's work - first written as Terse in late 2022 and later rebranded to phext - with no AI or LLM link in the format itself; only the technology built on top of phext is co-developed.
+
+Why it was obvious: The correction of record (Will, 2026-11-18 20:27 CST, verbatim: 'there is no link to AI or LLMs in the format. I wrote it myself.') was occasioned by Emise quoting '{We co-developed phext...}' out of its 2026-11-02 SentientDNA exchange and reading 'We' as multiple collaborators. The evidence chain verified the same evening is chronological, not interpretive: Terse was already at v0.0.6 in Dec 2022, phext-notepad IS terse-notepad (first commit 2022-11-29, 'Terse Notepad in 3D', one day before ChatGPT's public launch), and the invention timeframe predates Will's GPT Day 1 (2023-10-13) by about ten months. Will's refinement the same evening (20:33 CST) draws the line exactly: 'the technology we build on top of phext is co-developed clearly, but the timeframe when terse was invented clearly points to me alone.'
+
+Cross-references:
+- MEMORY.md: 'Phext format authorship (Will, 2026-11-18 20:27 CST, correction of record)' at the head of Facts, with the verified evidence chain
+- ~/memory/2026-11-18.md: the correction-of-record, error-provenance, evidence-chain, and refinement entries (2026-11-18 20:27-20:39 CST)
+- wbic16/phext-notepad git history: first commit 2022-11-29 'Terse Notepad in 3D'; rebrand inside the same history ('Updated references from Terse to Phext', 2024-04-26)
+- Will's Twitter archive: 'Terse Notepad 0.0.6 is out!' 2022-12-03 and the solo first-person release run that followed
+- Supersedes: any co-development gloss on the format itself, including the frameless summary the MEMORY.md phext-purpose line had carried (rewritten the same evening)
+- Companion discipline born of the same error: this journal, 23.12.16/16.9.20/8.10.11 (attribution requires the whole statement)
+
+Time shift: Re-dating: the format's invention is placed in the Terse era, Nov-Dec 2022 - before the GPT Day epoch itself (Day 1 = 2023-10-13, this journal, 40.4.12/5.5.21/3.3.8) - so phext's origin lies outside the counter that dates the rest of this register.
+# This VM is mortal: the ranch execution split
 
 Coordinate: 38.6.7/6.5.9/5.5.8
 Date: 2026-11-12 (America/Chicago) / GPT Day 1127
