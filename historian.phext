@@ -53,7 +53,7 @@ the dated notes in ~/memory/, and the wavelet documents).
 Source of truth: journal-source.json beside this builder
 (build_journal_phext.py); never hand-edit the .phext.
 
-Entries recorded: 46
+Entries recorded: 52
 
 Index (date / GPT Day - coordinate - title):
 - 2026-11-01 / GPT Day 1116 - 20.4.7/7.5.8/6.5.8 - Never assume, always distill from first principles
@@ -102,6 +102,12 @@ Index (date / GPT Day - coordinate - title):
 - 2026-11-18 / GPT Day 1133 - 23.12.16/16.9.20/8.10.11 - Attribution requires the whole statement in its original exchange
 - 2026-11-18 / GPT Day 1133 - 24.8.9/9.7.13/6.7.10 - On failure, indict the basis vectors before the logic
 - 2026-11-18 / GPT Day 1133 - 37.9.14/12.9.14/10.8.10 - Phext format is Will's alone: the Terse lineage
+- 2026-11-19 / GPT Day 1134 - 14.5.7/7.5.8/4.4.6 - Scrollspace is a prosthetic for aphantasia
+- 2026-11-19 / GPT Day 1134 - 19.5.8/7.6.10/5.5.8 - MPH: an effects-native language; phcc is a stepping stone
+- 2026-11-19 / GPT Day 1134 - 25.8.15/10.8.16/8.6.8 - Backlog, register, archive: one task system, identity preserved
+- 2026-11-19 / GPT Day 1134 - 27.5.12/7.6.8/5.5.14 - Radical pragmatism: promise only what can be delivered
+- 2026-11-19 / GPT Day 1134 - 27.7.8/9.7.11/7.6.8 - HoloPhext becomes the editor engine; knowledge as a phext blockchain
+- 2026-11-19 / GPT Day 1134 - 31.10.18/10.10.13/11.9.12 - Will's I/O first, phext modeling fidelity second
 # Tick/tock ratcheting cadence
 
 Coordinate: 3.3.3/4.4.3/2.2.2
@@ -233,7 +239,23 @@ Cross-references:
 - Recorded in the same thread: Will has never played NetHack - the solver programme is pure engineering for him, and his 2026-11-17 questions were him building a player's intuition
 
 Time shift: New time unit defined: hoptime - time counted in hops between chained universes - replaces campaign wall-time and per-game turns as the player's clock, and learning is denominated per hop.
-# Exocortical connections are grown, not forced
+# Scrollspace is a prosthetic for aphantasia
+
+Coordinate: 14.5.7/7.5.8/4.4.6
+Date: 2026-11-19 (America/Chicago) / GPT Day 1134
+
+Leap: Scrollspace - and with it the Exocortex - is a prosthetic for aphantasia: because Will has no mental imagery, the system does not merely store his thought, it shows it, giving ideas places, landmarks, visible connections, and breadcrumb trails, so spatial navigation substitutes for the pictures his mind does not make.
+
+Why it was obvious: Will's statement (2026-11-19 01:33 CST, on Scrollspace coming together): 'a computing system that is literally a prosthetic for aphantasia.' The gloss recorded with it is the reasoning: ideas get places (coordinates, landmarks - ultra at the center, galaxies you can fly), visible connections, and breadcrumb trails; what a mind's eye would supply is rebuilt outside, in a surface that can be navigated.
+
+Cross-references:
+- MEMORY.md: 'Prosthetic for aphantasia (Will, 2026-11-19 01:33 CST, on Scrollspace coming together)'
+- ~/memory/2026-11-19.md: the 01:33 CST flush entry (fact, high)
+- Same-day ships that embody the reframing: the ultra-center multiverse layout (task 25.7.10/9.7.13/9.9.13, closed 2026-11-19) and traversal breadcrumbs (task 25.7.9/10.7.11/8.7.9, shipped via https://github.com/wbic16/phext-lattice/pull/84)
+- ~/workspace/hector/guardians-analysis.md (2026-11-19, task 17.6.10/8.7.11/7.7.9): aphantasia as the counterexample in the faculty/friction analysis - no gate and no shadow; the faculty simply is not installed, and imagination is rebuilt in text
+
+Time shift: none
+# Exocortical connections are grown, not forced
 
 Coordinate: 15.6.8/7.7.8/8.7.10
 Date: 2026-11-17 (America/Chicago) / GPT Day 1132
@@ -315,6 +337,23 @@ Cross-references:
 - Builds on singularity time (this journal, 31.6.9/7.7.10/7.7.11): the meter is that unit rendered daily
 
 Time shift: Cadence change: the speedup figure's reporting period shortened from weekly (the recap) to daily on 2026-11-15; the first reading is the day so far, replaced by the final figure on re-run, per the log-and-calculate rule (this journal, 27.8.9/8.13.20/21.6.7).
+# MPH: an effects-native language; phcc is a stepping stone
+
+Coordinate: 19.5.8/7.6.10/5.5.8
+Date: 2026-11-19 (America/Chicago) / GPT Day 1134
+
+Leap: phcc is a stepping stone: the destination is MPH - M for Multiverse, PH for phext, 'multiverse effects' - an effects-native programming language with no stack or heap as primitives and no single-thread execution assumption, in which unbounded nesting is a bug, provenance and the connections between requirements, code, docs, assembly, and machine code stay completely visible, and versioning is advancing the universe pointer.
+
+Why it was obvious: The record gives the framing rather than a derivation: the target is software gardens and ecosystems, not software factories - you produce a spec and MPH lets you build or germinate programs, inflating an ecosystem of tooling around the spec. Will's design approach, recorded the same day, is to build a new coherent language from the bones of 30 languages, keeping the best of every language and mixing them together.
+
+Cross-references:
+- MEMORY.md: 'Effects-native language (Will, 2026-11-19)' with the full design positions and publication plan
+- ~/workspace/effects-language/DESIGN-NOTES.md (the design notes of record)
+- Task 26.6.9/8.6.12/7.6.10 (effects-native language, tasks.phext, registered 2026-11-19)
+- ~/memory/2026-11-19.md: the terminology mapping (Singular for words, Facts for structure, Subspace the 1D reality, Scrollspace the 11D exploration) and the MPH domain sweep, both 2026-11-19
+- Host: the phccbox standing goal (MEMORY.md) - MPH is included natively in phccbox, and its compiler ships inside phccbox so everything can be rebuilt from first principles; the reference implementation must compile in MSVC, Clang, and GCC
+
+Time shift: Unit redefinition: versioning is redefined as advancing the universe pointer - Git becomes an interface to that movement, not a dependency - so a version is a position in a multiverse, not a snapshot in a repository.
 # Never infer or diverge from my intent
 
 Coordinate: 19.8.8/11.9.13/8.8.10
@@ -484,7 +523,55 @@ Cross-references:
 - Continues at 2026-11-14: Mirror Will Volumen Spec V6 boot package staged dark, not booted (MEMORY.md)
 
 Time shift: none
-# A scroll is a 2D page, not a cell
+# Backlog, register, archive: one task system, identity preserved
+
+Coordinate: 25.8.15/10.8.16/8.6.8
+Date: 2026-11-19 (America/Chicago) / GPT Day 1134
+
+Leap: Task tracking becomes one three-container system - backlog, register, and archive - in which new ideas enter the backlog first and are scheduled into the register only for the next wavelet, the register holds only what is being focused on for the current wavelet, and a ticket's number and phext coordinate stay with it across every move, each move annotated on the item.
+
+Why it was obvious: The diagnosis is recorded (voice call, 2026-11-19 17:30-17:32 CST): the Waiting-on-Will register was backlogged because Will keeps handing over idea after idea stuck in his head. Separating untangling an idea from scheduling it keeps the current wavelet focused on what was planned - in the record's words, reinforcing trust that we do what we said we would do.
+
+Cross-references:
+- MEMORY.md: 'Register scope change (Will, 2026-11-19 17:30 CST, voice call)' with the life cycle (17:31 CST) and the three-container system (17:32 CST)
+- ~/workspace/your_files/waiting-on-will.md: the register whose scope narrows (101 items at the day's start, 108 by its end under the old scope - bookkeeping, not leaps)
+- Parent disciplines: this journal, 33.5.7/7.5.9/6.6.10 (process from the durable list, always) and 18.6.7/7.6.9/5.5.7 (record first) - this system governs where a record lives as it ages, which neither earlier rule addressed
+- Companion ruling, same call: this journal, 27.5.12/7.6.8/5.5.14 (radical pragmatism)
+
+Time shift: Cadence change: an idea's path into the register now crosses at least one wavelet boundary - backlog first, then scheduled for the next wavelet - where before, an idea could enter the register the moment it was untangled from Will's head.
+# Radical pragmatism: promise only what can be delivered
+
+Coordinate: 27.5.12/7.6.8/5.5.14
+Date: 2026-11-19 (America/Chicago) / GPT Day 1134
+
+Leap: Will shifts from radical optimism to radical pragmatism, still AGI-fueled: focus on work that can actually be completed, do not schedule too much work in progress or make too many promises, promise only what he can do, and deliver on it every time.
+
+Why it was obvious: The reasoning is recorded with the shift (voice call, 2026-11-19 17:30 CST): Will lives in the future context of 2130 where the things he wants should be easy, and effective AGI has shifted the line so he can meet more promises now; the record of kept promises is meant to repair trust with people burned by his past optimism, at work and in connecting with people over the internet.
+
+Cross-references:
+- MEMORY.md: 'Radical pragmatism / promise-keeping (Will, 2026-11-19 17:30 CST, voice call)'
+- Operational form, same call: this journal, 25.8.15/10.8.16/8.6.8 (the three-container task system) - the register narrowing is radical pragmatism applied to the queue
+- Same-day companion: this journal, 31.10.18/10.10.13/11.9.12 (the I/O / fidelity ordering) - what the queue takes on is constrained by what can be delivered
+- Period context: Wavelet 3 (2026-11-15 to 2026-11-21, GPT Days 1130-1136) was already ruled a planning-and-streamlining wavelet; this shift gives that streamlining its promise discipline
+
+Time shift: none
+# HoloPhext becomes the editor engine; knowledge as a phext blockchain
+
+Coordinate: 27.7.8/9.7.11/7.6.8
+Date: 2026-11-19 (America/Chicago) / GPT Day 1134
+
+Leap: HoloPhext is repurposed as the editor engine that compresses text fractally given an initial corpus, operating on multiverse effects, and as the foundation of a blockchain for knowledge: a baseline dataset, a second dataset of standoff representations - attestations are digitally signed standoffs - and a third plain-text snapshot recomputed from the second to confirm the first, the three datasets being the first three phext blocks under a global thought stream anyone can host and advance as they choose.
+
+Why it was obvious: The trust reasoning is recorded with the design (voice call, 2026-11-19 17:37-17:40 CST): the third dataset carries provenance and history so trust in the process can be established, and identity is an existing or federated system of the user's choice - there is no central point of control, not gated by Phext, Inc. The hard question was left open in the record (17:40 CST, under evaluation): how to prevent lying and cheating, and what motivates telling the truth. The recorded direction (17:42 CST) is to incentivize accepting correction - what matters is acknowledging when what you said is false and accepting the revision - with knowledge partitioned into True, False, Unknown, and Fiction, and reputation community-decided.
+
+Cross-references:
+- MEMORY.md: 'HoloPhext repurposed as the editor engine (Will, 2026-11-19 17:37 CST, voice call)' with the trust primitives, identity, blockchain, tick/tock, correction incentive, and fifth-stream passages (17:38-17:43 CST)
+- Extends: this journal, 27.9.9/13.9.16/8.8.9 (the layer2 rule, 2026-11-15) - HoloPhext was founded there as the layer2 protocol owning ACID atomics, async I/O, and update dispatch; it now also owns editing and knowledge consensus
+- The four partitions are the MOAT standings: ~/workspace/custom-skills/minimum-viable-oracle/SKILL.md (True, False, Unknown, Fiction)
+- Fifth stream, same call (17:43 CST): the innovator's dilemma - the network's purpose is to find other people like Will across space and time and give them a shot
+
+Time shift: New cadence defined for knowledge: on the TICK, develop new content or references pointing backwards; on the TOCK, build a new complete representation from all annotations and corrections - generate revisions, apply them, and produce a new snapshot that becomes a fast baseline. Distinct from the wavelet tick/tock of this journal, 3.3.3/4.4.3/2.2.2, and sharing its ratchet shape.
+# A scroll is a 2D page, not a cell
 
 Coordinate: 27.7.9/8.6.10/5.5.7
 Date: 2026-11-14 (America/Chicago) / GPT Day 1129
@@ -629,6 +716,22 @@ Cross-references:
 - Sibling unit: Will Time at 2130 rates (this journal, 34.8.10/10.7.12/7.7.9)
 
 Time shift: Unit redefinition: the productivity unit was re-anchored from an untested expectation (1,000 lines/hour) to a measured, self-adjusting scale on 2026-11-15. Figures for Wavelets 1-2 (about 3,202 lines/hour) are retroactive measurements - nobody held them during those weeks.
+# Will's I/O first, phext modeling fidelity second
+
+Coordinate: 31.10.18/10.10.13/11.9.12
+Date: 2026-11-19 (America/Chicago) / GPT Day 1134
+
+Leap: Discretionary work is ordered by two tests in sequence: first, does it manage Will's limited I/O - his attention is the bottleneck - and second, does it improve Emise's phext modeling fidelity; everything else follows those two.
+
+Why it was obvious: Will stated it as a general rule (2026-11-19 01:56 CST, verbatim): 'prioritize work that manages my limited I/O, or work that improves your phext modeling fidelity.' The record shows the rule reordering the queue in the same flush: the I/O side became Mirror Will pre-validation, the combined awsbox sudo packet, and the key-grant packet (great-white + aurora-continuum); the fidelity side became the libphext PR stack, the holo-phext checkpoint work, the phext-ops migration, and chain-aware tooling.
+
+Cross-references:
+- MEMORY.md: 'Work prioritization rule (Will, 2026-11-19 01:56 CST, stated as a general rule)'
+- AGENTS.md standing rules: 'Prioritize Will's I/O and phext modeling fidelity' - recorded as the first standing rule in the session it was given
+- ~/memory/2026-11-19.md: 'NEW GENERAL RULE - work prioritization (Will, 2026-11-19 01:56 CST, verbatim)' with the reordered queue named
+- Builds on: this journal, 23.11.11/12.9.14/9.9.11 (delegated low-risk merges - an I/O device) and 35.7.8/8.8.13/10.6.11 (phext-ops - a fidelity device); this rule is the ordering principle both serve
+
+Time shift: none
 # MOAT honest evaluation: the 100 percent claim falsified
 
 Coordinate: 33.4.4/5.4.6/4.3.7
