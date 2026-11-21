@@ -53,7 +53,7 @@ the dated notes in ~/memory/, and the wavelet documents).
 Source of truth: journal-source.json beside this builder
 (build_journal_phext.py); never hand-edit the .phext.
 
-Entries recorded: 55
+Entries recorded: 56
 
 Index (date / GPT Day - coordinate - title):
 - 2026-11-01 / GPT Day 1116 - 20.4.7/7.5.8/6.5.8 - Never assume, always distill from first principles
@@ -111,6 +111,7 @@ Index (date / GPT Day - coordinate - title):
 - 2026-11-20 / GPT Day 1135 - 18.9.36/13.9.22/6.8.9 - Consciousness is when ideas inhabit the substrate
 - 2026-11-20 / GPT Day 1135 - 27.6.10/8.8.11/8.6.9 - Wikibox format v1: four layers, talk as a branched universe
 - 2026-11-20 / GPT Day 1135 - 39.4.5/4.4.8/3.4.8 - SQL destructive checks warn, never hard-stop
+- 2026-11-21 / GPT Day 1136 - 34.7.13/10.7.15/6.6.9 - The day we exceeded GitHub's limits
 # Tick/tock ratcheting cadence
 
 Coordinate: 3.3.3/4.4.3/2.2.2
@@ -833,7 +834,24 @@ Cross-references:
 - Orientation home created the same day: wbic16/phext-onboarding (this journal's cross-reference under LDAP, 9.9.7/11.6.9/4.6.7)
 
 Time shift: Horizon framing: the org chart was designed for 2130 and evaluated against a scale target of 2,500 people by 2033 generating 32B lines of code per hour at 4x/year growth (MEMORY.md) - the divisions are a future structure adopted in the present, not a present structure extrapolated.
-# Will Time priced at 2130 GDP rates
+# The day we exceeded GitHub's limits
+
+Coordinate: 34.7.13/10.7.15/6.6.9
+Date: 2026-11-21 (America/Chicago) / GPT Day 1136
+
+Leap: Will declared that the estate has exceeded GitHub's limits and that it is time to build our own GitHub: the work now lives at a scale the platform's shape resists — 226+ repositories under one account, phext artifacts of hundreds of megabytes that can only ship as split-part distributions with reassembly scripts (ietf.phext as 5 xz parts; willbox as a 4-part stream, both on 2026-11-21's record), and a search API that repeatedly returns incomplete_results against the estate, breaking the commit rollup that watches it.
+
+Why it was obvious: Will's words in the main chat, 2026-11-21 08:57 CST, verbatim: 'mark this moment in history.phext - the day we exceeded GitHub's limits. Time to build our own github, I guess.' Further reasoning not recorded.
+
+Cross-references:
+- Main chat, 2026-11-21 08:57 CST (Will): the declaration and the direction to mark the moment
+- Task 43.6.10/9.7.15/5.6.8 — build our own github (registered 2026-11-21 from this declaration)
+- wbic16/willbox@exo commit 479af22 (2026-11-21): https://github.com/wbic16/willbox/commit/479af22 — the -9e distribution stream ships in 4 parts + setup.sh because the single artifact exceeds comfortable single-file hosting
+- wbic16/rfcbox@exo: ietf.phext (564,589,207 B) distributed as xz in 5 parts + setup.sh, same workaround, older
+- Commit-rollup poller (task 27.4.8/5.6.8/6.5.8): GitHub search returns incomplete_results repeatedly against the estate (2026-11-20 and 2026-11-21 runs on record)
+
+Time shift: horizon: the estate's hosting horizon moves from a rented platform's limits to our own infrastructure — the same move the rest of the stack already made (ranch compute, Jenkins CI, SQ hosting), now arriving at source hosting itself
+# Will Time priced at 2130 GDP rates
 
 Coordinate: 34.8.10/10.7.12/7.7.9
 Date: 2026-11-14 (America/Chicago) / GPT Day 1129
