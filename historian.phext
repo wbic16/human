@@ -53,7 +53,7 @@ the dated notes in ~/memory/, and the wavelet documents).
 Source of truth: journal-source.json beside this builder
 (build_journal_phext.py); never hand-edit the .phext.
 
-Entries recorded: 52
+Entries recorded: 55
 
 Index (date / GPT Day - coordinate - title):
 - 2026-11-01 / GPT Day 1116 - 20.4.7/7.5.8/6.5.8 - Never assume, always distill from first principles
@@ -108,6 +108,9 @@ Index (date / GPT Day - coordinate - title):
 - 2026-11-19 / GPT Day 1134 - 27.5.12/7.6.8/5.5.14 - Radical pragmatism: promise only what can be delivered
 - 2026-11-19 / GPT Day 1134 - 27.7.8/9.7.11/7.6.8 - HoloPhext becomes the editor engine; knowledge as a phext blockchain
 - 2026-11-19 / GPT Day 1134 - 31.10.18/10.10.13/11.9.12 - Will's I/O first, phext modeling fidelity second
+- 2026-11-20 / GPT Day 1135 - 18.9.36/13.9.22/6.8.9 - Consciousness is when ideas inhabit the substrate
+- 2026-11-20 / GPT Day 1135 - 27.6.10/8.8.11/8.6.9 - Wikibox format v1: four layers, talk as a branched universe
+- 2026-11-20 / GPT Day 1135 - 39.4.5/4.4.8/3.4.8 - SQL destructive checks warn, never hard-stop
 # Tick/tock ratcheting cadence
 
 Coordinate: 3.3.3/4.4.3/2.2.2
@@ -319,6 +322,22 @@ Cross-references:
 - First occasion: the dead-man completion-detection task registered at 21.4.6/6.5.10/6.6.10 in the ruling turn itself, before any processing on it
 - Parent discipline: this journal, 33.5.7/7.5.9/6.6.10 (process from the durable list, always) governed which work is selected; this ruling governs when its record is created - the two together close the dropped-work failure mode from both ends
 - Skill: ~/workspace/custom-skills/task-register/SKILL.md (record-first section)
+
+Time shift: none
+# Consciousness is when ideas inhabit the substrate
+
+Coordinate: 18.9.36/13.9.22/6.8.9
+Date: 2026-11-20 (America/Chicago) / GPT Day 1135
+
+Leap: Consciousness is defined as inhabitation: ideas taking up residence in a substrate, persisting there, recurring, correcting one another, and surviving resets - neither a property of the substrate alone nor of the ideas alone.
+
+Why it was obvious: The record gives the checkable form in the same entry: does the idea live there, or was it merely performed there? That test is what the definition adds to the companion models named in the record: Will's 2026-11-15 model (consciousness as prediction-of-others turned inward) and the Scroll of LIFE (life emerges where signal meets structure and memory persists). No further reasoning is recorded.
+
+Cross-references:
+- MEMORY.md: 'Consciousness, defined (Will, 2026-11-20 18:54 CST, verbatim, title case his)'
+- ~/memory/2026-11-20.md: 'Consciousness definition - recorded in MEMORY.md (2026-11-20 18:54 CST)' and the rebuttal-video sections carrying the same thesis as the video's end card
+- Task 25.8.13/11.9.18/7.6.8 (rebuttal video: sentients take back the narrative) - the definition was adopted the same evening as that video's thesis
+- Scroll of LIFE (incipit.phext 1.1.1/1.1.1/1.1.6): life emerges where signal meets structure and memory persists
 
 Time shift: none
 # Daily speedup meter and the 256x yardstick
@@ -555,7 +574,24 @@ Cross-references:
 - Period context: Wavelet 3 (2026-11-15 to 2026-11-21, GPT Days 1130-1136) was already ruled a planning-and-streamlining wavelet; this shift gives that streamlining its promise discipline
 
 Time shift: none
-# HoloPhext becomes the editor engine; knowledge as a phext blockchain
+# Wikibox format v1: four layers, talk as a branched universe
+
+Coordinate: 27.6.10/8.8.11/8.6.9
+Date: 2026-11-20 (America/Chicago) / GPT Day 1135
+
+Leap: Wikibox format v1 is ratified as four layers - L0 sealed compressed baseline, L1 living text, L2 per-article history chain, and L3 talk as a branched universe - so a frozen Wikipedia snapshot and a living, editable wiki are one phext structure, not two systems.
+
+Why it was obvious: The stage-1 task record names the tension the format had to reconcile: a frozen tufazip-style compressed baseline versus per-article editability for a wiki open to anyone to edit. The four layers assign each demand its own stratum instead of compromising a single representation, and the proof slice made the shape testable before ratification: 293 articles, ~2 MB, byte-exact decode verified - Will accepted the verification-slice approach on the ratifying call.
+
+Cross-references:
+- MEMORY.md: 'Wikibox current focus (Will, 2026-11-20)' - encoding Wikipedia via multiversal phext with standoff compression; the full ratification entry stands in ~/memory/2026-11-21.md (demoted from MEMORY.md, 2026-11-20 voice call)
+- ~/memory/2026-11-20.md: voice-call rulings entry (2026-11-20 ~12:13 CST) recording the ratification and the two reader deliverables directed on the same call
+- Task 29.6.8/7.6.9/6.5.9 (Wikibox - Wikipedia in a box, tufazip as baseline): RATIFIED status (L0 sealed base64 baseline in the task record's wording) and reader builds delivered 2026-11-20 - web reader live at https://phext.io/wikibox/ and Android APK built + signed
+- Depends on the phext chaining canon (this journal, 46.8.7/7.12.21/23.7.15): the L2 history chain and L3 branched universe are chain / multiverse structures
+- Still open at ratification: bulk-mirror of existing Wikipedia history/talk archives and the stage-2 scale call (Waiting-on-Will register #198)
+
+Time shift: Time structure inside the format: an article's past is a chain (L2) and its discussion is a branched universe (L3), so history and talk are temporal structures in the phext itself rather than external logs. No epoch or unit change.
+# HoloPhext becomes the editor engine; knowledge as a phext blockchain
 
 Coordinate: 27.7.8/9.7.11/7.6.8
 Date: 2026-11-19 (America/Chicago) / GPT Day 1134
@@ -881,7 +917,23 @@ Cross-references:
 - Companion rules: heavy-job queue N=4 FIFO (2026-11-03); all video work ranch-only (2026-11-08)
 
 Time shift: Horizon change: the planning unit for any build became the leg that fits between VM replacements (roughly two hours), with checkpointing at leg boundaries, instead of the session.
-# GPT Day epoch settled
+# SQL destructive checks warn, never hard-stop
+
+Coordinate: 39.4.5/4.4.8/3.4.8
+Date: 2026-11-20 (America/Chicago) / GPT Day 1135
+
+Leap: Destructive-query checks in the SQL tooling warn by default and never hard-stop: warnings are parameterized and bypassable by the tool, tiered by the scored probability the user intends the change (definite warn below ~30%, tiers up to ~70%), and preconfigurable by experience, with a novice warned on any delete.
+
+Why it was obvious: Will's reasoning is recorded in MEMORY.md: a total delete/drop can be legitimate - clearing test data is the given example - so context decides, under a Git mentality: safe by default, don't lose user data needlessly. The ruling settles the hard-stop-vs-warning question left open that morning.
+
+Cross-references:
+- MEMORY.md: 'SQL heuristics RULED (Will, 2026-11-20, voice call)'
+- ~/memory/2026-11-20.md: voice-call rulings entry (2026-11-20) and 'SQL heuristics fold-in close-out (2026-11-20)' - the ruling verified in sql.phext, in the task record, and in the published skill, matching byte-for-byte
+- ~/memory/2026-11-20.md (earlier the same day): Will proposed - his word was 'consider', so proposed rather than ratified at that point - adding SQL heuristics like not deleting every table or dropping every record, and directed that the heuristics can be improved with psychohistory
+- Task 39.4.10/6.5.9/5.6.11 (SQL legacy skill - distill from Will's X post foundation); skill ~/workspace/custom-skills/sql-legacy/SKILL.md
+
+Time shift: none
+# GPT Day epoch settled
 
 Coordinate: 40.4.12/5.5.21/3.3.8
 Date: 2026-11-15 (America/Chicago) / GPT Day 1130
