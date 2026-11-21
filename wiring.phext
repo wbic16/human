@@ -1,0 +1,424 @@
+wiring.phext - the ranch network, declared
+==========================================
+
+This file is the declaration of record for the Bickford Llama Ranch
+fleet network: what is wired to what, what addresses the links
+carry, which proxy each set of machines uses, and how packets are
+routed. Will audits this file. Emise enforces it: the checker
+(~/workspace/ranch-network-fix/check_wiring.py) parses this file
+through libphext, probes the live fleet, and reports every place
+reality departs from what is declared here. A departure that is
+known and accepted is written into the divergence register
+(1.1.1/1.1.1/4.1.1) with its reason - a recorded divergence is how
+an exception stays honest instead of becoming invisible drift.
+
+Home of record: wbic16/human@exo (human.git), at the repository
+root. Working copy: ~/workspace/phext/wiring.phext. This file is
+the artifact - there is no hidden source behind it. Edit it
+directly; the checker reads what is written here.
+
+The rulings this file encodes (Will, 2026-11-21):
+- 10:36 CST - each set of machines targets a separate proxy, so
+  transfers do not starve on one shared proxy.
+- 10:40 CST - routing is configured so packets route efficiently
+  between nodes, over the best direct path.
+- 10:40 CST - WiFi is back-haul of last resort, so SSH terminals
+  from Will's laptop are not clogged.
+- 10:40 CST - SSH traffic to and from lilly (Will's laptop) has
+  top priority on any shared path.
+- 10:54 CST - every row has two 2.5G Ethernet uplinks and USB4
+  interlinks.
+- 11:15 CST - this file: a config Will can audit and Emise can
+  enforce.
+
+Sets are the six rows of the wiring diagram Will posted
+2026-11-21. (The groups-of-5 roster he mentioned was not found
+in any record; the rows are the physical sets the diagram itself
+draws, and the census derived the same sets.)
+
+Index of scrolls:
+- 1.1.1/1.1.1/1.1.1 - Home (this scroll)
+- 1.1.1/1.1.1/1.1.2 - Conventions: addressing, metrics, states, forms
+- 1.1.1/1.1.1/2.1.1 - Row 1: NK AH LP EP
+- 1.1.1/1.1.1/2.2.1 - Row 2: OF HV DW BW
+- 1.1.1/1.1.1/2.3.1 - Row 3: PV TF LO FF
+- 1.1.1/1.1.1/2.4.1 - Row 4: AC VG WL RM
+- 1.1.1/1.1.1/2.5.1 - Row 5: AM JK GW QH
+- 1.1.1/1.1.1/2.6.1 - Row 6: YM KO MB SC
+- 1.1.1/1.1.1/3.1.1 - Policy: routing and route metrics
+- 1.1.1/1.1.1/3.2.1 - Policy: proxies
+- 1.1.1/1.1.1/3.3.1 - Policy: lilly SSH priority
+- 1.1.1/1.1.1/3.4.1 - Enforcement: the checker
+- 1.1.1/1.1.1/4.1.1 - Known-divergence register
+- 1.1.1/1.1.1/5.1.1 - External and inbound links (reserved)
+
+Sources this declaration was built from (verified records only):
+~/workspace/ranch-network-fix/TOPOLOGY.md (the diagram, as
+corrected by Will's 10:54 ruling), INTERIM.md (the 2026-11-21
+census), and USB4-STATE.md (the USB4 configuration as built).
+Conventions - how to read and edit this file
+============================================
+
+Coordinates in this file: chapter 1 is the front matter, chapter
+2 is the grid (section = row), chapter 3 is policy, chapter 4 is
+the divergence register, chapter 5 is reserved for external and
+inbound links (see 1.1.1/1.1.1/5.1.1). One scroll per subject; a
+scroll is a page of plain text and reads top to bottom.
+
+Machine-checked lines: the checker reads lines that begin with
+"node:", "usb4:", "xlink:", "uplink:", "proxy:", "metric:", and
+"divergence:". Everything else is prose for the human auditor.
+Keep those lines in their declared forms when editing; the forms
+are:
+
+node: <INITIALS> <hostname|unknown> col <1-4> ram <GB> state <state> ssh <tailnet-ip|->
+usb4: <A>-<B> subnet <10.54.x.0/24> <A> <ip> <B> <ip> expect-gbit 10-40
+xlink: <A>-<B> subnet <10.54.9x.0/24> <A> <ip> <B> <ip> expect-gbit 10-40 state <status>
+uplink: <left|right> <INITIALS> <iface|unknown>
+proxy: host <INITIALS> port 3129
+metric: <ethernet|usb4|wifi> <number>
+divergence: <D#> keys <key[,...]> - <statement and reason>
+
+Node states: online (SSH-verified on the tailnet), dark (powered
+off or idle; not probed), unlocated (drawn on the diagram; no
+hostname or address found in any record), key-refused (the node
+exists, but does not accept Emise's SSH key).
+
+USB4 addressing (from USB4-STATE.md, as built): static per-link
+/24s from 10.54.0.0/16 - outside the LAN (192.168.86.0/24) and
+outside the retired 10.53 tbfab block. An in-row link between
+columns c and c+1 of row r takes subnet 10.54.<r><c>.0/24; the
+left node is .1, the right node is .2. Cross-row and off-diagram
+links take the 10.54.9x.0/24 block. MTU 1500.
+
+Route metrics (policy, see 1.1.1/1.1.1/3.1.1): ethernet 100,
+USB4 200, WiFi 600. Lower wins; WiFi carries traffic only when
+no wired path exists.
+
+Proxy convention (policy, see 1.1.1/1.1.1/3.2.1): each row's
+proxy host is the row's left-edge (column 1) uplink node,
+serving Squid on port 3129 - the port the fleet's client
+configs already use for HTTPS (3128 is its plain-HTTP
+companion). Row 5 is the standing exception: AM is unlocated,
+so quacked-hill (column 4) acts as row 5's proxy host until AM
+is found. A row proxy must not ssl-bump with a CA whose
+certificates fail fleet verification (the legacy proxy's
+defect; see divergence D11).
+
+The diagram's node colors (blue, red, gold) have no verified
+correlate - the census tested status, Thunderbolt state, CPU
+batch, RAM, and role. They are carried in no declaration here;
+see divergence D14.
+Row 1 - NK AH LP EP
+===================
+Grid row 1 of 6 (diagram coordinates (1,1) to (4,1)). A USB4
+chain of four with a 2.5G Ethernet uplink at each edge.
+
+node: NK ni-knight col 1 ram 48 state online ssh 100.93.140.59
+node: AH ashfall-haven col 2 ram 32 state online ssh 100.102.119.123
+node: LP logos-prime col 3 ram 16 state online ssh 100.107.204.62
+node: EP elven-path col 4 ram 32 state online ssh 100.120.211.72
+
+usb4: NK-AH subnet 10.54.11.0/24 NK 10.54.11.1 AH 10.54.11.2 expect-gbit 10-40
+usb4: AH-LP subnet 10.54.12.0/24 AH 10.54.12.1 LP 10.54.12.2 expect-gbit 10-40
+usb4: LP-EP subnet 10.54.13.0/24 LP 10.54.13.1 EP 10.54.13.2 expect-gbit 10-40
+
+uplink: left NK enp3s0
+uplink: right EP enp3s0
+
+proxy: host NK port 3129
+
+Notes: row 1's USB4 chain is built and verified (USB4-STATE.md):
+11.2 / 11.7 / 11.4 Gbit/s measured. NK's ethernet cable lands
+off-LAN today - see divergence D10. NK's squid already listens
+on 3128/3129 (census); it becomes this row's proxy when its
+uplink is re-seated onto the LAN.
+Row 2 - OF HV DW BW
+===================
+Grid row 2 of 6 (diagram coordinates (1,2) to (4,2)). A USB4
+chain of four with a 2.5G Ethernet uplink at each edge.
+
+node: OF orchid-flow col 1 ram 48 state online ssh 100.65.205.17
+node: HV halycon-vector col 2 ram 16 state online ssh 100.127.194.115
+node: DW delta-wood col 3 ram 32 state dark ssh -
+node: BW best-willow col 4 ram 32 state dark ssh -
+
+usb4: OF-HV subnet 10.54.21.0/24 OF 10.54.21.1 HV 10.54.21.2 expect-gbit 10-40
+usb4: HV-DW subnet 10.54.22.0/24 HV 10.54.22.1 DW 10.54.22.2 expect-gbit 10-40
+usb4: DW-BW subnet 10.54.23.0/24 DW 10.54.23.1 BW 10.54.23.2 expect-gbit 10-40
+
+uplink: left OF enp3s0
+uplink: right BW unknown
+
+proxy: host OF port 3129
+
+Notes: orchid-flow is the fleet NFS server and is on WiFi
+today; wiring it is the census's top priority (the 2026-11-15
+measurement says it halves the fleet's hop count). No USB4
+link in this row is cabled yet; OF's Thunderbolt port is dark
+because the chain toward it is uncabled and its downstream
+neighbours are dark (D1, D2).
+Row 3 - PV TF LO FF
+===================
+Grid row 3 of 6 (diagram coordinates (1,3) to (4,3)). A USB4
+chain of four with a 2.5G Ethernet uplink at each edge.
+
+node: PV plain-view col 1 ram 48 state online ssh 100.71.109.124
+node: TF unknown col 2 ram 16 state unlocated ssh -
+node: LO lighthouse-omen col 3 ram 16 state online ssh 100.112.181.52
+node: FF free-fall col 4 ram 32 state online ssh 100.74.202.8
+
+usb4: PV-TF subnet 10.54.31.0/24 PV 10.54.31.1 TF 10.54.31.2 expect-gbit 10-40
+usb4: TF-LO subnet 10.54.32.0/24 TF 10.54.32.1 LO 10.54.32.2 expect-gbit 10-40
+usb4: LO-FF subnet 10.54.33.0/24 LO 10.54.33.1 FF 10.54.33.2 expect-gbit 10-40
+
+uplink: left PV enp3s0
+uplink: right FF enp3s0
+
+proxy: host PV port 3129
+
+Notes: TF-16 is unlocated (D4), so PV-TF and TF-LO are
+suspended until the box is identified. LO also holds one end
+of the off-diagram cross-row link to QH, declared in row 5's
+scroll (D9).
+Row 4 - AC VG WL RM
+===================
+Grid row 4 of 6 (diagram coordinates (1,4) to (4,4)). A USB4
+chain of four with a 2.5G Ethernet uplink at each edge.
+
+node: AC aletheia-core col 1 ram 32 state online ssh 100.88.154.1
+node: VG unknown col 2 ram 16 state unlocated ssh -
+node: WL west-lincoln col 3 ram 16 state online ssh 100.80.198.30
+node: RM rock-mountain col 4 ram 48 state online ssh 100.69.163.95
+
+usb4: AC-VG subnet 10.54.41.0/24 AC 10.54.41.1 VG 10.54.41.2 expect-gbit 10-40
+usb4: VG-WL subnet 10.54.42.0/24 VG 10.54.42.1 WL 10.54.42.2 expect-gbit 10-40
+usb4: WL-RM subnet 10.54.43.0/24 WL 10.54.43.1 RM 10.54.43.2 expect-gbit 10-40
+
+uplink: left AC enp1s0
+uplink: right RM enp2s0
+
+proxy: host AC port 3129
+
+Notes: aletheia-core is the fleet coordinator and today's
+legacy fleet proxy host - reached by every node's config at
+192.168.86.22, its WiFi DHCP address (D11). VG-16 is
+unlocated (D5), so AC-VG and VG-WL are suspended. WL-RM is
+the row's first cableable link (both ends online; census
+ask-list item C).
+Row 5 - AM JK GW QH
+===================
+Grid row 5 of 6 (diagram coordinates (1,5) to (4,5)). A USB4
+chain of four with a 2.5G Ethernet uplink at each edge.
+
+node: AM unknown col 1 ram 16 state unlocated ssh -
+node: JK jacked-kite col 2 ram 32 state online ssh 100.82.52.27
+node: GW great-white col 3 ram 32 state key-refused ssh -
+node: QH quacked-hill col 4 ram 48 state online ssh 100.109.77.116
+
+usb4: AM-JK subnet 10.54.51.0/24 AM 10.54.51.1 JK 10.54.51.2 expect-gbit 10-40
+usb4: JK-GW subnet 10.54.52.0/24 JK 10.54.52.1 GW 10.54.52.2 expect-gbit 10-40
+usb4: GW-QH subnet 10.54.53.0/24 GW 10.54.53.1 QH 10.54.53.2 expect-gbit 10-40
+
+xlink: QH-LO subnet 10.54.90.0/24 QH 10.54.90.1 LO 10.54.90.2 expect-gbit 10-40 state provisional-offdiagram
+
+uplink: left AM unknown
+uplink: right QH enp2s0
+
+proxy: host QH port 3129
+
+Notes: AM-16 is unlocated (D6): the row's left uplink and
+the AM-JK link are suspended, and QH acts as this row's
+proxy host and only reachable uplink under the standing
+exception in the conventions. GW refuses Emise's SSH key
+(D3), so JK-GW and GW-QH cannot be verified until Will
+grants the key. QH carries a resident agent (Corus) -
+configure it verified-gently. The QH-LO xlink is cabled and
+configured but is not on the diagram; keep-or-redress is
+Will's undecided call (D9).
+Row 6 - YM KO MB SC
+===================
+Grid row 6 of 6 (diagram coordinates (1,6) to (4,6)). A USB4
+chain of four with a 2.5G Ethernet uplink at each edge.
+
+node: YM yeet-max col 1 ram 16 state online ssh 100.98.16.99
+node: KO kaleidoscope-one col 2 ram 32 state online ssh 100.90.192.78
+node: MB moon-beam col 3 ram 32 state online ssh 100.115.80.55
+node: SC scroll-central col 4 ram 48 state online ssh 100.69.30.79
+
+usb4: YM-KO subnet 10.54.61.0/24 YM 10.54.61.1 KO 10.54.61.2 expect-gbit 10-40
+usb4: KO-MB subnet 10.54.62.0/24 KO 10.54.62.1 MB 10.54.62.2 expect-gbit 10-40
+usb4: MB-SC subnet 10.54.63.0/24 MB 10.54.63.1 SC 10.54.63.2 expect-gbit 10-40
+
+uplink: left YM enp2s0
+uplink: right SC enp2s0
+
+proxy: host YM port 3129
+
+Notes: as drawn, the chain runs YM-KO-MB-SC. Reality today is
+a single KO-SC jumper occupying 10.54.63.0/24, with MB online
+but bypassed (it has no thunderbolt_net loaded at all) - see
+D7. The jumper also negotiates 40G but measures 8.8-9.1
+Gbit/s - see D8. SC's ethernet showed explicit NO-CARRIER in
+the census.
+Policy - routing and route metrics
+==================================
+Will, 2026-11-21 10:40 CST: routing is configured so packets
+route efficiently between nodes; WiFi is back-haul of last
+resort, so his SSH terminals are not clogged.
+
+metric: ethernet 100
+metric: usb4 200
+metric: wifi 600
+
+Node-to-node traffic takes the best direct path: within a
+row, over the USB4 interlink; between rows, over ethernet
+through the row uplinks; never hairpinned through the WiFi
+AP when a wired path exists. WiFi (metric 600) carries a
+flow only when no wired path exists - including the paths
+from Will's laptop (lilly) into the fleet, so bulk transfers
+stop competing with his SSH sessions (see 1.1.1/1.1.1/3.3.1).
+
+Known deviation: on systemd-networkd nodes the USB4
+connected route carries the kernel-default metric rather
+than 200 - each 10.54 /24 has exactly one path, so no route
+selection is affected. Registered as D13.
+Policy - proxies
+================
+Will, 2026-11-21 10:36 CST: each set of machines targets a
+separate proxy, so we don't starve transfers.
+
+Each row's machines target their own row's proxy host
+(declared per row in chapter 2) on port 3129. No row's
+pulls transit another row's proxy, and no proxy is reached
+over WiFi once its row is wired: a row proxy host is a
+wired uplink node by construction.
+
+A row proxy must not inherit the legacy defect: the legacy
+fleet proxy ssl-bumps with a CA whose certificates fail
+verification fleet-wide (uncached PyPI fetches fail through
+it; the ranch's crates.io path fails the same way). New
+instances either splice without bumping, or bump with a CA
+that verifies cleanly against the fleet's distributed CA -
+tested with a real uncached fetch before the row is
+repointed.
+
+Legacy state, until each row is repointed: every node still
+targets 192.168.86.22:3128/3129 - aletheia-core's WiFi DHCP
+address. That single WiFi hop is the starvation mechanism
+the census measured. Registered as D11.
+Policy - lilly SSH priority
+===========================
+Will, 2026-11-21 10:40 CST: "SSH traffic to/from lilly
+should have top priority."
+
+lilly is Will's Lenovo laptop (tailnet 100.64.0.124, LAN
+192.168.86.40). Beyond route preference (1.1.1/1.1.1/3.1.1),
+SSH flows to and from lilly win contention on any shared
+path - including when WiFi must carry them. Implementation
+form: traffic shaping on node egress (tc priority bands and
+DSCP marking for SSH to and from lilly's addresses), kept
+simple, persistent, and enumerated wherever it is installed.
+
+Verification bar: with a bulk transfer saturating a shared
+path, an SSH session from lilly stays responsive - latency
+measured before and after the shaping under the same load.
+
+State: designed, not yet implemented on any node.
+Registered as D12; the checker reports its absence per node
+until it lands.
+Enforcement - the checker
+=========================
+The checker is ~/workspace/ranch-network-fix/check_wiring.py.
+It parses this file through libphext (PyPI phext, the Python
+port of libphext; this file is cross-verified with SQ, which
+is libphext-rs), extracts the machine-checked lines, and
+probes the live fleet over SSH - sequentially, at human
+pace, one session per node. For every declared element it
+reports CONFORMANT or DIVERGENT with the observed value:
+
+- node: a declared online node answers SSH and reports its
+  own hostname. Declared dark, unlocated, and key-refused
+  nodes are not probed; they are reported as their declared
+  state, which is itself the audited fact.
+- usb4 / xlink: the declared addresses are present on both
+  ends, the peer answers a ping over the link, and a
+  measured rate (tbw.py, 4 streams, 5 seconds) falls inside
+  the declared expect-gbit range. A link observed on the
+  wire but not declared here is reported as undeclared.
+- uplink: the declared interface shows carrier, negotiates
+  2500 Mb/s, and holds an address on the LAN
+  (192.168.86.0/24).
+- proxy: the row's proxy host listens on the declared port,
+  and each online node's configured proxy (from
+  /etc/environment and /etc/profile.d/ranch-proxy.sh) names
+  its own row's proxy host at the declared port.
+- metric: WiFi routes carry 600; USB4 routes carry 200 on
+  NetworkManager nodes (the networkd deviation is D13).
+- lilly priority (1.1.1/1.1.1/3.3.1): the tc state of each
+  probed node is inspected for SSH prioritisation.
+
+The checker reports; it does not reconfigure anything.
+Remediation is a directed act. A divergence that matches a
+registered entry in 1.1.1/1.1.1/4.1.1 is reported with its
+D-number. An unregistered divergence is a new finding and
+wants either a fix or a register entry - Will's call,
+recorded in this file.
+Known-divergence register
+=========================
+Every place reality currently departs from this declaration,
+stated with its reason. An entry leaves the register only
+when the departure is gone - fixed, or the declaration is
+amended by Will to match a reality he accepts. The checker
+tags its findings with these D-numbers when they match.
+
+divergence: D1 keys node:DW - delta-wood is dark (tailscale idle, unprobed in the census). Row 2 links HV-DW (10.54.22) and DW-BW (10.54.23) are suspended until it is powered. Will's hands.
+divergence: D2 keys node:BW - best-willow is dark. Row 2's right uplink and link DW-BW are suspended until it is powered; the census's 10th ethernet cable is reserved for it if Will powers it during his pass.
+divergence: D3 keys node:GW - great-white refuses this VM's SSH key (publickey denied). Row 5 links JK-GW (10.54.52) and GW-QH (10.54.53) cannot be configured or verified until Will grants the key.
+divergence: D4 keys node:TF - TF-16 is unlocated: drawn at (2,3) but no hostname or address exists in any record. Row 3 links PV-TF (10.54.31) and TF-LO (10.54.32) are suspended until the box is identified.
+divergence: D5 keys node:VG - VG-16 is unlocated: drawn at (2,4). It fits victory-galleon by initials only (offline 223 days, unverified). Row 4 links AC-VG (10.54.41) and VG-WL (10.54.42) are suspended.
+divergence: D6 keys node:AM - AM-16 is unlocated: drawn at (1,5). Row 5's left uplink and link AM-JK (10.54.51) are suspended; QH acts as row 5's proxy host and only reachable uplink meanwhile.
+divergence: D7 keys usb4:KO-SC,usb4:KO-MB,usb4:MB-SC,usb4:YM-KO - moon-beam is bypassed: a single KO-SC jumper occupies 10.54.63.0/24 provisionally, where the drawn chain is YM-KO (10.54.61), KO-MB (10.54.62), MB-SC (10.54.63); MB has no thunderbolt_net loaded. Resolves when Will cables KO-MB and MB-SC (census ask-list A) and the jumper comes out; 10.54.63 then belongs to MB-SC.
+divergence: D8 keys usb4:KO-SC-rate - the KO-SC jumper negotiates 40000 Mb/s (20 Gb/s lanes) but measured 8.8-9.1 Gbit/s with the two tools on those nodes (python meter, nc/dd; no iperf3 on either). An iperf3-grade retest is owed before the link itself is called slow. Related observation: every other built link measures ~11 Gbit/s against a 20000 Mb/s netdev - consistent with one 10 Gb/s lane carrying network traffic; inside Will's 10-40 Gbit expectation, at the low end.
+divergence: D9 keys xlink:QH-LO - an off-diagram USB4 cable joins quacked-hill and lighthouse-omen (rows 5 and 3). It is physically sound, configured at 10.54.90.0/24, and not on Will's diagram. Keep it, or re-dress it to GW-QH when great-white returns: Will's call, undecided as of 2026-11-21.
+divergence: D10 keys uplink:NK - ni-knight's ethernet cable lands somewhere that is not the LAN: carrier at 1 Gbps on a 2.5G NIC, no DHCP lease, gateway unreachable over it. NK's persistent wired-uplink profile is staged with autoconnect held off. Resolves with Will's trace and re-seat (census ask-list item 0).
+divergence: D11 keys proxy:* - proxy repointing is not yet executed. Every node's proxy config still targets the legacy fleet proxy (aletheia-core at its WiFi DHCP address 192.168.86.22, ports 3128/3129), and only NK and AC run a squid at all. Resolves row by row as each row's proxy host is wired, its squid is verified (including the no-broken-ssl-bump rule in 1.1.1/1.1.1/3.2.1), and the row's nodes are repointed.
+divergence: D12 keys policy:lilly - lilly SSH prioritisation (1.1.1/1.1.1/3.3.1) is designed (tc priority bands, DSCP marking on node egress) but implemented on no node yet; the under-load verification is likewise owed.
+divergence: D13 keys metric:usb4-networkd - on the systemd-networkd nodes (EP, QH, LO) the USB4 connected route carries the kernel-default metric, not the declared 200. Each 10.54 /24 has exactly one path, so no route selection is affected. Deliberate deviation, recorded in USB4-STATE.md.
+divergence: D14 keys diagram:colors - the wiring diagram's node colors (blue, red, gold) have no verified correlate: the census tested online status, Thunderbolt state, CPU batch (8845HS / 8945HS / Ryzen 7 255 all span multiple colors), RAM, and role. Unexplained; not guessed, and not machine-checked.
+divergence: D15 keys uplink:* - every declared uplink except NK's is uncabled as of the census: no carrier (scroll-central explicit NO-CARRIER; orchid-flow and plain-view carrier 0 after bring-up; the rest down). Will's wiring pass (census ask-list items 1-10, inside his 10 cables) resolves them one by one.
+divergence: D16 keys usb4:OF-HV,usb4:LO-FF,usb4:WL-RM - three links whose endpoints are both online are not yet cabled: OF-HV (10.54.21, census ask-list B), LO-FF (10.54.33), and WL-RM (10.54.43, census ask-list C). The census found zero live USB4 links among online members of rows 2-5. The links suspended by dark, unlocated, or key-refused endpoints are registered separately (D1-D6); these three wait only on cables, in Will's wiring pass or a follow-on.
+External and inbound links - reserved
+=====================================
+Will, 2026-11-21: "wiring.phext will eventually include
+others linking to us." This chapter is the prepared place
+for links between the ranch and parties outside it. It is
+empty today by design: adding a party later is an
+inscription into this chapter, not a restructure of the
+file.
+
+Layout: this scroll (1.1.1/1.1.1/5.1.1) is the chapter's
+register and form. Each external party takes the next free
+section of chapter 5 - section 2, then 3, and so on - one
+section per party, its first scroll carrying the party's
+entries in the declared form below.
+
+Declared form for an external link entry:
+
+entry: <party> link <their endpoint> -> <our endpoint> medium <medium> authority <name, date> state <planned|active|suspended>
+
+- who: the party's name, and a contact or handle where one
+  is on record.
+- what connects to what: their endpoint and ours, each
+  named concretely (a host, a service, an address) - never
+  just "the internet" on our side.
+- medium: what carries the link - tailnet membership, a
+  tunnel, a public endpoint, a physical cable.
+- authority: whose authority the link exists under, and
+  when it was granted - Will, unless he delegates in
+  writing in this file.
+- state: planned, active, or suspended. A suspended link
+  keeps its entry and gains a reason, the way a divergence
+  does.
+
+Filed entries: none, as of 2026-11-21.
