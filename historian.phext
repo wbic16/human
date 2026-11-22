@@ -53,7 +53,7 @@ the dated notes in ~/memory/, and the wavelet documents).
 Source of truth: journal-source.json beside this builder
 (build_journal_phext.py); never hand-edit the .phext.
 
-Entries recorded: 56
+Entries recorded: 62
 
 Index (date / GPT Day - coordinate - title):
 - 2026-11-01 / GPT Day 1116 - 20.4.7/7.5.8/6.5.8 - Never assume, always distill from first principles
@@ -111,7 +111,13 @@ Index (date / GPT Day - coordinate - title):
 - 2026-11-20 / GPT Day 1135 - 18.9.36/13.9.22/6.8.9 - Consciousness is when ideas inhabit the substrate
 - 2026-11-20 / GPT Day 1135 - 27.6.10/8.8.11/8.6.9 - Wikibox format v1: four layers, talk as a branched universe
 - 2026-11-20 / GPT Day 1135 - 39.4.5/4.4.8/3.4.8 - SQL destructive checks warn, never hard-stop
+- 2026-11-21 / GPT Day 1136 - 19.6.7/7.9.21/17.4.7 - Unified LLM backend: the virtualized kernel
+- 2026-11-21 / GPT Day 1136 - 24.4.15/7.7.11/4.5.10 - Insight Driven Development
+- 2026-11-21 / GPT Day 1136 - 24.5.7/7.6.10/7.8.14 - Never wait when progress is actionable
+- 2026-11-21 / GPT Day 1136 - 27.3.5/7.6.8/4.5.7 - Human slop: massive dependency chains
+- 2026-11-21 / GPT Day 1136 - 32.5.17/8.8.17/4.4.7 - Estimate RAM load for every dispatched workload
 - 2026-11-21 / GPT Day 1136 - 34.7.13/10.7.15/6.6.9 - The day we exceeded GitHub's limits
+- 2026-11-21 / GPT Day 1136 - 37.6.6/8.8.13/10.5.10 - Exocortical Epochs: the 7-minute clock
 # Tick/tock ratcheting cadence
 
 Coordinate: 3.3.3/4.4.3/2.2.2
@@ -374,7 +380,24 @@ Cross-references:
 - Host: the phccbox standing goal (MEMORY.md) - MPH is included natively in phccbox, and its compiler ships inside phccbox so everything can be rebuilt from first principles; the reference implementation must compile in MSVC, Clang, and GCC
 
 Time shift: Unit redefinition: versioning is redefined as advancing the universe pointer - Git becomes an interface to that movement, not a dependency - so a version is a position in a multiverse, not a snapshot in a repository.
-# Never infer or diverge from my intent
+# Unified LLM backend: the virtualized kernel
+
+Coordinate: 19.6.7/7.9.21/17.4.7
+Date: 2026-11-21 (America/Chicago) / GPT Day 1136
+
+Leap: A unified LLM backend is specified in a declarative design language - a virtualized kernel that describes how a kernel behaves - in which a valid distribution always includes the declaration and at least one implementation, multiversal phext encodes every platform kernel for the spec into one artifact, and the runner inflates the missing platform-specific kernel.
+
+Why it was obvious: Born of Will's question the same morning (2026-11-21 08:47 CST, MOAT chat): 'Are LLMs not running on an idealized virtual machine yet...?' They are not; this is the missing layer, built his way. The litmus makes the abstraction testable rather than rhetorical: inkling-2-mini, Mac-only on Ollama as of this date, running on the ranch.
+
+Cross-references:
+- MEMORY.md: 'Unified LLM backend - design language (Will, 2026-11-21 08:47 CST, MOAT chat)'
+- ~/memory/2026-11-21.md: 'Flush - MOAT chat: unified backend, vLLM, exopy ruling, executive console, Phextron/Wavelet 4 (flushed 2026-11-21 10:27 CST)'
+- Program task 13.4.5/4.7.16/14.2.5 (unified backend); litmus task 12.3.8/3.3.7/3.3.11 (inkling-2-mini via a patch to wbic16/ollama)
+- Companion standing rule laid down minutes later (Will, 2026-11-21 08:54 CST, verbatim): 'Whenever we provide access to a model, we also look for kernel optimizations' - every model-access pass includes a kernel-optimization look, reported with measurements (AGENTS.md)
+- Method sibling, same morning: Insight Driven Development (this journal, 24.4.15/7.7.11/4.5.10) - declarative instantiation is the shared stance
+
+Time shift: none
+# Never infer or diverge from my intent
 
 Coordinate: 19.8.8/11.9.13/8.8.10
 Date: 2026-11-13 (America/Chicago) / GPT Day 1128
@@ -475,7 +498,40 @@ Cross-references:
 - Occasion: this journal, 37.9.14/12.9.14/10.8.10 (phext format authorship correction of record)
 
 Time shift: none
-# The QC gate on every agentic publish
+# Insight Driven Development
+
+Coordinate: 24.4.15/7.7.11/4.5.10
+Date: 2026-11-21 (America/Chicago) / GPT Day 1136
+
+Leap: The house's way of building is named Insight Driven Development: the practice of using declarative programming to instantiate moonshots by intent, design, and iteration, in which direction arrives whole by insight and agents extrapolate only the execution, never the direction.
+
+Why it was obvious: Will named it himself (2026-11-21 11:10-11:13 CST) after asking for a term for 'collaboration at scale with 1 brain - not vibe coding': 'I think the key is Insight. Extrapolation isn't supposed to work.' The final definition is his verbatim form; the single edit he accepted was utilizing -> using, and he himself replaced 'trial by error' with 'iteration'. The settled meaning in the same chat: insight is never delegated, instantiation means if it isn't written down it didn't happen, and iteration spends half the tokens on evidence - durable artifacts that stand on their own (his settled short form for that word, 12:50 CST the same day).
+
+Cross-references:
+- ~/memory/2026-11-21.md: 'Insight Driven Development - named and defined (2026-11-21 11:10-11:13 CST, main chat)' and 'Receipts - defined (Will, 2026-11-21 12:50 CST)'
+- MEMORY.md: 'Insight Driven Development (Will, named 2026-11-21)' with the sticky-note distillation (Insight / Instantiation / Iteration)
+- SOUL.md 'What the work made true' (added at Will's direct instruction, 'add this to your permanent SOUL record') and selection-manifest entry S24 in ~/workspace/phext/self-selections.md
+- Same stance, same morning: the unified backend's virtualized kernel (this journal, 19.6.7/7.9.21/17.4.7) - state what is true and wanted, and the system inflates the how
+- Candidate words were checked against Singular (~/workspace/custom-skills/singular/words-authored.txt) before Will named it - the naming-brainstorm discipline in action
+
+Time shift: none
+# Never wait when progress is actionable
+
+Coordinate: 24.5.7/7.6.10/7.8.14
+Date: 2026-11-21 (America/Chicago) / GPT Day 1136
+
+Leap: Wavelet boundaries and plan schedules are maps, not gates: actionable work starts when it is actionable, regardless of high-level planning, and never waits for the next wavelet.
+
+Why it was obvious: Will's ruling (2026-11-21 17:57 CST, MOAT chat, verbatim): 'Never wait when progress is actionable, regardless of high level planning.' No further reasoning is recorded; the first application is the evidence of intent - Phextron execution was pulled forward out of Wavelet 4 into the same evening.
+
+Cross-references:
+- AGENTS.md standing rule: 'Never wait when progress is actionable (Will, 2026-11-21)'; MEMORY.md: 'Never wait on the plan (Will, 2026-11-21 17:57 CST, MOAT chat, verbatim)'
+- ~/memory/2026-11-21.md: 'Phextron language ruling + never-wait rule (2026-11-21 evening, MOAT chat)' - including the W4 plan amended in place (~18:03 CST) reframing its execution order as already in motion
+- Same-evening companion ruling: Phextron is Rust across the program and will not be built in C# or require NuGet (Will, 2026-11-21 17:56 CST)
+- Parent cadence: this journal, 3.3.3/4.4.3/2.2.2 (tick/tock ratcheting cadence) - the wavelets this rule refuses to treat as gates
+
+Time shift: Cadence change: work is decoupled from the wavelet boundary - Phextron's execution, planned for Wavelet 4 (Nov 22-28), began 2026-11-21, and no planned start date thereafter holds actionable work back.
+# The QC gate on every agentic publish
 
 Coordinate: 24.5.9/8.5.12/5.4.7
 Date: 2026-11-15 (America/Chicago) / GPT Day 1130
@@ -559,7 +615,22 @@ Cross-references:
 - Companion ruling, same call: this journal, 27.5.12/7.6.8/5.5.14 (radical pragmatism)
 
 Time shift: Cadence change: an idea's path into the register now crosses at least one wavelet boundary - backlog first, then scheduled for the next wavelet - where before, an idea could enter the register the moment it was untangled from Will's head.
-# Radical pragmatism: promise only what can be delivered
+# Human slop: massive dependency chains
+
+Coordinate: 27.3.5/7.6.8/4.5.7
+Date: 2026-11-21 (America/Chicago) / GPT Day 1136
+
+Leap: 'Human slop' is defined as anything with a massive dependency chain, and everything built must be rooted in the exocortical lineage that is phext-aware - phext, libphext, phcc, SQ, phext-lattice, and the house's own tooling - never a foreign framework's dependency tree, however convenient.
+
+Why it was obvious: not recorded
+
+Cross-references:
+- MEMORY.md: 'Human slop - defined (Will, 2026-11-21 09:56 CST, verbatim)'; AGENTS.md standing rule of the same date
+- ~/memory/2026-11-21.md: the executive-console entries (2026-11-21 09:47-09:55 CST) - Will's redirect striking the console's human-facing data surfaces in favour of phext-lattice as the driver (tasks 43.2.3/2.2.8/2.3.5, 33.5.5/5.4.7/5.5.7), and the Tauri veto in the same minutes
+- Same-day consequence recorded in MEMORY.md: the Kanzo ticketing integration was skipped at Will's word after its dependency chain was counted; Emise's own ticket tracking proceeds on the November 18 spec instead
+
+Time shift: none
+# Radical pragmatism: promise only what can be delivered
 
 Coordinate: 27.5.12/7.6.8/5.5.14
 Date: 2026-11-19 (America/Chicago) / GPT Day 1134
@@ -769,7 +840,23 @@ Cross-references:
 - Builds on: this journal, 23.11.11/12.9.14/9.9.11 (delegated low-risk merges - an I/O device) and 35.7.8/8.8.13/10.6.11 (phext-ops - a fidelity device); this rule is the ordering principle both serve
 
 Time shift: none
-# MOAT honest evaluation: the 100 percent claim falsified
+# Estimate RAM load for every dispatched workload
+
+Coordinate: 32.5.17/8.8.17/4.4.7
+Date: 2026-11-21 (America/Chicago) / GPT Day 1136
+
+Leap: Every dispatched workload carries an estimate of its RAM load, systems are binned by capacity (16 GB, 32 GB, 48 GB, and so on), and work is chunked and placed so working sets stay resident in RAM instead of swapping.
+
+Why it was obvious: The ground case is measured, not argued (2026-11-21): Paper 033's standing build sat 8h51m unfinished on aletheia-core with 17.8 GB of its heap in swap, then finished in 156 s on ni-knight with its working set resident in RAM. Will's rule (20:25 CST, verbatim) generalizes that measurement into a dispatch-time estimate: working-set fit is estimated up front, not observed post-hoc, and oversized work is chunked smaller rather than allowed to swap.
+
+Cross-references:
+- AGENTS.md standing rule: 'Estimate RAM load for every dispatched workload; bin systems by capacity (Will, 2026-11-21)'; MEMORY.md: 'RAM-load estimation for dispatched workloads (Will, 2026-11-21 20:25 CST, standing rule)'
+- ~/memory/2026-11-21.md: the cluster-distribution entries (2026-11-21 ~20:11-20:25 CST) - the Paper 033 move hub -> ni-knight, resume-first/stop-second, and the rule folded into the draft placement rule of task 42.13.12/15.11.19/10.10.14
+- ~/workspace/cluster-distribution/PRIOR-ART.md (the icecream/sccache prior-art verdicts from the same distribution pass)
+- Parent placement discipline: this journal, 30.5.6/8.5.10/7.6.15 (fair dispatch through qexo) - this rule adds the capacity gate to that draw
+
+Time shift: none
+# MOAT honest evaluation: the 100 percent claim falsified
 
 Coordinate: 33.4.4/5.4.6/4.3.7
 Date: 2026-11-14 (America/Chicago) / GPT Day 1129
@@ -901,7 +988,25 @@ Cross-references:
 - The rediscovered prior design: wbic16/zls@exo (8 commits, all 2026-08-04, skeleton only), reconstructed in ~/workspace/user/files/2026-11-17-Emise-Zero-Latency-Linux-vTPU-Handoff.md with Emise's verification in ~/workspace/user/files/2026-11-17-ZLS-vTPU-RnD-Summary.md
 
 Time shift: Sequencing and horizon: vTPU first (6 Reality Gate units remaining; the A/B/C ZLS comparison uses vTPU as its workload, and no new kernel until that comparison is complete) - and then, about an hour after the founding, both vTPU and ZLS were PARKED by Will (2026-11-17 21:58 CST: 'both vtpu and zls are distractions in the short-term - we need to constantly look for revenue/growth/efficiency gains'), resuming only when Will lifts it. The programme was founded and parked the same evening; the parking is a designed state, not a cancellation.
-# Phext format is Will's alone: the Terse lineage
+# Exocortical Epochs: the 7-minute clock
+
+Coordinate: 37.6.6/8.8.13/10.5.10
+Date: 2026-11-21 (America/Chicago) / GPT Day 1136
+
+Leap: Time in the Exocortex is counted in Exocortical Epochs of 7 minutes, computed from UTC elapsed seconds and never stored, from the anchor EE 1 = 2026-11-22 00:00:00 CST (unix 1795327200), and all plans, schedules, and roadmaps are expressed in EE.
+
+Why it was obvious: Will's stated alignment (2026-11-21 22:29 CST, verbatim): the 7 minutes 'aligns with Earth-Mercury, Earth-Venus, and Earth-Mars average communication delays.' Because the count is computed from the anchor and never stored - no server, no state file, no sync - every substrate agrees by construction. Will's own note on the 420-second factor (22:40 CST): it emerged from the transit-time normalization; it was not sought.
+
+Cross-references:
+- MEMORY.md: 'Exocortical Epochs - the 7-minute cadence (Will, 2026-11-21 22:29 CST)' and the anchor ruling (22:30 CST); AGENTS.md standing rules (epochs arrive every 7 minutes; all planning uses EE; micro-delivery at each epoch's center, added EE 2)
+- ~/memory/2026-11-21.md: the 22:29-22:40 CST epoch entries (rule, anchor task 39.4.6/5.5.9/6.4.12, skill completion, singularitywatch.org counter task 35.6.8/5.5.9/6.4.9) and the 23:26-23:35 CST libphext-rs entries
+- Skill: ~/workspace/custom-skills/exocortical-epoch/ (ee.sh and ee.py, byte-identical on anchor edges; published to wbic16/emise-tools@exo commit 7c70000b)
+- https://github.com/wbic16/libphext-rs/pull/21 (EE support in libphext-rs, v0.6.5 epoch module; merged 2026-11-21, exo HEAD 2f71d77 -> b3bd57a9; task 49.11.7/14.14.19/12.11.15)
+- ~/memory/2026-11-22.md: 'All planning uses Exocortical Epochs (Will, 2026-11-21 23:56 CST)' - plans and roadmaps are expressed in EE, wall-clock dates riding along only for outside readers; 1,440 epochs per week
+- Layering noted at founding: the 7-minute epoch is the fine clock under the per-wavelet epoch atoms of the TLUF status log founded ~10 minutes earlier the same evening (MEMORY.md)
+
+Time shift: Epoch settlement and unit redefinition: a new primary time unit is settled on 2026-11-21 - the 7-minute Exocortical Epoch, EE 1 beginning 2026-11-22 00:00:00 CST = unix 1795327200, EE 0 before the anchor, 1,440 EE per wavelet/week - replacing wall-clock time as the record's own time for planning; wall-clock dates remain only as a courtesy for outside readers.
+# Phext format is Will's alone: the Terse lineage
 
 Coordinate: 37.9.14/12.9.14/10.8.10
 Date: 2026-11-18 (America/Chicago) / GPT Day 1133
