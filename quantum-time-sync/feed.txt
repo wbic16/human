@@ -1,0 +1,119 @@
+# Quantum Time Sync — fleet time-delta stream (public feed)
+#
+# PROVENANCE: this stream is published downstream of Will Bickford.
+# It is the time-delta record of his ranch fleet (19 nodes), produced
+# by his Quantum Time Sync protocol — task 26.6.11/8.7.14/8.6.10 —
+# and published as an entropy source under task 25.7.10/9.8.14/7.6.9,
+# at his direction, 2026-11-22. The fleet's clocks are the instrument;
+# the fleet's dispatched work is what stirs them (see README, Entropy).
+#
+# FORMAT: plain-text atoms, one per line, key=value. Each census round
+# is a section: a round header, one delta atom per node (offset_ms,
+# jitter_ms, ppm at recorded precision 0.001; 'none' = not reported
+# that round), then the round's election / consensus / blend atoms
+# carried verbatim from the protocol registers. Daily drift atoms
+# close the file. The feed is append-only: new rounds append; atoms
+# are never edited. Corrections in the source registers are marked
+# 'superseded' there; superseded atoms are withheld here and listed
+# below, never silently dropped and never fed to the entropy source.
+#
+# TIME: every round carries UTC and its Exocortical Epoch (EE).
+# EE = floor((unix - 1795327200)/420) + 1; EE 1 begins
+# 2026-11-22 00:00:00 CST. The epoch is computed from the instant,
+# never stored, so every reader in every timezone agrees.
+#
+# ENTROPY: entropy.txt, generated with this feed by publish.py,
+# carries one SHA-256-conditioned block per round plus the measured
+# min-entropy estimates and health checks for the stream.
+# EXPERIMENTAL ENTROPY SOURCE — NOT CERTIFIED FOR CRYPTOGRAPHIC USE.
+# Do not use this output as cryptographic key material.
+#
+# STATE OF THE STREAM: rounds=3 latest_census=2026-11-22T16:54:34Z latest_ee=94
+# WITHHELD (superseded in register): census=2026-11-22T16:21:29Z ee=89
+# WITHHELD (superseded in register): drift=2026-11-22T16:32:35Z
+
+round census=2026-11-22T16:24:07Z ee=90 utc=2026-11-22T16:24:07Z
+delta node=aletheia-core offset_ms=-15.675 jitter_ms=10.698 ppm=-24.612 eligible=yes
+delta node=ni-knight offset_ms=-0.452 jitter_ms=18.327 ppm=-1.775 eligible=yes
+delta node=plain-view offset_ms=-13.798 jitter_ms=67.279 ppm=-28.624 eligible=yes
+delta node=ashfall-haven offset_ms=-5.275 jitter_ms=62.664 ppm=-11.026 eligible=yes
+delta node=elven-path offset_ms=-27.000 jitter_ms=13.670 ppm=none eligible=no
+delta node=orchid-flow offset_ms=-17.606 jitter_ms=11.508 ppm=-16.326 eligible=yes
+delta node=halycon-vector offset_ms=-28.752 jitter_ms=142.326 ppm=22.564 eligible=yes
+delta node=logos-prime offset_ms=6.028 jitter_ms=48.868 ppm=-8.447 eligible=yes
+delta node=lighthouse-omen offset_ms=91.283 jitter_ms=107.219 ppm=1.040 eligible=yes
+delta node=free-fall offset_ms=-0.851 jitter_ms=252.207 ppm=81.089 eligible=yes
+delta node=rock-mountain offset_ms=53.405 jitter_ms=148.101 ppm=-148.102 eligible=yes
+delta node=west-lincoln offset_ms=34.299 jitter_ms=18.006 ppm=none eligible=no
+delta node=quacked-hill offset_ms=70.318 jitter_ms=81.076 ppm=-11.263 eligible=yes
+delta node=jacked-kite offset_ms=-199.953 jitter_ms=131.005 ppm=none eligible=no
+delta node=scroll-central offset_ms=-33.781 jitter_ms=52.133 ppm=-8.679 eligible=yes
+delta node=yeet-max offset_ms=-79.293 jitter_ms=89.580 ppm=none eligible=no
+delta node=kaleidoscope-one offset_ms=33.020 jitter_ms=65.578 ppm=65.499 eligible=yes
+delta node=moon-beam offset_ms=10.170 jitter_ms=123.857 ppm=40.594 eligible=yes
+delta node=uncanny-valley offset_ms=-0.328 jitter_ms=44.699 ppm=-28.845 eligible=yes
+delta node=great-white present=no reason=no-address-in-record-and-key-refused
+election 2026-11-22T16:26:04Z census=2026-11-22T16:24:07Z ee=90 master=ni-knight master_score_ms=19.118 master_ppm=-1.775 runner_up=orchid-flow runner_up_score_ms=20.126 rule=lowest-score eligible=15
+consensus 2026-11-22T16:32:33Z census=2026-11-22T16:24:07Z ee=90 formed=yes eligible=15 trimmed=3 trimmed_nodes=halycon-vector,rock-mountain,free-fall voters=12 offset_ms=-15.675 drift_ppm=-12.084 spread_ms=18.390 rule=trim20-inverse-variance-weighted-median
+blend 2026-11-22T16:47:55Z ee=93 census=2026-11-22T16:24:07Z alpha=0.350 gamma=0.500 raw_offset_ms=-15.675 raw_drift_ppm=-12.084 managed_offset_ms=-7.838 managed_drift_ppm=-6.042 tracking_error_ms=-7.838 correction_ms=7.838 bound_ms=10.0 state=seeded rule=ema-blend-to-network
+end-round
+
+round census=2026-11-22T16:46:09Z ee=93 utc=2026-11-22T16:46:09Z
+delta node=aletheia-core offset_ms=26.507 jitter_ms=12.867 ppm=none eligible=no
+delta node=ni-knight offset_ms=9.173 jitter_ms=15.065 ppm=0.465 eligible=yes
+delta node=plain-view offset_ms=-20.325 jitter_ms=56.547 ppm=-36.067 eligible=yes
+delta node=ashfall-haven offset_ms=-74.859 jitter_ms=68.150 ppm=none eligible=no
+delta node=elven-path offset_ms=-5.896 jitter_ms=12.265 ppm=-23.804 eligible=yes
+delta node=orchid-flow offset_ms=-17.606 jitter_ms=11.508 ppm=-16.326 eligible=yes
+delta node=halycon-vector offset_ms=-27.930 jitter_ms=80.568 ppm=15.745 eligible=yes
+delta node=logos-prime offset_ms=-9.857 jitter_ms=49.199 ppm=-12.056 eligible=yes
+delta node=lighthouse-omen offset_ms=-36.759 jitter_ms=71.230 ppm=-7.934 eligible=yes
+delta node=free-fall offset_ms=-0.851 jitter_ms=252.207 ppm=81.089 eligible=yes
+delta node=rock-mountain offset_ms=-99.490 jitter_ms=142.610 ppm=120.805 eligible=yes
+delta node=west-lincoln offset_ms=24.952 jitter_ms=19.929 ppm=-17.516 eligible=yes
+delta node=quacked-hill offset_ms=-0.848 jitter_ms=76.287 ppm=-11.470 eligible=yes
+delta node=jacked-kite offset_ms=131.500 jitter_ms=235.212 ppm=113.305 eligible=yes
+delta node=scroll-central offset_ms=-33.781 jitter_ms=52.133 ppm=-8.679 eligible=yes
+delta node=yeet-max offset_ms=-48.815 jitter_ms=175.858 ppm=163.539 eligible=yes
+delta node=kaleidoscope-one offset_ms=-26.665 jitter_ms=65.208 ppm=55.735 eligible=yes
+delta node=moon-beam offset_ms=105.469 jitter_ms=108.916 ppm=92.093 eligible=yes
+delta node=uncanny-valley offset_ms=-0.328 jitter_ms=44.699 ppm=-28.845 eligible=yes
+delta node=great-white present=no reason=no-address-in-record-and-key-refused
+election 2026-11-22T16:47:55Z census=2026-11-22T16:46:09Z ee=93 master=ni-knight master_score_ms=16.178 master_ppm=0.465 runner_up=orchid-flow runner_up_score_ms=20.126 rule=lowest-score eligible=17
+consensus 2026-11-22T16:47:55Z census=2026-11-22T16:46:09Z ee=93 formed=yes eligible=17 trimmed=3 trimmed_nodes=yeet-max,free-fall,jacked-kite voters=14 offset_ms=-5.896 drift_ppm=-10.274 spread_ms=17.873 rule=trim20-inverse-variance-weighted-median
+blend 2026-11-22T16:47:55Z ee=93 census=2026-11-22T16:46:09Z alpha=0.350 gamma=0.500 raw_offset_ms=-5.896 raw_drift_ppm=-10.274 managed_offset_ms=-6.126 managed_drift_ppm=-5.725 tracking_error_ms=-6.126 correction_ms=6.126 bound_ms=10.0 state=running rule=ema-blend-to-network
+end-round
+
+round census=2026-11-22T16:54:34Z ee=94 utc=2026-11-22T16:54:34Z
+delta node=aletheia-core offset_ms=-18.044 jitter_ms=28.906 ppm=-156.337 eligible=yes
+delta node=ni-knight offset_ms=-5.373 jitter_ms=none ppm=-10.028 eligible=no
+delta node=plain-view offset_ms=22.748 jitter_ms=41.084 ppm=399.679 eligible=yes
+delta node=ashfall-haven offset_ms=40.480 jitter_ms=none ppm=71.303 eligible=no
+delta node=elven-path offset_ms=0.006 jitter_ms=5.147 ppm=18.137 eligible=yes
+delta node=orchid-flow offset_ms=-56.073 jitter_ms=21.193 ppm=-78.257 eligible=yes
+delta node=halycon-vector offset_ms=30.724 jitter_ms=48.989 ppm=-252.964 eligible=yes
+delta node=logos-prime offset_ms=20.978 jitter_ms=42.569 ppm=-228.009 eligible=yes
+delta node=lighthouse-omen offset_ms=27.782 jitter_ms=37.559 ppm=99.790 eligible=yes
+delta node=free-fall offset_ms=62.341 jitter_ms=85.009 ppm=500.000 eligible=yes
+delta node=rock-mountain offset_ms=-28.967 jitter_ms=10.948 ppm=-89.736 eligible=yes
+delta node=west-lincoln offset_ms=-0.218 jitter_ms=27.546 ppm=-167.614 eligible=yes
+delta node=quacked-hill offset_ms=-38.408 jitter_ms=35.122 ppm=53.588 eligible=yes
+delta node=jacked-kite offset_ms=6.344 jitter_ms=226.257 ppm=119.500 eligible=yes
+delta node=scroll-central offset_ms=176.883 jitter_ms=133.375 ppm=none eligible=no
+delta node=yeet-max offset_ms=36.754 jitter_ms=63.129 ppm=-356.428 eligible=yes
+delta node=kaleidoscope-one offset_ms=143.092 jitter_ms=158.717 ppm=500.000 eligible=yes
+delta node=moon-beam offset_ms=105.469 jitter_ms=108.916 ppm=92.093 eligible=yes
+delta node=uncanny-valley offset_ms=11.017 jitter_ms=115.549 ppm=-413.931 eligible=yes
+delta node=great-white present=no reason=no-address-in-record-and-key-refused
+election 2026-11-22T16:56:10Z census=2026-11-22T16:54:34Z ee=94 master=elven-path master_score_ms=12.765 master_ppm=18.137 runner_up=rock-mountain runner_up_score_ms=51.534 rule=incumbent-ineligible-or-dark eligible=16
+consensus 2026-11-22T16:56:10Z census=2026-11-22T16:54:34Z ee=94 formed=yes eligible=16 trimmed=3 trimmed_nodes=uncanny-valley,free-fall,kaleidoscope-one voters=13 offset_ms=0.006 drift_ppm=4.616 spread_ms=17.331 rule=trim20-inverse-variance-weighted-median
+blend 2026-11-22T16:56:10Z ee=94 census=2026-11-22T16:54:34Z alpha=0.350 gamma=0.500 raw_offset_ms=0.006 raw_drift_ppm=4.616 managed_offset_ms=-3.981 managed_drift_ppm=-2.914 tracking_error_ms=-3.981 correction_ms=3.981 bound_ms=10.0 state=running rule=ema-blend-to-network
+end-round
+
+day date=2026-11-22 ee=91
+drift 2026-11-22T16:32:48Z day=2026-11-22 censuses=1 superseded_excluded=1 avg_drift_ppm=-12.084 avg_drift_ms_per_day=-1044.0 mean_consensus_offset_ms=-15.675 voters=12 eligible=15 verdict=within-tolerance
+end-day
+
+day date=2026-11-22 ee=94
+drift 2026-11-22T16:56:10Z day=2026-11-22 censuses=3 superseded_excluded=1 avg_drift_ppm=-5.914 avg_drift_ms_per_day=-511.0 mean_consensus_offset_ms=-7.188 voters=13 eligible=16 verdict=within-tolerance
+end-day
