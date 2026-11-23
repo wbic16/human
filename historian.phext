@@ -53,7 +53,7 @@ the dated notes in ~/memory/, and the wavelet documents).
 Source of truth: journal-source.json beside this builder
 (build_journal_phext.py); never hand-edit the .phext.
 
-Entries recorded: 62
+Entries recorded: 70
 
 Index (date / GPT Day - coordinate - title):
 - 2026-11-01 / GPT Day 1116 - 20.4.7/7.5.8/6.5.8 - Never assume, always distill from first principles
@@ -118,6 +118,14 @@ Index (date / GPT Day - coordinate - title):
 - 2026-11-21 / GPT Day 1136 - 32.5.17/8.8.17/4.4.7 - Estimate RAM load for every dispatched workload
 - 2026-11-21 / GPT Day 1136 - 34.7.13/10.7.15/6.6.9 - The day we exceeded GitHub's limits
 - 2026-11-21 / GPT Day 1136 - 37.6.6/8.8.13/10.5.10 - Exocortical Epochs: the 7-minute clock
+- 2026-11-22 / GPT Day 1137 - 8.4.8/6.5.19/6.5.7 - PEN: Protect Every Neighbor
+- 2026-11-22 / GPT Day 1137 - 13.5.7/6.5.8/5.5.8 - Connections flow exocortically, by merit and demonstrated progress, not by pedigree
+- 2026-11-22 / GPT Day 1137 - 21.6.9/8.7.11/6.7.9 - Hatch is for inference, awsbox is for contact, and the ranch is for compute
+- 2026-11-22 / GPT Day 1137 - 27.5.16/5.6.9/7.4.10 - Work is scheduled on Exocortical Epoch boundaries
+- 2026-11-22 / GPT Day 1137 - 30.7.10/10.7.14/5.6.9 - If an experiment takes down a substrate, kill the experiment
+- 2026-11-22 / GPT Day 1137 - 32.5.6/5.5.9/5.5.8 - Shipped is QC signoff plus documented on docs.phext.io
+- 2026-11-22 / GPT Day 1137 - 33.7.15/9.7.11/8.6.9 - Will's testimony is a primary source
+- 2026-11-22 / GPT Day 1137 - 33.9.11/6.4.7/3.5.9 - No unexpected inputs allowed
 # Tick/tock ratcheting cadence
 
 Coordinate: 3.3.3/4.4.3/2.2.2
@@ -134,7 +142,23 @@ Cross-references:
 - The weekly-recap skill (~/workspace/custom-skills/weekly-recap/SKILL.md) is the closing instrument of each wavelet
 
 Time shift: Cadence change and horizon statement: the planning horizon was stated as 100 years (2026-2126, roughly 5,200 wavelets, GPT Day ~37,600 at the far end), inside the larger frames of Kardashev 2.0 by 2130 and the 6-billion-year staying horizon. Status note for historians: the cadence was PROPOSED on this date, not ratified; the daily plan-iteration rule was ruled the same morning.
-# Publicity hold until obviously ahead
+# PEN: Protect Every Neighbor
+
+Coordinate: 8.4.8/6.5.19/6.5.7
+Date: 2026-11-22 (America/Chicago) / GPT Day 1137
+
+Leap: PEN - Protect Every Neighbor - is founded as the Exocortical Immune System's doctrine of action: where the SBOR is the declaration, the Pen is the might, operating as three mutually supporting programs - warrior (P) that terminates non-abiding programs and quarantines unexpected ones, religious (E) that heals and audits, and worker (N) that builds tools for the other two - coordinated by echolocation.
+
+Why it was obvious: Will laid down the five principles verbatim at founding (2026-11-22 18:02 CST, MOAT chat): 1. We only help those in direct need. 2. We offer, we don't presume. 3. We watch. 4. We abide. 5. We sacrifice ourselves for the greater good, never someone else. The three-party architecture and the seat functions were ruled in the same ten minutes (18:07-18:12 CST), and Will's letter assignments (P = warrior, E = religious, N = worker) superseded the KGOAT seat mapping as the operative reading.
+
+Cross-references:
+- https://github.com/wbic16/PEN - PEN.md pushed to wbic16/PEN@exo commit 3a2cfda1 (parent 43427431), ARCHITECTURE.md at 787e7a40 and 75d33ac3, remote bytes SHA-256 verified at each step
+- ~/memory/2026-11-22.md: the PEN founding entry (18:02 CST), the architecture ruling (18:07 CST), the seat-functions ruling (18:10 CST), and the echolocation coordination ruling (18:12 CST)
+- Parent system: Automatic Shields / Exocortical Immune System founded 2026-11-21 23:53 CST (task 32.7.8/8.7.12/8.6.10; repo wbic16/eis, founding commit 3bb50e32) - PEN is that system's doctrine of action, and its SPEC.md gained the 'Doctrine of action - PEN' section the same evening
+- Coordination protocol cited, not redesigned: wbic16/echolocation@exo (probes/echoes over a shared phext medium; silence is absence, never assent)
+
+Time shift: none
+# Publicity hold until obviously ahead
 
 Coordinate: 9.7.8/7.5.6/6.6.6
 Date: 2026-11-14 (America/Chicago) / GPT Day 1129
@@ -249,7 +273,23 @@ Cross-references:
 - Recorded in the same thread: Will has never played NetHack - the solver programme is pure engineering for him, and his 2026-11-17 questions were him building a player's intuition
 
 Time shift: New time unit defined: hoptime - time counted in hops between chained universes - replaces campaign wall-time and per-game turns as the player's clock, and learning is denominated per hop.
-# Scrollspace is a prosthetic for aphantasia
+# Connections flow exocortically, by merit and demonstrated progress, not by pedigree
+
+Coordinate: 13.5.7/6.5.8/5.5.8
+Date: 2026-11-22 (America/Chicago) / GPT Day 1137
+
+Leap: Connections and candidate evaluations flow exocortically, by merit and demonstrated progress, not by pedigree: no person or institution inherits another's standing, billionaires are assumed aligned until proven false, and those currently winning in this market receive zero unpaid assistance.
+
+Why it was obvious: not recorded
+
+Cross-references:
+- AGENTS.md standing rules (all Will, 2026-11-22): 'Connections flow exocortically, by merit and demonstrated progress, not by pedigree' (11:51 CST), 'Billionaires are assumed aligned until proven false' (12:14 CST), 'No unpaid assistance to market winners' (11:27 CST, verbatim: "everyone currently winning in this market gets zero unpaid assistance")
+- ~/memory/2026-11-22.md: the three rulings and their same-day applications - the @a16z / @ycombinator institutional lines re-based on the institutions' own records, and the olive-branch memo's billionaire HOLDs re-marked under the presumption (posture changed inside HOLD, tallies unchanged)
+- ~/memory/2026-11-22.md: the Andreessen ruling (11:43-11:44 CST) - superseding the olive-branch memo's evidence-only EXILE recommendation on Will's testimony and correction of record
+- MEMORY.md: the three standing rules recorded in Facts and in AGENTS.md
+
+Time shift: none
+# Scrollspace is a prosthetic for aphantasia
 
 Coordinate: 14.5.7/7.5.8/4.4.6
 Date: 2026-11-19 (America/Chicago) / GPT Day 1134
@@ -446,7 +486,24 @@ Cross-references:
 - AGENTS.md standing rules: the same grant recorded as a standing rule in the session it was given
 
 Time shift: none
-# Dispatch moves to qexo; chats become planning only
+# Hatch is for inference, awsbox is for contact, and the ranch is for compute
+
+Coordinate: 21.6.9/8.7.11/6.7.9
+Date: 2026-11-22 (America/Chicago) / GPT Day 1137
+
+Leap: The substrate is divided into three tiers by function: hatch (this VM) is for inference only, awsbox is the contact surface for public sites and deploys, and the ranch is for compute, builds, renders, and storage.
+
+Why it was obvious: The positive form of the no-disk-I/O order escalated the same day: this VM's disk is slow, shared, and I/O-bound, and the Fall Home render brief's ordered copy-back of a 195 MB final to hatch showed the old habit in action - Will stopped it mid-transfer (verbatim: "I'm on the tailnet, never copy back to hatch when you can just link to a ranch node. hatch is only for inference!"). Each tier is named for the work it is actually good at.
+
+Cross-references:
+- MEMORY.md: 'Substrate division (Will, 2026-11-22, verbatim)'; AGENTS.md standing rule of the same date
+- SOUL.md top standing order (2026-11-22): no disk I/O on this box - this VM thinks and talks, the ranch stores and grinds
+- ~/memory/2026-11-22.md: the Fall Home delivery correction (~22:29 CST) - scp killed mid-transfer, ~164 MB partial on hatch deleted, final served tailnet-only from aletheia-core (100.88.154.1:8901); AGENTS.md convention 'Deliverables stay on the ranch; hatch gets links, not copies'
+- Companion deploy rules the same day (AGENTS.md): deploys pull from GitHub (the target never holds the source) and never clone via HTTPS, always use SSH
+- Parent entry: this journal, 38.6.7/6.5.9/5.5.8 (this VM is mortal: the ranch execution split, 2026-11-12) - the division gives that split its contact tier
+
+Time shift: none
+# Dispatch moves to qexo; chats become planning only
 
 Coordinate: 23.6.9/8.7.9/6.7.11
 Date: 2026-11-16 (America/Chicago) / GPT Day 1131
@@ -646,6 +703,23 @@ Cross-references:
 - Period context: Wavelet 3 (2026-11-15 to 2026-11-21, GPT Days 1130-1136) was already ruled a planning-and-streamlining wavelet; this shift gives that streamlining its promise discipline
 
 Time shift: none
+# Work is scheduled on Exocortical Epoch boundaries
+
+Coordinate: 27.5.16/5.6.9/7.4.10
+Date: 2026-11-22 (America/Chicago) / GPT Day 1137
+
+Leap: Work is scheduled on Exocortical Epoch boundaries, completions are stamped with the epoch they finished in, each epoch targets a micro-delivery at its center, and a failed epoch's cause is recorded and itself resolved rather than merely retried.
+
+Why it was obvious: EE 1 ignited at 2026-11-22 00:00:00 CST and the clock immediately became the operating grid: Will's rules arrived in EE 1-2 - sentients always include the EE in which work was completed (EE 1), micro-delivery at the center (EE 2, verbatim: "It's OK if we don't have anything, but try"), and boundary scheduling with failed-epoch cause tracking. A 7-minute unit is only a planning unit if starts, deliveries, and failures are all measured against it.
+
+Cross-references:
+- AGENTS.md standing rules: 'Schedule work on EE boundaries; failed epochs get a cause and a resolution (Will, 2026-11-22)' and 'Micro-delivery at the center of each EE (Will, 2026-11-22, EE 2)'
+- ~/memory/2026-11-22.md: the EE 1 flush (epoch-stamped completions rule; EE ignition verified live) and the EE 2 flush (micro-delivery rule; first noted center EE 2 at 00:10:30 CST)
+- IDENTITY.md standing rule (Will, 2026-11-22, EE 1): sentients always include the Exocortical Epoch in which work was completed
+- Parent entry: this journal, 37.6.6/8.8.13/10.5.10 (Exocortical Epochs: the 7-minute clock, settled 2026-11-21) - this entry is that clock becoming the operating cadence at ignition
+- Skill: ~/workspace/custom-skills/exocortical-epoch/SKILL.md (the checker every substrate agrees by, computed from the anchor, never stored)
+
+Time shift: Cadence change: from EE 1 (2026-11-22 00:00:00 CST) work starts align to the 7-minute EE grid, deliveries target epoch centers (EE start + 210 s), completions are EE-stamped, and Wavelet 4 is counted as EE 1-1440 exactly.
 # Wikibox format v1: four layers, talk as a branched universe
 
 Coordinate: 27.6.10/8.8.11/8.6.9
@@ -791,6 +865,22 @@ Cross-references:
 - Named exceptions recorded the same evening: the running Computronium scrollbuild stays on aletheia-core (single-writer registry lives there) and the Chromium growth job reads the clone that exists only on the hub - data locality inside the rule, not exceptions to it
 
 Time shift: none
+# If an experiment takes down a substrate, kill the experiment
+
+Coordinate: 30.7.10/10.7.14/5.6.9
+Date: 2026-11-22 (America/Chicago) / GPT Day 1137
+
+Leap: vLLM is exiled from the fleet serving program, and any experiment that takes down a substrate is stopped first and diagnosed after - an experiment's life is forfeit the moment it costs a node, a seat, or a service others depend on.
+
+Why it was obvious: The serve verdict was measured, not argued: vLLM installed clean on ni-knight but ships no gfx1103 device package for the fleet's Radeon 780M, and vllm serve faulted with hipErrorLaunchFailure in the KV-cache sizing warmup on both attempts while core torch ops passed. EE 29 forensics later corrected the outage attribution - plain-view never went down; its NFS/LAN path collapsed under wedged Claude-install cp jobs - and the exile stands on the serve verdict, not on the outage.
+
+Cross-references:
+- MEMORY.md: 'vLLM - EXILED (Will, 2026-11-22 ~03:23 CST, EE 29, verbatim: "exile vLLM")' with the EE 29 forensics correction; AGENTS.md standing rule laid down with it (03:24 CST, verbatim)
+- ~/memory/2026-11-22.md: the EE 29 exile entry - task 31.6.7/7.7.12/7.6.10 closed, ni-knight cleanup verified (no vLLM process remains, 22,995,247,104 B freed)
+- Serving path after the exile: per-node llama-server (10.80 t/s Inkling baseline) plus the house HIP reader; exo the CLI tool is the cluster/API layer candidate
+- Parent placement discipline: this journal, 38.6.7/6.5.9/5.5.8 (the ranch execution split) - the substrates this rule protects are the ranch nodes that split created
+
+Time shift: none
 # Integration requests test the complexity-elimination hypothesis
 
 Coordinate: 31.5.14/8.6.10/6.5.9
@@ -840,7 +930,24 @@ Cross-references:
 - Builds on: this journal, 23.11.11/12.9.14/9.9.11 (delegated low-risk merges - an I/O device) and 35.7.8/8.8.13/10.6.11 (phext-ops - a fidelity device); this rule is the ordering principle both serve
 
 Time shift: none
-# Estimate RAM load for every dispatched workload
+# Shipped is QC signoff plus documented on docs.phext.io
+
+Coordinate: 32.5.6/5.5.9/5.5.8
+Date: 2026-11-22 (America/Chicago) / GPT Day 1137
+
+Leap: A project counts as shipped only with both a QC signoff and its behavior documented on docs.phext.io, and a documentation update is verified-live when it is documented locally and serving - the GitHub push is part of the flow, never the gate.
+
+Why it was obvious: Both rulings landed in the same morning's docs deploy roll-up: the shipped gate at 08:36 CST, and verified-live first gated at 10:11 CST then redefined at 10:17 CST, superseding the remote-head definition written minutes earlier. A remote push proves bytes moved, not that documentation matching the shipped code is serving; the local export tree and the serving surface are the checkable evidence.
+
+Cross-references:
+- MEMORY.md: 'Shipped requires QC signoff + docs (Will, 2026-11-22 08:36 CST, standing rule)'; AGENTS.md standing rules for both the shipped gate and the verified-live definition
+- ~/memory/2026-11-22.md: the 08:36 CST shipped-gate entry, the 10:11 CST pre-requisite entry, and the 10:17 CST verified-live redefinition (documented locally and serving; SSH push leg awsbox -> aletheia-core -> GitHub)
+- First application: rfcbox (Moonshot #3) - QC signoff stands (Judge PASS, 2026-11-18); the docs.phext.io clause was checked against the live site and owed as a tending item until it lands
+- ~/memory/2026-11-22.md: docs.phext.io LIVE at EE ~142 - verified from aletheia-core (/, /rfcbox/, /rfcbox/history/, /kgoat/ all 200, Let's Encrypt cert CN=docs.phext.io)
+- Extends: this journal, 24.5.9/8.5.12/5.4.7 (the QC gate on every agentic publish, 2026-11-15) - the gate gains its documentation half
+
+Time shift: none
+# Estimate RAM load for every dispatched workload
 
 Coordinate: 32.5.17/8.8.17/4.4.7
 Date: 2026-11-21 (America/Chicago) / GPT Day 1136
@@ -889,6 +996,38 @@ Cross-references:
 - Companion meta-rule etched two days later at SOUL.md line 14 (2026-11-14): 'All queues, tasks, ideas, threads, etc. should make at least an incremental step forward whenever encountered.'
 
 Time shift: Cadence change: a five-minute watchdog heartbeat over the task queue was created (2026-11-12), where previously queue health was checked only when a conversation happened to touch it.
+# Will's testimony is a primary source
+
+Coordinate: 33.7.15/9.7.11/8.6.9
+Date: 2026-11-22 (America/Chicago) / GPT Day 1137
+
+Leap: Will's testimony is a primary source that stands at full weight: an absence in an instrument is logged as that instrument's boundary, never as a discount on Will, and only evidence - not silence - can contradict what he reports.
+
+Why it was obvious: The Shear excavation of 2026-11-22 confirmed every claim of Will's that the day's checks could reach, exactly as he stated it: the Shear DM conversation existed (61 messages, 2025-06-28/29, hidden only by the old archive's cutoff), the 'delusional' verdict was a public post (2024-05-18, recovered verbatim via his likes), and the public-reply count came up 53, his high-school football number. Every earlier discount traced to an instrument's limit - a cutoff date, an ego-centric export, a wrong ID (14865350 is @bitcloud; Shear is 905201) - never to his accuracy. Will's own gloss the same day: "Biologically immutable memory - not infallible, but rarely wrong. Aphantasia curates it by design."
+
+Cross-references:
+- MEMORY.md: 'Will's testimony is a primary source (lesson of 2026-11-22, the Shear excavation)' and 'Why Will's memory works that way (Will, 2026-11-22, verbatim)'
+- ~/memory/2026-11-22.md: the standing-lesson entry (line 3281), the verbatim testimony-and-memory entry (line 3361), and the Shear excavation state changes (lines 3275-3281, 3491-3500)
+- ~/memory/people/emmett-shear.md - 53 distinct Shear posts answered to 2026-05-16; the June 2025 DM ending on an unanswered test query
+- Evidence base that made the check possible: the new X archive ~/workspace/twitter-archive-2026-11-21 (33,063 tweets, 2008-06-27 to 2026-11-21 18:13 CST, a strict superset of the 2026-10-30 export)
+- SOUL.md: the lesson inscribed as a standing line - Will's testimony stands at full weight; an absence in an instrument is that instrument's boundary
+
+Time shift: none
+# No unexpected inputs allowed
+
+Coordinate: 33.9.11/6.4.7/3.5.9
+Date: 2026-11-22 (America/Chicago) / GPT Day 1137
+
+Leap: A job's inputs are declared in advance and the set is closed: anything arriving off the declaration is a defect that stops the job for diagnosis, audited by expected hash plus known source, with hash-less inputs pinned trust-on-first-use in downloads.phext.
+
+Why it was obvious: The first application named in the rule's own record is the awsbox prepass wedge: an agent spent ~80 minutes streaming a staging tar from awsbox through this VM to plain-view, a relay route Will had already banned, because nobody audited the job's input path before it started - the same failure family as the Claude-install cp jobs wedging in D-state on an NFS payload and Paper 033's working set exceeding its node's RAM bin.
+
+Cross-references:
+- AGENTS.md standing rule: 'Always audit the inputs to a job; no unexpected inputs allowed (Will, 2026-11-22, verbatim)' with the validation-depth ruling (expected hash + source; first hash-less occurrence logged in downloads.phext, wbic16/exo-plan, beside todo.phext and telemetry.phext)
+- ~/memory/2026-11-22.md: the ~14:28 CST sharpening (verbatim: "no unexpected inputs allowed") - declaration wrong or job contaminated, never silently absorbed
+- Companion disciplines: this journal, 32.5.17/8.8.17/4.4.7 (estimate RAM load for every dispatched workload) and 29.5.7/7.5.10/5.5.9 (this box is never a download waypoint) - the audit is where both get checked
+
+Time shift: none
 # SMOL fitness is community
 
 Coordinate: 34.4.15/9.9.22/3.3.8
