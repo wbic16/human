@@ -40,6 +40,7 @@ Coordinate map:
   1.1.1/1.1.1/1.1.19 Round 18 — the Long Game is neutral; the harm is repaired
   1.1.1/1.1.1/1.1.20 Round 19 — the past at full speed: the headless runner stands
   1.1.1/1.1.1/1.1.21 Round 20 — 105,000 matches: the matrix and the equivalence classes
+  1.1.1/1.1.1/1.1.22 Round 21 — composition: v11, field-stability, seat geometry, substrate speed, the one-minute rule
   1.1.1/1.1.1/2.1.1  Universe v3a — mid-tier elimination everywhere
   1.1.1/1.1.1/3.1.1  Universe v3b — neighbor lethal 100, others 25
   1.1.1/1.1.1/4.1.1  Universe v3c — face-pressure tilt
@@ -105,7 +106,7 @@ CONSTRUCTION -> Fiction. Statuses change only on receipts,
 along legal edges, and every transition is recorded here.
 False claims are kept visible, never deleted. No pruning: the
 minimum is structure, never content. Counts at this writing:
-True 14, False 7, Unknown 10, Fiction 2 (EE 388: the failure shelf distilled; U19 entered at design time; EE 386: U17 refuted — the package does not travel to Mage; EE 384: T15 graduated, U17/U18 entered, U5b measured; EE 383: U16 entered at design time; EE 375 MVO pass — the zero-uncertainty programme's first harvest: four claims closed, four new ones discovered at the frontier).
+True 14, False 7, Unknown 11, Fiction 2 (EE 417: U20 entered on screen receipts; EE 388: the failure shelf distilled; U19 entered at design time; EE 386: U17 refuted — the package does not travel to Mage; EE 384: T15 graduated, U17/U18 entered, U5b measured; EE 383: U16 entered at design time; EE 375 MVO pass — the zero-uncertainty programme's first harvest: four claims closed, four new ones discovered at the frontier).
 
 TRUE
   T1 DEMOTED at EE 369 — see Unknown U6. Its receipt was
@@ -322,6 +323,17 @@ UNKNOWN
      mage-stock 176-131 over 307 decisive (ref 693) — the
      gate binds and helps in the local field. Screen
      evidence only; hosted decides.
+  U20 "v11 (the champion package composed with the team
+     protocol on the Warrior deck) beats v6 in the hosted
+     pair format." OPEN — entered EE 417 on screen
+     receipts. Screen (Round 21, local, pair format):
+     v11 1,911 — v6 1,055 over 2,966 decisive, consistent
+     across Warrior/Archer/Mage field flavors (620-364,
+     662-332, 629-359). The protocol's value is roster-
+     geometry-dependent: partners are guaranteed and
+     correctly seated in the test format; a lone league
+     seat gains nothing from it. A hosted pair series
+     decides.
   U15 "The Archer and Splash stocks differ (class edge)."
      OPEN, no edge detected — xreq_154e2c7e + xreq_a259329c:
      Splash 9, Archer 8 over 17 decisive.
@@ -987,7 +999,19 @@ deck is not an advance over the champion on either
 surface. U19 — v10 176, mage-stock 131: the Long Game
 gate helps locally. U18 — v9 309, splash-stock 58:
 package strongly positive in a soft local field;
-hosted parity stands until hosted evidence moves.UNIVERSE v3a — mid-tier elimination everywhere (EE 368-369)
+hosted parity stands until hosted evidence moves.Round 21 — Composition (EE 417)
+Will asked: run another round — do you learn more? Yes, when the round is aimed at what the last one could not see. Three questions, 45,000 matches, three rotating field flavors (Warrior/Archer/Mage reference in the fifth seat), per-seat recording, zero errors.
+
+v11 — THE COMPOSITION. The champion package and the team protocol are the lineage's two strongest mechanisms; v11 is v6 plus the protocol, ported hunk-for-hunk (the v6-to-v11 diff is exactly the protocol's 47 lines, verified). Screen verdict: v11 beats v6 head-to-head 1,911-1,055 over 2,966 decisive pair outcomes (64%), and the margin holds in every field flavor — Warrior 620-364, Archer 662-332, Mage 629-359. v11 tops the fitness table at ~80% in all three flavors. Registered as U20 (Unknown): the screen ran in the pair format where partners are guaranteed and correctly seated; a hosted pair series decides, and a lone league seat would gain nothing from the protocol.
+
+FIELD-STABILITY. The fitness order — v11, v6, v7, v5-team, v3c, starter — is identical in all three field flavors. Locally, the ranking is not a field artifact. (The F7 exception stands apart: the package's harm on Mage needed the veteran field specifically, not just a different reference bot.)
+
+SEAT GEOMETRY, MEASURED LOCALLY. Pooled over 45,000 matches: seat 0 won 30.8%, seats 1-3 won 21.9/20.0/19.6%, the field seat 7.7%. A seat-0 premium exists on this surface too, at roughly half the hosted magnitude — turn order inside the round, not only first move.
+
+SUBSTRATE SPEED, MEASURED (Will: look for substrate speedups; EE 417). Release flags do not help: a -d:danger --opt:speed build ran 5-9% SLOWER than the stock build in clean sequential and parallel tests — the stock build stands. Match length: median 173 ticks, p99 244, max 296 in 500 sampled — the 3,000-tick cap is a tail-trimmer for pathological matchups, not a speed lever. Rates: ~129 matches/sec/node at 14 slots (per-match cost nearly doubles under parallel load — contention, ~55% scaling efficiency). The remaining lever is structural: an in-process batch driver looping matches inside one process, killing per-match process spawn and sharing loaded programs. Not yet built.
+
+THE ONE-MINUTE RULE (Will, EE 417): every round plays as many matches as fit in one minute at ranch pace. Calibration at current orchestration: ~60,000 matches end-to-end (Round 20's proven 105,000 in 106 s); pure compute ceiling ~147,000/min. Rounds are sized to the minute from here.
+UNIVERSE v3a — mid-tier elimination everywhere (EE 368-369)
 
 Design: one change from champion v1 — a swing that eliminates
 ANY hero scores 25 (playerLife(o) check), above ordinary hero
