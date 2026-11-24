@@ -31,6 +31,7 @@ Coordinate map:
   1.1.1/1.1.1/1.1.10 Round 9 — the stack holds; v6 champion
   1.1.1/1.1.1/1.1.11 Round 10 — TLUF scorecard; zero-uncertainty programme
   1.1.1/1.1.1/1.1.12 Round 11 — the character space, fully mapped
+  1.1.1/1.1.1/1.1.13 Round 12 — the harvest; the field is two tribes
   1.1.1/1.1.1/2.1.1  Universe v3a — mid-tier elimination everywhere
   1.1.1/1.1.1/3.1.1  Universe v3b — neighbor lethal 100, others 25
   1.1.1/1.1.1/4.1.1  Universe v3c — face-pressure tilt
@@ -96,7 +97,7 @@ CONSTRUCTION -> Fiction. Statuses change only on receipts,
 along legal edges, and every transition is recorded here.
 False claims are kept visible, never deleted. No pruning: the
 minimum is structure, never content. Counts at this writing:
-True 9, False 3, Unknown 7, Fiction 1 (EE 372 MVO pass; recount — the EE 371 line understated Unknown).
+True 13, False 6, Unknown 7, Fiction 2 (EE 375 MVO pass — the zero-uncertainty programme's first harvest: four claims closed, four new ones discovered at the frontier).
 
 TRUE
   T1 DEMOTED at EE 369 — see Unknown U6. Its receipt was
@@ -143,6 +144,23 @@ TRUE
      veteran seat 4 won 33. Among same-policy seats, seat 0
      out-wins the others roughly 3-to-1. Position is worth more
      than either heuristic change tested so far.
+  T11 "Three of the field's sampled veterans (salvo,
+     macromackie, A-aron) run a Mage-hero Archer-splash
+     engine: class-trinket leveling to discount off-class
+     Archer cards, Mage draw (Plan/Study/Overwork) as the
+     motor." VERIFIED — v2scout traces, xreq_6e4d40d5:
+     33-39% of their plays are their own class's precon
+     cards; the Archer trinket is their most-played card.
+  T12 "v3c beats v1." VERIFIED — two consistent tests:
+     18-11 (Round 3) and the Z-programme 20-10 (xreq_8d9f1d44
+     + xreq_7b53ca58). Cumulative 38-21 over 59 decisive.
+     Graduated from U4 at EE 375.
+  T13 "The Warrior stock beats the Mage stock (class edge)."
+     VERIFIED — xreq_cef4ce79 + xreq_b8f594fe: 10-2 over 12
+     decisive episodes of the 40.
+  T14 "The Warrior stock beats the Splash stock (class
+     edge)." VERIFIED — xreq_38208a33 + xreq_4aa9fc94:
+     13-1 over 14 decisive episodes of the 40.
 
 FALSE (kept, with receipts)
   F1 "v2 (lethal judged per-target at flat 100) improves on v1."
@@ -152,40 +170,46 @@ FALSE (kept, with receipts)
      the winner held top hero damage in only ~1/3 of 12 games,
      and two veterans dealt the most hero damage and lost.
      (T4 stands: it won stilt two games. A style, not a law.)
+  F4 "v3a beats v1." REFUTED — Z-programme (xreq_a28ad01f +
+     xreq_48b46243): 19-24 against; cumulative 38-39 over 77
+     decisive episodes. A claim tested to a dead heat at
+     this n is refuted as an advance: any true edge is
+     smaller than this instrument resolves.
+  F5 "v1 beats the pristine Archer starter." REFUTED —
+     Z-programme (xreq_ea7db929 + xreq_92721d93): 22-22;
+     cumulative starter 38, v1 32 over 70 decisive. The
+     founding claim of the lineage closes False at EE 375.
+  F6 "The veteran field's edge is deck composition, not
+     attack targeting." REFUTED as stated — the field is
+     bimodal (xreq_6e4d40d5 traces): the splash builders
+     (T11) are composition; but radogost (100% precon
+     plays), stilt (100%) and orch-7 (94%) win with the
+     stock deck, where composition cannot be the edge.
+     Its honest children live at T11 and U5b.
 
 UNKNOWN
   U1 "v2 failed because flat-100 spends big swings finishing
      weak heroes instead of killing threatening minions."
      SYNTHESIS — Emise's inference from F1 + the swing scoring;
      plausible, unmeasured. Labelled, not believed.
-  U2 "v3a (elimination of any hero at 25) beats v1." OPEN —
-     tested (xreq_b431294f + xreq_40b57886, 40 episodes):
-     combined v3a 19, v1 15, random 6, but the legs disagreed
-     (17-3 with seat 0, 2-12 without): at 20 episodes per leg
-     the seat-0 effect (T6) swamps a modest variant effect.
-     Inconclusive by design limits; stays OPEN pending a
-     higher-n or seat-rotated retest.
-  U6 "v1 beats the pristine Archer starter." OPEN, evidence
-     now AGAINST — demoted from True (was T1) at EE 369 (seat-0
-     confound, T6). Seat-balanced retest (xreq_6fedff14 +
-     xreq_e96a38f0, 40 episodes, $0.099): starter 16, v1 10,
-     random 14; starter won its seat-0 leg 11-4 and near-tied
-     v1's seat-0 leg 5-6. Not a formal refutation at this n
-     (16 of 26 decisive), so the claim stays OPEN — but the
-     burden has flipped: nothing unconfounded says v1 exceeds
-     the bundled bot at all. Consequence: the bracket re-anchors
-     on the starter; v3b/v3c anchor tests running (Round 4).
+     EE 375 measurement (xreq_6e4d40d5, v2scout instrumented,
+     8 episodes vs the veteran field): the instrument parsed
+     cleanly but recorded 11 hero swings by v2 and ZERO
+     lethal ones — the mechanism never had the opportunity
+     to fire in this sample. Null result recorded; the claim
+     stays OPEN, and a decisive measurement now needs v2 in
+     stronger seats or a much larger n.
+  U2 CLOSED at EE 375 — see False F4.
+  U6 CLOSED at EE 375 — see False F5. (Demoted from T1 at
+     EE 369 on the seat-0 confound; the Z-programme's +60
+     episodes finished the question.)
   U3 "v3b (neighbor lethal 100, other heroes at 25) beats v1."
      OPEN — tested (xreq_d96f76a2 + xreq_cfc84e67, 40 episodes,
      $0.199): v3b 18, v1 12, random 10; won BOTH seat legs
      (10-5, 8-7). Direction consistent, margin inside chance
      (18 of 30 decisive). Leading candidate; confirmation run
      at higher n is the legal path to True.
-  U4 "v3c (hero swings at 10 + 2*power) beats v1." OPEN —
-     tested (xreq_4fcb50e2 + xreq_97938efd, 40 episodes,
-     $0.180): v3c 18, v1 11, random 11; won both legs (11-5,
-     7-6). Same standing as U3: consistent direction, no
-     receipt strong enough for True yet.
+  U4 GRADUATED at EE 375 — see True T12.
   F3 "v3b beats the pristine Archer starter." REFUTED —
      anchor test (xreq_726f3ec8 + xreq_fedb848e, 40 episodes,
      $0.108): starter 17, v3b 9, random 14. Same standard as
@@ -193,9 +217,13 @@ UNKNOWN
      beaten 65/35. v3b's wins over v1 (U3) stand as recorded;
      against the honest baseline it does not advance.
   U7 GRADUATED at EE 371 — see True T7.
-  U5 "The veteran field's edge is deck composition, not attack
-     targeting." OPEN — winners' played cards in scout traces
-     skew to the same precon pool; untested either way.
+  U5 CLOSED at EE 375 — see False F6; children at T11, U5b.
+  U5b "The pure-precon veterans' edge (radogost, stilt,
+     orch-7) is piloting — targeting and timing — rather
+     than composition." OPEN — spun out of F6 at EE 375.
+     Their decks are stock (T11's complement), so the edge
+     must live in decisions; measuring it needs a
+     decision-level comparison, not yet built.
   U8 "The Warrior precon (stock heuristics) beats the Archer
      starter." OPEN, leaning True — tested (xreq_29f21a17 +
      xreq_f9cb0a21, 40 episodes, $0.130): Warrior 14, starter
@@ -204,18 +232,45 @@ UNKNOWN
      nonetheless the strongest untested lever left, and the
      port test (champion heuristics on the Warrior deck) is
      the natural next universe.
+     EE 375 Z-programme (xreq_f2129237 + xreq_1de1b33f, 100
+     episodes): Warrior 31, starter 24, random 45 — legs
+     split hard (24-5 with the seat-0 pair, 7-19 without;
+     T6 again). Cumulative 45-31 over 76 decisive episodes
+     across two consistent tests. One more series from
+     graduation either way; stays OPEN by a hair.
   U9 GRADUATED at EE 371 — see True T8.
   U10 "The team protocol adds wins beyond the v3c heuristic
      edge alone." OPEN — isolation test defined, not yet run:
      v5 (coordinated v3c pair) vs an independent v3c pair,
      family metric, seat-swapped.
+     EE 375 Z-programme (xreq_fe3a5fff + xreq_65703a0c, 40
+     episodes): team pair 20, independent v3c pair 15,
+     veteran 5; the team won both legs (12-8, 8-7). The
+     isolated protocol effect is real in direction and
+     smaller than T8's headline; ~80 more episodes settle
+     it. Stays OPEN.
   U11 GRADUATED at EE 372 — see True T9.
   U12 GRADUATED at EE 372 — see True T10.
+  U13 "The Splash stock beats the Mage stock (class edge)."
+     OPEN — xreq_f84febc2 + xreq_f7693c70: 9-4 over 13
+     decisive; direction only.
+  U14 "The Archer and Mage stocks differ (class edge)."
+     OPEN, no edge detected — xreq_821ac393 + xreq_fecffb08:
+     Archer 9, Mage 7 over 16 decisive.
+  U15 "The Archer and Splash stocks differ (class edge)."
+     OPEN, no edge detected — xreq_154e2c7e + xreq_a259329c:
+     Splash 9, Archer 8 over 17 decisive.
 
 FICTION
   X1 The round pictures (little archer, veteran banners, flame
      keeper with a logbook). CONSTRUCTION — deliberate narrative
      framing, held as construction, never as record.
+  X2 The cards.md ghost cards (Positioning, Trap, Formation,
+     Poacher, the Mastery cycle, Archery Instructor,
+     Swordmaster, Scholar, neutral Minion). CONSTRUCTION —
+     design notes in the game's repo that do not ship in
+     baseset.nim (verified EE 374). Filed so no future round
+     tunes against cards that do not exist.
 
 TRANSITIONS LEDGER
   EE 368: registry founded. U2/U3/U4 entered as OPEN at test
@@ -234,7 +289,17 @@ TRANSITIONS LEDGER
   tally. T1 demoted True -> Unknown (now U6): receipt found
   confounded by T6; demotion recorded, claim kept, retest
   launched. U2 tested, result inconclusive, stays OPEN with
-  the design limit recorded on its entry.ROUND 4 — The retest; the bracket re-anchors (EE 369)
+  the design limit recorded on its entry.
+  EE 375: the zero-uncertainty programme's first harvest
+  (348 + 200 episodes). U4 -> True (T12); U2, U6 -> False
+  (F4, F5) at the dead-heat standard; U5 -> False as stated
+  (F6), children T11 (True) and U5b (Unknown) spun out;
+  class edges entered: T13, T14 True; U13, U14, U15
+  Unknown. U1 measured null (instrument found no instance
+  of the mechanism); U8 and U10 narrowed, still open.
+  Counts: True 13, False 6, Unknown 7, Fiction 2. Four
+  closed, four discovered — the frontier moved, it did
+  not shrink.ROUND 4 — The retest; the bracket re-anchors (EE 369)
 
 The seat-balanced retest of the founding claim (U6) completed:
 starter 16, v1 10, random 14 over 40 episodes. Read together
