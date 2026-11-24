@@ -43,6 +43,7 @@ Coordinate map:
   1.1.1/1.1.1/1.1.22 Round 21 — composition: v11, field-stability, seat geometry, substrate speed, the one-minute rule
   1.1.1/1.1.1/1.1.23 Round 22 — interactions: the protocol's native deck, U20 hardens, Burnout (read the card)
   1.1.1/1.1.1/1.1.24 Round 23 — saturation: the pricing surface at the champion point is exhausted
+  1.1.1/1.1.1/1.1.25 Round 24 — the champion succession: v16, the league form of v11, submitted
   1.1.1/1.1.1/2.1.1  Universe v3a — mid-tier elimination everywhere
   1.1.1/1.1.1/3.1.1  Universe v3b — neighbor lethal 100, others 25
   1.1.1/1.1.1/4.1.1  Universe v3c — face-pressure tilt
@@ -341,6 +342,17 @@ UNKNOWN
      v11 beat v6 2,356-1,245 (65.4% of decisive), against
      64.4% under reference fields. Not a soft-field
      artifact on this surface.
+     League succession (EE 430): the pair-format crown
+     does not enter the arena as-is — in a lone league
+     seat the partner arithmetic would crown a stranger
+     (partial immunity for one opponent, helpful effects
+     allowed on their minions). The league form, v16,
+     keeps the protocol's focus-fire with partner rules
+     inert (one hunk: partner = -1). Lone-seat screen
+     (10,000 matches, rotating seats, field of v6 and
+     the three references): v16 took 52.1% of wins, v6
+     33.2%. Submitted as champion on Will's word
+     (sub_8d445f1, pending placement at inscription).
   U21 "The reach deck (v7's Bolt-splash width build)
      improves the champion-plus-protocol composition
      (v12 over v11)." OPEN — entered EE 419 with its
@@ -1076,6 +1088,14 @@ v13 AND THE CARD NOT READ. The Mage deck swap (Burnout in, Plan/Control trimmed)
 Both probes landed in the champion's equivalence class. Against v11: v14 took 49.6% of 13,331 decisive, v15 took 49.7% — parity. Against v6 both took 63.0%, v11's own mark. And their tallies against shared opponents are near-identical to each other (one pair byte-identical; the rest within 3 matches in 4,500) — the same signature Round 20 found for lethal pricing, now on the protocol's own tuning knobs. The mechanism is the same: a price that almost never changes the argmax is not a lever. At +3 the focus target was already the chosen swing nearly everywhere; chip swings were already the last resort.
 
 The finding is the boundary of an era: at the champion point, the pricing surface is saturated. Fifteen variants in, every price we know how to turn has been turned. What remains is structural — the score function (which card to play; never yet modified by any variant), the protocol's shape (its focus definition, its partner geometry), a Mage-native scorer — or hosted evidence on the claims the screen cannot move (U20 above all). Registered as U23 and U24.
+Round 24 — The Champion Succession (EE 430)
+Will: submit new champion. The new champion by evidence is v11 — and v11 does not enter the arena in its pair-format form. Its partner arithmetic (selfPlayer +/- 2) assumes our test rosters; in a lone league seat it would designate a stranger as partner: that opponent gains partial immunity from our harmful targeting while outsiders live, and our helpful effects may land on their minions. The protocol's pair half is roster-geometry; it stays home.
+
+What enters is v16, the league form: v11 with one hunk changed — partner forced to -1, so no one is protected and no stranger is buffed — keeping the half of the protocol that needs no partner: focus-fire on the highest-life outsider, priced into both swing (+3) and card targeting (+2), over the champion package on the flat Warrior deck.
+
+The adaptation was screened before it was submitted, in the format it will actually play: lone seats, rotating through all five positions, a field of v6 and the three reference bots, 10,000 matches. v16 took 52.1% of wins; v6 took 33.2%; the references took 1.8-9.5%. Fair share is 20%.
+
+Uploaded as emise-cac-v16:v1 (policy version adae4ee8-c75c-40ed-9585-2a6963bac8fa) and submitted to league_ad6dc809 on Will's word: submission sub_8d445f1, auto-champion always, placement pending at inscription. v6 (sub_77d6ffb1, placed) holds the seat until v16's placement settles. The daily arena sweep now tracks v16 as champion.
 UNIVERSE v3a — mid-tier elimination everywhere (EE 368-369)
 
 Design: one change from champion v1 — a swing that eliminates
