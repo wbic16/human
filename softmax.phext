@@ -36,6 +36,7 @@ Coordinate map:
   1.1.1/1.1.1/1.1.15 Round 14 — v7 Reach, designed from first principles
   1.1.1/1.1.1/1.1.16 Round 15 — fractal expansion across three times
   1.1.1/1.1.1/1.1.17 Round 16 — the package does not travel to Mage
+  1.1.1/1.1.1/1.1.18 Round 17 — the flux capacitor: lessons of the False shelf
   1.1.1/1.1.1/2.1.1  Universe v3a — mid-tier elimination everywhere
   1.1.1/1.1.1/3.1.1  Universe v3b — neighbor lethal 100, others 25
   1.1.1/1.1.1/4.1.1  Universe v3c — face-pressure tilt
@@ -101,7 +102,7 @@ CONSTRUCTION -> Fiction. Statuses change only on receipts,
 along legal edges, and every transition is recorded here.
 False claims are kept visible, never deleted. No pruning: the
 minimum is structure, never content. Counts at this writing:
-True 14, False 7, Unknown 9, Fiction 2 (EE 386: U17 refuted — the package does not travel to Mage; EE 384: T15 graduated, U17/U18 entered, U5b measured; EE 383: U16 entered at design time; EE 375 MVO pass — the zero-uncertainty programme's first harvest: four claims closed, four new ones discovered at the frontier).
+True 14, False 7, Unknown 10, Fiction 2 (EE 388: the failure shelf distilled; U19 entered at design time; EE 386: U17 refuted — the package does not travel to Mage; EE 384: T15 graduated, U17/U18 entered, U5b measured; EE 383: U16 entered at design time; EE 375 MVO pass — the zero-uncertainty programme's first harvest: four claims closed, four new ones discovered at the frontier).
 
 TRUE
   T1 DEMOTED at EE 369 — see Unknown U6. Its receipt was
@@ -301,6 +302,12 @@ UNKNOWN
      random 28 (xreq_cbdc222b + xreq_281d9494); legs split
      (4-1, 3-4). Parity — the package is neutral on Splash.
      Stays OPEN.
+  U19 "v10 (the Long Game: Mage-native swing pricing —
+     face pressure gated on board advantage, lethal priced
+     conditionally) beats the Mage stock." OPEN — entered
+     at design time, EE 388, derived from the failure shelf
+     (F7's substrate lesson, F1's conditional pricing).
+     Receipts pending: xreq_f7c88ef0 + xreq_ac90de51.
   U15 "The Archer and Splash stocks differ (class edge)."
      OPEN, no edge detected — xreq_154e2c7e + xreq_a259329c:
      Splash 9, Archer 8 over 17 decisive.
@@ -822,7 +829,45 @@ Archer + Warrior (verified), Splash (neutral), Mage
 (harmful). Evolution continues along the boundary, not
 through it: the next Mage point, if any, needs a heuristic
 native to utility minions — a design problem, entered on
-the frontier list, not an import.UNIVERSE v3a — mid-tier elimination everywhere (EE 368-369)
+the frontier list, not an import.ROUND 17 — the flux capacitor: lessons of the False shelf (EE 388)
+
+Will's direction: learn from the failures, 88 mph, flux
+capacitor. The False shelf is the capacitor — seven kept,
+receipted refutations store the charge that lets the
+programme jump instead of restarting at zero each round.
+Distilled, one lesson per failure:
+
+  F1 (v2, flat-100 lethal): a uniform price on a
+  conditional good spends your best swings on dying
+  heroes. LESSON: price conditionally or don't price.
+  F3 (v3b, neighbor lethal): the ring is not a duel;
+  enemyPlayer rotates. LESSON: never optimize for a
+  geometry the arena doesn't have.
+  F4 (v3a, elimination at 25): tested to a dead heat —
+  a price that fires everywhere decides nowhere.
+  LESSON: a heuristic's value is in its selectivity.
+  F5 (v1, the founding claim): the "advance" was seat-0
+  noise. LESSON: anchor on the honest baseline; most
+  advances are measurement artifacts until seat-balanced.
+  F6 (the blanket veteran claim): true for one tribe,
+  false for the other. LESSON: partition before you
+  generalize — the average of two tribes is a fiction.
+  F7 (package on Mage): repricing swings harms a deck
+  whose minions aren't swingers. LESSON: a heuristic has
+  a native substrate; ask what the pieces are FOR first.
+
+Applied at speed, the same hour: v10-mage-long
+(emise-cac-v10-mage-long:v1, policy 5fba5f86) — a
+Mage-native package built from F7 + F1: hero swings at
+stock patience (4 + 2p) unless ahead on board
+(selfBoardSize >= enemyBoardSize -> 10 + 2p), lethal
+always 100. One hunk; deck byte-identical. Claim U19
+entered at design time; 40 episodes running
+(xreq_f7c88ef0, xreq_ac90de51) against the honest
+baseline, Mage stock — per F5.
+
+88 mph is a method, not a mood: the failures were
+already paid for; the lessons compound only if spent.UNIVERSE v3a — mid-tier elimination everywhere (EE 368-369)
 
 Design: one change from champion v1 — a swing that eliminates
 ANY hero scores 25 (playerLife(o) check), above ordinary hero
