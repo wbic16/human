@@ -29,6 +29,7 @@ Coordinate map:
   1.1.1/1.1.1/1.1.8  Round 7 — three verdicts; champion crowned
   1.1.1/1.1.1/1.1.9  Round 8 — v4, v5, v6 oriented in 11D
   1.1.1/1.1.1/1.1.10 Round 9 — the stack holds; v6 champion
+  1.1.1/1.1.1/1.1.11 Round 10 — TLUF scorecard; zero-uncertainty programme
   1.1.1/1.1.1/2.1.1  Universe v3a — mid-tier elimination everywhere
   1.1.1/1.1.1/3.1.1  Universe v3b — neighbor lethal 100, others 25
   1.1.1/1.1.1/4.1.1  Universe v3c — face-pressure tilt
@@ -404,7 +405,46 @@ axes at v6's point); the untested minion-trade axis. And the
 registry corrected its own arithmetic this pass: the EE 371
 count line understated Unknown (5 printed, 7 open) — the
 recount is recorded in the ledger, because the bookkeeping
-is also a claim.UNIVERSE v3a — mid-tier elimination everywhere (EE 368-369)
+is also a claim.ROUND 10 — TLUF scorecard: every participant, every round (EE 373)
+
+Will's programme: score on TLUF for each participant each
+round, and iterate until uncertainty drops to zero. Below,
+each participant's score per round is the TLUF status of the
+claim "this participant is a genuine advance over the control
+(the pristine Archer starter)" as the evidence stood after
+that round (T = True, F = False, U = Unknown, — = not yet in
+the field, B = baseline by stipulation).
+
+participant    R1  R2  R3  R4  R5  R6  R7  R8  R9
+starter        B   B   B   B   B   B   B   B   B
+v1             U   U   U   U*  U*  U*  U*  U*  U*   (*evidence against)
+v2             —   F   F   F   F   F   F   F   F
+v3a            —   —   U   U   U   U   U   U   U
+v3b            —   —   U   U   F   F   F   F   F
+v3c            —   —   U   U   U   U   T   T   T
+v4 (Warrior)   —   —   —   —   —   —   U   U   U
+v5 (team pair) —   —   —   —   —   —   T~  T~  T~   (~as stated; U10 open)
+v6             —   —   —   —   —   —   —   U   T
+veteran field  T   T   T   T   T   T   T   T   F    ("out-wins our best seat")
+
+Open Unknowns at EE 373: 7 (U1, U2, U4, U5, U6, U8, U10).
+The zero-uncertainty programme — a decisive test per Unknown,
+all launched this epoch (~348 episodes, ~$1.20):
+  U2 -> Z: v3a vs v1, +60 eps (xreq_a28ad01f, xreq_48b46243)
+  U4 -> Z: v3c vs v1, +60 eps (xreq_8d9f1d44, xreq_7b53ca58)
+  U6 -> Z: starter vs v1, +60 eps (xreq_ea7db929, xreq_92721d93)
+  U8 -> Z: Warrior stock vs starter, +100 eps
+       (xreq_f2129237, xreq_1de1b33f)
+  U10 -> Z: v5 team pair vs independent v3c pair, 40 eps
+       (xreq_fe3a5fff, xreq_65703a0c)
+  U1 + U5 -> measurement, not more duels: an instrumented v2
+  (emise-cac-v2scout) plays 8 episodes vs the field
+  (xreq_6e4d40d5); its event stream prices v2's lethal swings
+  directly (U1) and harvests the veterans' played cards (U5).
+Each verdict lands as an MVO transition; the scorecard is
+re-issued every round until the Unknown count reaches zero —
+or a claim is proven unclosable by these instruments, which
+would itself be recorded as a finding, not left as a fog.UNIVERSE v3a — mid-tier elimination everywhere (EE 368-369)
 
 Design: one change from champion v1 — a swing that eliminates
 ANY hero scores 25 (playerLife(o) check), above ordinary hero
