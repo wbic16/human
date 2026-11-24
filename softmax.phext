@@ -39,6 +39,7 @@ Coordinate map:
   1.1.1/1.1.1/1.1.18 Round 17 — the flux capacitor: lessons of the False shelf
   1.1.1/1.1.1/1.1.19 Round 18 — the Long Game is neutral; the harm is repaired
   1.1.1/1.1.1/1.1.20 Round 19 — the past at full speed: the headless runner stands
+  1.1.1/1.1.1/1.1.21 Round 20 — 105,000 matches: the matrix and the equivalence classes
   1.1.1/1.1.1/2.1.1  Universe v3a — mid-tier elimination everywhere
   1.1.1/1.1.1/3.1.1  Universe v3b — neighbor lethal 100, others 25
   1.1.1/1.1.1/4.1.1  Universe v3c — face-pressure tilt
@@ -317,6 +318,10 @@ UNKNOWN
      set by something other than swing pricing; the deck
      (Ooze/Primordial engine counts) or the card-play
      scorer are the untested levers.
+     Screen receipts (EE 397, local, Round 20): v10 beat
+     mage-stock 176-131 over 307 decisive (ref 693) — the
+     gate binds and helps in the local field. Screen
+     evidence only; hosted decides.
   U15 "The Archer and Splash stocks differ (class edge)."
      OPEN, no edge detected — xreq_154e2c7e + xreq_a259329c:
      Splash 9, Archer 8 over 17 decisive.
@@ -935,7 +940,54 @@ fifth seat is a reference bot, not a veteran; local
 results SCREEN, hosted results DECIDE. The past is now
 re-runnable: every variant in the lineage can be
 re-tested in thousands of seeded matches before a
-single hosted episode is spent.UNIVERSE v3a — mid-tier elimination everywhere (EE 368-369)
+single hosted episode is spent.ROUND 20 — 105,000 matches: the matrix and the equivalence classes (EE 397)
+
+The full round-robin, run at ranch pace on Will's word:
+15 lineage bots, every pair, both seat-swapped legs,
+500 seeds a leg — 105,000 matches across 19 nodes in
+under two minutes of wall time. 100% decided. (First
+attempt played zero: a roster-argument bug; caught,
+named, re-run with a zero-decision guard — the tally
+now records ERROR instead of zeros.)
+
+LOCAL FITNESS (win share of decisive pair outcomes):
+v6 87.4, v7 84.9, v5-team 75.5, v3c 54.7, v4-warrior
+49.9, starter 44.0, v1 43.8, v2 43.0, v3a 42.5, v3b
+42.1, v8-mage 35.7, v9-splash 35.0, v10-mage 34.1,
+mage-stock 27.7, splash-stock 20.9.
+
+CALIBRATION: hosted verdicts reproduce where the
+mechanism binds — T10 (v6 over starter 837-61), T7,
+T12, T8 (v5 over its own base v3c, 526-270), U8's
+direction (Warrior over starter 508-292). Two honest
+exceptions: the local Mage/Splash fields are
+reference-dominated (ref took 63-69% of those pairs),
+and F7's harm does NOT reproduce locally (v8 beat
+mage-stock 202-140; hosted it won 0) — the package's
+poison needs the veteran field to express itself.
+
+THE EQUIVALENCE FINDING (the round's real yield):
+several pairs returned byte-identical tallies.
+Verified at match level: v2 and v3b produce IDENTICAL
+winner sequences against v1 over 200 seeds, while
+their game lengths differ (17 of 200 lines differ in
+ticks/turns vs starter). Bots whose only differences
+are lethal-pricing branches change how games unfold
+far more readily than who wins them — in this field,
+the lethal swing is usually already the best play at
+stock prices, so the premium rarely binds. Consequence,
+recorded as method: the local screen CANNOT adjudicate
+lethal-pricing claims (U3, the F1/F4/F5 family) — those
+stay hosted-only. It screens decks, face pressure,
+team protocol, and board gates.
+
+SCREEN READINGS (evidence class: screen; no registry
+transitions): U16 — v6 516, v7 436 (n=952): the reach
+deck is not an advance over the champion on either
+surface. U19 — v10 176, mage-stock 131: the Long Game
+gate helps locally. U18 — v9 309, splash-stock 58:
+package strongly positive in a soft local field;
+hosted parity stands until hosted evidence moves.UNIVERSE v3a — mid-tier elimination everywhere (EE 368-369)
 
 Design: one change from champion v1 — a swing that eliminates
 ANY hero scores 25 (playerLife(o) check), above ordinary hero
