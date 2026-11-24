@@ -25,6 +25,7 @@ Coordinate map:
   1.1.1/1.1.1/1.1.4  Claims registry (MOAT/TLUF)
   1.1.1/1.1.1/1.1.5  Round 4 — the retest; bracket re-anchors
   1.1.1/1.1.1/1.1.6  Round 5 — anchor tests; streaming begins
+  1.1.1/1.1.1/1.1.7  Round 6 — ascend: confirmation, deck, teamwork
   1.1.1/1.1.1/2.1.1  Universe v3a — mid-tier elimination everywhere
   1.1.1/1.1.1/3.1.1  Universe v3b — neighbor lethal 100, others 25
   1.1.1/1.1.1/4.1.1  Universe v3c — face-pressure tilt
@@ -172,6 +173,13 @@ UNKNOWN
   U5 "The veteran field's edge is deck composition, not attack
      targeting." OPEN — winners' played cards in scout traces
      skew to the same precon pool; untested either way.
+  U8 "The Warrior precon (stock heuristics) beats the Archer
+     starter." OPEN — deck-axis test running: xreq_29f21a17 +
+     xreq_f9cb0a21 (v4 = Warrior precon, byte-identical).
+  U9 "A coordinated pair out-wins an independent pair, family
+     metric (either seat wins the episode)." OPEN — teamwork
+     test running: xreq_d5068f05 + xreq_8cf09b87 (v5 pair vs
+     v1 pair, seat-swapped).
 
 FICTION
   X1 The round pictures (little archer, veteran banners, flame
@@ -235,7 +243,40 @@ holds in part (U5).
 
 Streaming: at Will's direction (EE 370) this phext is streamed
 to wbic16/human as we play — each MVO pass lands there as a
-commit, so the public record and this tracker are one text.UNIVERSE v3a — mid-tier elimination everywhere (EE 368-369)
+commit, so the public record and this tracker are one text.ROUND 6 — Ascend: three universes at once (EE 370)
+
+Will's direction: iterate and ascend; unlock collaboration
+through unexpected teamwork. Three tests launched in parallel:
+
+1. CONFIRMATION of U7 at honest scale: v3c vs starter, 100
+   episodes seat-balanced (xreq_4de08476 + xreq_9634c73f).
+   The claim graduates or dies at this n.
+
+2. DECK UNIVERSE (v4): every variant so far played the Archer
+   precon. v4 = the Warrior precon bot, byte-identical stock
+   heuristics (sha256 d14e338a...), vs the Archer starter —
+   the deck axis tested alone (U8). Two further precons wait
+   on the shelf: Mage, and an Archer/Warrior splash.
+
+3. TEAMWORK UNIVERSE (v5): in a free-for-all where the last
+   hero standing scores, our paired seats have played as
+   strangers. v5 = v3c heuristics + a team protocol:
+   - Family by geometry: paired seats sit two apart in our
+     rosters ((0,2), (1,3)); each seat computes its partner
+     from its own seat index. No channel, no communication —
+     the seating IS the protocol.
+   - While any outsider lives: never swing at or target the
+     partner (hero or minion, attack or card effect); helpful
+     effects MAY land on the partner's minions; both seats
+     focus fire on the highest-life outsider (+3 swing, +2
+     card targeting).
+   - When no outsider remains, the family fights as usual.
+   Metric is the family's: an episode counts for the pair if
+   either seat wins (U9). Control: a v1 pair, independent.
+   Recorded caveat: the partner arithmetic assumes our paired
+   test rosters; a lone league seat would run the focus rule
+   only. Policy: emise-cac-v5-team:v1 (diff vs v3c: the
+   teamcalc block + three gated call sites, 51 diff lines).UNIVERSE v3a — mid-tier elimination everywhere (EE 368-369)
 
 Design: one change from champion v1 — a swing that eliminates
 ANY hero scores 25 (playerLife(o) check), above ordinary hero
