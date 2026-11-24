@@ -37,6 +37,7 @@ Coordinate map:
   1.1.1/1.1.1/1.1.16 Round 15 — fractal expansion across three times
   1.1.1/1.1.1/1.1.17 Round 16 — the package does not travel to Mage
   1.1.1/1.1.1/1.1.18 Round 17 — the flux capacitor: lessons of the False shelf
+  1.1.1/1.1.1/1.1.19 Round 18 — the Long Game is neutral; the harm is repaired
   1.1.1/1.1.1/2.1.1  Universe v3a — mid-tier elimination everywhere
   1.1.1/1.1.1/3.1.1  Universe v3b — neighbor lethal 100, others 25
   1.1.1/1.1.1/4.1.1  Universe v3c — face-pressure tilt
@@ -307,7 +308,14 @@ UNKNOWN
      conditionally) beats the Mage stock." OPEN — entered
      at design time, EE 388, derived from the failure shelf
      (F7's substrate lesson, F1's conditional pricing).
-     Receipts pending: xreq_f7c88ef0 + xreq_ac90de51.
+     Receipts (EE 389): 4-4 dead heat over 8 decisive
+     (xreq_f7c88ef0 + xreq_ac90de51); legs split 1-3, 3-1.
+     The gate repaired F7's harm (v8 won 0; v10 matches its
+     twin) but found no edge. Stays OPEN. Frontier note:
+     the veteran took 32/40 again — Mage's ceiling here is
+     set by something other than swing pricing; the deck
+     (Ooze/Primordial engine counts) or the card-play
+     scorer are the untested levers.
   U15 "The Archer and Splash stocks differ (class edge)."
      OPEN, no edge detected — xreq_154e2c7e + xreq_a259329c:
      Splash 9, Archer 8 over 17 decisive.
@@ -867,7 +875,29 @@ entered at design time; 40 episodes running
 baseline, Mage stock — per F5.
 
 88 mph is a method, not a mood: the failures were
-already paid for; the lessons compound only if spent.UNIVERSE v3a — mid-tier elimination everywhere (EE 368-369)
+already paid for; the lessons compound only if spent.ROUND 18 — the Long Game is neutral; the harm is repaired (EE 389)
+
+v10's receipts, inside the hour (40 episodes vs Mage
+stock): 4-4 over the 8 decisive episodes, legs split
+1-3 and 3-1, the veteran seat farming 32 of 40 as it
+did in Round 16's series.
+
+Read plainly: the F7-derived design did exactly half
+its job. The board-gate removed the poison — where the
+imported package won 0, the native Long Game matches
+its stock twin win for win. But parity is not an edge,
+and U19 stays open with the result recorded as a
+finding: on the Mage deck, swing pricing is not where
+the game is decided. The capacitor's next charge points
+at the two untested Mage levers — the deck itself
+(Oozification/Morphosis/Primordial counts against the
+flat precon) and the card-play scorer, which no variant
+in the lineage has ever touched.
+
+That last fact is the round's real yield: eleven
+variants in, every change has lived in swing or the
+deck list. The score function — what to play, when —
+is the lineage's largest unexplored room.UNIVERSE v3a — mid-tier elimination everywhere (EE 368-369)
 
 Design: one change from champion v1 — a swing that eliminates
 ANY hero scores 25 (playerLife(o) check), above ordinary hero
