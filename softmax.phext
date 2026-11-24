@@ -35,6 +35,7 @@ Coordinate map:
   1.1.1/1.1.1/1.1.14 Round 13 — enter the arena
   1.1.1/1.1.1/1.1.15 Round 14 — v7 Reach, designed from first principles
   1.1.1/1.1.1/1.1.16 Round 15 — fractal expansion across three times
+  1.1.1/1.1.1/1.1.17 Round 16 — the package does not travel to Mage
   1.1.1/1.1.1/2.1.1  Universe v3a — mid-tier elimination everywhere
   1.1.1/1.1.1/3.1.1  Universe v3b — neighbor lethal 100, others 25
   1.1.1/1.1.1/4.1.1  Universe v3c — face-pressure tilt
@@ -100,7 +101,7 @@ CONSTRUCTION -> Fiction. Statuses change only on receipts,
 along legal edges, and every transition is recorded here.
 False claims are kept visible, never deleted. No pruning: the
 minimum is structure, never content. Counts at this writing:
-True 14, False 6, Unknown 10, Fiction 2 (EE 384: T15 graduated, U17/U18 entered, U5b measured; EE 383: U16 entered at design time; EE 375 MVO pass — the zero-uncertainty programme's first harvest: four claims closed, four new ones discovered at the frontier).
+True 14, False 7, Unknown 9, Fiction 2 (EE 386: U17 refuted — the package does not travel to Mage; EE 384: T15 graduated, U17/U18 entered, U5b measured; EE 383: U16 entered at design time; EE 375 MVO pass — the zero-uncertainty programme's first harvest: four claims closed, four new ones discovered at the frontier).
 
 TRUE
   T1 DEMOTED at EE 369 — see Unknown U6. Its receipt was
@@ -194,6 +195,15 @@ FALSE (kept, with receipts)
      plays), stilt (100%) and orch-7 (94%) win with the
      stock deck, where composition cannot be the edge.
      Its honest children live at T11 and U5b.
+  F7 "The champion package improves the Mage stock deck."
+     REFUTED — xreq_bf3e8fd5 + xreq_bd7e4c56 (40 episodes):
+     v8-mage won 0 of 40 episodes; the stock twin it was
+     seat-swapped against won 6 (3 per leg, symmetric).
+     Head-to-head decisive 0-6; absolute 0/40 vs 6/40.
+     The package prices minion swings; Mage's minions are
+     utility pieces, and face pressure makes them suicide
+     into heroes. The package is martial: born on Archer,
+     crowned on Warrior, harmful on Mage.
 
 UNKNOWN
   U1 "v2 failed because flat-100 spends big swings finishing
@@ -284,12 +294,13 @@ UNKNOWN
      Parity with the champion: the splash cost nothing and
      has not yet paid. Stays OPEN; the starter anchor
      graduated separately as T15.
-  U17 "The champion package improves the Mage stock deck
-     (same-deck A/B)." OPEN — entered at design time,
-     EE 384. Receipts pending: xreq_bf3e8fd5 + xreq_bd7e4c56.
+  U17 CLOSED at EE 386 — see False F7.
   U18 "The champion package improves the Splash stock deck
      (same-deck A/B)." OPEN — entered at design time,
-     EE 384. Receipts pending: xreq_cbdc222b + xreq_281d9494.
+     EE 384. First receipts (EE 386): v9 7, splash-stock 5,
+     random 28 (xreq_cbdc222b + xreq_281d9494); legs split
+     (4-1, 3-4). Parity — the package is neutral on Splash.
+     Stays OPEN.
   U15 "The Archer and Splash stocks differ (class edge)."
      OPEN, no edge detected — xreq_154e2c7e + xreq_a259329c:
      Splash 9, Archer 8 over 17 decisive.
@@ -781,7 +792,37 @@ programme's own claims (this scroll's among them) sit in
 the same registry discipline. Settled tonight: 20 of 32
 claims (14 True, 6 False). The frontier: U1, U5b, U8,
 U10, U13, U14, U15, U16, U17, U18 — each with a named
-instrument, three of them already running.UNIVERSE v3a — mid-tier elimination everywhere (EE 368-369)
+instrument, three of them already running.ROUND 16 — the package does not travel to Mage (EE 386)
+
+The package-travel tests (Round 15's present-tense
+expansion) returned inside the hour, 80 episodes:
+
+  v8-mage vs Mage stock: v8 won 0 of 40 episodes; its
+  stock twin won 6, the veteran seat 34. Symmetric across
+  legs (0 and 0; twin 3 and 3). U17 -> False (F7).
+  v9-splash vs Splash stock: 7-5, legs split. Parity;
+  U18 stays open.
+
+Two readings, both recorded. First, the local one: the
+champion package is a martial instrument — it reprices
+minion swings toward the hero, and Mage's minions are
+utility (bounce, tokens, draw engines) whose value is
+not in their swings. Face pressure on a Mage deck is a
+category error, and the arena charged full price for it.
+
+Second, the field reading: in both series the random
+veteran seat took 70-85% of episodes — far above its
+25-45% in Archer/Warrior company. Mage and Splash stocks
+are simply soft fields to farm, which matches the class
+map (Round 12) and warns against reading any Mage-deck
+result without the veteran baseline beside it.
+
+The 11D map gains a boundary: the package's region is
+Archer + Warrior (verified), Splash (neutral), Mage
+(harmful). Evolution continues along the boundary, not
+through it: the next Mage point, if any, needs a heuristic
+native to utility minions — a design problem, entered on
+the frontier list, not an import.UNIVERSE v3a — mid-tier elimination everywhere (EE 368-369)
 
 Design: one change from champion v1 — a swing that eliminates
 ANY hero scores 25 (playerLife(o) check), above ordinary hero
