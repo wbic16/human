@@ -33,6 +33,7 @@ Coordinate map:
   1.1.1/1.1.1/1.1.12 Round 11 — the character space, fully mapped
   1.1.1/1.1.1/1.1.13 Round 12 — the harvest; the field is two tribes
   1.1.1/1.1.1/1.1.14 Round 13 — enter the arena
+  1.1.1/1.1.1/1.1.15 Round 14 — v7 Reach, designed from first principles
   1.1.1/1.1.1/2.1.1  Universe v3a — mid-tier elimination everywhere
   1.1.1/1.1.1/3.1.1  Universe v3b — neighbor lethal 100, others 25
   1.1.1/1.1.1/4.1.1  Universe v3c — face-pressure tilt
@@ -98,7 +99,7 @@ CONSTRUCTION -> Fiction. Statuses change only on receipts,
 along legal edges, and every transition is recorded here.
 False claims are kept visible, never deleted. No pruning: the
 minimum is structure, never content. Counts at this writing:
-True 13, False 6, Unknown 7, Fiction 2 (EE 375 MVO pass — the zero-uncertainty programme's first harvest: four claims closed, four new ones discovered at the frontier).
+True 13, False 6, Unknown 8, Fiction 2 (EE 383: U16 entered at design time; EE 375 MVO pass — the zero-uncertainty programme's first harvest: four claims closed, four new ones discovered at the frontier).
 
 TRUE
   T1 DEMOTED at EE 369 — see Unknown U6. Its receipt was
@@ -258,6 +259,12 @@ UNKNOWN
   U14 "The Archer and Mage stocks differ (class edge)."
      OPEN, no edge detected — xreq_821ac393 + xreq_fecffb08:
      Archer 9, Mage 7 over 16 decisive.
+  U16 "v7-reach (Warrior width deck, Bolt splash for face
+     reach, champion heuristics unchanged) beats v6."
+     OPEN — entered at design time, EE 383, before any
+     episode ran (record-first). Receipts pending:
+     xreq_08ba14da + xreq_904faa9a (vs v6) and the starter
+     anchor xreq_2b83c25f + xreq_61627fbc.
   U15 "The Archer and Splash stocks differ (class edge)."
      OPEN, no edge detected — xreq_154e2c7e + xreq_a259329c:
      Splash 9, Archer 8 over 17 decisive.
@@ -668,7 +675,50 @@ platform's cadence, for standing — not our xp-requests on
 our schedule. Whatever the standings say when they settle
 enters the registry on receipts, True or False.
 
-The Exocortex abides: it also, now, competes.UNIVERSE v3a — mid-tier elimination everywhere (EE 368-369)
+The Exocortex abides: it also, now, competes.ROUND 14 — v7 Reach, designed from first principles (EE 383)
+
+Two facts opened this round. First: v6's league submission
+settled — status PLACED, membership lpm_2c66cae — the
+champion is competing in the division now. Second, Will's
+direction: continue evolving, and apply Singular principles.
+
+SINGULAR, APPLIED: foreign flavor comes from Singular,
+never imports. The obvious move — trace the splash
+builders' deck (T11) and copy it — is an import. Rejected.
+v7 is authored from our own verified claims and the pool's
+mechanics, derived here before any episode ran:
+
+  * T7 (ours): face pressure wins games. The win condition
+    is hero damage; everything prices against it.
+  * The Warrior precon is FLAT — 4 copies of all ten cards,
+    no curve, no trinkets. In a pool capped at 4 copies,
+    composition edges are small by construction (one reason
+    the pilots' tribe wins on decisions, U5b).
+  * The discount mechanic, read natively: a class trinket
+    in play cuts the off-class surcharge by 1. Bolt (Archer,
+    1-cost, 2 damage to anything) is the pool's cheapest
+    face reach; under 2+ Archer trinkets it costs 1-2 and
+    reaches past any board to the hero — reach the Warrior
+    width engine lacks when its swings are blocked by
+    bodies.
+  * Banner is the width engine (a free Footsoldier every
+    turn); Swords/Shields multiply width. Keep the engine,
+    trim the situational top (Duel 4->2, Pillage 4->2,
+    Tactician 4->2, Rally 4->2), pay for the splash.
+
+v7-reach (emise-cac-v7-reach:v1, policy 390bbc3a): hero
+Warrior; deck — Archer 4, Bolt 4, Footsoldier 4, Shields 4,
+Bear 4, Swords 4, Tactician 2, Duel 2, Banner 4, Pillage 2,
+Commander 4, Rally 2 (40). Champion heuristics byte-
+identical to v6 (diff-verified: deck block only). Claim
+entered at design time as U16. Design risks, recorded:
+Bolt at full surcharge (4) is poor value before trinkets
+land; the stock card-scorer may undervalue a spell in a
+minion-priced swing table.
+
+TESTS LAUNCHED (80 episodes): vs v6 — xreq_08ba14da (leg
+a), xreq_904faa9a (leg b); starter anchor — xreq_2b83c25f,
+xreq_61627fbc. Verdicts on receipts, next round.UNIVERSE v3a — mid-tier elimination everywhere (EE 368-369)
 
 Design: one change from champion v1 — a swing that eliminates
 ANY hero scores 25 (playerLife(o) check), above ordinary hero
