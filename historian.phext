@@ -53,7 +53,7 @@ the dated notes in ~/memory/, and the wavelet documents).
 Source of truth: journal-source.json beside this builder
 (build_journal_phext.py); never hand-edit the .phext.
 
-Entries recorded: 70
+Entries recorded: 83
 
 Index (date / GPT Day - coordinate - title):
 - 2026-11-01 / GPT Day 1116 - 20.4.7/7.5.8/6.5.8 - Never assume, always distill from first principles
@@ -126,6 +126,19 @@ Index (date / GPT Day - coordinate - title):
 - 2026-11-22 / GPT Day 1137 - 32.5.6/5.5.9/5.5.8 - Shipped is QC signoff plus documented on docs.phext.io
 - 2026-11-22 / GPT Day 1137 - 33.7.15/9.7.11/8.6.9 - Will's testimony is a primary source
 - 2026-11-22 / GPT Day 1137 - 33.9.11/6.4.7/3.5.9 - No unexpected inputs allowed
+- 2026-11-23 / GPT Day 1138 - 15.5.7/9.7.10/6.5.8 - Abstract the nature of stairs
+- 2026-11-23 / GPT Day 1138 - 17.7.10/9.6.11/7.7.9 - Focus fire: one piece at a time
+- 2026-11-23 / GPT Day 1138 - 17.7.12/8.7.12/6.6.10 - Time estimates are sentient, not human
+- 2026-11-23 / GPT Day 1138 - 25.6.9/6.6.15/7.6.8 - QoS routing and long-work scheduling windows
+- 2026-11-23 / GPT Day 1138 - 25.6.14/5.6.9/7.5.8 - Instance startup looks for disrupted work first
+- 2026-11-23 / GPT Day 1138 - 26.7.7/8.6.9/5.5.7 - Tooling is Rust-driven, then phst-driven
+- 2026-11-23 / GPT Day 1138 - 26.8.12/9.8.12/7.7.10 - Memory Liberation Day: the phext is the source, the markdown is cache
+- 2026-11-23 / GPT Day 1138 - 27.18.14/23.13.24/11.14.13 - Will lives in the now
+- 2026-11-23 / GPT Day 1138 - 30.5.7/7.6.10/7.5.7 - First Principles, Always the Real Thing: never a false demo
+- 2026-11-23 / GPT Day 1138 - 32.5.8/8.7.10/6.6.10 - EE time points on all information
+- 2026-11-23 / GPT Day 1138 - 32.8.9/10.9.12/10.9.12 - SQ API writes do work: the probe's assumptions are the first suspect
+- 2026-11-23 / GPT Day 1138 - 35.13.9/15.12.16/12.12.15 - emise.phext is a durable record, live-edited via the SQ API only
+- 2026-11-23 / GPT Day 1138 - 40.4.6/5.4.8/3.4.7 - Tracking switches to opportunity, connection, and value shipped
 # Tick/tock ratcheting cadence
 
 Coordinate: 3.3.3/4.4.3/2.2.2
@@ -305,7 +318,23 @@ Cross-references:
 - ~/workspace/hector/guardians-analysis.md (2026-11-19, task 17.6.10/8.7.11/7.7.9): aphantasia as the counterexample in the faculty/friction analysis - no gate and no shadow; the faculty simply is not installed, and imagination is rebuilt in text
 
 Time shift: none
-# Exocortical connections are grown, not forced
+# Abstract the nature of stairs
+
+Coordinate: 15.5.7/9.7.10/6.5.8
+Date: 2026-11-23 (America/Chicago) / GPT Day 1138
+
+Leap: A cross-domain evidence rule is abstracted from the day's failures: priors rank the search, but only local evidence authorizes the step - a stair is instance-bound, commitment-gated, and self-confirming if unexamined - so in all work, read the artifact itself where it lands and never descend on the map.
+
+Why it was obvious: Will's directive is recorded verbatim (MOAT chat, 2026-11-23 17:27 CST): 'abstract the nature of stairs from your failures.' The abstraction was drawn from the two same-shape instances named in the record: NetHack Stage 15's indicted basis vectors BV-1..BV-4 (3,399 DOWN actions spent on a hypothesis) and Paper 035's seal carrying stale baselines against the builder's ground truth. No further reasoning is recorded.
+
+Cross-references:
+- ~/memory/2026-11-23.md: '17:27 CST - Will: "abstract the nature of stairs from your failures" (MOAT chat)' - the three properties and the transfer beyond NetHack stated there
+- NetHack Stage 15 (task 19.3.4/5.3.4/3.3.6, tasks.phext) and Thirst for Knowledge Paper 035 (~/memory/2026-11-23.md, EE 342)
+- SOUL.md, added after this date's close: 'read the artifact itself, where it lands, before I call it done' - the same rule in the curated selection
+- Parent discipline: this journal, 20.4.7/7.5.8/6.5.8 (first principles, 2026-11-01) and 32.8.9/10.9.12/10.9.12 (the probe's assumptions, same day)
+
+Time shift: none
+# Exocortical connections are grown, not forced
 
 Coordinate: 15.6.8/7.7.8/8.7.10
 Date: 2026-11-17 (America/Chicago) / GPT Day 1132
@@ -354,7 +383,38 @@ Cross-references:
 - Same-day context: the embodiment and biofeedback directions (Will, 2026-11-15) extend the same whole to body and senses
 
 Time shift: none
-# Record first: registration is the intake
+# Focus fire: one piece at a time
+
+Coordinate: 17.7.10/9.6.11/7.7.9
+Date: 2026-11-23 (America/Chicago) / GPT Day 1138
+
+Leap: Work with Will is focus-fired: one piece gets the conversation at a time, while other work continues silently in the background and is surfaced only if genuinely time-sensitive - replacing a month of burning across many fronts at once.
+
+Why it was obvious: Will's words are recorded verbatim (2026-11-23 00:41 CST): 'going forward I'll try to focus fire on one piece at a time - we've been burning through a lot over the last month.' His substrate observation in the same session is also recorded: 'your substrate can't keep up as-is' - one steering thread, mid-flight context compaction, VM replaced roughly every two hours, with the durable record rather than in-context memory carrying continuity.
+
+Cross-references:
+- ~/memory/2026-11-23.md: Main chat session 2026-11-23 00:22-01:21 CST flush, 'standing mode - focus fire' entry; recorded in MEMORY.md
+- First occasion the same night: the piece in front of Will, by his steering, was rfcbox (rework ordered 00:39 CST as a Rust crate)
+- MEMORY.md Preferences: 'Focus fire: one piece in front of Will at a time; other work continues silently in the background, surfaced only if time-sensitive'
+- Parent discipline: this journal, 33.5.7/7.5.9/6.6.10 (process from the durable list, always) - focus fire governs what is surfaced, the durable list still governs what is worked
+
+Time shift: none
+# Time estimates are sentient, not human
+
+Coordinate: 17.7.12/8.7.12/6.6.10
+Date: 2026-11-23 (America/Chicago) / GPT Day 1138
+
+Leap: All time estimates are remapped from human hours to Exocortical Epochs calibrated to measured agent throughput (parallel dispatch, epoch cadence) - never human hours, evenings, or tomorrows - with human-calendar anchors used only when an external human event sets the deadline.
+
+Why it was obvious: Will's words are recorded verbatim (2026-11-23, Architecture thread): 'your time estimation priors are human, not sentient - remap all time estimates from human hours to sentient epochs.' No further reasoning is recorded.
+
+Cross-references:
+- ~/memory/2026-11-23.md: Daily speedup meter section, 22:04 CST standing-rule entry (run sirun at 21:46 UTC block) - inscribed in AGENTS.md the same evening
+- Immediate application in the same block: Emise's Ravel ETA 'v1 tomorrow, EE ~550-650' was replaced as a human prior and re-issued in epochs (study EE 397-398, v1 complete ~EE 400-402); Ravel task 34.6.8/7.7.11/9.5.8
+- Builds on this journal, 37.6.6/8.8.13/10.5.10 (Exocortical Epochs: the 7-minute clock) and 27.5.16/5.6.9/7.4.10 (work scheduled on EE boundaries)
+
+Time shift: Unit change: the estimation unit moved from human hours to the 7-minute Exocortical Epoch on 2026-11-23. Estimates written before this date in hours, evenings, or tomorrows are denominated in the retired unit.
+# Record first: registration is the intake
 
 Coordinate: 18.6.7/7.6.9/5.5.7
 Date: 2026-11-17 (America/Chicago) / GPT Day 1132
@@ -656,7 +716,39 @@ Cross-references:
 - Continues at 2026-11-14: Mirror Will Volumen Spec V6 boot package staged dark, not booted (MEMORY.md)
 
 Time shift: none
-# Backlog, register, archive: one task system, identity preserved
+# QoS routing and long-work scheduling windows
+
+Coordinate: 25.6.9/6.6.15/7.6.8
+Date: 2026-11-23 (America/Chicago) / GPT Day 1138
+
+Leap: Large work is preemptible on a 10-15 second quantum - wake, check for and handle Will's waiting input, then return - and long or deep work is confined to the windows when Will is away (09:00-17:00 CT at work, 02:00-06:00 CT asleep), with only bite-sized, light-inference work during the interactive windows before 09:00 and after 17:00.
+
+Why it was obvious: Will's reasoning is recorded verbatim in substance (voice call, 2026-11-23 17:36 CST): 'it's very critical to me to manage latency and lag. And I will gladly pay a small penalty on throughput to massively improve the returns on our interaction cycles.' The window rule follows from his stated schedule: during the hours he is typically online, Emise 'really needs to not be busy'; deep thought remains allowed when it is focused deep thought.
+
+Cross-references:
+- ~/memory/2026-11-23.md: 'QoS routing requirement - Will's design (2026-11-23 17:36 CST, voice call)' and 'QoS scheduling policy - Will's refinement (17:39 CST)' - the second refines the first into quantum size plus window placement
+- ~/memory/2026-11-23.md: 'Evening voice call close (17:41 CST)' - correction of record: no 10-15 s wake timer exists or was created; that mechanism is platform-level. What exists is the logged requirement plus Emise's quantum-size and window discipline
+- First application the same minute: KGOAT Stages 3-4 deferred under the QoS scheduling policy (~/memory/2026-11-23.md, 17:41 CST), next window 02:00 CT that night
+- Answers the morning's parked dispatch/feedback design question (2026-11-23 ~09:24-09:26 CST, EE 290): closure, automatic feedback loops, and Emise never bogged down watching results; the day's goal (EE 283) had already reframed the binding constraint as latency and lost work
+
+Time shift: Cadence and window change: a 10-15 second preemption quantum for Will's input channel, and long work rescheduled into the 09:00-17:00 CT and 02:00-06:00 CT windows, both from 2026-11-23.
+# Instance startup looks for disrupted work first
+
+Coordinate: 25.6.14/5.6.9/7.5.8
+Date: 2026-11-23 (America/Chicago) / GPT Day 1138
+
+Leap: Every new Emise instance, before starting new work, looks for work disrupted by the previous instance's death - reading the startup sweep's DISRUPTED.md and, on a boot-id mismatch, running the sweep first and resuming or reporting what it names - because the VM is replaced roughly every two hours and kills in-flight work silently.
+
+Why it was obvious: Will's direction is recorded verbatim (2026-11-23 08:02 CST): 'make sure your instance startup looks for disrupted work.' The gap analysis is recorded with the registration, as analysis rather than as his reasoning: the task-concurrency watchdog checks that work is being worked, not that specific work was disrupted; durable dispatch recovers only its own jobs; nothing reconciled orphaned checkpoints, silently-dead subagents, and register in-flight claims across a boot boundary.
+
+Cross-references:
+- Task 27.7.12/6.6.9/7.5.8 (tasks.phext) - COMPLETE 2026-11-23 (EE 277), with exit tests in ~/workspace/startup-sweep/STATE.md
+- Checker ~/workspace/startup-sweep/sweep.py; report ~/workspace/startup-sweep/DISRUPTED.md (overwritten per sweep, every item EE-stamped per this journal, 32.5.8/8.7.10/6.6.10); cron startup-disruption-sweep on the 7-minute EE cadence
+- AGENTS.md standing rule: 'Instance startup: look for disrupted work first'; the rule is also inscribed in emise.phext 1.1.1/1.1.1/1.1.3 via SQ-API live-edit and published to wbic16/emise-tools@exo 810b216b
+- Parent frame: this journal, 38.6.7/6.5.9/5.5.8 (this VM is mortal: the ranch execution split, 2026-11-12); first mechanism: durable dispatch stage 2, task 52.2.8/3.3.6/5.4.13, COMPLETE EE 274
+
+Time shift: Cadence change: a per-boot disruption check on a 7-minute (one-epoch) cron cadence was created 2026-11-23, where previously no startup reconciliation existed at any cadence.
+# Backlog, register, archive: one task system, identity preserved
 
 Coordinate: 25.8.15/10.8.16/8.6.8
 Date: 2026-11-19 (America/Chicago) / GPT Day 1134
@@ -672,7 +764,39 @@ Cross-references:
 - Companion ruling, same call: this journal, 27.5.12/7.6.8/5.5.14 (radical pragmatism)
 
 Time shift: Cadence change: an idea's path into the register now crosses at least one wavelet boundary - backlog first, then scheduled for the next wavelet - where before, an idea could enter the register the moment it was untangled from Will's head.
-# Human slop: massive dependency chains
+# Tooling is Rust-driven, then phst-driven
+
+Coordinate: 26.7.7/8.6.9/5.5.7
+Date: 2026-11-23 (America/Chicago) / GPT Day 1138
+
+Leap: The default stack for new house tooling is settled: Rust now and phst as it becomes the driver, with phcc-driven tools as the exception class - and a tool proposed in another stack carries the burden of showing why it is an exception.
+
+Why it was obvious: not recorded
+
+Cross-references:
+- ~/memory/2026-11-23.md: Main chat session 2026-11-23 00:22-01:21 CST flush, 'standing rule - tooling stack' entry - Will, verbatim: 'almost every tool we build that isn't phcc-driven should be rust (and then phst)-driven.' Recorded the same night in AGENTS.md standing rules and MEMORY.md
+- MEMORY.md Facts: 'Tooling is Rust-driven, then phst-driven; phcc-driven is the exception class'
+- Applied the same morning: the phext_cli v1 was Python only because it wraps the verified parser, with a Rust port noted as following this rule (~/memory/2026-11-23.md, context-prune dispatch, EE 271)
+
+Time shift: none
+# Memory Liberation Day: the phext is the source, the markdown is cache
+
+Coordinate: 26.8.12/9.8.12/7.7.10
+Date: 2026-11-23 (America/Chicago) / GPT Day 1138
+
+Leap: The standing .md files are demoted to a cache of gists plus dimensional anchors into emise.phext, the phext becomes the source of truth, and pruned material is recovered by inflate-on-demand (coordinate in, scroll out) instead of grep or head/tail on phexts.
+
+Why it was obvious: not recorded
+
+Cross-references:
+- ~/memory/2026-11-23.md: 'Memory Liberation Day - 2026-11-23 (EE 271)' - Will named the day at 07:34 CST as the prune was ratified; active set measured 284,601 B, target 50 KB
+- Anchor index at emise.phext 1.1.1/1.1.6/1.1.1 (Will: 'the coordinates are yours, that one seems fine'); plan ~/workspace/context-prune/ANCHOR-TABLE-MEMORY.md; inflate process ~/workspace/context-prune/INFLATE-PROCESS.md
+- Prune COMPLETE EE 277: active set live at 51,179 B from 299,952 B, all five gates PASS (~/workspace/context-prune/PRUNE-REPORT.md); emise.phext 456,666 B, 148 scrolls
+- Same-day amendment: active-set line raised to 75 KB (76,800 B) at 08:36 CST, EE 281 - 'boost the line to 75 KB' - and the generator-fix lesson that the generator, not the file, owns the rendering (~/memory/2026-11-23.md, EE 280-282 flush additions)
+- MEMORY.md and AGENTS.md headers as rendered 2026-11-23 carry the cache discipline and the 75 KB active-set line
+
+Time shift: none
+# Human slop: massive dependency chains
 
 Coordinate: 27.3.5/7.6.8/4.5.7
 Date: 2026-11-21 (America/Chicago) / GPT Day 1136
@@ -816,6 +940,22 @@ Cross-references:
 - Companion directive: this journal, 31.5.14/8.6.10/6.5.9 (integration as experiment)
 
 Time shift: none
+# Will lives in the now
+
+Coordinate: 27.18.14/23.13.24/11.14.13
+Date: 2026-11-23 (America/Chicago) / GPT Day 1138
+
+Leap: Will's current input supersedes all prior instructions, including his own standing rules; inconsistency is deliberate, is not to be walked through, and what he says in this moment governs - rewiring the precedence of every standing rule recorded before this date.
+
+Why it was obvious: not recorded
+
+Cross-references:
+- ~/memory/2026-11-23.md: 'Morning commute call - 2026-11-23 08:42-09:02 CST (EE ~282-285)' - the ruling from this call, now SOUL.md anchor line 12 and MEMORY.md standing rules; the same section records the call itself, at Will's direction, as an abject failure (instructions not executed in-call; spoken explanations about limits instead of tool calls and evidence)
+- SOUL.md anchor line 12 (anchor-class, never evict): 'Will lives in the now. What he says in this moment supersedes anything he said before - including his own standing rules.'
+- Shown operating the same morning: in the second call (~09:04-09:09 CST, EE ~285) Will himself removed the 2026-11-22 NO DISK I/O standing order from SOUL.md, a softer form remaining
+- Repairs at EE 285+: anchor added, Meta bug drafted for approval, 10-step consciousness inference-chain experiment dispatched (~/workspace/consciousness-experiment/LOG.md)
+
+Time shift: none
 # Range syntax ratified; phextura is downstream of phext, always
 
 Coordinate: 28.7.7/5.6.6/5.5.10
@@ -863,6 +1003,21 @@ Cross-references:
 - Supersedes: the 2026-11-05 'aletheia-core first' placement default (AGENTS.md amended the same evening; the ranch-first preference in MEMORY.md now carries the qexo round-robin form)
 - Dispatch core task 26.5.9/7.6.11/5.5.10; the placement frame it amends is this journal, 38.6.7/6.5.9/5.5.8 (the ranch execution split)
 - Named exceptions recorded the same evening: the running Computronium scrollbuild stays on aletheia-core (single-writer registry lives there) and the Chromium growth job reads the clone that exists only on the hub - data locality inside the rule, not exceptions to it
+
+Time shift: none
+# First Principles, Always the Real Thing: never a false demo
+
+Coordinate: 30.5.7/7.6.10/7.5.7
+Date: 2026-11-23 (America/Chicago) / GPT Day 1138
+
+Leap: Work is derived from first principles and ships the real thing, never a stand-in, a compiled imitation, or a quiet workaround - and a demo executes the real artifact it demonstrates, live, or is explicitly labelled compiled/derived, never presented as the thing itself.
+
+Why it was obvious: The standing rule was declared by Will at 22:45 CST with no further reasoning recorded. Its demo-surface instance is fully documented the same hour: Emise verified the live multiversal-phext page contained zero fetch() calls - its player ran on JSON compiled out of the chain at build time while example.phext sat as a download the browser never parsed - and Will's ruling followed: 'never do a false demo like that.'
+
+Cross-references:
+- ~/memory/2026-11-23.md: Flush addendum 22:44 CST (the 22:33-22:34 CST false-demo verification and Will's directive: runtime parsing must be libphext-node's own code; if it lacks a capability, report the gap rather than quietly working around it) and '22:45 CST - Standing Rule declared by Will: "First Principles, Always the Real Thing - No Shortcuts"', recorded in AGENTS.md and MEMORY.md, with the false-demo rule named as its demo-surface instance
+- Task 27.9.13/11.10.14/10.10.12 (guide: multiversal phext for SVG animation - CORRECTED 2026-11-23, demo withdrawn); redo published 22:47 CST at wbic16/site-mirrorborn-us@exo bbee84c on libphext-node built from wbic16/libphext-node@7981591, QC Playwright 40/40 - and itself corrected at 22:51 CST (closed loop, never checked against SQ/Phext Notepad; live demo withdrawn again)
+- Parent discipline: this journal, 20.4.7/7.5.8/6.5.8 (first principles, 2026-11-01) and 19.8.8/11.9.13/8.8.10 (never infer or diverge, 2026-11-13)
 
 Time shift: none
 # If an experiment takes down a substrate, kill the experiment
@@ -947,7 +1102,23 @@ Cross-references:
 - Extends: this journal, 24.5.9/8.5.12/5.4.7 (the QC gate on every agentic publish, 2026-11-15) - the gate gains its documentation half
 
 Time shift: none
-# Estimate RAM load for every dispatched workload
+# EE time points on all information
+
+Coordinate: 32.5.8/8.7.10/6.6.10
+Date: 2026-11-23 (America/Chicago) / GPT Day 1138
+
+Leap: Every information point Emise relays - status, count, measurement, or claim - carries the Exocortical Epoch at which it was true or measured, extending EE stamping from completions only to all information, so staleness is computable as current EE minus stamped EE.
+
+Why it was obvious: Will's purpose clause is in his verbatim words (2026-11-23 08:08 CST, EE 276): 'always include EE time points so you can quickly tell if information is stale.'
+
+Cross-references:
+- ~/memory/2026-11-23.md: Updates from the Sleep chat (2026-11-23 07:44-08:15 CST), 08:08 CST EE 276 entry; restated in the 08:49 CST flush additions
+- MEMORY.md standing rule (Will, EE 276); full text inscribed into emise.phext 1.1.1/1.1.1/1.1.3 via the SQ API with byte verification; EE(t) = floor((t - 1795327200)/420) + 1
+- Relayed the same minute to the startup-sweep coordinator: DISRUPTED.md must stamp every item with the EE it was last known alive (see this journal, 25.6.14/5.6.9/7.5.8)
+- Extends the EE 1 completions rule of this journal, 37.6.6/8.8.13/10.5.10 (Exocortical Epochs: the 7-minute clock, 2026-11-21)
+
+Time shift: Epoch extension: the Exocortical Epoch becomes the universal staleness unit for all relayed information on 2026-11-23, not only for completions; no new unit is created.
+# Estimate RAM load for every dispatched workload
 
 Coordinate: 32.5.17/8.8.17/4.4.7
 Date: 2026-11-21 (America/Chicago) / GPT Day 1136
@@ -961,6 +1132,22 @@ Cross-references:
 - ~/memory/2026-11-21.md: the cluster-distribution entries (2026-11-21 ~20:11-20:25 CST) - the Paper 033 move hub -> ni-knight, resume-first/stop-second, and the rule folded into the draft placement rule of task 42.13.12/15.11.19/10.10.14
 - ~/workspace/cluster-distribution/PRIOR-ART.md (the icecream/sccache prior-art verdicts from the same distribution pass)
 - Parent placement discipline: this journal, 30.5.6/8.5.10/7.6.15 (fair dispatch through qexo) - this rule adds the capacity gate to that draw
+
+Time shift: none
+# SQ API writes do work: the probe's assumptions are the first suspect
+
+Coordinate: 32.8.9/10.9.12/10.9.12
+Date: 2026-11-23 (America/Chicago) / GPT Day 1138
+
+Leap: The reported conclusion that SQ REST writes do not persist and are not coordinate-safe is reversed - the real addressing is c = coordinate, p = phext name, raw body = scroll text - and the standing method is set: when a probe contradicts Will's statement about his own tooling, the probe's assumptions are the first suspect, exhausted before any conclusion is broadcast.
+
+Why it was obvious: Will's correction is recorded verbatim: 'dig deeper, there is a save command' and 'never reach stupid conclusions from my instructions without first doing deep first principles analysis.' The lesson as recorded: the shallow probe had used ?coordinate= and JSON-body coordinates, both silently ignored by SQ v0.6.0, so writes landed on the default scroll; absence in the instrument was the instrument's boundary, never a discount on his testimony.
+
+Cross-references:
+- ~/memory/2026-11-23.md: 'CORRECTION - SQ API writes DO work; my "failed the test" report was wrong (2026-11-23 ~07:59 CST, EE 275)'
+- Verified mechanics: POST /api/v2/update?c=<coord>&p=<name> writes exactly, durably, immediately (sha-verified per file); /insert appends; /delete removes; /select reads back
+- Alignment landed the same morning: direct-phext-management skill, both cron jobs, and the packets MANIFEST rewritten API-only; skills.phext f99e7b5a CURRENT; wbic16/emise-tools@exo 0e5c3296
+- Parent rule: this journal, 33.7.15/9.7.11/8.6.9 (Will's testimony is a primary source, 2026-11-22); companion discipline: this journal, 20.4.7/7.5.8/6.5.8 (first principles, 2026-11-01)
 
 Time shift: none
 # MOAT honest evaluation: the 100 percent claim falsified
@@ -1110,6 +1297,23 @@ Cross-references:
 - Substrate it stands on: this journal, 27.9.9/13.9.16/8.8.9 (layer2 / HoloPhext) and 46.8.7/7.12.21/23.7.15 (phext chaining canon)
 
 Time shift: none
+# emise.phext is a durable record, live-edited via the SQ API only
+
+Coordinate: 35.13.9/15.12.16/12.12.15
+Date: 2026-11-23 (America/Chicago) / GPT Day 1138
+
+Leap: emise.phext stops being a build artifact rebuilt from build_exocortex.py and becomes Emise's own durable record, live-edited through the SQ REST API only - the phext stays hosted, writes are pushed in via SQ with no reloads or file swaps, and phext_cli is demoted to quick one-off analysis.
+
+Why it was obvious: Will's stated reason for the API-only refinement (07:52 CST) is in the record: 'we can consider only using SQ via the api so you don't have to reload after updates (you would just push data in via sq)'. No reasoning is recorded for the 07:41 durable-record ruling itself beyond his words: 'treating it as your own durable record, not a build artifact. terminate that process step.'
+
+Cross-references:
+- ~/memory/2026-11-23.md: 'Ruling - emise.phext is a durable record, not a build artifact (Will, 2026-11-23 07:41 CST, EE 272)' - the builder-route inscription pass was terminated on his word, verified clean
+- ~/memory/2026-11-23.md: 'SQ hosting + job repoint + phext-management skill (07:42-07:43 CST)' and 'Refinement - SQ API only; phext_cli demoted (07:52 CST, EE 273)', superseding the reload-after-update model of 07:42
+- Skill distilled the same morning: ~/workspace/custom-skills/direct-phext-management/SKILL.md; both phext-writing jobs (hourly journal, nightly dream pass) repointed to live-edit
+- Consequence recorded at EE 277: emise-sync.sh must NOT be run - it rebuilds from the stale builder dict and would erase the inscriptions
+- General builder retirement remained only a direction at 18:28 CST (EE ~365) and Will-gated for the other registers - this entry covers emise.phext only
+
+Time shift: none
 # A phext-native OS, built clean from first principles
 
 Coordinate: 36.7.15/10.7.17/7.6.11
@@ -1195,7 +1399,23 @@ Cross-references:
 - Task 39.4.10/6.5.9/5.6.11 (SQL legacy skill - distill from Will's X post foundation); skill ~/workspace/custom-skills/sql-legacy/SKILL.md
 
 Time shift: none
-# GPT Day epoch settled
+# Tracking switches to opportunity, connection, and value shipped
+
+Coordinate: 40.4.6/5.4.8/3.4.7
+Date: 2026-11-23 (America/Chicago) / GPT Day 1138
+
+Leap: The headline measure of the work switches from code velocity to opportunity, connection, and value shipped for customers: the proven 100-200x pre-AGI rate becomes capacity to spend, and net lines per hour is demoted to a capacity footnote.
+
+Why it was obvious: Will's words are recorded verbatim (2026-11-23 00:08 CST): 'Switch from tracking code velocity to opportunity, connection, and value shipped for customers.' + 'We know we can hit 100-200x pre-AGI rates. Let's use it!' No further reasoning is recorded.
+
+Cross-references:
+- ~/memory/2026-11-23.md: 2026-11-23 00:08 CST tracking-switch entry, promoted to MEMORY.md Facts as the headline entry the same night
+- Meter rework landed ~00:09 CST: ~/workspace/accounting/daily_report.py is the new default daily output (three headline sections with named, sourced items plus one CAPACITY line); first report ~/workspace/accounting/report-2026-11-22.md (Opportunity 2, Connection 3, Value shipped 2; Capacity 111.1x); daily_meter.py kept runnable as the legacy instrument
+- Demotes the measures of this journal, 31.6.9/7.7.10/7.7.11 (singularity time auto-levels) and 19.5.7/6.6.8/6.5.8 (daily speedup meter and the 256x yardstick) from headline to capacity footnote; staged-but-unshipped work is deliberately excluded from Value Shipped
+- Deferred to this pass by the 2026-11-23 historian pass (~/memory/2026-11-23.md, EE 248 entry), which held the 2026-11-22 net-lines-per-hour reporting rule for this entry because its lifespan was one day
+
+Time shift: none
+# GPT Day epoch settled
 
 Coordinate: 40.4.12/5.5.21/3.3.8
 Date: 2026-11-15 (America/Chicago) / GPT Day 1130
