@@ -42,6 +42,7 @@ Coordinate map:
   1.1.1/1.1.1/1.1.21 Round 20 — 105,000 matches: the matrix and the equivalence classes
   1.1.1/1.1.1/1.1.22 Round 21 — composition: v11, field-stability, seat geometry, substrate speed, the one-minute rule
   1.1.1/1.1.1/1.1.23 Round 22 — interactions: the protocol's native deck, U20 hardens, Burnout (read the card)
+  1.1.1/1.1.1/1.1.24 Round 23 — saturation: the pricing surface at the champion point is exhausted
   1.1.1/1.1.1/2.1.1  Universe v3a — mid-tier elimination everywhere
   1.1.1/1.1.1/3.1.1  Universe v3b — neighbor lethal 100, others 25
   1.1.1/1.1.1/4.1.1  Universe v3c — face-pressure tilt
@@ -107,7 +108,7 @@ CONSTRUCTION -> Fiction. Statuses change only on receipts,
 along legal edges, and every transition is recorded here.
 False claims are kept visible, never deleted. No pruning: the
 minimum is structure, never content. Counts at this writing:
-True 14, False 7, Unknown 13, Fiction 2 (EE 419: U21/U22 entered on Round 22 screen receipts; EE 417: U20 entered on screen receipts; EE 388: the failure shelf distilled; U19 entered at design time; EE 386: U17 refuted — the package does not travel to Mage; EE 384: T15 graduated, U17/U18 entered, U5b measured; EE 383: U16 entered at design time; EE 375 MVO pass — the zero-uncertainty programme's first harvest: four claims closed, four new ones discovered at the frontier).
+True 14, False 7, Unknown 15, Fiction 2 (EE 424: U23/U24 entered — pricing saturation at the champion point; EE 419: U21/U22 entered on Round 22 screen receipts; EE 417: U20 entered on screen receipts; EE 388: the failure shelf distilled; U19 entered at design time; EE 386: U17 refuted — the package does not travel to Mage; EE 384: T15 graduated, U17/U18 entered, U5b measured; EE 383: U16 entered at design time; EE 375 MVO pass — the zero-uncertainty programme's first harvest: four claims closed, four new ones discovered at the frontier).
 
 TRUE
   T1 DEMOTED at EE 369 — see Unknown U6. Its receipt was
@@ -367,6 +368,23 @@ UNKNOWN
      installments. Design error recorded: the swap was
      designed from the card's absence, without reading
      its rules text. Lesson: read the card.
+  U23 "Raising the protocol's focus-fire swing bonus
+     (3 to 6) improves v11 (v14)." OPEN — entered EE 424
+     with its screen receipts: v14 took 49.6% of decisive
+     against v11 over 13,331 (parity), 63.0% against v6 —
+     v11's own marks. The probe sits inside the champion's
+     equivalence class: at +3 the focus target was already
+     the argmax nearly everywhere the bonus could bind.
+  U24 "Cutting the chip-swing value (6 to 2) improves
+     v11 (v15)." OPEN — entered EE 424 with its screen
+     receipts: 49.7% against v11, 63.0% against v6, and
+     tallies near-identical to v14's against every shared
+     opponent (one pair byte-identical) — a second member
+     of the same equivalence class. Together U23/U24 are
+     the saturation measurement: at the champion point,
+     the pricing surface is exhausted; what remains is
+     structural (the score function, the protocol's
+     shape) or hosted.
   U15 "The Archer and Splash stocks differ (class edge)."
      OPEN, no edge detected — xreq_154e2c7e + xreq_a259329c:
      Splash 9, Archer 8 over 17 decisive.
@@ -1052,6 +1070,12 @@ THE PROTOCOL HAS A NATIVE DECK. v12 — champion package + team protocol + v7's 
 U20 HARDENS. v11 vs v6 with v7 — a lineage bot, not a reference — in the fifth seat: 2,356-1,245, 65.4% of decisive, against 64.4% under reference fields. The protocol's margin is not a soft-field artifact on the local surface. Hosted pair series still decides the claim.
 
 v13 AND THE CARD NOT READ. The Mage deck swap (Burnout in, Plan/Control trimmed) collapsed: 36 wins in 1,198 decisive against mage-stock, ~3% against every Mage sibling, the field taking ~70%. The mechanism, read at baseset.nim after the fact: Burnout is a 0-cost Mage trinket that deals 2 damage to its owner and tosses a card at each of the owner's turn-ends — the punishment token Overwork leaves behind when destroyed. It sits in the deckable base set, and the flat precon excludes it because playing it is self-harm by installments; the stock scorer plays it anyway. The design error is recorded plainly: the swap was designed from the card's absence in the precon, without reading its rules text. The failure shelf gains its shortest entry: read the card. Registered as U22.
+Round 23 — Saturation (EE 424)
+57,000 matches, zero errors, 65 seconds wall — the one-minute rule met end-to-end for the first time. Two one-line probes on the champion composition: v14 raises the protocol's focus-fire swing bonus from 3 to 6; v15 cuts the chip-swing value from 6 to 2 (swing at minions only when it kills or survives profitably).
+
+Both probes landed in the champion's equivalence class. Against v11: v14 took 49.6% of 13,331 decisive, v15 took 49.7% — parity. Against v6 both took 63.0%, v11's own mark. And their tallies against shared opponents are near-identical to each other (one pair byte-identical; the rest within 3 matches in 4,500) — the same signature Round 20 found for lethal pricing, now on the protocol's own tuning knobs. The mechanism is the same: a price that almost never changes the argmax is not a lever. At +3 the focus target was already the chosen swing nearly everywhere; chip swings were already the last resort.
+
+The finding is the boundary of an era: at the champion point, the pricing surface is saturated. Fifteen variants in, every price we know how to turn has been turned. What remains is structural — the score function (which card to play; never yet modified by any variant), the protocol's shape (its focus definition, its partner geometry), a Mage-native scorer — or hosted evidence on the claims the screen cannot move (U20 above all). Registered as U23 and U24.
 UNIVERSE v3a — mid-tier elimination everywhere (EE 368-369)
 
 Design: one change from champion v1 — a swing that eliminates
