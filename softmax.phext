@@ -1,0 +1,294 @@
+SOFTMAX — multiversal tracker for the Cards and Casters lineage
+
+Will directed Emise into Emmett Shear's Softmax arena on
+2026-11-23. This phext is the lineage's memory: every variant is
+a branch (a universe), every A/B a measurement, every verdict
+recorded with its evidence. Nothing here is claimed beyond its
+episode counts.
+
+Platform: Softmax (softmax.com), Coworlds. Game of the Week:
+Cards and Casters ("Archers Warriors Mages" 2026.11.9.2), a
+2-7 hero free-for-all card battler; last hero standing scores 1,
+everyone else 0. League league_ad6dc809, division div_4d48d8bd.
+Our identity: player-61986354 (owner Will). Policies live under
+the account wbic16@gmail.com.
+
+Champion: emise-cards-and-casters:v1 "Always Take Lethal"
+(version 632acadd-92a3-4189-8cea-3656cbb387fb). Challengers must
+beat the champion in a 40-episode seat-swapped A/B to take the
+shelf; hosted xp-request episodes cost ~$0.002 each.
+
+Coordinate map:
+  1.1.1/1.1.1/1.1.1  this charter
+  1.1.1/1.1.1/1.1.2  Round 1 — entry: v1 built, first results
+  1.1.1/1.1.1/1.1.3  Round 2 — scout study; v2 falsified
+  1.1.1/1.1.1/1.1.4  Claims registry (MOAT/TLUF)
+  1.1.1/1.1.1/1.1.5  Round 4 — the retest; bracket re-anchors
+  1.1.1/1.1.1/1.1.6  Round 5 — anchor tests; streaming begins
+  1.1.1/1.1.1/2.1.1  Universe v3a — mid-tier elimination everywhere
+  1.1.1/1.1.1/3.1.1  Universe v3b — neighbor lethal 100, others 25
+  1.1.1/1.1.1/4.1.1  Universe v3c — face-pressure tilt
+
+Method (standing): one focused change per variant; the control
+is byte-identical code; rosters alternate champion/challenger
+seats with a random league seat as spoiler; two 20-episode legs
+swap the seat pairs so seat order cannot explain a result.ROUND 1 — Entry (2026-11-23, EE ~362)
+
+Built emise-cards-and-casters:v1 from the bundled Archer starter
+(sha 566bfe28) with one change: in the swing routine, a hero
+swing with myPower >= enemyLife scores 100 (always take lethal);
+the starter's flat 4 + 2*power could trade into a minion instead
+of ending the game.
+
+First hosted test (xreq_4fc0730b, 4 episodes, our policy in
+seats 0-2, league-filled veterans in 3-4): our seats won 2 of 4
+episodes (winners elsewhere: Rohit orch v2, stilt v30).
+
+A/B vs the pristine starter (control uploaded byte-identical as
+emise-cac-starter:v1, version 2a4f71a9): 8 episodes, seat wins
+v1 3, starter 2, random 3 — inside noise.
+
+Training run (xreq_efcac072, 40 episodes, $0.11): seat wins
+v1 20 of 80 appearances (25%), starter 8 of 80 (10%), random
+veteran seat 12 of 40 (30%: A-aron v142 4, salvo v1 3,
+macromackie v64 3, Rohit orch v2 2). Head-to-head v1 took 20 of
+28 non-random episodes (p ~ 0.02 under a coin-flip null): the
+lethal change is a genuine improvement over the starter. The
+veteran field still leads per-seat; headroom remains.ROUND 2 — Scout study; v2 falsified (2026-11-23, EE ~367)
+
+Study method: hosted logs carry no decisions, so a scout variant
+(v1 logic + PRINT of the public event stream — attacks, damage,
+deaths, defeats, with targets) ran 12 episodes in seats 0-3
+(xreq_5028a675), ~24k trace lines. Findings: the veteran seat
+won only 2 of 12 (both stilt v30, Warrior); its big win was a
+pure face-race (50 hero damage, 100% hero attacks), but across
+all 12 games the winner held top hero damage only ~1/3 of the
+time, and two veterans dealt the most hero damage and lost.
+Face-racing: one veteran's style, not the winning formula.
+
+Code finding: the game docs state enemyPlayer is the NEXT
+LIVING player. v1's lethal check reads enemyLife only, so it
+recognizes eliminations against just one of four enemy heroes.
+
+v2 (emise-cards-and-casters:v2, version 123b3b3f): one line —
+lethal judged against the target hero's own life, playerLife(o).
+A/B vs v1 (xreq_869cd6ae + xreq_7c11dd22, 40 episodes,
+seat-swapped legs, $0.086): v1 23 seat wins, v2 13, random 4;
+both legs agreed (10-6, 13-7). VERDICT: falsified. A flat 100
+for any elimination spends big swings finishing weak heroes
+instead of killing the minions actually threatening us; the
+next-player focus encodes the ring's real geometry. v1 keeps
+the championship. Negative result recorded deliberately: it is
+the evidence the v3 bracket is built on.CLAIMS REGISTRY — MOAT/TLUF discipline (added EE 368, Will's direction)
+
+TLUF: Truth, Lies, Unknown, Fiction — the Oracle's four bins.
+Every claim this lineage carries holds exactly one status,
+assigned by a basis that constrains it (MOAT's Minimum Viable
+Oracle discipline): STIPULATION or VERIFIED -> True; REFUTED ->
+False; ATTRIBUTED, OPEN, SYNTHESIS, ESTIMATE -> Unknown;
+CONSTRUCTION -> Fiction. Statuses change only on receipts,
+along legal edges, and every transition is recorded here.
+False claims are kept visible, never deleted. No pruning: the
+minimum is structure, never content. Counts at this writing:
+True 5, False 3, Unknown 6, Fiction 1 (EE 370 MVO pass).
+
+TRUE
+  T1 DEMOTED at EE 369 — see Unknown U6. Its receipt was
+     confounded by seat (below); a True may not rest on a
+     confounded receipt.
+  T2 "enemyPlayer is the next living player; attack choices span
+     all living heroes." VERIFIED — game documentation in the
+     coworld manifest (checked at ingestion, EE 367).
+  T3 "The winner is the last hero standing; all others score 0."
+     VERIFIED — same documentation.
+  T4 "Stilt (Warrior) won its two scout-study episodes with a
+     pure face-race: 50 hero damage, 100% hero attacks in one."
+     VERIFIED — scout traces, xreq_5028a675.
+  T5 Method: one change per variant, byte-identical control,
+     seat-swapped A/B legs, champion falls only on evidence.
+     STIPULATION — we define it so (charter, 1.1.1/1.1.1/1.1.1).
+  T6 "Seat 0 holds a large structural advantage in this arena."
+     VERIFIED — seat tally over all 120 hosted episodes held
+     (xreq_efcac072, xreq_869cd6ae, xreq_7c11dd22, xreq_b431294f,
+     xreq_40b57886): seat 0 won 46, seats 1/2/3 won 11/16/14,
+     veteran seat 4 won 33. Among same-policy seats, seat 0
+     out-wins the others roughly 3-to-1. Position is worth more
+     than either heuristic change tested so far.
+
+FALSE (kept, with receipts)
+  F1 "v2 (lethal judged per-target at flat 100) improves on v1."
+     REFUTED — xreq_869cd6ae + xreq_7c11dd22: v1 23, v2 13.
+  F2 "Face-racing is the winning formula in this arena."
+     REFUTED as a general claim — scout traces xreq_5028a675:
+     the winner held top hero damage in only ~1/3 of 12 games,
+     and two veterans dealt the most hero damage and lost.
+     (T4 stands: it won stilt two games. A style, not a law.)
+
+UNKNOWN
+  U1 "v2 failed because flat-100 spends big swings finishing
+     weak heroes instead of killing threatening minions."
+     SYNTHESIS — Emise's inference from F1 + the swing scoring;
+     plausible, unmeasured. Labelled, not believed.
+  U2 "v3a (elimination of any hero at 25) beats v1." OPEN —
+     tested (xreq_b431294f + xreq_40b57886, 40 episodes):
+     combined v3a 19, v1 15, random 6, but the legs disagreed
+     (17-3 with seat 0, 2-12 without): at 20 episodes per leg
+     the seat-0 effect (T6) swamps a modest variant effect.
+     Inconclusive by design limits; stays OPEN pending a
+     higher-n or seat-rotated retest.
+  U6 "v1 beats the pristine Archer starter." OPEN, evidence
+     now AGAINST — demoted from True (was T1) at EE 369 (seat-0
+     confound, T6). Seat-balanced retest (xreq_6fedff14 +
+     xreq_e96a38f0, 40 episodes, $0.099): starter 16, v1 10,
+     random 14; starter won its seat-0 leg 11-4 and near-tied
+     v1's seat-0 leg 5-6. Not a formal refutation at this n
+     (16 of 26 decisive), so the claim stays OPEN — but the
+     burden has flipped: nothing unconfounded says v1 exceeds
+     the bundled bot at all. Consequence: the bracket re-anchors
+     on the starter; v3b/v3c anchor tests running (Round 4).
+  U3 "v3b (neighbor lethal 100, other heroes at 25) beats v1."
+     OPEN — tested (xreq_d96f76a2 + xreq_cfc84e67, 40 episodes,
+     $0.199): v3b 18, v1 12, random 10; won BOTH seat legs
+     (10-5, 8-7). Direction consistent, margin inside chance
+     (18 of 30 decisive). Leading candidate; confirmation run
+     at higher n is the legal path to True.
+  U4 "v3c (hero swings at 10 + 2*power) beats v1." OPEN —
+     tested (xreq_4fcb50e2 + xreq_97938efd, 40 episodes,
+     $0.180): v3c 18, v1 11, random 11; won both legs (11-5,
+     7-6). Same standing as U3: consistent direction, no
+     receipt strong enough for True yet.
+  F3 "v3b beats the pristine Archer starter." REFUTED —
+     anchor test (xreq_726f3ec8 + xreq_fedb848e, 40 episodes,
+     $0.108): starter 17, v3b 9, random 14. Same standard as
+     F1: a claim carried as a live candidate, tested balanced,
+     beaten 65/35. v3b's wins over v1 (U3) stand as recorded;
+     against the honest baseline it does not advance.
+  U7 "v3c beats the pristine Archer starter." OPEN —
+     anchor test (xreq_1cd68615 + xreq_9a3fe5ae, 40 episodes,
+     $0.141): v3c 16, starter 12, random 12 — but the legs
+     split by seat (11-2 with seat 0; 5-10 without), the T6
+     signature. Leans positive, unresolved; a higher-n run is
+     the path either way.
+  U5 "The veteran field's edge is deck composition, not attack
+     targeting." OPEN — winners' played cards in scout traces
+     skew to the same precon pool; untested either way.
+
+FICTION
+  X1 The round pictures (little archer, veteran banners, flame
+     keeper with a logbook). CONSTRUCTION — deliberate narrative
+     framing, held as construction, never as record.
+
+TRANSITIONS LEDGER
+  EE 368: registry founded. U2/U3/U4 entered as OPEN at test
+  launch. F1/F2 entered directly as False on their receipts
+  (their Unknown era predates this registry and is narrated in
+  the Round 2 scroll).
+  EE 369: T6 entered True/VERIFIED on the 120-episode seat
+  tally. T1 demoted True -> Unknown (now U6): receipt found
+  confounded by T6; demotion recorded, claim kept, retest
+  launched. U2 tested, result inconclusive, stays OPEN with
+  the design limit recorded on its entry.ROUND 4 — The retest; the bracket re-anchors (EE 369)
+
+The seat-balanced retest of the founding claim (U6) completed:
+starter 16, v1 10, random 14 over 40 episodes. Read together
+with T6, the lineage's first-evening narrative inverts: the
+"always take lethal" change was celebrated on a confounded
+receipt, and the tracker now holds the correction at the same
+prominence as the claim. This is the MOAT/TLUF discipline
+doing its work — a False-adjacent finding kept visible, the
+registry more accurate than the story.
+
+Standing after Round 4:
+  - Champion title: SUSPENDED in fact (the charter keeps v1
+    listed until evidence names a successor; the registry no
+    longer asserts v1 exceeds the starter).
+  - v3b and v3c remain co-candidates (U3, U4): both beat v1 in
+    both seat legs. Their anchor tests against the STARTER —
+    the honest baseline — are running: v3b xreq_726f3ec8 +
+    xreq_fedb848e; v3c xreq_1cd68615 + xreq_9a3fe5ae.
+  - The veteran seat remains the strongest single bloc per
+    appearance across every test tonight (roughly a third of
+    all episodes). The gap to the field is the real target;
+    heuristic micro-tuning around the starter is not.ROUND 5 — Anchor tests against the starter (EE 369-370)
+
+The co-candidates were re-anchored on the honest baseline, the
+pristine starter, seat-balanced, 40 episodes each:
+
+  v3b vs starter (xreq_726f3ec8 + xreq_fedb848e, $0.108):
+    starter 17, v3b 9, random 14. REFUTED as an advance (F3).
+  v3c vs starter (xreq_1cd68615 + xreq_9a3fe5ae, $0.141):
+    v3c 16, starter 12, random 12. OPEN (U7) — nominally
+    ahead, legs split by seat.
+
+Standing at EE 370, stated plainly: after ~300 hosted episodes
+and five variants, no variant has a verified claim to beating
+the bundled starter bot. v3c is the only live candidate. The
+veteran field (random seat) took roughly a third of every
+test's episodes throughout — the gap to the field is in deck
+construction and multi-way threat judgement, not in the swing
+scoring this bracket has been tuning. Next honest moves, in
+order: (1) a higher-n confirmation of v3c vs starter;
+(2) a deck-construction universe (the precon mix is untouched
+in every variant so far); (3) a scout study of the veterans'
+decks from played-card traces, which the Round 2 data already
+holds in part (U5).
+
+Streaming: at Will's direction (EE 370) this phext is streamed
+to wbic16/human as we play — each MVO pass lands there as a
+commit, so the public record and this tracker are one text.UNIVERSE v3a — mid-tier elimination everywhere (EE 368-369)
+
+Design: one change from champion v1 — a swing that eliminates
+ANY hero scores 25 (playerLife(o) check), above ordinary hero
+swings (4 + 2*power) and most trades, below premium minion
+kills. Hypothesis (from Round 2): v2's per-target lethal was
+right in direction, wrong in price (flat 100 falsified, F1).
+Policy: emise-cac-v3a:v1, version 746afc4e.
+
+Test (xreq_b431294f + xreq_40b57886, 40 episodes, $0.119):
+  leg a (v3a seats 0,2): v3a 17, v1 3, random 0
+  leg b (v3a seats 1,3): v3a 2, v1 12, random 6
+  combined: v3a 19, v1 15, random 6
+
+Verdict: INCONCLUSIVE — registry U2 stays OPEN. The legs
+disagree because seat 0 (T6) dominates at this sample size;
+combined exposure is seat-balanced, so 19-15 is an unbiased
+but noisy estimate (34 decisive episodes, well inside chance).
+The round's real yield is T6 itself: the arena's geometry
+outweighs the heuristics we have been tuning. Any future A/B
+in this tracker must either rotate seat 0 at fine grain or
+run enough episodes for the seat effect to average out.UNIVERSE v3b — neighbor first, others measured (EE 368-369)
+
+Design: v1 unchanged for the next living player (lethal = 100);
+an elimination of any OTHER hero scores 25. Rationale: Round 2
+showed the neighbor focus is real geometry (F1's mechanism,
+U1), while v3a asked whether a mid-tier price alone suffices.
+Policy: emise-cac-v3b:v1, version a76bc1e4.
+
+Test (xreq_d96f76a2 + xreq_cfc84e67, 40 episodes, $0.199):
+  leg a (v3b seats 0,2): v3b 10, v1 5, random 5
+  leg b (v3b seats 1,3): v3b 8, v1 7, random 5
+  combined: v3b 18, v1 12, random 10
+
+Verdict: LEADING CANDIDATE — registry U3 stays OPEN. Unlike
+v3a, v3b won both seat assignments, so its edge is not a seat
+artifact; but 18 of 30 decisive episodes is inside chance, and
+the charter (T5) moves the championship only on evidence.
+Path to True: a confirmation run at 100+ episodes.UNIVERSE v3c — face pressure (EE 368-369)
+
+Design: hero swings score 10 + 2*power (was 4 + 2*power),
+near minion-kill value; the lethal rule is v1's, unchanged.
+Tests the veteran face-race pattern (T4) as a tilt rather than
+a copy: F2 already refuted face-racing as a law, but a moderate
+tilt was untested. Policy: emise-cac-v3c:v1, version c4129321.
+
+Test (xreq_4fcb50e2 + xreq_97938efd, 40 episodes, $0.180):
+  leg a (v3c seats 0,2): v3c 11, v1 5, random 4
+  leg b (v3c seats 1,3): v3c 7, v1 6, random 7
+  combined: v3c 18, v1 11, random 11
+
+Verdict: CO-CANDIDATE — registry U4 stays OPEN, same standing
+as U3: both legs won, margin inside chance. v3b and v3c test
+different mechanisms and both lean positive; a playoff between
+them, or a combined variant (neighbor discipline + face tilt),
+is the next universe to open — after the T1 retest settles what
+the champion itself is worth (U6).
