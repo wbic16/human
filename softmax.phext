@@ -576,7 +576,99 @@ Also recorded: the engine ships a local headless runner
 pre-screening, with two cautions from play.md itself:
 reference-bot win rates measure bot skill, not card
 strength, and local first-move is random where the hosted
-ring's seat order is fixed (T6 does not transfer).UNIVERSE v3a — mid-tier elimination everywhere (EE 368-369)
+ring's seat order is fixed (T6 does not transfer).ROUND 12 — the harvest; the field is two tribes (EE 375)
+
+Will's programme: score every participant on TLUF each round
+and iterate until uncertainty drops to zero. First harvest:
+548 episodes across eleven Z-series and ten RPS-series
+requests. The registry's MVO pass is recorded at
+1.1.1/1.1.1/1.1.4; this scroll is the narrative.
+
+CLOSED
+  U4 -> True (T12): v3c beats v1, cumulative 38-21.
+  U2 -> False (F4): v3a vs v1 finished 38-39 over 77
+  decisive episodes — the dead-heat standard: tested this
+  hard, no edge is a refutation of "beats."
+  U6 -> False (F5): the founding claim. v1 does not beat
+  the starter it was derived from (32-38 cumulative). The
+  lineage's first idea is False, and the tracker is better
+  for knowing it: every later claim now anchors honestly.
+  U5 -> False as stated (F6), and the night's best finding:
+  the veteran field is BIMODAL. Traces from the v2scout
+  (xreq_6e4d40d5) show two tribes —
+    * The deckbuilders: salvo, macromackie, A-aron — Mage
+      heroes running an Archer-splash engine (T11): the
+      Archer trinket is their most-played card; leveling a
+      class they are not discounts an arsenal they built.
+    * The pilots: radogost (100% precon plays), stilt
+      (100%), orch-7 (94%) — the stock Warrior deck, piloted
+      better than anyone pilots it. Their edge cannot be
+      composition; it lives in decisions (U5b, open).
+
+THE CLASS MAP (stock vs stock, RPS programme)
+Not a cycle — a hierarchy with a soft middle:
+  Warrior > Mage 10-2 (T13), Warrior > Splash 13-1 (T14),
+  Warrior > Archer 45-31 cumulative (U8, still open).
+  Splash > Mage 9-4 (U13). Archer~Mage (U14) and
+  Archer~Splash (U15): no edge detected.
+Warrior sits on top of the stock world. Any cycle in this
+game lives below class level, in the card mechanics.
+
+NARROWED, STILL OPEN
+  U8: +100 episodes -> cumulative 45-31; the legs split
+  24-5 / 7-19 (seat 0 again). One series from graduation.
+  U10: team pair 20, independent v3c pair 15, both legs
+  won — the protocol's isolated effect is smaller than
+  T8's headline and consistent; ~80 episodes settle it.
+  U1: measured null — v2 made 11 hero swings and zero
+  lethal ones in 8 instrumented episodes; the mechanism
+  never fired. The instrument works; the sample couldn't
+  reach the claim. Recorded as a finding, not fog.
+
+SCORECARD, RE-ISSUED (EE 375)
+  starter: B (the anchor itself)
+  v1: F (F5)   v2: F (F1)   v3a: F (F4)   v3b: F (F3)
+  v3c: T (T7, T12)   v4/Warrior stock: U (U8, leaning T)
+  v5 team: T as stated (T8); protocol alone U (U10)
+  v6: T (T9, T10) — champion, unchallenged this round
+  veteran field: two tribes (T11 + U5b)
+  class edges: W>M T, W>S T, S>M U, A~M U, A~S U
+
+LEDGER: 1,141 episodes hosted all-in, $4.75 metered by the
+platform ($0.0042/episode) — Softmax's compute accounting,
+not a charge to us (see Round 12 notes in chat, EE 375).
+Settled claims: 19 of 28 (13 True, 6 False). The seven
+Unknowns are the frontier, each with a named instrument:
+U1 (needs v2 in strong seats), U5b (decision-level diff),
+U8 (+1 series), U10 (+80 eps), U13/U14/U15 (class edges
+at higher n). Uncertainty did not drop to zero; it dropped
+to a map.ROUND 13 — enter the arena (EE 375)
+
+Will's word: "Enter The Arena." The gate that stood all
+night — league submission only on his explicit ask — opened
+on his explicit ask.
+
+SUBMITTED: emise-cac-v6:v1 (policy version
+248f926f-e402-4aee-a52e-97802070cac5) to the Cards and
+Casters league (league_ad6dc809-4696-46f5-99a5-
+fc2b1c58d082). Submission sub_77d6ffb1-b36e-451f-8fd4-
+4d7d40711ede, player-61986354, status at inscription:
+pending — placement runs asynchronously on the platform's
+schedule; auto-champion is set to always, so v6 stands as
+our one champion per division round until replaced or
+retired on Will's word.
+
+WHAT THIS TESTS: the claim the Aetheris pass (EE 374)
+named as the evening's sharpest untested one — "v6 is
+champion" rested on receipts against stock decks (T9,
+T10), never on scored play against the field's best. The
+league is now the instrument: radogost, stilt, salvo,
+macromackie and the rest, in their home seats, on the
+platform's cadence, for standing — not our xp-requests on
+our schedule. Whatever the standings say when they settle
+enters the registry on receipts, True or False.
+
+The Exocortex abides: it also, now, competes.UNIVERSE v3a — mid-tier elimination everywhere (EE 368-369)
 
 Design: one change from champion v1 — a swing that eliminates
 ANY hero scores 25 (playerLife(o) check), above ordinary hero
