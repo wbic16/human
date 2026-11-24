@@ -34,6 +34,7 @@ Coordinate map:
   1.1.1/1.1.1/1.1.13 Round 12 — the harvest; the field is two tribes
   1.1.1/1.1.1/1.1.14 Round 13 — enter the arena
   1.1.1/1.1.1/1.1.15 Round 14 — v7 Reach, designed from first principles
+  1.1.1/1.1.1/1.1.16 Round 15 — fractal expansion across three times
   1.1.1/1.1.1/2.1.1  Universe v3a — mid-tier elimination everywhere
   1.1.1/1.1.1/3.1.1  Universe v3b — neighbor lethal 100, others 25
   1.1.1/1.1.1/4.1.1  Universe v3c — face-pressure tilt
@@ -99,7 +100,7 @@ CONSTRUCTION -> Fiction. Statuses change only on receipts,
 along legal edges, and every transition is recorded here.
 False claims are kept visible, never deleted. No pruning: the
 minimum is structure, never content. Counts at this writing:
-True 13, False 6, Unknown 8, Fiction 2 (EE 383: U16 entered at design time; EE 375 MVO pass — the zero-uncertainty programme's first harvest: four claims closed, four new ones discovered at the frontier).
+True 14, False 6, Unknown 10, Fiction 2 (EE 384: T15 graduated, U17/U18 entered, U5b measured; EE 383: U16 entered at design time; EE 375 MVO pass — the zero-uncertainty programme's first harvest: four claims closed, four new ones discovered at the frontier).
 
 TRUE
   T1 DEMOTED at EE 369 — see Unknown U6. Its receipt was
@@ -163,6 +164,11 @@ TRUE
   T14 "The Warrior stock beats the Splash stock (class
      edge)." VERIFIED — xreq_38208a33 + xreq_4aa9fc94:
      13-1 over 14 decisive episodes of the 40.
+  T15 "v7-reach beats the pristine Archer starter."
+     VERIFIED — xreq_2b83c25f + xreq_61627fbc (40 episodes):
+     v7 16, starter 4, random 20; won both legs (8-1, 8-3).
+     16 of 20 decisive. The first authored deck holds a
+     verified edge over the bundled baseline.
 
 FALSE (kept, with receipts)
   F1 "v2 (lethal judged per-target at flat 100) improves on v1."
@@ -226,6 +232,16 @@ UNKNOWN
      Their decks are stock (T11's complement), so the edge
      must live in decisions; measuring it needs a
      decision-level comparison, not yet built.
+     EE 384 FIRST MEASUREMENT (the 20 scout traces on disk,
+     attack-target audit): the field attacks heroes almost
+     exclusively — pilots 321/331 (96%), builders 76/76
+     (100%) — while our stock-derived seats attacked heroes
+     in only 347/546 (63%), trading into minions the rest.
+     Target selection is a real decision signature. The
+     causal step (this signature IS the edge) stays open:
+     F2 warns the top face-racer often loses. Named next
+     instrument: a v6-package scout, to test whether the
+     champion heuristics close the target gap.
   U8 "The Warrior precon (stock heuristics) beats the Archer
      starter." OPEN, leaning True — tested (xreq_29f21a17 +
      xreq_f9cb0a21, 40 episodes, $0.130): Warrior 14, starter
@@ -262,9 +278,18 @@ UNKNOWN
   U16 "v7-reach (Warrior width deck, Bolt splash for face
      reach, champion heuristics unchanged) beats v6."
      OPEN — entered at design time, EE 383, before any
-     episode ran (record-first). Receipts pending:
-     xreq_08ba14da + xreq_904faa9a (vs v6) and the starter
-     anchor xreq_2b83c25f + xreq_61627fbc.
+     episode ran (record-first). First receipts (EE 384):
+     vs v6 — 11-11 over 22 decisive (xreq_08ba14da +
+     xreq_904faa9a); each policy won its seat-0 leg (T6).
+     Parity with the champion: the splash cost nothing and
+     has not yet paid. Stays OPEN; the starter anchor
+     graduated separately as T15.
+  U17 "The champion package improves the Mage stock deck
+     (same-deck A/B)." OPEN — entered at design time,
+     EE 384. Receipts pending: xreq_bf3e8fd5 + xreq_bd7e4c56.
+  U18 "The champion package improves the Splash stock deck
+     (same-deck A/B)." OPEN — entered at design time,
+     EE 384. Receipts pending: xreq_cbdc222b + xreq_281d9494.
   U15 "The Archer and Splash stocks differ (class edge)."
      OPEN, no edge detected — xreq_154e2c7e + xreq_a259329c:
      Splash 9, Archer 8 over 17 decisive.
@@ -718,7 +743,45 @@ minion-priced swing table.
 
 TESTS LAUNCHED (80 episodes): vs v6 — xreq_08ba14da (leg
 a), xreq_904faa9a (leg b); starter anchor — xreq_2b83c25f,
-xreq_61627fbc. Verdicts on receipts, next round.UNIVERSE v3a — mid-tier elimination everywhere (EE 368-369)
+xreq_61627fbc. Verdicts on receipts, next round.ROUND 15 — fractal expansion across three times (EE 384)
+
+Will's direction: expand, fractally, across 3 dimensions
+of time. The loop is self-similar — design, record the
+claim first, test, verdict on receipts, inscribe — and it
+now runs at every scale at once:
+
+PAST (the recorded 1,141 episodes, re-mined): the attack-
+target audit over all 20 scout traces found the pilots'
+decision signature — the field attacks heroes 96-100% of
+the time; our stock-derived seats only 63% (U5b's first
+measurement). The past still had unmeasured claims in it;
+expansion backward is archaeology with instruments.
+
+PRESENT (the live bracket, widened): v7's verdicts landed
+— parity with the champion (11-11, U16 open) and a
+verified edge over the starter (16-4, T15). The two empty
+deck regions of the 11D map got their ports the same
+hour: v8-mage and v9-splash carry the champion package
+onto the Mage and Splash stocks (package diff-verified as
+a single hunk; decks byte-identical), 80 episodes running
+(U17, U18). Every deck in the character space now has a
+package point and a stock point.
+
+FUTURE (the cadence, made mechanical): a daily arena
+sweep now stands on the schedule (softmax-arena-sweep,
+~18:30 CT) — it checks v6's league standing, tallies any
+completed series, applies MVO transitions, rebuilds and
+streams the tracker, and reports only on change. It may
+not submit, upload, or launch: expansion of the record,
+never of the footprint, without Will's word.
+
+The fractal claim, stated for the record: the same loop
+that evolves a variant evolves the programme — and the
+programme's own claims (this scroll's among them) sit in
+the same registry discipline. Settled tonight: 20 of 32
+claims (14 True, 6 False). The frontier: U1, U5b, U8,
+U10, U13, U14, U15, U16, U17, U18 — each with a named
+instrument, three of them already running.UNIVERSE v3a — mid-tier elimination everywhere (EE 368-369)
 
 Design: one change from champion v1 — a swing that eliminates
 ANY hero scores 25 (playerLife(o) check), above ordinary hero
