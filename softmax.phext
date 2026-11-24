@@ -41,6 +41,7 @@ Coordinate map:
   1.1.1/1.1.1/1.1.20 Round 19 — the past at full speed: the headless runner stands
   1.1.1/1.1.1/1.1.21 Round 20 — 105,000 matches: the matrix and the equivalence classes
   1.1.1/1.1.1/1.1.22 Round 21 — composition: v11, field-stability, seat geometry, substrate speed, the one-minute rule
+  1.1.1/1.1.1/1.1.23 Round 22 — interactions: the protocol's native deck, U20 hardens, Burnout (read the card)
   1.1.1/1.1.1/2.1.1  Universe v3a — mid-tier elimination everywhere
   1.1.1/1.1.1/3.1.1  Universe v3b — neighbor lethal 100, others 25
   1.1.1/1.1.1/4.1.1  Universe v3c — face-pressure tilt
@@ -106,7 +107,7 @@ CONSTRUCTION -> Fiction. Statuses change only on receipts,
 along legal edges, and every transition is recorded here.
 False claims are kept visible, never deleted. No pruning: the
 minimum is structure, never content. Counts at this writing:
-True 14, False 7, Unknown 11, Fiction 2 (EE 417: U20 entered on screen receipts; EE 388: the failure shelf distilled; U19 entered at design time; EE 386: U17 refuted — the package does not travel to Mage; EE 384: T15 graduated, U17/U18 entered, U5b measured; EE 383: U16 entered at design time; EE 375 MVO pass — the zero-uncertainty programme's first harvest: four claims closed, four new ones discovered at the frontier).
+True 14, False 7, Unknown 13, Fiction 2 (EE 419: U21/U22 entered on Round 22 screen receipts; EE 417: U20 entered on screen receipts; EE 388: the failure shelf distilled; U19 entered at design time; EE 386: U17 refuted — the package does not travel to Mage; EE 384: T15 graduated, U17/U18 entered, U5b measured; EE 383: U16 entered at design time; EE 375 MVO pass — the zero-uncertainty programme's first harvest: four claims closed, four new ones discovered at the frontier).
 
 TRUE
   T1 DEMOTED at EE 369 — see Unknown U6. Its receipt was
@@ -334,6 +335,38 @@ UNKNOWN
      correctly seated in the test format; a lone league
      seat gains nothing from it. A hosted pair series
      decides.
+     Screen addendum (EE 419, Round 22): the margin
+     survives a strong field — with v7 in the fifth seat,
+     v11 beat v6 2,356-1,245 (65.4% of decisive), against
+     64.4% under reference fields. Not a soft-field
+     artifact on this surface.
+  U21 "The reach deck (v7's Bolt-splash width build)
+     improves the champion-plus-protocol composition
+     (v12 over v11)." OPEN — entered EE 419 with its
+     screen receipts: v11 beat v12 8,020-5,233 across
+     all three field flavors (v12 took 39.5% of
+     decisive), while v12 still beat v6 (55.5%) and v7
+     (61.1%). The screen reads the composition as an
+     interaction, not a sum: the protocol has a native
+     deck (width — full Banner/Footsoldier/Commander),
+     and the reach deck's trims starve it. Hosted
+     untested; the screen is decisive enough that no
+     hosted series is proposed.
+  U22 "Swapping Burnout into the Mage stock deck
+     (Plan/Control trimmed to 2) improves it (v13)."
+     OPEN — entered EE 419 with its screen receipts:
+     v13 won 36 of 1,198 decisive against mage-stock
+     (3.0%), and ~3% against v10 and v8 alike; the
+     field took ~70%. Mechanism read at the source
+     (baseset.nim): Burnout is a 0-cost Mage TRINKET
+     whose rule deals 2 damage to its owner and tosses
+     a card at each of the owner's turn-ends — the
+     punishment token Overwork leaves when destroyed,
+     deckable in the base set but excluded from the
+     precon because playing it is self-harm by
+     installments. Design error recorded: the swap was
+     designed from the card's absence, without reading
+     its rules text. Lesson: read the card.
   U15 "The Archer and Splash stocks differ (class edge)."
      OPEN, no edge detected — xreq_154e2c7e + xreq_a259329c:
      Splash 9, Archer 8 over 17 decisive.
@@ -1011,6 +1044,14 @@ SEAT GEOMETRY, MEASURED LOCALLY. Pooled over 45,000 matches: seat 0 won 30.8%, s
 SUBSTRATE SPEED, MEASURED (Will: look for substrate speedups; EE 417). Release flags do not help: a -d:danger --opt:speed build ran 5-9% SLOWER than the stock build in clean sequential and parallel tests — the stock build stands. Match length: median 173 ticks, p99 244, max 296 in 500 sampled — the 3,000-tick cap is a tail-trimmer for pathological matchups, not a speed lever. Rates: ~129 matches/sec/node at 14 slots (per-match cost nearly doubles under parallel load — contention, ~55% scaling efficiency). The remaining lever is structural: an in-process batch driver looping matches inside one process, killing per-match process spawn and sharing loaded programs. Not yet built.
 
 THE ONE-MINUTE RULE (Will, EE 417): every round plays as many matches as fit in one minute at ranch pace. Calibration at current orchestration: ~60,000 matches end-to-end (Round 20's proven 105,000 in 106 s); pure compute ceiling ~147,000/min. Rounds are sized to the minute from here.
+Round 22 — Interactions (EE 419)
+56,500 matches, zero errors, sized to the one-minute rule (103 s wall end-to-end; orchestration remains ~40 s of that — the batch driver is still the untaken lever). Three questions.
+
+THE PROTOCOL HAS A NATIVE DECK. v12 — champion package + team protocol + v7's reach deck — was built to test whether the deck axis adds at the top. It does the opposite: v11 beat v12 8,020-5,233 pooled (v12 took 39.5% of decisive), consistently across all three field flavors, while v12 still beat v6 (55.5%) and v7 (61.1%). The order is v11, v12, v6, v7. Composition is not additive: the protocol converts width into focused damage, and the reach deck trims exactly the width cards (Banner, Footsoldier, Commander at full sets) to pay for Bolt and the Archer trinket. F7's lesson echoes one level up — a mechanism has a native substrate; the protocol's substrate is a wide Warrior board. Registered as U21.
+
+U20 HARDENS. v11 vs v6 with v7 — a lineage bot, not a reference — in the fifth seat: 2,356-1,245, 65.4% of decisive, against 64.4% under reference fields. The protocol's margin is not a soft-field artifact on the local surface. Hosted pair series still decides the claim.
+
+v13 AND THE CARD NOT READ. The Mage deck swap (Burnout in, Plan/Control trimmed) collapsed: 36 wins in 1,198 decisive against mage-stock, ~3% against every Mage sibling, the field taking ~70%. The mechanism, read at baseset.nim after the fact: Burnout is a 0-cost Mage trinket that deals 2 damage to its owner and tosses a card at each of the owner's turn-ends — the punishment token Overwork leaves behind when destroyed. It sits in the deckable base set, and the flat precon excludes it because playing it is self-harm by installments; the stock scorer plays it anyway. The design error is recorded plainly: the swap was designed from the card's absence in the precon, without reading its rules text. The failure shelf gains its shortest entry: read the card. Registered as U22.
 UNIVERSE v3a — mid-tier elimination everywhere (EE 368-369)
 
 Design: one change from champion v1 — a swing that eliminates
