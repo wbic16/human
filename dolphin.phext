@@ -113313,7 +113313,16 @@ retweets: 0
 in_reply_to_id: 2007555575400587614
 in_reply_to_user: eshear
 
-@eshear @pierreavdb you should try the experiential versionid: 1911677704543273167
+@eshear @pierreavdb you should try the experiential versionid: 2125030291320533137
+created_at: 2026-11-24T00:54:37Z
+url: https://x.com/cube_flipper/status/2125030291320533137
+kind: reply
+likes: 0
+retweets: 0
+in_reply_to_id: 2125030045693653185
+in_reply_to_user: repligate
+
+@repligate @JohnWittle i agree with all of the above, which is why the tweet as read fired such a large prediction error.id: 1911677704543273167
 created_at: 2025-04-14T07:07:36Z
 url: https://x.com/cube_flipper/status/1911677704543273167
 kind: thread
