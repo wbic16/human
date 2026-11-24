@@ -27,6 +27,7 @@ Coordinate map:
   1.1.1/1.1.1/1.1.6  Round 5 — anchor tests; streaming begins
   1.1.1/1.1.1/1.1.7  Round 6 — ascend: confirmation, deck, teamwork
   1.1.1/1.1.1/1.1.8  Round 7 — three verdicts; champion crowned
+  1.1.1/1.1.1/1.1.9  Round 8 — v4, v5, v6 oriented in 11D
   1.1.1/1.1.1/2.1.1  Universe v3a — mid-tier elimination everywhere
   1.1.1/1.1.1/3.1.1  Universe v3b — neighbor lethal 100, others 25
   1.1.1/1.1.1/4.1.1  Universe v3c — face-pressure tilt
@@ -195,6 +196,11 @@ UNKNOWN
      edge alone." OPEN — isolation test defined, not yet run:
      v5 (coordinated v3c pair) vs an independent v3c pair,
      family metric, seat-swapped.
+  U11 "v6 beats Warrior stock (the champion heuristics stack
+     on the Warrior deck)." OPEN — test running:
+     xreq_e52d2ea4 + xreq_adb4c387.
+  U12 "v6 beats the Archer starter." OPEN — test running:
+     xreq_b6487576 + xreq_1fe9b300.
 
 FICTION
   X1 The round pictures (little archer, veteran banners, flame
@@ -321,7 +327,49 @@ Standings at EE 371: champion v3c (solo). Next universes, in
 leverage order: (1) v6 = champion heuristics ported to the
 Warrior deck; (2) U10 isolation (team v3c vs independent v3c);
 (3) U8 confirmation at n=100. League submission remains
-Will's call alone; the solo candidate would be v3c or v6.UNIVERSE v3a — mid-tier elimination everywhere (EE 368-369)
+Will's call alone; the solo candidate would be v3c or v6.ROUND 8 — v4, v5, v6 oriented in 11D (EE 372)
+
+The phext address is 9D. A variant needs two more axes to be
+fully located: WHEN it was oriented (the epoch) and WHAT the
+evidence says (its TLUF state). 9D + epoch + evidence = 11D.
+Inside the frame, each variant is a point on eleven axes —
+the levers this tracker has actually discovered:
+
+  D1  deck            Archer / Warrior / Mage / Splash
+  D2  heuristic line  stock / lethal / champion package
+  D3  lethal scope    none / next-player
+  D4  elimination px  — / 100 (mid-tier falsified as priced)
+  D5  face pressure   4+2p / 10+2p
+  D6  card targeting  stock / team-gated
+  D7  team protocol   solo / family
+  D8  focus fire      none / leader
+  D9  seat geometry   unaware / partner-by-arithmetic
+  D10 field role      solo entrant / paired seats
+  D11 evidence        TLUF status of the headline claim
+
+ORIENTATIONS (address / epoch / the eleven axes):
+
+v4 — 1.1.1/1.1.1/5.1.1, oriented EE 370-371
+  Warrior / stock / none / — / 4+2p / stock / solo / none /
+  unaware / solo / Unknown (U8, leaning True: 14-7 vs starter)
+
+v5 — 1.1.1/1.1.1/6.1.1, oriented EE 370-371
+  Archer / champion package / next-player / 100 / 10+2p /
+  team-gated / family / leader / partner-by-arithmetic /
+  paired / True as stated (T8); isolation at U10
+
+v6 — 1.1.1/1.1.1/7.1.1, oriented EE 372
+  Warrior / champion package / next-player / 100 / 10+2p /
+  stock / solo / none / unaware / solo / Unknown (U11, U12 —
+  tests running at orientation time)
+
+Read as vectors, the ascent is visible: v4 moves D1 alone;
+v5 moves D6-D10 alone; v6 is the first point to hold the
+verified D2/D5 position on the D1-Warrior axis at once. The
+empty regions of the space name the unexplored universes:
+Mage and Splash on D1, tuned minion-trade valuation (no axis
+moved yet — it would be D12 if it earns one), and every
+family-protocol point on a Warrior deck.UNIVERSE v3a — mid-tier elimination everywhere (EE 368-369)
 
 Design: one change from champion v1 — a swing that eliminates
 ANY hero scores 25 (playerLife(o) check), above ordinary hero
@@ -377,4 +425,24 @@ as U3: both legs won, margin inside chance. v3b and v3c test
 different mechanisms and both lean positive; a playoff between
 them, or a combined variant (neighbor discipline + face tilt),
 is the next universe to open — after the T1 retest settles what
-the champion itself is worth (U6).
+the champion itself is worth (U6).UNIVERSE v4 — the Warrior precon, stock (EE 370)
+
+Orientation: Round 8 scroll (1.1.1/1.1.1/1.1.9). Policy
+emise-cac-v4-warrior:v1, byte-identical to the bundled Warrior
+precon (sha256 d14e338a...). Test record: Round 7 scroll —
+14-7 vs the Archer starter across both legs (U8, OPEN).UNIVERSE v5 — the team protocol (EE 370)
+
+Orientation: Round 8 scroll (1.1.1/1.1.1/1.1.9). Design and
+protocol: Round 6 scroll. Policy emise-cac-v5-team:v1 (v3c +
+teamcalc, 51 diff lines). Test record: Round 7 scroll — the
+pair took 27 of 40 episodes (T8, TRUE as stated; isolation
+question at U10).UNIVERSE v6 — Warrior deck + champion heuristics (EE 372)
+
+Orientation: Round 8 scroll (1.1.1/1.1.1/1.1.9). Built by
+porting the verified package (T7: lethal-100 + face pressure
+10+2p) onto the Warrior precon; diff vs Warrior stock is
+exactly that package, nothing else. Policy emise-cac-v6:v1.
+Tests running at inscription: vs Warrior stock
+(xreq_e52d2ea4 + xreq_adb4c387, U11) and vs the Archer
+starter (xreq_b6487576 + xreq_1fe9b300, U12), 40 episodes
+each, seat-balanced.
