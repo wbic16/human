@@ -1,0 +1,9 @@
+# Baseline — the greedy claimer bundled with Singular.
+# One rule per scroll. Rules evaluate in file order; the first matching
+# rule with a legal action fires. If none fire, the player attunes.
+
+WHEN here unclaimed DO inscribe "singular light lattice woven bright amber"
+WHEN here enemy DO inscribe "mutation turns the scroll toward the light"
+WHEN unclaimed adjacent DO move toward unclaimed
+WHEN charge >= 10 DO move toward unclaimed
+WHEN always DO attune

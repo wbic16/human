@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Singular — replay</title>
+<style>
+  body { font-family: ui-monospace, monospace; background: #101014; color: #eee;
+         margin: 0; padding: 16px; }
+  h1 { font-size: 18px; margin: 0 0 4px; }
+  .sub { color: #9aa; margin-bottom: 12px; }
+  .layers { display: flex; gap: 18px; flex-wrap: wrap; }
+  .layer h3 { margin: 4px 0; font-size: 13px; color: #9aa; }
+  .grid { display: grid; grid-template-columns: repeat(3, 118px); gap: 6px; }
+  .cell { border: 2px solid #333; border-radius: 6px; padding: 5px; height: 74px;
+          overflow: hidden; cursor: pointer; background: #17171d; }
+  .cell .coord { font-size: 11px; color: #9aa; }
+  .cell .txt { font-size: 10px; color: #ccc; line-height: 1.25; }
+  .cell .seats { font-size: 12px; }
+  .controls { margin: 12px 0; display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+  button { background: #23232c; color: #eee; border: 1px solid #444; border-radius: 5px;
+           padding: 5px 10px; cursor: pointer; }
+  input[type=range] { width: 320px; }
+  #scores span { margin-right: 14px; }
+  #detail { white-space: pre-wrap; background: #17171d; border: 1px solid #333;
+            border-radius: 6px; padding: 10px; margin-top: 12px; max-width: 760px; }
+</style>
+</head>
+<body>
+<h1>Singular — replay</h1>
+<div class="sub" id="meta">Loading replay…</div>
+<div id="scores"></div>
+<div class="controls">
+  <button id="play">Pause</button>
+  <button id="back">◀ step</button>
+  <button id="fwd">step ▶</button>
+  <input type="range" id="scrub" min="0" max="0" value="0">
+  <span id="turnlabel"></span>
+  <label>speed <select id="speed">
+    <option value="600">0.5×</option>
+    <option value="300" selected>1×</option>
+    <option value="120">2.5×</option>
+    <option value="40">8×</option>
+  </select></label>
+</div>
+<div class="layers" id="board"></div>
+<div id="detail">Click a scroll to read its text at this moment.</div>
+<script>
+const COLORS = ["#e4572e", "#2e86e4", "#2ecc71", "#b44ae0"];
+let replay = null, idx = 0, timer = null, selected = null;
+
+function replayUrl() {
+  const hash = new URLSearchParams(location.hash.slice(1));
+  if (hash.get("replay")) return hash.get("replay");
+  return new URLSearchParams(location.search).get("replay");
+}
+
+async function loadReplay(url) {
+  const resp = await fetch(url);
+  const buf = await resp.arrayBuffer();
+  try {
+    return JSON.parse(new TextDecoder().decode(buf));
+  } catch (e) {
+    const stream = new Blob([buf]).stream().pipeThrough(new DecompressionStream("gzip"));
+    return JSON.parse(await new Response(stream).text());
+  }
+}
+
+function stateAt(i) {
+  if (i < 0) return replay.initial;
+  return replay.states[i];
+}
+
+function render() {
+  const st = stateAt(idx - 1);
+  const board = document.getElementById("board");
+  board.innerHTML = "";
+  for (let z = 1; z <= 3; z++) {
+    const layer = document.createElement("div");
+    layer.className = "layer";
+    layer.innerHTML = `<h3>scroll layer z=${z}</h3>`;
+    const grid = document.createElement("div");
+    grid.className = "grid";
+    for (let x = 1; x <= 3; x++) for (let y = 1; y <= 3; y++) {
+      const name = `1.1.1/1.1.1/${x}.${y}.${z}`;
+      const owner = st.owners[name];
+      const cell = document.createElement("div");
+      cell.className = "cell";
+      if (owner >= 0) cell.style.borderColor = COLORS[owner % COLORS.length];
+      const seatsHere = Object.entries(st.positions || {})
+        .filter(([, p]) => p === name).map(([s]) => "●" + s).join(" ");
+      const mut = st.mutated && st.mutated[name] ? " ✳mutated" : "";
+      cell.innerHTML = `<div class="coord">${x}.${y}.${z}${mut}</div>` +
+        `<div class="seats" style="color:${owner >= 0 ? COLORS[owner % 4] : '#666'}">${seatsHere}</div>` +
+        `<div class="txt">${(st.texts[name] || "").slice(0, 60)}…</div>`;
+      cell.onclick = () => { selected = name; showDetail(st); };
+      grid.appendChild(cell);
+    }
+    layer.appendChild(grid);
+    board.appendChild(layer);
+  }
+  const ev = idx > 0 ? replay.events[idx - 1] : null;
+  document.getElementById("turnlabel").textContent = ev
+    ? `action ${idx}/${replay.events.length} — turn ${ev.turn}, seat ${ev.seat}: ${ev.action} ${ev.detail || ""}`
+    : `start of episode (seed ${replay.seed})`;
+  const sc = document.getElementById("scores");
+  if (idx >= replay.events.length) {
+    sc.innerHTML = replay.final.scores.map((s, i) =>
+      `<span style="color:${COLORS[i % 4]}">${replay.names[i]}: <b>${s}</b></span>`).join("");
+  } else sc.innerHTML = "";
+  if (selected) showDetail(st);
+}
+
+function showDetail(st) {
+  const owner = st.owners[selected];
+  document.getElementById("detail").textContent =
+    `${selected}\nowner: ${owner < 0 ? "unclaimed" : replay.names[owner]}` +
+    `${st.mutated && st.mutated[selected] ? " (mutated)" : ""}\n\n${st.texts[selected]}`;
+}
+
+function setIdx(i) {
+  idx = Math.max(0, Math.min(replay.events.length, i));
+  document.getElementById("scrub").value = idx;
+  render();
+}
+
+function play() {
+  stop();
+  timer = setInterval(() => {
+    if (idx >= replay.events.length) setIdx(0); else setIdx(idx + 1);
+  }, +document.getElementById("speed").value);
+  document.getElementById("play").textContent = "Pause";
+}
+function stop() {
+  if (timer) clearInterval(timer);
+  timer = null;
+  document.getElementById("play").textContent = "Play";
+}
+
+(async () => {
+  const url = replayUrl();
+  if (!url) { document.getElementById("meta").textContent = "No replay specified (#replay=…)."; return; }
+  replay = await loadReplay(url);
+  document.getElementById("meta").textContent =
+    `${replay.names.join(" vs ")} — seed ${replay.seed} — magic, standard technology.`;
+  const scrub = document.getElementById("scrub");
+  scrub.max = replay.events.length;
+  scrub.oninput = () => { stop(); setIdx(+scrub.value); };
+  document.getElementById("play").onclick = () => timer ? stop() : play();
+  document.getElementById("back").onclick = () => { stop(); setIdx(idx - 1); };
+  document.getElementById("fwd").onclick = () => { stop(); setIdx(idx + 1); };
+  document.getElementById("speed").onchange = () => { if (timer) play(); };
+  setIdx(0);
+  play();
+})();
+</script>
+</body>
+</html>

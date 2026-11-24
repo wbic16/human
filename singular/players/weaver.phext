@@ -1,0 +1,8 @@
+# Weaver — writes coordinate bonds early, then claims like the baseline.
+# A bond scores when both endpoint scrolls are yours at episode end.
+
+WHEN here unclaimed DO inscribe "bond anchor reference woven at the crossing"
+WHEN turn < 3 DO inscribe "reference 1.1.1/1.1.1/1.1.1 and 1.1.1/1.1.1/3.3.3 held"
+WHEN unclaimed adjacent DO move toward unclaimed
+WHEN charge >= 10 DO move toward unclaimed
+WHEN always DO attune

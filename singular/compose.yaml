@@ -1,0 +1,6 @@
+services:
+  singular:
+    image: singular-game:latest
+    platform: linux/amd64
+    build:
+      context: .

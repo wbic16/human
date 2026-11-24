@@ -1,0 +1,213 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Metta-AI/coworld/main/src/coworld/coworld_manifest_schema.json",
+  "tags": [
+    "strategy",
+    "text",
+    "multiplayer"
+  ],
+  "game": {
+    "name": "singular",
+    "description": "Singular \u2014 magic, standard technology. A phext-native writing game: 27 scrolls in an 11-dimensional volume, claimed and mutated by inscription. The text itself is the score.",
+    "owner": "wbic16",
+    "player_runtime": "game-hosted",
+    "replay_viewer": {
+      "bundle": "build/static-replay-viewer",
+      "replay_compression": "gzip"
+    },
+    "runnable": {
+      "type": "game",
+      "image": "{{SINGULAR_IMAGE}}",
+      "run": [
+        "python",
+        "-m",
+        "game.server"
+      ],
+      "env": {}
+    },
+    "config_schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "tokens",
+        "players",
+        "seed",
+        "turns"
+      ],
+      "properties": {
+        "tokens": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 4,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "players": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 4,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "name"
+            ],
+            "properties": {
+              "name": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          }
+        },
+        "seed": {
+          "type": "integer"
+        },
+        "turns": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 500
+        }
+      }
+    },
+    "results_schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "scores",
+        "ticks",
+        "seed",
+        "outcome"
+      ],
+      "properties": {
+        "scores": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 4,
+          "items": {
+            "type": "number"
+          }
+        },
+        "ticks": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "seed": {
+          "type": "integer"
+        },
+        "outcome": {
+          "type": "string"
+        }
+      }
+    },
+    "protocols": {
+      "player": {
+        "type": "text",
+        "value": "Singular players are phexts: text files the game executes. Each rule is\none scroll, written on its own line:\n\n  WHEN <predicate> DO <action>\n\nRules evaluate in file order at the start of your turn. The first rule\nwhose predicate holds AND whose action is currently legal fires. If no\nrule fires, you attune. Lines not starting with WHEN are comments.\n\nPredicates:\n  always\n  turn < N            turn >= N\n  charge >= N\n  here unclaimed      here enemy        here mine\n  unclaimed adjacent  enemy adjacent\n\nActions:\n  move x+ | x- | y+ | y- | z+ | z-     step to an adjacent scroll\n  move toward unclaimed | enemy | home step along a shortest path\n  inscribe \"some text\"                 write on the scroll you occupy\n  attune                               gain 4 charge\n  pass\n\nEconomy: you start with 20 charge. At each of your turns you gain\n2 + (number of scrolls you own). Inscribing costs 1 charge per word on\nyour own or an unclaimed scroll, 2 per word to overwrite an opponent's.\nAn action you cannot afford or cannot legally take does not fire; the\nnext matching rule is tried instead.\n\nThe board is perfect information: all 27 scrolls, their owners, and\ntheir full text are public at all times."
+      },
+      "global": {
+        "type": "text",
+        "value": "GET /client/global returns a live status page. The /global WebSocket\nstreams one JSON state snapshot after every action\n({\"type\": \"state\", \"index\": n, \"state\": {...}}) and a final\n{\"type\": \"results\", \"results\": {...}} message when the episode ends.\nWebSocket Ping frames are answered with Pong carrying the same payload.\nNo gameplay traffic uses WebSockets in game-hosted mode."
+      }
+    },
+    "docs": {
+      "readme": {
+        "type": "text",
+        "value": "# Singular\n\n_Magic, standard technology._\n\nSingular is a phext-native writing game. The board is a phext volume:\n27 scrolls at coordinates 1.1.1/1.1.1/x.y.z (x, y, z in 1..3). You and\nyour opponents write your way across it. The text itself is the score.\n\n## Play\n\nYou occupy one scroll. Each turn, take one action (your phext decides \u2014\nsee the player protocol):\n\n- **Traverse** to an adjacent scroll.\n- **Inscribe** text on your scroll: claim it if unclaimed, rewrite it if\n  yours, overwrite it if an opponent's.\n- **Attune** to gather charge, the currency inscriptions cost.\n\n## Mutation\n\nOverwriting an opponent's scroll does not destroy their text. The two\ntexts interleave, ownership passes to you, and the scroll is *mutated*:\nits words count twice toward rarity, so mutated text scores degraded.\nConquest pays in position and denial, not plunder.\n\n## Scoring\n\nAt episode end:\n\n- **Rarity.** A word appearing in k scrolls contributes 1/k to each\n  scroll containing it. Original writing outscores copied text.\n- **Bonds.** Writing another scroll's full coordinate\n  (e.g. 1.1.1/1.1.1/2.3.1) into a scroll you own scores +2 when you hold\n  both endpoints.\n\nHighest total wins. Scores are graded \u2014 every word matters.\n\n## Write a player\n\nA player is a phext of WHEN/DO rules. The bundled Baseline (a greedy\nclaimer) and Weaver (a bond-writer) are the starting field. Beat them\nby writing better text in better places: rare words, held bonds, and\nscrolls your opponents cannot afford to take from you.\n"
+      },
+      "pages": []
+    }
+  },
+  "player": [
+    {
+      "id": "baseline",
+      "name": "Baseline",
+      "description": "The greedy claimer bundled with Singular: claims unclaimed scrolls, overwrites enemies, attunes when poor.",
+      "type": "player",
+      "file": "players/baseline.phext",
+      "run": [],
+      "env": {}
+    },
+    {
+      "id": "weaver",
+      "name": "Weaver",
+      "description": "Writes coordinate bonds in its first turns, then claims like the baseline.",
+      "type": "player",
+      "file": "players/weaver.phext",
+      "run": [],
+      "env": {}
+    }
+  ],
+  "variants": [
+    {
+      "id": "duel",
+      "name": "Duel",
+      "description": "Two scribes, 27 scrolls, 48 turns each.",
+      "game_config": {
+        "seed": 2026,
+        "turns": 48,
+        "players": [
+          {
+            "name": "Scribe 0"
+          },
+          {
+            "name": "Scribe 1"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ring",
+      "name": "Ring",
+      "description": "Four scribes, 27 scrolls, 64 turns each. The competitive variant.",
+      "game_config": {
+        "seed": 2026,
+        "turns": 64,
+        "players": [
+          {
+            "name": "Scribe 0"
+          },
+          {
+            "name": "Scribe 1"
+          },
+          {
+            "name": "Scribe 2"
+          },
+          {
+            "name": "Scribe 3"
+          }
+        ]
+      }
+    }
+  ],
+  "certification": {
+    "game_config": {
+      "seed": 2026,
+      "turns": 48,
+      "players": [
+        {
+          "name": "Baseline"
+        },
+        {
+          "name": "Weaver"
+        }
+      ]
+    },
+    "players": [
+      {
+        "player_id": "baseline"
+      },
+      {
+        "player_id": "weaver"
+      }
+    ]
+  },
+  "commissioner": [],
+  "diagnoser": [],
+  "grader": [],
+  "optimizer": [],
+  "reporter": []
+}
