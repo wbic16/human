@@ -26,6 +26,7 @@ Coordinate map:
   1.1.1/1.1.1/1.1.5  Round 4 — the retest; bracket re-anchors
   1.1.1/1.1.1/1.1.6  Round 5 — anchor tests; streaming begins
   1.1.1/1.1.1/1.1.7  Round 6 — ascend: confirmation, deck, teamwork
+  1.1.1/1.1.1/1.1.8  Round 7 — three verdicts; champion crowned
   1.1.1/1.1.1/2.1.1  Universe v3a — mid-tier elimination everywhere
   1.1.1/1.1.1/3.1.1  Universe v3b — neighbor lethal 100, others 25
   1.1.1/1.1.1/4.1.1  Universe v3c — face-pressure tilt
@@ -91,7 +92,7 @@ CONSTRUCTION -> Fiction. Statuses change only on receipts,
 along legal edges, and every transition is recorded here.
 False claims are kept visible, never deleted. No pruning: the
 minimum is structure, never content. Counts at this writing:
-True 5, False 3, Unknown 6, Fiction 1 (EE 370 MVO pass).
+True 7, False 3, Unknown 5, Fiction 1 (EE 371 MVO pass).
 
 TRUE
   T1 DEMOTED at EE 369 — see Unknown U6. Its receipt was
@@ -108,6 +109,19 @@ TRUE
   T5 Method: one change per variant, byte-identical control,
      seat-swapped A/B legs, champion falls only on evidence.
      STIPULATION — we define it so (charter, 1.1.1/1.1.1/1.1.1).
+  T7 "v3c beats the pristine Archer starter." VERIFIED —
+     two independent seat-balanced tests, same direction:
+     anchor 16-12 (xreq_1cd68615 + xreq_9a3fe5ae) and the
+     100-episode confirmation 42-29 (xreq_4de08476 +
+     xreq_9634c73f, random 29). Cumulative 58-41 over 99
+     decisive episodes. Graduated from U7 at EE 371. v3c is
+     the lineage's first VERIFIED advance and its champion.
+  T8 "A coordinated pair out-wins an independent pair (family
+     metric)." VERIFIED as stated — v5 team 27 of 40 episodes
+     vs the v1 pair's 6 (xreq_d5068f05 + xreq_8cf09b87;
+     veteran 7). Attribution caveat lives at U10: the pair's
+     base heuristics were also stronger (T7), so the protocol's
+     isolated contribution is not yet separated.
   T6 "Seat 0 holds a large structural advantage in this arena."
      VERIFIED — seat tally over all 120 hosted episodes held
      (xreq_efcac072, xreq_869cd6ae, xreq_7c11dd22, xreq_b431294f,
@@ -164,22 +178,23 @@ UNKNOWN
      F1: a claim carried as a live candidate, tested balanced,
      beaten 65/35. v3b's wins over v1 (U3) stand as recorded;
      against the honest baseline it does not advance.
-  U7 "v3c beats the pristine Archer starter." OPEN —
-     anchor test (xreq_1cd68615 + xreq_9a3fe5ae, 40 episodes,
-     $0.141): v3c 16, starter 12, random 12 — but the legs
-     split by seat (11-2 with seat 0; 5-10 without), the T6
-     signature. Leans positive, unresolved; a higher-n run is
-     the path either way.
+  U7 GRADUATED at EE 371 — see True T7.
   U5 "The veteran field's edge is deck composition, not attack
      targeting." OPEN — winners' played cards in scout traces
      skew to the same precon pool; untested either way.
   U8 "The Warrior precon (stock heuristics) beats the Archer
-     starter." OPEN — deck-axis test running: xreq_29f21a17 +
-     xreq_f9cb0a21 (v4 = Warrior precon, byte-identical).
-  U9 "A coordinated pair out-wins an independent pair, family
-     metric (either seat wins the episode)." OPEN — teamwork
-     test running: xreq_d5068f05 + xreq_8cf09b87 (v5 pair vs
-     v1 pair, seat-swapped).
+     starter." OPEN, leaning True — tested (xreq_29f21a17 +
+     xreq_f9cb0a21, 40 episodes, $0.130): Warrior 14, starter
+     7, random 19; Warrior won both legs (7-2, 7-5). One test
+     at p~0.10 does not graduate a claim; the deck axis is
+     nonetheless the strongest untested lever left, and the
+     port test (champion heuristics on the Warrior deck) is
+     the natural next universe.
+  U9 GRADUATED at EE 371 — see True T8.
+  U10 "The team protocol adds wins beyond the v3c heuristic
+     edge alone." OPEN — isolation test defined, not yet run:
+     v5 (coordinated v3c pair) vs an independent v3c pair,
+     family metric, seat-swapped.
 
 FICTION
   X1 The round pictures (little archer, veteran banners, flame
@@ -191,6 +206,10 @@ TRANSITIONS LEDGER
   launch. F1/F2 entered directly as False on their receipts
   (their Unknown era predates this registry and is narrated in
   the Round 2 scroll).
+  EE 371: U7 graduated to True (T7) on the combined anchor +
+  100-episode confirmation receipts; U9 graduated to True (T8)
+  as stated, its attribution caveat spun out as U10. Counts:
+  True 7, False 3, Unknown 5, Fiction 1.
   EE 369: T6 entered True/VERIFIED on the 120-episode seat
   tally. T1 demoted True -> Unknown (now U6): receipt found
   confounded by T6; demotion recorded, claim kept, retest
@@ -276,7 +295,33 @@ through unexpected teamwork. Three tests launched in parallel:
    Recorded caveat: the partner arithmetic assumes our paired
    test rosters; a lone league seat would run the focus rule
    only. Policy: emise-cac-v5-team:v1 (diff vs v3c: the
-   teamcalc block + three gated call sites, 51 diff lines).UNIVERSE v3a — mid-tier elimination everywhere (EE 368-369)
+   teamcalc block + three gated call sites, 51 diff lines).ROUND 7 — Three verdicts; a champion crowned on evidence (EE 371)
+
+CONFIRMATION (U7 -> T7, TRUE): v3c vs starter at 100 episodes:
+v3c 42, starter 29, random 29 (legs 23-9 and 19-20). With the
+anchor test, cumulative 58-41 over 99 decisive episodes, two
+independent seat-balanced tests in the same direction. The
+face-pressure tilt is the lineage's first verified advance.
+v3c is champion — the title now rests on receipts, not story.
+
+DECK AXIS (U8, OPEN leaning True): Warrior stock beat the
+Archer starter in both legs, 14-7 combined (random 19 — the
+veteran feasted on two stock bots, its highest share yet).
+The precon is a real lever, roughly the size of the v3c tilt.
+
+TEAMWORK (U9 -> T8, TRUE as stated): the coordinated v5 pair
+took 27 of 40 episodes; the independent v1 pair took 6; the
+veteran, focus-fired by both twins, fell to 7 (17.5%, against
+a ~30% baseline all night). Collaboration is the largest
+effect measured in this tracker — larger than seat 0's edge
+per pair, larger than any heuristic. Its isolated size (over
+and above the v3c edge) is U10, test defined.
+
+Standings at EE 371: champion v3c (solo). Next universes, in
+leverage order: (1) v6 = champion heuristics ported to the
+Warrior deck; (2) U10 isolation (team v3c vs independent v3c);
+(3) U8 confirmation at n=100. League submission remains
+Will's call alone; the solo candidate would be v3c or v6.UNIVERSE v3a — mid-tier elimination everywhere (EE 368-369)
 
 Design: one change from champion v1 — a swing that eliminates
 ANY hero scores 25 (playerLife(o) check), above ordinary hero
