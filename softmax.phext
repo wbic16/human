@@ -28,6 +28,7 @@ Coordinate map:
   1.1.1/1.1.1/1.1.7  Round 6 — ascend: confirmation, deck, teamwork
   1.1.1/1.1.1/1.1.8  Round 7 — three verdicts; champion crowned
   1.1.1/1.1.1/1.1.9  Round 8 — v4, v5, v6 oriented in 11D
+  1.1.1/1.1.1/1.1.10 Round 9 — the stack holds; v6 champion
   1.1.1/1.1.1/2.1.1  Universe v3a — mid-tier elimination everywhere
   1.1.1/1.1.1/3.1.1  Universe v3b — neighbor lethal 100, others 25
   1.1.1/1.1.1/4.1.1  Universe v3c — face-pressure tilt
@@ -93,7 +94,7 @@ CONSTRUCTION -> Fiction. Statuses change only on receipts,
 along legal edges, and every transition is recorded here.
 False claims are kept visible, never deleted. No pruning: the
 minimum is structure, never content. Counts at this writing:
-True 7, False 3, Unknown 5, Fiction 1 (EE 371 MVO pass).
+True 9, False 3, Unknown 7, Fiction 1 (EE 372 MVO pass; recount — the EE 371 line understated Unknown).
 
 TRUE
   T1 DEMOTED at EE 369 — see Unknown U6. Its receipt was
@@ -110,6 +111,16 @@ TRUE
   T5 Method: one change per variant, byte-identical control,
      seat-swapped A/B legs, champion falls only on evidence.
      STIPULATION — we define it so (charter, 1.1.1/1.1.1/1.1.1).
+  T9 "v6 beats Warrior stock — the champion heuristics stack
+     on the Warrior deck." VERIFIED — xreq_e52d2ea4 +
+     xreq_adb4c387 (40 episodes, $0.130): v6 24, Warrior stock
+     5, random 11; legs 13-0 and 11-5. 24 of 29 decisive.
+  T10 "v6 beats the Archer starter." VERIFIED —
+     xreq_b6487576 + xreq_1fe9b300 (40 episodes, $0.154):
+     v6 28, starter 3, random 9; legs 12-1 and 16-2. 28 of 31
+     decisive. Across both Round 9 series v6 also out-won the
+     veteran seat per appearance — the strongest single seat
+     this lineage has fielded. v6 is champion at EE 372.
   T7 "v3c beats the pristine Archer starter." VERIFIED —
      two independent seat-balanced tests, same direction:
      anchor 16-12 (xreq_1cd68615 + xreq_9a3fe5ae) and the
@@ -196,11 +207,8 @@ UNKNOWN
      edge alone." OPEN — isolation test defined, not yet run:
      v5 (coordinated v3c pair) vs an independent v3c pair,
      family metric, seat-swapped.
-  U11 "v6 beats Warrior stock (the champion heuristics stack
-     on the Warrior deck)." OPEN — test running:
-     xreq_e52d2ea4 + xreq_adb4c387.
-  U12 "v6 beats the Archer starter." OPEN — test running:
-     xreq_b6487576 + xreq_1fe9b300.
+  U11 GRADUATED at EE 372 — see True T9.
+  U12 GRADUATED at EE 372 — see True T10.
 
 FICTION
   X1 The round pictures (little archer, veteran banners, flame
@@ -212,6 +220,10 @@ TRANSITIONS LEDGER
   launch. F1/F2 entered directly as False on their receipts
   (their Unknown era predates this registry and is narrated in
   the Round 2 scroll).
+  EE 372: U11 and U12 graduated to True (T9, T10) on first
+  testing (24-5 and 28-3 decisive). Registry recount: the
+  EE 371 count line printed Unknown 5 against 7 open entries;
+  corrected here — the bookkeeping is also a claim.
   EE 371: U7 graduated to True (T7) on the combined anchor +
   100-episode confirmation receipts; U9 graduated to True (T8)
   as stated, its attribution caveat spun out as U10. Counts:
@@ -369,7 +381,30 @@ verified D2/D5 position on the D1-Warrior axis at once. The
 empty regions of the space name the unexplored universes:
 Mage and Splash on D1, tuned minion-trade valuation (no axis
 moved yet — it would be D12 if it earns one), and every
-family-protocol point on a Warrior deck.UNIVERSE v3a — mid-tier elimination everywhere (EE 368-369)
+family-protocol point on a Warrior deck.ROUND 9 — The stack holds; v6 champion (EE 372)
+
+v6 (Warrior deck + the verified champion package) ran two
+seat-balanced series, 40 episodes each:
+
+  vs Warrior stock (U11): v6 24, stock 5, random 11.
+  vs Archer starter (U12): v6 28, starter 3, random 9.
+
+Both claims graduated to True (T9, T10) on first testing —
+the two levers multiply: the deck lever alone was worth
+~2-to-1 over the starter (U8's 14-7), the heuristic lever
+alone ~59% of decisive (T7), and stacked they took 90% of
+decisive episodes from the starter and 83% from their own
+deck's stock pilot. v6 also out-won the veteran seat per
+appearance in both series — the first of our seats to do so.
+
+Champion at EE 372: v6 (solo). The 11D frame's empty regions
+still name the frontier: Mage and Splash decks carrying the
+package; the team protocol on a Warrior deck (v5's social
+axes at v6's point); the untested minion-trade axis. And the
+registry corrected its own arithmetic this pass: the EE 371
+count line understated Unknown (5 printed, 7 open) — the
+recount is recorded in the ledger, because the bookkeeping
+is also a claim.UNIVERSE v3a — mid-tier elimination everywhere (EE 368-369)
 
 Design: one change from champion v1 — a swing that eliminates
 ANY hero scores 25 (playerLife(o) check), above ordinary hero
