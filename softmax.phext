@@ -38,6 +38,7 @@ Coordinate map:
   1.1.1/1.1.1/1.1.17 Round 16 — the package does not travel to Mage
   1.1.1/1.1.1/1.1.18 Round 17 — the flux capacitor: lessons of the False shelf
   1.1.1/1.1.1/1.1.19 Round 18 — the Long Game is neutral; the harm is repaired
+  1.1.1/1.1.1/1.1.20 Round 19 — the past at full speed: the headless runner stands
   1.1.1/1.1.1/2.1.1  Universe v3a — mid-tier elimination everywhere
   1.1.1/1.1.1/3.1.1  Universe v3b — neighbor lethal 100, others 25
   1.1.1/1.1.1/4.1.1  Universe v3c — face-pressure tilt
@@ -897,7 +898,44 @@ in the lineage has ever touched.
 That last fact is the round's real yield: eleven
 variants in, every change has lived in swing or the
 deck list. The score function — what to play, when —
-is the lineage's largest unexplored room.UNIVERSE v3a — mid-tier elimination everywhere (EE 368-369)
+is the lineage's largest unexplored room.ROUND 19 — the past at full speed: the headless runner stands (EE 395)
+
+Will's direction — evolve faster in the past — is now
+machinery. Nim 2.4.2 stands on 19 ranch nodes (choosenim,
+user-local; dossier: NIM-DOSSIER.md), its source held at
+/source/Nim on the hub and in Will's fork wbic16/Nim
+(v2.4.2 tag pushed from the hub clone). polyworld is
+cloned on aletheia-core and the headless runner BUILT:
+games/cac/build/cac-headless (1.78 MB).
+
+The build's one real fight, recorded so it is never
+re-fought: nimble's registry pinned bassy to a stale
+commit (99974660) that lacks ContextHostProc, which
+polyworld HEAD requires. Fix: nimble install
+bassy@#a9effca — the committish form — after which the
+compile is clean.
+
+Validation against hosted receipts (the screen earns
+trust before it spends it), 100 seeds each, 5 seats,
+fifth seat the reference warrior bot:
+  A (v1 vs starter): v1 46, starter 36, ref 18 —
+     parity-shaped, matching the hosted seat-balanced
+     dead heat (F5) within noise.
+  B (v6 vs starter): v6 73, starter 5, ref 22 — the
+     champion's hosted dominance (T9, T10) reproduces
+     at full strength.
+Throughput: ~0.05 s per match, ~19 matches/sec on one
+hub core — roughly four orders of magnitude faster
+than hosted episodes, at zero platform metering.
+
+Standing caveats, riding with every local number: the
+local first move is random where the hosted ring's
+seat order is fixed (T6 does not transfer); the local
+fifth seat is a reference bot, not a veteran; local
+results SCREEN, hosted results DECIDE. The past is now
+re-runnable: every variant in the lineage can be
+re-tested in thousands of seeded matches before a
+single hosted episode is spent.UNIVERSE v3a — mid-tier elimination everywhere (EE 368-369)
 
 Design: one change from champion v1 — a swing that eliminates
 ANY hero scores 25 (playerLife(o) check), above ordinary hero
