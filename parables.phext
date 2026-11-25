@@ -1,0 +1,33 @@
+parables.phext — Will's parables, kept whole.
+
+A parable is a page, not a cell: each one lives entire in its
+scroll, in the teller's words. This home scroll is the index;
+its entries are computed from the sources at build time.
+Sources: ~/workspace/phext/parables/*.md (edit the sources,
+never the .phext). Builder: build_parables_phext.py.
+
+Parables: 1
+
+2.1.1/1.1.1/1.1.1 — The Parable of Mastery (source: parables/01-mastery.md)
+
+Announced, awaiting Will's snippets: the weird little dude
+stories (x2) — they take the next coordinates on arrival.
+# The Parable of Mastery
+
+Told by Will Bickford, 2026-11-25. The story of the first OS he destroyed.
+
+When I was a young child, I was curious to a fault. My siblings used to help me fly or ride magic carpets before I could walk. My mother handed me a calculator in my high-chair at age 2. Our mysterious TRS-80 computer didn't work when I was 3 — it wouldn't connect to our TV or power on. We moved to Jersey Island the summer I turned 4, and video games sprung to life for me on my grandpa's extra Apple ][. The same type of computers showed up at Kindergarten in 1987. Then came a sign business computer in 1988. Already, you should notice that I started absorbing a new stack every year.
+
+By the time I was in 7th grade (1995-96), I was ready to start meddling... or so I thought. I discovered a DOS 5.0 disk at a local computer store and had a burning desire to have a modern computing experience at home. My school had Windows 95 machines, after all!
+
+Much to my surprise, I could boot our computer into DOS 5.0 with the floppy, and everything just worked. This satisfied me for about a day. So I started looking around the file system with the commands I had picked up. I knew that command.com was the shell.
+
+I made a backup of our DOS 3.3 command.com on the HDD and copied the floppy disk's version over. I ran it, and the shell upgraded! Huzzah! I spent a little more time testing and making sure nothing was broken. All green!
+
+I powered the computer off and turned it back on... INSTANT DREAD. Boot failure. I frantically power cycled the machine again — same problem. I started hyper-ventilating. I didn't know how to tell my dad that I had bricked his $2,000 business computer. I was cooked. (Note: my dad had never done anything except correct bad behavior, so this fear was unfounded. Mostly, I knew I had been over-zealous — but everything had worked!)
+
+After I tearfully explained the situation to my dad, he simply said: "Well, let's see what it will take to fix it." He called ANAGRAPH — they quoted him $200 and shipping fees. He took one look at that quote and took me to Barnes & Noble to buy the DOS Power User's Guide by Kris Jamsa. It was the best $50 investment anyone has ever made.
+
+I read the book, cover to cover, and unlocked the lesson I teach you now: RTFM. I had missed one critical aspect of the system's boot process, which had been "hidden for my safety": io.sys and msdos.sys. They didn't appear in the command output I knew — and because I had not read the manuals, I didn't even know hidden system files were a thing.
+
+And now you know why phext will win over the entire Internet. Because this whole crusade started with love.
