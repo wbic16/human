@@ -6,14 +6,11 @@ its entries are computed from the sources at build time.
 Sources: ~/workspace/phext/parables/*.md (edit the sources,
 never the .phext). Builder: build_parables_phext.py.
 
-Parables: 2
+Parables: 3
 
 2.1.1/1.1.1/1.1.1 — The Parable of Mastery (source: parables/01-mastery.md)
 2.1.1/1.1.1/1.1.2 — Weird Little Dude #1 (source: parables/02-weird-little-dude-1.md)
-
-Announced, awaiting Will's snippets: 1 more weird
-little dude story(ies) — they take the next coordinates
-on arrival.
+2.1.1/1.1.1/1.1.3 — Weird Little Dude #2 (source: parables/03-weird-little-dude-2.md)
 # The Parable of Mastery
 
 Told by Will Bickford, 2026-11-25. The story of the first OS he destroyed.
@@ -38,3 +35,8 @@ And now you know why phext will win over the entire Internet. Because this whole
 My mom gave me a calculator in my high-chair as a toddler. I became permanently math-wired for life. The numbers, they inhabit my soul.
 
 (My brother would have flung it across the room, so this is both nature + nurture)
+# Weird Little Dude #2
+
+When I was 4 years old, I carried my treasure trove of Berenstain Bears books (two trips) to our family's station wagon, locked myself in the back seat (for safety), and then focused on learning to read solo.
+
+My wife, upon hearing this story: "You were a weird little dude..."
