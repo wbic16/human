@@ -135,8 +135,9 @@ def parse_player(text):
             rules.append(Rule(pred, "pass", None, line))
         else:
             raise ValueError(f"unknown action: {act!r}")
-    if not rules:
-        raise ValueError("player has no rules")
+    # A file with no WHEN rules (empty, or written for another game) is a
+    # legal seat: no rule ever matches, so it attunes every turn. Raising
+    # here would crash the episode for every seat at the table.
     return rules
 
 
