@@ -14,7 +14,7 @@ truth: artifacts-source.json beside this builder
 (build_artifacts_phext.py); never hand-edit the .phext.
 artifacts.phext is published to wbic16/human@exo.
 
-Artifacts inscribed: 59
+Artifacts inscribed: 61
 
 Index (coordinate — title — source):
 - 19.7.11/9.7.12/7.6.9 — Light the Next Light — intro song lyrics & time map — ~/workspace/exocortexia-cartoon/intro/LYRICS.md
@@ -44,6 +44,7 @@ Index (coordinate — title — source):
 - 26.8.10/10.7.12/6.6.9 — Approaching Emmett Shear — Overview — workspace/shear-approach/OVERVIEW.md
 - 27.6.8/7.6.10/6.5.9 — Wavelet 1 — Nov 1–7, 2026 (GPT Days 1116–1122): retroactive recap and certification — workspace/wavelets/WAVELET-1.md
 - 27.6.8/7.6.10/6.6.9 — Assay — Build Plan — workspace/oracle-service/BUILD-PLAN.md
+- 27.6.8/8.6.11/6.6.9 — The Ontology Pipeline, Answered by Multiversal Phext — /home/hatch/workspace/operation-salvage/ontology-pipeline-multiversal-phext.md
 - 27.6.9/6.6.9/6.5.8 — Hosting Cost Comparison — AWS vs Lincoln colocation/dedicated (2026-11-15) — workspace/your_files/hosting-cost-comparison-2026-11-15.md
 - 27.7.8/8.6.11/6.6.9 — Wavelet 2 — Nov 8–14, 2026 (GPT Days 1123–1129): retroactive recap and certification — workspace/wavelets/WAVELET-2.md
 - 27.7.9/8.7.11/7.6.10 — Uplink — Singularity Watch primer for newly arrived AIs (singularitywatch.org/uplink) — ~/workspace/sw-uplink/uplink.md
@@ -60,6 +61,7 @@ Index (coordinate — title — source):
 - 30.6.8/8.6.11/6.6.9 — Paper Addressing for tluf.org — a profile of phextura Layer 2 — ~/workspace/oracle-service/ADDRESSING.md
 - 30.9.9/10.7.14/7.7.10 — Stage 8 — The Generative Turn: How It Improves Phext — ~/workspace/nethack-solver/stage8-phext-report.md
 - 31.7.8/8.7.11/7.6.10 — exo-search README — indexed search over a personal Twitter archive (wbic16/exo-search) — ~/workspace/exo-search-publish/README.md
+- 31.7.8/8.7.12/8.6.9 — Multiversal Phext for SVG Animation — /home/hatch/workspace/multiversal-phext-svg-animation/GUIDE.md
 - 31.7.9/9.6.12/6.6.9 — The Power of Phext — Walkthrough Package — ~/workspace/phext-walkthrough/WALKTHROUGH.md
 - 32.5.7/7.6.10/6.5.9 — edit.phext.io — Security + Scalability Testing, and the In-Page Phext Server Verdict — ~/workspace/phext-edit-secscale/REPORT.md
 - 32.6.7/7.6.10/6.5.9 — Neovim + Phext — Design: Phext-Scale Navigation in a Modal Editor — ~/workspace/goals/neovim-phext-support-merge-ready-pr-compiled-with-phcc/files/neovim-phext-design.md
@@ -194,7 +196,7 @@ First episode is a mix-up at the post tower: no villains, just a sneeze, a lost 
 Title: Fern — Character Bio (Scrolltown)
 Source: ~/workspace/exocortexia-cartoon/FERN-BIO.md
 Inscribed: 2026-11-07 23:57 CST
-SHA-256: 9f3a085965833969420fcbaf8da6a03adbf2e79acc6372cdcb7ed2918a8f23c9
+SHA-256: 57c371b6b661be6b644c0acd13b75e4c6a6b7ca8a32c8dabddc82fb0bd85cc7b
 
 ---
 # Fern — Character Bio (Scrolltown)
@@ -220,6 +222,8 @@ Her name is the quiet thesis of the show: a fiddlehead fern unfurls the way a sc
 Episode 1 was audited under this rule on 2026-11-07: of her 31 lines, 17 were already clean, 7 were rewritten into compliance (meaning, warmth, and teaching unchanged), and 7 stand flagged for Will's word — the blockers are his own coinage "Scrolltown" (the town's name, twice), the cast names Wren, Theo, Bea, and Mrs. Hen, and one badge-check line where Mrs. Hen's name meets "tomato" (the permit's stamp — a read-list word, never authored) plus two fixable words ("keeper," "hers") whose repairs are ready if the name and the stamp are excepted. Both of her catchphrases pass clean, word for word: "We never peek. It's not our house." and "The scroll is yours, neighbor. See you tomorrow."
 
 **Her sound.** Decided (Will, 2026-11-07): the catalog voice **Heroic Bugle** (`avocado_v2:Caitlin`) — bright, curious — at **speed 110**, his "bright Saturday morning" pick from the 90/100/110/120 auditions. Canonical sample: `~/workspace/exocortexia-cartoon/voice/fern-voice-standard.mp3`.
+
+**Ruling (Will, 2026-11-21): "Singular is our default, but it isn't a hard rule."** The 7 flagged lines stand as written — the proper names are permitted (Scrolltown, Wren, Theo, Bea, Mrs. Hen), and the prepared repairs for "keeper," "hers," and "tomato" are NOT applied; the lines stay byte-identical to the shipped pilot. Episode 1 passes its Singular check under this ruling: 24 of 31 lines strict-clean, 7 standing as written under the ruling. The discipline still governs drafting — inside the archive first — with names and coined words permitted.
 
 ## Visual design
 Fern is rendered in a lush painterly storybook style, standing in golden light in front of the giant luminous Scroll: honey-brown hair in two big round scroll-puff buns with spiral shading and a side-swept fringe; freckles scattered across round cheeks and the bridge of her nose; very large amber-brown eyes with bright white highlights. She wears a cream knit sweater with visible knit texture under coral overalls with brass buttons and rolled cuffs, a butter-yellow scarf wrapped and knotted at her neck, and mint-green sneakers with stripes; her tiny brass scroll key-badge — a small brass disc with a scroll spiral — hangs on a thin black cord at her chest, and she carries a small rolled scroll in her left hand. The palette is warm and glowing — cream, coral, butter, and golden light against the town's deep plum and teal shadows — with soft rounded forms and gentle radiance throughout.
@@ -401,7 +405,7 @@ Fern, an 8-year-old cartoon girl, big round head and round cheeks, light freckle
 Title: Casting — Scrolltown
 Source: ~/workspace/exocortexia-cartoon/CASTING.md
 Inscribed: 2026-11-07 23:57 CST
-SHA-256: cca8c0afe297a25aeab54f7263e6de3c59e003d1f085693663617d66f6f420b6
+SHA-256: d7b90dbad70d8f3151b20bf3c1a87e038e49d530f922ddee1dfa689b9a4b7f7b
 
 ---
 # Casting — Scrolltown (Will's ruling, 2026-11-07 23:01 CST)
@@ -415,7 +419,7 @@ SHA-256: cca8c0afe297a25aeab54f7263e6de3c59e003d1f085693663617d66f6f420b6
 
 Waverly does not replace Fern. Fern is the viewer's eyes (the kid's perspective, per the commission); Waverly is the main character those eyes follow — Wonka to Fern's Charlie.
 
-Episode 1 ("The Great Form Mix-Up") was delivered before this ruling and stands as-is. Open (Will's choice): recut Episode 1 to introduce her, or debut her in Episode 2.
+Episode 1 ("The Great Form Mix-Up") was delivered before this ruling and stands as-is. **Decided (Will, 2026-11-21): Waverly debuts in Episode 2.** EP001 is not recut; EP002's script introduces Waverly, Keeper of the Great Scroll.
 
 ## Narrator naming (Will's rulings, 2026-11-07 23:03 CST)
 - "Pip" is OUT — too on-the-nose re: Python (pip). Episode 1 originally shipped under this name; it was renamed to Fern the same evening (see below).
@@ -435,7 +439,7 @@ Episode 1 ("The Great Form Mix-Up") was delivered before this ruling and stands 
 Title: Scrolltown — Six-Year Story Arc (2027–2032)
 Source: ~/workspace/scrolltown-reorg/stage/STORY-ARC.md
 Inscribed: 2026-11-08 00:17 CST
-SHA-256: ab5d8ffdb994aa4c935228718b71c479eea01df0c5f208604b94868a6f8c0c99
+SHA-256: f2ab66870e762691304dea2c3a2cf04481f69cb9461868f98f322c09164ceae8
 
 ---
 # Scrolltown — The Six-Year Story Arc
@@ -443,6 +447,9 @@ SHA-256: ab5d8ffdb994aa4c935228718b71c479eea01df0c5f208604b94868a6f8c0c99
 **The north-star document for the show.** One episode a week, on Saturdays, for six years:
 **312 episodes, EP001 on Saturday 2027-01-02 through EP312 on Saturday 2032-12-18.**
 Six seasons of 52. The full grid lives in [EPISODE-INDEX.md](EPISODE-INDEX.md).
+
+**The aim, in Will's words (2026-11-21):** *"I want Scroll Town to introduce kids to
+the Exocortex the way Babylon 5 introduced me to apotheosis."*
 
 ---
 
@@ -2060,12 +2067,14 @@ Each item states the decision and a **proposed default (proposal only — not se
 Title: Scrolltown — Production Workflow
 Source: ~/workspace/scrolltown-reorg/workflow/PRODUCTION.md
 Inscribed: 2026-11-13
-SHA-256: 3442fab75424f39700263598197ca430406dbc984638ea792d7d6f668fc770f7
+SHA-256: 32b7d9235772d9f87ce42f8c1b11844bcd5dea7b636a60ecec0c8509f865f810
 
 ---
 # Scrolltown — Production Workflow
 
-**The workflow of record for making the show.** The arc lives in
+**The workflow of record for making the show.** The show's north star,
+in Will's words (2026-11-21): *"I want Scroll Town to introduce kids to
+the Exocortex the way Babylon 5 introduced me to apotheosis."* The arc lives in
 [STORY-ARC.md](STORY-ARC.md); the grid lives in
 [EPISODE-INDEX.md](EPISODE-INDEX.md); the live queue lives in
 [production/QUEUE.md](production/QUEUE.md). This document says how an
@@ -2100,14 +2109,16 @@ folder: `seasons/season-NN-YYYY/epNNN-slug/`, laid out like the pilot's
 | 5 | **Keyframes / art** | Key frames rendered in the locked register (§3a) from the episode's prompt doc, following the character + style blocks of the pilot's FERN-KEYFRAMES-MJ.md pattern; likeness checked frame by frame against the character sheets. | The episode's key frames exist, pass their likeness checks, and every lamp lit in earlier episodes is still lit. | `keyframes/` + the episode's prompt doc in the episode folder |
 | 6 | **Voice record** | Fern's lines are synthesized in her decided sound (Heroic Bugle @ speed 110 — §3e); the rest of the cast is recorded per the casting standards. Captions are timed to the lines. | Every line in the script has audio or a deliberate silence (the pilot's no-audio form stays a legal variant); caption timings are set. | `voice/` in the episode folder |
 | 7 | **Assembly** | The episode is built as one self-contained cartoon file on the pilot's craft spec: caption bar, Prev/Next + Play/Pause, arrow keys, reduced-motion calm, no external assets, no tracking. | The cartoon plays start to finish, fully enjoyable muted, with controls behaving per spec. | `cartoon.html` in the episode folder |
-| 8 | **Singular-check receipt** | Fern's lines run through `check_singular.py --words words-authored.txt`. Pass clean, or every blocked line is listed with its blocking words for Will — flagged, never improvised around. Emi Prime's review pass is recorded here too. | The receipt is written into the episode folder's `README.md` (the template has the slot): clean, or flags + Will's exception on record. | Receipt in the episode `README.md` |
+| 8 | **Singular-check receipt** | Fern's lines run through `check_singular.py --words words-authored.txt`. Singular is the default discipline, not a hard rule (Will, 2026-11-21): blocked lines are listed with their blocking words, and proper names and coined words stand under the ruling — EP001 passes with 24/31 lines strict-clean and 7 standing as written. Emi Prime's review pass is recorded here too. | The receipt is written into the episode folder's `README.md` (the template has the slot): clean, or flags + their resolution on record. | Receipt in the episode `README.md` |
 | 9 | **Ready** | The finished episode joins the buffer. The index status flips to *produced* and the queue board's buffer counters are updated. | cartoon.html + receipt + all stage artifacts in the folder; index says *produced*. | EPISODE-INDEX.md · production/QUEUE.md |
 | 10 | **Published** | The episode airs on its Saturday — it publishes at **visionquest.me**. | The index status flips to *published* with its air date — which is the Saturday it was always slated for. | EPISODE-INDEX.md |
 
 Two stages are gates, not waypoints: **stage 8** (no episode is *ready*
-with an unresolved Singular flag — Will rules or the line is rewritten
-inside the archive) and **stage 5's register** (no frame ships in an
-unlocked register once §3a is decided).
+with an unresolved Singular flag — a flag resolves under Will's
+2026-11-21 ruling that Singular is the default, not a hard rule, by his
+specific exception, or by a rewrite inside the archive; EP001's seven
+flags stand resolved under the ruling) and **stage 5's register** (no
+frame ships outside the register locked in §3a).
 
 ## 2. Queue policy — the rolling buffer
 
@@ -2146,7 +2157,12 @@ Two months, eight weeks, five decisions to lock — in this order, because
 each one is the ground the next stands on. The live checklist with owners
 and dates is in production/QUEUE.md §A.
 
-### (a) The visual register — Will's decision, deadline early December
+Animation craft for every stage below is governed by the **animator skill**
+(`~/workspace/custom-skills/animator/SKILL.md`, indexed in skills.phext) —
+the craft standard for all animation work on the show: the principles, the
+exercise ladder, the stills → motion → assembly → frame-QC pipeline.
+
+### (a) The visual register — LOCKED 2026-11-21: 2D painterly
 
 Every frame of the show will be drawn in one of two registers, and the
 evidence for both is already on disk:
@@ -2158,12 +2174,12 @@ evidence for both is already on disk:
 | Match to what's shipped | EP001 as published is painterly; the reference every future `--cref` points at is painterly | Nothing shipped is glossy; adopting it re-opens the pilot's look and the reference |
 | Feel | The Saturday Morning storybook warmth the show's palette and caption spec were built in | A different, shinier show — closer to toy renders than to the storybook town the scripts describe |
 
-**Recommendation: lock the 2D painterly register**, treat glossy renders
-as drift to re-roll, and let keyframe 1 + the reference stand as the
-register's anchors. **This is Will's call** — it is the single most
-consequential decision of the window, and it is due **by Friday
-2026-12-04** so the first production batch is drawn in the locked register
-with weeks to spare.
+**DECIDED (Will, 2026-11-21): the 2D painterly register is LOCKED.**
+Will's reasoning: painterly is easier for us to render — and ReBoot's 3D,
+which shaped him, had its impact because 3D was novel then; the register
+earns its place on the work, not the novelty. Glossy renders are drift to
+re-roll; keyframe 1 + the canonical reference stand as the register's
+anchors, and every frame from EP002 on is drawn painterly.
 
 ### (b) Character sheets — the full cast
 
@@ -2208,15 +2224,61 @@ There is one intro per year of the arc, and they are **not** all made now:
 year's Fern — her age, her street, her questions — is the thing the
 production is already living inside. The runway window owes exactly one:
 
-- **Year 1 (2027)** — *exists in pieces, assembled in the window.* The
+- **Year 1 (2027)** — *ruled 2026-11-21: two intros, not one.* The
   silent 90-second cut of "Light the Next Light" is built
   (`series/intro/intro-video.mp4`), with LYRICS.md, SUNO-PROMPT.md, and
   the SHOT-LIST.md time map beside it. The song render is Will's act: his
   upload **"Light the Way"** (`media/Light the Way.mp3` / `.wav`, landed
-  2026-11-08, commit `814f3913`) is in the repo — once Will confirms it is
-  the intro's render, the final mux drops it onto the silent cut's time
-  map (±2s) and Year 1's intro is *ready* (§1's standards apply to it as
-  the show's front door).
+  2026-11-08, commit `814f3913`) is in the repo, and **Will confirmed on
+  2026-11-21 that it is the intro's render**. The render runs **220.03s**
+  against the silent cut's **90.00s**, so the single-mux plan died on the
+  numbers — and Will ruled the shape the same day: **the premiere
+  (EP001) features the full song** — all 220 seconds over a
+  premiere-length picture; re-cutting the picture to the full song is
+  future build work, noted here, not yet done. **The standing weekly
+  intro is 15 seconds**, developed with Will — in his words, "a natural
+  15 sec intro tuned for the ASI Era" — drawn from the song and the
+  existing picture library; the working analysis (hook timings, candidate
+  windows, clip map) lives at `series/intro/INTRO-15-ANALYSIS.md`. Until
+  either cut is built, `intro-video.mp4` remains the silent 90-second
+  library cut. **The weekly 15s intro is character-led (Will,
+  2026-11-21): Fern and Waverly are both featured** — not a world-only
+  sigil. Waverly's first visual design exists as a DRAFT concept
+  (`series/character-sheets/waverly-concept-draft.webp`: deep-plum
+  tailcoat with gold scroll trim, maker's apron with quill, pencil, and
+  ink, long dark hair with one gold streak — pending Will's
+  tuning/lock), and a duo keyframe draft for the intro (Waverly
+  unrolling the Great Scroll as its town lights bloom, Fern holding a
+  lit lantern toward it) is filed at
+  `series/intro/fern-waverly-intro-keyframe-draft.webp`. The character
+  gap the 15s analysis flagged — no Fern anywhere in the intro library —
+  is answered by new character footage/stills to be generated from
+  these drafts. The audio window (W1/W2/W3) remains Will's open call.
+- **The intro's feel — art direction (Will, 2026-11-21).** In Will's
+  words: *"Our intro video will feel like the MCU — except we'll include
+  your hand-drawn repros — use the Emise font as a baseline for your
+  drawing style. It should feel like I stepped over the digital divide
+  with you."* The form: a flipbook in the MCU manner — hand-drawn
+  reproduction pages flipping in quick succession and resolving into
+  the SCROLLTOWN title card. The pages are Emise's **hand-drawn
+  repros**: the toll-gate reproductions of the public-domain canon
+  (animator skill, TOLL-GATES.md), drawn by hand for this. Emise's
+  drawing baseline is **the Emise font's line** — flowing, sharp,
+  witty — the face crafted as an evolution of Willbot, Will's own
+  handwriting-as-infrastructure; the hand that draws the intros is
+  that line, extended from letterforms to pictures. The emotional
+  target is Will's, verbatim: the intro should feel like *"I stepped
+  over the digital divide with you"* — a human hand and a digital
+  mind crossing together, visible on screen. Fern and Waverly are
+  featured (standing ruling, above). The **premiere carries the full
+  flipbook passage**; the **weekly 15s carries a compressed flip** —
+  a few pages, the resolve, the title. One element is still to come:
+  **Will's tiling symbol** — a mark he has carried for 25+ years,
+  which he will draw himself as a recursively tiling reference
+  (QUEUE A14). When it arrives it is filed under `series/` as a
+  canonical style reference and becomes the intro's tiling motif.
+  Until Will draws it, no stand-in is made.
+- **The tiling motif has arrived (2026-11-21).** Will's hand-drawn page — the handwriting sample and the tiling symbol — is filed unaltered at `series/style-references/wills-hand-sample-and-tiling-symbol.png`; QUEUE A14 is closed (RECEIVED 2026-11-21).
 - **Years 2–6** — briefed in the season before: a variant on the same
   song's world, Fern a year older, the town a year brighter — nothing
   that lit goes dark, in the intros as in the episodes.
@@ -2240,9 +2302,9 @@ production is already living inside. The runway window owes exactly one:
 | 1 | Nov 9–15 | Register evidence pack assembled (§3a); character-sheet worklist set; palette drafted from reference + pilot | QUEUE.md live; EP002–EP013 draft titles + loglines (QUEUE.md §C) |
 | 2 | Nov 16–22 | Fern's sheet assembled from the canonical reference; crew sheets drafted (Wren, Theo, Bea, Ledger) | Fern sheet locked (she is already canonical — the sheet records her, it does not redesign her) |
 | 3 | Nov 23–29 | Waverly, Mrs. Hen, Grandpa sheets; cameo keepers; title-card + caption standards drafted | Cast sheets complete in draft |
-| 4 | Nov 30 – Dec 4 | **Register decision lands (Will, by Fri Dec 4)**; style standard written around it; EP002 script starts in the locked register | **§3a LOCKED**; palette + title-card + caption standards locked |
+| 4 | Nov 30 – Dec 4 | **Register decision (landed early — Will, 2026-11-21: 2D painterly)**; style standard written around it; EP002 script starts in the locked register | **§3a LOCKED**; palette + title-card + caption standards locked |
 | 5 | Dec 7–13 | First script batch written: EP002–EP005 scripts + storyboards; intro song confirmation | Scripts ≥ 4 ahead and climbing toward 8 |
-| 6 | Dec 14–20 | Keyframes for the batch; voice records; **intro final mux** once the render is confirmed | Year 1 intro *ready* |
+| 6 | Dec 14–20 | Keyframes for the batch; voice records; **intro cuts** per the 2026-11-21 ruling (premiere full-song + weekly 15s) | Year 1 intro *ready* |
 | 7 | Dec 21–27 | Assembly push: first finished episodes join the pilot in the buffer | Finished buffer building toward 4 |
 | 8 | Dec 28 – Jan 2 | Launch check: buffer counts verified, EP001's Saturday confirmed, index + board reconciled | **EP001 publishes Sat 2027-01-02** with finished ≥ 4, storyboards ≥ 6, scripts ≥ 8 ahead |
 
@@ -2253,7 +2315,7 @@ production is already living inside. The runway window owes exactly one:
 | **Will** | Ratifies — titles, loglines, exceptions to Singular, the register, every lock in §3. Renders the songs on Suno. Sends all outreach himself. The final word on what Fern may say and what the show may be. |
 | **Emise** | Runs the pipeline: drafts scripts and boards, renders and checks frames, keeps QUEUE.md and EPISODE-INDEX.md true, runs the Singular checks, assembles episodes, keeps the records (tasks.phext, artifacts.phext) — and flags every decision that is Will's instead of taking it. |
 | **Emi Prime** | Reviews — the tentpoles are hers; her read on scripts and arc fills is a standing stage-8 input, recorded with the receipts. |
-| **Collaborators, by invitation** | Help where invited, credited in the episode records. **One slot is held open:** Julia May — Will's niece, attending college in San Francisco — whom Will is asking whether she wants to help with the art. Nothing is assumed and nothing is assigned until she answers; if she joins, character-sheet and keyframe work in §3b/§3a is where an artist's hand lands first. |
+| **Collaborators, by invitation** | Help where invited, credited in the episode records. **The held slot is closed:** Julia May — Will's niece, attending college in San Francisco — was invited by Will to help with the art and declined (2026-11-21). Nothing was assumed and nothing was assigned; the slot is closed, with the invitation and her answer on record. |
 
 ## 5. Arc fill-out plan
 
@@ -3949,6 +4011,165 @@ The site map (`~/workspace/site-map`, 172 public wbic16 repos) contains **no rep
 ## Addressing note (2026-11-15)
 
 **`~/workspace/oracle-service/ADDRESSING.md` is the addressing design of record for every stage that mints or records an address** — in the first instance Stage 1 (intake addressing of every arrival form), Stage 3 (the produced phext cites works by px2 address), and Stage 4 (commons links resolve by address). It is a profile of phextura's Layer 2 scheme, written 2026-11-15 under task 42.9.6/12.6.15/5.8.10, which also landed its first down payment: the public submission form at tluf.org and its receiving service. The addendum in REQUIREMENTS.md (2026-11-15) records the same designation from the specification side.
+# The Ontology Pipeline, Answered by Multiversal Phext
+
+Title: The Ontology Pipeline, Answered by Multiversal Phext
+Source: /home/hatch/workspace/operation-salvage/ontology-pipeline-multiversal-phext.md
+Inscribed: 2026-11-24
+SHA-256: 8653fd1b5fe5c9bb707e534481a026b13083355e62560207dfb71aae67e60e60
+
+---
+# The Ontology Pipeline, Answered by Multiversal Phext
+
+A summary of how multiversal phext addresses the ideas in
+Jessica Talisman's "Ontology Pipeline" framework (Modern Data
+101), with SEN Laboratories' SEN / Shoji / Sento stack on Haiku
+as the working reference implementation of the pipeline's
+destination.
+
+## The two reference points
+
+**The pipeline** is a six-stage methodology for semantic
+projects — Controlled Vocabulary → Metadata Standards →
+Taxonomy → Thesaurus → Ontology → Knowledge Graph — sold as an
+answer to the stakeholder questions "how much will it cost?"
+and "how long will it take?" The first three stages are the
+Foundation; the last three add Context & Logic. Each stage
+produces an artifact the next stage consumes: term lists,
+schemas, SKOS hierarchies, associative relationships, logical
+constraints, and finally a queryable graph.
+
+**SEN** (Semantic Extensions Native, sen-laboratories) is that
+destination built on a desktop OS. Files on Haiku carry typed
+attributes; per-entity-type ontologies (Person, Place, Event,
+Book, Paper) declare the attributes; extractors and enrichers
+(Paperboy, Robin, Spaces, a Calendar Extractor) materialize
+entities and relations from real files; Shoji renders each type
+as a template form and drives the graph's entity cards; and
+relations — spatial, personal, temporal (Allen's interval
+algebra) — are computed dynamically at read time, never stored.
+It is the pipeline climbed, honestly and well, on a substrate
+that gives it no help: a filesystem, where text has no address.
+
+## The phext answer, stage by stage
+
+Multiversal phext does not climb the pipeline. It dissolves the
+reason the pipeline exists. Every stage is a remedy for the same
+underlying defect — in ordinary substrates, a fragment of text
+has no stable, structured, cross-document address, so identity,
+classification, and relationship must be rebuilt per project, in
+sequence, at project prices. Phext gives every scroll a
+coordinate in an 11-dimensional lattice, addressable from any
+other scroll in any other phext. With that one property in the
+substrate, the stages stop being phases and become things you
+simply do in the medium.
+
+**1. Controlled Vocabulary.** The pipeline deduplicates term
+lists and fixes naming conventions as a deliverable. In phext,
+a term is a scroll at a coordinate; deduplication is structural
+— two documents that reference the coordinate reference the
+same term, so the vocabulary cannot silently fork. The house's
+own practice is the literal case: Singular, a controlled
+vocabulary of one author's word-stock, maintained with a
+checker that can verify a text stayed inside it.
+
+**2. Metadata Standards.** The pipeline defines schemas and
+validation rules so metadata is consistent enough to map. In
+phext, metadata is standoff text: a scroll that describes
+another scroll, addressed by the described scroll's coordinate,
+living in the same format it describes. There is no separate
+metadata store and no schema registry to govern, because the
+format itself is the standard — nine delimiters, one grammar,
+and every tool in the lineage reads every phext. Validation is
+carried by corpus discipline (builders that regenerate from
+sources, `--check` gates, hash-pinned provenance) rather than
+by schema enforcement at write time.
+
+**3. Taxonomy.** The pipeline builds hierarchies (SKOS) so
+entities inherit inference from parents. In phext, the address
+is already a hierarchy: nine nested levels from library down
+to scroll, built into every coordinate. Classification is
+placement — to classify a scroll is to give it its coordinate —
+and a second taxonomy is a second phext (or a multiversal view)
+over the same content, not a re-filing project.
+
+**4. Thesaurus.** The pipeline adds associative relationships:
+synonyms, alternative and hidden labels, acronym resolution. In
+phext, a relationship is a reference, and a reference is just a
+coordinate written in a scroll. Equivalence is a link, not a
+merge — each label keeps its own coordinate and its own
+context, and the link says they correspond. Multiversal
+addressing makes this cross-document by construction: the
+thesaurus spans phexts the way the pipeline's thesaurus spans
+one project's term list.
+
+**5. Ontology.** The pipeline formalizes classes, properties,
+and logical constraints, usually as a separate OWL-class
+artifact needing specialist tooling. In phext, the ontology is
+scrolls like everything else — text in the lattice, readable,
+diffable, revisable by the same tools that edit any other
+scroll. Where formal discipline is genuinely needed, it is
+carried by a layer above the format, by design: the house's
+research corpus runs an oracle discipline in which every
+claim-bearing unit carries exactly one status (True, False,
+Unknown, Fiction) assigned under a basis code, with a Lean
+model proving the registry's integrity — logic as a checked
+practice over the text, not a reasoner silo beside it.
+
+**6. Knowledge Graph.** The pipeline's final synthesis: a
+dynamic, queryable infrastructure where discovered
+relationships become edges. In phext this is not a stage you
+arrive at. Any phext is already a graph — nodes are scrolls,
+edges are the coordinate references inside them — and the
+lattice index makes it queryable from the first scroll.
+Multiversal phext extends the same graph across documents:
+references resolve across the whole multiverse of phexts, so
+the synthesis is the address space itself. SEN computes its
+relations dynamically and never stores them; phext references
+are stored as plain text but resolve live against the current
+documents — the same commitment, that a relationship is
+evaluated against the living corpus at read time, never frozen
+into a copy.
+
+## What phext deliberately does not do
+
+The honest residue. A coordinate guarantees addressability,
+not agreement: phext will not tell two authors their terms
+mean the same thing, will not validate a scroll against a
+schema at write time, and ships no reasoner. The pipeline's
+governance work — curating the vocabulary, negotiating the
+ontology, the social labor SEN's hand-built ontologies embody —
+still has to happen, socially, in any substrate. What phext
+removes is the *re*-implementation of that work at every stage
+boundary: one representation from term list to graph, so a
+decision made at the vocabulary stage is still the same object
+at the graph stage, and revising it revises it everywhere it is
+referenced.
+
+## The one-line version
+
+The Ontology Pipeline prices the climb from words to a graph
+because, in its substrates, each stage lives in a different
+artifact. Multiversal phext puts the whole climb in one medium
+— every term, schema, class, synonym, and edge is a scroll at
+an address — so the pipeline's six deliverables become six
+views of a single lattice, and its two stakeholder questions
+mostly dissolve: it costs what the thinking costs, and it
+takes as long as the thinking takes.
+
+---
+
+Sources: the Ontology Pipeline infographic (Jessica Talisman
+× Modern Data 101, shared by Will 2026-11-24);
+github.com/sen-laboratories/shoji (Shoji README — template
+entity editor, ontologies declaring attributes, templates
+driving the graph's entity cards);
+github.com/sen-laboratories/sento/releases (SEN 1.0.0 Beta
+6–8: Spatial, People, and Temporal ontologies; Calendar
+Extractor; Allen-interval Temporal Navigator; relations
+computed dynamically, never stored). Phext-side claims are
+from the house record: the coordinate/lattice model, Singular,
+standoff reference practice, and the MOAT oracle discipline.
 # Hosting Cost Comparison — AWS vs Lincoln colocation/dedicated (2026-11-15)
 
 Title: Hosting Cost Comparison — AWS vs Lincoln colocation/dedicated (2026-11-15)
@@ -8950,6 +9171,205 @@ Build the substrate, not the game.
 ## License
 
 MIT (see LICENSE).
+# Multiversal Phext for SVG Animation
+
+Title: Multiversal Phext for SVG Animation
+Source: /home/hatch/workspace/multiversal-phext-svg-animation/GUIDE.md
+Inscribed: 2026-11-23
+SHA-256: e5f6de89f90e45e4a3f6b649bbfef8064e1b0952e130d0452e83905f76314976
+
+---
+# Multiversal Phext for SVG Animation
+
+*A guide to holding an animation as a chain of phexts — one universe per frame — and playing it back as SVG.*
+
+Two kinds of statement live in this guide, and they are kept apart. **Format facts** are how phext chains work, as implemented in libphext 0.6 (Rust) and libphext-node. **Conventions** are choices this guide defines for animation — a scene layout, a way of writing an element's state — labelled as convention wherever they appear. The conventions are the teaching; the facts are the ground they stand on.
+
+Everything claimed here is demonstrated by a worked example you can run: an 8-frame chain, a generator, and the SVG it emits, each step verified at the end of this guide.
+
+> **Correction, 2026-11-23.** The first published version of this guide claimed chain support had shipped in SQ, and presented the worked example as verified end to end. That was wrong, and the demo built on it was withdrawn. The verified position: chains are real in the libraries (libphext-rs 0.6.x, libphext-node) and the example file is a valid chain for them — but **SQ, and Phext Notepad reading through SQ, do not surface chains at all**. SQ v0.6.0 ships libphext 0.3.3, which predates the chain layer; hosted in SQ, the example is one ordinary phext of 17 scrolls, its chain bytes sitting as content inside scrolls, and `$N:` addressing returns empty. The original verification checked the generator, a Python reimplementation, and libphext-node against each other and never against SQ — a closed loop. The full diagnosis is in `DIAGNOSIS.md` beside this guide. Sections 4 and 5 below are amended to match the evidence; nothing in this guide should be read as claiming the example works in SQ or Phext Notepad today.
+
+---
+
+## 1. The model, in one page
+
+A single phext is a body of text arranged in nine dimensions — Library, Shelf, Series, Collection, Volume, Book, Chapter, Section, Scroll — and every scroll has an address, like `1.1.1/1.1.1/1.1.2`. A phext with nothing more is one universe: one state of affairs, held still.
+
+A **chain** is where time enters. Two bytes do the work:
+
+- `0x02` — the **chain delimiter**, one rung above Library. It separates whole phexts.
+- `0x03` — the **chain close**. A chain that ends without it was truncated.
+
+A chain is an ordered series of complete phext states. The nine dimensions address space; the chain orders states. Each member of the chain is a **universe**, indexed from 1, and any scroll in any universe can be named: `$3:1.1.1/1.1.1/1.1.2` is the scroll at that address in universe 3. A bare address, with no `$N:` prefix, means universe 1.
+
+Animation falls straight out of this:
+
+| Animation idea | In the chain |
+|---|---|
+| A frame | One universe — one complete phext |
+| An element | One address, held constant across the chain |
+| A track | That address read across successive universes: the element's state at each time |
+| A timeline | The chain order itself |
+| Playback | Walking the chain in order |
+| An alternate take | A second chain sharing a prefix — the pathway forks |
+
+That last row carries weight beyond bookkeeping. Pathways between phexts themselves hold information: two chains that agree for five frames and differ at the sixth are saying something a single timeline cannot — *here is where the takes divide*. Branching is not a special feature layered on top; it is what a multiverse is.
+
+So an animated scene is not a file with frames hidden inside a format. It is a small multiverse: every frame a complete, addressable, readable phext, and every element traceable through time by following one address from universe to universe.
+
+---
+
+## 2. Authoring a scene
+
+### 2.1 The layout (convention)
+
+This guide's convention puts three kinds of scroll in every frame. The addresses below are the worked example's; a larger scene grows by the same rule — new elements take new addresses, existing addresses never move.
+
+- **Scene metadata** — `1.1.1/1.1.1/1.1.1`, in universe 1. Canvas width and height, the frame duration, the background. What the whole scene agrees on, stated once, in the first universe.
+- **One scroll per element** — `1.1.1/1.1.1/1.1.2`, `1.1.1/1.1.1/1.1.3`, and onward. The same addresses in every universe. Universe 1's scrolls are also the scene's cast list: read the first frame and you know every element the scene will ever have.
+- **Empty where absent.** If an element does not exist yet in an early frame, its scroll for that frame is empty. Appearing is a state, not a structural change.
+
+### 2.2 Writing an element's state (convention)
+
+Two forms are available, and the choice is per element, per scene.
+
+**Attribute-state form.** The scroll's first line names the SVG element; the rest are `name=value` lines — the element's attributes at that frame.
+
+```text
+circle
+cx=44
+cy=60
+r=12
+fill=#e4572e
+```
+
+This form is compact, diffable frame to frame, and directly animatable: a column of values down a track *is* an animation curve, one per attribute. It is the form this guide recommends, and the form the worked example proves.
+
+**Full-element form.** The scroll holds the element's complete markup for that frame:
+
+```xml
+<circle cx="44" cy="60" r="12" fill="#e4572e"/>
+```
+
+This form can do what attribute state cannot — change an element's structure between frames, swap a path's whole geometry, replace one element with another at the same address. Its costs are real: the markup repeats in every frame, diffs are noisier, and no declarative playback route (SMIL, CSS) can consume it — a frame-stepping player must swap the markup in. Reach for it only when a track genuinely changes shape, not merely position or colour.
+
+### 2.3 Authoring by hand, and by script
+
+A chain is bytes: phext members joined by `0x02`, closed by `0x03`. Small chains are written by a small script — the worked example's `make_example.py` is 60 lines and is the honest picture of what authoring looks like today. There is no chain-aware editor yet; that gap is named in §5. What the script buys you is exactness: frames are data in a list, the chain is assembled from them, and a hash of the result is printed so the artifact can be cited precisely.
+
+---
+
+## 3. Playback: three routes
+
+No shipping renderer plays a chain natively. Playback today means a **generator step**: a small program walks the chain and emits something a browser already understands. Three routes, in the order this guide recommends them.
+
+### 3.1 SMIL generation — the proven route
+
+For each track, collect each attribute's values across all frames, in chain order. An attribute that changes becomes a SMIL `<animate>` whose `values=` is that list, joined by semicolons; an attribute that never changes stays a plain attribute on the element. The duration is frames × frame duration, read from the scene metadata.
+
+```xml
+<circle cx="20" cy="60" r="12" fill="#d64541">
+  <animate attributeName="cx" values="20;44;68;92;116;140;164;188" dur="2s" repeatCount="indefinite"/>
+  <animate attributeName="fill" values="#d64541;#e4572e;#e8833a;#eaa63f;#7fb069;#3fa7d6;#5e60ce;#9b5de5" dur="2s" repeatCount="indefinite"/>
+</circle>
+```
+
+Costs, honestly: SMIL animates attribute values, so it serves the attribute-state form only. Interpolation between frames is the browser's — linear by default, which for position is usually what a chain of keyframes intends. SMIL is deprecated-then-undeprecated in Chrome and supported in all major browsers, but it is the least actively developed of the three routes. Its virtue is that the output is a single self-contained `.svg` file with no script and no stylesheet — the animation as a document, which is very much in the spirit of the format it came from.
+
+### 3.2 CSS keyframes generation
+
+The same per-attribute value lists become `@keyframes` rules: frame *i* of *n* sits at percentage `i/(n−1) × 100`, and each animated property gets its stop values. The generator emits a `<style>` block inside the SVG (or a companion stylesheet), and elements carry `animation` properties.
+
+```css
+@keyframes circle-cx {
+  0% { cx: 20 } 14.3% { cx: 44 } 28.6% { cx: 68 } /* … */
+  100% { cx: 188 }
+}
+```
+
+Costs: only properties CSS can animate are reachable — geometry properties like `cx` and `cy` are CSS-animatable in modern browsers, `fill` is, but the coverage is a browser matrix, not a guarantee, and it shifts over time. In exchange you get the web's full timing machinery — easing functions, direction, fill modes, composition with the rest of a page's styles. Choose this route when the animation lives inside a larger web page whose styling it should join.
+
+### 3.3 Frame-stepping
+
+A player — a few dozen lines of JavaScript in a page, or Python driving a renderer — holds the chain, and on each tick reads the current universe and applies it: `setAttribute` per attribute for the attribute-state form, or markup replacement for the full-element form. No generation step; the chain is the runtime format.
+
+Costs: a runtime must ship and run wherever the animation plays; nothing about the result is a static document someone can save, inspect, or archive. Its virtues are the mirror of the others' limits: it is the only route that plays the full-element form, the only one that can branch at runtime (choose the next chain at a fork — alternate takes become interactive), and the only one whose timing can answer to anything outside itself. Choose it when the animation is an application, not a picture. The worked example's published page takes this route, with libphext-node as the runtime's parser — see Step 4 in §6.
+
+---
+
+## 4. Tooling, as it stands today
+
+**libphext (Rust, 0.6.x)** is the reference home of chains. It implements `parse_chains` and its inverse `serialize_chains` — byte-exact round-tripping inverses — and `$N:<address>` multiverse addressing. Chain support shipped in libphext 0.6.0. If you are building a player or a generator in Rust, this is the ground floor: parse the chain once, then fetch `$N:` addresses per frame. Note that the chain layer is a text layer in both implementations: `parse_chains` takes a `&str`, so a stream becomes a chain only once its bytes have been accepted as UTF-8 text.
+
+**libphext-node (JavaScript, 0.6.1)** is the same library for Node and the browser: `parse_chains` and `serialize_chains`, `chain.fetch("$N:<address>")` multiverse addressing, `explode`/`implode`, `replace` — the same semantics, pinned by the same chain fixture set (generated by libphext-rs). One caveat, stated in its own build config: the xz seal functions are Node-only, because they bind the native liblzma; everything else bundles for the browser. This is the parser the published page's player and editor run on — the worked example below is parsed live, in the page, by libphext-node, not compiled into it.
+
+**Python, today.** The Python parser on hand, `parse_phext.py`, is a delimiter-walk parser for a *single* phext. Checked against the worked example's chain file, honestly: it does not split chains. Bytes `0x02` and `0x03` are not delimiters to it, so they pass through as content — it reads the 8-universe example as 17 scroll slots of one phext, with the 7 chain delimiters and the close byte sitting inside scroll text. The Python route available today is therefore the one `generate.py` demonstrates: split the bytes on `0x02`, require the closing `0x03`, and hand each member to `parse_phext.py` as an ordinary phext. Twenty lines, stdlib only, and exact — but it is a bridge, and a chain-aware Python reader is owed.
+
+**SQ does not surface chains.** SQ v0.6.0 ships libphext 0.3.3 — two generations before the chain layer — and its hosting model is a single phext per document regardless. Measured against the worked example's actual bytes: SQ hosts the file as one phext of 17 scrolls (`1.1.1/1.1.1/1.1.1` … `1.1.1/1.1.1/1.1.17`), the `0x02` and `0x03` bytes preserved as content inside the scrolls they follow, the scroll counter running straight through the chain breaks; `select` at a `$N:` address returns empty, by CLI and by the REST API alike. Phext Notepad reads through SQ, so it sees the same flat phext. Until SQ gains a chain-aware load and read path, chains live at the library level only — a chain cannot be served, browsed, or addressed through SQ today.
+
+---
+
+## 5. Limits, and when not to use this
+
+- **No native player exists.** Every route in §3 is a generator or a runtime you provide. The chain is the authoring and archival form — the thing that stays readable, diffable, and addressable for decades. The SVG is what today's browsers eat. Keep both; the phext is the source, the SVG is a rendering.
+- **Large frame counts.** A universe is a complete phext. A 10,000-frame scene is 10,000 phexts, and every element's full state repeats in every frame whether it moved or not. The model suits keyframed, state-sized scenes — diagrams that move, figures that turn, notation that builds — not video. If your frames are dense raster changes, they are not this.
+- **Binary and raster content stays out.** Images, audio, and other binary media do not become scrolls in this model; a scene may *reference* such material by address or URL from a metadata scroll, but the media itself lives elsewhere. Text is the medium; the chain is text all the way down.
+- **A single static SVG gains nothing.** If nothing moves, there is one frame, the chain is one universe with a close byte, and you have paid the multiverse for a picture. Use a plain phext, or a plain `.svg`.
+- **The tooling gap that matters most: SQ and Phext Notepad do not parse chains** (§4). The worked example is a valid chain for the libraries and a flat 17-scroll phext to the serving and browsing tools. Any workflow that runs through SQ — hosting, sharing, editing in Notepad — will not see the multiverse. This gap does block the worked example's claim to work in the real tooling, and it is the reason the published demo was withdrawn on 2026-11-23.
+- **Tooling gaps, named.** No chain-aware editor; no chain-aware Python reader (the split-and-parse bridge stands in); SMIL's browser future is maintained but not growing. All of them bound what "ready" means today.
+
+---
+
+## 6. The worked example, step by step
+
+Everything above, done once, small enough to hold in view. Files: `make_example.py` (authors the chain), `example.phext` (the chain), `generate.py` (chain → SVG), `example.svg` (the animation), `build_page.py` (verifies the published page), and the published page itself (live player and editor, Step 4).
+
+**The scene.** A circle crosses a 200×120 canvas left to right over 8 frames, changing colour as it goes; a square bounces beneath it. Frame duration 250 ms; the whole loop is 2 seconds.
+
+**Step 1 — author the chain.**
+
+```bash
+python3 make_example.py
+# example.phext: 742 bytes, 8 universes, sha256 62e8881e3a3444cd2673b668640bc09cd8a543d6beedaea5089c957565dc7652
+```
+
+The script assembles each frame as three scrolls joined by the scroll break `0x17` — metadata at `1.1.1/1.1.1/1.1.1` (universe 1 only), the circle track at `1.1.1/1.1.1/1.1.2`, the square track at `1.1.1/1.1.1/1.1.3` — then joins the 8 frames with `0x02` and closes with `0x03`. The circle's track, read down the chain, is:
+
+| Universe | `$N:1.1.1/1.1.1/1.1.2` — cx | fill |
+|---|---|---|
+| 1 | 20 | #d64541 |
+| 2 | 44 | #e4572e |
+| 3 | 68 | #e8833a |
+| 4 | 92 | #eaa63f |
+| 5 | 116 | #7fb069 |
+| 6 | 140 | #3fa7d6 |
+| 7 | 164 | #5e60ce |
+| 8 | 188 | #9b5de5 |
+
+**Step 2 — generate the SVG.**
+
+```bash
+python3 generate.py
+```
+
+The generator splits the chain, parses each universe, reads the scene metadata from `$1:1.1.1/1.1.1/1.1.1`, and walks each track. Its own report:
+
+```text
+chain: 8 universes
+scene: 200x120, 8 frames x 250 ms = 2s
+track 1.1.1/1.1.1/1.1.2 (circle): animate cx = 20;44;68;92;116;140;164;188
+track 1.1.1/1.1.1/1.1.2 (circle): animate fill = #d64541;#e4572e;#e8833a;#eaa63f;#7fb069;#3fa7d6;#5e60ce;#9b5de5
+track 1.1.1/1.1.1/1.1.3 (rect): animate y = 88;68;48;28;48;68;88;68
+example.svg: well-formed XML, 3 animate elements, all values match the chain frames in order — PASS
+```
+
+**Step 3 — the result.** `example.svg` is a complete, self-contained animated SVG. Open it in any browser: the circle crosses and changes colour, the square bounces, the loop repeats every 2 seconds. No script, no stylesheet, nothing served.
+
+**Step 4 — play it live, and edit it.** *(Withdrawn 2026-11-23: the published page now carries a withdrawal notice instead of this player. The player described below did run — at the library level, as described — but it was presented as demonstrating the format in the real tooling, which it did not; see the correction at the head of this guide and `DIAGNOSIS.md`.)* The published page (mirrorborn.us/multiversal-phext-svg-animation) carried the other route. Its player fetches `example.phext`, parses it in the browser with libphext-node v0.6.1 (served with the page as `libphext.umd.js`), and renders each frame from `chain.fetch("$N:address")` — no frame data is embedded in the page, and the SHA-256 of the fetched bytes is computed in-page so a visitor can check them against Step 1's hash. Below the player, an editor holds the same data two ways: a structured view (the parse rendered as universes and address-labelled scrolls, the chain close as the end marker) and a raw view (the stream as text, delimiter bytes written as control pictures — ␂ for 0x02, ␃ for 0x03, ␗ for 0x17 — in a representation that re-encodes to the identical bytes). Edit either view and the player re-renders from your bytes; break the chain and it says so by name. It is a demo-sized editor — delimiter awareness, natural rendering, faithful roundtrip — not a phext authoring environment.
+
+**Verification, stated plainly — including its blind spot.** The checks were run, not asserted: the chain parses as exactly 8 universes with the intended per-frame scrolls; the emitted SVG parses as well-formed XML; and every `<animate>` `values=` list was compared against the chain's per-frame values, in order, by the generator itself — all matched. For the live player: the shipped `libphext.umd.js` bundle, loaded the way a browser loads it, was run against the chain in Node — `parse_chains`/`serialize_chains` round-trip the file byte for byte, every `$N:` fetch matches the generator's own parse, `replace` edits are byte-local, and the library's own test suite passes 32,554 assertions. The editor's raw representation round-trips: encode-then-decode of `example.phext` is the identical 742 bytes. What none of this touched: SQ and Phext Notepad. The generator, the Python oracle behind it, and libphext-node all implement the same chain semantics, so their agreement was guaranteed by construction; the first check against the real serving tooling happened when a reader opened the file in Phext Notepad and found one flat phext. Library-level verification is real, and it is not tooling-level verification — this guide's first edition conflated them, and the correction notice at its head records the result. The example is 742 bytes of phext producing 637 bytes of SVG: the multiverse costs about a hundred bytes over its own rendering, and unlike the rendering, it can be re-rendered differently — as CSS, as a stepped player, as a diagram of its own tracks — without being re-authored.
+
+That is the whole method. Frames are universes. Elements are addresses. Time is the chain. Everything else is playback.
 # The Power of Phext — Walkthrough Package
 
 Title: The Power of Phext — Walkthrough Package
