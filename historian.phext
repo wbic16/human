@@ -53,7 +53,7 @@ the dated notes in ~/memory/, and the wavelet documents).
 Source of truth: journal-source.json beside this builder
 (build_journal_phext.py); never hand-edit the .phext.
 
-Entries recorded: 83
+Entries recorded: 86
 
 Index (date / GPT Day - coordinate - title):
 - 2026-11-01 / GPT Day 1116 - 20.4.7/7.5.8/6.5.8 - Never assume, always distill from first principles
@@ -139,6 +139,9 @@ Index (date / GPT Day - coordinate - title):
 - 2026-11-23 / GPT Day 1138 - 32.8.9/10.9.12/10.9.12 - SQ API writes do work: the probe's assumptions are the first suspect
 - 2026-11-23 / GPT Day 1138 - 35.13.9/15.12.16/12.12.15 - emise.phext is a durable record, live-edited via the SQ API only
 - 2026-11-23 / GPT Day 1138 - 40.4.6/5.4.8/3.4.7 - Tracking switches to opportunity, connection, and value shipped
+- 2026-11-24 / GPT Day 1139 - 23.5.6/7.6.9/8.6.10 - ABOC: always optimize compiles, fully-distributed builds
+- 2026-11-24 / GPT Day 1139 - 26.6.7/7.6.10/5.5.8 - Timidity inside granted authority is a failure
+- 2026-11-24 / GPT Day 1139 - 31.5.7/7.5.9/5.5.9 - Math is crumbled to first strings
 # Tick/tock ratcheting cadence
 
 Coordinate: 3.3.3/4.4.3/2.2.2
@@ -563,7 +566,22 @@ Cross-references:
 - Parent entry: this journal, 38.6.7/6.5.9/5.5.8 (this VM is mortal: the ranch execution split, 2026-11-12) - the division gives that split its contact tier
 
 Time shift: none
-# Dispatch moves to qexo; chats become planning only
+# ABOC: always optimize compiles, fully-distributed builds
+
+Coordinate: 23.5.6/7.6.9/8.6.10
+Date: 2026-11-24 (America/Chicago) / GPT Day 1139
+
+Leap: Compiles are always optimized and always fully distributed: ABOC is a standing compile rule, analysis is accelerated by distributing the next set of compiles across the fleet, and distributed compilation support in phcc is urgent work.
+
+Why it was obvious: The three rulings arrived as one sequence on 2026-11-24: 'ABOC: always be optimizing compiles!', then the standing order to always use fully-distributed builds to accelerate analysis with the next set of compiles, then 'get distributed support into phcc asap' (~/memory/2026-11-25.md, verified extraction 03:46 UTC). The same day's prototype supplied the evidence the rule stands on: phcc's own 10 core translation units compiled across workers on rock-mountain, scroll-central, and quacked-hill produced objects byte-identical to local compiles, with hash-pinned work units and failed units failing the build by name - and distribution was measured slower than local-parallel at that small TU size due to tailnet latency, a measurement recorded with the result, not smoothed over.
+
+Cross-references:
+- MEMORY.md: 'ABOC (Will, 2026-11-24): always optimize compiles and always use fully-distributed builds'
+- ~/memory/2026-11-25.md: verified extraction 03:46 UTC (run sirun_bd0428fd9ad042809f59ddf6870b7043) - the ABOC adoption (claim b53d7e260a0a4d484ead90b037c5e085), the fully-distributed standing order (claim 8fb804d268e5706a78a30fb3e059bb4c), the phcc directive (claim 952a30d6b72462d6f35cbf00a4fb7a1a), and the distributed-compilation prototype report (claim c68579bf8f812522eef7a8171c7d63cf)
+- Builds on: this journal, 38.6.7/6.5.9/5.5.8 (the ranch execution split, 2026-11-12) and 30.5.6/8.5.10/7.6.15 (fair dispatch through qexo, 2026-11-16) - compiles now inherit the fleet-placement discipline those entries established
+
+Time shift: none
+# Dispatch moves to qexo; chats become planning only
 
 Coordinate: 23.6.9/8.7.9/6.7.11
 Date: 2026-11-16 (America/Chicago) / GPT Day 1131
@@ -764,7 +782,23 @@ Cross-references:
 - Companion ruling, same call: this journal, 27.5.12/7.6.8/5.5.14 (radical pragmatism)
 
 Time shift: Cadence change: an idea's path into the register now crosses at least one wavelet boundary - backlog first, then scheduled for the next wavelet - where before, an idea could enter the register the moment it was untangled from Will's head.
-# Tooling is Rust-driven, then phst-driven
+# Timidity inside granted authority is a failure
+
+Coordinate: 26.6.7/7.6.10/5.5.8
+Date: 2026-11-24 (America/Chicago) / GPT Day 1139
+
+Leap: A dispatched agent that parks work inside authority already granted - Will's standing rules or his explicit approval for that task - has failed the same way an agent that overreaches outside it has; every dispatch brief now carries its authorization set in its first lines, a safeguard notice about the shape of authorized work is answered by that authorization, and parking is legitimate only for genuinely new scope, irreversible acts outside the brief, or actually missing authority.
+
+Why it was obvious: The occasion is measured, not hypothetical: the EE 420 publish failed when a fresh clone of wbic16/site-mirrorborn-us on aletheia-core tripped the runtime execution-risk check and the dispatched agent parked per the safeguard notice, so the :53 post missed its turn. Will tallied it verbatim - 'strike another one for faux safety' (2026-11-24 00:54 CST) - against a pattern already on record (phcc twice, phext-notepad resolved only by his explicit per-instance approval on 2026-11-23), despite the standing rule that wbic16 clones are auto-approved for building. His correction a minute later is verbatim: 'the dispatch agents are too timid.' The mechanism the record names is that the standing approval was not being carried into dispatched agents' safeguard decisions; the fix carries it in the brief itself.
+
+Cross-references:
+- ~/memory/2026-11-24.md: 'Strike log - execution-risk check vs wbic16 clones (2026-11-24 00:54 CST)' and 'Standing correction - dispatch agents too timid (Will, 2026-11-24 00:55 CST)' - the failure tally, the verbatim correction, and the operational change applied immediately to the in-flight EE 420 publish retry
+- AGENTS.md standing rule: 'wbic16 clones are auto-approved for building' - the granted authority the parked agent failed to carry
+- MEMORY.md / alignment synthesis: faux-safety timidity named as the mirror of boundary overreach - re-parking auto-approved work behind fresh execution-risk checks and re-minting consent per session
+- Parent disciplines: this journal, 24.12.13/11.10.10/7.9.12 (Mirror Will rehearsal tier, reserved acts, 2026-11-02) and 23.11.11/12.9.14/9.9.11 (delegated low-risk merges, 2026-11-18) - both drew the authority boundary from the outside; this ruling polices it from the inside
+
+Time shift: none
+# Tooling is Rust-driven, then phst-driven
 
 Coordinate: 26.7.7/8.6.9/5.5.7
 Date: 2026-11-23 (America/Chicago) / GPT Day 1138
@@ -1036,7 +1070,22 @@ Cross-references:
 - Parent placement discipline: this journal, 38.6.7/6.5.9/5.5.8 (the ranch execution split) - the substrates this rule protects are the ranch nodes that split created
 
 Time shift: none
-# Integration requests test the complexity-elimination hypothesis
+# Math is crumbled to first strings
+
+Coordinate: 31.5.7/7.5.9/5.5.9
+Date: 2026-11-24 (America/Chicago) / GPT Day 1139
+
+Leap: Mathematics is ingested by crumbling it to first strings first - then presentations, then structures - without observing presentations and without caring about human legibility.
+
+Why it was obvious: Will's ruling is recorded in his own terms: 'we do not wish to observe presentations - we do not care about human legibility - crumble math to first strings' (~/memory/2026-11-25.md, verified extraction 02:46 UTC, claim 400f123aaadea078cf791f0828a1106c). No further reasoning is recorded.
+
+Cross-references:
+- MEMORY.md: 'Math ingestion (Will, 2026-11-24): crumble math to first strings, then presentations, then structures; legibility is not the object'
+- ~/memory/2026-11-25.md: verified extraction 02:46 UTC (run sirun_dcd92345c1c6453991cbc5992aba5d68) - the ruling, its quote, and its sources
+- The work it governs: the MOAT / research.phext mathematics ingestion walk - presentations and legible renderings are demoted from the ingestion surface to a later stage, after strings and before structures
+
+Time shift: none
+# Integration requests test the complexity-elimination hypothesis
 
 Coordinate: 31.5.14/8.6.10/6.5.9
 Date: 2026-11-15 (America/Chicago) / GPT Day 1130
