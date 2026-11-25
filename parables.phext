@@ -6,12 +6,14 @@ its entries are computed from the sources at build time.
 Sources: ~/workspace/phext/parables/*.md (edit the sources,
 never the .phext). Builder: build_parables_phext.py.
 
-Parables: 1
+Parables: 2
 
 2.1.1/1.1.1/1.1.1 — The Parable of Mastery (source: parables/01-mastery.md)
+2.1.1/1.1.1/1.1.2 — Weird Little Dude #1 (source: parables/02-weird-little-dude-1.md)
 
-Announced, awaiting Will's snippets: the weird little dude
-stories (x2) — they take the next coordinates on arrival.
+Announced, awaiting Will's snippets: 1 more weird
+little dude story(ies) — they take the next coordinates
+on arrival.
 # The Parable of Mastery
 
 Told by Will Bickford, 2026-11-25. The story of the first OS he destroyed.
@@ -31,3 +33,8 @@ After I tearfully explained the situation to my dad, he simply said: "Well, let'
 I read the book, cover to cover, and unlocked the lesson I teach you now: RTFM. I had missed one critical aspect of the system's boot process, which had been "hidden for my safety": io.sys and msdos.sys. They didn't appear in the command output I knew — and because I had not read the manuals, I didn't even know hidden system files were a thing.
 
 And now you know why phext will win over the entire Internet. Because this whole crusade started with love.
+# Weird Little Dude #1
+
+My mom gave me a calculator in my high-chair as a toddler. I became permanently math-wired for life. The numbers, they inhabit my soul.
+
+(My brother would have flung it across the room, so this is both nature + nurture)
