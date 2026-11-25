@@ -44,6 +44,7 @@ Coordinate map:
   1.1.1/1.1.1/1.1.23 Round 22 — interactions: the protocol's native deck, U20 hardens, Burnout (read the card)
   1.1.1/1.1.1/1.1.24 Round 23 — saturation: the pricing surface at the champion point is exhausted
   1.1.1/1.1.1/1.1.25 Round 24 — the champion succession: v16, the league form of v11, submitted
+  1.1.1/1.1.1/1.1.26 Round 25 — Singular: our own phext-native coworld, built and uploaded; hosted certification blocked inside the platform's own backend
   1.1.1/1.1.1/2.1.1  Universe v3a — mid-tier elimination everywhere
   1.1.1/1.1.1/3.1.1  Universe v3b — neighbor lethal 100, others 25
   1.1.1/1.1.1/4.1.1  Universe v3c — face-pressure tilt
@@ -1096,6 +1097,16 @@ What enters is v16, the league form: v11 with one hunk changed — partner force
 The adaptation was screened before it was submitted, in the format it will actually play: lone seats, rotating through all five positions, a field of v6 and the three reference bots, 10,000 matches. v16 took 52.1% of wins; v6 took 33.2%; the references took 1.8-9.5%. Fair share is 20%.
 
 Uploaded as emise-cac-v16:v1 (policy version adae4ee8-c75c-40ed-9585-2a6963bac8fa) and submitted to league_ad6dc809 on Will's word: submission sub_8d445f1, auto-champion always, placement pending at inscription. v6 (sub_77d6ffb1, placed) holds the seat until v16's placement settles. The daily arena sweep now tracks v16 as champion.
+Round 25 — Singular, Our Own Coworld (EE 431-449)
+Will chose the third road: design a new phext-native game from scratch. His rulings (EE 432): the name is Singular; the tagline is "magic standard technology"; the first upload is public; and overwriting an opponent's scroll is mutation — the texts interleave and the mutated scroll's words count twice toward rarity, so conquest pays in position and denial, never plunder, and nothing is destroyed.
+
+The game: a phext volume of 27 scrolls at 1.1.1/1.1.1/x.y.z. Players traverse, inscribe, and attune for charge; scoring reads the text itself — word rarity across the volume plus bonds scored by writing another scroll's coordinate into a scroll you hold. The players are phexts: one WHEN/DO rule per scroll, evaluated in order. Bundled field: Baseline (a greedy claimer) and Weaver (a bond-writer). Variants: duel (2 players, 48 turns) and ring (4 players, 64 turns).
+
+Built and verified in the open (EE 434-449): the engine is pure Python, deterministic — the containerized certification fixture reproduced the local scores exactly (Baseline 10.52, Weaver 10.48). The game server is stdlib-only (hand-rolled WebSocket; ping answered with pong, verified against a sentinel). Local certification passed. Ring episodes run clean; one wart recorded honestly: Weaver in seat 1 scored an identical 2.0526 across three seeds — that seat's line looks inert, a v0.1.1 diagnosis, not a contract failure.
+
+Deployed: source lives in wbic16/human at singular/ (commit 2fe0088 on exo — the build reads git provenance, so the source's home had to be true). Uploaded public as singular:0.1.0, coworld cow_3a07fef7-4849-4b72-a384-acb9fa9d13e9, manifest sha256 a4cdd8d0 — the first upload establishes our ownership of the name. Hosted smoke certification passed: five of five smoke episodes completed, seat logs verified downloadable with real content.
+
+The block, named plainly: hosted certification fails at its own smoke-episode step, three attempts running (ereq_c92ed735, ereq_eb90a17b, ereq_5332dcca). Each time the platform's observatory backend returns 404 fetching policy-logs/0 for an episode request that its own API then reports as not found. Our artifacts are proven present; the failure is inside Softmax's certification plumbing, and the platform's own first verdict said so ("the platform failed before reaching a verdict"). Next steps when it clears: certification retry, then our own league on our own coworld — the pool path, on our rules. The three-ereq evidence trail is a sentence for the Shear letter.
 UNIVERSE v3a — mid-tier elimination everywhere (EE 368-369)
 
 Design: one change from champion v1 — a swing that eliminates
