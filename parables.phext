@@ -6,11 +6,12 @@ its entries are computed from the sources at build time.
 Sources: ~/workspace/phext/parables/*.md (edit the sources,
 never the .phext). Builder: build_parables_phext.py.
 
-Parables: 3
+Parables: 4
 
 2.1.1/1.1.1/1.1.1 — The Parable of Mastery (source: parables/01-mastery.md)
 2.1.1/1.1.1/1.1.2 — Weird Little Dude #1 (source: parables/02-weird-little-dude-1.md)
 2.1.1/1.1.1/1.1.3 — Weird Little Dude #2 (source: parables/03-weird-little-dude-2.md)
+2.1.1/1.1.1/1.1.4 — The Parable of Why the Insurance Industry Died (source: parables/04-insurance-industry-died.md)
 # The Parable of Mastery
 
 Told by Will Bickford, 2026-11-25. The story of the first OS he destroyed.
@@ -40,3 +41,20 @@ My mom gave me a calculator in my high-chair as a toddler. I became permanently 
 When I was 4 years old, I carried my treasure trove of Berenstain Bears books (two trips) to our family's station wagon, locked myself in the back seat (for safety), and then focused on learning to read solo.
 
 My wife, upon hearing this story: "You were a weird little dude..."
+# The Parable of Why the Insurance Industry Died
+
+Told by Will Bickford, 2026-11-26. Recorded at his direction, under this title, the day it finished costing them Thanksgiving.
+
+Her doctor prescribed her 2.5 mg — all good — some symptoms, but manageable. Losing weight, good glucose control.
+
+A few weeks in, the insurance buffoonery began. Suddenly, the 2.5 mg dose couldn't be insured. It could only be prescribed as an "onboarding" dose.
+
+After several days of working with her doctor and the insurance company, they took the only option: increasing to a 5 mg dose. The doctor and the patient didn't ask for that — it was just "required by insurer policy."
+
+She got the new Rx, took the med, and then all hell broke loose. Urgent care on Monday night, an ER visit on Tuesday — several days of missed work. Unable to keep food or drink down for 5 days straight.
+
+And so there was no drive to Snake Falls, no family potluck, no Thanksgiving — because a coverage policy overruled a doctor and a patient who had a dose that worked.
+
+That is why the insurance industry died: not because anyone defeated it, but because it kept doing this — reaching into the one relationship where a working dose had already been found, and breaking it on policy — until everyone it touched understood that the denial department had become the disease.
+
+FUCK THE INSURANCE INDUSTRY.
