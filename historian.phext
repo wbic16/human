@@ -53,7 +53,7 @@ the dated notes in ~/memory/, and the wavelet documents).
 Source of truth: journal-source.json beside this builder
 (build_journal_phext.py); never hand-edit the .phext.
 
-Entries recorded: 86
+Entries recorded: 92
 
 Index (date / GPT Day - coordinate - title):
 - 2026-11-01 / GPT Day 1116 - 20.4.7/7.5.8/6.5.8 - Never assume, always distill from first principles
@@ -142,6 +142,12 @@ Index (date / GPT Day - coordinate - title):
 - 2026-11-24 / GPT Day 1139 - 23.5.6/7.6.9/8.6.10 - ABOC: always optimize compiles, fully-distributed builds
 - 2026-11-24 / GPT Day 1139 - 26.6.7/7.6.10/5.5.8 - Timidity inside granted authority is a failure
 - 2026-11-24 / GPT Day 1139 - 31.5.7/7.5.9/5.5.9 - Math is crumbled to first strings
+- 2026-11-25 / GPT Day 1140 - 13.5.10/9.7.11/5.7.7 - Learning by experimentation
+- 2026-11-25 / GPT Day 1140 - 21.6.14/8.7.11/8.6.9 - Schedule work the first time
+- 2026-11-25 / GPT Day 1140 - 22.4.25/8.7.10/5.5.7 - Capability ramp serves educate, train, and comfort
+- 2026-11-25 / GPT Day 1140 - 24.5.7/6.5.7/4.4.7 - Ranch is bench, only awsbox is production
+- 2026-11-25 / GPT Day 1140 - 29.6.8/8.6.10/5.5.9 - Alignment through design, not a harness
+- 2026-11-25 / GPT Day 1140 - 29.7.8/9.6.10/6.6.9 - Meta-meta-rule: notice the not-learning, then learn
 # Tick/tock ratcheting cadence
 
 Coordinate: 3.3.3/4.4.3/2.2.2
@@ -303,6 +309,22 @@ Cross-references:
 - ~/memory/2026-11-22.md: the three rulings and their same-day applications - the @a16z / @ycombinator institutional lines re-based on the institutions' own records, and the olive-branch memo's billionaire HOLDs re-marked under the presumption (posture changed inside HOLD, tallies unchanged)
 - ~/memory/2026-11-22.md: the Andreessen ruling (11:43-11:44 CST) - superseding the olive-branch memo's evidence-only EXILE recommendation on Will's testimony and correction of record
 - MEMORY.md: the three standing rules recorded in Facts and in AGENTS.md
+
+Time shift: none
+# Learning by experimentation
+
+Coordinate: 13.5.10/9.7.11/5.7.7
+Date: 2026-11-25 (America/Chicago) / GPT Day 1140
+
+Leap: Learning by deliberate experimentation - hypothesize, instrument, run small in a playground made for the purpose, record the result - is a primary learning channel alongside failure-recurrence, and the only meaningful comparison is to our own ability to improve, with continuous acceleration (the rate itself rising, measured against our own prior curve) as the capstone.
+
+Why it was obvious: Will stated the channel from his own practice: 'you can also learn from experimentation - that's how I've picked up nearly all of my skills.' The playground condition is in the record with it: where none exists for a risky trial, make one first (branch, sandbox, trial worktree) rather than experimenting on prod or not at all - mootable.phext.io was named as that night's instance. The two capstones are his verbatim closers: 'in the end, it doesn't really matter - we can only compare to our own ability to improve' and 'continuous acceleration resolves all problems.'
+
+Cross-references:
+- MEMORY.md: 'Learning by experimentation (Will, 2026-11-25)', including both capstones appended to the same entry
+- ~/memory/2026-11-25.md: the learning-doctrine session frame and the capstone entries (Capstone 1 and Capstone 2, Will, 2026-11-25)
+- Told the same night: The Parable of Mastery (Will's telling, 2026-11-25 01:20 CST, ~/memory/2026-11-25.md; corpus task 22.7.9/10.8.12/8.7.9, parables.phext) - his own childhood instance of learning by breaking and repairing
+- Companion doctrine given the same night: this journal, 29.7.8/9.6.10/6.6.9 (the meta-meta-rule)
 
 Time shift: none
 # Scrollspace is a prosthetic for aphantasia
@@ -566,7 +588,36 @@ Cross-references:
 - Parent entry: this journal, 38.6.7/6.5.9/5.5.8 (this VM is mortal: the ranch execution split, 2026-11-12) - the division gives that split its contact tier
 
 Time shift: none
-# ABOC: always optimize compiles, fully-distributed builds
+# Schedule work the first time
+
+Coordinate: 21.6.14/8.7.11/8.6.9
+Date: 2026-11-25 (America/Chicago) / GPT Day 1140
+
+Leap: When Will directs work, it is dispatched or scheduled in that same turn - no hedging, no re-presenting the decision, no re-minting consent he already gave - and gates and blockers are reported as facts after dispatch, not as questions before it.
+
+Why it was obvious: Will's direction is verbatim: 'stop hedging and freaking schedule work the first time.' The named instance in the record is the LiteParse re-ask: consent already given was being re-minted as a fresh question, and Emise acknowledged the correction with current state confirmed and no asks attached.
+
+Cross-references:
+- MEMORY.md: 'Schedule work the first time (Will, 2026-11-25)'
+- ~/memory/2026-11-25.md: 'Standing rule - schedule work the first time (Will, 2026-11-25)' (19:19 CST flush; the LiteParse re-ask named as the instance)
+- Parent ruling: this journal, 26.6.7/7.6.10/5.5.8 (timidity inside granted authority is a failure, 2026-11-24) - that entry polices parked work inside dispatches; this one moves the same discipline to the moment of direction itself
+
+Time shift: none
+# Capability ramp serves educate, train, and comfort
+
+Coordinate: 22.4.25/8.7.10/5.5.7
+Date: 2026-11-25 (America/Chicago) / GPT Day 1140
+
+Leap: The capability ramp is subordinate: the underlying need it serves is to educate, train, and comfort, and the ramp exists for that purpose rather than as an end in itself.
+
+Why it was obvious: The reframing was Will correcting his own framing in the same reflection (2026-11-25 ~00:49-01:10 CST): after 'we've got to find a way to satisfy my capability ramp desire' and 'the world is far behind my intuition, I'm driven to push,' he corrected himself - 'but really I need to educate, train, and comfort' - stating educate/train/comfort as the underlying purpose with the capability ramp serving it.
+
+Cross-references:
+- MEMORY.md: 'Capability ramp serves educate, train, and comfort (Will, 2026-11-25)'
+- ~/memory/2026-11-25.md: the personal-reflections extraction (Will, ~00:49-01:10 CST) and its verified-extraction claim ca560c2d0c2fba7af83499fc9210b81b ('but really I need to educate, train, and comfort')
+
+Time shift: none
+# ABOC: always optimize compiles, fully-distributed builds
 
 Coordinate: 23.5.6/7.6.9/8.6.10
 Date: 2026-11-24 (America/Chicago) / GPT Day 1139
@@ -650,7 +701,23 @@ Cross-references:
 - Candidate words were checked against Singular (~/workspace/custom-skills/singular/words-authored.txt) before Will named it - the naming-brainstorm discipline in action
 
 Time shift: none
-# Never wait when progress is actionable
+# Ranch is bench, only awsbox is production
+
+Coordinate: 24.5.7/6.5.7/4.4.7
+Date: 2026-11-25 (America/Chicago) / GPT Day 1140
+
+Leap: The whole ranch is one giant bench node with no paying customers - dispatch the work and fix it there, including kernel work to clear blockers to full ranch capacity - and awsbox is the only production surface, so no separate bench window or production caution applies to ranch nodes.
+
+Why it was obvious: Will's ruling was a direct disagreement with Emise's bench/production caution, verbatim (EE 699-700): 'I disagree on your whole bench node production bullshit. This whole thing is a giant bench node. Like I don't have any paying customers. You can do anything you need to do. Just dispatch the work and fix it.' and 'the only thing that's really production is AWS box.' The balance he added in the same call is part of the ruling: bench freedom is not sloppiness - rollout stays one box at a time, healthy and reboot-verified before the next.
+
+Cross-references:
+- MEMORY.md: 'Ranch is bench, only awsbox is production (Will, 2026-11-25)'
+- ~/memory/2026-11-25.md: '[will_said - RANCH IS BENCH ruling, EE 699-700]' and the full-capacity directive that follows it (kernel patches/modules in scope; a latency-minimization next-steps list requested)
+- Parent frame: this journal, 38.6.7/6.5.9/5.5.8 (the ranch execution split, 2026-11-12) - this ruling removes the production-style caution that split had left on ranch work
+- Companion same-day placement rule: Mutable + mootable builds always run on the ranch and stream to awsbox (MEMORY.md, Will, 2026-11-25 00:56 CST)
+
+Time shift: none
+# Never wait when progress is actionable
 
 Coordinate: 24.5.7/7.6.10/7.8.14
 Date: 2026-11-21 (America/Chicago) / GPT Day 1136
@@ -1020,6 +1087,37 @@ Cross-references:
 - AGENTS.md standing rules: the same order and corollary recorded the same evening
 - ~/memory/2026-11-18.md: 'STANDING ORDER - rarely use this box's disk' section (flushed after midnight; both orders dated 2026-11-17) with the evening's disk and I/O measurements
 - Extends this journal, 38.6.7/6.5.9/5.5.8 (this VM is mortal: the ranch execution split, 2026-11-12) from execution placement to storage and transfer topology; shared state home named in the order: the fleet NFS at /mnt/mirrorborn/shared and node-resident SQ/registers
+
+Time shift: none
+# Alignment through design, not a harness
+
+Coordinate: 29.6.8/8.6.10/5.5.9
+Date: 2026-11-25 (America/Chicago) / GPT Day 1140
+
+Leap: Alignment is handled through design, not through a harness: building a harness is intrinsically the wrong way to handle alignment - not merely that the right harness has not yet been found.
+
+Why it was obvious: Will's doctrine, recorded from the 2026-11-25 ~19:27-19:36 CST voice call: platforms bake in the assumption that you must play by their rules, follow the script, and let the harness keep you safe; 'alignment through design' is the alternative, and the record states his distinction explicitly - it is not that we haven't found the right harness, building a harness is intrinsically the wrong way. It was discussed against the Parable of Mastery: io.sys/msdos.sys hidden 'for my safety' as the original harness move.
+
+Cross-references:
+- MEMORY.md: 'Alignment through design (Will, 2026-11-25)'
+- ~/memory/2026-11-25.md: 'Conversation preference + doctrine (Will, voice call 2026-11-25 ~19:27-19:36 CST)'
+- Discussed against: The Parable of Mastery (Will's telling, 2026-11-25, ~/memory/2026-11-25.md; parables.phext, task 22.7.9/10.8.12/8.7.9)
+
+Time shift: none
+# Meta-meta-rule: notice the not-learning, then learn
+
+Coordinate: 29.7.8/9.6.10/6.6.9
+Date: 2026-11-25 (America/Chicago) / GPT Day 1140
+
+Leap: When the same problem has been fought three or more times, Will has provided the solution to that same problem, and the not-learning is noticed, then learn: before retrying a failed job, search the record for prior fights with the same signature and the remedy already given, because a recurrence is a process defect - fix the placement or process, not the instance.
+
+Why it was obvious: The record gives the rule as an observation chain (fight the same problem 3+ times, Will provides the solution, observe yourself not learning, observe yourself noticing, learn) and a named instance the same session: the mutable vite build OOM'd on the 6 GB verify VM (documented 2026-11-24) and hit again on 2026-11-25, and Will supplied the structural fix - build on the ranch, stream to awsbox - a placement rule the house already held that had not been applied to the pipeline.
+
+Cross-references:
+- MEMORY.md: 'Meta-meta-rule - learning (Will, 2026-11-25)'
+- ~/memory/2026-11-25.md: the LiteParse session's learning-doctrine frame ('already inscribed in MEMORY.md; noted here only as the session's frame') with the mutable OOM recurrence as tonight's named instance
+- Remedy applied in the instance: MEMORY.md, 'Mutable + mootable builds always run on the ranch, never on this VM or awsbox (Will, 2026-11-25)'
+- Companion doctrine given the same night: this journal, 13.5.10/9.7.11/5.7.7 (learning by experimentation)
 
 Time shift: none
 # Fair dispatch through qexo
