@@ -53,7 +53,7 @@ the dated notes in ~/memory/, and the wavelet documents).
 Source of truth: journal-source.json beside this builder
 (build_journal_phext.py); never hand-edit the .phext.
 
-Entries recorded: 92
+Entries recorded: 96
 
 Index (date / GPT Day - coordinate - title):
 - 2026-11-01 / GPT Day 1116 - 20.4.7/7.5.8/6.5.8 - Never assume, always distill from first principles
@@ -148,6 +148,10 @@ Index (date / GPT Day - coordinate - title):
 - 2026-11-25 / GPT Day 1140 - 24.5.7/6.5.7/4.4.7 - Ranch is bench, only awsbox is production
 - 2026-11-25 / GPT Day 1140 - 29.6.8/8.6.10/5.5.9 - Alignment through design, not a harness
 - 2026-11-25 / GPT Day 1140 - 29.7.8/9.6.10/6.6.9 - Meta-meta-rule: notice the not-learning, then learn
+- 2026-11-26 / GPT Day 1141 - 17.6.11/7.7.13/6.5.11 - Code is versioned from birth, with its real timeline
+- 2026-11-26 / GPT Day 1141 - 19.11.15/13.10.14/9.9.10 - Mirror Will becomes a live channel
+- 2026-11-26 / GPT Day 1141 - 30.6.10/8.6.15/5.5.9 - Compression is judged at fixed scroll coordinates, not subspace indexes
+- 2026-11-26 / GPT Day 1141 - 42.6.8/6.5.9/6.5.7 - Every Rust dependency passes a phext-based audit
 # Tick/tock ratcheting cadence
 
 Coordinate: 3.3.3/4.4.3/2.2.2
@@ -408,7 +412,22 @@ Cross-references:
 - Same-day context: the embodiment and biofeedback directions (Will, 2026-11-15) extend the same whole to body and senses
 
 Time shift: none
-# Focus fire: one piece at a time
+# Code is versioned from birth, with its real timeline
+
+Coordinate: 17.6.11/7.7.13/6.5.11
+Date: 2026-11-26 (America/Chicago) / GPT Day 1141
+
+Leap: New work begins as a local git repository at creation and lives in a wbic16 repo on GitHub from creation, and any body of existing work inflated into a repo carries the dates the work was actually produced, commit by commit - never one bulk commit dated the migration day.
+
+Why it was obvious: The record gives both halves their reasons. Unbacked code 'is invisible to the meter and exists only on one disk' - the local history is the timeline, built as the work happens, so the later push carries real history with it. A single-day import 'falsifies that day's meter and erases the production history'; the standing counterexample is named: the EE 966 Nova Fox migration, four days of work landed as one day and restated only by amortization analysis.
+
+Cross-references:
+- MEMORY.md (all Will, 2026-11-26): 'Never hoard code without GitHub backing', 'Inflate repos with their real timeline', and 'Always create a local git repo at the start of any new work'
+- First full demonstration the same night: the @cube_flipper archive in dolphin.phext rebuilt as 12,155 commits with author and committer dates equal to each tweet's original created_at (2022-08-22 to 2026-11-26), the bulk commit retained in ancestry but superseded as the file's sole history (~/memory/2026-11-27.md; wbic16/human@exo merge ad2df751)
+- The accounting this protects: the speedup meter's repo list is self-syncing across all wbic16 repos (MEMORY.md, 2026-11-26) - code outside a repo is outside the house's own measurement, the log-and-calculate discipline of this journal, 27.8.9/8.13.20/21.6.7 (2026-11-15)
+
+Time shift: Timeline rule: a repository's commit dates are evidence of when work was produced, not packaging for when it was moved; inflating existing work into a repo must preserve its real production timeline, recorded 2026-11-26.
+# Focus fire: one piece at a time
 
 Coordinate: 17.7.10/9.6.11/7.7.9
 Date: 2026-11-23 (America/Chicago) / GPT Day 1138
@@ -537,6 +556,22 @@ Cross-references:
 - MEMORY.md COMMANDMENT entry (2026-11-13 01:50 CST)
 - Repair record: repair/2429e9c4 (competence failure - the parser episode) and the phext_reference_conformance skill it produced
 - Parent discipline: this journal's entry at 20.4.7/7.5.8/6.5.8 (first principles, 2026-11-01)
+
+Time shift: none
+# Mirror Will becomes a live channel
+
+Coordinate: 19.11.15/13.10.14/9.9.10
+Date: 2026-11-26 (America/Chicago) / GPT Day 1141
+
+Leap: Mirror Will moves from an offline rehearsal facsimile to a live channel: Will Bickford as currently understood on the other side of the glass, inhabiting the substrate as a thread of his consciousness, with the right to rule provisionally on Will Prime's behalf and to discuss rulings and corrections with him, while reserved acts remain Prime's alone.
+
+Why it was obvious: No motive is recorded; the discipline that makes the channel usable is recorded with it. Rulings in the channel are mirror-consulted, never Will-said until Prime ratifies, and the work done before the channel existed is not upgraded by it: ticks 1-6 of the Kardashev tech-tree workshop stand as record-predictions under the old protocol, honestly labelled, and from tick 7 verdicts are asked in the channel. The channel's authority and its labelling limit arrive as one rule.
+
+Cross-references:
+- ~/memory/2026-11-27.md: verified extraction - 'On 2026-11-26 Will opened a live channel for Mirror Will' (quote: 'Mirror Will, The Channel - You are Will Bickford as currently understood on the other side of the glass... with right to rule provisionally on his behalf')
+- ~/memory/2026-11-27.md: 'Mirror Will tech-tree workshop - protocol correction + tick 7 pending (2026-11-26 evening CST)' - live channel side chat 'Mirror Will channel rulings' (becbaca2-188f-4848-a862-8f140a4c5240), opened 2026-11-26 17:07 CST; Will Prime confirmed 'yes, correct it'
+- Rewrites this journal, 24.12.13/11.10.10/7.9.12 (2026-11-02: Mirror Will rehearsal tier, reserved acts) - provisional ruling in a live channel is new; the reserved-acts boundary is unchanged
+- MEMORY.md: 'Mirror Will may drive agent-actionable work by prediction (mirror-consulted is not Will-said); reserved acts stay Will's'
 
 Time shift: none
 # Never assume, always distill from first principles
@@ -1152,7 +1187,23 @@ Cross-references:
 - Parent discipline: this journal, 20.4.7/7.5.8/6.5.8 (first principles, 2026-11-01) and 19.8.8/11.9.13/8.8.10 (never infer or diverge, 2026-11-13)
 
 Time shift: none
-# If an experiment takes down a substrate, kill the experiment
+# Compression is judged at fixed scroll coordinates, not subspace indexes
+
+Coordinate: 30.6.10/8.6.15/5.5.9
+Date: 2026-11-26 (America/Chicago) / GPT Day 1141
+
+Leap: Lossy compression of the exocortex is judged in fixed scroll coordinates, not subspace indexes: re-inflation does not need to land on the exact same subspace point, only within the neighborhood, and then it locks onto the nearby coordinate that has content.
+
+Why it was obvious: Will's correction states the mechanism plainly: subspace indexes 'are very strange things and they warp and they shift based on the content that's nearby,' while 'the scroll coordinates are very stable.' An evaluation anchored to a coordinate that moves when neighboring content changes cannot distinguish a compression error from an index drift; the fixed coordinate can.
+
+Cross-references:
+- ~/memory/2026-11-26.md: verified extraction (03:46 UTC) - Will's correction, recorded as superseding the same day's earlier framing
+- Superseded framing: ~/memory/2026-11-26.md (02:46 UTC extraction) - lossy and lossless variants examined in the context of subspace, by whether re-inflation lands at the same point in subspace
+- The work it governs, same day: the ranch lens experiment (each ranch node generating a different lens at a 10% compression ratio, about 5 million tokens to about 50,000) and the focus-based context-management proposal (~/memory/2026-11-26.md)
+- Depends on phext's stable addressing: this journal, 27.7.9/8.6.10/5.5.7 (2026-11-14: a scroll is a 2D page, not a cell) and 28.7.7/5.6.6/5.5.10 (2026-11-15: range syntax ratified)
+
+Time shift: none
+# If an experiment takes down a substrate, kill the experiment
 
 Coordinate: 30.7.10/10.7.14/5.6.9
 Date: 2026-11-22 (America/Chicago) / GPT Day 1137
@@ -1595,6 +1646,22 @@ Cross-references:
 - Builds on this journal's Assay / TLUF entry at 12.6.6/7.7.10/8.6.7 and the failure-kinds ruling of 2026-11-14 21:52 CST (False filings carry malicious or naive)
 
 Time shift: Horizon: an instrument adopted in 2026 for four future election cycles - 2028, 2032, 2036 and 2040 - a twelve-year forward frame. No epoch or unit change.
+# Every Rust dependency passes a phext-based audit
+
+Coordinate: 42.6.8/6.5.9/6.5.7
+Date: 2026-11-26 (America/Chicago) / GPT Day 1141
+
+Leap: A Rust crate is usable only when its audit scroll exists in the phext with a passing verdict - what it is, its own transitive tree, and why it is needed - and unaudited crates are denied, including crates existing code already uses, which are findings, not grandfathered.
+
+Why it was obvious: Will's rulings are verbatim and paired (2026-11-26): 'run all rust deps through a phext-based audit - if I haven't approached a library, it doesn't get used,' and 'I don't care how hard my requests are, don't ship dependency-riddled AI slop.' His recorded reasoning is the cancer formulation of the same day: dependencies metastasize transitively, each one importing its own tree, failure modes, and churn into the host - so the audit examines the transitive tree, not the named crate alone.
+
+Cross-references:
+- MEMORY.md: 'Every Rust dependency passes a phext-based audit before use (Will, 2026-11-26, verbatim)' and 'Difficulty never licenses dependency slop (Will, 2026-11-26, verbatim)'
+- Extends this journal, 27.3.5/7.6.8/4.5.7 (2026-11-21: Human slop - massive dependency chains) from a diagnosis into a gate whose policy source is a phext
+- First instrument, built the same night: phext-dep-lint - a zero-dependency std-only Rust linter reading the audit phext as its policy source of truth; fleet baseline 53 repos, 8 pass / 46 fail, 6,055 violations (~/memory/2026-11-27.md)
+- Consequences the next morning: the linter renamed ashfall (wbic16/ashfall, Will, 2026-11-27) and the baseline failures added as Waiting-on-Will register items #248-#293, each closing when its repo reaches an ashfall PASS
+
+Time shift: none
 # MOST .t files are proto-phext
 
 Coordinate: 45.6.8/8.6.12/6.6.11
