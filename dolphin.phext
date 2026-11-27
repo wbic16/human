@@ -1,3 +1,68 @@
+dolphin.phext — the dolphin-coded corpus.
+
+First holding: the Twitter archive of @cube_flipper
+(smoothbrains.net), restructured scroll-native and oriented
+holographically, at Will's direction (2026-11-26).
+
+Provenance
+Author: @cube_flipper (smoothbrains.net).
+Source: https://smoothbrains.net/archive.html — the author's
+own archive page, which offers his complete public archive as
+a single JSONL file for accessibility.
+File fetched: https://smoothbrains.net/archive/twitter.jsonl
+Retrieved: 2026-11-26 (EE 1028), one sanctioned fetch.
+Original JSONL: 12155 tweets, 5254149 bytes,
+sha256 07cf3c8c324178e9338ac0b9c0538888ee73f2d9902d60cccefdd7c2f067eae4.
+Found by echo-location in the wild (Will, 2026-11-26): a public
+signal deliberately emitted, heard, and answered — not scraped
+or extracted.
+Span: 2022-08-22T14:53:47Z to 2026-11-26T04:18:23Z.
+Kinds: original 780, thread 4164, reply 7211; 2341 threads.
+Per the author's page: retweets and deleted tweets are
+excluded; only his side of each conversation is included;
+media appears as [photo] / [video] placeholders.
+
+Structure — scroll-native, no JSON in the phext
+One scroll per tweet. Each scroll is a page: header lines
+(id, created_at, url, kind, likes, retweets, and thread_id /
+in_reply_to_id / in_reply_to_user where the record carries
+them, plus answers: / thread_root: coordinate references),
+a blank line, then the tweet text verbatim. Every field of
+every record is recoverable from the phext alone; the JSONL
+itself is not inscribed — it stays in the sources as the
+round-trip verifier's oracle (dolphin/verify_dolphin.py).
+
+Holographic orientation
+A text's position is its Singular merge: the component-wise
+average (rounded half up, min 1) of the atlas positions of
+its distinct words — the mechanism of task_coordinate.py and
+artifacts.phext inscription, reused whole. A tweet scroll's
+coordinate a.b.c/d.e.f/g.h.i is:
+  a.b.c — first triple of the merge of its THREAD ROOT's text
+          (its own text when unthreaded): the thread's
+          neighborhood, shared exactly by its messages.
+  d.e.f — middle triple of the merge of the tweet's OWN text.
+  g.h.i — its chronological rank within the a.b.c neighborhood
+          (order: created_at, then id), base-100 encoded:
+          rank-1 = (g-1)*10000 + (h-1)*100 + (i-1).
+A reply names its parent's coordinate (answers:) and its
+thread root's (thread_root:); a thread reads in rank order
+inside its neighborhood. 1686 neighborhoods in all.
+Finding: the pure 9-component merge alone collides on this
+corpus — 1554 of 12155 tweets share their full
+merge coordinate with another tweet — so the neighborhood-rank
+triple is the smallest extension that keeps every scroll
+uniquely addressed, and it carries the thread order with it.
+Reserved: this provenance scroll at 1.1.1/1.1.1/1.1.1 and the
+thank-you at 1.1.1/1.1.1/1.1.2; the rank rule skips both.
+
+Round-trip
+Round-trip verified at build (EE 1028): 12155/12155 records reconstructed from this phext and diffed against the original JSONL — 0 field diffs, 0 missing, 0 extra. Re-runnable any time: dolphin/verify_dolphin.py.
+
+Builder: build_dolphin_phext.py. Sources: dolphin/twitter.jsonl
++ dolphin/thank-you.md — edit the sources, never the .phext.
+The archive is @cube_flipper's work, published by him; it is
+kept here with attribution, never claimed as ours.
 id: 1843825198585524335
 created_at: 2024-10-09T01:25:58Z
 url: https://x.com/cube_flipper/status/1843825198585524335
