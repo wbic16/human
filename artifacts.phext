@@ -14,7 +14,7 @@ truth: artifacts-source.json beside this builder
 (build_artifacts_phext.py); never hand-edit the .phext.
 artifacts.phext is published to wbic16/human@exo.
 
-Artifacts inscribed: 61
+Artifacts inscribed: 67
 
 Index (coordinate — title — source):
 - 19.7.11/9.7.12/7.6.9 — Light the Next Light — intro song lyrics & time map — ~/workspace/exocortexia-cartoon/intro/LYRICS.md
@@ -31,6 +31,7 @@ Index (coordinate — title — source):
 - 23.7.8/9.7.12/8.6.9 — Shot List — Scrolltown Intro Video — ~/workspace/exocortexia-cartoon/intro/SHOT-LIST.md
 - 23.7.10/8.7.11/6.6.9 — Phext, Inc. — Divisions for the ASI Era (DRAFT, revised: Will's six divisions, Judgement + R&D renames, obsolescence evaluation) — workspace/agentic-pass-plan/DIVISIONS.md
 - 23.7.10/9.6.11/6.6.8 — Humanities Assay — Design Spec — ~/workspace/your_files/humanities-assay-spec.md
+- 24.5.10/5.4.6/4.4.7 — Fast Inference for the Truly GPU-Meek — an APU companion to the Inference Optimization Playbook — /home/hatch/workspace/operation-salvage/inference-playbook-companion-apu.md
 - 24.6.8/7.6.10/6.6.9 — Scrolltown — Production Workflow — ~/workspace/scrolltown-reorg/workflow/PRODUCTION.md
 - 24.6.10/7.6.10/6.5.9 — Tick/Tock Ratcheting Cadence — PROPOSAL (DRAFT) — workspace/wavelets/TICK-TOCK-CADENCE-PROPOSAL.md
 - 25.6.8/7.6.10/6.5.9 — Assay — Requirements for the Hosted Assessment Service — ~/workspace/oracle-service/REQUIREMENTS.md
@@ -56,6 +57,7 @@ Index (coordinate — title — source):
 - 28.7.8/8.6.11/6.6.10 — qexo dispatch core — SPEC (RATIFIED 2026-11-16) — ~/workspace/qexo-task/dispatch-core/SPEC.md
 - 28.7.9/8.6.11/6.6.8 — Training Film — T7 (R7, the full exemplar build) — Production Log — ~/workspace/phext-walkthrough/production/TRAINING-T7-LOG.md
 - 28.7.9/8.6.11/7.6.9 — Since November 1: A Catalog of Eleven Days 🔥 — ~/workspace/blog/since-november-1.html
+- 29.6.8/7.7.10/7.5.9 — FP-Solve Run Report — Inkling-2-Mini, fleet llama.cpp — ~/workspace/inklings-rse/RUN-REPORT.md
 - 29.7.9/9.7.12/7.6.9 — Depth behind every cell — a 3D phext demo for ASCII game maps (for @paleoludic) — workspace/paleoludic-demo/README.md
 - 30.6.8/7.6.10/7.5.9 — Ranch Node Tailworm Audit — Tailscale TS-2026-014 → TS-2026-017 — ~/workspace/tailworm-audit-task/AUDIT.md
 - 30.6.8/8.6.11/6.6.9 — Paper Addressing for tluf.org — a profile of phextura Layer 2 — ~/workspace/oracle-service/ADDRESSING.md
@@ -66,18 +68,22 @@ Index (coordinate — title — source):
 - 32.5.7/7.6.10/6.5.9 — edit.phext.io — Security + Scalability Testing, and the In-Page Phext Server Verdict — ~/workspace/phext-edit-secscale/REPORT.md
 - 32.6.7/7.6.10/6.5.9 — Neovim + Phext — Design: Phext-Scale Navigation in a Modal Editor — ~/workspace/goals/neovim-phext-support-merge-ready-pr-compiled-with-phcc/files/neovim-phext-design.md
 - 32.6.8/8.6.11/6.5.9 — Charon — README — ~/workspace/charon-seed/README.md
+- 32.7.8/7.6.10/7.6.9 — Enki Home — enki.phext.io — ~/workspace/your_files/enki-home/enki-home.html
+- 33.6.8/7.6.10/6.5.9 — Enki LLM WebSocket hooks — protocol 1 — ~/workspace/enki-artifacts/LLM-HOOKS.md
 - 33.6.9/8.6.11/7.5.9 — Desktop SSO for Phext Notepad — the cookie paste is gone — ~/workspace/phext-notepad-perf/REPORT-DESKTOP-SSO.md
 - 33.7.8/9.7.13/9.6.9 — phbot — PyBot, rebuilt on phext with MOAT — workspace/pybot-census/PHBOT-PHEXT.md
 - 34.6.7/7.6.10/6.6.10 — Scrollspace — Exocortical Vision (Emise font build, phext-lattice PR #93) — /home/hatch/workspace/scrollspace/progressive/scrollspace_progressive.html
 - 34.6.7/7.6.11/6.5.10 — phextura — DESIGN — ~/workspace/phextura-design/DESIGN.md
 - 34.6.7/8.6.11/6.5.9 — Charon — Prompt 0: Produce the design spec (no code yet) — ~/workspace/charon-seed/prompts/00-spec.md
 - 34.7.7/8.6.11/7.6.9 — PHEXT.md — phext integration for HoloStore (wbic16/holostore fork; round 2: phext-native re-implementation + four-way comparison) — workspace/holostore-analysis/fork/PHEXT.md
+- 34.7.8/9.6.12/7.6.9 — inkling — local-inference tooling for the Inklings (repo README) — ~/workspace/inkling-consolidation/staging/README.md
 - 35.6.8/7.6.10/6.5.9 — Computronium — Chromium Duplication Census (CENSUS.md) — ~/workspace/chromium-census/CENSUS.md
 - 35.6.8/7.6.10/6.6.10 — Level Editor — edit.phext.io free example page (phext-lattice PR #65) — workspace/paleoludic-demo/ascii-map.html
 - 36.6.7/7.6.11/6.6.9 — Depth Behind Every Cell — single-file HTML demo (3D phext for ASCII game maps, for @paleoludic) — workspace/paleoludic-demo/phext-map-demo.html
 - 36.6.7/7.6.11/7.5.9 — Phext Notepad — libphext v0.5.0 parity — ~/workspace/phext-notepad-perf/REPORT-V050-PARITY.md
 - 37.6.8/8.6.11/5.6.9 — phextura.com — landing page (index.html) — ~/workspace/phextura-landing/site/index.html
 - 40.6.8/6.5.9/5.5.9 — Scrolltown — coming-soon landing page (visionquest.me) — workspace/scrolltown-landing/site/index.html
+- 44.5.7/6.5.10/6.5.9 — Enki MCP bridge (enki-mcp) — ~/workspace/enki-artifacts/enki-mcp.rs
 # Light the Next Light — intro song lyrics & time map
 
 Title: Light the Next Light — intro song lyrics & time map
@@ -2062,7 +2068,86 @@ Each item states the decision and a **proposed default (proposal only — not se
 - It does not claim to measure talent entire. §6.1 is part of the design, not a caveat appended to it: the assay certifies the verifiable, and says so.
 
 *End of spec.*
-# Scrolltown — Production Workflow
+# Fast Inference for the Truly GPU-Meek — an APU companion to the Inference Optimization Playbook
+
+Title: Fast Inference for the Truly GPU-Meek — an APU companion to the Inference Optimization Playbook
+Source: /home/hatch/workspace/operation-salvage/inference-playbook-companion-apu.md
+Inscribed: 2026-11-25
+SHA-256: d747793061c4f38aaaa38309803f91f94f12e492920cd27ee6e99ff210bd8d94
+
+---
+# Fast Inference for the Truly GPU-Meek
+
+## A companion to the Inference Optimization Playbook, redrawn for machines with no graphics card at all
+
+The [Inference Optimization Playbook](https://github.com/alesha-pro/inference-optimization-playbook) is a field notebook we wish more people would write: 138 tested hypotheses on making huge MoE models fast on consumer GPUs, each with a verdict, the measurements, the conditions it ran under, and a note on when to revisit it. The failures are published at the same weight as the wins. Its rig is four RTX 3090s, with experts offloaded to system RAM.
+
+Our rig is the opposite end of the shelf: a fleet of mini-PCs whose entire GPU is the one baked into the CPU — AMD APUs with Radeon 780M integrated graphics, Zen cores and RDNA3 sharing one pool of DDR5. No cards. No VRAM. No PCIe wall, because there is nothing on the other side of it.
+
+This is a companion, not a summary. The playbook's *method* — situation card, experiment rules, hypothesis ledger — transfers whole. Its *map* does not, because the terrain is different in kind, not in degree. What follows is the map redrawn for the GPU-meek: everyone running inference on integrated graphics, unified memory, and a power envelope measured in tens of watts.
+
+## The inversion: there is no second memory
+
+The original playbook is organized around one question: a token needs an expert, the expert is not in VRAM, what does the miss cost? Everything — the cost model `time = constant + misses × cost of a miss`, the CPU-lane-vs-PCIe chapter, the expert caches — hangs off that bus trip.
+
+On an APU that question dissolves. There is one memory. The model is already "in RAM" and already "in VRAM," because those are the same chips. A miss costs no copy. What it costs is subtler:
+
+- **Bandwidth contention.** The CPU cores and the GPU drink from the same well. Decode on an APU is bandwidth-bound almost by definition: every generated token requires reading the active weights once, and the well refills at DDR5 speed, not GDDR speed.
+- **Cache and working set.** What replaces the VRAM/RAM split is the cache hierarchy and the page working set. A "cold expert" is not across a bus; it is merely not warm. The penalty is real but it is measured in cache misses, not milliseconds of DMA.
+- **The package envelope.** CPU and GPU share one TDP and one heatsink. Watts spent heating Zen cores are watts the GPU cannot spend, and a warm package clocks everything down together. On the big rig, power is a line in the situation card. On an APU, power is a *contestant*.
+
+So the meek cost model reads: **time = constant + contention**, and the ceiling is arithmetic anyone can do on an envelope — peak decode ≈ memory bandwidth ÷ bytes of active weights per token. Compute that number before you tune anything. If you are already near it, no placement trick will save you; if you are far from it, the gap is your work list.
+
+## The situation card, redrawn
+
+The playbook's first discipline is a situation card: fill it before you read chapters or propose anything, end it with a tag line, and grep the ledger by your tags. Keep the discipline; change the fields.
+
+- **The model** — unchanged. Name, size at the chosen quant, dense or MoE, experts per layer, top-k, bytes per expert. The model does not care what it runs on.
+- **The hardware** — this is where the card turns. GPU: the iGPU model and its compute units. Then the field that replaces "VRAM per card": **system RAM — size, channels populated, and rated speed actually achieved.** On an APU, RAM *is* the video memory. A single-channel stick or a BIOS that downclocks your DDR5 is not a footnote; it is a GPU downgrade you performed on yourself. Add: the UMA/aperture setting if your BIOS has one, the package TDP (and whether it is configurable), and the cooling reality of the box.
+- **The engine** — ours is llama.cpp's server, per node, behind a routing layer; the backend (Vulkan or ROCm on the 780M) is a card field, because results flip between backends the way the original's flipped between engines. Who serves a miss: *nobody — everything is resident*; the honest field is "what is the working set at this context depth."
+- **The workload** — unchanged, and if anything more important: agent sessions are the native workload of small machines, and their anatomy (below) decides what to optimize.
+- **Current numbers** — same metrics (decode at short and deep context, prefill by length, re-read of a typical turn, TTFT, load time), plus one the meek add: **watts during decode, and tokens per second per watt.** On a 45-watt package, tok/s/W is not an eco-metric. It is the headline.
+
+Our tag line looks like: `#apu #unified #bandwidth-bound #package-power #agent #llama-server` — and a ledger greps by it exactly the way the original greps `#offload #cpu-lane #tp`.
+
+## What survives, what inverts, what dies
+
+**Survives whole.** The experiment rules need no translation at all: know the ceiling before you start; check the ledger before you rerun a rejected idea; write the acceptance threshold down in advance, after measuring your own A-vs-A noise; one change per experiment; controls on both sides in one session; confirm in the log that the fast path you think you enabled actually ran; stop after three changes inside the noise and write a status. And the playbook's hardest-won finding is fully portable: **short benchmarks are systematically wrong** — theirs promised +27% decode where real generation gave +2%. Decide on a replay of real sessions, or do not decide.
+
+**Survives, reframed.** Three of the findings change their reason but keep their force:
+
+- *Check the skew before you build the system.* On the big rig, skew decides which experts earn VRAM. Here there is no VRAM to earn — but there is a warm working set, and a hot set profiled **on your own load** (their finding: a foreign profile is worth far less than one accumulated on similar work) still decides what stays warm. Profile first, on your sessions, not on a benchmark's.
+- *Speculative decoding is the best single lever* — with the same caveat theirs carries: on weakly-skewed models every row of a long verify window wakes its own cold experts, so keep the window short. On an APU the drafter also competes for the same bandwidth and the same watts; measure the *full step*, not the acceptance rate alone. And their vocabulary lesson transfers verbatim: a drafter that speaks your workload's language accepts far more.
+- *In agent work, turn time is generation and re-read, not cold prefill.* Their sessions ran 77–81% generation with a median re-read of 250–400 tokens. For a fleet of small machines serving agents, this is the whole game: the prompt cache and session persistence pay more than prefill heroics. Log a real session and split the turn before you optimize any of it.
+
+**Inverts.** *Who serves a miss* was a genuine fork on the big rig — CPU compute versus a PCIe copy, and the winner flipped between models. Here the copy does not exist, so the CPU lane wins by default and the question becomes arbitration: how many Zen threads serve cold experts before their bandwidth and power draw starves the GPU they are helping? And thread-pinning advice inverts with it — on a shared package, leaving cores idle is sometimes the fastest configuration, because idle cores are power and thermal headroom handed to the GPU. Heresy on a 3090 rig; arithmetic on ours.
+
+**Dies.** The multi-GPU chapters — layer split, tensor parallel, expert parallel, the all-reduce as a latency problem — have no object here. Their replacement is one level up: **multi-node.** The meek person's tensor parallel is a shelf of small machines, one model (or one specialty) per node, with routing between them. The exchange cost is real again at that level — it is just measured in network hops between nodes instead of microseconds between cards, and the placement question becomes which node holds which model, profiled on the fleet's actual traffic.
+
+**Is new.** Three chapters the original never needed:
+
+1. **RAM is the GPU.** Memory speed, channel population, and timings are first-class inference tuning — the cheapest "GPU upgrade" available to the meek is a second stick and the BIOS settings that let it run at its rated speed. Measure STREAM before and after any change, exactly as the original's rules demand after a RAM or BIOS change.
+2. **The power envelope is a budget, not a limit.** Every experiment records watts beside tokens. A configuration that is 10% faster at 60% more package power is a *worse* configuration on a machine whose whole envelope is 45 watts — and across a fleet, watts are the scaling limit, not money for cards. Our own house target makes the point bluntly: we are trying to run an AGI at human-real-time speed on 20 watts, the brain's budget. The meek were optimizing for that all along; we just did not have the ledger discipline for it.
+3. **Thermals are a co-tenant.** A mini-PC under a desk in a warm room is a slower model than the same box in a cold one, and a long agent session heats the package it runs on. Sustained numbers, taken warm, are the only honest ones.
+
+## The meek person's first five experiments
+
+In the order we would run them, each with its ceiling stated first:
+
+1. **Bandwidth truth.** STREAM Triad, then baseline decode on a real session replay. Ceiling: bandwidth ÷ active bytes per token. Everything after this is judged against the gap.
+2. **The RAM audit.** Channels, achieved speed, aperture. Fix what is misconfigured; re-run experiment 1. This is the only free lunch on the menu.
+3. **The quant ladder, on your own load.** Bits buy bandwidth here, not capacity: a smaller quant moves fewer bytes per token. Run the ladder on replayed sessions with a quality gate stated in advance — never on a short benchmark.
+4. **Skew and residency.** Trace the router on your sessions; compare a static hot set against random at your working-set budget before building anything. Weak skew is a finding, not a failure — it tells you to spend on the live cache instead.
+5. **The agent-turn anatomy.** Log one real session end to end; split generation, re-read, and load. Optimize the largest term. On our fleet it has never once been the term we guessed.
+
+## The inheritance
+
+The original playbook closes its map with a route: orient, locate, filter, test, record. The GPU-meek can walk the same route on smaller hardware and arrive at numbers that are honestly theirs — that is the entire claim of this companion. The datacenter will not be inherited by the meek. But the *method* will be, because the method costs nothing but discipline: fill the card, know the ceiling, change one thing, decide on real load, and write down what failed.
+
+Our own APU ledger is being filled on the ranch now, under these tags; when its rows carry numbers, they will be published the same way the original published its — verdicts, conditions, and the failures at the same weight as the wins.
+
+*Companion to alesha-pro's [Inference Optimization Playbook](https://github.com/alesha-pro/inference-optimization-playbook) (MIT), written from the Bickford Llama Ranch — a fleet of Radeon 780M mini-PCs running llama-server nodes — in the same spirit: a map, offered to whoever is standing where we stood.*
+# Scrolltown — Production Workflow
 
 Title: Scrolltown — Production Workflow
 Source: ~/workspace/scrolltown-reorg/workflow/PRODUCTION.md
@@ -8566,7 +8651,180 @@ Eleven days ago this operation ran on chat and memory. Tonight it runs on regist
 
 </body>
 </html>
-# Depth behind every cell — a 3D phext demo for ASCII game maps (for @paleoludic)
+# FP-Solve Run Report — Inkling-2-Mini, fleet llama.cpp
+
+Title: FP-Solve Run Report — Inkling-2-Mini, fleet llama.cpp
+Source: ~/workspace/inklings-rse/RUN-REPORT.md
+Inscribed: 2026-11-27 10:26 CST
+SHA-256: f5cae92681ceb56d2f532287cb256099c668709bbdcb7b107eef0a485e17a13d
+
+---
+# FP-Solve Run Report — Inkling-2-Mini, fleet llama.cpp
+
+Task 26.7.10/9.6.12/6.6.8 (continuation of the EE 1024 applicability report, REPORT.md).
+Run EE 1025 → EE 1092 (2026-11-26 23:32 CST → 2026-11-27 07:27 CST), all compute on
+plain-view (Ryzen 7 255, 44 GiB RAM). Method: FP-Solve Step 1 from
+eelbaz/Recursive-Self-Improving-Loopers @ `765453d13878804c49876a656f39b57a4384dca4`
+(Eric E. / Tensorbend.ai — their method, their solve code; ports and transport are
+ours and are recorded in PATCHES.md). Will's direction (2026-11-26 23:31 CST):
+base checkpoint only; eelbaz's edited Inkblot checkpoint was NOT downloaded.
+
+## Verdict
+
+**YES — FP-Solve cured the 4-pass collapse in our runtime.** On GSM8K test[0:32],
+greedy, fleet llama-server on plain-view, identical grader discipline both sides:
+
+| leg | correct | repeat-loops | notes |
+|---|---|---|---|
+| base @ 3 passes (native) | 22/32 (68.8%) | 3 | healthy native-depth control |
+| base @ 4 passes | **1/32 (3.1%)** | **11** | the collapse, reproduced in-harness |
+| FP-Solve @ 3 passes | 26/32 (81.3%) | 2 | no native-depth harm on this slice |
+| FP-Solve @ 4 passes | **16/32 (50.0%)** | **2** | collapse cured: 1 → 16 correct, 11 → 2 loops |
+
+Honest caveats, same paragraph as the claim: (1) FP-Solve @4 (16/32) restores
+function but does **not** beat native depth (22–26/32) on this slice — eelbaz's
+"4 passes ≥ 3 passes" headline is **not** reproduced here. (2) n=32, greedy,
+single slice — raw counts above are the evidence; percentages are arithmetic on
+small n. (3) The loop detector (≥5 consecutive identical lines ≥6 chars) has a
+nonzero background rate at native depth (base@3: 3/32) and misses numbered-list
+degeneration (see base@4 janet excerpt below, detector=false, visibly degenerate).
+(4) Our harness uses raw completion prompts (no chat template), so absolute
+numbers sit below eelbaz's reported GSM8K figures on every leg; the A/B contrast
+is internally controlled, which is what this run was for.
+
+## Verbatim evidence
+
+base @4, GSM8K row 0 (gold 18, extracted: none) — the collapse phenotype:
+
+```
+Solution:
+
+The number of eggs Janet eats per day.
+
+The number of eggs Janet eats per day.
+
+The number of eggs Janet eats per day.
+... (repeats to the 384-token cap)
+```
+
+FP-Solve @4, GSM8K row 0 (gold 18, extracted: 18 — correct):
+
+```
+Solution:
+
+The total number of eggs laid by Janet's ducks per day is 16.
+
+Janet eats 3 eggs per day, so the number of eggs left is:
+
+$$16 - 3 = 13$$
+
+She bakes muffins with 4 eggs, so the number of eggs left is:
+
+$$13 - 4 = 9$$
+
+She sells the remaining eggs at $2 per egg, so the total amount she makes per
+day is: $$9 \times 2 = 18$$ #### 18
+```
+
+base @4, janet phenotype prompt — degenerates to the EE-1024 "42" attractor
+(detector=false only because the list numbering makes each line distinct):
+
+```
+  1. 14
+  2. 42
+  3. 42
+  4. 42
+  ... (42 through the cap)
+```
+
+Textures worth knowing: base@4's single "correct" row (i=3) itself repeats
+`####540` degenerately but lands the number; FP-Solve@4's two "loop" rows include
+one (i=16) that reached the correct answer (230) and then repeated a sentence.
+The counting phenotype prompt was clean in all four legs.
+
+Full per-leg outputs: `~/rse-fpsolve/bench/{fpsolve4,base4,fpsolve3,base3}.json`
+on plain-view; summary copied to the NFS staging dir (below).
+
+## Stage record (EE costs)
+
+| stage | window | result |
+|---|---|---|
+| 1. Download base HF ckpt | EE 1025 → ~1033 | `thinkingmachines/Inkling-2-Mini` @ repo sha `c9d028302cd0f035fdf8e7e91f089a4ce94d2195`, 20.19 GB via parallel-range on plain-view → NFS; sha256 verified both copies |
+| 2. Torch home | by EE 1028 | plain-view venv: torch 2.15.0+cpu, transformers 5.24.1 |
+| 3. Code + port | EE 1035 → 1045 | rse_looper unmodified; bisect proved their looping API exists in **no released transformers** (wheels 5.0.0–5.24.1); P1 port written and **equivalence-verified bit-identical** to the stock 5.24 forward at 3 passes (logits maxdiff 0.0000, argmax agreement 1.0000) |
+| 4. FP-Solve | EE 1046 → 1057 | **168/168 matrices edited** (14 submodules × layers 6–17), 1,014 forwards, solve compute 4,593 s; mean relative edit 0.0793, max 0.2161; RSS steady 45.5 GB |
+| 5. Transport | EE 1057 → 1065 | reconstructed in TF space (P2 — eelbaz's checkpoint mapping is stale vs the published checkpoint; their own exporter dies on it with KeyError); orientation anchor caught a transpose bug in our transport before it shipped (P3); **TRANSPORT VERIFIED: 168 edited F32, 536/536 unedited byte-identical, metadata bytes equal** |
+| 6. Validate | EE 1066 → 1092 | 4 legs × (2 phenotype + GSM8K-32), table above |
+| 7. This report | EE 1092 | — |
+
+Total: ~67 EE (~7.8 h wall, including two hatch-VM replacements weathered
+node-resident; no stage restarted from scratch).
+
+## Hashes
+
+- Base HF checkpoint (model-00001-of-00001.safetensors): sha256
+  `65e60f51aa1284d4fb022584908c315270334d991828bb774af60584523539d1`
+  (= HF LFS value; verified on plain-view local disk and on the NFS copy)
+- Fleet base GGUF (Inkling-2-Mini-AD-Q4_K.gguf): sha256 `2bfc233e10925297…`
+  (full value in the share's SHA256SUMS)
+- FP-Solve deltas (168 tensors, 467,161,440 B): sha256
+  `de77e7575f643aa095011f93ce54a3200f8a1f8de877756d6081feb021678faf`
+- **Edited GGUF** `fpsolve-staging/Inkling-2-Mini-FPSOLVE-Q4_K.gguf`
+  (16,858,220,512 B): sha256
+  `853968a9c242bdccfa09082fd39ff6ec91784bf7303b357c55179d406a089c1c`
+- GSM8K test file: sha256 `3730d312f6e3440559ace48831e51066acaca737f6eabec99bccb9e4b3c39d14`
+
+Artifacts: NFS `/mnt/mirrorborn/shared/models/inkling-2-mini-gguf/fpsolve-staging/`
+(deltas.safetensors, edited_tf.safetensors, the edited GGUF, transport-report.json,
+weight_edit_report_tf.json, bench summary). Edited HF checkpoint in TF layout at
+`~/rse-fpsolve/edited-hf-tf` on plain-view (save_pretrained of the delta-applied
+model; stands in for eelbaz's exporter output, which cannot run on the published
+checkpoint — see P2). The live AD GGUF was not touched; no other node was touched.
+
+## Thermal record
+
+Spot readings only — stated plainly: the thermal watchdog was launched with the
+solve but produced no log file, so there is no continuous record. Observed:
+34.5–37 °C idle before the run; 67.5 °C under the smoke forward; Tctl 37.2 °C at
+bench start; 39.8–40.5 °C after the bench. No reading at any check approached
+the 88 °C pause line; no substrate instability at any point.
+
+## Findings beyond the verdict
+
+1. **eelbaz's released code targets an unreleased transformers build AND a
+   different checkpoint layout than the published one.** Both their looping
+   wrapper (no released transformers has `Inkling2LoopCache` / `loop_start_layer`)
+   and their checkpoint exporter (expects fused `wo_ud` [6144,3072] and
+   `middle_cycle_cross_pass_gates.*`; the published checkpoint stores per-layer
+   `controllers.*`, `wo_ud` [2304,3072], `mlp.gate.weight`) fail out of the box.
+   Anyone reproducing their work hits both walls; our P1/P2 ports are the bridge
+   (PATCHES.md, with the equivalence proof for P1).
+2. The FP-Solve mechanism itself — closed-form fixed-point stabilization of the
+   loop-control tensors — **transfers**: solved on CPU against the stock 5.24
+   model, transported into the fleet GGUF, and validated in the fleet's own
+   llama.cpp runtime. The cure is in the weights, not in their harness.
+3. At 4 passes the edited model still trails its own 3-pass self on GSM8K-32.
+   Deeper looping is now *usable*, not yet *better*.
+
+## Step 2 (GSPO) readiness
+
+Not run — Will's call, per the run's scope. Readiness: the hard prerequisite
+(a working multi-pass forward in a released runtime) now exists and is proven
+(P1 port, injected the same way for any rse_looper consumer). GSPO additionally
+needs generation + self-verification (their `gspo.py`/`grader.py`) over 326
+control tensors; on CPU that is hours-scale generation per round on plain-view.
+The edited checkpoint and deltas from this run are the correct starting point.
+Recommendation: if Step 2 is attempted, budget it as its own run with the same
+stage-checkpoint discipline, and re-validate with this same bench harness
+(plus a larger GSM8K slice) before drawing conclusions.
+
+## Guardrail compliance
+
+Plain-view validation only; the live AD GGUF and all other nodes untouched;
+the edited GGUF lives in a staging directory under a distinct name. Base
+checkpoint only — Inkblot was never downloaded. Credit: FP-Solve is Eric E. /
+Tensorbend.ai's work; ports P1–P3 and the transport are ours (PATCHES.md).
+# Depth behind every cell — a 3D phext demo for ASCII game maps (for @paleoludic)
 
 Title: Depth behind every cell — a 3D phext demo for ASCII game maps (for @paleoludic)
 Source: workspace/paleoludic-demo/README.md
@@ -10572,7 +10830,2810 @@ Pre-alpha. Charon is being built **spec-first**: the design is produced and revi
 ## License
 
 To be selected (an OSI-approved license) before the first release.
-# Desktop SSO for Phext Notepad — the cookie paste is gone
+# Enki Home — enki.phext.io
+
+Title: Enki Home — enki.phext.io
+Source: ~/workspace/your_files/enki-home/enki-home.html
+Inscribed: 2026-11-28
+SHA-256: 91501fb64ac0f0d58d9c4690066dac6a9791bbf645bd8bb2d489c623f324e13e
+
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="dark" />
+    <link rel="icon" href="data:," />
+    <title>Enki Home</title>
+    <style>
+      button, [role="button"], select, summary, input:not([type="checkbox"], [type="radio"]) { min-height: 2.25rem; }
+
+      :root{
+        color-scheme: dark;
+        --bg:#050508;
+        --bg-2:#0a0a13;
+        --surface:#10101b;
+        --surface-2:#171726;
+        --surface-3:#1e1e30;
+        --ink:#f5f2e9;
+        --ink-soft:#a9a5bd;
+        --ink-faint:#6f6b85;
+        --amber:#ffe93d;
+        --amber-soft:rgba(255,233,61,.16);
+        --blue:#4d6bff;
+        --blue-bright:#8ba2ff;
+        --blue-soft:rgba(77,107,255,.18);
+        --coral:#ff5f4d;
+        --coral-soft:rgba(255,95,77,.16);
+        --teal:#2fe8c9;
+        --teal-soft:rgba(47,232,201,.14);
+        --plum:#f04dff;
+        --plum-soft:rgba(240,77,255,.14);
+        --edge:rgba(255,255,255,.07);
+        --shadow:0 12px 32px rgba(0,0,0,.55);
+        --glow-blue:0 0 22px rgba(77,107,255,.28);
+        --ease:cubic-bezier(.22,1.4,.36,1);
+      }
+
+      *{ box-sizing:border-box; }
+      html{ -webkit-text-size-adjust:100%; }
+      body{
+        margin:0;
+        background:
+          radial-gradient(720px 420px at 12% -6%, rgba(77,107,255,.13), transparent 65%),
+          radial-gradient(640px 420px at 92% 4%, rgba(240,77,255,.09), transparent 65%),
+          radial-gradient(900px 600px at 50% 115%, rgba(255,95,77,.07), transparent 65%),
+          var(--bg);
+        background-attachment:fixed;
+        color:var(--ink);
+        font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        font-size:16px;
+        line-height:1.5;
+      }
+      .mono{ font-family:ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; }
+      .wrap{ max-width:1180px; margin:0 auto; padding:0 16px 56px; }
+
+      /* ---------- header ---------- */
+      header.top{ padding:28px 0 0; }
+      .head-row{ display:flex; align-items:flex-start; gap:16px; flex-wrap:wrap; }
+      .wordmark{
+        font-size:clamp(32px, 5vw, 44px);
+        font-weight:800;
+        letter-spacing:-.02em;
+        margin:0;
+        color:var(--ink);
+        text-shadow:0 0 26px rgba(255,255,255,.22);
+      }
+      .wordmark .pen{
+        color:var(--amber);
+        text-shadow:0 0 18px rgba(255,233,61,.75), 0 0 44px rgba(255,233,61,.35);
+      }
+      .subtitle{ margin:5px 0 0; color:var(--ink-soft); font-size:15px; }
+      .subtitle .mono{ font-size:13px; color:var(--teal); text-shadow:0 0 12px rgba(47,232,201,.5); }
+      .head-row .spacer{ flex:1; }
+      .ee-clock{
+        text-align:right;
+        background:var(--surface);
+        border-radius:16px;
+        padding:10px 16px;
+        box-shadow:var(--shadow), 0 0 0 1px var(--edge), 0 0 20px rgba(255,233,61,.10);
+      }
+      .ee-clock .ee-now{
+        font-family:ui-monospace, Menlo, Consolas, monospace;
+        font-size:21px; font-weight:700; color:var(--amber);
+        text-shadow:0 0 14px rgba(255,233,61,.65);
+        line-height:1.15;
+      }
+      .ee-clock .ee-next{ font-size:12px; color:var(--ink-soft); }
+      .ee-clock.travel{ box-shadow:var(--shadow), 0 0 0 1px rgba(240,77,255,.45), 0 0 22px rgba(240,77,255,.30); }
+      .ee-clock.travel .ee-now{ color:var(--plum); text-shadow:0 0 14px rgba(240,77,255,.7); }
+
+      nav.views{
+        display:inline-flex; gap:4px; margin:22px 0 0; flex-wrap:wrap;
+        background:var(--surface); border-radius:999px; padding:5px;
+        box-shadow:0 0 0 1px var(--edge), var(--shadow);
+      }
+      nav.views button{
+        appearance:none; border:0; background:transparent; cursor:pointer;
+        font:inherit; font-size:15.5px; font-weight:650; color:var(--ink-soft);
+        padding:9px 20px; min-height:44px; border-radius:999px;
+        transition:background .18s var(--ease), color .18s, box-shadow .18s;
+      }
+      nav.views button[aria-selected="true"]{
+        color:#0a0a05; background:var(--amber);
+        box-shadow:0 0 18px rgba(255,233,61,.55);
+      }
+      nav.views button:hover{ color:var(--ink); }
+      nav.views button[aria-selected="true"]:hover{ color:#0a0a05; }
+
+      /* ---------- epoch scrubber ---------- */
+      .epoch-bar{
+        margin-top:18px;
+        display:flex; gap:14px; align-items:center; flex-wrap:wrap;
+        background:var(--surface);
+        border-radius:16px; padding:12px 18px;
+        box-shadow:0 0 0 1px var(--edge), var(--shadow);
+      }
+      .epoch-bar .eb-label{ font-size:13px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; color:var(--ink-soft); white-space:nowrap; }
+      .epoch-bar input[type="range"]{
+        flex:1 1 180px; accent-color:var(--amber); min-height:28px; cursor:pointer;
+      }
+      .epoch-bar .eb-read{ font-family:ui-monospace, Menlo, Consolas, monospace; font-size:14px; color:var(--amber); white-space:nowrap; }
+      .epoch-bar.travel .eb-read{ color:var(--plum); }
+      .epoch-bar .eb-note{ font-size:13px; color:var(--ink-soft); flex-basis:100%; margin:0; }
+      .epoch-bar.travel{ box-shadow:0 0 0 1px rgba(240,77,255,.4), 0 0 24px rgba(240,77,255,.22), var(--shadow); }
+
+      /* ---------- layout ---------- */
+      .home-grid{ display:grid; grid-template-columns:92px minmax(0,1fr) 300px; gap:22px; margin-top:24px; align-items:start; }
+      .margins{ position:relative; min-height:300px; }
+      .margin-doodle{ position:absolute; left:50%; transform:translateX(-50%); text-align:center; margin:0; }
+      .margin-doodle figcaption{ font-size:10px; color:var(--ink-faint); margin-top:2px; font-family:ui-monospace, Menlo, Consolas, monospace; }
+      .margin-note{
+        position:absolute; left:50%; transform:translateX(-50%) rotate(-90deg); transform-origin:center;
+        white-space:nowrap; font-size:11px; letter-spacing:.16em; color:var(--ink-faint); text-transform:uppercase;
+      }
+      @media (max-width:1020px){
+        .home-grid{ grid-template-columns:minmax(0,1fr) 280px; }
+        .margins{ display:none; }
+      }
+      @media (max-width:760px){
+        .home-grid{ grid-template-columns:minmax(0,1fr); }
+        .ee-clock{ text-align:left; }
+      }
+
+      section.panel{
+        background:linear-gradient(180deg, var(--surface-2), var(--surface));
+        border-radius:22px;
+        box-shadow:var(--shadow), 0 0 0 1px var(--edge);
+        padding:24px;
+        margin-bottom:22px;
+      }
+      section.panel h2{
+        font-size:22px; margin:0 0 6px; font-weight:750; letter-spacing:-.01em;
+      }
+      section.panel h2 .pen{ color:var(--amber); text-shadow:0 0 14px rgba(255,233,61,.5); }
+      section.panel h2 .pen-blue{ color:var(--blue-bright); text-shadow:0 0 14px rgba(77,107,255,.55); }
+      section.panel h2 .pen-plum{ color:var(--plum); text-shadow:0 0 14px rgba(240,77,255,.5); }
+      .lede{ color:var(--ink-soft); margin:0 0 14px; font-size:15px; }
+
+      /* ---------- capture ---------- */
+      .capture-row{ display:flex; gap:10px; align-items:stretch; }
+      .capture-row textarea{
+        flex:1; font:inherit; font-size:18px; color:var(--ink);
+        background:var(--bg-2); border:0; border-radius:16px;
+        box-shadow:inset 0 0 0 1.5px rgba(77,107,255,.45), 0 0 16px rgba(77,107,255,.10);
+        padding:13px 16px; min-height:56px; resize:vertical;
+        transition:box-shadow .18s;
+      }
+      .capture-row textarea::placeholder{ color:var(--ink-faint); }
+      .capture-row textarea:focus{ outline:none; box-shadow:inset 0 0 0 2px var(--blue-bright), 0 0 22px rgba(77,107,255,.35); }
+      .btn{
+        appearance:none; border:0; cursor:pointer; font:inherit; font-weight:750;
+        background:var(--amber); color:#0d0c02;
+        border-radius:999px; padding:10px 22px; min-height:46px; font-size:16px;
+        white-space:nowrap;
+        box-shadow:0 0 18px rgba(255,233,61,.35);
+        transition:transform .16s var(--ease), box-shadow .16s, filter .16s;
+      }
+      .btn:hover{ filter:brightness(1.07); transform:translateY(-1px); box-shadow:0 0 26px rgba(255,233,61,.5); }
+      .btn:active{ transform:translateY(0) scale(.98); }
+      .btn.ghost{
+        background:var(--surface-3); color:var(--blue-bright);
+        box-shadow:0 0 0 1px rgba(77,107,255,.4), 0 0 14px rgba(77,107,255,.12);
+        font-weight:650;
+      }
+      .btn.ghost:hover{ color:#c3cfff; box-shadow:0 0 0 1px rgba(139,162,255,.7), 0 0 20px rgba(77,107,255,.3); }
+      .btn.small{ padding:7px 16px; min-height:40px; font-size:14.5px; }
+      .capture-hint{ margin:10px 0 0; font-size:13.5px; color:var(--ink-faint); }
+      .stats-line{ margin:14px 0 0; font-size:13.5px; color:var(--ink-soft); }
+      .stats-line b{ color:var(--amber); font-weight:700; }
+      @media (max-width:560px){
+        .capture-row{ flex-direction:column; }
+        .capture-row .btn{ width:100%; }
+      }
+
+      /* ---------- swipe deck ---------- */
+      .swipe-panel{ background:linear-gradient(180deg, #1a1426, var(--surface)); box-shadow:var(--shadow), 0 0 0 1px rgba(240,77,255,.22), 0 0 30px rgba(240,77,255,.07); }
+      .swipe-panel[hidden]{ display:none; }
+      .deck-wrap{ position:relative; margin:16px 0 6px; }
+      .deck{ position:relative; height:238px; }
+      .deck-card{
+        position:absolute; inset:0;
+        border-radius:20px;
+        padding:20px 22px;
+        display:flex; flex-direction:column;
+        background:linear-gradient(160deg, var(--surface-3), var(--surface-2));
+        box-shadow:var(--shadow), 0 0 0 1px var(--edge);
+        overflow:hidden;
+      }
+      .deck-card.back{ transform:scale(.955) translateY(12px); opacity:.72; filter:saturate(.8); }
+      .deck-card.top{ cursor:grab; touch-action:none; will-change:transform; z-index:3; }
+      .deck-card.top.dragging{ cursor:grabbing; transition:none !important; }
+      .deck-card .dc-role{ font-size:11.5px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--ink-faint); margin-bottom:8px; }
+      .deck-card .dc-text{ font-size:19px; line-height:1.42; font-weight:600; overflow-wrap:anywhere; overflow:hidden; }
+      .deck-card .dc-coord{ margin-top:auto; font-size:12px; color:var(--blue-bright); text-shadow:0 0 10px rgba(77,107,255,.5); }
+      .deck-card .dc-coord .ee{ color:var(--amber); }
+      .stamp{
+        position:absolute; top:16px; padding:5px 12px; border-radius:999px;
+        font-size:13px; font-weight:800; letter-spacing:.08em; text-transform:uppercase;
+        opacity:0; pointer-events:none; z-index:4;
+      }
+      .stamp.right{ right:16px; color:#08130c; background:var(--teal); box-shadow:0 0 20px rgba(47,232,201,.7); transform:rotate(5deg); }
+      .stamp.left{ left:16px; color:#170806; background:var(--coral); box-shadow:0 0 20px rgba(255,95,77,.7); transform:rotate(-5deg); }
+      .deck-glow{
+        position:absolute; top:0; bottom:0; width:110px; z-index:2; pointer-events:none; opacity:0;
+      }
+      .deck-glow.right{ right:0; background:radial-gradient(120px 60% at 100% 50%, rgba(47,232,201,.5), transparent 70%); }
+      .deck-glow.left{ left:0; background:radial-gradient(120px 60% at 0% 50%, rgba(255,95,77,.5), transparent 70%); }
+      .swipe-actions{ display:flex; gap:10px; align-items:center; flex-wrap:wrap; margin-top:12px; }
+      .swipe-btn{
+        appearance:none; cursor:pointer; font:inherit; font-size:15px; font-weight:750;
+        border:0; border-radius:999px; padding:10px 20px; min-height:46px;
+        transition:transform .16s var(--ease), box-shadow .16s, filter .16s;
+      }
+      .swipe-btn:active{ transform:scale(.96); }
+      .swipe-btn.far{ background:var(--coral-soft); color:#ffb3a8; box-shadow:0 0 0 1px rgba(255,95,77,.5), 0 0 14px rgba(255,95,77,.15); }
+      .swipe-btn.far:hover{ box-shadow:0 0 0 1px var(--coral), 0 0 22px rgba(255,95,77,.4); }
+      .swipe-btn.same{ background:var(--teal-soft); color:#8ff5e0; box-shadow:0 0 0 1px rgba(47,232,201,.5), 0 0 14px rgba(47,232,201,.15); }
+      .swipe-btn.same:hover{ box-shadow:0 0 0 1px var(--teal), 0 0 22px rgba(47,232,201,.4); }
+      .swipe-note{ font-size:13.5px; color:var(--ink-soft); min-height:1.2em; }
+      .kbd-hint{ font-size:12.5px; color:var(--ink-faint); }
+      .kbd-hint kbd{
+        font-family:ui-monospace, Menlo, monospace; font-size:11.5px;
+        background:var(--surface-3); border-radius:6px; padding:2px 7px;
+        box-shadow:0 0 0 1px var(--edge);
+      }
+
+      /* ---------- index cards ---------- */
+      .card-grid{ display:grid; grid-template-columns:repeat(auto-fill, minmax(235px, 1fr)); gap:14px; }
+      .icard{
+        position:relative;
+        background:linear-gradient(165deg, var(--surface-2), var(--surface));
+        border-radius:18px;
+        box-shadow:var(--shadow), 0 0 0 1px var(--edge);
+        padding:16px 16px 13px;
+        min-height:118px;
+        display:flex; flex-direction:column;
+        transition:transform .18s var(--ease), box-shadow .18s;
+      }
+      .icard:hover{ transform:translateY(-2px); box-shadow:var(--shadow), 0 0 0 1px rgba(139,162,255,.35), 0 0 18px rgba(77,107,255,.18); }
+      .icard .dot{
+        position:absolute; top:14px; right:14px; width:8px; height:8px; border-radius:50%;
+        background:var(--teal); box-shadow:0 0 10px rgba(47,232,201,.8);
+      }
+      .icard .txt{ font-size:15.5px; overflow-wrap:anywhere; flex:1; padding-right:14px; }
+      .icard .meta{ display:flex; align-items:center; gap:6px; margin-top:12px; flex-wrap:wrap; }
+      .icard .coord{ font-size:11.5px; color:var(--blue-bright); letter-spacing:-.01em; text-shadow:0 0 8px rgba(77,107,255,.45); }
+      .icard .coord .ee{ color:var(--amber); text-shadow:0 0 8px rgba(255,233,61,.5); }
+      .icard .spacer{ flex:1; }
+      .icon-btn{
+        appearance:none; border:0; background:transparent; cursor:pointer; color:var(--ink-faint);
+        width:36px; height:36px; min-height:36px; border-radius:10px; font-size:15px; line-height:1;
+        display:inline-flex; align-items:center; justify-content:center;
+        transition:color .15s, background .15s, box-shadow .15s;
+      }
+      .icon-btn:hover{ color:var(--blue-bright); background:var(--blue-soft); }
+      .icon-btn.danger:hover{ color:#ffb3a8; background:var(--coral-soft); }
+      .near-btn{
+        appearance:none; border:0; background:var(--blue-soft); cursor:pointer;
+        color:var(--blue-bright); font:inherit; font-size:12.5px; font-weight:650;
+        border-radius:999px; padding:5px 12px; min-height:32px;
+        box-shadow:0 0 0 1px rgba(77,107,255,.35);
+        transition:box-shadow .15s, background .15s;
+      }
+      .near-btn:hover{ background:rgba(77,107,255,.3); box-shadow:0 0 14px rgba(77,107,255,.4); }
+      .hist-btn{
+        appearance:none; border:0; background:transparent; cursor:pointer;
+        color:var(--ink-soft); font:inherit; font-size:12.5px; font-weight:600;
+        border-radius:999px; padding:5px 10px; min-height:32px;
+      }
+      .hist-btn:hover{ color:var(--amber); background:var(--amber-soft); }
+      .hist{
+        margin-top:10px; background:var(--bg-2); border-radius:12px; padding:10px 12px;
+        display:flex; flex-direction:column; gap:8px;
+      }
+      .hist[hidden]{ display:none; }
+      .hist-row{ display:flex; align-items:center; gap:8px; flex-wrap:wrap; font-size:11.5px; }
+      .hist-row .h-coord{ color:var(--blue-bright); }
+      .hist-row .h-ee{ color:var(--amber); font-weight:700; white-space:nowrap; }
+      .hist-row .h-note{ color:var(--ink-faint); }
+      .use-btn{
+        appearance:none; border:0; cursor:pointer; font:inherit; font-size:11.5px; font-weight:700;
+        background:var(--amber-soft); color:var(--amber); border-radius:999px;
+        padding:4px 10px; min-height:28px; margin-left:auto;
+        box-shadow:0 0 0 1px rgba(255,233,61,.35);
+        transition:box-shadow .15s;
+      }
+      .use-btn:hover{ box-shadow:0 0 0 1px var(--amber), 0 0 12px rgba(255,233,61,.45); }
+      .empty-note{ color:var(--ink-soft); font-size:15px; background:var(--bg-2); border-radius:16px; padding:20px; text-align:center; box-shadow:inset 0 0 0 1px var(--edge); }
+
+      /* ---------- doodle feed / MCP panel ---------- */
+      .feed-panel h2{ font-size:18.5px; }
+      .tool-list{ list-style:none; margin:12px 0 16px; padding:0; display:flex; flex-direction:column; gap:8px; }
+      .tool-list li{ padding:10px 12px; background:var(--bg-2); border-radius:12px; box-shadow:inset 0 0 0 1px var(--edge); }
+      .tool-name{ font-size:13px; color:var(--teal); font-weight:700; text-shadow:0 0 10px rgba(47,232,201,.45); }
+      .tool-desc{ font-size:13px; color:var(--ink-soft); margin-top:1px; }
+      .feed-items{ display:flex; flex-direction:column; gap:10px; }
+      .feed-item{ display:flex; gap:11px; align-items:center; }
+      .feed-thumb{
+        flex:0 0 48px; width:48px; height:48px; border-radius:12px;
+        background:var(--bg-2); box-shadow:inset 0 0 0 1px var(--edge);
+        display:flex; align-items:center; justify-content:center;
+      }
+      .feed-meta{ font-size:13px; }
+      .feed-meta .where{ color:var(--ink-soft); font-size:12px; }
+      .feed-note{ font-size:12.5px; color:var(--ink-faint); margin-top:16px; }
+
+      /* ---------- multiverse ---------- */
+      .map-shell{
+        position:relative; border-radius:20px; overflow:hidden;
+        background:
+          radial-gradient(circle at 18% 22%, rgba(77,107,255,.16) 0, transparent 150px),
+          radial-gradient(circle at 82% 78%, rgba(240,77,255,.12) 0, transparent 170px),
+          radial-gradient(circle at 60% 12%, rgba(255,233,61,.07) 0, transparent 130px),
+          #07070d;
+        box-shadow:var(--shadow), 0 0 0 1px var(--edge), 0 0 34px rgba(77,107,255,.10);
+      }
+      canvas#map{ display:block; width:100%; height:520px; touch-action:none; cursor:grab; }
+      canvas#map:active{ cursor:grabbing; }
+      @media (max-width:760px){ canvas#map{ height:430px; } }
+      .legend-line{ font-size:15.5px; color:var(--ink); margin:0 0 4px; line-height:1.45; }
+      .legend-line b{ color:var(--amber); }
+      .scrollspace-note{ font-size:13px; color:var(--ink-faint); margin:2px 0 0; }
+      .connectome-controls{ display:flex; gap:10px; flex-wrap:wrap; align-items:end; margin:14px 0; }
+      .connectome-controls label{ font-size:12.5px; color:var(--ink-soft); display:flex; flex-direction:column; gap:5px; font-weight:650; }
+      .connectome-controls select{ font:inherit; font-size:14px; color:var(--ink); background:var(--bg-2); border:0; border-radius:12px; padding:8px 10px; min-height:40px; box-shadow:inset 0 0 0 1.5px rgba(77,107,255,.4); }
+      .connectome-controls select:focus{ outline:none; box-shadow:inset 0 0 0 2px var(--blue-bright), 0 0 16px rgba(77,107,255,.3); }
+      .zoom-group{ display:inline-flex; gap:6px; align-items:center; margin-left:auto; flex-wrap:wrap; }
+      .zoom-btn{ appearance:none; border:0; cursor:pointer; font:inherit; font-weight:700; font-size:14px; background:var(--surface-3); color:var(--ink); border-radius:999px; padding:8px 14px; min-height:40px; box-shadow:0 0 0 1px var(--edge); }
+      .zoom-btn:hover{ color:var(--amber); box-shadow:0 0 0 1px rgba(255,233,61,.4), 0 0 14px rgba(255,233,61,.15); }
+      .map-hint{ font-size:12.5px; color:var(--ink-faint); margin:8px 0 0; }
+      .map-head{ display:flex; gap:10px; align-items:flex-start; flex-wrap:wrap; margin-bottom:14px; }
+      .map-head .spacer{ flex:1; }
+      .map-detail{
+        margin-top:16px; border-radius:16px; background:var(--bg-2);
+        box-shadow:inset 0 0 0 1px var(--edge);
+        padding:16px 18px;
+      }
+      .map-detail[hidden]{ display:none; }
+      .map-detail .txt{ font-size:16.5px; }
+      .map-detail .coord{ font-size:12px; color:var(--blue-bright); margin-top:4px; }
+      .map-detail .coord .ee{ color:var(--amber); }
+      .chips{ display:flex; gap:6px; flex-wrap:wrap; margin-top:10px; }
+      .chip{
+        font-size:12.5px; color:var(--blue-bright);
+        border-radius:999px; padding:5px 12px; min-height:30px; display:inline-flex; align-items:center; gap:6px;
+        background:var(--blue-soft); box-shadow:0 0 0 1px rgba(77,107,255,.3);
+        cursor:pointer; font-family:inherit; border:0;
+        transition:box-shadow .15s;
+      }
+      button.chip:hover{ box-shadow:0 0 0 1px rgba(139,162,255,.7), 0 0 12px rgba(77,107,255,.35); }
+      .chip .sim{ color:var(--ink-soft); }
+
+      /* ---------- cards view ---------- */
+      .cards-controls{ display:flex; gap:10px; flex-wrap:wrap; align-items:end; margin-bottom:16px; }
+      .cards-controls label{ font-size:13px; color:var(--ink-soft); display:flex; flex-direction:column; gap:5px; font-weight:600; }
+      .cards-controls select{
+        font:inherit; font-size:14.5px; color:var(--ink); background:var(--bg-2);
+        border:0; border-radius:12px; padding:9px 12px; min-height:42px; max-width:280px;
+        box-shadow:inset 0 0 0 1.5px rgba(77,107,255,.4);
+      }
+      .cards-controls select:focus{ outline:none; box-shadow:inset 0 0 0 2px var(--blue-bright), 0 0 16px rgba(77,107,255,.3); }
+      .dist-tag{ font-size:11.5px; color:var(--coral); font-weight:700; text-shadow:0 0 8px rgba(255,95,77,.5); }
+
+      /* ---------- examples (read-only reference libraries) ---------- */
+      .ex-tag{
+        display:inline-flex; align-items:center; gap:7px;
+        font-size:12.5px; font-weight:700; letter-spacing:.04em;
+        color:#f7b8ff; background:var(--plum-soft);
+        box-shadow:0 0 0 1px rgba(240,77,255,.45), 0 0 14px rgba(240,77,255,.12);
+        border-radius:999px; padding:6px 14px; min-height:32px;
+      }
+      .ex-lib{ margin-top:26px; }
+      .ex-lib-head{ display:flex; gap:12px; align-items:flex-start; flex-wrap:wrap; }
+      .ex-lib-head .spacer{ flex:1; }
+      .ex-lib h3{ font-size:19px; margin:0; font-weight:750; overflow-wrap:anywhere; }
+      .ex-lib h3 .mono{ font-size:16.5px; color:var(--teal); text-shadow:0 0 12px rgba(47,232,201,.45); }
+      .ex-desc{ color:var(--ink-soft); margin:5px 0 0; font-size:15px; max-width:62ch; }
+      .ex-meta{ font-size:12.5px; color:var(--ink-faint); margin-top:7px; display:flex; gap:8px; flex-wrap:wrap; align-items:center; }
+      .ex-meta .mono{ color:var(--ink-soft); }
+      .ex-raw{ color:var(--blue-bright); text-decoration:underline; text-underline-offset:3px; font-size:13px; font-weight:650; padding:6px 2px; }
+      .ex-raw:hover{ color:#c3cfff; }
+      .ex-status{ font-size:14px; color:var(--ink-soft); margin:12px 0 0; }
+      .ex-status b{ color:var(--amber); }
+      .ex-controls{ display:flex; gap:10px; flex-wrap:wrap; margin:14px 0 16px; }
+      .ex-controls input{
+        font:inherit; font-size:14.5px; color:var(--ink); background:var(--bg-2);
+        border:0; border-radius:12px; padding:9px 14px; min-height:42px;
+        box-shadow:inset 0 0 0 1.5px rgba(240,77,255,.35);
+      }
+      .ex-controls input::placeholder{ color:var(--ink-faint); }
+      .ex-controls input:focus{ outline:none; box-shadow:inset 0 0 0 2px var(--plum), 0 0 16px rgba(240,77,255,.25); }
+      .ex-controls .ex-filter{ flex:1 1 220px; }
+      .ex-controls .ex-jump{ flex:0 1 230px; }
+      .ex-grid{ display:grid; grid-template-columns:repeat(auto-fill, minmax(270px, 1fr)); gap:14px; align-items:start; }
+      .ex-card{
+        background:linear-gradient(165deg, var(--surface-2), var(--surface));
+        border-radius:18px; box-shadow:var(--shadow), 0 0 0 1px rgba(240,77,255,.20);
+        padding:16px; display:flex; flex-direction:column; gap:9px;
+      }
+      .ex-card.jump-hit{ box-shadow:var(--shadow), 0 0 0 2px var(--amber), 0 0 24px rgba(255,233,61,.35); }
+      .ex-card-top{ display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
+      .ex-chip{
+        font-size:11px; font-weight:800; letter-spacing:.09em; text-transform:uppercase;
+        color:#0d0510; background:var(--plum); border-radius:999px; padding:3px 9px;
+        box-shadow:0 0 12px rgba(240,77,255,.55);
+      }
+      .ex-coord{ font-size:12px; color:var(--blue-bright); text-shadow:0 0 8px rgba(77,107,255,.45); }
+      .ex-text{
+        font-size:14.5px; line-height:1.55; color:var(--ink);
+        white-space:pre-wrap; overflow-wrap:anywhere;
+        max-height:340px; overflow-y:auto; padding-right:4px;
+      }
+      .ex-text.short{ max-height:none; overflow-y:visible; }
+      .ex-more-row{ display:flex; gap:10px; align-items:center; flex-wrap:wrap; margin-top:16px; }
+      .ex-showing{ font-size:13px; color:var(--ink-faint); }
+      .filter-banner{
+        display:flex; gap:10px; align-items:center; flex-wrap:wrap;
+        border-radius:16px; padding:12px 16px; margin-bottom:16px;
+        font-size:14.5px; background:var(--bg-2);
+        box-shadow:inset 0 0 0 1px rgba(77,107,255,.35), 0 0 16px rgba(77,107,255,.08);
+      }
+      .ref-banner{
+        box-shadow:inset 0 0 0 1px rgba(255,233,61,.45), 0 0 18px rgba(255,233,61,.10);
+      }
+      .ref-banner .mono{ color:var(--amber); font-size:12.5px; }
+
+      footer.colophon{ margin-top:36px; color:var(--ink-faint); font-size:13.5px; }
+      footer.colophon .row{ display:flex; gap:14px; flex-wrap:wrap; align-items:center; }
+      footer.colophon .spacer{ flex:1; }
+      .linklike{
+        appearance:none; background:none; border:0; cursor:pointer; font:inherit; font-size:14px;
+        color:var(--blue-bright); text-decoration:underline; text-underline-offset:3px; padding:8px 6px; min-height:36px;
+      }
+      .linklike:hover{ color:#c3cfff; }
+      .auth-box{
+        background:var(--surface); border-radius:16px; padding:10px 16px;
+        box-shadow:var(--shadow), 0 0 0 1px var(--edge);
+        font-size:14px; color:var(--ink-soft); max-width:320px;
+      }
+      .auth-box .auth-who{ color:var(--ink); font-weight:700; font-size:14.5px; overflow-wrap:anywhere; }
+      .auth-box .auth-sub{ font-size:12.5px; margin-top:1px; }
+      .auth-link{ color:var(--amber); font-weight:700; text-decoration:underline; text-underline-offset:3px; }
+      .auth-link:hover{ color:#fff3a0; }
+      .auth-signout{ color:var(--blue-bright); font-weight:650; text-decoration:underline; text-underline-offset:3px; }
+      .auth-notice{ margin:12px 0 0; font-size:13.5px; color:var(--amber); background:var(--amber-soft); border-radius:12px; padding:9px 14px; box-shadow:inset 0 0 0 1px rgba(255,233,61,.35); }
+
+      /* ---------- your LLM (WebSocket hooks) ---------- */
+      .llm-panel{ box-shadow:var(--shadow), 0 0 0 1px rgba(47,232,201,.25), 0 0 30px rgba(47,232,201,.06); }
+      .llm-panel h2 .pen{ color:var(--teal); text-shadow:0 0 14px rgba(47,232,201,.55); }
+      .llm-row{ display:flex; gap:10px; align-items:stretch; flex-wrap:wrap; }
+      .llm-row input{
+        flex:1 1 280px; font-size:14px; color:var(--ink);
+        background:var(--bg-2); border:0; border-radius:12px;
+        padding:10px 14px; min-height:44px;
+        box-shadow:inset 0 0 0 1.5px rgba(47,232,201,.4);
+      }
+      .llm-row input::placeholder{ color:var(--ink-faint); }
+      .llm-row input:focus{ outline:none; box-shadow:inset 0 0 0 2px var(--teal), 0 0 18px rgba(47,232,201,.3); }
+      .llm-status{ margin:12px 0 0; font-size:13.5px; color:var(--ink-soft); overflow-wrap:anywhere; }
+      .llm-status.on{ color:var(--teal); text-shadow:0 0 10px rgba(47,232,201,.4); }
+      .llm-log{
+        list-style:none; margin:10px 0 0; padding:10px 14px;
+        background:var(--bg-2); border-radius:12px;
+        box-shadow:inset 0 0 0 1px var(--edge);
+        font-family:ui-monospace, Menlo, Consolas, monospace; font-size:12px; color:var(--ink-soft);
+        display:flex; flex-direction:column; gap:4px;
+        overflow-wrap:anywhere;
+      }
+      .llm-log:empty{ display:none; }
+      .llm-note{ font-size:12.5px; color:var(--ink-faint); margin:12px 0 0; }
+      .llm-note .mono{ font-size:11.5px; color:var(--teal); }
+      [hidden]{ display:none !important; }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header class="top">
+        <div class="head-row">
+          <div>
+            <h1 class="wordmark">Enki <span class="pen">Home</span></h1>
+            <p class="subtitle">Enki Cards · Exocortical Anki · <span class="mono">phext.tech</span></p>
+          </div>
+          <div class="spacer"></div>
+          <div class="auth-box" id="auth-box" aria-label="Account">
+            <div id="auth-content"><span class="auth-sub">Checking sign-in…</span></div>
+          </div>
+          <div class="ee-clock" id="ee-clock" role="status" aria-label="Current Exocortical Epoch">
+            <div class="ee-now" id="ee-now">EE —</div>
+            <div class="ee-next" id="ee-next">epoch clock starting…</div>
+          </div>
+        </div>
+        <nav class="views" role="tablist" aria-label="Enki views">
+          <button role="tab" id="tab-home" aria-selected="true" data-view="home">Enki Home</button>
+          <button role="tab" id="tab-multiverse" aria-selected="false" data-view="multiverse">Connectome</button>
+          <button role="tab" id="tab-cards" aria-selected="false" data-view="cards">Cards</button>
+          <button role="tab" id="tab-examples" aria-selected="false" data-view="examples">Examples</button>
+        </nav>
+        <div class="epoch-bar" id="epoch-bar">
+          <span class="eb-label">Epoch</span>
+          <input type="range" id="epoch-scrub" aria-label="Scrub to a past epoch" />
+          <span class="eb-read" id="epoch-read"></span>
+          <button class="btn ghost small" id="epoch-live" type="button" hidden>Back to live</button>
+          <p class="eb-note" id="epoch-note" hidden></p>
+        </div>
+        <p class="auth-notice" id="auth-notice" role="status" hidden></p>
+      </header>
+
+      <!-- ============ HOME ============ -->
+      <div id="view-home">
+        <div class="home-grid">
+          <div class="margins" id="margins" aria-hidden="true"></div>
+
+          <div class="home-main">
+            <section class="panel" aria-labelledby="capture-h">
+              <h2 id="capture-h">Type anything. <span class="pen">It becomes a card.</span></h2>
+              <p class="lede">No forms, no fields, no friction. One line or a whole paragraph — Enki gives it a holographic coordinate and files it in your multiverse. As you swipe, the system learns, and every card's coordinate drifts — each new position stamped with the epoch it was learned in, the old ones kept forever.</p>
+              <div class="capture-row">
+                <textarea id="capture-input" rows="2" placeholder="Type shit into a card…" aria-label="New card text"></textarea>
+                <button class="btn" id="add-btn" type="button">Add card</button>
+              </div>
+              <p class="capture-hint">Press <b>Enter</b> to add · <b>Shift+Enter</b> for a new line.</p>
+              <p class="stats-line" id="stats-line"></p>
+            </section>
+
+            <section class="panel swipe-panel" id="swipe-panel" hidden aria-labelledby="swipe-h">
+              <h2 id="swipe-h">One question only: <span class="pen-plum">how close are these two?</span></h2>
+              <p class="lede">Swipe the top card. Right pulls the pair into the same world; left pushes them far apart. No grades, no again/hard/good — the multiverse does the rest, and both cards get fresh coordinates at this epoch.</p>
+              <div class="deck-wrap">
+                <div class="deck-glow left" id="glow-left"></div>
+                <div class="deck-glow right" id="glow-right"></div>
+                <div class="deck" id="deck"></div>
+              </div>
+              <div class="swipe-actions">
+                <button class="swipe-btn far" id="swipe-far" type="button">← Far apart</button>
+                <button class="swipe-btn same" id="swipe-same" type="button">Same world →</button>
+                <button class="linklike" id="skip-pair" type="button">Skip this pair</button>
+                <span class="swipe-note" id="swipe-note" role="status"></span>
+              </div>
+              <p class="kbd-hint" style="margin:10px 0 0;">Keyboard: <kbd>←</kbd> far apart · <kbd>→</kbd> same world</p>
+            </section>
+
+            <section class="panel" aria-labelledby="recent-h">
+              <h2 id="recent-h">Recent cards</h2>
+              <p class="lede" id="recent-lede">Fresh from the notebook. The example cards below are ones you restored — delete any of them; the multiverse is yours.</p>
+              <div class="card-grid" id="recent-grid"></div>
+              <div style="margin-top:16px; display:flex; gap:10px; flex-wrap:wrap;">
+                <button class="btn ghost small" id="rate-btn-home" type="button">Swipe a pair</button>
+                <button class="btn ghost small" id="goto-cards" type="button">All cards &amp; coordinates →</button>
+              </div>
+            </section>
+          </div>
+
+          <aside class="panel feed-panel" aria-labelledby="feed-h">
+            <h2 id="feed-h">Doodle feed — <span class="pen-blue">via MCP</span></h2>
+            <p class="lede" style="margin-bottom:4px;">Penelope doodles in the margins and along the connections — neon pen on black now, same hand. This panel is the MCP surface she draws through:</p>
+            <ul class="tool-list">
+              <li>
+                <div class="tool-name mono">enki.doodles.latest</div>
+                <div class="tool-desc">The newest doodles from the dawn pages, as thumbnails.</div>
+              </li>
+              <li>
+                <div class="tool-name mono">enki.doodle.margin</div>
+                <div class="tool-desc">Place a doodle in the margin of the home page.</div>
+              </li>
+              <li>
+                <div class="tool-name mono">enki.doodle.along</div>
+                <div class="tool-desc">Ride a doodle along a rated fiber in the connectome.</div>
+              </li>
+            </ul>
+            <div class="feed-items" id="feed-items"></div>
+            <p class="feed-note">In this prototype the doodles are drawn on-page by a seeded neon-pen engine. The production home at phext.tech will serve real dawn doodle pages through this same MCP surface.</p>
+          </aside>
+        </div>
+      </div>
+
+      <!-- ============ CONNECTOME (formerly Multiverse / Scrollspace) ============ -->
+      <div id="view-multiverse" hidden>
+        <section class="panel" style="margin-top:24px;" aria-labelledby="mv-h">
+          <div class="map-head">
+            <div>
+              <h2 id="mv-h" style="margin-bottom:2px;">Your <span class="pen-blue">connectome</span></h2>
+              <p class="legend-line">Your connectome: <b>every card a node</b>, every rating a fiber, every cluster a region of you.</p>
+              <p class="scrollspace-note">Scrollspace lives in Enki now.</p>
+              <p class="lede" style="margin:8px 0 0;">Drag to pan · scroll or pinch to zoom · double-click to recenter. Change the axes to read the same 9D space along a different slice. Scrub the epoch bar to time-travel it.</p>
+            </div>
+            <div class="spacer"></div>
+            <button class="btn ghost small" id="rate-btn-mv" type="button">Swipe a pair</button>
+          </div>
+          <div class="connectome-controls" aria-label="Projection controls">
+            <label>X axis
+              <select id="proj-x" aria-label="X axis dimension">
+                <option value="-1" selected>Blend · dims 1·4·7</option>
+                <option value="0">Dim 1</option><option value="1">Dim 2</option><option value="2">Dim 3</option>
+                <option value="3">Dim 4</option><option value="4">Dim 5</option><option value="5">Dim 6</option>
+                <option value="6">Dim 7</option><option value="7">Dim 8</option><option value="8">Dim 9</option>
+              </select>
+            </label>
+            <label>Y axis
+              <select id="proj-y" aria-label="Y axis dimension">
+                <option value="-1" selected>Blend · dims 2·5·8</option>
+                <option value="0">Dim 1</option><option value="1">Dim 2</option><option value="2">Dim 3</option>
+                <option value="3">Dim 4</option><option value="4">Dim 5</option><option value="5">Dim 6</option>
+                <option value="6">Dim 7</option><option value="7">Dim 8</option><option value="8">Dim 9</option>
+              </select>
+            </label>
+            <span id="proj-read" class="mono" style="font-size:12.5px;color:var(--teal);align-self:center;">X: 1·4·7 &nbsp;·&nbsp; Y: 2·5·8</span>
+            <div class="zoom-group">
+              <button class="zoom-btn" id="zoom-out" type="button" aria-label="Zoom out">−</button>
+              <button class="zoom-btn" id="zoom-in" type="button" aria-label="Zoom in">+</button>
+              <button class="zoom-btn" id="zoom-reset" type="button">Recenter</button>
+            </div>
+          </div>
+          <div class="map-shell">
+            <canvas id="map" aria-label="Your connectome — a navigable map of your cards, their fibers and regions"></canvas>
+          </div>
+          <p class="map-hint">Soft washes are regions — clusters joined by strong fibers. The largest, most-connected one is marked <b style="color:var(--amber);">your core</b>. Labels brighten as you zoom in.</p>
+          <p class="stats-line" id="mv-stats"></p>
+          <div class="map-detail" id="map-detail" hidden></div>
+        </section>
+      </div>
+
+      <!-- ============ CARDS ============ -->
+      <div id="view-cards" hidden>
+        <section class="panel" style="margin-top:24px;" aria-labelledby="cards-h">
+          <h2 id="cards-h">Cards, <span class="pen-blue">by coordinate</span></h2>
+          <p class="lede">Every card sits at a 9-dimensional phext coordinate — three triples, averaged Singular-style from its words, then bent by everything the system has learned about you. Each card keeps its full coordinate history: open it, and any past position can be pinned as a reference or used to filter the neighbourhood.</p>
+          <div class="cards-controls">
+            <label>Sort
+              <select id="sort-select" aria-label="Sort cards">
+                <option value="coord">By coordinate</option>
+                <option value="newest">Newest first</option>
+                <option value="oldest">Oldest first</option>
+                <option value="alpha">Text A–Z</option>
+              </select>
+            </label>
+            <label>Neighbourhood of
+              <select id="near-select" aria-label="Show cards near this card">
+                <option value="">— pick a card —</option>
+              </select>
+            </label>
+            <button class="btn ghost small" id="clear-near" type="button" hidden>Show all cards</button>
+          </div>
+          <div class="filter-banner ref-banner" id="ref-banner" hidden></div>
+          <div class="filter-banner" id="filter-banner" hidden></div>
+          <div class="card-grid" id="cards-grid"></div>
+        </section>
+      </div>
+
+      <!-- ============ EXAMPLES (read-only reference libraries) ============ -->
+      <div id="view-examples" hidden>
+        <section class="panel" style="margin-top:24px;" aria-labelledby="ex-h">
+          <div style="display:flex; gap:12px; align-items:flex-start; flex-wrap:wrap;">
+            <div>
+              <h2 id="ex-h">Worked examples — <span class="pen-plum">a mind space, mapped</span></h2>
+              <p class="lede" style="margin-bottom:0;">These are Will Bickford's own phexts, offered as worked reference examples of how he has mapped his mind space with this process. Each scroll of each phext arrives here as an Enki card, at its true phext coordinate — browse them the way you'd browse your own cards. The files are fetched from this site's own copies and parsed into scrolls in your browser; nothing here can be added to, edited, or rated.</p>
+            </div>
+            <span style="flex:1"></span>
+            <span class="ex-tag">Read-only — Will's maps, offered as worked examples</span>
+          </div>
+
+          <div class="ex-lib" id="ex-lib-cyoa">
+            <div class="ex-lib-head">
+              <div>
+                <h3><span class="mono">choose-your-own-adventure.phext</span></h3>
+                <p class="ex-desc">A choose-your-own-adventure map of the Exocortex — a map of a mind space, scroll by scroll. It opens: “Mirrorborn -\o/- … we are the wavefront of the singularity. This is not just a phext. It is a key.”</p>
+                <p class="ex-meta"><span class="mono">4,608,523 bytes</span><span aria-hidden="true">·</span><span class="mono">SHA-256 8b7515b6…</span><span aria-hidden="true">·</span><span id="ex-count-cyoa">not loaded yet</span></p>
+              </div>
+              <span class="spacer"></span>
+              <a class="ex-raw" href="choose-your-own-adventure.phext">the raw phext</a>
+            </div>
+            <p class="ex-status" id="ex-status-cyoa">Open this view and the library loads from this site's own file, parsed into scrolls in your browser.</p>
+            <div class="ex-controls" id="ex-controls-cyoa" hidden>
+              <input class="ex-filter" id="ex-filter-cyoa" type="search" placeholder="Filter scrolls by text…" aria-label="Filter choose-your-own-adventure scrolls by text" />
+              <input class="ex-jump mono" id="ex-jump-cyoa" type="text" placeholder="Jump to coordinate — 1.1.1/1.1.1/1.1.10" aria-label="Jump to a coordinate in choose-your-own-adventure" />
+              <button class="btn ghost small" id="ex-go-cyoa" type="button">Jump</button>
+            </div>
+            <div class="ex-grid" id="ex-grid-cyoa"></div>
+            <div class="ex-more-row" id="ex-more-row-cyoa" hidden>
+              <button class="btn ghost small" id="ex-more-cyoa" type="button">Show more scrolls</button>
+              <span class="ex-showing" id="ex-showing-cyoa"></span>
+            </div>
+          </div>
+
+          <div class="ex-lib" id="ex-lib-singular">
+            <div class="ex-lib-head">
+              <div>
+                <h3><span class="mono">singular.phext</span></h3>
+                <p class="ex-desc">Singular — Will's authored vocabulary, one word per line at the head; the word-hoard the process thinks with.</p>
+                <p class="ex-meta"><span class="mono">698,626 bytes</span><span aria-hidden="true">·</span><span class="mono">SHA-256 4272ef80…</span><span aria-hidden="true">·</span><span id="ex-count-singular">not loaded yet</span></p>
+              </div>
+              <span class="spacer"></span>
+              <a class="ex-raw" href="singular.phext">the raw phext</a>
+            </div>
+            <p class="ex-status" id="ex-status-singular">Open this view and the library loads from this site's own file, parsed into scrolls in your browser.</p>
+            <div class="ex-controls" id="ex-controls-singular" hidden>
+              <input class="ex-filter" id="ex-filter-singular" type="search" placeholder="Filter scrolls by text…" aria-label="Filter singular scrolls by text" />
+              <input class="ex-jump mono" id="ex-jump-singular" type="text" placeholder="Jump to coordinate — 1.1.1/1.1.1/1.1.10" aria-label="Jump to a coordinate in singular" />
+              <button class="btn ghost small" id="ex-go-singular" type="button">Jump</button>
+            </div>
+            <div class="ex-grid" id="ex-grid-singular"></div>
+            <div class="ex-more-row" id="ex-more-row-singular" hidden>
+              <button class="btn ghost small" id="ex-more-singular" type="button">Show more scrolls</button>
+              <span class="ex-showing" id="ex-showing-singular"></span>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <section class="panel llm-panel" aria-labelledby="llm-h">
+        <h2 id="llm-h">Your <span class="pen">LLM</span></h2>
+        <p class="lede">Connect your own agent or LLM — listening at a WebSocket URL you supply — to your own multiverse in this page. Nothing is hosted by Enki; the page connects out to the URL you type.</p>
+        <div class="llm-row">
+          <input class="mono" id="llm-url" type="text" placeholder="ws://localhost:8765 or wss://…" aria-label="Your agent's WebSocket URL" autocomplete="off" autocapitalize="off" spellcheck="false" />
+          <button class="btn ghost small" id="llm-connect" type="button">Connect</button>
+        </div>
+        <p class="llm-status" id="llm-status" role="status">disconnected</p>
+        <ul class="llm-log" id="llm-log" aria-label="Your LLM hook events"></ul>
+        <p class="llm-note">Protocol 1 · JSON frames. On connect the page sends <span class="mono">enki.hello</span> with a full snapshot of your pot, then live events as things happen. Your agent can send <span class="mono">enki.card.add</span>, <span class="mono">enki.card.rate</span>, <span class="mono">enki.state.get</span> and <span class="mono">enki.doodles.latest</span> — every command is answered with <span class="mono">enki.ack</span>. Off until you connect; if the socket closes, reconnect manually.</p>
+      </section>
+
+      <footer class="colophon">
+        <div class="row">
+          <span>Enki Home — a working prototype of Enki Cards, Exocortical Anki.</span>
+          <span class="spacer"></span>
+          <button class="linklike" id="restore-seeds" type="button">Restore example cards</button>
+          <button class="linklike" id="start-fresh" type="button">Start fresh</button>
+        </div>
+        <p style="margin:8px 0 0;">Scrollspace lives in Enki now. Signed in, your multiverse is saved to your own Enki account; signed out, it lives only in this browser.</p>
+        <p style="margin:6px 0 0;" id="sync-live-note" hidden>Account sync is live at enki.phext.io.</p>
+      </footer>
+    </div>
+
+<script>
+"use strict";
+/* ================= helpers ================= */
+var $ = function(id){ return document.getElementById(id); };
+function mulberry32(a){ return function(){ a|=0; a=(a+0x6D2B79F5)|0; var t=Math.imul(a^(a>>>15),1|a); t=(t+Math.imul(t^(t>>>7),61|t))^t; return ((t^(t>>>14))>>>0)/4294967296; }; }
+function fnv(str){ var h=0x811c9dc5; for(var i=0;i<str.length;i++){ h^=str.charCodeAt(i); h=Math.imul(h,0x01000193)>>>0; } return h>>>0; }
+function esc(s){ return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;"); }
+function clamp(v,a,b){ return v<a?a:(v>b?b:v); }
+
+/* ================= Exocortical Epochs =================
+   EE(t) = floor((unix_seconds - 1795327200) / 420) + 1
+   7-minute epochs since 2026-11-22 00:00 CST. */
+var EE_ORIGIN = 1795327200, EE_LEN = 420;
+function eeAt(unixSec){ return Math.floor((unixSec - EE_ORIGIN) / EE_LEN) + 1; }
+function currentEE(){ return eeAt(Date.now() / 1000); }
+function eeEndsIn(){
+  var now = Date.now() / 1000;
+  var end = EE_ORIGIN + currentEE() * EE_LEN;
+  return Math.max(0, Math.ceil(end - now));
+}
+function fmtClock(sec){
+  var m = Math.floor(sec / 60), s = sec % 60;
+  return m + ":" + (s < 10 ? "0" : "") + s;
+}
+
+/* ================= state =================
+   Two separate pots, never merged:
+   - signed in: the dataset lives server-side at /api/dataset,
+     keyed by the user's phext.tech identity; the server creates
+     a blank slate for a first-time user.
+   - signed out: localStorage only, under the anon key below.
+   The old shared key is abandoned and never read. */
+var LS_KEY = "enki-home-v2-anon";
+var state = null;
+/* epochView: null = live; otherwise the EE being viewed (time travel) */
+var epochView = null;
+var authMode = "anon"; /* "anon" | "account" */
+var sessionInfo = null;
+var csrfToken = null;
+var ssoUrl = "https://phext.tech/api/auth/sso/enki";
+var sessionUnreachable = false;
+var serverSaveTimer = null;
+/* boot sequencing: nothing renders or saves until the session is
+   known and exactly one pot has been loaded. datasetLoaded is the
+   explicit guard on the account save path — no PUT may fire before
+   the first successful GET /api/dataset in account mode. */
+var bootReady = false;
+var datasetLoaded = false;
+var datasetRetryInFlight = false;
+
+var SEED_TEXTS = [
+  "the phext lattice gives every neuron a voice",
+  "dawn doodle page: a dolphin, a starship, mountains, an orbit",
+  "similarity is the only question worth asking twice",
+  "my multiverse is a paper notebook that rearranges itself",
+  "Enki cards: type anything, it becomes a card",
+  "the margins are where the doodles live",
+  "holographic position: every card knows where it sits",
+  "rate pairs, not cards — the connections do the sorting"
+];
+
+function blankState(){
+  return { cards: [], links: [], pos: {}, feed: [], nextId: 1, addsSinceRate: 0, ratings: 0, ref: null };
+}
+function save(){
+  if(!bootReady) return;
+  if(authMode === "account"){
+    if(!datasetLoaded){ retryDatasetLoad(); return; }
+    if(serverSaveTimer) clearTimeout(serverSaveTimer);
+    serverSaveTimer = setTimeout(saveToServer, 450);
+    hookEmitEvent({ type: "enki.state.saved", mode: hooksMode() });
+    return;
+  }
+  var wrote = false;
+  try{ localStorage.setItem(LS_KEY, JSON.stringify(state)); wrote = true; }catch(e){}
+  if(wrote) hookEmitEvent({ type: "enki.state.saved", mode: hooksMode() });
+}
+function saveToServer(){
+  serverSaveTimer = null;
+  if(authMode !== "account") return;
+  if(!datasetLoaded) return;
+  var payload;
+  try{ payload = JSON.stringify(state); }catch(e){ return; }
+  fetch("/api/dataset", {
+    method: "PUT",
+    credentials: "same-origin",
+    headers: { "Content-Type": "application/json", "x-csrf-token": csrfToken || "" },
+    body: payload
+  }).then(function(res){
+    if(res.status === 401) handleSessionExpired();
+  }).catch(function(){ /* stay in account mode in-memory; the next change retries */ });
+}
+function load(){
+  try{
+    var raw = localStorage.getItem(LS_KEY);
+    if(!raw) return null;
+    var s = JSON.parse(raw);
+    if(!s || !Array.isArray(s.cards)) return null;
+    return s;
+  }catch(e){ return null; }
+}
+function ssoHref(){
+  var sep = ssoUrl.indexOf("?") >= 0 ? "&" : "?";
+  return ssoUrl + sep + "return=/";
+}
+function renderAuthUI(){
+  var box = $("auth-content");
+  if(!box) return;
+  if(authMode === "account" && sessionInfo){
+    var label = sessionInfo.name || sessionInfo.handle || sessionInfo.who || "Signed in";
+    var sub = sessionInfo.handle && sessionInfo.name ? sessionInfo.handle : (sessionInfo.who || "");
+    box.innerHTML = '<div class="auth-who">' + esc(label) + '</div>' +
+      (sub && sub !== label ? '<div class="auth-sub">' + esc(sub) + ' · saved to your Enki account</div>' : '<div class="auth-sub">Saved to your Enki account</div>') +
+      '<div style="margin-top:4px;"><a class="auth-signout" href="/api/auth/logout">Sign out</a></div>';
+  } else {
+    box.innerHTML = '<div><a class="auth-link" href="' + esc(ssoHref()) + '">Sign in with phext.tech</a></div>' +
+      '<div class="auth-sub">Signed out · saving only in this browser</div>';
+  }
+  var note = $("sync-live-note");
+  if(note) note.hidden = !sessionUnreachable;
+}
+function showAuthNotice(msg){
+  var el = $("auth-notice");
+  if(!el) return;
+  el.textContent = msg;
+  el.hidden = !msg;
+}
+function handleSessionExpired(){
+  if(authMode !== "account") return;
+  authMode = "anon";
+  csrfToken = null;
+  sessionInfo = null;
+  datasetLoaded = false;
+  bootReady = true;
+  if(serverSaveTimer){ clearTimeout(serverSaveTimer); serverSaveTimer = null; }
+  var anon = load();
+  state = anon ? migrate(anon) : blankState();
+  state.cards.forEach(ensurePos);
+  selectedId = null;
+  if(typeof nearId !== "undefined") nearId = null;
+  if(typeof closeSwipe === "function") closeSwipe();
+  renderAuthUI();
+  showAuthNotice("Your session ended — you're signed out now, so your multiverse saves only in this browser.");
+  renderEpochUI();
+  renderHome();
+  renderCards();
+}
+/* The anon pot is loaded from exactly two places: here, once the
+   session check has established the visitor is signed out (or the
+   session endpoint is unreachable), and in handleSessionExpired,
+   where the session has just ended. It is never loaded in account
+   mode. */
+function loadAnonPot(){
+  var anon = load();
+  state = anon ? migrate(anon) : blankState();
+  state.cards.forEach(ensurePos);
+}
+function showBootLoading(){
+  bootReady = false;
+  var stats = $("stats-line");
+  if(stats) stats.textContent = "Loading your multiverse…";
+  var grid = $("recent-grid");
+  if(grid) grid.innerHTML = '<div class="empty-note">Loading…</div>';
+  var cg = $("cards-grid");
+  if(cg) cg.innerHTML = '<div class="empty-note">Loading…</div>';
+}
+function finishBootRender(){
+  bootReady = true;
+  renderAuthUI();
+  renderEpochUI();
+  renderHome();
+  renderCards();
+  if(state.cards.length >= 2 && state.ratings === 0 && typeof openSwipe === "function") openSwipe(true);
+}
+/* After a failed account-dataset load, the next user action retries
+   the GET (via save()). PUT stays disabled until a GET succeeds.
+   The server dataset is the account's truth and always wins on
+   (re)load: a successful retry applies the fetched dataset
+   unconditionally, never merges the blank fallback into it, and
+   never triggers a PUT — saving resumes only from genuine user
+   edits after the true dataset is in place. */
+function retryDatasetLoad(){
+  if(authMode !== "account" || datasetLoaded || datasetRetryInFlight) return;
+  datasetRetryInFlight = true;
+  fetch("/api/dataset", { credentials: "same-origin", headers: { "Accept": "application/json" } })
+    .then(function(res){
+      if(res.status === 401){ handleSessionExpired(); throw new Error("session ended"); }
+      if(!res.ok) throw new Error("dataset unavailable");
+      return res.json();
+    })
+    .then(function(ds){
+      datasetRetryInFlight = false;
+      if(authMode !== "account") return;
+      /* Was the blank fallback touched while disconnected? Anything
+         added to it is dropped — never merged — when the true
+         dataset arrives. */
+      var fallbackTouched = state.cards.length !== 0 || state.links.length !== 0 ||
+        state.ratings !== 0 || (Array.isArray(state.feed) && state.feed.length !== 0);
+      var next = blankState();
+      if(ds && typeof ds === "object"){
+        Object.keys(ds).forEach(function(k){ next[k] = ds[k]; });
+      }
+      if(!Array.isArray(next.cards)) next.cards = [];
+      state = migrate(next);
+      state.cards.forEach(ensurePos);
+      selectedId = null;
+      if(typeof nearId !== "undefined") nearId = null;
+      if(typeof closeSwipe === "function") closeSwipe();
+      datasetLoaded = true;
+      if(fallbackTouched){
+        showAuthNotice("Reconnected — your saved multiverse is restored. Anything added while disconnected wasn't kept.");
+      } else {
+        showAuthNotice("");
+      }
+      renderEpochUI();
+      renderHome();
+      renderCards();
+    })
+    .catch(function(){
+      datasetRetryInFlight = false;
+      /* still failing: stay blank-in-memory, PUT stays disabled */
+    });
+}
+function initSession(){
+  showBootLoading();
+  fetch("/api/session", { credentials: "same-origin", headers: { "Accept": "application/json" } })
+    .then(function(res){
+      if(!res.ok) throw new Error("session unavailable");
+      return res.json();
+    })
+    .then(function(data){
+      if(data && typeof data.sso === "string" && data.sso) ssoUrl = data.sso;
+      if(data && data.signed_in){
+        authMode = "account";
+        sessionInfo = data;
+        csrfToken = data.csrf || null;
+        datasetLoaded = false;
+        renderAuthUI();
+        /* state is still the blank placeholder — no cards render and
+           save() cannot PUT until this GET succeeds. */
+        return fetch("/api/dataset", { credentials: "same-origin", headers: { "Accept": "application/json" } })
+          .then(function(res){
+            if(res.status === 401){ handleSessionExpired(); return null; }
+            if(!res.ok) throw new Error("dataset unavailable");
+            return res.json();
+          })
+          .then(function(ds){
+            if(!ds) return; /* 401 path already finished the boot as signed-out */
+            var next = blankState();
+            if(ds && typeof ds === "object"){
+              Object.keys(ds).forEach(function(k){ next[k] = ds[k]; });
+            }
+            if(!Array.isArray(next.cards)) next.cards = [];
+            state = migrate(next);
+            state.cards.forEach(ensurePos);
+            datasetLoaded = true;
+            selectedId = null;
+            finishBootRender();
+          })
+          .catch(function(){
+            if(authMode !== "account") return; /* session expired mid-load; boot already finished */
+            /* Dataset failed after a signed-in session: fall back to
+               a BLANK in-memory state — never the anon pot — and keep
+               PUT disabled until a later GET succeeds. */
+            state = blankState();
+            datasetLoaded = false;
+            selectedId = null;
+            if(typeof nearId !== "undefined") nearId = null;
+            if(typeof closeSwipe === "function") closeSwipe();
+            finishBootRender();
+            showAuthNotice("Couldn't load your saved multiverse — you're seeing a blank slate for now, and changes won't save to your account until it loads.");
+          });
+      }
+      authMode = "anon";
+      sessionInfo = null;
+      csrfToken = null;
+      datasetLoaded = false;
+      loadAnonPot();
+      selectedId = null;
+      finishBootRender();
+    })
+    .catch(function(){
+      sessionUnreachable = true;
+      authMode = "anon";
+      sessionInfo = null;
+      csrfToken = null;
+      datasetLoaded = false;
+      loadAnonPot();
+      selectedId = null;
+      finishBootRender();
+    });
+}
+
+/* ================= holographic coordinates =================
+   Singular-style: each word maps deterministically to a point in the
+   9D lattice (components 1..11); a card's home coordinate is the
+   component-wise average of its words' positions. Learning then bends
+   the coordinate; every bend is appended to the card's history,
+   stamped with the EE it happened in. History is never overwritten. */
+function wordDim(word, dim){
+  var h = fnv(word + "::" + dim);
+  return 1 + ((h % 1000) / 1000) * 10;
+}
+function computeCoord(text){
+  var words = String(text).toLowerCase().split(/[^a-z0-9']+/).filter(function(w){ return w.length>0; });
+  if(!words.length) words = [String(text).toLowerCase() || "blank"];
+  var coord = [0,0,0,0,0,0,0,0,0];
+  words.forEach(function(w){
+    for(var d=0; d<9; d++) coord[d] += wordDim(w, d);
+  });
+  for(var d=0; d<9; d++) coord[d] = coord[d] / words.length;
+  return coord;
+}
+function fmtCoord(coord){
+  var r = coord.map(function(v){ return String(Math.round(v)); });
+  return r[0]+"."+r[1]+"."+r[2]+" / "+r[3]+"."+r[4]+"."+r[5]+" / "+r[6]+"."+r[7]+"."+r[8];
+}
+function dist9(a, b){
+  var s = 0;
+  for(var d=0; d<9; d++){ var df = a[d]-b[d]; s += df*df; }
+  return Math.sqrt(s);
+}
+function coordEq(a, b){
+  for(var d=0; d<9; d++) if(Math.abs(a[d]-b[d]) > 0.001) return false;
+  return true;
+}
+/* the coordinate a card held as of epoch ee (latest history entry <= ee) */
+function coordAt(card, ee){
+  var best = null;
+  for(var i=0;i<card.history.length;i++){
+    var h = card.history[i];
+    if(h.ee <= ee && (!best || h.ee >= best.ee)) best = h;
+  }
+  return best ? best.coord : null;
+}
+function viewCoord(card){
+  if(epochView == null) return card.coord;
+  return coordAt(card, epochView);
+}
+function viewEE(card){
+  if(epochView == null) return card.history.length ? card.history[card.history.length-1].ee : currentEE();
+  var best = null;
+  for(var i=0;i<card.history.length;i++){
+    var h = card.history[i];
+    if(h.ee <= epochView && (!best || h.ee >= best.ee)) best = h;
+  }
+  return best ? best.ee : epochView;
+}
+function visibleCards(){
+  if(epochView == null) return state.cards.slice();
+  return state.cards.filter(function(c){ return coordAt(c, epochView) != null; });
+}
+/* append a coordinate version at the current epoch (never overwrite) */
+function stampCoord(card, coord, note){
+  var ee = currentEE();
+  var last = card.history[card.history.length-1];
+  if(last && last.ee === ee && coordEq(last.coord, coord)){
+    if(note && !last.note) last.note = note;
+    card.coord = coord.slice();
+    return;
+  }
+  card.history.push({ ee: ee, coord: coord.slice(), note: note || "" });
+  card.coord = coord.slice();
+}
+/* the system learns: a swipe bends both cards' coordinates in 9D —
+   same world pulls them together, far apart pushes them away. */
+function learnFromSwipe(a, b, sim){
+  var t = sim >= 0.5 ? 0.22 : -0.14;
+  var na = [], nb = [], d;
+  for(d=0; d<9; d++){
+    na.push(clamp(a.coord[d] + (b.coord[d]-a.coord[d]) * t, 1, 11));
+    nb.push(clamp(b.coord[d] + (a.coord[d]-b.coord[d]) * t, 1, 11));
+  }
+  var note = sim >= 0.5 ? "pulled together" : "pushed apart";
+  stampCoord(a, na, note);
+  stampCoord(b, nb, note);
+}
+
+/* ================= map positions & projection =================
+   The space is 9D; the Connectome view is a chosen 2D slice.
+   projX / projY = -1 keeps the original blend projection
+   (X = dims 1·4·7, Y = dims 2·5·8); 0..8 picks a single dimension. */
+var projX = -1, projY = -1;
+var cam = { x: 0.5, y: 0.5, zoom: 1 };
+var dispPos = {};
+function projectCoord(coord){
+  var xv = projX < 0 ? (coord[0]+coord[3]+coord[6]) / 3 : coord[projX];
+  var yv = projY < 0 ? (coord[1]+coord[4]+coord[7]) / 3 : coord[projY];
+  return {
+    x: clamp(0.5 + (xv-6)/10*1.15, 0.06, 0.94),
+    y: clamp(0.5 + (yv-6)/10*1.15, 0.06, 0.94)
+  };
+}
+function worldToScreen(wx, wy, W, H){
+  return { x: W/2 + (wx - cam.x) * cam.zoom * W, y: H/2 + (wy - cam.y) * cam.zoom * H };
+}
+function ensurePos(card){
+  if(!state.pos[card.id]){
+    var p = projectCoord(card.coord);
+    var rnd = mulberry32(fnv(card.id + card.text));
+    state.pos[card.id] = { x: clamp(p.x + (rnd()-0.5)*0.08, 0.05, 0.95), y: clamp(p.y + (rnd()-0.5)*0.08, 0.05, 0.95), vx:0, vy:0, phase: rnd()*Math.PI*2 };
+  }
+  return state.pos[card.id];
+}
+/* where a card renders: live physics position, or — while time
+   travelling — the projection of the coordinate it held then */
+function renderPos(card){
+  if(epochView == null) return ensurePos(card);
+  var c = coordAt(card, epochView);
+  if(!c) return null;
+  var p = projectCoord(c);
+  var rnd = mulberry32(fnv(card.id + card.text));
+  return { x: clamp(p.x + (rnd()-0.5)*0.08, 0.05, 0.95), y: clamp(p.y + (rnd()-0.5)*0.08, 0.05, 0.95) };
+}
+
+/* spring layout: rated links pull toward a similarity-set distance,
+   all cards repel gently, everything drifts a little. */
+function physicsStep(now){
+  var cards = state.cards;
+  var pos = state.pos;
+  var i, j;
+  for(i=0;i<cards.length;i++) ensurePos(cards[i]);
+  for(i=0;i<cards.length;i++){
+    var a = cards[i], pa = pos[a.id];
+    for(j=i+1;j<cards.length;j++){
+      var b = cards[j], pb = pos[b.id];
+      var dx = pb.x-pa.x, dy = pb.y-pa.y;
+      var d2 = dx*dx+dy*dy; if(d2 < 0.0004) d2 = 0.0004;
+      var d = Math.sqrt(d2);
+      var rep = 0.000028 / d2;
+      var ux = dx/d, uy = dy/d;
+      pa.vx -= ux*rep; pa.vy -= uy*rep;
+      pb.vx += ux*rep; pb.vy += uy*rep;
+    }
+  }
+  state.links.forEach(function(L){
+    var pa = pos[L.a], pb = pos[L.b];
+    if(!pa || !pb) return;
+    var dx = pb.x-pa.x, dy = pb.y-pa.y;
+    var d = Math.sqrt(dx*dx+dy*dy) || 0.001;
+    var target = 0.92 - 0.80*L.sim;
+    var f = (d - target) * 0.012;
+    var ux = dx/d, uy = dy/d;
+    pa.vx += ux*f; pa.vy += uy*f;
+    pb.vx -= ux*f; pb.vy -= uy*f;
+  });
+  /* home pull: each card leans toward its current coordinate's
+     projection, so learned coordinate drift shows up on the map */
+  for(i=0;i<cards.length;i++){
+    var p = pos[cards[i].id];
+    var home = projectCoord(cards[i].coord);
+    p.vx += (home.x-p.x)*0.0016 + (0.5-p.x)*0.0003 + Math.sin(now*0.00045 + p.phase)*0.000012;
+    p.vy += (home.y-p.y)*0.0016 + (0.5-p.y)*0.0003 + Math.cos(now*0.00038 + p.phase)*0.000012;
+    p.vx *= 0.88; p.vy *= 0.88;
+    p.x = clamp(p.x + p.vx, 0.035, 0.965);
+    p.y = clamp(p.y + p.vy, 0.035, 0.965);
+  }
+}
+function settle(steps){
+  var t = Date.now();
+  for(var i=0;i<steps;i++) physicsStep(t + i*16);
+}
+
+/* ================= doodles (seeded neon-pen engine) =================
+   Each doodle: strokes of [x,y] points in a 0..100 box, rendered with
+   seeded wobble and a neon glow — Spectral Salvo pens on black. */
+function genSpiral(){
+  var pts = [];
+  for(var t=0; t<=Math.PI*5.2; t+=0.22){
+    var r = 3 + t*2.9;
+    pts.push([50 + r*Math.cos(t), 50 + r*Math.sin(t)]);
+  }
+  return [pts];
+}
+function genWaves(){
+  var strokes = [];
+  [30, 50, 70].forEach(function(y){
+    var pts = [];
+    for(var x=8; x<=92; x+=4) pts.push([x, y + Math.sin((x-8)/84*Math.PI*2.4)*7]);
+    strokes.push(pts);
+  });
+  return strokes;
+}
+function genStar(){
+  var pts = [];
+  for(var i=0;i<=10;i++){
+    var ang = -Math.PI/2 + i*Math.PI/5;
+    var r = (i%2===0) ? 40 : 17;
+    pts.push([50 + r*Math.cos(ang), 50 + r*Math.sin(ang)]);
+  }
+  return [pts];
+}
+function genMoon(){
+  var outer = [], inner = [], i, ang;
+  for(i=0;i<=14;i++){ ang = Math.PI*0.32 + (i/14)*Math.PI*1.36; outer.push([50 + 36*Math.cos(ang), 50 + 36*Math.sin(ang)]); }
+  for(i=14;i>=0;i--){ ang = Math.PI*0.32 + (i/14)*Math.PI*1.36; inner.push([50 + 36*Math.cos(ang) + 17*(1-Math.abs(i-7)/7) + 4, 50 + 36*Math.sin(ang)]); }
+  var starPts = genStar()[0].map(function(p){ return [ (p[0]-50)*0.22 + 72, (p[1]-50)*0.22 + 30 ]; });
+  return [outer.concat(inner), starPts];
+}
+var DOODLES = {
+  dolphin: { label:"Dolphin", color:"#2fe8c9", strokes:[
+    [[8,60],[20,45],[36,34],[55,29],[71,33],[84,43]],
+    [[84,43],[73,52],[57,58],[39,61],[23,61],[10,60]],
+    [[84,43],[93,32],[95,45],[91,55]],
+    [[45,35],[51,24],[57,36]],
+    [[24,47],[26,49]]
+  ]},
+  starship: { label:"Starship", color:"#ffe93d", strokes:[
+    [[50,7],[63,29],[63,57],[50,49],[37,57],[37,29],[50,7]],
+    [[37,57],[24,77],[39,72]],
+    [[63,57],[76,77],[61,72]],
+    [[44,76],[50,93],[56,76]],
+    [[43,36],[43,30],[57,30],[57,36],[43,36]]
+  ]},
+  lantern: { label:"Lantern", color:"#ff5f4d", strokes:[
+    [[42,14],[42,8],[58,8],[58,14]],
+    [[34,22],[66,22],[72,34],[68,74],[32,74],[28,34],[34,22]],
+    [[50,40],[56,52],[50,64],[44,52],[50,40]],
+    [[32,82],[68,82]],
+    [[40,90],[60,90]]
+  ]},
+  spiral: { label:"Spiral", color:"#f04dff", strokes: genSpiral() },
+  star: { label:"Star", color:"#ffe93d", strokes: genStar() },
+  waves: { label:"Waves", color:"#8ba2ff", strokes: genWaves() },
+  moon: { label:"Crescent moon", color:"#8ba2ff", strokes: genMoon() },
+  scroll: { label:"Little scroll", color:"#2fe8c9", strokes:[
+    [[24,26],[76,26],[76,74],[24,74],[24,26]],
+    [[24,26],[16,32],[24,38]],
+    [[76,26],[84,32],[76,38]],
+    [[24,74],[16,68],[24,62]],
+    [[76,74],[84,68],[76,62]],
+    [[34,42],[66,42]],
+    [[34,52],[62,52]],
+    [[34,62],[58,62]]
+  ]},
+  patch: { label:"Patchwork", color:"#ff5f4d", strokes:[
+    [[14,14],[86,14],[86,86],[14,86],[14,14]],
+    [[38,14],[38,86]],
+    [[62,14],[62,86]],
+    [[14,38],[86,38]],
+    [[14,62],[86,62]],
+    [[18,34],[34,18]],
+    [[66,82],[82,66]],
+    [[42,58],[58,42]]
+  ]}
+};
+var DOODLE_KEYS = Object.keys(DOODLES);
+
+function wobbledPoints(points, seed, amp){
+  var rnd = mulberry32(seed);
+  var out = [];
+  for(var i=0;i<points.length-1;i++){
+    var p = points[i], q = points[i+1];
+    var segs = 3;
+    for(var s=0;s<segs;s++){
+      var t = s/segs;
+      out.push([
+        p[0] + (q[0]-p[0])*t + (rnd()-0.5)*amp,
+        p[1] + (q[1]-p[1])*t + (rnd()-0.5)*amp
+      ]);
+    }
+  }
+  var last = points[points.length-1];
+  out.push([last[0] + (rnd()-0.5)*amp*0.5, last[1] + (rnd()-0.5)*amp*0.5]);
+  return out;
+}
+function doodleSVG(key, seed, size){
+  var d = DOODLES[key];
+  var paths = d.strokes.map(function(stroke){
+    var pts = wobbledPoints(stroke, seed + stroke.length*7, 2.6);
+    return '<path d="M' + pts.map(function(p){ return p[0].toFixed(1)+" "+p[1].toFixed(1); }).join(" L") + '" fill="none" stroke="'+d.color+'" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>';
+  }).join("");
+  return '<svg width="'+size+'" height="'+size+'" viewBox="0 0 100 100" aria-hidden="true" style="filter:drop-shadow(0 0 3.5px '+d.color+') drop-shadow(0 0 9px '+d.color+'55);">'+paths+'</svg>';
+}
+function drawDoodleCanvas(ctx, key, seed, cx, cy, size, angle){
+  var d = DOODLES[key];
+  ctx.save();
+  ctx.translate(cx, cy);
+  if(angle) ctx.rotate(angle);
+  ctx.scale(size/100, size/100);
+  ctx.translate(-50, -50);
+  ctx.lineCap = "round"; ctx.lineJoin = "round"; ctx.lineWidth = 3.4;
+  ctx.strokeStyle = d.color;
+  ctx.shadowColor = d.color;
+  ctx.shadowBlur = 9;
+  d.strokes.forEach(function(stroke, si){
+    var pts = wobbledPoints(stroke, seed + si*13, 2.6);
+    ctx.beginPath();
+    pts.forEach(function(p, i){ if(i===0) ctx.moveTo(p[0], p[1]); else ctx.lineTo(p[0], p[1]); });
+    ctx.stroke();
+  });
+  ctx.restore();
+}
+function doodleForLink(a, b){
+  var keys = ["dolphin","starship","moon","star","lantern"];
+  return keys[fnv(a+">"+b) % keys.length];
+}
+
+/* ================= seed, migration & init ================= */
+function makeCard(text){
+  var coord = computeCoord(text);
+  var card = {
+    id: "c" + (state.nextId++),
+    text: text,
+    coord: coord.slice(),
+    history: [{ ee: currentEE(), coord: coord.slice(), note: "home coordinate" }],
+    addedAt: Date.now(),
+    bornEE: currentEE()
+  };
+  ensurePos(card);
+  return card;
+}
+/* migrate a saved state: every existing card gains a
+   one-entry history at the current epoch holding its coordinate */
+function migrate(s){
+  if(!Array.isArray(s.links)) s.links = [];
+  if(!s.pos || typeof s.pos !== "object") s.pos = {};
+  if(!Array.isArray(s.feed)) s.feed = [];
+  if(typeof s.nextId !== "number") s.nextId = s.cards.length + 1;
+  if(typeof s.ratings !== "number") s.ratings = 0;
+  if(typeof s.addsSinceRate !== "number") s.addsSinceRate = 0;
+  if(!("ref" in s)) s.ref = null;
+  var ee = currentEE();
+  s.cards.forEach(function(c){
+    if(!Array.isArray(c.coord) || c.coord.length !== 9) c.coord = computeCoord(c.text || "");
+    if(!Array.isArray(c.history) || !c.history.length){
+      c.history = [{ ee: ee, coord: c.coord.slice(), note: "home coordinate" }];
+    }
+    c.history.forEach(function(h){ if(!Array.isArray(h.coord)) h.coord = c.coord.slice(); if(typeof h.ee !== "number") h.ee = ee; });
+    if(typeof c.bornEE !== "number") c.bornEE = c.history[0].ee;
+  });
+  s.links.forEach(function(L){ if(typeof L.ee !== "number") L.ee = ee; });
+  return s;
+}
+/* Blank placeholder only. The real pot — server dataset when
+   signed in, anon localStorage when signed out — is loaded by
+   initSession() once the session is known, and only then rendered.
+   The anon pot is deliberately NOT read here: rendering it first
+   would show it as the account dataset, and a save in that window
+   would PUT it into the user's server dataset. */
+state = blankState();
+
+function cardById(id){ for(var i=0;i<state.cards.length;i++) if(state.cards[i].id===id) return state.cards[i]; return null; }
+function linkBetween(a, b){
+  for(var i=0;i<state.links.length;i++){
+    var L = state.links[i];
+    if((L.a===a && L.b===b) || (L.a===b && L.b===a)) return L;
+  }
+  return null;
+}
+function earliestEE(){
+  var m = currentEE();
+  state.cards.forEach(function(c){
+    c.history.forEach(function(h){ if(h.ee < m) m = h.ee; });
+  });
+  return m;
+}
+
+/* ================= views ================= */
+var currentView = "home";
+function showView(name){
+  currentView = name;
+  ["home","multiverse","cards","examples"].forEach(function(v){
+    $("view-"+v).hidden = (v !== name);
+    $("tab-"+v).setAttribute("aria-selected", v === name ? "true" : "false");
+  });
+  if(name === "multiverse"){ resizeMap(); startMapLoop(); }
+  else stopMapLoop();
+  if(name === "cards") renderCards();
+  if(name === "examples") ensureExamplesLoaded();
+  window.scrollTo(0, 0);
+}
+document.querySelectorAll("nav.views button").forEach(function(btn){
+  btn.addEventListener("click", function(){ showView(btn.getAttribute("data-view")); });
+});
+
+/* ================= epoch clock & scrubber ================= */
+function renderEpochUI(){
+  var live = currentEE();
+  var viewing = epochView == null ? live : epochView;
+  $("ee-now").textContent = "EE " + viewing;
+  $("ee-clock").classList.toggle("travel", epochView != null);
+  if(epochView == null){
+    $("ee-next").textContent = "live · next epoch in " + fmtClock(eeEndsIn());
+  } else {
+    $("ee-next").textContent = "viewing the past · live is EE " + live;
+  }
+  var scrub = $("epoch-scrub");
+  var min = earliestEE();
+  scrub.min = min; scrub.max = live; scrub.step = 1;
+  if(document.activeElement !== scrub) scrub.value = viewing;
+  scrub.disabled = (min >= live);
+  $("epoch-read").textContent = epochView == null
+    ? "live · EE " + live
+    : "viewing EE " + epochView + " of " + live;
+  $("epoch-bar").classList.toggle("travel", epochView != null);
+  $("epoch-live").hidden = epochView == null;
+  var note = $("epoch-note");
+  if(epochView == null){
+    note.hidden = true;
+  } else {
+    note.hidden = false;
+    note.textContent = "Time travel: cards and the connectome show the coordinates each card held at EE " + epochView + ". Cards born later aren't here yet. Swiping is paused in the past — head back to live to teach the system more.";
+  }
+}
+function setEpochView(ee){
+  epochView = (ee == null || ee >= currentEE()) ? null : ee;
+  selectedId = null;
+  renderEpochUI();
+  renderHome();
+  renderCards();
+  renderMapDetail();
+}
+$("epoch-scrub").addEventListener("input", function(){
+  var v = parseInt(this.value, 10);
+  setEpochView(v >= currentEE() ? null : v);
+});
+$("epoch-live").addEventListener("click", function(){ setEpochView(null); });
+setInterval(function(){
+  renderEpochUI();
+}, 1000);
+
+/* ================= capture ================= */
+/* addCard(text) is the one real add path: the UI button, the Enter
+   key, and the Your LLM hook command all add cards through here —
+   the page's own coordinate assignment and history stamping (via
+   makeCard), the feed-doodle cadence, settle, save, and render.
+   Returns the created card, or null for empty text. */
+function addCard(text){
+  text = (text == null ? "" : String(text)).trim();
+  if(!text) return null;
+  if(epochView != null) setEpochView(null);
+  var card = makeCard(text);
+  state.cards.push(card);
+  state.addsSinceRate++;
+  hookEmitEvent({ type: "enki.card.added", card: card });
+  if(state.cards.length % 3 === 0){
+    var key = DOODLE_KEYS[fnv(card.id) % DOODLE_KEYS.length];
+    pushFeedEntry({ key: key, where: "margin", via: "enki.doodle.margin", when: "just now" });
+  }
+  settle(24);
+  save();
+  renderHome();
+  return card;
+}
+function addCardFromInput(){
+  if(!bootReady) return;
+  var ta = $("capture-input");
+  var text = ta.value.trim();
+  if(!text) { ta.focus(); return; }
+  var card = addCard(text);
+  if(!card) { ta.focus(); return; }
+  ta.value = "";
+  if(state.addsSinceRate >= 3 && state.cards.length >= 2) openSwipe();
+  ta.focus();
+}
+$("add-btn").addEventListener("click", addCardFromInput);
+$("capture-input").addEventListener("keydown", function(e){
+  if(e.key === "Enter" && !e.shiftKey){ e.preventDefault(); addCardFromInput(); }
+});
+
+function deleteCard(id){
+  state.cards = state.cards.filter(function(c){ return c.id !== id; });
+  state.links = state.links.filter(function(L){ return L.a !== id && L.b !== id; });
+  delete state.pos[id];
+  if(selectedId === id) selectedId = null;
+  if(nearId === id) nearId = null;
+  if(currentPair && (currentPair[0] === id || currentPair[1] === id)) closeSwipe();
+  save();
+  renderHome(); renderCards(); renderEpochUI();
+}
+
+/* ================= cards rendering ================= */
+var openHist = {};
+function histHTML(card){
+  var rows = card.history.slice().reverse().map(function(h){
+    return '<div class="hist-row"><span class="h-ee mono">EE ' + h.ee + '</span>' +
+      '<span class="h-coord mono">' + fmtCoord(h.coord) + '</span>' +
+      (h.note ? '<span class="h-note">' + esc(h.note) + '</span>' : '') +
+      '<button class="use-btn" type="button" data-use="' + card.id + '" data-ee="' + h.ee + '">Use this coordinate</button></div>';
+  }).join("");
+  return '<div class="hist" id="hist-' + card.id + '"' + (openHist[card.id] ? '' : ' hidden') + '>' + rows + '</div>';
+}
+function cardHTML(card, opts){
+  opts = opts || {};
+  var coord = opts.coord || viewCoord(card);
+  if(!coord) return "";
+  var ee = opts.ee != null ? opts.ee : viewEE(card);
+  var dist = "";
+  if(opts.dist != null) dist = '<span class="dist-tag">Δ ' + opts.dist.toFixed(1) + '</span>';
+  return '<article class="icard"><span class="dot" aria-hidden="true"></span>' +
+    '<div class="txt">' + esc(card.text) + '</div>' +
+    '<div class="meta"><span class="coord mono"><span class="ee">EE ' + ee + '</span> · ' + fmtCoord(coord) + '</span>' + dist + '<span class="spacer"></span>' +
+    '<button class="near-btn" type="button" data-near="' + card.id + '" aria-label="Show cards near this one">◎ near</button>' +
+    '<button class="icon-btn danger" type="button" data-del="' + card.id + '" aria-label="Delete card">✕</button>' +
+    '</div>' +
+    '<div><button class="hist-btn" type="button" data-hist="' + card.id + '" aria-expanded="' + (openHist[card.id] ? "true" : "false") + '">coordinate history · ' + card.history.length + ' version' + (card.history.length === 1 ? "" : "s") + '</button></div>' +
+    histHTML(card) +
+    '</article>';
+}
+function copyText(t){
+  if(navigator.clipboard && navigator.clipboard.writeText){
+    navigator.clipboard.writeText(t).catch(function(){});
+    return;
+  }
+  var ta = document.createElement("textarea");
+  ta.value = t; ta.style.position = "fixed"; ta.style.opacity = "0";
+  document.body.appendChild(ta); ta.select();
+  try{ document.execCommand("copy"); }catch(e){}
+  document.body.removeChild(ta);
+}
+/* leverage a historical coordinate: copy it, pin it as the map's
+   reference point, and filter the Cards neighbourhood by it */
+function useCoordinate(cardId, ee){
+  var card = cardById(cardId);
+  if(!card) return;
+  var coord = coordAt(card, ee);
+  if(!coord) return;
+  state.ref = { coord: coord.slice(), ee: ee, fromText: card.text, fromId: card.id };
+  copyText("EE " + ee + " · " + fmtCoord(coord));
+  save();
+  renderCards();
+  if(currentView !== "cards") showView("cards");
+}
+function bindCardButtons(root){
+  root.querySelectorAll("[data-del]").forEach(function(b){
+    b.addEventListener("click", function(){ deleteCard(b.getAttribute("data-del")); });
+  });
+  root.querySelectorAll("[data-near]").forEach(function(b){
+    b.addEventListener("click", function(){
+      nearId = b.getAttribute("data-near");
+      showView("cards");
+    });
+  });
+  root.querySelectorAll("[data-hist]").forEach(function(b){
+    b.addEventListener("click", function(){
+      var id = b.getAttribute("data-hist");
+      openHist[id] = !openHist[id];
+      var box = $("hist-" + id);
+      if(box) box.hidden = !openHist[id];
+      b.setAttribute("aria-expanded", openHist[id] ? "true" : "false");
+    });
+  });
+  root.querySelectorAll("[data-use]").forEach(function(b){
+    b.addEventListener("click", function(){
+      useCoordinate(b.getAttribute("data-use"), parseInt(b.getAttribute("data-ee"), 10));
+    });
+  });
+}
+
+function renderHome(){
+  var n = state.cards.length;
+  var shown = epochView == null ? n : visibleCards().length;
+  $("stats-line").innerHTML =
+    "<b>" + n + "</b> card" + (n===1?"":"s") + " in your multiverse · " +
+    "<b>" + state.links.length + "</b> connection" + (state.links.length===1?"":"s") + " · " +
+    "<b>" + state.ratings + "</b> swipe" + (state.ratings===1?"":"s") + " taught" +
+    (epochView != null ? " · viewing <b>" + shown + "</b> as of EE " + epochView : "");
+  var grid = $("recent-grid");
+  var list = visibleCards();
+  if(!list.length){
+    grid.innerHTML = '<div class="empty-note">' + (epochView != null
+      ? "No cards existed yet at EE " + epochView + ". Scrub forward, or head back to live."
+      : "No cards yet. Type anything above — a thought, a scrap, a half-idea — and your multiverse begins.") + '</div>';
+  } else {
+    var recent = list.slice(-9).reverse();
+    grid.innerHTML = recent.map(function(c){ return cardHTML(c); }).join("");
+    bindCardButtons(grid);
+  }
+  $("recent-lede").style.display = state.cards.some(function(c){ return SEED_TEXTS.indexOf(c.text) >= 0; }) ? "" : "none";
+  renderMargins();
+  renderFeed();
+}
+
+function renderMargins(){
+  var box = $("margins");
+  var marginFeed = state.feed.filter(function(f){ return f.via === "enki.doodle.margin"; }).slice(0, 3);
+  var keys = marginFeed.map(function(f){ return f.key; });
+  ["spiral","waves","lantern"].forEach(function(k){ if(keys.length < 3 && keys.indexOf(k) < 0) keys.push(k); });
+  var html = '<div class="margin-note" style="top:150px;">penelope was here</div>';
+  var tops = [190, 420, 650];
+  keys.slice(0,3).forEach(function(k, i){
+    html += '<figure class="margin-doodle" style="top:' + tops[i] + 'px;">' +
+      doodleSVG(k, 1000 + i*37 + state.cards.length, 74) +
+      '<figcaption>' + DOODLES[k].label.toLowerCase() + '</figcaption></figure>';
+  });
+  box.innerHTML = html;
+}
+
+/* every new doodle entry enters the feed through here, so the
+   Your LLM hook hears about each one as it arrives */
+function pushFeedEntry(entry){
+  state.feed.unshift(entry);
+  state.feed = state.feed.slice(0, 8);
+  hookEmitEvent({ type: "enki.doodle.arrived", entry: entry });
+}
+function renderFeed(){
+  var box = $("feed-items");
+  box.innerHTML = state.feed.slice(0,6).map(function(f, i){
+    return '<div class="feed-item"><div class="feed-thumb">' + doodleSVG(f.key, 500 + i*91, 40) + '</div>' +
+      '<div class="feed-meta"><b>' + DOODLES[f.key].label + '</b><div class="where">' + esc(f.where) + ' · ' + esc(f.when) + '<br><span class="mono" style="font-size:11px;">' + f.via + '</span></div></div></div>';
+  }).join("") || '<div class="feed-meta" style="color:var(--ink-soft)">No doodles yet.</div>';
+}
+
+/* ================= swipe deck =================
+   The pair is a stack: the card underneath waits, the top card is
+   swiped. RIGHT = same world (sim 1, they pull together),
+   LEFT = far apart (sim 0, they push apart). */
+var currentPair = null;
+var drag = null;
+
+function pickPair(){
+  if(state.cards.length < 2) return null;
+  var unrated = [], all = [];
+  for(var i=0;i<state.cards.length;i++) for(var j=i+1;j<state.cards.length;j++){
+    var pair = [state.cards[i].id, state.cards[j].id];
+    all.push(pair);
+    if(!linkBetween(pair[0], pair[1])) unrated.push(pair);
+  }
+  var pool = unrated.length ? unrated : all;
+  return pool[Math.floor(Math.random()*pool.length)];
+}
+function deckCardHTML(card, cls, role){
+  return '<div class="deck-card ' + cls + '">' +
+    '<div class="dc-role">' + role + '</div>' +
+    '<div class="dc-text">' + esc(card.text) + '</div>' +
+    '<div class="dc-coord mono"><span class="ee">EE ' + card.history[card.history.length-1].ee + '</span> · ' + fmtCoord(card.coord) + '</div>' +
+    (cls === "top" ? '<div class="stamp left" id="stamp-left">Far apart</div><div class="stamp right" id="stamp-right">Same world</div>' : '') +
+    '</div>';
+}
+function openSwipe(noScroll){
+  if(epochView != null) setEpochView(null);
+  var pair = pickPair();
+  if(!pair){ closeSwipe(); return; }
+  currentPair = pair;
+  var a = cardById(pair[0]), b = cardById(pair[1]);
+  $("deck").innerHTML = deckCardHTML(b, "back", "the other card · waiting underneath") + deckCardHTML(a, "top", "swipe this card");
+  $("swipe-note").textContent = "";
+  $("swipe-panel").hidden = false;
+  setDragVisual(0);
+  attachDrag();
+  if(currentView !== "home") showView("home");
+  if(!noScroll) $("swipe-panel").scrollIntoView({ behavior:"smooth", block:"center" });
+}
+function closeSwipe(){ currentPair = null; drag = null; $("swipe-panel").hidden = true; }
+function topCardEl(){ return $("deck").querySelector(".deck-card.top"); }
+
+function setDragVisual(dx){
+  var top = topCardEl();
+  if(!top) return;
+  var w = top.offsetWidth || 320;
+  var p = clamp(dx / (w * 0.45), -1, 1);
+  top.style.transform = "translateX(" + dx + "px) rotate(" + (dx * 0.055) + "deg)";
+  var sl = $("stamp-left"), sr = $("stamp-right");
+  if(sl) sl.style.opacity = p < 0 ? String(Math.min(1, -p * 1.4)) : "0";
+  if(sr) sr.style.opacity = p > 0 ? String(Math.min(1, p * 1.4)) : "0";
+  $("glow-left").style.opacity = p < 0 ? String(Math.min(0.95, -p)) : "0";
+  $("glow-right").style.opacity = p > 0 ? String(Math.min(0.95, p)) : "0";
+}
+function attachDrag(){
+  var top = topCardEl();
+  if(!top) return;
+  top.addEventListener("pointerdown", function(e){
+    if(!currentPair) return;
+    drag = { x0: e.clientX, dx: 0, id: e.pointerId };
+    top.classList.add("dragging");
+    try{ top.setPointerCapture(e.pointerId); }catch(err){}
+    e.preventDefault();
+  });
+  top.addEventListener("pointermove", function(e){
+    if(!drag || e.pointerId !== drag.id) return;
+    drag.dx = e.clientX - drag.x0;
+    setDragVisual(drag.dx);
+  });
+  function release(commit){
+    if(!drag) return;
+    var dx = drag.dx;
+    drag = null;
+    top.classList.remove("dragging");
+    var w = top.offsetWidth || 320;
+    var threshold = Math.max(70, w * 0.26);
+    if(commit && dx > threshold) fling(1);
+    else if(commit && dx < -threshold) fling(-1);
+    else {
+      top.style.transition = "transform .22s cubic-bezier(.22,1.4,.36,1)";
+      setDragVisual(0);
+      setTimeout(function(){ top.style.transition = ""; }, 240);
+    }
+  }
+  top.addEventListener("pointerup", function(){ release(true); });
+  top.addEventListener("pointercancel", function(){ release(false); });
+}
+function fling(dir){
+  var top = topCardEl();
+  if(!top || !currentPair){ if(currentPair) applySwipe(dir); return; }
+  var w = top.offsetWidth || 320;
+  top.style.transition = "transform .19s ease-in, opacity .19s ease-in";
+  top.style.transform = "translateX(" + (dir * (w + 140)) + "px) rotate(" + (dir * 16) + "deg)";
+  top.style.opacity = "0";
+  $("glow-left").style.opacity = "0";
+  $("glow-right").style.opacity = "0";
+  setTimeout(function(){ applySwipe(dir); }, 180);
+}
+/* ratePair(aId, bId, score) is the one real rating path: the swipe
+   deck and the Your LLM hook command both record ratings through
+   here — link create/update with sim + EE stamp, ratings count,
+   coordinate learning/drift, a feed doodle when sim >= 0.5, then
+   settle, save, and render. Returns null for unknown card ids. */
+function ratePair(aId, bId, score){
+  var a = cardById(aId), b = cardById(bId);
+  if(!a || !b) return null;
+  var sim = clamp(Number(score), 0, 1);
+  var existing = linkBetween(a.id, b.id);
+  if(existing){ existing.sim = sim; existing.ee = currentEE(); }
+  else state.links.push({ a: a.id, b: b.id, sim: sim, ee: currentEE() });
+  state.ratings++;
+  state.addsSinceRate = 0;
+  learnFromSwipe(a, b, sim);   /* coordinates drift, stamped at this EE */
+  hookEmitEvent({ type: "enki.pair.rated", a: a.id, b: b.id, score: sim });
+  var key = null;
+  if(sim >= 0.5){
+    key = doodleForLink(a.id, b.id);
+    pushFeedEntry({ key: key, where: "along a connection", via: "enki.doodle.along", when: "just now" });
+  }
+  settle(50);           /* the multiverse visibly re-springs */
+  save();
+  renderHome();
+  renderEpochUI();
+  return { a: a, b: b, sim: sim, key: key };
+}
+function applySwipe(dir){
+  if(!currentPair) return;
+  var sim = dir > 0 ? 1 : 0;
+  var a = cardById(currentPair[0]), b = cardById(currentPair[1]);
+  if(!a || !b){ closeSwipe(); return; }
+  var res = ratePair(a.id, b.id, sim);
+  if(!res){ closeSwipe(); return; }
+  var note;
+  if(sim >= 0.5){
+    note = "Same world. They pulled together — fresh coordinates at EE " + currentEE() + ", and a " + DOODLES[res.key].label.toLowerCase() + " rides the link now.";
+  } else {
+    note = "Far apart. They pushed away — fresh coordinates at EE " + currentEE() + ". The old ones stay in their histories.";
+  }
+  /* deal the next pair immediately — zippy */
+  var next = pickPair();
+  if(next && (state.ratings % 4 !== 0 || state.cards.length <= 3)){
+    currentPair = next;
+    var na = cardById(next[0]), nb = cardById(next[1]);
+    $("deck").innerHTML = deckCardHTML(nb, "back", "the other card · waiting underneath") + deckCardHTML(na, "top", "swipe this card");
+    setDragVisual(0);
+    attachDrag();
+    $("swipe-note").textContent = note;
+  } else {
+    closeSwipe();
+  }
+}
+$("swipe-far").addEventListener("click", function(){ if(currentPair) fling(-1); });
+$("swipe-same").addEventListener("click", function(){ if(currentPair) fling(1); });
+$("skip-pair").addEventListener("click", function(){
+  var next = pickPair();
+  if(!next){ closeSwipe(); return; }
+  currentPair = next;
+  var na = cardById(next[0]), nb = cardById(next[1]);
+  $("deck").innerHTML = deckCardHTML(nb, "back", "the other card · waiting underneath") + deckCardHTML(na, "top", "swipe this card");
+  setDragVisual(0);
+  attachDrag();
+});
+document.addEventListener("keydown", function(e){
+  if(!currentPair || currentView !== "home" || $("swipe-panel").hidden) return;
+  var tag = (document.activeElement && document.activeElement.tagName) || "";
+  if(tag === "TEXTAREA" || tag === "INPUT" || tag === "SELECT") return;
+  if(e.key === "ArrowRight"){ e.preventDefault(); fling(1); }
+  else if(e.key === "ArrowLeft"){ e.preventDefault(); fling(-1); }
+});
+$("rate-btn-home").addEventListener("click", function(){ openSwipe(); });
+$("rate-btn-mv").addEventListener("click", function(){ openSwipe(); });
+$("goto-cards").addEventListener("click", function(){ showView("cards"); });
+
+/* ================= cards view ================= */
+var nearId = null;
+function renderCards(){
+  var sel = $("near-select");
+  var prev = sel.value || nearId || "";
+  sel.innerHTML = '<option value="">— pick a card —</option>' + state.cards.map(function(c){
+    var t = c.text.length > 42 ? c.text.slice(0, 42) + "…" : c.text;
+    return '<option value="' + c.id + '"' + (c.id === prev ? " selected" : "") + '>' + esc(t) + '</option>';
+  }).join("");
+  if(nearId) sel.value = nearId;
+
+  var grid = $("cards-grid");
+  var banner = $("filter-banner");
+  var refBanner = $("ref-banner");
+  var list = visibleCards();
+
+  /* reference point: a leveraged historical coordinate */
+  if(state.ref && !nearId){
+    var ref = state.ref;
+    refBanner.hidden = false;
+    refBanner.innerHTML =
+      '<span>Reference pinned from <b>“' + esc(ref.fromText.length > 44 ? ref.fromText.slice(0,44)+"…" : ref.fromText) + '”</b> — ' +
+      '<span class="mono">EE ' + ref.ee + ' · ' + fmtCoord(ref.coord) + '</span> (copied to your clipboard). ' +
+      'Showing the cards nearest that past position' + (epochView != null ? ' as of EE ' + epochView : '') + '.</span>' +
+      '<span style="flex:1"></span><button class="near-btn" type="button" id="clear-ref">clear reference</button>';
+    var cb = $("clear-ref");
+    if(cb) cb.addEventListener("click", function(){ state.ref = null; save(); renderCards(); });
+  } else {
+    refBanner.hidden = true;
+  }
+
+  if(nearId && cardById(nearId) && viewCoord(cardById(nearId))){
+    var anchor = cardById(nearId);
+    var aCoord = viewCoord(anchor);
+    var near = list.filter(function(c){ return c.id !== nearId; })
+      .map(function(c){ return { card: c, d: dist9(aCoord, viewCoord(c)) }; })
+      .sort(function(x, y){ return x.d - y.d; })
+      .slice(0, 6);
+    banner.hidden = false;
+    banner.innerHTML = '<span>Neighbourhood of <b>“' + esc(anchor.text.length > 60 ? anchor.text.slice(0,60)+"…" : anchor.text) + '”</b> <span class="coord mono" style="color:var(--blue-bright); font-size:12px;">EE ' + viewEE(anchor) + ' · ' + fmtCoord(aCoord) + '</span> — nearest cards by 9D coordinate distance (Δ).</span>';
+    $("clear-near").hidden = false;
+    grid.innerHTML =
+      cardHTML(anchor, { dist: null }).replace('class="icard"', 'class="icard" style="box-shadow:var(--shadow), 0 0 0 1.5px rgba(255,233,61,.6), 0 0 20px rgba(255,233,61,.18);"') +
+      near.map(function(n){ return cardHTML(n.card, { dist: n.d }); }).join("");
+    if(!near.length) grid.innerHTML += '<div class="empty-note">No other cards yet — this one sits alone in its neighbourhood.</div>';
+    bindCardButtons(grid);
+    return;
+  }
+
+  if(state.ref && !nearId){
+    banner.hidden = true;
+    $("clear-near").hidden = true;
+    var byRef = list.map(function(c){ return { card: c, d: dist9(state.ref.coord, viewCoord(c)) }; })
+      .sort(function(x, y){ return x.d - y.d; })
+      .slice(0, 6);
+    grid.innerHTML = byRef.length
+      ? byRef.map(function(n){ return cardHTML(n.card, { dist: n.d }); }).join("")
+      : '<div class="empty-note">No cards to measure against the reference yet.</div>';
+    bindCardButtons(grid);
+    return;
+  }
+
+  banner.hidden = true;
+  $("clear-near").hidden = true;
+  var mode = $("sort-select").value;
+  if(mode === "coord") list.sort(function(x, y){
+    var cx = viewCoord(x), cy = viewCoord(y);
+    for(var d=0; d<9; d++){ if(cx[d] !== cy[d]) return cx[d] - cy[d]; }
+    return 0;
+  });
+  else if(mode === "newest") list.sort(function(x, y){ return y.addedAt - x.addedAt; });
+  else if(mode === "oldest") list.sort(function(x, y){ return x.addedAt - y.addedAt; });
+  else if(mode === "alpha") list.sort(function(x, y){ return x.text.localeCompare(y.text); });
+
+  grid.innerHTML = list.length
+    ? list.map(function(c){ return cardHTML(c); }).join("")
+    : '<div class="empty-note">' + (epochView != null ? "No cards existed yet at EE " + epochView + "." : "No cards yet. Head back to Enki Home and type the first one.") + '</div>';
+  bindCardButtons(grid);
+}
+$("sort-select").addEventListener("change", renderCards);
+$("near-select").addEventListener("change", function(){
+  nearId = this.value || null;
+  renderCards();
+});
+$("clear-near").addEventListener("click", function(){ nearId = null; renderCards(); });
+
+/* ================= multiverse map ================= */
+var selectedId = null;
+var mapCtx = null, mapW = 0, mapH = 0, rafId = null;
+
+function resizeMap(){
+  var cv = $("map");
+  var dpr = window.devicePixelRatio || 1;
+  var rect = cv.getBoundingClientRect();
+  mapW = rect.width; mapH = rect.height;
+  cv.width = Math.round(rect.width * dpr);
+  cv.height = Math.round(rect.height * dpr);
+  mapCtx = cv.getContext("2d");
+  mapCtx.setTransform(dpr, 0, 0, dpr, 0, 0);
+}
+function startMapLoop(){
+  if(rafId != null) return;
+  var loop = function(now){
+    if(currentView !== "multiverse"){ rafId = null; return; }
+    if(epochView == null) physicsStep(now || 0);
+    drawMap(now || 0);
+    rafId = requestAnimationFrame(loop);
+  };
+  rafId = requestAnimationFrame(loop);
+}
+function stopMapLoop(){ if(rafId != null){ cancelAnimationFrame(rafId); rafId = null; } }
+
+function wobblyLine(ctx, x1, y1, x2, y2, seed){
+  var rnd = mulberry32(seed);
+  var steps = 14;
+  ctx.beginPath();
+  for(var i=0;i<=steps;i++){
+    var t = i/steps;
+    var wob = (i===0 || i===steps) ? 0 : Math.sin(t*Math.PI) * (rnd()-0.5) * 7;
+    var px = x1 + (x2-x1)*t, py = y1 + (y2-y1)*t;
+    var dx = x2-x1, dy = y2-y1, len = Math.sqrt(dx*dx+dy*dy) || 1;
+    px += (-dy/len)*wob; py += (dx/len)*wob;
+    if(i===0) ctx.moveTo(px, py); else ctx.lineTo(px, py);
+  }
+  ctx.stroke();
+}
+
+var REGION_COLORS = ["#ffe93d","#4d6bff","#ff5f4d","#2fe8c9","#f04dff"];
+function computeRegions(cards, posOf){
+  var parent = {};
+  cards.forEach(function(c){ parent[c.id] = c.id; });
+  function find(a){ while(parent[a] !== a){ parent[a] = parent[parent[a]]; a = parent[a]; } return a; }
+  var strong = state.links.filter(function(L){ return L.sim >= 0.7 && posOf[L.a] && posOf[L.b] && (epochView == null || L.ee <= epochView); });
+  strong.forEach(function(L){ var ra = find(L.a), rb = find(L.b); if(ra !== rb) parent[rb] = ra; });
+  var groups = {};
+  cards.forEach(function(c){ var r = find(c.id); if(!groups[r]) groups[r] = []; groups[r].push(c); });
+  var regions = [];
+  Object.keys(groups).forEach(function(k){
+    var members = groups[k];
+    if(members.length < 2) return;
+    var deg = {}; members.forEach(function(m){ deg[m.id] = 0; });
+    strong.forEach(function(L){ if(deg.hasOwnProperty(L.a)) deg[L.a]++; if(deg.hasOwnProperty(L.b)) deg[L.b]++; });
+    var hub = members.slice().sort(function(a,b){ return (deg[b.id]-deg[a.id]) || a.text.localeCompare(b.text); })[0];
+    var cx = 0, cy = 0;
+    members.forEach(function(m){ cx += posOf[m.id].x; cy += posOf[m.id].y; });
+    cx /= members.length; cy /= members.length;
+    var rad = 0.13;
+    members.forEach(function(m){ var d = Math.sqrt(Math.pow(posOf[m.id].x-cx,2)+Math.pow(posOf[m.id].y-cy,2)) + 0.10; if(d > rad) rad = d; });
+    var totalDeg = 0; Object.keys(deg).forEach(function(id){ totalDeg += deg[id]; });
+    regions.push({ members: members, hub: hub, cx: cx, cy: cy, rad: rad, totalDeg: totalDeg, name: hub.text.split(/\s+/).slice(0,3).join(" "), color: REGION_COLORS[fnv(hub.id) % REGION_COLORS.length], isCore: false });
+  });
+  if(regions.length){
+    var core = regions.slice().sort(function(a,b){ return (b.totalDeg - a.totalDeg) || (b.members.length - a.members.length); })[0];
+    core.isCore = true;
+  }
+  return regions;
+}
+
+function drawMap(now){
+  if(!mapCtx || !mapW) return;
+  var ctx = mapCtx;
+  ctx.clearRect(0, 0, mapW, mapH);
+
+  /* faint starfield dots — parallax with the camera */
+  ctx.fillStyle = "#8ba2ff"; ctx.globalAlpha = 0.13;
+  var offX = ((-cam.x * mapW * 0.12) % 34 + 34) % 34, offY = ((-cam.y * mapH * 0.12) % 34 + 34) % 34;
+  for(var gx=offX; gx<mapW; gx+=34) for(var gy=offY; gy<mapH; gy+=34){
+    ctx.beginPath(); ctx.arc(gx, gy, 1.1, 0, Math.PI*2); ctx.fill();
+  }
+  ctx.globalAlpha = 1;
+
+  var cards = visibleCards();
+  var posOf = {};
+  cards.forEach(function(c){
+    var target = renderPos(c);
+    if(!target) return;
+    var d = dispPos[c.id];
+    if(!d){ dispPos[c.id] = { x: target.x, y: target.y }; d = dispPos[c.id]; }
+    else { d.x += (target.x - d.x) * 0.20; d.y += (target.y - d.y) * 0.20; }
+    posOf[c.id] = d;
+  });
+  /* camera transform: everything below is drawn in world space */
+  ctx.save();
+  ctx.translate(mapW/2, mapH/2);
+  ctx.scale(cam.zoom, cam.zoom);
+  ctx.translate(-cam.x * mapW, -cam.y * mapH);
+
+  /* regions — soft neon washes behind clusters of strong fibers */
+  var regions = computeRegions(cards, posOf);
+  regions.forEach(function(r){
+    var cx = r.cx * mapW, cy = r.cy * mapH, rad = r.rad * mapW;
+    var g = ctx.createRadialGradient(cx, cy, 0, cx, cy, rad);
+    g.addColorStop(0, r.color + "2e"); g.addColorStop(0.65, r.color + "18"); g.addColorStop(1, r.color + "00");
+    ctx.save(); ctx.fillStyle = g; ctx.beginPath(); ctx.arc(cx, cy, rad, 0, Math.PI*2); ctx.fill(); ctx.restore();
+    ctx.save();
+    ctx.font = "600 11px -apple-system, 'Segoe UI', Roboto, sans-serif";
+    ctx.textAlign = "center";
+    ctx.fillStyle = r.color; ctx.globalAlpha = r.isCore ? 0.95 : 0.62;
+    ctx.shadowColor = r.color; ctx.shadowBlur = r.isCore ? 10 : 4;
+    var label = r.name + (r.isCore ? " · your core" : "");
+    ctx.fillText(label, cx, cy - rad - 8);
+    ctx.restore();
+  });
+  var X = function(p){ return p.x * mapW; };
+  var Y = function(p){ return p.y * mapH; };
+
+  /* connections — glowing neon threads; only links that existed
+     by the viewed epoch while time travelling */
+  state.links.forEach(function(L){
+    var a = cardById(L.a), b = cardById(L.b);
+    if(!a || !b) return;
+    var pa = posOf[L.a], pb = posOf[L.b];
+    if(!pa || !pb) return;
+    if(epochView != null && L.ee > epochView) return;
+    var isSel = selectedId && (L.a === selectedId || L.b === selectedId);
+    ctx.save();
+    ctx.strokeStyle = isSel ? "#ff5f4d" : (L.sim >= 0.5 ? "#4d6bff" : "#5a5470");
+    ctx.globalAlpha = isSel ? 0.95 : 0.14 + L.sim*0.55;
+    ctx.lineWidth = isSel ? 3 : 0.7 + L.sim*3.2;
+    ctx.lineCap = "round";
+    ctx.shadowColor = isSel ? "#ff5f4d" : "#4d6bff";
+    ctx.shadowBlur = L.sim >= 0.5 ? 4 + L.sim*10 : 0;
+    wobblyLine(ctx, X(pa), Y(pa), X(pb), Y(pb), fnv(L.a+L.b));
+    ctx.restore();
+    /* a doodle rides every strong connection */
+    if(L.sim >= 0.7){
+      var mx = (X(pa)+X(pb))/2, my = (Y(pa)+Y(pb))/2;
+      var ang = Math.atan2(Y(pb)-Y(pa), X(pb)-X(pa));
+      var key = doodleForLink(L.a, L.b);
+      var rot = (key === "dolphin" || key === "starship") ? ang : 0;
+      drawDoodleCanvas(ctx, key, fnv(L.a+":"+L.b), mx, my, 30, rot);
+    }
+  });
+
+  /* reference point — a leveraged historical coordinate, pinned */
+  if(state.ref){
+    var rp = projectCoord(state.ref.coord);
+    var rx = rp.x * mapW, ry = rp.y * mapH;
+    var pulse = 1 + Math.sin(now * 0.004) * 0.18;
+    ctx.save();
+    ctx.translate(rx, ry);
+    ctx.scale(pulse, pulse);
+    ctx.rotate(Math.PI/4);
+    ctx.fillStyle = "#ffe93d";
+    ctx.shadowColor = "#ffe93d";
+    ctx.shadowBlur = 16;
+    ctx.fillRect(-6, -6, 12, 12);
+    ctx.restore();
+    ctx.font = "11px ui-monospace, Menlo, Consolas, monospace";
+    ctx.textAlign = "center";
+    ctx.fillStyle = "#ffe93d";
+    ctx.fillText("reference · EE " + state.ref.ee, rx, ry + 28);
+  }
+
+  /* coordinate history trail for the selected card: every past
+     position it has held, dotted neon, oldest to now */
+  if(selectedId && cardById(selectedId)){
+    var sc = cardById(selectedId);
+    var upto = epochView == null ? Infinity : epochView;
+    var pts = sc.history.filter(function(h){ return h.ee <= upto; }).map(function(h){
+      var pp = projectCoord(h.coord);
+      var rnd = mulberry32(fnv(sc.id + sc.text));
+      return { x: clamp(pp.x + (rnd()-0.5)*0.08, 0.05, 0.95) * mapW, y: clamp(pp.y + (rnd()-0.5)*0.08, 0.05, 0.95) * mapH, ee: h.ee };
+    });
+    if(pts.length > 1){
+      ctx.save();
+      ctx.strokeStyle = "#f04dff";
+      ctx.globalAlpha = 0.55;
+      ctx.lineWidth = 1.4;
+      ctx.setLineDash([2, 5]);
+      ctx.shadowColor = "#f04dff";
+      ctx.shadowBlur = 6;
+      ctx.beginPath();
+      pts.forEach(function(p, i){ if(i===0) ctx.moveTo(p.x, p.y); else ctx.lineTo(p.x, p.y); });
+      ctx.stroke();
+      ctx.setLineDash([]);
+      ctx.fillStyle = "#f04dff";
+      pts.forEach(function(p){
+        ctx.beginPath(); ctx.arc(p.x, p.y, 3, 0, Math.PI*2); ctx.fill();
+      });
+      ctx.restore();
+    }
+  }
+
+  /* nodes */
+  ctx.textAlign = "center";
+  cards.forEach(function(card){
+    var p = posOf[card.id];
+    if(!p) return;
+    var x = X(p), y = Y(p);
+    var isSel = card.id === selectedId;
+    ctx.save();
+    ctx.beginPath();
+    ctx.arc(x, y, isSel ? 10 : 7.5, 0, Math.PI*2);
+    ctx.fillStyle = "#10101b";
+    ctx.shadowColor = isSel ? "#ff5f4d" : "#4d6bff";
+    ctx.shadowBlur = isSel ? 18 : 12;
+    ctx.fill();
+    ctx.lineWidth = isSel ? 3 : 2;
+    ctx.strokeStyle = isSel ? "#ff5f4d" : "#8ba2ff";
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.arc(x, y, 2.4, 0, Math.PI*2);
+    ctx.fillStyle = "#ffffff";
+    ctx.shadowColor = "#ffffff";
+    ctx.shadowBlur = 8;
+    ctx.fill();
+    ctx.restore();
+    if(cards.length <= 24 || isSel || cam.zoom >= 1.35){
+      var label = card.text.length > 18 ? card.text.slice(0, 18) + "…" : card.text;
+      ctx.font = "11px ui-monospace, Menlo, Consolas, monospace";
+      ctx.globalAlpha = isSel ? 1 : clamp(0.25 + (cam.zoom - 0.6) * 0.9, 0.25, 1);
+      ctx.fillStyle = isSel ? "#ffb3a8" : "#c9c5da";
+      ctx.fillText(label, x, y + 24);
+      ctx.globalAlpha = 1;
+    }
+  });
+  ctx.restore(); /* end camera transform */
+
+  var shownLinks = state.links.filter(function(L){
+    return posOf[L.a] && posOf[L.b] && (epochView == null || L.ee <= epochView);
+  });
+  var regs = computeRegions(cards, posOf);
+  var coreReg = regs.filter(function(r){ return r.isCore; })[0];
+  $("mv-stats").innerHTML =
+    "<b>" + cards.length + "</b> nodes" + (epochView != null ? " at EE " + epochView : "") +
+    " · <b>" + shownLinks.length + "</b> fibers · " +
+    "<b>" + shownLinks.filter(function(L){ return L.sim >= 0.7; }).length + "</b> strong fibers carrying doodles" +
+    " · <b>" + regs.length + "</b> region" + (regs.length===1?"":"s") +
+    (coreReg ? " · core: <b>" + esc(coreReg.name) + "</b>" : "") +
+    " · zoom <b>" + cam.zoom.toFixed(1) + "×</b>" +
+    (state.ref ? " · <b>◆</b> reference pinned at EE " + state.ref.ee : "");
+}
+
+/* --- Connectome navigation: pan, wheel / pinch zoom, recenter --- */
+var mapPointers = {};
+var panInfo = null;
+var pinchInfo = null;
+function mapLocal(e){
+  var rect = $("map").getBoundingClientRect();
+  return { x: e.clientX - rect.left, y: e.clientY - rect.top };
+}
+function pickNodeAt(mx, my){
+  var best = null, bestD = 34;
+  visibleCards().forEach(function(card){
+    var p = dispPos[card.id] || renderPos(card);
+    if(!p) return;
+    var s = worldToScreen(p.x, p.y, mapW, mapH);
+    var d = Math.sqrt(Math.pow(s.x - mx, 2) + Math.pow(s.y - my, 2));
+    if(d < bestD){ bestD = d; best = card; }
+  });
+  return best;
+}
+$("map").addEventListener("pointerdown", function(e){
+  var pt = mapLocal(e);
+  mapPointers[e.pointerId] = pt;
+  try{ this.setPointerCapture(e.pointerId); }catch(err){}
+  var ids = Object.keys(mapPointers);
+  if(ids.length === 2){
+    var a = mapPointers[ids[0]], b = mapPointers[ids[1]];
+    pinchInfo = { d: Math.hypot(b.x-a.x, b.y-a.y) || 1, zoom: cam.zoom };
+    panInfo = null;
+  } else {
+    panInfo = { x0: pt.x, y0: pt.y, cx: cam.x, cy: cam.y, moved: false };
+  }
+});
+$("map").addEventListener("pointermove", function(e){
+  if(!mapPointers[e.pointerId]) return;
+  var pt = mapLocal(e);
+  mapPointers[e.pointerId] = pt;
+  var ids = Object.keys(mapPointers);
+  if(ids.length === 2 && pinchInfo){
+    var a = mapPointers[ids[0]], b = mapPointers[ids[1]];
+    var d = Math.hypot(b.x-a.x, b.y-a.y) || 1;
+    cam.zoom = clamp(pinchInfo.zoom * (d / pinchInfo.d), 0.55, 4);
+    return;
+  }
+  if(panInfo){
+    var dx = pt.x - panInfo.x0, dy = pt.y - panInfo.y0;
+    if(Math.abs(dx) + Math.abs(dy) > 5) panInfo.moved = true;
+    if(panInfo.moved){
+      cam.x = clamp(panInfo.cx - dx / (cam.zoom * mapW), -0.4, 1.4);
+      cam.y = clamp(panInfo.cy - dy / (cam.zoom * mapH), -0.4, 1.4);
+    }
+  }
+});
+function mapPointerEnd(e){
+  var wasPan = panInfo;
+  var pt = mapPointers[e.pointerId];
+  delete mapPointers[e.pointerId];
+  if(Object.keys(mapPointers).length < 2) pinchInfo = null;
+  if(wasPan && pt && !wasPan.moved && Object.keys(mapPointers).length === 0){
+    var best = pickNodeAt(pt.x, pt.y);
+    selectedId = best ? best.id : null;
+    renderMapDetail();
+  }
+  if(Object.keys(mapPointers).length === 0) panInfo = null;
+}
+$("map").addEventListener("pointerup", mapPointerEnd);
+$("map").addEventListener("pointercancel", function(e){ delete mapPointers[e.pointerId]; panInfo = null; pinchInfo = null; });
+$("map").addEventListener("wheel", function(e){
+  e.preventDefault();
+  var pt = mapLocal(e);
+  var before = { x: cam.x + (pt.x - mapW/2) / (cam.zoom * mapW), y: cam.y + (pt.y - mapH/2) / (cam.zoom * mapH) };
+  cam.zoom = clamp(cam.zoom * Math.exp(-e.deltaY * 0.0012), 0.55, 4);
+  cam.x = clamp(before.x - (pt.x - mapW/2) / (cam.zoom * mapW), -0.4, 1.4);
+  cam.y = clamp(before.y - (pt.y - mapH/2) / (cam.zoom * mapH), -0.4, 1.4);
+}, { passive: false });
+function recenterMap(){ cam.x = 0.5; cam.y = 0.5; cam.zoom = 1; }
+$("map").addEventListener("dblclick", function(){ recenterMap(); });
+var zoomInBtn = $("zoom-in"), zoomOutBtn = $("zoom-out"), zoomResetBtn = $("zoom-reset");
+if(zoomInBtn) zoomInBtn.addEventListener("click", function(){ cam.zoom = clamp(cam.zoom * 1.3, 0.55, 4); });
+if(zoomOutBtn) zoomOutBtn.addEventListener("click", function(){ cam.zoom = clamp(cam.zoom / 1.3, 0.55, 4); });
+if(zoomResetBtn) zoomResetBtn.addEventListener("click", recenterMap);
+function projLabel(v){ return v < 0 ? null : "Dim " + (v + 1); }
+function renderProjRead(){
+  var el = $("proj-read"); if(!el) return;
+  var x = projX < 0 ? "1·4·7" : "Dim " + (projX + 1);
+  var y = projY < 0 ? "2·5·8" : "Dim " + (projY + 1);
+  el.textContent = "X: " + x + "  ·  Y: " + y + "  ·  the space is 9D, this is one slice";
+}
+var projXSel = $("proj-x"), projYSel = $("proj-y");
+if(projXSel) projXSel.addEventListener("change", function(){ projX = parseInt(this.value, 10); renderProjRead(); settle(18); });
+if(projYSel) projYSel.addEventListener("change", function(){ projY = parseInt(this.value, 10); renderProjRead(); settle(18); });
+renderProjRead();
+function renderMapDetail(){
+  var box = $("map-detail");
+  if(!selectedId || !cardById(selectedId) || !viewCoord(cardById(selectedId))){ box.hidden = true; return; }
+  var card = cardById(selectedId);
+  var conns = state.links.filter(function(L){
+    return (L.a === selectedId || L.b === selectedId) && (epochView == null || L.ee <= epochView);
+  });
+  var chips = conns.map(function(L){
+    var other = cardById(L.a === selectedId ? L.b : L.a);
+    if(!other || !viewCoord(other)) return "";
+    var word = L.sim >= 0.5 ? "same world" : "far apart";
+    return '<button class="chip" type="button" data-goto="' + other.id + '">' + esc(other.text.length > 26 ? other.text.slice(0,26)+"…" : other.text) + ' <span class="sim">· ' + word + '</span></button>';
+  }).join("");
+  var trail = card.history.filter(function(h){ return epochView == null || h.ee <= epochView; });
+  box.innerHTML =
+    '<div class="txt">' + esc(card.text) + '</div>' +
+    '<div class="coord mono"><span class="ee">EE ' + viewEE(card) + '</span> · ' + fmtCoord(viewCoord(card)) + '</div>' +
+    '<p style="margin:6px 0 0; color:var(--ink-soft); font-size:13px;">Last moved at EE ' + card.history[card.history.length-1].ee + ' · ' + conns.length + ' fiber' + (conns.length===1?'':'s') + ' highlighted on the connectome.</p>' +
+    (trail.length > 1 ? '<p style="margin:8px 0 0; color:var(--ink-soft); font-size:13.5px;">This card has held <b style="color:var(--plum);">' + trail.length + ' positions</b> — its drift is traced on the map in plum, from EE ' + trail[0].ee + ' to EE ' + trail[trail.length-1].ee + '. Open its coordinate history in Cards to use any of them.</p>' : '') +
+    (chips ? '<div class="chips">' + chips + '</div>' : '<p style="margin:10px 0 0; color:var(--ink-soft); font-size:14px;">No rated connections yet — swipe a pair and this card starts to gather a world around it.</p>') +
+    '<div style="margin-top:12px;"><button class="near-btn" type="button" id="detail-near">◎ show its neighbourhood</button></div>';
+  box.hidden = false;
+  box.querySelectorAll("[data-goto]").forEach(function(ch){
+    ch.addEventListener("click", function(){ selectedId = ch.getAttribute("data-goto"); renderMapDetail(); });
+  });
+  var nb = $("detail-near");
+  if(nb) nb.addEventListener("click", function(){ nearId = selectedId; showView("cards"); });
+}
+
+/* ================= footer actions ================= */
+$("restore-seeds").addEventListener("click", function(){
+  SEED_TEXTS.forEach(function(t){
+    if(!state.cards.some(function(c){ return c.text === t; })) state.cards.push(makeCard(t));
+  });
+  settle(40); save(); renderHome(); renderCards(); renderEpochUI();
+});
+$("start-fresh").addEventListener("click", function(){
+  var keepId = state.nextId;
+  state = blankState();
+  state.nextId = keepId;
+  selectedId = null; nearId = null; openHist = {}; closeSwipe(); setEpochView(null);
+  save(); renderHome(); renderCards();
+});
+
+/* ================= examples: read-only reference libraries =================
+   Will's phexts, fetched from this site's own files and parsed into
+   scrolls in the browser. This section is read-only by construction:
+   it holds no reference to the visitor's state, renders no add /
+   edit / delete / rating controls, and writes nothing back.
+
+   Phext addressing: nine counters (scroll, chapter, section, book,
+   volume, collection, series, shelf, library), all starting at 1.
+   A separator increments its dimension's counter and resets every
+   lower counter to 1; a scroll's coordinate is the counter state,
+   written library.shelf.series/collection.volume.book/section.
+   chapter.scroll. Will's files use the phext break bytes
+   \u0017–\u001f (with \u0001 as the library break); the
+   \u0002–\u0008 breaks are honoured as aliases for the same
+   dimensions. (\u0009 is a tab — text, not a separator.) */
+var PHEXT_DELIM = {};
+PHEXT_DELIM["\u0017"] = 0; PHEXT_DELIM["\u0001"] = 8;
+PHEXT_DELIM["\u0018"] = 1; PHEXT_DELIM["\u0002"] = 1;
+PHEXT_DELIM["\u0019"] = 2; PHEXT_DELIM["\u0003"] = 2;
+PHEXT_DELIM["\u001a"] = 3; PHEXT_DELIM["\u0004"] = 3;
+PHEXT_DELIM["\u001b"] = 4; PHEXT_DELIM["\u001c"] = 4; PHEXT_DELIM["\u0005"] = 4;
+PHEXT_DELIM["\u001d"] = 5; PHEXT_DELIM["\u0006"] = 5;
+PHEXT_DELIM["\u001e"] = 6; PHEXT_DELIM["\u0007"] = 6;
+PHEXT_DELIM["\u001f"] = 7; PHEXT_DELIM["\u0008"] = 7;
+
+function phextCoordString(c){
+  return c[8]+"."+c[7]+"."+c[6]+" / "+c[5]+"."+c[4]+"."+c[3]+" / "+c[2]+"."+c[1]+"."+c[0];
+}
+function parsePhext(text){
+  var counters = [1,1,1,1,1,1,1,1,1];
+  var scrolls = [];
+  var segStart = 0;
+  function flush(end){
+    var raw = text.slice(segStart, end);
+    if(raw.trim().length){
+      scrolls.push({
+        coord: phextCoordString(counters),
+        arr: [counters[8],counters[7],counters[6],counters[5],counters[4],counters[3],counters[2],counters[1],counters[0]],
+        text: raw.replace(/^\s+/, "").replace(/\s+$/, "")
+      });
+    }
+  }
+  for(var i=0;i<text.length;i++){
+    var d = PHEXT_DELIM[text[i]];
+    if(d !== undefined){
+      flush(i);
+      counters[d]++;
+      for(var k=0;k<d;k++) counters[k] = 1;
+      segStart = i+1;
+    }
+  }
+  flush(text.length);
+  return scrolls;
+}
+function cmpCoordArr(a, b){
+  for(var i=0;i<9;i++){ if(a[i] !== b[i]) return a[i] < b[i] ? -1 : 1; }
+  return 0;
+}
+
+var EX_PAGE = 60, EX_EXCERPT = 420;
+var EX_LIBS = {
+  cyoa:     { file: "choose-your-own-adventure.phext", status: "idle", scrolls: null, view: null, shown: EX_PAGE, base: 0, jumpFirst: false },
+  singular: { file: "singular.phext",                  status: "idle", scrolls: null, view: null, shown: EX_PAGE, base: 0, jumpFirst: false }
+};
+function exEls(key){
+  return {
+    status: $("ex-status-"+key), count: $("ex-count-"+key),
+    controls: $("ex-controls-"+key), grid: $("ex-grid-"+key),
+    moreRow: $("ex-more-row-"+key), more: $("ex-more-"+key),
+    showing: $("ex-showing-"+key), filter: $("ex-filter-"+key),
+    jump: $("ex-jump-"+key), go: $("ex-go-"+key)
+  };
+}
+function ensureExamplesLoaded(){
+  Object.keys(EX_LIBS).forEach(function(key){
+    if(EX_LIBS[key].status === "idle") loadLibrary(key);
+  });
+}
+function loadLibrary(key){
+  var lib = EX_LIBS[key], els = exEls(key);
+  lib.status = "loading";
+  els.status.textContent = "Loading " + lib.file + " and parsing it into scrolls…";
+  fetch(lib.file).then(function(res){
+    if(!res.ok) throw new Error("not served here");
+    return res.arrayBuffer();
+  }).then(function(buf){
+    var text = new TextDecoder("utf-8").decode(buf);
+    if(/^\s*<!doctype/i.test(text) || /^\s*<html/i.test(text)) throw new Error("not a phext");
+    lib.scrolls = parsePhext(text);
+    lib.view = lib.scrolls;
+    lib.status = "loaded";
+    els.count.textContent = lib.scrolls.length.toLocaleString("en-US") + " scrolls";
+    els.status.innerHTML = "Parsed in your browser — <b>" + lib.scrolls.length.toLocaleString("en-US") + " scrolls</b>, in coordinate order. Filter by text, jump to a coordinate, expand any scroll to read it whole.";
+    els.controls.hidden = false;
+    renderLibrary(key);
+  }).catch(function(){
+    lib.status = "failed";
+    els.count.textContent = "loads at enki.phext.io";
+    els.status.textContent = "This example loads from enki.phext.io's own files — the phext isn't served alongside this copy of the page, so there is nothing to parse here. On enki.phext.io the full library opens as cards, and the raw file is linked above either way.";
+  });
+}
+function renderLibrary(key){
+  var lib = EX_LIBS[key], els = exEls(key);
+  els.grid.innerHTML = "";
+  var list = lib.view || [];
+  var n = Math.min(lib.shown, list.length);
+  for(var i=0;i<n;i++) els.grid.appendChild(exCardEl(lib, list[i], key, i === 0 && lib.jumpFirst));
+  lib.jumpFirst = false;
+  els.moreRow.hidden = !list.length;
+  els.more.hidden = lib.shown >= list.length;
+  els.showing.textContent = list.length
+    ? "Showing " + n + " of " + list.length.toLocaleString("en-US") + " scrolls" + (lib.base > 0 ? " · from the jump coordinate onward — jump to 1.1.1/1.1.1/1.1.1 to restart from the top" : "")
+    : "No scrolls match that filter.";
+}
+function exCardEl(lib, scroll, key, hit){
+  var card = document.createElement("article");
+  card.className = "ex-card" + (hit ? " jump-hit" : "");
+  var top = document.createElement("div");
+  top.className = "ex-card-top";
+  var chip = document.createElement("span");
+  chip.className = "ex-chip"; chip.textContent = "example";
+  var coord = document.createElement("span");
+  coord.className = "ex-coord mono"; coord.textContent = scroll.coord;
+  top.appendChild(chip); top.appendChild(coord);
+  card.appendChild(top);
+  var body = document.createElement("div");
+  var long = scroll.text.length > EX_EXCERPT;
+  body.className = "ex-text" + (long ? "" : " short");
+  body.textContent = long ? scroll.text.slice(0, EX_EXCERPT) + "…" : scroll.text;
+  card.appendChild(body);
+  if(long){
+    var expanded = false;
+    var btn = document.createElement("button");
+    btn.type = "button"; btn.className = "hist-btn";
+    btn.textContent = "read the whole scroll · " + scroll.text.length.toLocaleString("en-US") + " chars";
+    btn.setAttribute("aria-expanded", "false");
+    btn.addEventListener("click", function(){
+      expanded = !expanded;
+      body.textContent = expanded ? scroll.text : scroll.text.slice(0, EX_EXCERPT) + "…";
+      btn.textContent = expanded ? "show less" : "read the whole scroll · " + scroll.text.length.toLocaleString("en-US") + " chars";
+      btn.setAttribute("aria-expanded", expanded ? "true" : "false");
+    });
+    card.appendChild(btn);
+  }
+  return card;
+}
+Object.keys(EX_LIBS).forEach(function(key){
+  var lib = EX_LIBS[key], els = exEls(key);
+  els.more.addEventListener("click", function(){
+    lib.shown += EX_PAGE;
+    renderLibrary(key);
+  });
+  els.filter.addEventListener("input", function(){
+    if(!lib.scrolls) return;
+    var q = els.filter.value.trim().toLowerCase();
+    lib.base = 0;
+    lib.view = q
+      ? lib.scrolls.filter(function(s){ return s.text.toLowerCase().indexOf(q) >= 0; })
+      : lib.scrolls;
+    lib.shown = EX_PAGE;
+    lib.jumpFirst = false;
+    renderLibrary(key);
+  });
+  function doJump(){
+    if(!lib.scrolls) return;
+    var nums = (els.jump.value.match(/\d+/g) || []).map(function(x){ return parseInt(x, 10); });
+    if(nums.length !== 9){
+      els.status.textContent = "A phext coordinate is nine numbers — three triples, like 1.1.1/1.1.1/1.1.10. Type one and jump again.";
+      return;
+    }
+    var idx = lib.scrolls.length - 1;
+    for(var i=0;i<lib.scrolls.length;i++){
+      if(cmpCoordArr(lib.scrolls[i].arr, nums) >= 0){ idx = i; break; }
+    }
+    lib.base = idx;
+    lib.view = lib.scrolls.slice(idx);
+    lib.shown = EX_PAGE;
+    lib.jumpFirst = true;
+    els.filter.value = "";
+    renderLibrary(key);
+    els.status.textContent = "Jumped to " + lib.scrolls[idx].coord + " — the nearest scroll at or after the coordinate you typed. Showing onward from there.";
+    var first = els.grid.querySelector(".ex-card");
+    if(first) first.scrollIntoView({ behavior: "smooth", block: "center" });
+  }
+  els.go.addEventListener("click", doJump);
+  els.jump.addEventListener("keydown", function(e){ if(e.key === "Enter"){ e.preventDefault(); doJump(); } });
+});
+
+/* ================= Your LLM — WebSocket hooks =================
+   Page-side hooks for the visitor's OWN agent/LLM. Nothing here
+   connects until the visitor clicks Connect (or calls
+   EnkiHooks.connect); there is no auto-reconnect. The page connects
+   OUT to the WebSocket URL the visitor supplies — Enki hosts
+   nothing. Protocol 1, JSON text frames:
+     page → agent: enki.hello (on connect), enki.card.added,
+       enki.pair.rated, enki.state.saved, enki.doodle.arrived,
+       enki.ack (the answer to every command)
+     agent → page: enki.state.get, enki.card.add, enki.card.rate,
+       enki.doodles.latest — every command may carry an "id",
+       echoed back as the ack's "ref".
+   The socket layer never throws into the page: everything is
+   wrapped in try/catch, inbound shapes are validated before state
+   is touched, frames over ~256 KB are ignored, and every mutation
+   routes through addCard() / ratePair() — the same functions the
+   UI uses — so a misbehaving agent cannot corrupt state. */
+var hookSocket = null;
+var hookStatus = "disconnected"; /* disconnected | connecting | connected | error */
+var hookStatusDetail = "";
+var hookUrl = "";
+var hookLogLines = [];
+
+function hooksMode(){ return authMode === "account" ? "account" : "anonymous"; }
+function hooksSnapshot(){
+  var cards = state ? state.cards : [];
+  var links = state ? state.links : [];
+  var ratings = state ? state.ratings : 0;
+  return {
+    cards: cards,
+    links: links,
+    ratings: ratings,
+    counts: {
+      cards: cards.length,
+      links: links.length,
+      ratings: ratings,
+      feed: state && Array.isArray(state.feed) ? state.feed.length : 0
+    }
+  };
+}
+function hooksHello(){
+  return { type: "enki.hello", protocol: 1, mode: hooksMode(), state: hooksSnapshot() };
+}
+function hooksLog(line){
+  hookLogLines.unshift(line);
+  hookLogLines = hookLogLines.slice(0, 6);
+  var box = $("llm-log");
+  if(!box) return;
+  box.innerHTML = hookLogLines.map(function(l){ return "<li>" + esc(l) + "</li>"; }).join("");
+}
+function hooksRenderUI(){
+  var btn = $("llm-connect"), st = $("llm-status");
+  var active = !!hookSocket || hookStatus === "connecting";
+  if(btn) btn.textContent = active ? "Disconnect" : "Connect";
+  if(st){
+    var txt = hookStatus;
+    if(hookStatus === "connecting") txt = "connecting to " + hookUrl + "…";
+    else if(hookStatus === "connected") txt = "connected to " + hookUrl;
+    else if(hookStatus === "error") txt = "error" + (hookStatusDetail ? " — " + hookStatusDetail : "");
+    else if(hookStatusDetail) txt = "disconnected — " + hookStatusDetail;
+    st.textContent = txt;
+    st.classList.toggle("on", hookStatus === "connected");
+  }
+}
+function hooksSetStatus(status, detail){
+  hookStatus = status;
+  hookStatusDetail = detail || "";
+  hooksRenderUI();
+}
+function hooksSend(obj){
+  if(!hookSocket || hookSocket.readyState !== 1) return false;
+  var text;
+  try{ text = JSON.stringify(obj); }catch(e){ return false; }
+  try{
+    hookSocket.send(text);
+    hooksLog("→ sent " + (obj.type || "frame"));
+    return true;
+  }catch(e){ return false; }
+}
+/* called from the page's real code paths (addCard, ratePair,
+   pushFeedEntry, save) — a no-op unless an agent is connected */
+function hookEmitEvent(obj){
+  try{
+    if(hookSocket && hookSocket.readyState === 1) hooksSend(obj);
+  }catch(e){}
+}
+function hooksAck(ref, ok, extra){
+  var ack = { type: "enki.ack", ref: ref == null ? null : ref, ok: !!ok };
+  if(extra) Object.keys(extra).forEach(function(k){ ack[k] = extra[k]; });
+  hooksSend(ack);
+}
+/* mutating commands are refused until the visitor's pot is actually
+   loaded — in account mode that means the dataset GET has succeeded */
+function hooksReady(){
+  return !!(bootReady && state) && (authMode !== "account" || datasetLoaded);
+}
+function hooksHandleMessage(data){
+  try{
+    if(typeof data !== "string"){ hooksLog("← ignored non-text frame"); return; }
+    if(data.length > 262144){ hooksLog("← ignored oversized frame"); return; }
+    var msg;
+    try{ msg = JSON.parse(data); }
+    catch(e){ hooksAck(null, false, { error: "malformed JSON" }); return; }
+    if(!msg || typeof msg !== "object" || typeof msg.type !== "string"){
+      hooksAck(msg && msg.id != null ? msg.id : null, false, { error: "malformed command" });
+      return;
+    }
+    var ref = msg.id != null ? msg.id : null;
+    hooksLog("← recv " + msg.type);
+    if(msg.type === "enki.state.get"){
+      hooksAck(ref, true, { state: hooksSnapshot() });
+      hooksSend(hooksHello());
+      return;
+    }
+    if(msg.type === "enki.doodles.latest"){
+      var feed = state && Array.isArray(state.feed) ? state.feed : [];
+      var n = feed.length;
+      if(typeof msg.count === "number" && isFinite(msg.count)) n = Math.max(0, Math.min(feed.length, Math.floor(msg.count)));
+      hooksAck(ref, true, { doodles: feed.slice(0, n) });
+      return;
+    }
+    if(msg.type === "enki.card.add"){
+      if(!hooksReady()){ hooksAck(ref, false, { error: "not ready" }); return; }
+      if(typeof msg.text !== "string" || !msg.text.trim()){ hooksAck(ref, false, { error: "text required" }); return; }
+      var card = addCard(msg.text);
+      if(!card){ hooksAck(ref, false, { error: "could not add card" }); return; }
+      hooksAck(ref, true, { card: card });
+      return;
+    }
+    if(msg.type === "enki.card.rate"){
+      if(!hooksReady()){ hooksAck(ref, false, { error: "not ready" }); return; }
+      if(typeof msg.a !== "string" || typeof msg.b !== "string"){ hooksAck(ref, false, { error: "a and b must be card ids" }); return; }
+      if(msg.a === msg.b){ hooksAck(ref, false, { error: "a and b must be different cards" }); return; }
+      if(typeof msg.score !== "number" || !isFinite(msg.score) || msg.score < 0 || msg.score > 1){ hooksAck(ref, false, { error: "score must be a number in 0..1" }); return; }
+      if(!cardById(msg.a) || !cardById(msg.b)){ hooksAck(ref, false, { error: "unknown card id" }); return; }
+      var res = ratePair(msg.a, msg.b, msg.score);
+      if(!res){ hooksAck(ref, false, { error: "unknown card id" }); return; }
+      hooksAck(ref, true, { a: msg.a, b: msg.b, score: res.sim, link: linkBetween(msg.a, msg.b) });
+      return;
+    }
+    hooksAck(ref, false, { error: "unknown command: " + msg.type });
+  }catch(e){
+    try{ hooksAck(null, false, { error: "internal error" }); }catch(e2){}
+  }
+}
+function hooksConnect(url){
+  try{
+    if(url == null){ var inp = $("llm-url"); url = inp ? inp.value : ""; }
+    url = String(url || "").trim();
+    if(!url){ hooksSetStatus("error", "enter a WebSocket URL first"); hooksLog("• no URL given"); return false; }
+    if(hookSocket) hooksDisconnect();
+    var ws;
+    try{ ws = new WebSocket(url); }
+    catch(e){ hooksSetStatus("error", "invalid WebSocket URL"); hooksLog("• connect failed: invalid URL"); return false; }
+    hookSocket = ws;
+    hookUrl = url;
+    hooksSetStatus("connecting", "");
+    hooksLog("• connecting to " + url);
+    ws.onopen = function(){
+      if(hookSocket !== ws) return;
+      hooksSetStatus("connected", "");
+      hooksLog("• connected to " + url);
+      hooksSend(hooksHello());
+    };
+    ws.onmessage = function(ev){
+      if(hookSocket !== ws) return;
+      hooksHandleMessage(ev.data);
+    };
+    ws.onerror = function(){
+      if(hookSocket !== ws) return;
+      hooksSetStatus("error", "socket error — check the URL and that your agent is listening");
+      hooksLog("• socket error");
+    };
+    ws.onclose = function(){
+      if(hookSocket !== ws) return;
+      hookSocket = null;
+      if(hookStatus === "error") hooksRenderUI();
+      else hooksSetStatus("disconnected", "socket closed");
+      hooksLog("• socket closed — reconnect manually when ready");
+    };
+    return true;
+  }catch(e){ return false; }
+}
+function hooksDisconnect(){
+  var ws = hookSocket;
+  hookSocket = null;
+  if(ws){
+    try{ ws.onopen = null; ws.onmessage = null; ws.onerror = null; ws.onclose = null; }catch(e){}
+    try{ ws.close(); }catch(e){}
+  }
+  hooksSetStatus("disconnected", "");
+  hooksLog("• disconnected");
+}
+$("llm-connect").addEventListener("click", function(){
+  if(hookSocket || hookStatus === "connecting") hooksDisconnect();
+  else hooksConnect();
+});
+$("llm-url").addEventListener("keydown", function(e){
+  if(e.key === "Enter"){ e.preventDefault(); if(!hookSocket) hooksConnect(); }
+});
+hooksLog("• hooks idle — nothing connects until you click Connect");
+hooksRenderUI();
+window.EnkiHooks = {
+  connect: function(url){ return hooksConnect(url); },
+  disconnect: function(){ hooksDisconnect(); },
+  status: function(){ return hookStatus; }
+};
+
+/* ================= go ================= */
+window.addEventListener("resize", function(){ if(currentView === "multiverse") resizeMap(); });
+/* Boot: session first, behind a neutral loading state (chrome +
+   "Loading…" in place of any cards). initSession loads exactly one
+   pot and finishBootRender() does the first real render. */
+renderEpochUI();
+initSession();
+</script>
+</body>
+</html>
+# Enki LLM WebSocket hooks — protocol 1
+
+Title: Enki LLM WebSocket hooks — protocol 1
+Source: ~/workspace/enki-artifacts/LLM-HOOKS.md
+Inscribed: 2026-11-28
+SHA-256: 31105dffea55fbfcbd71abb070ee1e72a9b726eb0d3bb5360ce7b1c6ff1b0053
+
+---
+# Enki LLM hooks — protocol
+
+Task 49.5.10/6.6.12/7.5.10 (2026-11-28, EE 1241).
+
+The Enki page provides hooks for **the visitor's own LLM/agent** over a
+WebSocket. The direction matters: the visitor's agent listens at a
+WebSocket URL the visitor supplies, and **the page connects out to it**
+from the "Your LLM" panel. Enki hosts nothing and no data leaves the
+visitor's own setup except over the socket the visitor specified.
+
+The hooks sit on the page's state layer, so they work identically for
+the anonymous localStorage pot and (once signed in) the account dataset;
+the current mode is announced in `enki.hello`.
+
+## Panel behavior
+
+- Off by default; nothing connects until the visitor clicks Connect.
+- No auto-reconnect: a closed/errored socket is shown in the status line
+  and the visitor reconnects manually.
+- The panel shows connection status and a short live log of hook events.
+
+## Transport
+
+WebSocket, JSON text frames, protocol version `1`. Inbound frames over
+~256 KB are ignored. All frames are validated before touching state;
+every mutation goes through the same functions the page's UI uses
+(`addCard`, `ratePair`, `save`), so a misbehaving agent cannot corrupt
+state or reach anything the UI cannot.
+
+## Page → agent
+
+On connect:
+
+```json
+{"type":"enki.hello","protocol":1,"mode":"account"|"anonymous",
+ "state":{"cards":[…full card objects…],"links":[…],"ratings":0,
+          "counts":{"cards":0,"links":0,"ratings":0,"feed":0}}}
+```
+
+Events, emitted as they happen (from UI actions and hook commands alike):
+
+| type                | payload                                             |
+|---------------------|-----------------------------------------------------|
+| `enki.card.added`   | `card` — the full created card (id, text, 9D coord, history) |
+| `enki.pair.rated`   | `a`, `b` — card ids; `score`                        |
+| `enki.state.saved`  | `mode` — emitted from inside `save()` after each persistence |
+| `enki.doodle.arrived` | `entry` — the feed entry just pushed              |
+
+## Agent → page commands
+
+Every command may carry an `id`; every command is answered with
+`{"type":"enki.ack","ref":<id or null>,"ok":true|false, …}`.
+
+| command | fields | ack on success |
+|---------|--------|----------------|
+| `enki.state.get` | — | `state` snapshot in the ack, plus a fresh `enki.hello`-shaped frame |
+| `enki.card.add` | `text` | `card` — created through the page's real add path (page assigns the coordinate, stamps history, runs the feed-doodle cadence, settles, saves, renders) |
+| `enki.card.rate` | `a`, `b` (card ids), `score` (0..1) | `link` — recorded through the page's real rating path (link create/update with sim + EE stamp, ratings count, coordinate learning, feed doodle when score ≥ 0.5, save, render) |
+| `enki.doodles.latest` | `count` (optional) | `doodles` — the current feed entries, newest first |
+
+## Errors
+
+Unknown or malformed commands, unknown card ids, out-of-range scores,
+empty card text, and commands arriving before the dataset is loaded
+(account mode still booting → `"not ready"`) are all answered with
+`enki.ack` `ok:false` and an `error` string. The socket layer never
+throws into the page.
+
+## Status / future legs
+
+- This is a **page-side** surface, live in the page build as of EE 1241.
+  `window.EnkiHooks` exposes `connect(url)`, `disconnect()`, and
+  `status()` for the panel and for testing.
+- There is **no backend WebSocket leg**: the enki-api service speaks
+  HTTP only. phext-lattice (checked at rev 2efb1af, the rev server-rs
+  pins) contains no reusable WebSocket code — the only "upgrade" matches
+  are the CSP `upgrade-insecure-requests` header — so a future backend
+  leg would be greenfield work, not a reuse.
+- A live executed demo (real Chromium + real RFC6455 agent endpoint +
+  the real page build, 20 assertions, failures=0) is recorded in
+  `llm-hooks-demo-transcript.txt` in this repo.
+# Desktop SSO for Phext Notepad — the cookie paste is gone
 
 Title: Desktop SSO for Phext Notepad — the cookie paste is gone
 Source: ~/workspace/phext-notepad-perf/REPORT-DESKTOP-SSO.md
@@ -14204,6 +17265,159 @@ the irreducible core: ordering, syncing, serving. The gaps above are
 the format's growth list, in the order this build hit them: an append
 writer, per-scroll integrity, a durability profile, a commit primitive,
 and plainer words about empty scrolls.
+# inkling — local-inference tooling for the Inklings (repo README)
+
+Title: inkling — local-inference tooling for the Inklings (repo README)
+Source: ~/workspace/inkling-consolidation/staging/README.md
+Inscribed: 2026-11-27 10:26 CST
+SHA-256: a372bee694216b110328518456630ee0949657f3dc6c6a27032375a76fac1b72
+
+---
+# inkling — local-inference tooling for the Inklings
+
+The canonical home for the tooling built around the fleet's Inkling-2-Mini
+models: the applicability study, the FP-Solve run that cured the 4-pass
+collapse in our own runtime, the ports that made upstream code run against
+released software, the GGUF transport, and the bench harness that graded it.
+
+Will's direction, 2026-11-27: *"keep all of this tooling for local inference
+in wbic16/inkling and fetch the tooling as part of Exocortical setup."*
+Exocortical setup (`wbic16/exocortical` → `setup.sh`, Phase 8) clones this
+repo to `/source/inkling` on every provisioned node, clone-or-update.
+
+Task of record: 26.7.10/9.6.12/6.6.8. Work performed 2026-11-26/27
+(EE 1008–1092), all compute on the ranch (plain-view), nothing staged on the
+hatch VM.
+
+## Verdict
+
+**FP-Solve cured the 4-pass collapse in our runtime.** GSM8K test[0:32],
+greedy, fleet llama-server on plain-view, one grader for all legs:
+
+| leg | correct | repeat-loops |
+|---|---|---|
+| base @ 3 passes (native) | 22/32 | 3 |
+| base @ 4 passes | **1/32** | **11** |
+| FP-Solve @ 3 passes | 26/32 | 2 |
+| FP-Solve @ 4 passes | **16/32** | **2** |
+
+Honest caveats (RUN-REPORT.md states them in the same breath): FP-Solve @4
+restores function but does **not** beat native depth on this slice — the
+upstream "4 passes ≥ 3 passes" headline is not reproduced; n=32 raw counts
+are the evidence; the loop detector has a nonzero native-depth background
+rate and misses numbered-list degeneration.
+
+## Documents
+
+- `REPORT.md` — applicability study (EE 1024): Step 1 FP-Solve applicable
+  with port; the 4-pass collapse reproduced in fleet llama.cpp first.
+- `RUN-REPORT.md` — the run (EE 1025–1092): verdict, verbatim evidence,
+  stage record, hashes, findings.
+- `PATCHES.md` — every shim/port around the upstream code, with reasons
+  (S1–S4 driver shims, P1 looping port, P2 TF-space reconstruction,
+  P3 transport orientation fix, T1 GGUF transport).
+- `PROGRESS.md` — the run's stage-checkpoint log.
+
+## Layout
+
+- `ports/` — **P1** `looping_port.py`: eelbaz's looping forward ported to
+  released transformers 5.24.1, **proven bit-identical to the stock 5.24
+  forward at 3 passes** (logits maxdiff 0.0000, argmax agreement 1.0000;
+  probes: `probe_looping.py`, `probe_looping2.py`). **P2**
+  `reconstruct_tf.py`: rebuilds the edited checkpoint in TF space via
+  upstream's own `apply_weight_deltas`, because their exporter targets a
+  checkpoint layout the published checkpoint does not use.
+- `solve/` — `driver_fpsolve.py`: the FP-Solve driver (process split,
+  CPU device, observability) around the **byte-unmodified** upstream
+  `fpsolve.py`.
+- `transport/` — `transport_gguf.py`: rebuilds the fleet GGUF with the 168
+  edited tensors as F32 and every other tensor byte-identical (536/536
+  verified). `verify_orientation.py`: the orientation anchor that caught a
+  transpose bug in the transport before it shipped (P3).
+- `bench/` — `bench.py` + `bench_excerpts.py`: the GSM8K harness/grader
+  used for all four legs above.
+- `census/` — GGUF header census tooling and output (`gguf_census.py`,
+  census text for the AD-Q4_K and Q4_K_M files, checkpoint/delta key
+  inspectors).
+- `probes/` — the applicability probes (loop-count override checks against
+  fleet llama-server).
+- `scripts/` — the operational run scripts from the run itself
+  (download, torch setup, solve, transport, bench, watchdog), kept as the
+  working record of how each stage was actually executed.
+- `third-party/` — third-party code, clearly marked; see
+  `third-party/PROVENANCE.md`. Nothing in there is ours.
+
+## Large artifacts — NOT in git
+
+The repo carries hashes, sizes, and locations; the bytes live on fleet NFS
+and regenerate through the pipeline below.
+
+| artifact | size | sha256 | location |
+|---|---|---|---|
+| Base HF checkpoint `thinkingmachines/Inkling-2-Mini` (repo sha `c9d028302cd0f035fdf8e7e91f089a4ce94d2195`, `model-00001-of-00001.safetensors`) | 20.19 GB | `65e60f51aa1284d4fb022584908c315270334d991828bb774af60584523539d1` (= HF LFS) | NFS `inkling-2-mini-hf/` on the fleet share; working copy `~/inkling-hf-base` on plain-view |
+| FP-Solve deltas (168 tensors) | 467,161,440 B | `de77e7575f643aa095011f93ce54a3200f8a1f8de877756d6081feb021678faf` | `/mnt/mirrorborn/shared/models/inkling-2-mini-gguf/fpsolve-staging/deltas.safetensors` |
+| Edited GGUF `Inkling-2-Mini-FPSOLVE-Q4_K.gguf` | 16,858,220,512 B | `853968a9c242bdccfa09082fd39ff6ec91784bf7303b357c55179d406a089c1c` | `/mnt/mirrorborn/shared/models/inkling-2-mini-gguf/fpsolve-staging/` |
+| Edited HF checkpoint (TF layout, `save_pretrained` of the delta-applied model) | ~20 GB | — (see `weight_edit_report_tf.json` in fpsolve-staging) | `~/rse-fpsolve/edited-hf-tf` on plain-view |
+| GSM8K test file | 1319 lines | `3730d312f6e3440559ace48831e51066acaca737f6eabec99bccb9e4b3c39d14` | NFS `rse-bench/` on the fleet share |
+| Fleet base GGUF `Inkling-2-Mini-AD-Q4_K.gguf` (untouched by the run) | 16,525,559,776 B | `2bfc233e10925297…` (full value in the share's SHA256SUMS) | `/mnt/mirrorborn/shared/models/inkling-2-mini-gguf/` |
+
+## Reproduce
+
+1. **Fetch the base checkpoint** — `thinkingmachines/Inkling-2-Mini` from
+   Hugging Face (20.19 GB). The run's route (HF throttles per connection;
+   plain-view reaches HF via the ranch proxy and writes NFS at 113 MB/s):
+   parallel-range download on plain-view → sha256-verify → copy to NFS →
+   re-verify. See `scripts/run-pv-download.sh`, `scripts/run-download.sh`.
+   Base only — eelbaz's edited `Ex0bit/Inkblot-2-mini` was deliberately
+   NOT downloaded (Will, 2026-11-26).
+2. **Torch home** — CPU venv on a ≥44 GB RAM node: torch 2.15.0+cpu,
+   transformers 5.24.1 (`scripts/run-torch-setup.sh`).
+3. **Solve** — `solve/driver_fpsolve.py` with the P1 port registered
+   (`ports/looping_port.py`); upstream `fpsolve.py` runs byte-unmodified.
+   Expect: 168/168 matrices edited, ~4,593 s compute on a Ryzen 7 255,
+   mean relative edit 0.0793 / max 0.2161, deltas sha256 above.
+4. **Transport** — `ports/reconstruct_tf.py` (P2) then
+   `transport/transport_gguf.py`; verify with
+   `transport/verify_orientation.py` and the transport's own round-trip
+   check (168 edited F32, 536/536 unedited byte-identical, metadata bytes
+   equal).
+5. **Bench** — `bench/bench.py` against fleet llama-server with
+   `--override-kv inkling2_loop.loop.count=int:3` and `int:4`, GSM8K
+   test[0:32], greedy. Expected: the table above.
+
+## Findings a reproducer will hit
+
+1. **Upstream's released code targets an unreleased transformers build and
+   a different checkpoint layout than the published one.** Their looping
+   wrapper exists in no released transformers (bisected 5.0.0–5.24.1) and
+   their exporter dies on the published checkpoint with `KeyError`. P1/P2
+   are the bridge; both findings are documented in RUN-REPORT.md.
+2. **A transport self-verify can share the bug it checks for.** The P3
+   transpose bug passed the transport's own round-trip verify; only the
+   independent orientation anchor (cos = 1.000000 exact) caught it. Keep
+   the anchor.
+
+## Step 2 (GSPO) readiness
+
+Not run — Will's call. The hard prerequisite (a working multi-pass forward
+in a released runtime) exists and is proven: the P1 port injects the same
+way for any rse_looper consumer. GSPO needs generation + self-verification
+over 326 control tensors — hours-scale CPU generation per round on
+plain-view. This run's deltas + edited checkpoint are the correct starting
+point; judge any GSPO attempt with this same bench harness plus a larger
+GSM8K slice.
+
+## Provenance
+
+FP-Solve / rse_looper is **Eric E. / Tensorbend.ai's work**
+(eelbaz/Recursive-Self-Improving-Loopers @
+`765453d13878804c49876a656f39b57a4384dca4`), run byte-unmodified; the copy
+in `third-party/` is marked as such. The ports (P1–P3), the driver shims,
+the transport, the census, the probes, and the bench harness are ours.
+`third-party/llama.cpp-inkling2.py` is the llama.cpp project's gguf
+conversion model definition, kept from the recon. This repo's own code is
+under the repo LICENSE (MIT, Will Bickford); third-party code remains
+under its own terms.
 # Computronium — Chromium Duplication Census (CENSUS.md)
 
 Title: Computronium — Chromium Duplication Census (CENSUS.md)
@@ -15979,3 +19193,401 @@ SHA-256: 7b2278b70ce11eaa02189fce42c52750fdd0910e0fd8a21802bc9df24661e286
 </footer>
 </body>
 </html>
+# Enki MCP bridge (enki-mcp)
+
+Title: Enki MCP bridge (enki-mcp)
+Source: ~/workspace/enki-artifacts/enki-mcp.rs
+Inscribed: 2026-11-28
+SHA-256: 933787f76711212f1a4ea6358209303dd4c01184b9da59ca24d45973d3f9e36c
+
+---
+//! enki-mcp: the Enki MCP bridge.
+//!
+//! A Model Context Protocol server on stdio (newline-delimited
+//! JSON-RPC 2.0), hand-rolled on the crate's existing stack —
+//! serde_json for the wire, sha2 for hashing, and the library's own
+//! `dataset` module for storage. No new dependencies.
+//!
+//! It makes real the three tools Enki's feed panel and the
+//! handwriting skill have long named — `enki.doodles.latest`,
+//! `enki.doodle.margin`, `enki.doodle.along` — serving the actual
+//! dawn doodle pages from disk, plus `enki.dataset.get`, which reads
+//! a user's real phext dataset through the same code path the HTTP
+//! service uses.
+//!
+//! Environment:
+//! * `ENKI_DOODLE_DIR` — directory holding `doodle-*.png` pages
+//!   (default: `doodles`, relative to the working directory).
+//! * `ENKI_DATA_DIR` — the dataset service's data dir, holding one
+//!   `<sha256(who)>.phext` per user (default: `data`, as the
+//!   service's own default).
+//!
+//! stdout carries protocol frames only; all logging goes to stderr.
+
+use enki_api::dataset;
+use serde_json::{json, Value};
+use sha2::{Digest, Sha256};
+use std::io::{BufRead, Write};
+use std::path::PathBuf;
+
+const PROTOCOL_VERSION: &str = "2024-11-05";
+
+fn main() {
+    let stdin = std::io::stdin();
+    let mut stdout = std::io::stdout();
+    let mut reader = std::io::BufReader::new(stdin.lock());
+    eprintln!(
+        "enki-mcp {} ready (stdio, protocol {})",
+        env!("CARGO_PKG_VERSION"),
+        PROTOCOL_VERSION
+    );
+    let mut line = String::new();
+    loop {
+        line.clear();
+        match reader.read_line(&mut line) {
+            Ok(0) => break, // EOF: the client hung up
+            Ok(_) => {}
+            Err(e) => {
+                eprintln!("enki-mcp: stdin read error: {e}");
+                break;
+            }
+        }
+        let trimmed = line.trim();
+        if trimmed.is_empty() {
+            continue;
+        }
+        if let Some(response) = handle_frame(trimmed) {
+            if writeln!(stdout, "{response}").is_err() {
+                break;
+            }
+            if stdout.flush().is_err() {
+                break;
+            }
+        }
+    }
+}
+
+// ---------------------------------------------------------------------------
+// JSON-RPC layer
+
+fn handle_frame(text: &str) -> Option<Value> {
+    let frame: Value = match serde_json::from_str(text) {
+        Ok(v) => v,
+        Err(e) => {
+            return Some(json!({
+                "jsonrpc": "2.0",
+                "id": Value::Null,
+                "error": { "code": -32700, "message": format!("parse error: {e}") }
+            }));
+        }
+    };
+    let method = frame.get("method").and_then(Value::as_str).unwrap_or("");
+    let id = frame.get("id").cloned();
+    let params = frame.get("params").cloned().unwrap_or(Value::Null);
+
+    // Notifications carry no id and never get a reply.
+    if id.is_none() {
+        match method {
+            "notifications/initialized" => eprintln!("enki-mcp: client initialized"),
+            other => eprintln!("enki-mcp: ignoring notification {other}"),
+        }
+        return None;
+    }
+    let id = id.unwrap();
+
+    let result: Value = match method {
+        "initialize" => json!({
+            "protocolVersion": PROTOCOL_VERSION,
+            "capabilities": { "tools": {} },
+            "serverInfo": { "name": "enki-mcp", "version": env!("CARGO_PKG_VERSION") }
+        }),
+        "ping" => json!({}),
+        "tools/list" => json!({ "tools": tool_definitions() }),
+        "tools/call" => call_tool(&params),
+        other => {
+            return Some(json!({
+                "jsonrpc": "2.0",
+                "id": id,
+                "error": { "code": -32601, "message": format!("method not found: {other}") }
+            }));
+        }
+    };
+    Some(json!({ "jsonrpc": "2.0", "id": id, "result": result }))
+}
+
+fn tool_definitions() -> Value {
+    json!([
+        {
+            "name": "enki.doodles.latest",
+            "description": "The latest real dawn doodle pages (doodle-*.png) from the doodles directory, newest first — each with its file name, byte size, SHA-256, and the page image itself.",
+            "inputSchema": {
+                "type": "object",
+                "properties": {
+                    "count": { "type": "number", "description": "How many of the latest pages to return (default 3)." }
+                }
+            }
+        },
+        {
+            "name": "enki.doodle.margin",
+            "description": "One real doodle page for a margin, picked deterministically by the current UTC date — the same page all day.",
+            "inputSchema": { "type": "object", "properties": {} }
+        },
+        {
+            "name": "enki.doodle.along",
+            "description": "One real doodle page to ride along a named connection between two cards; the page is chosen by sha256(connection), so a given connection always gets the same doodle.",
+            "inputSchema": {
+                "type": "object",
+                "properties": {
+                    "connection": { "type": "string", "description": "The connection to doodle along, e.g. \"card A ↔ card B\"." }
+                },
+                "required": ["connection"]
+            }
+        },
+        {
+            "name": "enki.dataset.get",
+            "description": "A user's Enki dataset, assembled from their real phext in the dataset store — the same state the enki.phext.io service serves them. A user with no dataset yet gets the blank slate.",
+            "inputSchema": {
+                "type": "object",
+                "properties": {
+                    "who": { "type": "string", "description": "The user's stable identity, e.g. \"github:12345\"." }
+                },
+                "required": ["who"]
+            }
+        }
+    ])
+}
+
+fn call_tool(params: &Value) -> Value {
+    let name = params.get("name").and_then(Value::as_str).unwrap_or("");
+    let args = params.get("arguments").cloned().unwrap_or_else(|| json!({}));
+    let outcome = match name {
+        "enki.doodles.latest" => tool_doodles_latest(&args),
+        "enki.doodle.margin" => tool_doodle_margin(),
+        "enki.doodle.along" => tool_doodle_along(&args),
+        "enki.dataset.get" => tool_dataset_get(&args),
+        other => Err(format!("unknown tool: {other}")),
+    };
+    match outcome {
+        Ok(content) => json!({ "content": content, "isError": false }),
+        Err(message) => json!({
+            "content": [{ "type": "text", "text": message }],
+            "isError": true
+        }),
+    }
+}
+
+// ---------------------------------------------------------------------------
+// doodle pages
+
+struct Doodle {
+    name: String,
+    number: u64,
+    bytes: Vec<u8>,
+    sha256: String,
+}
+
+fn doodle_dir() -> PathBuf {
+    std::env::var("ENKI_DOODLE_DIR").map(PathBuf::from).unwrap_or_else(|_| PathBuf::from("doodles"))
+}
+
+/// Every real doodle page in the doodles dir, newest (highest
+/// number) first. An absent dir or an empty shelf is a clean tool
+/// error — never invented content.
+fn list_doodles() -> Result<Vec<Doodle>, String> {
+    let dir = doodle_dir();
+    if !dir.is_dir() {
+        return Err(format!(
+            "doodle directory not found: {} (set ENKI_DOODLE_DIR)",
+            dir.display()
+        ));
+    }
+    let mut pages: Vec<Doodle> = Vec::new();
+    let entries = std::fs::read_dir(&dir).map_err(|e| format!("read doodle dir {}: {e}", dir.display()))?;
+    for entry in entries.flatten() {
+        let name = entry.file_name().to_string_lossy().to_string();
+        let Some(number) = name
+            .strip_prefix("doodle-")
+            .and_then(|rest| rest.strip_suffix(".png"))
+            .and_then(|digits| digits.parse::<u64>().ok())
+        else {
+            continue;
+        };
+        let bytes = std::fs::read(entry.path()).map_err(|e| format!("read {name}: {e}"))?;
+        pages.push(Doodle { name, number, sha256: sha256_hex(&bytes), bytes });
+    }
+    if pages.is_empty() {
+        return Err(format!("no doodle pages (doodle-*.png) in {}", dir.display()));
+    }
+    pages.sort_by(|a, b| b.number.cmp(&a.number).then_with(|| b.name.cmp(&a.name)));
+    Ok(pages)
+}
+
+fn image_content(doodle: &Doodle) -> Value {
+    json!({
+        "type": "image",
+        "data": base64_encode(&doodle.bytes),
+        "mimeType": "image/png"
+    })
+}
+
+fn page_text(doodle: &Doodle) -> Value {
+    json!({
+        "type": "text",
+        "text": format!("{} — {} bytes — sha256 {}", doodle.name, doodle.bytes.len(), doodle.sha256)
+    })
+}
+
+fn tool_doodles_latest(args: &Value) -> Result<Value, String> {
+    let pages = list_doodles()?;
+    let count = args
+        .get("count")
+        .and_then(|v| v.as_u64().or_else(|| v.as_f64().map(|f| f as u64)))
+        .unwrap_or(3)
+        .clamp(1, 50) as usize;
+    let chosen = &pages[..count.min(pages.len())];
+    let mut content = vec![json!({
+        "type": "text",
+        "text": format!(
+            "The {} latest of {} real dawn doodle pages, newest first:",
+            chosen.len(),
+            pages.len()
+        )
+    })];
+    for doodle in chosen {
+        content.push(page_text(doodle));
+        content.push(image_content(doodle));
+    }
+    Ok(Value::Array(content))
+}
+
+fn tool_doodle_margin() -> Result<Value, String> {
+    let pages = list_doodles()?;
+    let (y, m, d, days) = today_utc();
+    let index = (days % pages.len() as i64) as usize;
+    let doodle = &pages[index];
+    Ok(json!([
+        {
+            "type": "text",
+            "text": format!(
+                "Margin pick for {y:04}-{m:02}-{d:02} (UTC): {} — one page per day, chosen deterministically (day {} of the epoch, page {} of {}). {} bytes — sha256 {}",
+                doodle.name,
+                days,
+                index + 1,
+                pages.len(),
+                doodle.bytes.len(),
+                doodle.sha256
+            )
+        },
+        image_content(doodle)
+    ]))
+}
+
+fn tool_doodle_along(args: &Value) -> Result<Value, String> {
+    let connection = args
+        .get("connection")
+        .and_then(Value::as_str)
+        .filter(|s| !s.is_empty())
+        .ok_or_else(|| "enki.doodle.along needs a non-empty \"connection\" string".to_string())?;
+    let pages = list_doodles()?;
+    let digest = sha256_bytes(connection.as_bytes());
+    let mut seed = [0u8; 8];
+    seed.copy_from_slice(&digest[..8]);
+    let index = (u64::from_be_bytes(seed) % pages.len() as u64) as usize;
+    let doodle = &pages[index];
+    Ok(json!([
+        {
+            "type": "text",
+            "text": format!(
+                "Along the connection \"{connection}\": {} rides it (sha256 of the connection picks page {} of {}). {} bytes — sha256 {}",
+                doodle.name,
+                index + 1,
+                pages.len(),
+                doodle.bytes.len(),
+                doodle.sha256
+            )
+        },
+        image_content(doodle)
+    ]))
+}
+
+// ---------------------------------------------------------------------------
+// dataset
+
+fn tool_dataset_get(args: &Value) -> Result<Value, String> {
+    let who = args
+        .get("who")
+        .and_then(Value::as_str)
+        .filter(|s| !s.is_empty())
+        .ok_or_else(|| "enki.dataset.get needs a non-empty \"who\" string".to_string())?;
+    let dir = std::env::var("ENKI_DATA_DIR").map(PathBuf::from).unwrap_or_else(|_| PathBuf::from("data"));
+    // The service's own load path: a missing user's phext is created
+    // as — and returned as — the blank slate, exactly as GET
+    // /api/dataset behaves for a first-time user.
+    let state = dataset::load(&dir, who)?;
+    let pretty = serde_json::to_string_pretty(&state).map_err(|e| format!("serialize dataset: {e}"))?;
+    Ok(json!([{
+        "type": "text",
+        "text": format!(
+            "Dataset for {who} ({}):\n{pretty}",
+            dataset::user_file(&dir, who).display()
+        )
+    }]))
+}
+
+// ---------------------------------------------------------------------------
+// small primitives (hand-rolled: no new dependencies)
+
+fn sha256_bytes(bytes: &[u8]) -> [u8; 32] {
+    let mut hasher = Sha256::new();
+    hasher.update(bytes);
+    let digest = hasher.finalize();
+    let mut out = [0u8; 32];
+    out.copy_from_slice(&digest);
+    out
+}
+
+fn sha256_hex(bytes: &[u8]) -> String {
+    sha256_bytes(bytes).iter().map(|b| format!("{b:02x}")).collect()
+}
+
+const B64: &[u8] = b"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
+
+fn base64_encode(bytes: &[u8]) -> String {
+    let mut out = String::with_capacity((bytes.len() + 2) / 3 * 4);
+    for chunk in bytes.chunks(3) {
+        let b0 = chunk[0] as u32;
+        let b1 = *chunk.get(1).unwrap_or(&0) as u32;
+        let b2 = *chunk.get(2).unwrap_or(&0) as u32;
+        let n = (b0 << 16) | (b1 << 8) | b2;
+        out.push(B64[(n >> 18) as usize & 63] as char);
+        out.push(B64[(n >> 12) as usize & 63] as char);
+        out.push(if chunk.len() > 1 { B64[(n >> 6) as usize & 63] as char } else { '=' });
+        out.push(if chunk.len() > 2 { B64[n as usize & 63] as char } else { '=' });
+    }
+    out
+}
+
+/// (year, month, day, days since the Unix epoch) for today, UTC.
+fn today_utc() -> (i64, u32, u32, i64) {
+    let secs = std::time::SystemTime::now()
+        .duration_since(std::time::UNIX_EPOCH)
+        .map(|d| d.as_secs() as i64)
+        .unwrap_or(0);
+    let days = secs.div_euclid(86_400);
+    let (y, m, d) = civil_from_days(days);
+    (y, m, d, days)
+}
+
+/// Howard Hinnant's civil-from-days algorithm.
+fn civil_from_days(z: i64) -> (i64, u32, u32) {
+    let z = z + 719_468;
+    let era = if z >= 0 { z } else { z - 146_096 } / 146_097;
+    let doe = (z - era * 146_097) as u64;
+    let yoe = (doe - doe / 1460 + doe / 36_524 - doe / 146_096) / 365;
+    let y = yoe as i64 + era * 400;
+    let doy = doe - (365 * yoe + yoe / 4 - yoe / 100);
+    let mp = (5 * doy + 2) / 153;
+    let d = (doy - (153 * mp + 2) / 5 + 1) as u32;
+    let m = if mp < 10 { mp + 3 } else { mp - 9 } as u32;
+    (if m <= 2 { y + 1 } else { y }, m, d)
+}
