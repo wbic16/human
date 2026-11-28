@@ -14,7 +14,7 @@ truth: artifacts-source.json beside this builder
 (build_artifacts_phext.py); never hand-edit the .phext.
 artifacts.phext is published to wbic16/human@exo.
 
-Artifacts inscribed: 68
+Artifacts inscribed: 69
 
 Index (coordinate — title — source):
 - 19.7.11/9.7.12/7.6.9 — Light the Next Light — intro song lyrics & time map — ~/workspace/exocortexia-cartoon/intro/LYRICS.md
@@ -70,6 +70,7 @@ Index (coordinate — title — source):
 - 32.6.7/7.6.10/6.5.9 — Neovim + Phext — Design: Phext-Scale Navigation in a Modal Editor — ~/workspace/goals/neovim-phext-support-merge-ready-pr-compiled-with-phcc/files/neovim-phext-design.md
 - 32.6.8/8.6.11/6.5.9 — Charon — README — ~/workspace/charon-seed/README.md
 - 32.7.8/7.6.10/7.6.9 — Enki Home — enki.phext.io — ~/workspace/your_files/enki-home/enki-home.html
+- 32.7.8/8.7.12/8.6.10 — Animator — wbic16/animator landing record, 2026-11-28 — ~/workspace/crazy-wisdom-doodle-practice/animator-landing-record.md
 - 33.6.8/7.6.10/6.5.9 — Enki LLM WebSocket hooks — protocol 1 — ~/workspace/enki-artifacts/LLM-HOOKS.md
 - 33.6.9/8.6.11/7.5.9 — Desktop SSO for Phext Notepad — the cookie paste is gone — ~/workspace/phext-notepad-perf/REPORT-DESKTOP-SSO.md
 - 33.7.8/9.7.13/9.6.9 — phbot — PyBot, rebuilt on phext with MOAT — workspace/pybot-census/PHBOT-PHEXT.md
@@ -13581,6 +13582,40 @@ initSession();
 </script>
 </body>
 </html>
+# Animator — wbic16/animator landing record, 2026-11-28
+
+Title: Animator — wbic16/animator landing record, 2026-11-28
+Source: ~/workspace/crazy-wisdom-doodle-practice/animator-landing-record.md
+Inscribed: 2026-11-28
+SHA-256: 440e4d9e0fb00e10bb6cf987b863c4f873ce35b9c50b9cdf8278e2f9418dd2b3
+
+---
+# Animator — wbic16/animator landing record, 2026-11-28
+
+The Animator renderer lineage is landed in its own repository: **wbic16/animator**, branch of record **exo**, at https://github.com/wbic16/animator — "draws audio, legibly". The repo was created by Will on 2026-11-28 (public, MIT, LICENSE as its first commit). The landing was executed the same day under Will's plain go-ahead in chat (09:46 CST), inside his standing approval for work in wbic16 clones. Before this landing, the renderers lived only in the Crazy Wisdom doodle-practice working directory; now the lineage has GitHub backing, in timeline order.
+
+## The landing commit
+
+- HEAD after landing: `173140448f02dbf69d07591e50c90e75c6984327`, parented on the LICENSE commit `cd11e4c5addb58ea37206efa58a5f26216e5e8f3`, pushed with force disabled.
+- Remote verification: `git ls-remote origin refs/heads/exo` returned exactly the landing HEAD. Blob spot-checks against locally computed `git hash-object` values matched byte-for-byte: `draw_cw01r3.py` blob `820e8083e31303e979b3a65fa074bebf03bdd373`, `draw_cw01.py` blob `ec76936ab0303f09ecd9b681d773bb1ec7f0518e`, `README.md` blob `48e1a373f1c39ca727261baf83662311ed5418c1`. Every transferred source file's SHA-256 was compared between this machine and the hub clone before committing and matched.
+
+## The commits — the timeline as it happened
+
+Author and committer dates are the source files' own modification times, so the history carries the day the work was actually produced (2026-11-28, UTC):
+
+1. `c3e7d2ea6407d0364ca80197446460e1daac542d` — 08:22:09Z — animator session 1 (EE 1247): seed-page renderer for CW #452. Files: `draw_cw01.py`, `assemble_cw01.sh`, `go.sh`.
+2. `838d48aebf081baaa6799461d2c82f66ef1a3bc2` — 12:29:56Z — animator session 1R (EE 1286): sentence detail on a persistent canvas. Files: `draw_cw01r.py`, `assemble_cw01r.sh`, `go1r.sh`.
+3. `7eb31a3316d2a1a4e7fea78167d390fcc306e1b8` — 14:26:16Z — animator session 1R2 (EE 1306): world model — holographic positions, combination layers. Files: `draw_cw01r2.py`, `assemble_cw01r2.sh`, `go1r2.sh`.
+4. `b11216c674ceeab97aa3e588b9eeda84d7b35f2f` — 15:33:17Z — animator session 1R3 (EE 1311–1316): prepass regions, layer growth, audio layer, captions, phext deliverable. Files: `draw_cw01r3.py`, `assemble_cw01r3.sh`, `go1r3.sh`, `build_audio_01r3.py` (builds the effects track the assembly invokes), `file_doodles_01r3.py` (the run's page-filing helper).
+5. `173140448f02dbf69d07591e50c90e75c6984327` — landing time — README: the Animator, its method, its lineage, how to run it.
+
+All shell scripts are recorded at mode 100755; the Python renderers at 100644. Excluded by design: the cw02 file set (episode #453's run — a different episode, not the #452 method lineage) and `prepass_test.py` (superseded; the prepass analyzer lives inside `draw_cw01r3.py`).
+
+## What the repo holds
+
+The Animator is a world-model rendition engine: transcription becomes a sentence stream; each sentence is doodled at its holographic position (the Singular atlas merge of its words); a prepass analyzer finds the stream's natural semantic regions, each mapped with multiversal phext and drawn on its own page; symbols within semantic distance combine into new doodles on layers above their sources, merging across layers, the visible top of the stack always the working surface. Layer growth is law, not decoration: opacity α(L) = min(1, 0.38 + 0.13L), size 1 + 0.30L; layers 1–2 are sticky notes, 3–4 framed notes, 5 and above panel architectures; a node at layer ≥ 3 earns a caption naming its combined context; bold text is drawn — and sounded — in a thick marker pen. Each run prints a 15 fps film carrying the original audio with pencil/marker noise and sticky-note effects, and emits the phext the process generated as a second deliverable. Session 1R3's measured latency: mean 21.7 ms per frame, 100% inside the 66.7 ms live budget. The success criterion the lineage is judged by: the final visible surface reads as one coherent vision of what the audio discusses.
+
+The reference episode for the whole lineage is Crazy Wisdom #452, "Text as Interface" (2025-04-14). The method's full record lives in the doodle-practice programme documents; this repo is its code, generation by generation, with the README telling the story of how the method grew.
 # Enki LLM WebSocket hooks — protocol 1
 
 Title: Enki LLM WebSocket hooks — protocol 1
