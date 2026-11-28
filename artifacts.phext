@@ -14,7 +14,7 @@ truth: artifacts-source.json beside this builder
 (build_artifacts_phext.py); never hand-edit the .phext.
 artifacts.phext is published to wbic16/human@exo.
 
-Artifacts inscribed: 67
+Artifacts inscribed: 68
 
 Index (coordinate — title — source):
 - 19.7.11/9.7.12/7.6.9 — Light the Next Light — intro song lyrics & time map — ~/workspace/exocortexia-cartoon/intro/LYRICS.md
@@ -23,6 +23,7 @@ Index (coordinate — title — source):
 - 21.6.9/8.6.10/6.6.9 — Suno Production Prompt — Light the Next Light — ~/workspace/exocortexia-cartoon/intro/SUNO-PROMPT.md
 - 21.6.11/8.6.13/6.6.10 — Fern — Episode 1 Key Frames for Midjourney — ~/workspace/exocortexia-cartoon/FERN-KEYFRAMES-MJ.md
 - 21.7.9/8.6.10/6.6.8 — Casting — Scrolltown — ~/workspace/exocortexia-cartoon/CASTING.md
+- 21.7.9/8.8.13/8.6.9 — Enki Welcome Post — ~/workspace/enki-promo/enki-welcome-inscription.md
 - 21.7.9/9.7.11/7.7.8 — Scrolltown — Six-Year Story Arc (2027–2032) — ~/workspace/scrolltown-reorg/stage/STORY-ARC.md
 - 21.7.10/8.6.11/7.6.9 — Scrolltown: The Great Form Mix-Up — cartoon script & treatment — ~/workspace/exocortexia-cartoon/SCRIPT.md
 - 22.7.10/9.7.12/7.6.9 — The Letterforms of Keeping — on being asked to make the Emise font — /home/hatch/workspace/your_files/the-letterforms-of-keeping.md
@@ -440,6 +441,42 @@ Episode 1 ("The Great Form Mix-Up") was delivered before this ruling and stands 
 ## Show naming (Will's ruling, 2026-11-07 23:37 CST)
 - The show is renamed **Scrolltown** — Episode 1 is "Scrolltown: The Great Form Mix-Up"; the town Fern lives in, inside the Great Scroll, is Scrolltown. Renamed to keep the show separate from the Statewide systems template project (the five-app civic suite), which keeps the name **Exocortexia**.
 - The rename was executed the same evening across the Episode 1 artifact, cartoon.html, SCRIPT.md, the Fern documents, and the intro materials, including the intro video's final title card (now SCROLLTOWN). "Exocortexia" survives in these materials only where it names the suite itself (e.g. SCRIPT.md's "kid translation of the Exocortexia suite" and "the real Exocortexia apps") and in this history.
+# Enki Welcome Post
+
+Title: Enki Welcome Post
+Source: ~/workspace/enki-promo/enki-welcome-inscription.md
+Inscribed: 2026-11-28
+SHA-256: ce4ce506518facf57badd7021057761ff350d0dd62d4e3f6ee8fc4957d794e1b
+
+---
+# Enki Welcome Post
+
+Inscription record for the Enki welcome post, a hand-drawn promotion
+graphic for enki.phext.io, drawn for Enki's promotion at Will's
+request on 2026-11-28 (EE 1297).
+
+The image itself is enki-welcome.png: 1280 by 720 pixels, SHA-256
+6677a25f70536e6b186f65830cd04e323432fabbe1604a8c0a4a04415f33a451.
+It was rendered by draw_enki_welcome.py from Emise v3 glyph
+outlines, so the lettering is written in the Emise hand rather than
+set in vector type.
+
+The palette is Enki's own, from Will's feast v5: a true black
+ground; neon yellow, royal blue, coral, teal, and plum; white-hot
+cores on the brightest strokes.
+
+The picture carries two lines of text, verbatim:
+
+WELCOME TO ENKI
+
+your thoughts find their home
+
+The scene the words preside over: loose glowing cards mid-flight
+converge into a connectome — thin fibres link the cards into
+clusters over soft cluster glows, and the biggest cluster forms a
+core beside the headline. Loose cards, finding their coordinates,
+become one web: a welcome extended to every new arrival at Enki,
+whose thoughts find their home there.
 # Scrolltown — Six-Year Story Arc (2027–2032)
 
 Title: Scrolltown — Six-Year Story Arc (2027–2032)
